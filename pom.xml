@@ -36,10 +36,7 @@
 		</license>
 	</licenses>
 	<properties>
-		<scm.root>https://martindk.dyndns.org/svn/main</scm.root>
-		<scm.parent>RPMS/gov.ihs.cwf</scm.parent>
-		<scm.branch>trunk</scm.branch>
-		<scm.base>${scm.root}/${scm.parent}/${scm.branch}</scm.base>
+		<scm.parent>carewebframework-rpms</scm.parent>
 	</properties>
 	<modules>
 		<module>gov.ihs.cwf.mbroker</module>
