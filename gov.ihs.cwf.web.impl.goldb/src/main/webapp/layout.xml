@@ -1,0 +1,76 @@
+<layout title="CareWeb - GOLDB">
+	<_menubar />
+	<_toolbar />
+	<splitterview orientation="vertical">
+		<splitterpane relative="false" size="47.0">
+			<splitterview orientation="horizontal">
+				<splitterpane relative="true" size="48.81656804733728">
+					<patientHeader />
+				</splitterpane>
+				<splitterpane relative="true" size="50.887573964497044">
+					<userHeader color="lightblue" />
+				</splitterpane>
+			</splitterview>
+		</splitterpane>
+		<splitterpane relative="true" size="88.69565217391305">
+			<tabview orientation="horizontal">
+				<tabpane label="Chart">
+					<treeview open="true">
+						<treepane label="Allergies">
+							<behAllergies allowPrint="false" caption="Adverse Reactions"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Consult Orders">
+							<behConsultOrders allowPrint="false" caption="Consult Orders"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Crisis Alerts">
+							<behCrises allowPrint="false" caption="Crisis Alerts"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:100%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Medication List">
+							<behMedList allowPrint="false" caption="Medications"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Lab Orders">
+							<behLabOrders allowPrint="false" caption="Lab Orders"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Problem List">
+							<bgoProblemList allowAddPov="true" allowAsync="false"
+								hideButtons="false" useLexicon="true" />
+						</treepane>
+						<treepane label="Skin Test">
+							<bgoSkinTest allowAsync="false" hideButtons="false" />
+						</treepane>
+						<treepane label="User Alerts">
+							<behAlerts allowPrint="false" caption="Alerts"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:100%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Visits">
+							<behVisits allowPrint="false" caption="Appointments/Visits"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:1:false;0:33%;1:33%;2:33%" showDetailPane="false" />
+						</treepane>
+						<treepane label="Vitals">
+							<BEHVitalsGraph />
+						</treepane>
+					</treeview>
+				</tabpane>
+				<tabpane label="Settings">
+					<settingsEditor group="CIAVM SITE PARAMETERS"
+						provider="settingsProvider" />
+				</tabpane>
+			</tabview>
+		</splitterpane>
+		<splitterpane relative="false" size="37.0">
+			<statusPanel />
+		</splitterpane>
+	</splitterview>
+</layout>

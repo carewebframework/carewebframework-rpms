@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		 http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<beans profile="root">
+
+		<bean class="gov.ihs.cwf.smart.medication.SmartMedications" />
+
+		<bean class="gov.ihs.cwf.smart.patient.SmartDemographics" />
+
+		<bean class="gov.ihs.cwf.smart.problem.SmartProblems" />
+
+		<bean class="gov.ihs.cwf.smart.lab.SmartLabs" />
+
+		<bean class="gov.ihs.cwf.smart.immunization.SmartImmunizations" />
+
+	</beans>
+
+	<beans profile="desktop">
+
+		<bean id="smart.context.record" parent="smart.context.base"
+			class="gov.ihs.cwf.smart.patient.SmartContextRecord" depends-on="patientContext" />
+
+	</beans>
+</beans>

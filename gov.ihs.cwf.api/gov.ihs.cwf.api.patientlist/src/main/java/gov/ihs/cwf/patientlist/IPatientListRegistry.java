@@ -1,0 +1,27 @@
+/**
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
+ * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * http://mozilla.org/MPL/2.0/.
+ * 
+ * This Source Code Form is also subject to the terms of the Health-Related Additional
+ * Disclaimer of Warranty and Limitation of Liability available at
+ * http://www.carewebframework.org/licensing/disclaimer.
+ */
+package gov.ihs.cwf.patientlist;
+
+/**
+ * Interface for patient list registry.
+ * 
+ * @author dmartin
+ */
+public interface IPatientListRegistry extends Iterable<IPatientList> {
+    
+    /**
+     * Looks up a patient list by its name.
+     * 
+     * @param name Name of the list being sought.
+     * @return Instance of a patient list, or null if none matching the specified name is found.
+     */
+    IPatientList findByName(String name);
+    
+}

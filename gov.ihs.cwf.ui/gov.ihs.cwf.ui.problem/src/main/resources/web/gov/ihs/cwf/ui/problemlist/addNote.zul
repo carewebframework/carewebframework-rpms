@@ -1,0 +1,21 @@
+<!--  
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+-->
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+	
+	<window apply="${bgoAddNoteController}" title="Add Note" mode="modal">
+		<vlayout>
+			<label value="Note (3-60 characters)" />
+			<textbox id="txtNote" multiline="true" width="300px" rows="3" maxlength="60"/>
+			<toolbar align="end">
+				<button id="btnOK" label="OK" width="60px"/>
+				<button id="btnCancel" label="Cancel" width="60px"/>
+			</toolbar>
+		</vlayout>
+	</window>
+</zk>

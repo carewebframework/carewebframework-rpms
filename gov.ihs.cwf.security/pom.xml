@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>gov.ihs.cwf</groupId>
+		<artifactId>gov.ihs.cwf</artifactId>
+		<version>1.1.0.BUILD-SNAPSHOT</version>
+	</parent>
+	<artifactId>gov.ihs.cwf.security</artifactId>
+	<packaging>pom</packaging>
+	<name>RPMS Security Implementation</name>
+	<properties>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.security.base</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>gov.ihs.cwf.security.base</module>
+		<module>gov.ihs.cwf.security.impl</module>
+		<module>gov.ihs.cwf.security.mock</module>
+		<module>gov.ihs.cwf.security.testharness</module>
+	</modules>
+</project>

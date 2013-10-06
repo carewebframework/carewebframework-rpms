@@ -1,0 +1,21 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<vlayout apply="${patientHeaderController}" spacing="0"
+		height="100%" width="100%">
+		<hlayout sclass="cwf-header-row" hflex="1" vflex="1">
+			<label id="patientHeader" value="No Patient Selected" />
+		</hlayout>
+		<hlayout sclass="cwf-header-row" hflex="1" vflex="1">
+			<a id="select" label="Select a patient" hflex="1"
+				tooltiptext="Click here to select a patient." />
+			<div style="text-align:right">
+				<a id="detail" label="View detail"
+					tooltiptext="Click here to see a detailed report on this patient."
+					visible="false" />
+			</div>
+		</hlayout>
+	</vlayout>
+</zk>

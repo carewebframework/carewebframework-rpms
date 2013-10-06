@@ -1,0 +1,141 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul
+		http://www.zkoss.org/2005/zul/zul.xsd">
+	
+	<window title="Patient Selection" width="90%" height="90%" minwidth="800" minheight="400"
+		mode="modal" apply="${patientSelectionController}"
+		sclass="cwf-patientselection">
+		<style>
+			.cwf-patientselection-toolbar {
+				background: transparent;
+				border: none;
+			}
+			
+			.cwf-patientselection-toolbar button {
+				width: 80px!important;
+			}
+			
+			.cwf-patientselection .z-listitem *, 
+			.cwf-patientselection-toolbar {
+				word-wrap: normal;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			
+			.cwf-patientselection .z-west,
+			.cwf-patientselection .z-east,
+			.cwf-patientselection .z-north,
+			.cwf-patientselection .z-center {
+				background: lightyellow;
+			}
+			
+		</style>
+		
+		<timer id="timer" delay="1000" repeats="true" running="false" />
+		
+		<borderlayout>
+			<west title="Patient Lists" width="20%" splittable="true"
+				minsize="40">
+				<div width="100%" height="100%">
+					<vbox width="100%" vflex="1" spacing="15px">
+						<separator height="2px" />
+						<radiogroup id="rgrpLists" orient="vertical" />
+						<listbox id="lstFilter" rows="10" width="99%" />
+						<label id="lblDateRange" value="List xxx for:" style="margin-left: 5px" />
+						<datepicker id="drpDateRange" allowCustom="true" width="99%" />
+					</vbox>
+					<toolbar align="center" orient="vertical" sclass="cwf-patientselection-toolbar">
+						<button id="btnManageList" label="Manage" />
+						<button id="btnFavorite" label="Favorite" w:onClick="jq('$radFavorites').effect('pulsate', {times:3}, 500);" />
+						<separator />
+					</toolbar>
+				</div>
+			</west>
+			<center title="Patients" flex="true">
+				<borderlayout>
+					<north height="50%" splittable="true">
+						<panel height="100%">
+							<toolbar
+								style="background:transparent">
+								<textbox id="edtSearch" hflex="1"
+									focus="true" style="float:left" />
+								<button id="btnSearch" label="Search" style="float:right" />
+							</toolbar>
+							<panelchildren
+								style="overflow:auto;background-color:white">
+								<listbox id="lstSearch" width="99%"
+									vflex="1" />
+							</panelchildren>
+						</panel>
+					</north>
+					<center flex="true">
+						<panel height="100%">
+							<toolbar style="background:transparent;border:none">
+								<label id="lblPatientList"
+									value="List name:" />
+							</toolbar>
+							<panelchildren style="overflow:auto;background-color:white">
+								<listbox id="lstPatientList" width="99%"
+									vflex="1" />
+							</panelchildren>
+						</panel>
+					</center>
+				</borderlayout>
+			</center>
+			<east id="rgnEast" title="Demographics" width="30%" splittable="true"
+				minsize="40">
+				<div width="100%" height="100%">
+					<vbox id="pnlDemographics" visible="true" align="center" vflex="1" width="100%">
+						<vbox id="pnlDemoRoot" width="100%" align="center" vflex="1" />
+						<toolbar align="center" orient="vertical" sclass="cwf-patientselection-toolbar">
+							<button id="btnDemoDetail"
+								label="Detail" visible="false" 
+								tooltiptext="Show detailed patient summary." />
+						</toolbar>
+					</vbox>
+					<vbox id="pnlManagedList" visible="false" vflex="1" width="100%">
+						<hbox id="pnlManagedListFilters" vflex="1" width="100%">
+							<listbox id="lstManagedListFilter" hflex="1" vflex="1" />
+							<toolbar align="center" orient="vertical" sclass="cwf-patientselection-toolbar">
+								<button id="btnManagedListFilterNew" label="New" />
+								<button id="btnManagedListFilterRename" label="Rename" />
+								<button id="btnManagedListFilterDelete" label="Delete" />
+							</toolbar>
+						</hbox>
+						<label id="lblManagedList" value="Select a list from above." />
+						<hbox id="pnlManagedListItems" vflex="2" width="100%">
+							<listbox id="lstManagedList" hflex="1" vflex="1">
+								<listhead>
+									<listheader />
+									<listheader />
+								</listhead>
+							</listbox>
+							<toolbar align="center" orient="vertical" sclass="cwf-patientselection-toolbar">
+								<separator />
+								<button id="btnManagedListAdd" label="Add" />
+								<button id="btnManagedListImport" label="Import" />
+								<button id="btnManagedListAddCurrent" label="Current Pt" />
+								<separator />
+								<button id="btnManagedListRemove" label="Remove" />
+								<button id="btnManagedListRemoveAll" label="Remove All" />
+							</toolbar>
+						</hbox>
+					</vbox>
+					<toolbar align="center" orient="horizontal"
+						style="background: white; border: none; border-top: solid 1px gray">
+						<button id="btnOK" label="OK" />
+						<button id="btnCancel" label="Cancel" />
+					</toolbar>
+				</div>
+			</east>
+		</borderlayout>
+		<script type="text/javascript" defer="true">
+			jq(this.$f('edtSearch')).watermark('Patient name or MRN');
+		</script>
+	</window>
+
+</zk>

@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>gov.ihs.cwf</groupId>
+		<artifactId>gov.ihs.cwf</artifactId>
+		<version>1.1.0.BUILD-SNAPSHOT</version>
+	</parent>
+	<artifactId>gov.ihs.cwf.ui</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>gov.ihs.cwf.ui.core</module>
+		<module>gov.ihs.cwf.ui.settings</module>
+		<module>gov.ihs.cwf.ui.alerts</module>
+		<module>gov.ihs.cwf.ui.allergies</module>
+		<module>gov.ihs.cwf.ui.consultorders</module>
+		<module>gov.ihs.cwf.ui.context.encounter</module>
+		<module>gov.ihs.cwf.ui.crises</module>
+		<module>gov.ihs.cwf.ui.laborders</module>
+		<module>gov.ihs.cwf.ui.patientselection</module>
+		<module>gov.ihs.cwf.ui.patientheader</module>
+		<module>gov.ihs.cwf.ui.medlist</module>
+		<module>gov.ihs.cwf.ui.visits</module>
+		<module>gov.ihs.cwf.ui.userheader</module>
+		<module>gov.ihs.cwf.ui.behvitals</module>
+		<module>gov.ihs.cwf.ui.immunization</module>
+		<module>gov.ihs.cwf.ui.problem</module>
+		<module>gov.ihs.cwf.ui.skintest</module>
+		<module>gov.ihs.cwf.ui.esig</module>
+	</modules>
+</project>

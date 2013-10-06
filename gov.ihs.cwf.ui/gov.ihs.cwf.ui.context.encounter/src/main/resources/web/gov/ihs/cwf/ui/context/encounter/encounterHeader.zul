@@ -1,0 +1,24 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<vlayout id="root" apply="${encounterHeaderController}" spacing="0"
+		height="100%" width="100%">
+		<hlayout sclass="cwf-header-row" hflex="1" vflex="1">
+			<span hflex="1">
+				<image id="imgLocked" visible="false" />
+				<label id="lblLocation" value="No Encounter Selected" />
+			</span>
+			<span style="text-align:right">
+				<label id="lblDate" />
+			</span>
+		</hlayout>
+		<hlayout sclass="cwf-header-row" hflex="1" vflex="1">
+			<label id="lblProvider" hflex="1" />
+			<span style="text-align:right">
+				<label id="lblServiceCategory" />
+			</span>
+		</hlayout>
+	</vlayout>
+</zk>

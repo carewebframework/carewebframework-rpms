@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.carewebframework</groupId>
+		<artifactId>org.carewebframework</artifactId>
+		<version>3.0.0.BUILD-SNAPSHOT</version>
+	</parent>
+	<groupId>gov.ihs.cwf</groupId>
+	<artifactId>gov.ihs.cwf</artifactId>
+	<version>1.1.0.BUILD-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<scm>
+		<connection>${scm.scm}:${scm.base}</connection>
+		<developerConnection>${scm.scm}:${scm.base}</developerConnection>
+		<url>${scm.base}</url>
+	</scm>
+	<licenses>
+		<license>
+			<name>MPL 2.0</name>
+			<url>http://mozilla.org/MPL/2.0/</url>
+			<comments>
+				This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
+				If a copy of the MPL was not distributed with this file, You can obtain one at 
+				http://mozilla.org/MPL/2.0/.
+			</comments>
+		</license>
+		<license>
+			<name>Health-Related Additional Disclaimer of Warranty and Limitation of Liability</name>
+			<url>http://www.carewebframework.org/licensing/disclaimer</url>
+			<comments>
+				This Source Code Form is also subject to the terms of the Health-Related Additional
+				Disclaimer of Warranty and Limitation of Liability available at
+				http://www.carewebframework.org/licensing/disclaimer.
+			</comments>
+		</license>
+	</licenses>
+	<properties>
+		<scm.root>https://martindk.dyndns.org/svn/main</scm.root>
+		<scm.parent>RPMS/gov.ihs.cwf</scm.parent>
+		<scm.branch>trunk</scm.branch>
+		<scm.base>${scm.root}/${scm.parent}/${scm.branch}</scm.base>
+	</properties>
+	<modules>
+		<module>gov.ihs.cwf.mbroker</module>
+		<module>gov.ihs.cwf.api</module>
+		<module>gov.ihs.cwf.security</module>
+		<module>gov.ihs.cwf.common.bgo</module>
+		<module>gov.ihs.cwf.ui</module>
+		<module>gov.ihs.cwf.smart</module>
+		<module>gov.ihs.cwf.testharness</module>
+		<module>gov.ihs.cwf.web.impl.goldb</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.api.core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.api.core</artifactId>
+				<version>${project.version}</version>
+				<classifier>tests</classifier>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.ui.core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.mbroker</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.common.bgo</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>gov.ihs.cwf</groupId>
+				<artifactId>gov.ihs.cwf.api.context</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

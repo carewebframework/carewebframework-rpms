@@ -1,0 +1,73 @@
+<?taglib uri="http://www.carewebframework.org/tld/security" prefix="sec"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<style>
+		.beh-vitals-grid .z-listitem td { border: 1px gray solid;
+		border-left:none;}
+
+		.beh-vitals-toolbar span { padding:0; padding-left:10px;
+		margin-right:10px; }
+
+		.beh-vitals-header * { white-space:normal; }
+	</style>
+
+	<div height="100%" width="100%"
+		use="gov.ihs.cwf.ui.behvitals.Graph">
+		<borderlayout >
+			<north splittable="true" height="50%">
+				<panel height="100%" width="100%">
+					<toolbar>
+						<span style="float:left">
+							<datepicker id="datRange" width="120px" allowCustom="true"/>
+							<space />
+							<combobox id="cboUnits" readonly="true"
+								width="100px">
+								<comboitem label="Default Units" />
+								<comboitem label="US Units" />
+								<comboitem label="Metric Units" />
+							</combobox>
+						</span>
+						<span style="float:right">
+							<button id="btnEnterVitals"
+								label="Enter Vitals..." />
+						</span>
+					</toolbar>
+					<panelchildren>
+						<listbox id="lstVitals" sizedByContent="false" vflex="true"
+							sclass="beh-vitals-grid" height="100%" width="100%">
+							<listhead id="hdrVitals" sizable="false"
+								sclass="beh-vitals-header" />
+						</listbox>
+					</panelchildren>
+					<toolbar id="tbarPaging" width="100%" 
+						sclass="z-toolbar beh-vitals-toolbar">
+						<span style="float:left">
+							<paging id="pgVitals" detailed="false"
+								height="20px" width="250px" />
+						</span>
+						<span style="float:right">
+							<slider id="sldVitals" width="100px"
+								pageIncrement="1" />
+						</span>
+					</toolbar>
+				</panel>
+			</north>
+			<center style="overflow:auto">
+				<hchart id="chart" hflex="1" vflex="1" type="line" title="" />
+			</center>
+			<east splittable="true" width="100px">
+				<vbox width="100%">
+					<checkbox id="chkGrid" label="Grid" />
+					<checkbox id="chkAge" label="Age" />
+					<checkbox id="chkPercentiles" label="Percentiles" />
+					<checkbox id="chkZoom" label="Zoom" />
+				</vbox>
+			</east>
+		</borderlayout>
+	</div>
+
+</zk>

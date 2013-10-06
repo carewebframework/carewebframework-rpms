@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<beans profile="desktop">
+
+		<bean id="patientListRegistry" class="gov.ihs.cwf.patientlist.PatientListRegistry"
+			depends-on="userContext" />
+
+		<bean id="patientListMRU" class="gov.ihs.cwf.patientlist.MRUPatientList">
+			<constructor-arg type="java.lang.String" value="CAREWEB.PATIENT.LIST.MRU" />
+		</bean>
+
+		<bean id="patientListPersonal" class="gov.ihs.cwf.patientlist.PersonalPatientList">
+			<constructor-arg type="java.lang.String" value="CAREWEB.PATIENT.LIST.PERSONAL" />
+		</bean>
+
+		<bean id="patientListFavorites" class="gov.ihs.cwf.patientlist.FavoritePatientList" />
+
+		<bean id="patientListProviders" class="gov.ihs.cwf.patientlist.BEHPatientList">
+			<constructor-arg ref="brokerSession" />
+			<constructor-arg value="1" />
+		</bean>
+
+		<bean id="patientListTeams" class="gov.ihs.cwf.patientlist.BEHPatientList">
+			<constructor-arg ref="brokerSession" />
+			<constructor-arg value="2" />
+		</bean>
+
+		<bean id="patientListSpecialties" class="gov.ihs.cwf.patientlist.BEHPatientList">
+			<constructor-arg ref="brokerSession" />
+			<constructor-arg value="3" />
+		</bean>
+
+		<bean id="patientListClinic" class="gov.ihs.cwf.patientlist.BEHPatientList">
+			<constructor-arg ref="brokerSession" />
+			<constructor-arg value="4" />
+		</bean>
+
+		<bean id="patientListWards" class="gov.ihs.cwf.patientlist.BEHPatientList">
+			<constructor-arg ref="brokerSession" />
+			<constructor-arg value="5" />
+		</bean>
+
+	</beans>
+</beans>

@@ -1,0 +1,62 @@
+<!--  
+	<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c"?>
+	<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+-->
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window apply="${arg.controller}" title="Search"
+		mode="modal">
+		<vlayout>
+			<radiogroup style="padding-left: 25%" if="${arg.CPT || arg.ICD}">
+				<label value="Lookup Option" />
+				<separator orient="vertical"/>
+				<radio id="radLexicon" label="Lexicon" />
+				<separator orient="vertical"/>
+				<radio id="radCode" label="${arg.CPT ? 'CPT' : 'ICD'}" />
+			</radiogroup>
+			<hlayout>
+				<label value="Search Value" />
+				<textbox id="txtSearch" width="300px" />
+				<button id="btnSearch" label="Search" />
+				<separator />
+			</hlayout>
+			<div if="${arg.CPT}">
+				<separator />
+				<hlayout>
+					<label value="Included &#10;Code Sets" multiline="true" />
+					<vlayout hflex="1">
+						<hlayout>
+							<checkbox id="chkMedical" label="Medical" hflex="1"/>
+							<checkbox id="chkSurgical" label="Surgical"  hflex="1"/>
+							<checkbox id="chkHCPCS" label="HCPCS"  hflex="1"/>
+							<checkbox id="chkEM" label="E &amp; M"  hflex="1"/>
+						</hlayout>
+						<hlayout>
+							<checkbox id="chkRadiology" label="Radiology"  hflex="1"/>
+							<checkbox id="chkLab" label="Lab"  hflex="1"/>
+							<checkbox id="chkAnesthesia" label="Anesthesia"  hflex="1"/>
+							<checkbox id="chkHome" label="Home Health"  hflex="1"/>
+						</hlayout>
+					</vlayout>
+				</hlayout>
+			</div>
+			<separator />
+			<label value="Select from one of the following items" />
+			<listbox id="lbResults" hflex="1" height="300px" />
+			<toolbar>
+				<span style="float:left">
+					<checkbox id="chkUseSearchText" visible="${arg.CPT || arg.ICD}"
+						label="Return Search Text as Narrative" />
+				</span>
+				<span style="float:right">
+					<button id="btnSelect" label="OK" width="60px" />
+					<button id="btnCancel" label="Cancel" width="60px" />
+				</span>
+			</toolbar>
+		</vlayout>
+	</window>
+</zk>

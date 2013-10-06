@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cwf="http://www.carewebframework.org/schema/spring"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		 http://www.springframework.org/schema/beans/spring-beans.xsd
+		 http://www.carewebframework.org/schema/spring
+		 http://www.carewebframework.org/schema/spring/spring-extensions.xsd">
+
+	<beans profile="desktop-test">
+
+		<bean id="smart.context.record" parent="smart.context.base"
+			class="gov.ihs.cwf.smart.patient.SmartContextRecordTest" depends-on="patientContext"
+			cwf:override="always" />
+
+	</beans>
+</beans>

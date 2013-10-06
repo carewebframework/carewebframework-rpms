@@ -1,0 +1,54 @@
+<zk xmlns="http://www.zkoss.org/2005/zul" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window width="1000px" minwidth="500" sizable="true"
+		title="Patient Matches (${self.resultCount} Found)" 
+		use="gov.ihs.cwf.ui.patientselection.PatientMatches">
+
+		<zscript>
+			gov.ihs.cwf.ui.patientselection.PatientMatches patientMatches = self;
+		</zscript>
+
+		<style>
+			.cwf-patientselection-matchitem, .cwf-patientselection-matchitem * {
+				font-size:.8em;
+				white-space:nowrap;
+				text-overflow:ellipsis;
+			}
+		</style>
+		
+		<listbox id="list" multiple="true" mold="paging" pageSize="15" 
+			onPaging="patientMatches.invalidate();" pagingPosition="both">
+			<listhead sizable="true">
+				<listheader label="Last Name" sort="auto" hflex="1"/>
+				<listheader label="First Name" sort="auto" hflex="1"/>
+				<listheader label="MRN" sort="auto" width="10em"/>
+				<listheader label="Birth Date" sort="auto" width="8em"
+					visible='${patientMatches.featureEnabled["birth"]}'
+					sortAscending="${patientMatches.DOBComparatorAsc}" 
+					sortDescending="${patientMatches.DOBComparatorDsc}" />
+				<listheader label="Sex" sort="auto" width="2.5em" align="center"/>
+				<listheader label="Phone" sort="auto" width="10em"/>
+				<listheader label="Mother's Name" sort="auto" width="8em"
+					visible='${patientMatches.featureEnabled["mom_name"]}' />
+				<listheader label="Home Address" sort="auto"  hflex="1"
+					visible='${patientMatches.featureEnabled["address"]}' />
+			</listhead>
+			<listitem forEach="${patientMatches.results}" value="${each}"
+				onClick="patientMatches.selectPatient(self.getValue());"
+				sclass="cwf-patientselection-matchitem">
+				<listcell label="${each.name.lastName}" tooltiptext="${each.name.lastName}" />
+				<listcell label="${each.name.firstName} ${each.name.middleName}" tooltiptext="${each.name.firstName} ${each.name.middleName}" />
+				<listcell label="${each.medicalRecordNumber.id}" tooltiptext="${each.medicalRecordNumber.id}" />
+				<listcell label="${each.birthDate}" tooltiptext="${each.birthDate}" />
+				<listcell label="${each.gender}" tooltiptext="${each.gender}" />
+				<listcell label="${each.phoneHome}" tooltiptext="${each.phoneHome}" />
+				<listcell label="${each.mothersFirstName}" tooltiptext="${each.mothersFirstName}" />
+				<listcell label="${each.addressHome}" tooltiptext="${each.addressHome}" />
+			</listitem>
+			<listfoot>
+				<listfooter span="7" label="Click an entry to select it." />
+			</listfoot>
+		</listbox>
+	</window>
+</zk>

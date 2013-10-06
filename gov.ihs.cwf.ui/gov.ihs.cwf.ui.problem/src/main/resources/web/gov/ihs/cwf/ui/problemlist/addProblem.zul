@@ -1,0 +1,102 @@
+<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window apply="${bgoAddProblemController}" title="Add Problem" width="550px"
+		mode="modal">
+		<style>
+			.bgo-problem-icon-cell, .bgo-problem-icon-cell * {
+			    margin: 0!important;
+			    padding: 0!important;
+			}
+		</style>
+
+		<vlayout spacing="10px">
+			<hlayout
+				style="border-bottom: solid 2px gray; padding-bottom: 5px">
+				<label value="Problem ID" />
+				<label id="lblPrefix" value="AABR-" />
+				<textbox id="txtID" width="50px" />
+				<separator width="20px" />
+				<label value="Priority" />
+				<combobox id="cboPriority" readonly="true" autocomplete="true" width="90px">
+					<comboitem label="none" />
+					<comboitem label="1 - high" />
+					<comboitem label="2" />
+					<comboitem label="3 - medium" />
+					<comboitem label="4" />
+					<comboitem label="5 - low" />
+				</combobox>
+				<h:label style="font-size:12px">
+					1 - high
+					<h:br />
+					5 - low
+				</h:label>
+			</hlayout>
+			<hlayout style="text-align:right">
+				<div width="50px">ICD</div>
+				<textbox id="txtICD" hflex="1" />
+				<button id="btnICD" label="..." />
+			</hlayout>
+			<hlayout style="text-align:right">
+				<div width="50px">Narrative</div>
+				<textbox id="txtNarrative" multiline="true" hflex="1" rows="3" />
+			</hlayout>
+			<hlayout>
+				<label value="Date of Onset" />
+				<datebox id="datOnset" constraint="" />
+				<separator width="30px" />
+				<groupbox>
+					<caption label="Status" style="font-weight:bold" />
+					<radiogroup>
+						<hlayout>
+							<vlayout>
+								<radio id="radActive"
+									style="white-space:nowrap" label="Active Problem" />
+								<radio id="radInactive"
+									style="white-space:nowrap" label="Inactive Problem" />
+							</vlayout>
+							<vlayout>
+								<radio id="radPersonal"
+									style="white-space:nowrap" label="Personal History" />
+								<radio id="radFamily"
+									style="white-space:nowrap" label="Family History" />
+							</vlayout>
+						</hlayout>
+					</radiogroup>
+				</groupbox>
+			</hlayout>
+			<groupbox hflex="1" style="padding:1px">
+				<caption id="capNotes" label="Notes" style="margin-left:10px" />
+				<textbox id="txtNotes" multiline="true" hflex="1"
+					height="100px" visible="false" style="border:none"/>
+				<listbox id="lstNotes" hflex="1" height="100px"
+					style="border:none">
+					<listhead>
+						<listheader width="20px" sclass="bgo-problem-icon-cell">
+							<toolbarbutton id="btnAddNote" image="${rc:getIconPath('add.png')}" tooltiptext="Add a new note."/>
+						</listheader>
+						<listheader label="Note #" align="center" width="45px" />
+						<listheader label="Narrative" hflex="1" />
+						<listheader label="Date" width="80px" />
+						<listheader label="Author" width="160px" />
+					</listhead>
+				</listbox>
+			</groupbox>
+			<toolbar align="end" style="border-top: solid 2px gray;">
+				<button id="btnSave" label="Save" width="60px" />
+				<button id="btnCancel" label="Cancel" width="60px" />
+				<separator orient="vertical" width="10px" />
+			</toolbar>
+		</vlayout>
+		
+		<script type="text/javascript" defer="true">
+			jq(this.$f("txtICD")).watermark("NOTE: If the ICD is not selected it defaults to .9999 - Uncoded Diagnosis");
+		</script>
+	</window>
+	
+</zk>

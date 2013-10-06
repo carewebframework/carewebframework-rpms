@@ -1,0 +1,105 @@
+<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window apply="${bgoAddSkinTestController}" title="Add Skin Test"
+		width="450px" mode="modal" sclass="bgo-skintest-addtest">
+		<hlayout>
+			<vlayout spacing="10px" width="350px">
+				<hlayout style="text-align:right">
+					<div width="100px">Skin Test</div>
+					<textbox id="txtSkinTest" hflex="1"
+						forward="onOK=btnSkinTest.onClick" />
+					<button id="btnSkinTest" label="..." />
+				</hlayout>
+				<separator bar="true" height="1px" />
+				<hlayout>
+					<div width="100px" style="text-align:right">
+						Administered By
+					</div>
+					<textbox id="txtAdminBy" hflex="1"
+						forward="onOK=btnAdminBy.onClick" />
+					<button id="btnAdminBy" label="..." />
+				</hlayout>
+				<hlayout>
+					<div style="text-align:right" width="100px">
+						Results
+					</div>
+					<combobox id="cboResults" hflex="1">
+						<comboitem label="" value="" />
+						<comboitem label="PENDING" value="@" />
+						<comboitem label="REFUSED" value="@" />
+						<comboitem label="POSITIVE" value="P" />
+						<comboitem label="NEGATIVE" value="N" />
+						<comboitem label="DOUBTFUL" value="D" />
+						<comboitem label="NO TAKE" value="O" />
+					</combobox>
+				</hlayout>
+				<hlayout>
+					<div style="text-align:right" width="100px">
+						Event Date
+					</div>
+					<datebox id="datEvent" hflex="1" />
+				</hlayout>
+				<vlayout id="fraHistorical" visible="true">
+					<hlayout>
+						<div style="text-align:right" width="100px">
+							Location
+						</div>
+						<textbox id="txtLocation" hflex="1"
+							forward="onOK=btnLocation.onClick" />
+						<button id="btnLocation" label="..." />
+					</hlayout>
+					<hlayout>
+						<div width="100px" />
+						<radiogroup orient="vertical">
+							<radio id="radFacility" label="Facility" />
+							<radio id="radOther" label="Other" />
+						</radiogroup>
+						<div hflex="1" />
+					</hlayout>
+				</vlayout>
+				<vlayout id="fraCurrent" visible="false" spacing="10px">
+					<hlayout>
+						<div style="text-align:right" width="100px">
+							Reading
+						</div>
+						<spinner id="spnReading" width="50px" constraint="min 0 max 40"/>
+						<div>(mm)</div>
+					</hlayout>
+					<hlayout>
+						<div style="text-align:right" width="100px">
+							Date Read
+						</div>
+						<datebox id="datRead" hflex="1" constraint="no future"/>
+					</hlayout>
+					<hlayout>
+						<div width="100px" style="text-align:right">
+							Reading Provider
+						</div>
+						<textbox id="txtReadBy" hflex="1"
+							forward="onOK=btnReadBy.onClick" />
+						<button id="btnReadBy" label="..." />
+					</hlayout>
+				</vlayout>
+				<separator />
+			</vlayout>
+			<toolbar mold="panel" orient="vertical" hflex="1" vflex="1"
+				style="border-left: solid 1px; padding-left: 15px">
+				<button id="btnSave" label="Save" width="60px" />
+				<button id="btnCancel" label="Cancel" width="60px" />
+				<separator height="50px" />
+				<radiogroup orient="vertical">
+					<radio id="radCurrent" label="Current" />
+					<radio id="radHistorical" label="Historical" />
+					<radio id="radRefusal" label="Refusal" />
+				</radiogroup>
+			</toolbar>
+		</hlayout>
+	</window>
+
+</zk>
