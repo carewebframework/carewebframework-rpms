@@ -74,7 +74,7 @@ public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
     }
     
     @Override
-    protected List<String> getPrivileges(IUser user) {
+    protected List<String> getAuthorities(IUser user) {
         return user == null ? null : RPMSUtil.getBrokerSession().callRPCList("CIAVCXUS GETPRIV", null, user.getDomainId());
     }
     
