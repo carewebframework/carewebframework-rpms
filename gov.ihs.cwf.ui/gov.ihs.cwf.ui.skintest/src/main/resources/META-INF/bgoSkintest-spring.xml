@@ -20,7 +20,7 @@
 					type="boolean" description="If true, the toolbar buttons are hidden." />
 			</cwp:serialization>
 			<!-- You may specify plugin level security constraints here: <cwp:security 
-				requiresAll="false"> <cwp:privilege name="XXXX"/> </cwp:security> -->
+				requiresAll="false"> <cwp:authority name="XXXX"/> </cwp:security> -->
 		</cwp:plugin>
 
 	</beans>

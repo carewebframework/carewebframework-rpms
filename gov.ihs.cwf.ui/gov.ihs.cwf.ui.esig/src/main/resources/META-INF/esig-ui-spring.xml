@@ -16,7 +16,7 @@
 					action="null" /> -->
 			</cwp:resource>
 			<cwp:security requiresAll="false">
-				<cwp:privilege name="CONFIGURE_SYSTEM" />
+				<cwp:authority name="CONFIGURE_SYSTEM" />
 			</cwp:security>
 		</cwp:plugin>
 
