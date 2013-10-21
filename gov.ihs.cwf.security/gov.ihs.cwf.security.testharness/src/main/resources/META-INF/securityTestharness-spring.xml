@@ -27,7 +27,7 @@
 			scope="prototype">
 			<property name="username" value="${test.username}" />
 			<property name="password" value="${test.password}" />
-			<property name="authority" value="${test.authority}" />
+			<property name="domain" value="${test.domain}" />
 		</bean>
 
 	</beans>

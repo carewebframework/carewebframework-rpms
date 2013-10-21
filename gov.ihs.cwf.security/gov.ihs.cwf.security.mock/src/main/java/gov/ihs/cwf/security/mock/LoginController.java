@@ -34,7 +34,7 @@ public class LoginController extends GenericForwardComposer<Component> {
     
     private String password;
     
-    private String authority;
+    private String domain;
     
     private Textbox j_username;
     
@@ -60,7 +60,7 @@ public class LoginController extends GenericForwardComposer<Component> {
             lblError.setValue(authError.toString());
             pnlError.setVisible(true);
         } else {
-            j_username.setText(authority + "\\" + username);
+            j_username.setText(domain + "\\" + username);
             j_password.setText(password);
             Clients.submitForm("loginForm");
         }
@@ -103,21 +103,21 @@ public class LoginController extends GenericForwardComposer<Component> {
     }
     
     /**
-     * Return the authority
+     * Return the domain
      * 
-     * @return the authority
+     * @return the domain
      */
-    public String getAuthority() {
-        return authority;
+    public String getDomain() {
+        return domain;
     }
     
     /**
-     * Set the authority
+     * Set the domain
      * 
-     * @param authority
+     * @param domain
      */
-    public void setAuthority(String authority) {
-        this.authority = authority;
+    public void setAuthority(String domain) {
+        this.domain = domain;
     }
     
 }

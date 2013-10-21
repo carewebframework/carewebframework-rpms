@@ -38,9 +38,9 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
     private static final Log log = LogFactory.getLog(BaseSecurityService.class);
     
     /**
-     * Cached list of available login authorities
+     * Cached list of available login domains
      */
-    private static List<Institution> authorities;
+    private static List<Institution> domains;
     
     public BaseSecurityService() {
         super();
@@ -48,23 +48,23 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
     }
     
     /**
-     * Get institutions (or security authorities) that a user may log into.
+     * Get domains (institutions) that a user may log into.
      * 
      * @return A list of institution objects.
      */
-    public List<Institution> getAuthorities() {
-        if (authorities == null) {
-            initAuthorities();
+    public List<Institution> getDomains() {
+        if (domains == null) {
+            initDomains();
         }
         
-        return authorities;
+        return domains;
     }
     
     /**
-     * Initialize authority list.
+     * Initialize domain list.
      */
-    private static synchronized void initAuthorities() {
-        if (authorities != null) {
+    private static synchronized void initDomains() {
+        if (domains != null) {
             return;
         }
         
@@ -83,7 +83,7 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
             }
         }
         
-        authorities = institutions;
+        domains = institutions;
     }
     
     /**

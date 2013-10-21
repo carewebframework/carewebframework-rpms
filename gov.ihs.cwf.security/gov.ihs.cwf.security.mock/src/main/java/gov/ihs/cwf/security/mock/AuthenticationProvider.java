@@ -38,11 +38,11 @@ public final class AuthenticationProvider extends BaseAuthenticationProvider {
      * @param details Authentication details
      * @param username Username for the login.
      * @param password Password for the login (ignored if the user is pre-authenticated).
-     * @param authorityName Authority for which the login is requested.
+     * @param domain Domain for which the login is requested.
      * @return Authorization result
      */
     @Override
-    protected User login(CWFAuthenticationDetails details, String username, String password, String authorityName) {
+    protected User login(CWFAuthenticationDetails details, String username, String password, String domain) {
         User user = new User(1);
         user.setFullName("USER,MOCK");
         user.setUsername(username);

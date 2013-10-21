@@ -59,14 +59,14 @@ public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
      * @param details Authentication details
      * @param username Username for the login.
      * @param password Password for the login (ignored if the user is pre-authenticated).
-     * @param authorityName Authority for which the login is requested.
+     * @param domain Domain for which the login is requested.
      * @return Authorization result
      */
     @Override
-    protected IUser login(CWFAuthenticationDetails details, String username, String password, String authorityName) {
+    protected IUser login(CWFAuthenticationDetails details, String username, String password, String domain) {
         BrokerSession brokerSession = RPMSUtil.getBrokerSession();
         List<String> results = new ArrayList<String>();
-        AuthResult authResult = Security.authenticate(brokerSession, username, password, authorityName, results);
+        AuthResult authResult = Security.authenticate(brokerSession, username, password, domain, results);
         User user = getAuthenticatedUser(brokerSession);
         details.setDetail("user", user);
         checkAuthResult(authResult, StrUtil.piece(results.get(0), StrUtil.U, 2));

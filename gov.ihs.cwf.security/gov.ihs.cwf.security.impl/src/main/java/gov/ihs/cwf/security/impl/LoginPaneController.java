@@ -52,7 +52,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
     
     protected static final String DIALOG_LOGIN_PANE = ZKUtil.getResourcePath(LoginPaneController.class) + "loginPane.zul";
     
-    private Listbox j_authority;
+    private Listbox j_domain;
     
     private Textbox j_username;
     
@@ -107,7 +107,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
         } else {
             j_password.setFocus(true);
         }
-        final List<Institution> institutions = securityService.getAuthorities();
+        final List<Institution> institutions = securityService.getDomains();
         institutionButton.setVisible(institutions.size() > 1);
         String defaultInst = institutions.size() == 1 ? Long.toString(institutions.get(0).getDomainId()) : null;
         
@@ -143,7 +143,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
         for (final Institution inst : institutions) {
             final Listitem li = new Listitem();
             li.setValue(inst);
-            j_authority.appendChild(li);
+            j_domain.appendChild(li);
             li.appendChild(new Listcell(inst.getAbbreviation()));
             
             if (inst.getDomainId() == defaultInstId) {
@@ -151,9 +151,9 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
             }
         }
         
-        if (j_authority.getChildren().size() > 0) {
-            if (j_authority.getSelectedIndex() == -1) {
-                j_authority.setSelectedIndex(0);
+        if (j_domain.getChildren().size() > 0) {
+            if (j_domain.getSelectedIndex() == -1) {
+                j_domain.setSelectedIndex(0);
             }
         } else {
             showState(Labels.getLabel(Constants.LBL_LOGIN_NO_VALID_INSTITUTIONS));
@@ -180,7 +180,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
     /**
      * Authority onSelect event handler.
      */
-    public void onSelect$j_authority() {
+    public void onSelect$j_domain() {
         institutionChanged();
         j_username.setFocus(true);
     }
@@ -213,7 +213,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
      * @return An institution object. May be null.
      */
     private Institution getSelectedInstitution() {
-        Listitem item = j_authority.getSelectedItem();
+        Listitem item = j_domain.getSelectedItem();
         return item == null ? null : (Institution) item.getValue();
     }
     
