@@ -10,13 +10,13 @@
 	<beans profile="root">
 
 		<bean id="securityService" class="gov.ihs.cwf.security.testharness.SecurityServiceImpl">
-			<property name="logoutTarget" value="${org.carewebframework.security.logoutFormUrl:}" />
+			<property name="logoutTarget" value="${org.carewebframework.security.logout.url:}" />
 		</bean>
 
 		<bean id="securityAuthenticationProvider" class="gov.ihs.cwf.security.testharness.AuthenticationProvider">
 			<constructor-arg>
 				<bean class="org.springframework.util.StringUtils" factory-method="delimitedListToStringArray">
-					<constructor-arg value="${test.privileges}" />
+					<constructor-arg value="${test.authorities}" />
 					<constructor-arg value="," />
 				</bean>
 			</constructor-arg>

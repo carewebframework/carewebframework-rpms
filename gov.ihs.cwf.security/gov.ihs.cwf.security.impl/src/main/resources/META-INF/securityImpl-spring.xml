@@ -8,7 +8,7 @@
 	<beans profile="root">
 
 		<bean id="securityService" class="gov.ihs.cwf.security.impl.SecurityServiceImpl">
-			<property name="logoutTarget" value="${org.carewebframework.security.logoutFormUrl:}" />
+			<property name="logoutTarget" value="${org.carewebframework.security.logout.url:}" />
 		</bean>
 
 		<bean id="securityAuthenticationProvider" class="gov.ihs.cwf.security.base.BaseAuthenticationProvider" />
