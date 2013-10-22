@@ -13,6 +13,7 @@ public class GenericEventTest extends org.carewebframework.api.event.GenericEven
     
     public GenericEventTest() {
         super();
+        pollingInterval = 1000;
         this.remote = true;
     }
 }
