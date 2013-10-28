@@ -154,7 +154,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns the list's name.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getName()
+     * @see IPatientList#getName()
      */
     @Override
     public String getName() {
@@ -164,7 +164,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns the list's display name.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getDisplayName()
+     * @see IPatientList#getDisplayName()
      */
     @Override
     public String getDisplayName() {
@@ -186,7 +186,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns the name of the filter's associated entity, if any.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getEntityName()
+     * @see IPatientList#getEntityName()
      */
     @Override
     public String getEntityName() {
@@ -197,7 +197,7 @@ public abstract class AbstractPatientList implements IPatientList {
      * Instead of overriding this, override the initFilters method to return the internal instance
      * of the filter list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getFilters()
+     * @see IPatientList#getFilters()
      */
     @Override
     public Collection<AbstractPatientListFilter> getFilters() {
@@ -208,7 +208,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns true if the patient list requires a date range.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#isDateRangeRequired()
+     * @see IPatientList#isDateRangeRequired()
      */
     @Override
     public boolean isDateRangeRequired() {
@@ -218,7 +218,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Override if this is a user-manageable list, returning a reference to the list's list manager.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getItemManager()
+     * @see IPatientList#getItemManager()
      */
     @Override
     public IPatientListItemManager getItemManager() {
@@ -229,7 +229,7 @@ public abstract class AbstractPatientList implements IPatientList {
      * Override if this is a user-manageable list, returning a reference to the list's filter
      * manager.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getFilterManager()
+     * @see IPatientList#getFilterManager()
      */
     @Override
     public IPatientListFilterManager getFilterManager() {
@@ -239,7 +239,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns true if the list can be filtered.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#isFiltered()
+     * @see IPatientList#isFiltered()
      */
     @Override
     public boolean isFiltered() {
@@ -249,7 +249,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns the active filter selected for this list. May be null.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getActiveFilter()
+     * @see IPatientList#getActiveFilter()
      */
     @Override
     public AbstractPatientListFilter getActiveFilter() {
@@ -259,7 +259,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Refreshes the list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#refresh()
+     * @see IPatientList#refresh()
      */
     @Override
     public void refresh() {
@@ -271,7 +271,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Sets the active filter for this list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#setActiveFilter(AbstractPatientListFilter)
+     * @see IPatientList#setActiveFilter
      */
     @Override
     public void setActiveFilter(AbstractPatientListFilter filter) {
@@ -281,7 +281,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Implement to retrieve list of patient items.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getListItems()
+     * @see IPatientList#getListItems()
      */
     @Override
     public abstract Collection<PatientListItem> getListItems();
@@ -289,7 +289,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns the date range, if applicable.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getDateRange()
+     * @see IPatientList#getDateRange
      */
     @Override
     public DateRange getDateRange() {
@@ -299,7 +299,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Sets the end date, if applicable.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#setDateRange(DateRange)
+     * @see IPatientList#setDateRange
      */
     @Override
     public void setDateRange(DateRange value) {
@@ -310,7 +310,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns true if this list is disabled.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#isDisabled()
+     * @see IPatientList#isDisabled()
      */
     @Override
     public boolean isDisabled() {
@@ -321,7 +321,7 @@ public abstract class AbstractPatientList implements IPatientList {
      * Returns true is the list is in the process of being built. Override if list construction is
      * asynchronous to indicate completion status.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#isPending()
+     * @see IPatientList#isPending()
      */
     @Override
     public boolean isPending() {
@@ -331,7 +331,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns the sorting sequence for this list. Lower numbers sort first.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#getSequence()
+     * @see IPatientList#getSequence()
      */
     @Override
     public int getSequence() {
@@ -341,7 +341,7 @@ public abstract class AbstractPatientList implements IPatientList {
     /**
      * Returns a copy of this list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientList#copy()
+     * @see IPatientList#copy()
      */
     @Override
     public IPatientList copy() {

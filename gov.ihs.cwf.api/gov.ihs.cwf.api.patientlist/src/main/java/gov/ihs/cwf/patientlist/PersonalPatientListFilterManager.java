@@ -53,9 +53,12 @@ public class PersonalPatientListFilterManager extends AbstractPatientListFilterM
             log.debug("Retrieving personal list names...");
             filters = new ArrayList<AbstractPatientListFilter>();
             Property prop = getFilterProperty();
+            List<String> values = prop.getValues();
             
-            for (String value : prop.getValues()) {
-                filters.add(new PersonalPatientListFilter(value));
+            if (values != null) {
+                for (String value : values) {
+                    filters.add(new PersonalPatientListFilter(value));
+                }
             }
         }
         return filters;

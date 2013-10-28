@@ -124,7 +124,7 @@ public class Util {
      * Returns the deserialized form of a list.
      * 
      * @param serializedValue
-     * @return Deserialized list.
+     * @return Deserialized patient list.
      */
     public static IPatientList deserializePatientList(String serializedValue) {
         String[] pcs = split(serializedValue, 2);
@@ -157,9 +157,8 @@ public class Util {
     }
     
     /**
-     * Enforces static class.
+     * Enforce static class.
      */
     private Util() {
     };
-    
 }

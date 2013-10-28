@@ -135,7 +135,7 @@ public abstract class AbstractPatientListFilterManager implements IPatientListFi
     /**
      * Default implementation for adding an entity to the filter list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientListFilterManager#addFilter
+     * @see IPatientListFilterManager#addFilter
      */
     @Override
     public AbstractPatientListFilter addFilter(Object entity) {
@@ -147,7 +147,7 @@ public abstract class AbstractPatientListFilterManager implements IPatientListFi
     /**
      * Default implementation for removing an entity from the filter list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientListFilterManager#removeFilter
+     * @see IPatientListFilterManager#removeFilter
      */
     @Override
     public void removeFilter(AbstractPatientListFilter filter) {
@@ -161,7 +161,7 @@ public abstract class AbstractPatientListFilterManager implements IPatientListFi
     /**
      * Default implementation for relocating an entity in the filter list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientListFilterManager#moveFilter
+     * @see IPatientListFilterManager#moveFilter
      */
     @Override
     public void moveFilter(AbstractPatientListFilter filter, int index) {
@@ -176,7 +176,7 @@ public abstract class AbstractPatientListFilterManager implements IPatientListFi
     /**
      * Default implementation for renaming an entity in the filter list.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientListFilterManager#renameFilter
+     * @see IPatientListFilterManager#renameFilter
      */
     @Override
     public void renameFilter(AbstractPatientListFilter filter, String newName) {
@@ -191,7 +191,7 @@ public abstract class AbstractPatientListFilterManager implements IPatientListFi
     /**
      * Returns the capabilities of the filter manager.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientListFilterManager#getCapabilities
+     * @see IPatientListFilterManager#getCapabilities
      */
     @Override
     public Set<FilterCapability> getCapabilities() {
@@ -201,7 +201,7 @@ public abstract class AbstractPatientListFilterManager implements IPatientListFi
     /**
      * Returns true if the filter manager has the specified capability.
      * 
-     * @see gov.ihs.cwf.patientlist.IPatientListFilterManager#hasCapability
+     * @see IPatientListFilterManager#hasCapability
      */
     @Override
     public boolean hasCapability(FilterCapability capability) {

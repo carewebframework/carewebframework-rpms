@@ -57,12 +57,15 @@ public class FavoritePatientListFilterManager extends AbstractPatientListFilterM
     protected List<AbstractPatientListFilter> initFilters() {
         if (filters == null) {
             filters = new ArrayList<AbstractPatientListFilter>();
+            List<String> values = getFilterProperty().getValues();
             
-            for (String value : getFilterProperty().getValues()) {
-                try {
-                    filters.add(createFilter(new Favorite(value)));
-                } catch (Exception e) {
-                    log.error("Error creating favorite list item.", e);
+            if (values != null) {
+                for (String value : values) {
+                    try {
+                        filters.add(createFilter(new Favorite(value)));
+                    } catch (Exception e) {
+                        log.error("Error creating favorite list item.", e);
+                    }
                 }
             }
         }
