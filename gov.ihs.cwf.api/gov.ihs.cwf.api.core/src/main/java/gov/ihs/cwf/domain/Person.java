@@ -17,13 +17,12 @@ import java.util.Map;
 
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.api.domain.EntityIdentifier;
+import org.carewebframework.api.domain.IPerson;
 
 /**
- * 
  * Person domain class.
- *
  */
-public class Person extends DomainObject {
+public class Person extends DomainObject implements IPerson {
     
     private static final long serialVersionUID = 1L;
     
@@ -107,6 +106,7 @@ public class Person extends DomainObject {
         this.name = name;
     }
     
+    @Override
     public String getFullName() {
         return name.getFullName();
     }
@@ -115,18 +115,20 @@ public class Person extends DomainObject {
         this.name = new Name(name);
     }
     
-    public void setInstitution(Institution institution) {
-        this.institution = institution;
-    }
-    
+    @Override
     public Institution getInstitution() {
         return institution;
+    }
+    
+    public void setInstitution(Institution institution) {
+        this.institution = institution;
     }
     
     public void setGender(String gender) {
         this.gender = gender;
     }
     
+    @Override
     public String getGender() {
         return gender;
     }
@@ -135,6 +137,7 @@ public class Person extends DomainObject {
         this.birthDate = birthDate;
     }
     
+    @Override
     public Date getBirthDate() {
         return birthDate;
     }
@@ -143,10 +146,12 @@ public class Person extends DomainObject {
         this.deathDate = deathDate;
     }
     
+    @Override
     public Date getDeathDate() {
         return deathDate;
     }
     
+    @Override
     public EntityIdentifier getIdentifier(String sysId) {
         return identifiers.get(sysId);
     }
@@ -226,4 +231,5 @@ public class Person extends DomainObject {
     public String toString() {
         return getFullName();
     }
+    
 }

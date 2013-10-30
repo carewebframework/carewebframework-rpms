@@ -10,14 +10,13 @@
 package gov.ihs.cwf.domain;
 
 import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.api.domain.IInstitution;
 import org.carewebframework.common.JSONUtil;
 
 /**
- * 
  * Institution domain class.
- *
  */
-public class Institution extends DomainObject {
+public class Institution extends DomainObject implements IInstitution {
     
     private static final long serialVersionUID = 1L;
     
@@ -37,18 +36,22 @@ public class Institution extends DomainObject {
     
     private String abbreviation;
     
+    @Override
     public String getName() {
         return name;
     }
     
+    @Override
     public void setName(String name) {
         this.name = name;
     }
     
+    @Override
     public String getAbbreviation() {
         return abbreviation == null || abbreviation.isEmpty() ? name : abbreviation;
     }
     
+    @Override
     public void setAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
     }
