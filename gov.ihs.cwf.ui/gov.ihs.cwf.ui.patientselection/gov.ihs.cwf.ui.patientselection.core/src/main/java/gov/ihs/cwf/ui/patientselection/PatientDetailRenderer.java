@@ -76,7 +76,7 @@ public class PatientDetailRenderer implements IPatientDetailRenderer {
      * @return
      */
     private boolean confirmAccess(Patient patient, Component root) {
-        boolean allowed = !patient.isSensitive();
+        boolean allowed = !patient.isRestricted();
         
         if (!allowed)
             addDemographic(root, null, getDemographicLabel("restricted"), "font-weight: bold");
