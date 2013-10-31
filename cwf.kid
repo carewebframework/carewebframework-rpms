@@ -1,4 +1,4 @@
-KIDS Distribution saved on Sep 17, 2013@00:12:48
+KIDS Distribution saved on Oct 31, 2013@00:12:48
 CAREWEB ENHANCEMENTS 1.1
 **KIDS**:CAREWEB ENHANCEMENTS 3.0^
 
@@ -453,7 +453,7 @@ medicalRecordNumber^^C
 "DATA",19930.5,5,10,6,10)
 D PUTQT(PN,$$HRN^BEHOPTCX(IEN))
 "DATA",19930.5,5,10,7,0)
-sensitive^^C
+restricted^^C
 "DATA",19930.5,5,10,7,10)
 D PUTBL(PN,$$ISSENS^BEHOPTCX(IEN))
 "DATA",19930.5,5,10,8,0)

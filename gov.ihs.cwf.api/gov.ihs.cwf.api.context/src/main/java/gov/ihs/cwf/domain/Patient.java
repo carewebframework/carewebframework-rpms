@@ -23,7 +23,7 @@ public class Patient extends Person {
     
     private String bed;
     
-    private boolean sensitive;
+    private boolean restricted;
     
     private Location location;
     
@@ -51,12 +51,12 @@ public class Patient extends Person {
         return bed;
     }
     
-    public void setSensitive(boolean sensitive) {
-        this.sensitive = sensitive;
+    public void setRestricted(boolean restricted) {
+        this.restricted = restricted;
     }
     
-    public boolean isSensitive() {
-        return sensitive;
+    public boolean isRestricted() {
+        return restricted;
     }
     
     public void setLocation(Location location) {
