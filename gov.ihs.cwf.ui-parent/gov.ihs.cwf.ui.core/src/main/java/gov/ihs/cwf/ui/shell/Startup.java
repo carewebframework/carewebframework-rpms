@@ -20,7 +20,7 @@ import org.carewebframework.shell.ICareWebStartup;
 /**
  * Shows the login greeting message at application startup.
  * 
- * @author dmartin
+ * 
  */
 public class Startup implements ICareWebStartup {
     

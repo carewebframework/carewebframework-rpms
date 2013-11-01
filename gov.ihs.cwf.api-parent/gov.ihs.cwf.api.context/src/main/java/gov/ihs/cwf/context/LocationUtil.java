@@ -16,7 +16,7 @@ import java.util.List;
 /**
  * Location-related utility functions.
  * 
- * @author dmartin
+ * 
  */
 public class LocationUtil {
     

@@ -18,7 +18,7 @@ import org.carewebframework.common.JSONUtil;
 /**
  * Abstract base class for encounter-associated domain objects.
  * 
- * @author dmartin
+ * 
  */
 public class EncounterProvider extends EncounterRelated {
     

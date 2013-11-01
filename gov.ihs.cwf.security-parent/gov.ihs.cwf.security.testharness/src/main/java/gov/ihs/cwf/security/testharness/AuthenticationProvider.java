@@ -17,7 +17,7 @@ import gov.ihs.cwf.security.base.BaseAuthenticationProvider;
  * Provides authentication support for the framework. Takes provided authentication credentials and
  * authenticates them against the database.
  * 
- * @author dmartin
+ * 
  */
 public final class AuthenticationProvider extends BaseAuthenticationProvider {
     

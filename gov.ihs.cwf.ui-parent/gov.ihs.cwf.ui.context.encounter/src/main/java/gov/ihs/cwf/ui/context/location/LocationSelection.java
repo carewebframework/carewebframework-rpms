@@ -31,7 +31,7 @@ import org.zkoss.zul.Textbox;
  * Location selection controller. Supports selecting a location from a list of known locations and
  * requesting that the location context be changed to that selection.
  * 
- * @author dmartin
+ * 
  */
 public class LocationSelection extends Panel {
     

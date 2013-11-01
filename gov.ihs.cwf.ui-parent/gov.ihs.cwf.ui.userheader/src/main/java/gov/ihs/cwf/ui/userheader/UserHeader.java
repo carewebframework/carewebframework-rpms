@@ -32,7 +32,7 @@ import org.zkoss.zul.Label;
 /**
  * Controller for user header plugin.
  * 
- * @author dmartin
+ * 
  */
 public class UserHeader extends FrameworkController implements IUserContextEvent, IPluginEvent {
     

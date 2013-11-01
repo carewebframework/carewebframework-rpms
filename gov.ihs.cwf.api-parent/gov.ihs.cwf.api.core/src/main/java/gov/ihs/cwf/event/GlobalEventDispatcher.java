@@ -22,7 +22,7 @@ import org.carewebframework.api.event.AbstractGlobalEventDispatcher;
  * globally to the messaging server and receiving subscribed events from the same and passing them
  * on to the local event dispatcher for local distribution.
  * 
- * @author dmartin
+ * 
  */
 public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher implements IHostEventHandler {
     

@@ -14,7 +14,7 @@ import org.carewebframework.ui.zk.ZKUtil;
 /**
  * Location-related constants.
  * 
- * @author dmartin
+ * 
  */
 public class Constants {
     

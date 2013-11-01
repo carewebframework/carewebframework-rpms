@@ -14,7 +14,7 @@ import org.carewebframework.common.JSONUtil;
 /**
  * Represents a single ICD9 code.
  * 
- * @author dmartin
+ * 
  */
 public class ICD9Concept extends Concept {
     

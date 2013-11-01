@@ -20,7 +20,7 @@ import org.zkoss.zul.Toolbar;
 /**
  * Controller for medication list cover sheet.
  * 
- * @author dmartin
+ * 
  */
 public class MainController extends CoverSheetBase {
     

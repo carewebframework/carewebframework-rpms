@@ -20,7 +20,7 @@ import org.carewebframework.api.spring.SpringUtil;
 /**
  * Static utility class for the RPMS extensions.
  * 
- * @author dmartin
+ * 
  */
 public class RPMSUtil {
     

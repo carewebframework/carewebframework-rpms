@@ -18,9 +18,7 @@ import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.JSONUtil;
 
 /**
- * Factory for instantiated serialized domain objects from server.
- * 
- * @author dmartin
+ * Factory for instantiating serialized domain objects from server.
  */
 public class DomainObjectFactory {
     

@@ -37,7 +37,7 @@ import org.springframework.security.core.AuthenticationException;
  * Provides authentication support for the framework. Takes provided authentication credentials and
  * authenticates them against the database.
  * 
- * @author dmartin
+ * 
  */
 public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
     

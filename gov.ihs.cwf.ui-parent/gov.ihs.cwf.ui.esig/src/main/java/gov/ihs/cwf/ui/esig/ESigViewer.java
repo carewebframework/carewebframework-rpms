@@ -43,7 +43,7 @@ import org.zkoss.zul.Window;
 /**
  * Controller for the signature review dialog.
  * 
- * @author dmartin
+ * 
  */
 public class ESigViewer extends Window implements PatientContext.IPatientContextEvent {
     

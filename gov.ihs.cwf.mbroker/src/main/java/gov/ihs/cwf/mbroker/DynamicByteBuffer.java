@@ -17,7 +17,7 @@ import java.util.List;
  * incremental size. Buffers are allocated internally as a pool of byte arrays. Buffer operations
  * are not thread safe.
  * 
- * @author dmartin
+ * 
  */
 public class DynamicByteBuffer {
     

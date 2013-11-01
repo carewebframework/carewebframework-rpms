@@ -31,7 +31,7 @@ import org.zkoss.zul.Label;
  * (patient context listener). This is done because Java does not permit disambiguation of
  * conflicting interface method names.
  * 
- * @author dmartin
+ * 
  */
 public class EncounterHeader extends FrameworkController implements EncounterContext.IEncounterContextEvent {
     

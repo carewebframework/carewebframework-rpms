@@ -36,7 +36,7 @@ import org.zkoss.zul.Window;
 /**
  * Controller for the issue viewer dialog.
  * 
- * @author dmartin
+ * 
  */
 public class IssueViewer extends Window {
     

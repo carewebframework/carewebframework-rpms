@@ -25,7 +25,7 @@ import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
 /**
  * Wrapper for shared encounter context.
  * 
- * @author dmartin
+ * 
  */
 public class EncounterContext extends ManagedContext<Encounter> implements IPatientContextEvent {
     

@@ -24,7 +24,7 @@ import org.zkoss.zul.Label;
 /**
  * Controller for location header component.
  * 
- * @author dmartin
+ * 
  */
 public class LocationHeader extends FrameworkController implements LocationContext.ILocationContextEvent {
     

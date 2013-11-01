@@ -15,7 +15,7 @@ import org.zkoss.zul.Listitem;
 /**
  * Abstract base class for renderers.
  * 
- * @author dmartin
+ * 
  * @param <T>
  */
 public abstract class BgoBaseRenderer<T> implements org.zkoss.zul.ListitemRenderer<T> {

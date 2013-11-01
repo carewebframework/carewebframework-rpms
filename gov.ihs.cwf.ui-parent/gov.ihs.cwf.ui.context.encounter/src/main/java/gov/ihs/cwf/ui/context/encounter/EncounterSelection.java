@@ -60,7 +60,7 @@ import org.zkoss.zul.Window;
  * Encounter selection controller. Supports selecting an existing encounter from inpatient or
  * outpatient lists or creating an ad hoc encounter.
  * 
- * @author dmartin
+ * 
  */
 public class EncounterSelection extends Panel implements PatientContext.IPatientContextEvent {
     

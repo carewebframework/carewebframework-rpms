@@ -14,7 +14,7 @@ import org.carewebframework.ui.zk.ZKUtil;
 /**
  * Package-specific constants.
  * 
- * @author dmartin
+ * 
  */
 public class Constants {
     

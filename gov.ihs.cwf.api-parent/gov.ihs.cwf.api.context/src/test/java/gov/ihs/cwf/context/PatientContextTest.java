@@ -34,7 +34,7 @@ public class PatientContextTest extends CommonTest {
     /**
      * Should accept context change on first survey and refuse on all subsequent surveys.
      * 
-     * @author dmartin
+     * 
      */
     private class ContextChangeSubscriber implements IPatientContextEvent {
         

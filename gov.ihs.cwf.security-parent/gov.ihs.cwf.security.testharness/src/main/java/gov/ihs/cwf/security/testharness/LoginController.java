@@ -24,7 +24,7 @@ import org.zkoss.zul.Textbox;
  * Controller for the mock login component. This simulates a user login. Login credentials are
  * obtained from the framework.properties file.
  * 
- * @author dmartin
+ * 
  */
 public class LoginController extends GenericForwardComposer<Component> {
     

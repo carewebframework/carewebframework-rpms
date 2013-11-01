@@ -31,7 +31,7 @@ import org.carewebframework.ui.settings.ISettingsProvider;
 /**
  * Settings provider that supports editing parameters via templates.
  * 
- * @author dmartin
+ * 
  */
 public class SettingsProvider implements ISettingsProvider {
     

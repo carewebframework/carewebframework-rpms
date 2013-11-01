@@ -16,7 +16,7 @@ import org.carewebframework.ui.zk.PromptDialog;
 /**
  * Security service implementation.
  * 
- * @author dmartin
+ * 
  */
 public class SecurityServiceImpl extends BaseSecurityService {
     

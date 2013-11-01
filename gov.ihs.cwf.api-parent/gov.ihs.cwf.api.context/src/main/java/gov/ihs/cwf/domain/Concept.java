@@ -14,7 +14,7 @@ import org.carewebframework.api.domain.DomainObject;
 /**
  * Abstract base class for concept codes.
  * 
- * @author dmartin
+ * 
  */
 public class Concept extends DomainObject {
     

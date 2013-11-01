@@ -25,7 +25,7 @@ import gov.ihs.cwf.property.Property;
 /**
  * Wrapper for shared user location context.
  * 
- * @author dmartin
+ * 
  */
 public class LocationContext extends ManagedContext<Location> {
     

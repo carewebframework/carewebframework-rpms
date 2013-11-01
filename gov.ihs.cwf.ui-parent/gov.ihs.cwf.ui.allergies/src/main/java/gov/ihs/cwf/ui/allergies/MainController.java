@@ -23,7 +23,7 @@ import org.zkoss.zul.Menuitem;
 /**
  * Controller for patient allergies cover sheet.
  * 
- * @author dmartin
+ * 
  */
 public class MainController extends CoverSheetBase {
     

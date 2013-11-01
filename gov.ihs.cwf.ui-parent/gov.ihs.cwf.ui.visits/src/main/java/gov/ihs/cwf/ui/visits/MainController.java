@@ -20,7 +20,7 @@ import org.carewebframework.api.event.IGenericEvent;
 /**
  * Controller for visit/appointment cover sheet.
  * 
- * @author dmartin
+ * 
  */
 public class MainController extends CoverSheetBase {
     

@@ -20,7 +20,7 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
 /**
  * Controller for crisis alert cover sheet. Displays summary and detail views of crisis alerts.
  * 
- * @author dmartin
+ * 
  */
 public class MainController extends CoverSheetBase {
     

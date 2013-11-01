@@ -18,7 +18,7 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
  * Controller for consult orders cover sheet. Displays summary and detail views of consult orders
  * for cover sheet.
  * 
- * @author dmartin
+ * 
  */
 public class MainController extends CoverSheetBase {
     

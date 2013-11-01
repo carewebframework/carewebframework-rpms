@@ -20,7 +20,7 @@ import org.carewebframework.api.event.EventManager;
  * Maintains a list of items queued for electronic signature and provides several methods for
  * manipulating items in the list.
  * 
- * @author dmartin
+ * 
  */
 public class ESigList {
     

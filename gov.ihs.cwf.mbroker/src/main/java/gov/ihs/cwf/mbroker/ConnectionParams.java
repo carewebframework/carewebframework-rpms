@@ -19,7 +19,7 @@ import org.springframework.beans.BeanUtils;
 /**
  * Class representing all connection parameters that influence a broker connection.
  * 
- * @author dmartin
+ * 
  */
 public class ConnectionParams implements Cloneable {
     

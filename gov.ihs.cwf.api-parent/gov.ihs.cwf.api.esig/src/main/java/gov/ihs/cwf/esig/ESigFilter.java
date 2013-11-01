@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Filter used to subselect items returned from an esig list.
  * 
- * @author dmartin
+ * 
  */
 public class ESigFilter {
     

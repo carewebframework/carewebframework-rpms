@@ -19,7 +19,7 @@ import org.carewebframework.common.NumUtil;
 /**
  * This represents a single item to be submitted for electronic signature.
  * 
- * @author dmartin
+ * 
  */
 public class ESigItem implements Serializable {
     
@@ -28,7 +28,7 @@ public class ESigItem implements Serializable {
     /**
      * Represents a default signature state for a signature item.
      * 
-     * @author dmartin
+     * 
      */
     public static enum SignState {
         YES, // Item is marked for signature
@@ -58,7 +58,7 @@ public class ESigItem implements Serializable {
     /**
      * Represents the severity level for an issue.
      * 
-     * @author dmartin
+     * 
      */
     public static enum ESigItemIssueSeverity {
         MINOR, // Minor - User need not explicitly acknowledge or justify override.
@@ -72,7 +72,7 @@ public class ESigItem implements Serializable {
      * Represents a single issue and associated severity. Issues are used to convey to the user
      * potential consequences of signing an item.
      * 
-     * @author dmartin
+     * 
      */
     public static class ESigItemIssue implements Comparable<ESigItemIssue> {
         

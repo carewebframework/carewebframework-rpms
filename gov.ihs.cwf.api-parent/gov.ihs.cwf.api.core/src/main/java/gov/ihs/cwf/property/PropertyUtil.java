@@ -14,7 +14,7 @@ import org.carewebframework.api.spring.SpringUtil;
 /**
  * Static convenience class for obtaining a reference to the property data access service.
  * 
- * @author dmartin
+ * 
  */
 public class PropertyUtil {
     

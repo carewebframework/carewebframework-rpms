@@ -31,7 +31,7 @@ import org.zkoss.zul.Listitem;
 /**
  * Controller for cover sheet components.
  * 
- * @author dmartin
+ * 
  */
 public abstract class CoverSheetBase extends ListViewForm implements PatientContext.IPatientContextEvent, IAsyncRPCEvent {
     

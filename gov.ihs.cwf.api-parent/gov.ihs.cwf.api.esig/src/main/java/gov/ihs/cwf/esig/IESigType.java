@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Interface for interacting with an esignature type.
  * 
- * @author dmartin
+ * 
  */
 public interface IESigType {
     

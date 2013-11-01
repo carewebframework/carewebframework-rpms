@@ -21,7 +21,7 @@ import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
 /**
  * This is the esig service and type registry implementation.
  * 
- * @author dmartin
+ * 
  */
 public class ESigService implements IESigService, IESigTypeRegistry, IPatientContextEvent {
     

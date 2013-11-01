@@ -15,7 +15,7 @@ import org.carewebframework.ui.zk.ZKUtil;
 /**
  * Encounter context-related constants.
  * 
- * @author dmartin
+ * 
  */
 public class Constants {
     

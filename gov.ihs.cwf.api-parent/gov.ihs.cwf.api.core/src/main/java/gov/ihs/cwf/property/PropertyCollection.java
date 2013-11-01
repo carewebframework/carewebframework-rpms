@@ -22,7 +22,7 @@ import org.apache.commons.logging.LogFactory;
  * Holds a map of property values, given one or more prefixes. Properties are loaded and indexed by
  * the property name.
  * 
- * @author dmartin
+ * 
  * @author afranken
  */
 public class PropertyCollection {

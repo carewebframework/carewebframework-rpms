@@ -53,7 +53,7 @@ import org.zkoss.zul.Slider;
 import org.zkoss.zul.Toolbar;
 
 /**
- * @author dmartin
+ * 
  */
 public class Graph extends Div implements PatientContext.IPatientContextEvent, IPluginEvent {
     

@@ -14,7 +14,7 @@ import org.carewebframework.api.domain.DomainObject;
 /**
  * Abstract base class for encounter-associated domain objects.
  * 
- * @author dmartin
+ * 
  */
 public abstract class EncounterRelated extends DomainObject {
     

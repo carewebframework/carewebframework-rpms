@@ -33,7 +33,7 @@ import org.zkoss.zul.Toolbar;
 /**
  * Controller for the login component.
  * 
- * @author dmartin
+ * 
  */
 public class ChangePasswordController extends GenericForwardComposer<Component> {
     

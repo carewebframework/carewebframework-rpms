@@ -15,7 +15,7 @@ import org.carewebframework.common.JSONUtil;
 /**
  * Service category
  * 
- * @author dmartin
+ * 
  */
 public class ServiceCategory extends DomainObject {
     

@@ -31,7 +31,7 @@ import org.carewebframework.common.DateRange;
 /**
  * Supports table-driven (BEH PATIENT LIST) patient lists.
  * 
- * @author dmartin
+ * 
  */
 public class BEHPatientList extends AbstractPatientList {
     

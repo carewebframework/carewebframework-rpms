@@ -15,7 +15,7 @@ import java.util.List;
  * Represents a specific type of esignature items. Each type will have an associated handler that
  * will implement the business logic to apply electronic signature to its member items.
  * 
- * @author dmartin
+ * 
  */
 public class ESigType implements IESigType {
     

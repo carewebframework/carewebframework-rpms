@@ -21,7 +21,7 @@ import org.zkoss.zul.Button;
 /**
  * This is the controller for the esignature plugin.
  * 
- * @author dmartin
+ * 
  */
 public class MainController extends FrameworkController implements IGenericEvent<Object> {
     

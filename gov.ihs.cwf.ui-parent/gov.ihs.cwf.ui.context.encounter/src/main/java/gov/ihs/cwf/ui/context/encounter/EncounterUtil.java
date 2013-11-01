@@ -18,7 +18,7 @@ import org.carewebframework.ui.zk.PromptDialog;
 /**
  * Encounter-related utilities.
  * 
- * @author dmartin
+ * 
  */
 public class EncounterUtil {
     

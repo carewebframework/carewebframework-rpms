@@ -19,7 +19,7 @@ import org.carewebframework.smart.rdf.RDFAPIBase;
 /**
  * Convenience base class for API's that return RDF-formatted results.
  * 
- * @author dmartin
+ * 
  */
 public abstract class RPMSAPIBase extends RDFAPIBase {
     

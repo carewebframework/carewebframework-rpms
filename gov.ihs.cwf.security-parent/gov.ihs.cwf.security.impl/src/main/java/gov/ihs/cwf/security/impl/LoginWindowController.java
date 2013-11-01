@@ -34,7 +34,7 @@ import org.zkoss.zul.Timer;
 /**
  * Controller for the login component.
  * 
- * @author dmartin
+ * 
  */
 public class LoginWindowController extends GenericForwardComposer<Component> {
     

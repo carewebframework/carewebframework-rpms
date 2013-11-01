@@ -12,7 +12,7 @@ package gov.ihs.cwf.esig;
 /**
  * This is the interface declaration for the esig type registry function.
  * 
- * @author dmartin
+ * 
  */
 public interface IESigTypeRegistry {
     

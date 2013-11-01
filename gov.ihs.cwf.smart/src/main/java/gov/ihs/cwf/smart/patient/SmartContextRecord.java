@@ -17,7 +17,7 @@ import org.carewebframework.smart.SmartContextBase;
 /**
  * Implements SMART context scope "record".
  * 
- * @author dmartin
+ * 
  */
 public class SmartContextRecord extends SmartContextBase {
     

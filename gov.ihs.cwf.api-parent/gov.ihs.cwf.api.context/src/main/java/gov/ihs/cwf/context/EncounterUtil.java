@@ -27,7 +27,7 @@ import org.carewebframework.common.StrUtil;
 /**
  * Encounter-related utility functions.
  * 
- * @author dmartin
+ * 
  */
 public class EncounterUtil {
     

@@ -53,7 +53,7 @@ import org.zkoss.zul.Span;
 import org.zkoss.zul.Textbox;
 
 /**
- * @author dmartin
+ * 
  */
 public class Entry extends Panel implements PatientContext.IPatientContextEvent, EncounterContext.IEncounterContextEvent, IPluginEvent {
     

@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
 /**
  * Simple means to package parameters for passing to a form controller.
  * 
- * @author dmartin
+ * 
  */
 public class Params extends HashMap<Object, Object> implements Iterable<Object> {
     

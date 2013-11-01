@@ -20,7 +20,7 @@ import org.carewebframework.security.spring.CWFAuthenticationDetails;
  * Provides authentication support for the framework. Takes provided authentication credentials and
  * authenticates them against the database.
  * 
- * @author dmartin
+ * 
  */
 public final class AuthenticationProvider extends BaseAuthenticationProvider {
     

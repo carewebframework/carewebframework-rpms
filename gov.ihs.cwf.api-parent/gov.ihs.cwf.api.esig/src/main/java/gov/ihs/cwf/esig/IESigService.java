@@ -12,7 +12,7 @@ package gov.ihs.cwf.esig;
 /**
  * This is the interface declaration for the electronic signature service.
  * 
- * @author dmartin
+ * 
  */
 public interface IESigService {
     
