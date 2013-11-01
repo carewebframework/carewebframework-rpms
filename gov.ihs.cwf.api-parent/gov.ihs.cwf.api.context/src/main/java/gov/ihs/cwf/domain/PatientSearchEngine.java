@@ -37,6 +37,7 @@ public class PatientSearchEngine implements IPatientSearch {
      *         null if no search criteria are provided or the search exceeds the maximum allowable
      *         matches and the user chooses to cancel the search.
      */
+    @SuppressWarnings("unchecked")
     @Override
     public List<IPatient> search(PatientSearchCriteria criteria) {
         BrokerSession broker = RPMSUtil.getBrokerSession();
@@ -71,6 +72,6 @@ public class PatientSearchEngine implements IPatientSearch {
             
         }
         
-        return PatientFactory.getInstance().fetchObjects(ids);
+        return (List<IPatient>) (List<?>) DomainObjectFactory.get(Patient.class, ids);
     }
 }

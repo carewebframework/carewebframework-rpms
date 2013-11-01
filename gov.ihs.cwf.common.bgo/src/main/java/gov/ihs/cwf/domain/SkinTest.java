@@ -10,7 +10,6 @@
 package gov.ihs.cwf.domain;
 
 import gov.ihs.cwf.common.bgo.PCC;
-import gov.ihs.cwf.factory.DomainObjectFactory;
 import gov.ihs.cwf.mbroker.FMDate;
 
 import org.apache.commons.lang.math.NumberUtils;

@@ -17,10 +17,10 @@ import java.util.Map;
 
 import gov.ihs.cwf.context.EncounterContext;
 import gov.ihs.cwf.context.PatientContext;
+import gov.ihs.cwf.domain.DomainObjectFactory;
 import gov.ihs.cwf.domain.Encounter;
 import gov.ihs.cwf.domain.Location;
 import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.factory.DomainObjectFactory;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.FMDate;
 import gov.ihs.cwf.util.RPMSUtil;

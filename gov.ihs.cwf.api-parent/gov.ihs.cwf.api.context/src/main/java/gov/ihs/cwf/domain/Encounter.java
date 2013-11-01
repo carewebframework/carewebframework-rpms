@@ -9,7 +9,6 @@
  */
 package gov.ihs.cwf.domain;
 
-import gov.ihs.cwf.factory.DomainObjectFactory;
 import gov.ihs.cwf.mbroker.FMDate;
 
 import java.util.Date;

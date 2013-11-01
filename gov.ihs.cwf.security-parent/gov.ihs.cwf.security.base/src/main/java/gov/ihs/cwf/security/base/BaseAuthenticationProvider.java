@@ -12,8 +12,8 @@ package gov.ihs.cwf.security.base;
 import java.util.ArrayList;
 import java.util.List;
 
+import gov.ihs.cwf.domain.DomainObjectFactory;
 import gov.ihs.cwf.domain.User;
-import gov.ihs.cwf.factory.DomainObjectFactory;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.Security;
 import gov.ihs.cwf.mbroker.Security.AuthResult;

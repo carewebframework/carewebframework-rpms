@@ -14,9 +14,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import gov.ihs.cwf.domain.DomainObjectFactory;
 import gov.ihs.cwf.domain.Person;
 import gov.ihs.cwf.domain.User;
-import gov.ihs.cwf.factory.DomainObjectFactory;
 import gov.ihs.cwf.mbroker.FMDate;
 import gov.ihs.cwf.property.PropertyDefinition;
 

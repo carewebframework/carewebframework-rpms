@@ -7,7 +7,7 @@
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
  */
-package gov.ihs.cwf.factory;
+package gov.ihs.cwf.domain;
 
 import java.util.Collections;
 import java.util.List;
@@ -15,12 +15,17 @@ import java.util.List;
 import gov.ihs.cwf.util.RPMSUtil;
 
 import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.api.domain.IDomainFactory;
 import org.carewebframework.common.JSONUtil;
 
 /**
  * Factory for instantiating serialized domain objects from server.
+ * 
+ * @param <DomainClass>
  */
-public class DomainObjectFactory {
+public class DomainObjectFactory<DomainClass extends DomainObject> implements IDomainFactory<DomainClass> {
+    
+    private final Class<DomainClass> domainClass;
     
     /**
      * Requests a domain object from the server. The domain object, if found, is returned by the
@@ -106,6 +111,43 @@ public class DomainObjectFactory {
         }
         
         return alias;
+    }
+    
+    /**
+     * Create a factory instance for the specified domain class.
+     * 
+     * @param domainClass
+     */
+    public DomainObjectFactory(Class<DomainClass> domainClass) {
+        this.domainClass = domainClass;
+    }
+    
+    /**
+     * Create a new instance of the domain class.
+     */
+    @Override
+    public DomainClass newObject() {
+        try {
+            return domainClass.newInstance();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+    /**
+     * Fetch an instance of the domain class from the data store.
+     */
+    @Override
+    public DomainClass fetchObject(long id) {
+        return id > 0 ? DomainObjectFactory.get(domainClass, id) : null;
+    }
+    
+    /**
+     * Fetch multiple instances of the domain class from the data store.
+     */
+    @Override
+    public List<DomainClass> fetchObjects(long[] ids) {
+        return DomainObjectFactory.get(domainClass, ids);
     }
     
 }

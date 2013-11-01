@@ -9,12 +9,12 @@
  */
 package gov.ihs.cwf.context;
 
+import gov.ihs.cwf.domain.DomainObjectFactory;
 import gov.ihs.cwf.domain.Encounter;
 import gov.ihs.cwf.domain.EncounterProvider;
 import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.domain.Provider;
 import gov.ihs.cwf.domain.User;
-import gov.ihs.cwf.factory.DomainObjectFactory;
 import gov.ihs.cwf.util.RPMSUtil;
 
 import java.util.List;

@@ -12,7 +12,7 @@ package gov.ihs.cwf.property;
 import java.util.ArrayList;
 import java.util.List;
 
-import gov.ihs.cwf.factory.DomainObjectFactory;
+import gov.ihs.cwf.domain.DomainObjectFactory;
 import gov.ihs.cwf.mbroker.BrokerSession;
 
 import org.apache.commons.lang.StringUtils;

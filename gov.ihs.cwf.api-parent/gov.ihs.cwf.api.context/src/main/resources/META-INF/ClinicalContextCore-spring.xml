@@ -10,8 +10,9 @@
 
 	<beans profile="root">
 
-		<bean id="patientFactory" class="gov.ihs.cwf.domain.PatientFactory"
-			factory-method="getInstance" />
+		<bean id="patientFactory" class="gov.ihs.cwf.domain.DomainObjectFactory">
+			<constructor-arg value="gov.ihs.cwf.domain.Patient" />
+		</bean>
 
 		<bean id="patientSearchEngine" class="gov.ihs.cwf.domain.PatientSearchEngine" />
 
