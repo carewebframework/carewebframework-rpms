@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.carewebframework</groupId>
-		<artifactId>org.carewebframework</artifactId>
+		<artifactId>org.carewebframework-parent</artifactId>
 		<version>3.0.0-SNAPSHOT</version>
 	</parent>
 	<groupId>gov.ihs.cwf</groupId>
-	<artifactId>gov.ihs.cwf</artifactId>
+	<artifactId>gov.ihs.cwf-parent</artifactId>
 	<version>1.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<scm>
@@ -40,16 +40,26 @@
 	</properties>
 	<modules>
 		<module>gov.ihs.cwf.mbroker</module>
-		<module>gov.ihs.cwf.api</module>
-		<module>gov.ihs.cwf.security</module>
+		<module>gov.ihs.cwf.api-parent</module>
+		<module>gov.ihs.cwf.security-parent</module>
 		<module>gov.ihs.cwf.common.bgo</module>
-		<module>gov.ihs.cwf.ui</module>
+		<module>gov.ihs.cwf.ui-parent</module>
 		<module>gov.ihs.cwf.smart</module>
 		<module>gov.ihs.cwf.testharness</module>
 		<module>gov.ihs.cwf.web.impl.goldb</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.cal.api.core</artifactId>
+				<version>${org.carewebframework.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.cal.api.patientlist</artifactId>
+				<version>${org.carewebframework.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>gov.ihs.cwf</groupId>
 				<artifactId>gov.ihs.cwf.api.core</artifactId>

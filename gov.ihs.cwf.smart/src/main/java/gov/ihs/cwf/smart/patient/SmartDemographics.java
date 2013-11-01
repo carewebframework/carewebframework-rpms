@@ -13,9 +13,9 @@ import java.util.Map;
 
 import gov.ihs.cwf.context.PatientContext;
 import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.domain.Person.Name;
 import gov.ihs.cwf.smart.RPMSAPIBase;
 
+import org.carewebframework.cal.api.domain.Name;
 import org.carewebframework.smart.rdf.RDFDescription;
 import org.carewebframework.smart.rdf.RDFDocument;
 

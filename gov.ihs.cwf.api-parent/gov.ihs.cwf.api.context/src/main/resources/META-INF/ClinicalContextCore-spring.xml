@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cwf="http://www.carewebframework.org/schema/spring" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.carewebframework.org/schema/spring
+		http://www.carewebframework.org/schema/spring/spring-extensions.xsd">
+
+	<beans profile="root">
+
+		<bean id="patientFactory" class="gov.ihs.cwf.domain.PatientFactory"
+			factory-method="getInstance" />
+
+		<bean id="patientSearchEngine" class="gov.ihs.cwf.domain.PatientSearchEngine" />
+
+	</beans>
+
+	<beans profile="desktop">
+
+		<!-- Shared clinical contexts. -->
+
+		<bean id="patientContext" parent="managedContext"
+			class="gov.ihs.cwf.context.PatientContext" cwf:override="always">
+		</bean>
+
+		<bean id="encounterContext" parent="managedContext"
+			class="gov.ihs.cwf.context.EncounterContext">
+		</bean>
+
+		<bean id="locationContext" parent="managedContext"
+			class="gov.ihs.cwf.context.LocationContext" depends-on="userContext">
+		</bean>
+
+	</beans>
+</beans>

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>gov.ihs.cwf</groupId>
-		<artifactId>gov.ihs.cwf</artifactId>
+		<artifactId>gov.ihs.cwf-parent</artifactId>
 		<version>1.1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>gov.ihs.cwf.testharness</artifactId>
@@ -40,6 +40,16 @@
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.testharness</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.cal.ui.patientselection.v1</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.cal.ui.patientheader</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
 		<!-- RPMS Plugins -->
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
@@ -47,17 +57,12 @@
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.patientselection.v1</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.patientheader</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.ui.userheader</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.api.patientlist</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<!-- Security -->
