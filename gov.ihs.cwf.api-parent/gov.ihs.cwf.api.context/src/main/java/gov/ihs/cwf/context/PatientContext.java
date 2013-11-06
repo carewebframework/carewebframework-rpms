@@ -79,14 +79,4 @@ public class PatientContext extends org.carewebframework.cal.api.context.Patient
         }
     }
     
-    /**
-     * Returns a priority value of 10.
-     * 
-     * @return Priority value for context manager.
-     */
-    @Override
-    public int getPriority() {
-        return 10;
-    }
-    
 }
