@@ -52,7 +52,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.cal.ui.userheader</artifactId>
+			<artifactId>org.carewebframework.ui.userheader</artifactId>
 			<version>${org.carewebframework.version}</version>
 		</dependency>
 		<!-- RPMS Plugins -->

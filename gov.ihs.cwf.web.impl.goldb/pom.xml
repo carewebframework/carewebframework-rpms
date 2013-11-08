@@ -65,6 +65,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.ui.userheader</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.cal.ui.patientselection.v1</artifactId>
 			<version>${org.carewebframework.version}</version>
 		</dependency>
@@ -74,11 +79,6 @@
 			<version>${org.carewebframework.version}</version>
 		</dependency>
 		<!-- RPMS Plugins -->
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.userheader</artifactId>
-			<version>${project.version}</version>
-		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.ui.alerts</artifactId>
