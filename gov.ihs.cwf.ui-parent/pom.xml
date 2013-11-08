@@ -19,7 +19,6 @@
 		<module>gov.ihs.cwf.ui.laborders</module>
 		<module>gov.ihs.cwf.ui.medlist</module>
 		<module>gov.ihs.cwf.ui.visits</module>
-		<module>gov.ihs.cwf.ui.userheader</module>
 		<module>gov.ihs.cwf.ui.behvitals</module>
 		<module>gov.ihs.cwf.ui.problem</module>
 		<module>gov.ihs.cwf.ui.skintest</module>

@@ -50,15 +50,15 @@
 			<artifactId>org.carewebframework.cal.ui.patientheader</artifactId>
 			<version>${org.carewebframework.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.cal.ui.userheader</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
 		<!-- RPMS Plugins -->
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.ui.core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.userheader</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
