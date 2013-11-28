@@ -28,12 +28,12 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.api</artifactId>
-			<classifier>tests</classifier>
+			<type>test-jar</type>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.api.core</artifactId>
-			<classifier>tests</classifier>
+			<type>test-jar</type>
 		</dependency>
 	</dependencies>
 </project>
