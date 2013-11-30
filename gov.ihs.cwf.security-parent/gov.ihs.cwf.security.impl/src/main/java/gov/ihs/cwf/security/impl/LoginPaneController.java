@@ -41,8 +41,6 @@ import org.zkoss.zul.Textbox;
 
 /**
  * Controller for the login component.
- * 
- * 
  */
 public class LoginPaneController extends GenericForwardComposer<Component> {
     
@@ -159,7 +157,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
             showState(Labels.getLabel(Constants.LBL_LOGIN_NO_VALID_INSTITUTIONS));
         }
         
-        setFooterText(StrUtil.fromList(RPMSUtil.getBrokerSession().getGreeting()));
+        setFooterText(StrUtil.fromList(RPMSUtil.getBrokerSession().getPreLoginMessage()));
         institutionChanged();
     }
     

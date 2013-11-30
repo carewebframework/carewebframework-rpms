@@ -1,3 +1,3 @@
 <zk>
-	<cwfShellEx id="GOLDB" height="100%" width="100%" layout="/layout.xml" />
+	<cwfShellEx id="GOLDB" height="100%" width="100%" layout="/layout.xml" autoStart="true" />
 </zk>

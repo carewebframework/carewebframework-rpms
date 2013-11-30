@@ -19,14 +19,12 @@ import org.carewebframework.shell.ICareWebStartup;
 
 /**
  * Shows the login greeting message at application startup.
- * 
- * 
  */
 public class Startup implements ICareWebStartup {
     
     @Override
     public boolean execute() {
-        List<String> greeting = RPMSUtil.getBrokerSession().getGreeting();
+        List<String> greeting = RPMSUtil.getBrokerSession().getPostLoginMessage();
         
         if (!greeting.isEmpty()) {
             CareWebUtil.showMessage(StrUtil.fromList(greeting));

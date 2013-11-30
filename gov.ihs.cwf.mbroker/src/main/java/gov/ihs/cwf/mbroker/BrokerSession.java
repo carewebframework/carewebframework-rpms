@@ -149,7 +149,9 @@ public class BrokerSession {
     
     private PollingThread pollingThread;
     
-    private final List<String> greeting = new ArrayList<String>();
+    private final List<String> preLoginMessage = new ArrayList<String>();
+    
+    private final List<String> postLoginMessage = new ArrayList<String>();
     
     private final Map<Integer, IAsyncRPCEvent> callbacks = new HashMap<Integer, IAsyncRPCEvent>();
     
@@ -561,13 +563,22 @@ public class BrokerSession {
         }
     }
     
-    protected void setGreeting(List<String> greeting) {
-        this.greeting.clear();
-        this.greeting.addAll(greeting);
+    public List<String> getPreLoginMessage() {
+        return preLoginMessage;
     }
     
-    public List<String> getGreeting() {
-        return greeting;
+    protected void setPreLoginMessage(List<String> message) {
+        this.preLoginMessage.clear();
+        this.preLoginMessage.addAll(message);
+    }
+    
+    public List<String> getPostLoginMessage() {
+        return postLoginMessage;
+    }
+    
+    protected void setPostLoginMessage(List<String> message) {
+        this.postLoginMessage.clear();
+        this.postLoginMessage.addAll(message);
     }
     
     protected void onRPCError(int asyncHandle, int asyncError, String text) {

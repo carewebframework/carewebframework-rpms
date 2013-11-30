@@ -106,7 +106,7 @@ public class Security {
             session.init(results.get(1));
         }
         
-        session.setGreeting(results.subList(2, results.size()));
+        session.setPreLoginMessage(results.subList(2, results.size()));
         return authResult;
     }
 }
