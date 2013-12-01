@@ -62,7 +62,7 @@ public class BrokerSession {
     
     public static class ServerCaps implements Cloneable {
         
-        private AuthMethod authMethod;
+        private AuthMethod authMethod = AuthMethod.Normal;
         
         private Version serverVersion;
         
@@ -77,7 +77,6 @@ public class BrokerSession {
         private String siteName;
         
         public ServerCaps() {
-            clear();
         }
         
         public void clear() {
@@ -205,6 +204,8 @@ public class BrokerSession {
     public void disconnect() {
         callbacks.clear();
         polling(false);
+        preLoginMessage.clear();
+        postLoginMessage.clear();
         
         if (socket != null) {
             Request request = new Request(Action.DISCONNECT);
@@ -267,7 +268,7 @@ public class BrokerSession {
         } catch (Exception e) {}
     }
     
-    private void ensureConnection() {
+    public void ensureConnection() {
         if (!isConnected()) {
             connect();
         }
@@ -568,8 +569,8 @@ public class BrokerSession {
     }
     
     protected void setPreLoginMessage(List<String> message) {
-        this.preLoginMessage.clear();
-        this.preLoginMessage.addAll(message);
+        preLoginMessage.clear();
+        preLoginMessage.addAll(message);
     }
     
     public List<String> getPostLoginMessage() {

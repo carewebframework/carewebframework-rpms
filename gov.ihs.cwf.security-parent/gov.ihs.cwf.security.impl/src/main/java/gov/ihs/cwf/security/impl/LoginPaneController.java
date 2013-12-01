@@ -12,8 +12,8 @@ package gov.ihs.cwf.security.impl;
 import java.util.List;
 
 import gov.ihs.cwf.domain.Institution;
+import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.security.base.Constants;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
@@ -77,6 +77,8 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
     private SecurityServiceImpl securityService;
     
     private SavedRequest savedRequest;
+    
+    private BrokerSession brokerSession;
     
     /**
      * Initialize the login form.
@@ -157,7 +159,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
             showState(Labels.getLabel(Constants.LBL_LOGIN_NO_VALID_INSTITUTIONS));
         }
         
-        setFooterText(StrUtil.fromList(RPMSUtil.getBrokerSession().getPreLoginMessage()));
+        setFooterText(StrUtil.fromList(brokerSession.getPreLoginMessage()));
         institutionChanged();
     }
     
@@ -309,6 +311,16 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
      */
     public void setSecurityService(final SecurityServiceImpl securityService) {
         this.securityService = securityService;
+    }
+    
+    /**
+     * Sets the broker session.
+     * 
+     * @param brokerSession The broker session.
+     */
+    public void setBrokerSession(BrokerSession brokerSession) {
+        this.brokerSession = brokerSession;
+        brokerSession.ensureConnection();
     }
     
 }

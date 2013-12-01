@@ -101,12 +101,15 @@ public class Security {
             ";".equals(av) ? av : encrypt(av), session.getLocalAddress(), division);
         String result = StrUtil.split(results.get(0), StrUtil.U, 1)[0];
         AuthResult authResult = AuthResult.values()[NumberUtils.toInt(result, AuthResult.FAILURE.ordinal())];
+        List<String> message = results.subList(2, results.size());
         
         if (authResult == AuthResult.SUCCESS || authResult == AuthResult.EXPIRED) {
+            session.setPostLoginMessage(message);
             session.init(results.get(1));
+        } else if (!message.isEmpty()) {
+            session.setPreLoginMessage(message);
         }
         
-        session.setPreLoginMessage(results.subList(2, results.size()));
         return authResult;
     }
 }

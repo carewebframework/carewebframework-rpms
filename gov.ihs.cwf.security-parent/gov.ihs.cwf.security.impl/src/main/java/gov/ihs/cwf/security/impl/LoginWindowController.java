@@ -33,8 +33,6 @@ import org.zkoss.zul.Timer;
 
 /**
  * Controller for the login component.
- * 
- * 
  */
 public class LoginWindowController extends GenericForwardComposer<Component> {
     

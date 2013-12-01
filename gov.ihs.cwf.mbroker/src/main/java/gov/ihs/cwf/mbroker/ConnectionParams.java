@@ -18,10 +18,8 @@ import org.springframework.beans.BeanUtils;
 
 /**
  * Class representing all connection parameters that influence a broker connection.
- * 
- * 
  */
-public class ConnectionParams implements Cloneable {
+public class ConnectionParams {
     
     private String server; // IP address or resolvable name of the server
     

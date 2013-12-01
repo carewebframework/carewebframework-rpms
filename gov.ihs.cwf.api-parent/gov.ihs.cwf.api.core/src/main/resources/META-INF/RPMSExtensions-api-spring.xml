@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:cwf="http://www.carewebframework.org/schema/spring"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.carewebframework.org/schema/spring
 		http://www.carewebframework.org/schema/spring/spring-extensions.xsd">
 
@@ -16,8 +19,8 @@
 
 		<!-- RPC broker -->
 		<bean id="brokerSession" class="gov.ihs.cwf.mbroker.BrokerSession"
-			init-method="connect"
-			destroy-method="disconnect">
+			scope="desktop" init-method="connect" destroy-method="disconnect">
+			<aop:scoped-proxy />
 			<property name="connectionParams" ref="brokerConnectionParams" />
 			<property name="executorService" ref="taskExecutor" />
 		</bean>
@@ -37,7 +40,7 @@
 
 	<beans profile="desktop">
 
-		<!-- globalEventDispatcher: Mediates communications between the local and
+		<!-- globalEventDispatcher: Mediates communications between the local and 
 			the global event manager. -->
 		<bean id="globalEventDispatcher" init-method="init"
 			destroy-method="destroy" cwf:override="always"

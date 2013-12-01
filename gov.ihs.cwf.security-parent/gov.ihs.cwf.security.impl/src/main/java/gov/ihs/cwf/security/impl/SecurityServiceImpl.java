@@ -25,9 +25,6 @@ import org.zkoss.util.resource.Labels;
 
 /**
  * Security service implementation.
- * 
- * 
- * @author afranken
  */
 public class SecurityServiceImpl extends BaseSecurityService {
     

@@ -17,6 +17,7 @@
 		<bean id="loginPaneController" class="gov.ihs.cwf.security.impl.LoginPaneController"
 			scope="prototype">
 			<property name="securityService" ref="securityService" />
+			<property name="brokerSession" ref="brokerSession" />
 		</bean>
 
 		<bean id="loginWindowController" class="gov.ihs.cwf.security.impl.LoginWindowController"
