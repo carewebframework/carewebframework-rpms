@@ -36,8 +36,6 @@ import org.springframework.security.core.AuthenticationException;
 /**
  * Provides authentication support for the framework. Takes provided authentication credentials and
  * authenticates them against the database.
- * 
- * 
  */
 public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
     
@@ -69,7 +67,7 @@ public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
         AuthResult authResult = Security.authenticate(brokerSession, username, password, domain, results);
         User user = getAuthenticatedUser(brokerSession);
         details.setDetail("user", user);
-        checkAuthResult(authResult, StrUtil.piece(results.get(0), StrUtil.U, 2));
+        checkAuthResult(authResult, StrUtil.piece(results.get(0), StrUtil.U, 2), user);
         return user;
     }
     
@@ -86,7 +84,8 @@ public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
         }
     }
     
-    private void checkAuthResult(AuthResult result, String message) throws AuthenticationException {
+    @SuppressWarnings("deprecation")
+    private void checkAuthResult(AuthResult result, String message, User user) throws AuthenticationException {
         switch (result) {
             case SUCCESS:
                 return;
@@ -96,7 +95,8 @@ public class BaseAuthenticationProvider extends AbstractAuthenticationProvider {
                     "Authentication attempt was cancelled."));
                 
             case EXPIRED:
-                throw new CredentialsExpiredException(StringUtils.defaultIfEmpty(message, "Your password has expired."));
+                throw new CredentialsExpiredException(StringUtils.defaultIfEmpty(message, "Your password has expired."),
+                        user);
                 
             case FAILURE:
                 throw new BadCredentialsException(StringUtils.defaultIfEmpty(message,

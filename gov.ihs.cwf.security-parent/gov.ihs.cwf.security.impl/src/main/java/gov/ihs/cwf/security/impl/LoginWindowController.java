@@ -56,8 +56,8 @@ public class LoginWindowController extends GenericForwardComposer<Component> {
         savedRequest = (SavedRequest) session.removeAttribute(org.carewebframework.security.spring.Constants.SAVED_REQUEST);
         final AuthenticationException authError = (AuthenticationException) session
                 .removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
-        User user = authError != null && authError.getCause() instanceof CredentialsExpiredException ? (User) ((CredentialsExpiredException) authError
-                .getCause()).getExtraInformation() : null;
+        CredentialsExpiredException expired = getExpired(authError);
+        User user = expired != null ? (User) expired.getExtraInformation() : null;
         String form = user != null ? ChangePasswordController.DIALOG_CHANGE_PASSWORD : LoginPaneController.DIALOG_LOGIN_PANE;
         Map<Object, Object> args = new HashMap<Object, Object>();
         args.put("savedRequest", savedRequest);
@@ -66,6 +66,23 @@ public class LoginWindowController extends GenericForwardComposer<Component> {
         ZKUtil.loadZulPage(form, loginForm, args, this);
         getPage().setTitle(user != null ? "Change Password" : "Please Login");
         resetTimer();
+    }
+    
+    /**
+     * If this is a credentials expiration exception, return it as such.
+     * 
+     * @param exc The authentication exception.
+     * @return If a credentials expiration exception, cast it as such. Otherwise, return null.
+     */
+    private CredentialsExpiredException getExpired(AuthenticationException exc) {
+        if (exc != null) {
+            if (exc instanceof CredentialsExpiredException) {
+                return (CredentialsExpiredException) exc;
+            } else if (exc.getCause() instanceof CredentialsExpiredException) {
+                return (CredentialsExpiredException) exc.getCause();
+            }
+        }
+        return null;
     }
     
     /**
