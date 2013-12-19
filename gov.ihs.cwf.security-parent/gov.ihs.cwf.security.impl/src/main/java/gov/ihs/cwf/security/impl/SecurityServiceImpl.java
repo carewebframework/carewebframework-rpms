@@ -28,6 +28,8 @@ import org.zkoss.util.resource.Labels;
  */
 public class SecurityServiceImpl extends BaseSecurityService {
     
+    private boolean canChangePassword = true;
+    
     /**
      * Changes the user's password.
      * 
@@ -57,7 +59,11 @@ public class SecurityServiceImpl extends BaseSecurityService {
      */
     @Override
     public boolean canChangePassword() {
-        return true;
+        return canChangePassword;
+    }
+    
+    public void setCanChangePassword(boolean canChangePassword) {
+        this.canChangePassword = canChangePassword;
     }
     
     /**

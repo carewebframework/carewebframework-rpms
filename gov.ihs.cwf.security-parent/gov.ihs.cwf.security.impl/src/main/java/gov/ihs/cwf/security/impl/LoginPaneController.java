@@ -24,7 +24,6 @@ import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.FrameworkWebSupport;
 import org.carewebframework.ui.zk.ZKUtil;
 
-import org.springframework.security.authentication.CredentialsExpiredException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.savedrequest.SavedRequest;
 
@@ -93,7 +92,7 @@ public class LoginPaneController extends GenericForwardComposer<Component> {
         
         String loginFailureMessage = Labels.getLabel(Constants.LBL_LOGIN_ERROR);//reset back to default
         
-        if (authError != null && authError.getCause() instanceof CredentialsExpiredException) {
+        if (LoginWindowController.getExpired(authError) != null) {
             loginFailureMessage = Labels.getLabel(Constants.LBL_LOGIN_ERROR_EXPIRED_USER);//override generic UserLoginException default
         }
         

@@ -45,6 +45,23 @@ public class LoginWindowController extends GenericForwardComposer<Component> {
     private SavedRequest savedRequest;
     
     /**
+     * If this is a credentials expiration exception, return it as such.
+     * 
+     * @param exc The authentication exception.
+     * @return If a credentials expiration exception, cast it as such. Otherwise, return null.
+     */
+    protected static CredentialsExpiredException getExpired(AuthenticationException exc) {
+        if (exc != null) {
+            if (exc instanceof CredentialsExpiredException) {
+                return (CredentialsExpiredException) exc;
+            } else if (exc.getCause() instanceof CredentialsExpiredException) {
+                return (CredentialsExpiredException) exc.getCause();
+            }
+        }
+        return null;
+    }
+    
+    /**
      * Initialize the login form.
      * 
      * @param comp - The component
@@ -57,7 +74,8 @@ public class LoginWindowController extends GenericForwardComposer<Component> {
         final AuthenticationException authError = (AuthenticationException) session
                 .removeAttribute(WebAttributes.AUTHENTICATION_EXCEPTION);
         CredentialsExpiredException expired = getExpired(authError);
-        User user = expired != null ? (User) expired.getExtraInformation() : null;
+        User user = expired != null && SecurityUtil.getSecurityService().canChangePassword() ? (User) expired
+                .getExtraInformation() : null;
         String form = user != null ? ChangePasswordController.DIALOG_CHANGE_PASSWORD : LoginPaneController.DIALOG_LOGIN_PANE;
         Map<Object, Object> args = new HashMap<Object, Object>();
         args.put("savedRequest", savedRequest);
@@ -66,23 +84,6 @@ public class LoginWindowController extends GenericForwardComposer<Component> {
         ZKUtil.loadZulPage(form, loginForm, args, this);
         getPage().setTitle(user != null ? "Change Password" : "Please Login");
         resetTimer();
-    }
-    
-    /**
-     * If this is a credentials expiration exception, return it as such.
-     * 
-     * @param exc The authentication exception.
-     * @return If a credentials expiration exception, cast it as such. Otherwise, return null.
-     */
-    private CredentialsExpiredException getExpired(AuthenticationException exc) {
-        if (exc != null) {
-            if (exc instanceof CredentialsExpiredException) {
-                return (CredentialsExpiredException) exc;
-            } else if (exc.getCause() instanceof CredentialsExpiredException) {
-                return (CredentialsExpiredException) exc.getCause();
-            }
-        }
-        return null;
     }
     
     /**
