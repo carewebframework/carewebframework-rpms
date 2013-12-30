@@ -14,10 +14,25 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import gov.ihs.cwf.common.bgo.BgoBaseController;
+import gov.ihs.cwf.common.bgo.BgoConstants;
+import gov.ihs.cwf.common.bgo.BgoUtil;
+import gov.ihs.cwf.common.bgo.ICDLookupController;
+import gov.ihs.cwf.common.bgo.Params;
+import gov.ihs.cwf.context.PatientContext;
+import gov.ihs.cwf.domain.ICD9Concept;
+import gov.ihs.cwf.domain.Institution;
+import gov.ihs.cwf.domain.Patient;
+import gov.ihs.cwf.domain.Problem;
+import gov.ihs.cwf.domain.ProblemNote;
+import gov.ihs.cwf.mbroker.FMDate;
+import gov.ihs.cwf.ui.problemlist.util.Constants;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.context.UserContext;
+import org.carewebframework.api.domain.IInstitution;
 import org.carewebframework.api.domain.IUser;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
@@ -26,20 +41,6 @@ import org.carewebframework.ui.icons.IconUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
-import gov.ihs.cwf.common.bgo.BgoBaseController;
-import gov.ihs.cwf.common.bgo.BgoConstants;
-import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.common.bgo.ICDLookupController;
-import gov.ihs.cwf.common.bgo.Params;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.Institution;
-import gov.ihs.cwf.domain.ICD9Concept;
-import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.domain.Problem;
-import gov.ihs.cwf.domain.ProblemNote;
-import gov.ihs.cwf.mbroker.FMDate;
-import gov.ihs.cwf.ui.problemlist.util.Constants;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -97,11 +98,12 @@ public class AddProblemController extends BgoBaseController<Problem> {
     
     private ICD9Concept icd;
     
-    private List<ProblemNote> changedNotes = new ArrayList<ProblemNote>();
+    private final List<ProblemNote> changedNotes = new ArrayList<ProblemNote>();
     
     public static Problem execute(Problem problem) {
-        if (problem == null)
+        if (problem == null) {
             problem = new Problem(PatientContext.getCurrentPatient());
+        }
         
         Params params = new Params(problem);
         Window dlg = PopupDialog.popup(DIALOG, params, true, true, true);
@@ -123,18 +125,21 @@ public class AddProblemController extends BgoBaseController<Problem> {
     private void loadForm() {
         ICD9Concept icd9 = problem.getIcd9Code();
         
-        if (icd9 != null)
+        if (icd9 != null) {
             txtICD.setText(icd9.getCode());
+        }
         
         String narr = problem.getProviderNarrative();
         
-        if (narr == null)
+        if (narr == null) {
             narr = icd9 == null ? "" : icd9.getLongDescription();
+        }
         
         String probId = problem.getNumberCode();
         
-        if (probId == null || probId.isEmpty()) 
+        if (probId == null || probId.isEmpty()) {
             probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getCurrentPatient().getDomainId());
+        }
         
         String pcs[] = probId.split("\\-", 2);
         lblPrefix.setValue(pcs[0] + " - ");
@@ -142,14 +147,15 @@ public class AddProblemController extends BgoBaseController<Problem> {
         txtNarrative.setText(narr);
         datOnset.setValue(problem.getOnsetDate());
         
-        if ("P".equals(problem.getProblemClass()))
+        if ("P".equals(problem.getProblemClass())) {
             radPersonal.setSelected(true);
-        else if ("F".equals(problem.getProblemClass()))
+        } else if ("F".equals(problem.getProblemClass())) {
             radFamily.setSelected(true);
-        else if ("I".equals(problem.getStatus()))
+        } else if ("I".equals(problem.getStatus())) {
             radInactive.setSelected(true);
-        else
+        } else {
             radActive.setSelected(true);
+        }
         
         int priority = NumberUtils.toInt(problem.getPriority());
         cboPriority.setSelectedIndex(priority < 0 || priority > 5 ? 0 : priority);
@@ -167,9 +173,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
         lstNotes.getItems().clear();
         List<String> notes = getBroker().callRPCList("BGOPRBN GET", null, problem.getDomainId());
         
-        if (BgoUtil.errorCheck(notes))
+        if (BgoUtil.errorCheck(notes)) {
             return;
-        
+        }
         
         /*
          * Location IEN [1] ^ Note IEN [2] ^ Note # [3] ^ Narrative [4] ^
@@ -177,8 +183,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
          * e.g.,
          * 3987^1^1^STECWFD DEPENDENCY (LOW DOSE)^A^2960901^
         */
-        for (String note : notes) 
+        for (String note : notes) {
             renderNote(new ProblemNote(note));
+        }
     }
     
     private boolean updateNotes() {
@@ -190,8 +197,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
             boolean success = pn.getDomainId() == 0 ? addNote(pn) : deleteNote(pn);
             result &= success;
             
-            if (success)
+            if (success) {
                 iter.remove();
+            }
         }
         
         return result;
@@ -210,11 +218,13 @@ public class AddProblemController extends BgoBaseController<Problem> {
      * @return True if successful.
      */
     private boolean addNote(ProblemNote pn) {
-        String s = BgoUtil.concatParams(problem.getDomainId(), null, pn.getFacility().getDomainId(), null, pn.getNarrative());
+        String s = BgoUtil
+                .concatParams(problem.getDomainId(), null, pn.getFacility().getDomainId(), null, pn.getNarrative());
         s = getBroker().callRPC("BGOPRBN SET", s);
         
-        if (BgoUtil.errorCheck(s))
+        if (BgoUtil.errorCheck(s)) {
             return false;
+        }
         
         // Problem IEN [1] ^ Note IEN [2] ^ Location IEN [3] ^ Note # [4] ^ Narrative [5] ^
         // Status [6] ^ Date Entered [7] ^ Author Name [8] ^ Note ID [9]
@@ -240,10 +250,10 @@ public class AddProblemController extends BgoBaseController<Problem> {
         btn.setTooltiptext("Delete this note.");
         btn.addForward(Events.ON_CLICK, lstNotes, "onDeleteNote");
         cell.appendChild(btn);
-        addCell(item, pn.getNumber());  // Note #
-        addCell(item, pn.getNarrative()).setHflex("1");  // Narrative
-        addCell(item, DateUtil.formatDate(pn.getDateAdded()));  // Date added
-        addCell(item, pn.getAuthor());  // Author
+        addCell(item, pn.getNumber()); // Note #
+        addCell(item, pn.getNarrative()).setHflex("1"); // Narrative
+        addCell(item, DateUtil.formatDate(pn.getDateAdded())); // Date added
+        addCell(item, pn.getAuthor()); // Author
         item.setValue(pn);
     }
     
@@ -267,11 +277,13 @@ public class AddProblemController extends BgoBaseController<Problem> {
             return false;
         }
         
-        if (txt.length() > 80)
-            if (PromptDialog.confirm(BgoConstants.TX_NARR_TOO_LONG, BgoConstants.TC_NARR_TOO_LONG))
+        if (txt.length() > 80) {
+            if (PromptDialog.confirm(BgoConstants.TX_NARR_TOO_LONG, BgoConstants.TC_NARR_TOO_LONG)) {
                 txt = txt.substring(0, 80);
-            else
+            } else {
                 return false;
+            }
+        }
         
         txtNarrative.setValue(txt);
         return true;
@@ -279,47 +291,52 @@ public class AddProblemController extends BgoBaseController<Problem> {
     
     public void onDeleteNote$lstNotes(Event event) {
         event = ZKUtil.getEventOrigin(event);
-        Listitem item = (Listitem) ZKUtil.findAncestor(event.getTarget(), Listitem.class);
+        Listitem item = ZKUtil.findAncestor(event.getTarget(), Listitem.class);
         ProblemNote pn = (ProblemNote) item.getValue();
         
-        if (PromptDialog.confirm("Are you sure that you wish to delete this note:\n"
-            + pn.getNumber() + " - " + pn.getNarrative(), "Delete Note?")) {
+        if (PromptDialog
+                .confirm("Are you sure that you wish to delete this note:\n" + pn.getNumber() + " - " + pn.getNarrative(),
+                    "Delete Note?")) {
             item.detach();
             
-            if (pn.getDomainId() > 0)
+            if (pn.getDomainId() > 0) {
                 changedNotes.add(pn);
-            else
+            } else {
                 changedNotes.remove(pn);
+            }
         }
     }
     
     public void onClick$btnSave() {
-        if (!validateAll())
+        if (!validateAll()) {
             return;
+        }
         
         Patient patient = PatientContext.getCurrentPatient();
         String sParam = BgoUtil.concatParams(patient.getDomainId(), txtID.getValue(), problem.getFacility().getDomainId(),
             problem.getDomainId());
         String sRpc = getBroker().callRPC("BGOPROB CKID", sParam);
         
-        if (BgoUtil.errorCheck(sRpc, "Invalid ID"))
+        if (BgoUtil.errorCheck(sRpc, "Invalid ID")) {
             return;
+        }
         
-        Institution institution = RPMSUtil.getCurrentInstitution();
+        IInstitution institution = UserContext.getInstitution();
         String sNum = "1".equals(sRpc) ? "" : txtID.getValue(); // Pass only if changed
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9]
         String txtIcd = txtICD.getValue().trim();
         String txtIcd1 = StrUtil.piece(txtIcd, " - ");
         
-        if (icd != null && !"0".equals(icd.getCode()))
+        if (icd != null && !"0".equals(icd.getCode())) {
             sParam = icd.getCode();
-        else if (StringUtils.isEmpty(txtIcd))
+        } else if (StringUtils.isEmpty(txtIcd)) {
             sParam = ".9999";
-        else if (!StringUtils.isEmpty(txtIcd1))
+        } else if (!StringUtils.isEmpty(txtIcd1)) {
             sParam = txtIcd1;
-        else
+        } else {
             sParam = "";
+        }
         
         int priority = cboPriority.getSelectedIndex();
         
@@ -327,12 +344,13 @@ public class AddProblemController extends BgoBaseController<Problem> {
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9] ^ Priority [10]
         sParam = BgoUtil.concatParams(sParam, txtNarrative.getValue(), institution.getDomainId(),
             datOnset.getValue() == null ? "@" : datOnset.getValue(), radPersonal.isChecked() ? "P"
-                    : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I", patient.getDomainId(), problem.getDomainId(),
-            sNum, priority <= 0 ? "@" : priority);
+                    : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I", patient.getDomainId(), problem
+                    .getDomainId(), sNum, priority <= 0 ? "@" : priority);
         sRpc = getBroker().callRPC("BGOPROB SET", sParam);
         
-        if (BgoUtil.errorCheck(sRpc))
+        if (BgoUtil.errorCheck(sRpc)) {
             return;
+        }
         
         problem.setDomainId(NumberUtils.toLong(sRpc));
         
@@ -340,12 +358,14 @@ public class AddProblemController extends BgoBaseController<Problem> {
             sParam = BgoUtil.concatParams(problem.getDomainId(), null, institution.getDomainId(), null, txtNotes.getValue());
             sRpc = getBroker().callRPC("BGOPRBN SET", sParam);
             
-            if (BgoUtil.errorCheck(sRpc))
+            if (BgoUtil.errorCheck(sRpc)) {
                 return;
+            }
         }
         
-        if (!updateNotes()) 
+        if (!updateNotes()) {
             return;
+        }
         
         close(false);
     }
@@ -370,13 +390,14 @@ public class AddProblemController extends BgoBaseController<Problem> {
     public void onClick$btnAddNote() {
         String note = AddNoteController.execute();
         
-        if (note == null || note.isEmpty())
+        if (note == null || note.isEmpty()) {
             return;
+        }
         
         ProblemNote pn = new ProblemNote();
         IUser user = UserContext.getActiveUser();
         pn.setAuthor(user.getFullName());
-        pn.setFacility(RPMSUtil.getCurrentInstitution());
+        pn.setFacility(UserContext.getInstitution());
         pn.setNumber("*");
         pn.setNarrative(note);
         pn.setDateAdded(new FMDate(DateUtil.stripTime(new Date())));

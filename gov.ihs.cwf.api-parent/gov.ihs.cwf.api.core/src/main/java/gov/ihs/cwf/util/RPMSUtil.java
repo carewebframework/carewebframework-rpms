@@ -9,28 +9,17 @@
  */
 package gov.ihs.cwf.util;
 
-import gov.ihs.cwf.domain.Institution;
-import gov.ihs.cwf.domain.User;
 import gov.ihs.cwf.mbroker.BrokerSession;
 
-import org.carewebframework.api.context.UserContext;
-import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.spring.SpringUtil;
 
 /**
  * Static utility class for the RPMS extensions.
- * 
- * 
  */
 public class RPMSUtil {
     
     public static BrokerSession getBrokerSession() {
         return SpringUtil.getBean("brokerSession", BrokerSession.class);
-    }
-    
-    public static Institution getCurrentInstitution() {
-        IUser user = UserContext.getActiveUser();
-        return user == null ? null : ((User) user.getProxiedObject()).getInstitution();
     }
     
     /**

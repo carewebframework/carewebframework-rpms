@@ -12,6 +12,7 @@ package gov.ihs.cwf.domain;
 import gov.ihs.cwf.mbroker.FMDate;
 
 import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.api.domain.IInstitution;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 
@@ -23,7 +24,7 @@ public class ProblemNote extends DomainObject {
         JSONUtil.registerAlias("ProblemNote", ProblemNote.class);
     }
     
-    private Institution facility;
+    private IInstitution facility;
     
     private String number;
     
@@ -60,11 +61,11 @@ public class ProblemNote extends DomainObject {
         this.author = pcs[6];
     }
     
-    public Institution getFacility() {
+    public IInstitution getFacility() {
         return facility;
     }
     
-    public void setFacility(Institution facility) {
+    public void setFacility(IInstitution facility) {
         this.facility = facility;
     }
     

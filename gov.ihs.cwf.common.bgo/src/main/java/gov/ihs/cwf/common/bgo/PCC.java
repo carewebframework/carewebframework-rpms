@@ -14,7 +14,6 @@ import java.util.List;
 import gov.ihs.cwf.context.EncounterContext;
 import gov.ihs.cwf.context.PatientContext;
 import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Institution;
 import gov.ihs.cwf.domain.Location;
 import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.domain.User;
@@ -27,6 +26,7 @@ import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.EntityIdentifier;
+import org.carewebframework.api.domain.IInstitution;
 import org.carewebframework.api.domain.IUser;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
@@ -172,7 +172,7 @@ public abstract class PCC {
     
     public static String addProblem(String sICDIEN, String narrative, String onset) {
         BrokerSession broker = RPMSUtil.getBrokerSession();
-        Institution institution = RPMSUtil.getCurrentInstitution();
+        IInstitution institution = UserContext.getInstitution();
         Patient patient = PatientContext.getCurrentPatient();
         
         if (onset == null) {
