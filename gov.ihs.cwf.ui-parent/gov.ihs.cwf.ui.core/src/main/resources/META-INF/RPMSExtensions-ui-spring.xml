@@ -15,7 +15,8 @@
 
 		<!-- RPC broker -->
 		<bean id="brokerSession" class="gov.ihs.cwf.mbroker.BrokerSession"
-			scope="desktop" destroy-method="disconnect" cwf:override="always">
+			scope="desktop" init-method="connect" destroy-method="disconnect" 
+			cwf:override="always">
 			<property name="connectionParams" ref="brokerConnectionParams" />
 			<property name="executorService" ref="taskExecutor" />
 			<aop:scoped-proxy />
