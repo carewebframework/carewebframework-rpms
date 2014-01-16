@@ -21,8 +21,6 @@ import org.carewebframework.api.event.AbstractGlobalEventDispatcher;
  * the local event manager and is responsible for dispatching (publishing) events to be distributing
  * globally to the messaging server and receiving subscribed events from the same and passing them
  * on to the local event dispatcher for local distribution.
- * 
- * 
  */
 public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher implements IHostEventHandler {
     
@@ -93,7 +91,7 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
     }
     
     @Override
-    public String getClientId() {
+    public String getRecipientId() {
         return Integer.toString(brokerSession.getId());
     }
     
