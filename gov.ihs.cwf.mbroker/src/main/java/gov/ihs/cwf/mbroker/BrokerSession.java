@@ -407,6 +407,10 @@ public class BrokerSession {
     }
     
     public void fireRemoteEvent(String eventName, Serializable eventData, String recipients) {
+        fireRemoteEvent(eventName, eventData, StrUtil.split(recipients, ","));
+    }
+    
+    public void fireRemoteEvent(String eventName, Serializable eventData, String[] recipients) {
         RPCParameters params = new RPCParameters();
         params.get(0).setValue(eventName);
         
@@ -421,17 +425,22 @@ public class BrokerSession {
         
         param = params.get(2);
         
-        for (String recip : StrUtil.split(recipients, ",")) {
+        for (String recip : recipients) {
             if (!recip.isEmpty()) {
-                if (recip.startsWith("#")) {
-                    param.put(new String[] { "UID", recip.substring(1) }, "");
-                } else {
-                    param.put(new String[] { "DUZ", recip }, "");
-                }
+                if (processRecipient(param, "#", "UID", recip) || processRecipient(param, "", "DUZ", recip)) {}
             }
         }
         
         callRPC("CIANBEVT BCAST", params);
+    }
+    
+    private boolean processRecipient(RPCParameter param, String prefix, String subscript, String recipient) {
+        if (recipient.startsWith(prefix)) {
+            param.put(new String[] { subscript, recipient.substring(prefix.length()) }, "");
+            return true;
+        }
+        
+        return false;
     }
     
     /**

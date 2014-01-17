@@ -14,8 +14,8 @@ import java.io.Serializable;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.PollingThread.IHostEventHandler;
 
-import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.AbstractGlobalEventDispatcher;
+import org.carewebframework.common.StrUtil;
 
 /**
  * This class is responsible for communicating with the global messaging server. It interacts with
@@ -67,7 +67,21 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
      */
     @Override
     public void fireRemoteEvent(String eventName, Serializable eventData, String recipients) {
-        brokerSession.fireRemoteEvent(eventName, eventData, recipients);
+        String[] recips = StrUtil.split(recipients, ",");
+        
+        for (int i = 0; i < recips.length; i++) {
+            String recip = recips[i];
+            
+            if (recip.startsWith("u-")) {
+                recip = recip.substring(2);
+            } else {
+                recip = "#" + recip;
+            }
+            
+            recips[i] = recip;
+        }
+        
+        brokerSession.fireRemoteEvent(eventName, eventData, recips);
     }
     
     public BrokerSession getBrokerSession() {
@@ -84,16 +98,6 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
             localEventDelivery(name, data);
             endMessageProcessing();
         }
-    }
-    
-    @Override
-    public String getEndpointId() {
-        return "#" + Integer.toString(brokerSession.getId());
-    }
-    
-    @Override
-    public String getUserId(IUser user) {
-        return Long.toString(user.getDomainId());
     }
     
     @Override
