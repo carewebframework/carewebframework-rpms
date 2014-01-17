@@ -92,7 +92,11 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
     
     @Override
     public String getEndpointId() {
-        return Integer.toString(brokerSession.getId());
+        return "#" + Integer.toString(brokerSession.getId());
     }
     
+    @Override
+    public String getUserId() {
+        return Long.toString(user.getDomainId());
+    }
 }
