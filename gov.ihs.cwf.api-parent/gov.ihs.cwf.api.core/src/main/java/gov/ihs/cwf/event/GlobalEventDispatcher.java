@@ -14,6 +14,7 @@ import java.io.Serializable;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.PollingThread.IHostEventHandler;
 
+import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.AbstractGlobalEventDispatcher;
 
 /**
@@ -86,17 +87,17 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
     }
     
     @Override
-    public String getAppName() {
-        return brokerSession.getConnectionParams().getAppid();
-    }
-    
-    @Override
     public String getEndpointId() {
         return "#" + Integer.toString(brokerSession.getId());
     }
     
     @Override
-    public String getUserId() {
+    public String getUserId(IUser user) {
         return Long.toString(user.getDomainId());
+    }
+    
+    @Override
+    public String getAppName() {
+        return brokerSession.getConnectionParams().getAppid();
     }
 }
