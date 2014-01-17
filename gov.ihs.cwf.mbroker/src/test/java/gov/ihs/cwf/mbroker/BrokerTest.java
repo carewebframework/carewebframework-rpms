@@ -81,7 +81,7 @@ public class BrokerTest implements IHostEventHandler, IAsyncRPCEvent {
         results.remove(0);
         assertList(results);
         session.eventSubscribe("test", true);
-        session.fireRemoteEvent("test", new TestBean(123, "test"), null);
+        session.fireRemoteEvent("test", new TestBean(123, "test"), (String) null);
         asyncHandle = session.callRPCAsync("XWB ECHO LIST", this);
         print("Async RPC Handle: " + asyncHandle);
         int tries = 30;
