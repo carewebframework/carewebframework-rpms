@@ -91,7 +91,7 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
     }
     
     @Override
-    public String getRecipientId() {
+    public String getEndpointId() {
         return Integer.toString(brokerSession.getId());
     }
     
