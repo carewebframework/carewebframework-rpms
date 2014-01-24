@@ -101,6 +101,11 @@ public class GlobalEventDispatcher extends AbstractGlobalEventDispatcher impleme
     }
     
     @Override
+    protected String getEndpointId() {
+        return Integer.toString(brokerSession.getId());
+    }
+    
+    @Override
     public String getAppName() {
         return brokerSession.getConnectionParams().getAppid();
     }
