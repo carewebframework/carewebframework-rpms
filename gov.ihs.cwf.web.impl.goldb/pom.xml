@@ -144,6 +144,12 @@
 			<artifactId>gov.ihs.cwf.ui.visits</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<!-- RPMS Extensions -->
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.api.patientlist</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 		<!-- Security -->
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
