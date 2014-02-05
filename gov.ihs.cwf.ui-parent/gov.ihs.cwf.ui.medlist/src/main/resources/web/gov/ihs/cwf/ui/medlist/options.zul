@@ -3,22 +3,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
 
-	<groupbox self="@define(sharedFormsToolbar)" title="Status">
-		<radiogroup id="rgActive">
-			<radio label="All" id="radAll" selected="true" />
-			<separator orient="vertical" />
-			<radio label="Active" id="radActive" />
-		</radiogroup>
-	</groupbox>
-
-	<groupbox self="@define(sharedFormsToolbar)" title="Inpatient/Outpatient">
-		<radiogroup id="rgInOut">
-			<radio label="All" id="radAllpat" selected="true" value="IOE" />
-			<separator orient="vertical" />
-			<radio label="Out" id="radOutpat" value="OE" />
-			<separator orient="vertical" />
-			<radio label="In" id="radInpat" value="I" />
-		</radiogroup>
-	</groupbox>
+	<hlayout self="@define(sharedFormsToolbar)">
+		<groupbox title="Status">
+			<radiogroup id="rgActive">
+				<radio label="All" id="radAll" selected="true" />
+				<separator orient="vertical" />
+				<radio label="Active" id="radActive" />
+			</radiogroup>
+		</groupbox>
+	
+		<groupbox title="Inpatient/Outpatient">
+			<radiogroup id="rgInOut">
+				<radio label="All" id="radAllpat" selected="true" value="IOE" />
+				<separator orient="vertical" />
+				<radio label="Out" id="radOutpat" value="OE" />
+				<separator orient="vertical" />
+				<radio label="In" id="radInpat" value="I" />
+			</radiogroup>
+		</groupbox>
+	</hlayout>
 
 </zk>

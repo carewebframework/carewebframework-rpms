@@ -1,7 +1,7 @@
 <layout title="CareWeb - GOLDB">
 	<_menubar />
 	<_toolbar>
-		<behCWAD allowPrint="false" />
+		<behCWAD allowPrint="true" popupFlags="true" />
 	</_toolbar>
 	<splitterview orientation="vertical">
 		<splitterpane relative="false" size="47.0">
