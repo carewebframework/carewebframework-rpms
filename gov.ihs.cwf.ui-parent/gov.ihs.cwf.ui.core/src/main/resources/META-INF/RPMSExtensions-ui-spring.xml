@@ -30,6 +30,9 @@
 			scope="prototype">
 			<property name="broker" ref="brokerSession" />
 		</bean>
+		
+		<bean name="modelessReportBox" class="org.ihs.cwf.ui.common.ModelessReportBox"
+			scope="prototype" />
 
 		<bean class="gov.ihs.cwf.ui.shell.Startup" />
 

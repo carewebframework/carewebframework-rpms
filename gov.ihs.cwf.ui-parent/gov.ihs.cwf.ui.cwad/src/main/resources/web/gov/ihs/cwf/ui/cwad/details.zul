@@ -1,0 +1,23 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window title="Patient Postings" height="270px" width="430px"
+		apply="${behCWADDetailsController}">
+		<listbox id="lstAllergies" vflex="10">
+			<listhead>
+				<listheader label="Agent" hflex="10" />
+				<listheader label="Severity" hflex="5" />
+				<listheader label="Reaction" hflex="10" />
+			</listhead>
+		</listbox>
+		<listbox style="border-bottom: none; border-top: none">
+			<listhead>
+				<listheader
+					label="Crisis Notes, Warning Notes, Directives, Record Flags" />
+			</listhead>
+		</listbox>
+		<listbox id="lstNotes" vflex="8" style="border-top: none" />
+	</window>
+</zk>

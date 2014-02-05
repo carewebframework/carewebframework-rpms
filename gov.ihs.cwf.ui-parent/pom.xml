@@ -23,5 +23,6 @@
 		<module>gov.ihs.cwf.ui.problem</module>
 		<module>gov.ihs.cwf.ui.skintest</module>
 		<module>gov.ihs.cwf.ui.esig</module>
+		<module>gov.ihs.cwf.ui.cwad</module>
 	</modules>
 </project>

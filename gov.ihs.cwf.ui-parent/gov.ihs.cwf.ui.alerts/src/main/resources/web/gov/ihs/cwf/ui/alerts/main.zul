@@ -1,4 +1,4 @@
-<?init class="org.carewebframework.ui.zk.Composition" arg0="~./gov/ihs/cwf/common/coverSheetBase.zul"?>
+<?init class="org.carewebframework.ui.zk.Composition" arg0="~./gov/ihs/cwf/ui/common/coverSheetBase.zul"?>
 
 <zk xmlns="http://www.zkoss.org/2005/zul"
 	xmlns:h="http://www.w3.org/1999/xhtml"
