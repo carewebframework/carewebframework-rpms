@@ -126,7 +126,6 @@ public class MainController extends PluginController implements IPatientContextE
     public void onLoad(PluginContainer container) {
         super.onLoad(container);
         container.registerProperties(this, "allowPrint", "popupFlags");
-        container.registerProperties(container, "color");
         doUpdate(false);
     }
     

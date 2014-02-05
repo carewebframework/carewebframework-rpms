@@ -10,14 +10,14 @@
 	<beans profile="root">
 
 		<cwp:plugin url="~./gov/ihs/cwf/ui/cwad/main.zul" id="behCWAD"
-			name="Crises/Warnings/ADRs/Directives">
+			name="CWADF">
 			<cwp:serialization>
 				<cwp:property id="allowPrint" name="Allow Printing"
-					type="boolean" description="If true, printing is allowed." />
+					type="boolean" description="If true, printing of detail displays is allowed." />
 				<cwp:property id="color" name="Background Color" type="color"
 					description="Background color." />
-				<cwp:property id="popupFlags" name="Popup Flags" type="boolean"
-					description="Popup flags." />
+				<cwp:property id="popupFlags" name="Popup Record Flags" type="boolean"
+					description="If true, a popup dialog will be presented if any patient flags are active." />
 			</cwp:serialization>
 			<cwp:resource>
 				<cwp:help-resource module="behCWADHelp" />
