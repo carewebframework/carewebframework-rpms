@@ -43,6 +43,7 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
         super();
         authorityAliases.registerAlias("PRIV_CAREWEB_DESIGNER", "PRIV_CIAV COMPOSE");
         authorityAliases.registerAlias("PRIV_PATIENT_SELECT", "PRIV_PROVIDER");
+        authorityAliases.registerAlias("ROLE_TESTER", "PRIV_XUPROG");
     }
     
     /**
