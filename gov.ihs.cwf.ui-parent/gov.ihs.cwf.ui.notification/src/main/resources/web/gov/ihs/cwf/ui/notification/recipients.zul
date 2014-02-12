@@ -1,0 +1,52 @@
+<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window title="Notification Recipients" mode="modal" height="500px" width="500px"
+		apply="${behNotificationRecipientsController}">
+		<borderlayout height="100%" width="100%">
+			<west width="45%" border="none">
+				<vlayout vflex="1">
+					<groupbox vflex="1">
+						<caption label="${labels.behnotification.recipients.group.users.caption}" />
+						<textbox id="txtUsers" width="95%" />
+						<listbox id="lstUsers" vflex="1" />
+					</groupbox>
+					<groupbox vflex="1">
+						<caption label="${labels.behnotification.recipients.group.groups.caption }" />
+						<textbox id="txtGroups" width="95%" />
+						<listbox id="lstGroups" vflex="1" />
+					</groupbox>
+					<label value="${labels.behnotification.recipients.textbox.comment.label}" />
+				</vlayout>
+			</west>
+			<center border="none">
+				<toolbar orient="vertical" align="center" vflex="1" mold="panel">
+					<separator height="100px" />
+					<button id="btnAdd" label="&gt;" width="95%" />
+					<separator height="50px" />
+					<button id="btnRemove" label="&lt;"  width="95%" />
+					<button id="btnRemoveAll" label="&lt;&lt;" width="95%" />
+				</toolbar>
+			</center>
+			<east width="45%" border="none">
+				<groupbox vflex="1">
+					<caption label="${labels.behnotification.recipients.group.recipients.caption}" />
+					<listbox id="lstRecipients" vflex="1" style="border:none"/>
+				</groupbox>
+			</east>
+			<south height="40px" border="none">
+				<toolbar mold="panel" >
+					<textbox id="txtComment" width="300px" visible="false" />
+					<span style="float:right">
+						<button id="btnOK" label="Ok" />
+						<button label="Cancel" forward="onClick=onClose" />
+					</span>
+				</toolbar>
+			</south>
+		</borderlayout>
+	</window>
+</zk>

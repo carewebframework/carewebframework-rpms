@@ -18,6 +18,7 @@
 		<module>gov.ihs.cwf.ui.crises</module>
 		<module>gov.ihs.cwf.ui.laborders</module>
 		<module>gov.ihs.cwf.ui.medlist</module>
+		<module>gov.ihs.cwf.ui.notification</module>
 		<module>gov.ihs.cwf.ui.visits</module>
 		<module>gov.ihs.cwf.ui.behvitals</module>
 		<module>gov.ihs.cwf.ui.problem</module>

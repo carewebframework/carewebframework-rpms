@@ -1,0 +1,29 @@
+<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window mode="overlapped" width="500px"
+		apply="${behNotificationViewerController}" visible="false"
+		position="center">
+		<caption id="caption" label="${labels.behnotification.viewer.title}" style="font-weight:bold"/>
+		<vlayout hflex="1">
+			<label id="lblHeader" style="font-weight:bold" />
+			<textbox id="txtMessage" readonly="true" multiline="true"
+				vflex="1" hflex="1" height="200px"/>
+			<div style="text-align:center; color:blue; background-color:lightyellow">
+				${labels.behnotification.viewer.action.select}
+			</div>
+			<toolbar align="center" style="border-top: 1px solid lightgray">
+				<button id="btnDelete" label="${labels.behnotification.viewer.button.delete.label}" />
+				<button id="btnSkip" label="${labels.behnotification.viewer.button.skip.label}" />
+				<button id="btnCancel" label="${labels.behnotification.viewer.button.cancel.label}" />
+				<button id="btnDeleteAll" label="${labels.behnotification.viewer.button.deleteall.label}" />
+				<button id="btnSkipAll" label="${labels.behnotification.viewer.button.skipall.label}" />
+				<button id="btnView" label="${labels.behnotification.viewer.button.view.label}" />
+			</toolbar>
+		</vlayout>
+	</window>
+</zk>

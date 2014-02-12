@@ -16,6 +16,9 @@
 		</splitterpane>
 		<splitterpane relative="true" size="88.69565217391305">
 			<tabview orientation="horizontal">
+				<tabpane label="Notifications">
+					<behNotification />
+				</tabpane>
 				<tabpane label="Chart">
 					<treeview open="true">
 						<treepane label="Allergies">

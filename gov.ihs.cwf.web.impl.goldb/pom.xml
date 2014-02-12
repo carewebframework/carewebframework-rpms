@@ -126,6 +126,11 @@
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.ui.notification</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.ui.problem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
