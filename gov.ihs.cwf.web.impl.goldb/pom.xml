@@ -96,6 +96,11 @@
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.ui.chat</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.ui.consultorders</artifactId>
 			<version>${project.version}</version>
 		</dependency>

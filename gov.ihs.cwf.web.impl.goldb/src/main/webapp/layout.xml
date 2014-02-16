@@ -1,5 +1,7 @@
 <layout title="CareWeb - GOLDB">
-	<_menubar />
+	<_menubar>
+		<menuitem action="@vcchat.action.create.session" label="Chat..."/>
+	</_menubar>
 	<_toolbar>
 		<behCWAD allowPrint="true" popupFlags="true" />
 	</_toolbar>

@@ -1,0 +1,46 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window title="${labels.vcchat.invite.title}" width="500px"
+		apply="${vcChatInviteController}" contentSclass="vcchat-invite">
+		<listbox id="lstSessions" rows="10" checkmark="true"
+			multiple="true">
+			<listhead>
+				<listheader width="30px" />
+				<listheader label="${labels.vcchat.invite.header.user}"
+					id="getName" hflex="1" />
+				<listheader id="getStation" align="center"
+					label="${labels.vcchat.invite.header.station}" width="60px" />
+				<listheader id="getSession" align="center"
+					label="${labels.vcchat.invite.header.session}" width="60px" />
+				<listheader id="getProcess" align="center"
+					label="${labels.vcchat.invite.header.process}" width="60px" />
+				<listheader id="getLoginTime"
+					label="${labels.vcchat.invite.header.login}" width="150px" />
+			</listhead>
+		</listbox>
+		<toolbar align="end">
+			<button id="btnOK"
+				label="${labels.vcchat.invite.button.ok.label}" />
+			<button id="btnCancel"
+				label="${labels.vcchat.invite.button.cancel.label}"
+				forward="onClick=onClose" />
+		</toolbar>
+		<style>
+			.vcchat-participant-self span.z-label {
+				font-style: italic;
+				color: red!important;
+			}
+			
+			.vcchat-participant-active span.z-label {
+				font-style: italic;
+			}
+			
+			.vcchat-invite .z-listheader-img {
+				display: none;
+			}
+		</style>
+	</window>
+</zk>
