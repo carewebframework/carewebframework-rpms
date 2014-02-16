@@ -20,6 +20,9 @@ import org.apache.commons.lang.StringUtils;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 
+/**
+ * Represents a FileMan-style date.
+ */
 public class FMDate extends Date {
     
     private static final long serialVersionUID = 1L;
