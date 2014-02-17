@@ -59,6 +59,8 @@
 			.vcchat-dialog {
 				background: lightyellow;
 				overflow: auto;
+				word-wrap: break-word;
+				word-break: break-word;
 			}
 			
 			.vcchat-dialog * {
