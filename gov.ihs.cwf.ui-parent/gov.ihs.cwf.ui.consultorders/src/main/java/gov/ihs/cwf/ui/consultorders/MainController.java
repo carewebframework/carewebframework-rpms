@@ -10,15 +10,15 @@
 package gov.ihs.cwf.ui.consultorders;
 
 import static org.carewebframework.common.StrUtil.U;
-import static org.carewebframework.common.StrUtil.piece;
+import static org.carewebframework.common.StrUtil.split;
+
+import java.util.List;
 
 import gov.ihs.cwf.ui.common.CoverSheetBase;
 
 /**
  * Controller for consult orders cover sheet. Displays summary and detail views of consult orders
  * for cover sheet.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -31,8 +31,11 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected String formatData(String data) {
-        return piece(data, U, 2, 4);
+    protected void render(String dao, List<Object> columns) {
+        String pcs[] = split(dao, U, 4);
+        columns.add(pcs[1]);
+        columns.add(pcs[2]);
+        columns.add(pcs[3]);
     }
     
 }

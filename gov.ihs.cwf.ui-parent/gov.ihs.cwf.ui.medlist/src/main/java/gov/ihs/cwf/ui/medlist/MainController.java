@@ -9,7 +9,11 @@
  */
 package gov.ihs.cwf.ui.medlist;
 
-import static org.carewebframework.common.StrUtil.*;
+import static org.carewebframework.common.StrUtil.U;
+import static org.carewebframework.common.StrUtil.piece;
+import static org.carewebframework.common.StrUtil.split;
+
+import java.util.List;
 
 import gov.ihs.cwf.ui.common.CoverSheetBase;
 
@@ -19,8 +23,6 @@ import org.zkoss.zul.Toolbar;
 
 /**
  * Controller for medication list cover sheet.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -34,19 +36,21 @@ public class MainController extends CoverSheetBase {
     
     @Override
     protected void init() {
-        setup("Medications", "Medication Detail", "BEHORXCV LIST", "BEHORXCV DETAIL", 1, "Medication", "Status", "Issue Date");
+        setup("Medications", "Medication Detail", "BEHORXCV LIST", "BEHORXCV DETAIL", 1, "Medication", "Status",
+            "Issue Date");
         toolbar.setVisible(true);
         super.init();
     }
     
     @Override
-    protected String formatData(String data) {
-        String[] pcs = split(data, U, 15);
+    protected void render(String dao, List<Object> columns) {
+        String[] pcs = split(dao, U, 15);
         
-        if (checkStatus(pcs[8]) && checkInOut(pcs[0])) 
-            return pcs[1] + U + pcs[8] + U + pcs[14];
-        else
-            return "";
+        if (checkStatus(pcs[8]) && checkInOut(pcs[0])) {
+            columns.add(pcs[1]);
+            columns.add(pcs[8]);
+            columns.add(pcs[14]);
+        }
     }
     
     private boolean checkStatus(String data) {
@@ -60,10 +64,10 @@ public class MainController extends CoverSheetBase {
     }
     
     public void onCheck$rgActive() {
-        renderList();
+        renderData();
     }
     
     public void onCheck$rgInOut() {
-        renderList();
+        renderData();
     }
 }

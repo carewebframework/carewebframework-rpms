@@ -12,6 +12,8 @@ package gov.ihs.cwf.ui.visits;
 import static org.carewebframework.common.StrUtil.U;
 import static org.carewebframework.common.StrUtil.split;
 
+import java.util.List;
+
 import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.ui.common.CoverSheetBase;
 
@@ -19,8 +21,6 @@ import org.carewebframework.api.event.IGenericEvent;
 
 /**
  * Controller for visit/appointment cover sheet.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -45,7 +45,7 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected void fetchList() {
+    protected void requestData() {
         String evt = "PCC." + patient.getDomainId() + ".VST";
         
         if (eventName == null || !evt.equals(eventName)) {
@@ -57,17 +57,17 @@ public class MainController extends CoverSheetBase {
             getEventManager().subscribe(eventName, visitListener);
         }
         
-        super.fetchList();
+        super.requestData();
     }
     
     @Override
-    protected String formatData(String data) {
-        String pcs[] = split(data, U, 4);
+    protected void render(String dao, List<Object> columns) {
+        String pcs[] = split(dao, U, 4);
         
-        if (pcs[0].isEmpty()) {
-            return "";
-        } else {
-            return pcs[1] + U + BgoUtil.normalizeDate(pcs[2]) + U + pcs[3];
+        if (!pcs[0].isEmpty()) {
+            columns.add(pcs[1]);
+            columns.add(BgoUtil.normalizeDate(pcs[2]));
+            columns.add(pcs[3]);
         }
     }
     

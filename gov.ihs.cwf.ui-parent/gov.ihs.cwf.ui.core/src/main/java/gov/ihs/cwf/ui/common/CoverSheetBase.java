@@ -18,9 +18,10 @@ import gov.ihs.cwf.context.PatientContext;
 import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.BrokerSession.IAsyncRPCEvent;
+import gov.ihs.cwf.mbroker.FMDate;
 
 import org.carewebframework.ui.sharedforms.ListViewForm;
-import org.carewebframework.ui.zk.PromptDialog;
+import org.carewebframework.ui.zk.ReportBox;
 
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.event.Event;
@@ -31,9 +32,9 @@ import org.zkoss.zul.Listitem;
 /**
  * Controller for cover sheet components.
  * 
- * 
+ * @param <T> Type of model object.
  */
-public abstract class CoverSheetBase extends ListViewForm implements PatientContext.IPatientContextEvent, IAsyncRPCEvent {
+public abstract class CoverSheetBase extends ListViewForm<String> implements PatientContext.IPatientContextEvent, IAsyncRPCEvent {
     
     private static final long serialVersionUID = 1L;
     
@@ -70,11 +71,21 @@ public abstract class CoverSheetBase extends ListViewForm implements PatientCont
         
         @Override
         public void onEvent(Event event) throws Exception {
-            toList(event.getData().toString(), itemList, "\n");
-            renderList();
+            toList(event.getData().toString(), model, "\n");
+            checkError();
         }
         
     };
+    
+    /**
+     * Converts a FM date string to a formatted date.
+     * 
+     * @param FMDateStr
+     * @return
+     */
+    public String formatFMDate(String FMDateStr) {
+        return FMDateStr == null || FMDateStr.isEmpty() ? "" : FMDate.fromString(FMDateStr).toString();
+    }
     
     protected void setup(String title, String detailTitle, String listRPC, String detailRPC, int sortBy, String... headers) {
         this.detailTitle = detailTitle;
@@ -113,20 +124,20 @@ public abstract class CoverSheetBase extends ListViewForm implements PatientCont
      * Override load list to clear display if no patient in context.
      */
     @Override
-    protected void loadList() {
+    protected void loadData() {
         if (patient == null) {
             asyncAbort();
             reset();
             status("No patient selected.");
         } else {
-            super.loadList();
+            super.loadData();
         }
         
         detailView.setValue(null);
     }
     
     @Override
-    protected void fetchList() {
+    protected void requestData() {
         asyncHandle = getBroker().callRPCAsync(listRPC, this, patient.getDomainId());
     }
     
@@ -141,7 +152,7 @@ public abstract class CoverSheetBase extends ListViewForm implements PatientCont
         detailView.setValue(detail);
         
         if (!getShowDetailPane() && detail != null) {
-            PromptDialog.showText(detail, detailTitle); // ModalReportBox(DetailView.Lines.Text,FDetailTitle,FAllowPrint);
+            ReportBox.modal(detail, detailTitle, getAllowPrint());
         }
     }
     
@@ -157,12 +168,15 @@ public abstract class CoverSheetBase extends ListViewForm implements PatientCont
             patient.getDomainId(), data));
     }
     
-    @Override
-    protected String getError(String data) {
+    protected void checkError() {
+        String data = model.isEmpty() ? null : model.get(0);
+        
         if (data != null && data.startsWith(U)) {
-            return data.substring(1);
+            status(data.substring(1));
+            model.clear();
+        } else {
+            renderData();
         }
-        return null;
     }
     
     /**

@@ -9,7 +9,12 @@
  */
 package gov.ihs.cwf.ui.laborders;
 
-import static org.carewebframework.common.StrUtil.*;
+import static org.carewebframework.common.StrUtil.U;
+import static org.carewebframework.common.StrUtil.fromList;
+import static org.carewebframework.common.StrUtil.piece;
+import static org.carewebframework.common.StrUtil.split;
+
+import java.util.List;
 
 import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.ui.common.CoverSheetBase;
@@ -17,8 +22,6 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
 /**
  * Controller lab order cover sheet. Displays summary and detail views of lab orders for cover
  * sheet.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -53,13 +56,11 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected String formatData(String data) {
-        String pcs[] = split(data, U, 4);
-        
-        if (pcs[0].isEmpty())
-            return "";
-        else
-            return pcs[1] + U + pcs[3] + U + BgoUtil.normalizeDate(pcs[2]);
+    protected void render(String dao, List<Object> columns) {
+        String pcs[] = split(dao, U, 4);
+        columns.add(pcs[1]);
+        columns.add(pcs[3]);
+        columns.add(BgoUtil.normalizeDate(pcs[2]));
     }
     
 }

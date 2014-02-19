@@ -10,14 +10,14 @@
 package gov.ihs.cwf.ui.alerts;
 
 import static org.carewebframework.common.StrUtil.U;
-import static org.carewebframework.common.StrUtil.piece;
+import static org.carewebframework.common.StrUtil.split;
+
+import java.util.List;
 
 import gov.ihs.cwf.ui.common.CoverSheetBase;
 
 /**
  * Controller for user alerts cover sheet.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -30,11 +30,12 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected String formatData(String data) {
-        if (piece(data, U).isEmpty()) {
-            return "";
+    protected void render(String dao, List<Object> columns) {
+        String pcs[] = split(dao, U, 2);
+        
+        if (!pcs[0].isEmpty()) {
+            columns.add(pcs[1]);
         }
-        return piece(data, U, 2);
     }
     
 }

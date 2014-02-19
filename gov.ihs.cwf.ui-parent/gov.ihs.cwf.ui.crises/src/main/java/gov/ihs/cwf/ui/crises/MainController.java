@@ -9,7 +9,9 @@
  */
 package gov.ihs.cwf.ui.crises;
 
-import static org.carewebframework.common.StrUtil.*;
+import static org.carewebframework.common.StrUtil.U;
+import static org.carewebframework.common.StrUtil.fromList;
+import static org.carewebframework.common.StrUtil.split;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +21,6 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
 
 /**
  * Controller for crisis alert cover sheet. Displays summary and detail views of crisis alerts.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -30,12 +30,6 @@ public class MainController extends CoverSheetBase {
     protected void init() {
         setup("Crisis Alerts", "Crisis Detail", "BEHOCACV LIST", null, 1, "Crisis Alert");
         super.init();
-    }
-    
-    @Override
-    protected String formatData(String data) {
-        String pcs[] = split(data, U, 5);
-        return pcs[2] + U + BgoUtil.normalizeDate(pcs[4]);
     }
     
     /**
@@ -68,8 +62,10 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected String getError(String data) {
-        return null;
+    protected void render(String dao, List<Object> columns) {
+        String pcs[] = split(dao, U, 5);
+        columns.add(pcs[2]);
+        columns.add(BgoUtil.normalizeDate(pcs[4]));
     }
     
 }

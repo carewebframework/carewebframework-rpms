@@ -13,6 +13,8 @@ import static org.carewebframework.common.StrUtil.U;
 import static org.carewebframework.common.StrUtil.piece;
 import static org.carewebframework.common.StrUtil.split;
 
+import java.util.List;
+
 import gov.ihs.cwf.ui.common.CoverSheetBase;
 
 import org.carewebframework.ui.zk.ZKUtil;
@@ -22,8 +24,6 @@ import org.zkoss.zul.Menuitem;
 
 /**
  * Controller for patient allergies cover sheet.
- * 
- * 
  */
 public class MainController extends CoverSheetBase {
     
@@ -48,21 +48,23 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected String formatData(String data) {
-        String[] pcs = split(data, U, 6);
+    protected void render(String dao, List<Object> columns) {
+        String[] pcs = split(dao, U, 6);
         
         if (pcs[0].isEmpty()) {
             statusADR = pcs[1];
-            return "";
+            return;
         }
         String stat = pcs[5];
         boolean canSign = "1".equals(pcs[4]);
         
         if ("U".equals(stat) && !canSign) {
-            return "";
+            return;
         }
         
-        return pcs[1] + U + pcs[3] + U + (canSign ? "*" : "") + formatStatus(stat);
+        columns.add(pcs[1]);
+        columns.add(pcs[3]);
+        columns.add((canSign ? "*" : "") + formatStatus(stat));
     }
     
     private String formatStatus(String stat) {
@@ -70,14 +72,12 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected Listitem addItem(String data) {
-        Listitem li = super.addItem(data);
+    protected void renderItem(Listitem item, String dao) {
+        super.renderItem(item, dao);
         
-        if (li != null && "1".equals(piece(data, U, 5))) {
-            ZKUtil.updateStyle(li, "font-color", "blue");
+        if ("1".equals(piece(dao, U, 5))) {
+            ZKUtil.updateStyle(item, "font-color", "blue");
         }
-        
-        return li;
     }
     
     public void onClick$mnuDeleteADR() {
