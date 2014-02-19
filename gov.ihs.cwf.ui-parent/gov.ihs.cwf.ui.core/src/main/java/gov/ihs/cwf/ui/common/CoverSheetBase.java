@@ -18,7 +18,6 @@ import gov.ihs.cwf.context.PatientContext;
 import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.BrokerSession.IAsyncRPCEvent;
-import gov.ihs.cwf.mbroker.FMDate;
 
 import org.carewebframework.ui.sharedforms.ListViewForm;
 import org.carewebframework.ui.zk.ReportBox;
@@ -71,21 +70,18 @@ public abstract class CoverSheetBase extends ListViewForm<String> implements Pat
         
         @Override
         public void onEvent(Event event) throws Exception {
-            toList(event.getData().toString(), model, "\n");
-            checkError();
+            toList(event.getData().toString(), model, "\r");
+            String error = getError();
+            
+            if (error != null) {
+                status(error);
+                model.clear();
+            } else {
+                renderData();
+            }
         }
         
     };
-    
-    /**
-     * Converts a FM date string to a formatted date.
-     * 
-     * @param FMDateStr
-     * @return
-     */
-    public String formatFMDate(String FMDateStr) {
-        return FMDateStr == null || FMDateStr.isEmpty() ? "" : FMDate.fromString(FMDateStr).toString();
-    }
     
     protected void setup(String title, String detailTitle, String listRPC, String detailRPC, int sortBy, String... headers) {
         this.detailTitle = detailTitle;
@@ -168,14 +164,13 @@ public abstract class CoverSheetBase extends ListViewForm<String> implements Pat
             patient.getDomainId(), data));
     }
     
-    protected void checkError() {
+    protected String getError() {
         String data = model.isEmpty() ? null : model.get(0);
         
         if (data != null && data.startsWith(U)) {
-            status(data.substring(1));
-            model.clear();
+            return data.substring(1);
         } else {
-            renderData();
+            return null;
         }
     }
     

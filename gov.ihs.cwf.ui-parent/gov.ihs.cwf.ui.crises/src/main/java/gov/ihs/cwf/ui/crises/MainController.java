@@ -28,7 +28,7 @@ public class MainController extends CoverSheetBase {
     
     @Override
     protected void init() {
-        setup("Crisis Alerts", "Crisis Detail", "BEHOCACV LIST", null, 1, "Crisis Alert");
+        setup("Crisis Alerts", "Crisis Detail", "BEHOCACV LIST", null, 1, "Crisis Alert", "Date");
         super.init();
     }
     
@@ -59,6 +59,11 @@ public class MainController extends CoverSheetBase {
         }
         
         return result.isEmpty() ? null : fromList(result);
+    }
+    
+    @Override
+    protected String getError() {
+        return null;
     }
     
     @Override
