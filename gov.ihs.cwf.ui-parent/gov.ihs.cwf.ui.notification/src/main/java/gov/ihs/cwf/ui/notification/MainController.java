@@ -315,7 +315,7 @@ public class MainController extends CaptionedForm implements IPatientContextEven
             MessageInfo mi = new MessageInfo(notification.getDisplayText(), "New Notification", notification.getPriority()
                     .getColor(), alertDuration * 1000, null, "cwf.fireLocalEvent('ALERT.INFO', '"
                     + notification.getAlertId() + "');");
-            getEventManager().fireLocalEvent(MessageWindow.EVENT, mi);
+            getEventManager().fireLocalEvent(MessageWindow.EVENT_SHOW, mi);
         }
     }
     

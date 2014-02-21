@@ -166,7 +166,7 @@ public class ChatService implements IGenericEvent<String> {
             MessageInfo mi = new MessageInfo(StrUtil.formatMessage("@vcchat.invitation.message", pcs[1]),
                     StrUtil.formatMessage("@vcchat.invitation.caption"), null, 999999, null,
                     "cwf.fireLocalEvent('VCCHAT.SERVICE.ACCEPT', '" + pcs[0] + "'); return true;");
-            eventManager.fireLocalEvent(MessageWindow.EVENT, mi);
+            eventManager.fireLocalEvent(MessageWindow.EVENT_SHOW, mi);
             ;
         } else if ("ACCEPT".equals(action)) {
             createSession(eventData);
