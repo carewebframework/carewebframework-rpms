@@ -40,7 +40,7 @@
 							<treechildren>
 								<treeitem disabled="true"
 									image="${iconPriority}"
-									label="Priority">
+									label="${labels.behnotification.main.legend.priority}">
 									<treechildren>
 										<treeitem disabled="true"
 											image="${iconPriorityHigh}" label="${labels.behnotification.priority.label.HIGH}" />
