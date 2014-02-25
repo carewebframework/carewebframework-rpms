@@ -33,8 +33,7 @@
 			</center>
 			<east width="120px">
 				<div vflex="1">
-					<groupbox closable="false">
-						<caption label="${labels.behnotification.main.group.legend.caption}" />
+					<groupbox closable="false" title="${labels.behnotification.main.group.legend.caption}">
 						<tree sclass="behNotification-legend"
 							style="border:none">
 							<treechildren>
@@ -63,8 +62,7 @@
 						</tree>
 					</groupbox>
 					<div vflex="1" />
-					<groupbox closable="false">
-						<caption label="${labels.behnotification.main.group.options.caption}" />
+					<groupbox closable="false" title="${labels.behnotification.main.group.options.caption}">
 						<toolbar orient="vertical" align="center">
 							<button id="btnSchedule" label="${labels.behnotification.main.button.schedule.label}"
 								width="100%" />
@@ -72,8 +70,7 @@
 								width="100%" />
 						</toolbar>
 					</groupbox>
-					<groupbox closable="false">
-						<caption label="${labels.behnotification.main.group.process.caption}" />
+					<groupbox closable="false" title="${labels.behnotification.main.group.process.caption}">
 						<toolbar orient="vertical" align="center">
 							<button id="btnAll" label="${labels.behnotification.main.button.all.label}"
 								width="100%" />
