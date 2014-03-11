@@ -1,6 +1,6 @@
 <layout title="CareWeb - GOLDB">
 	<_menubar>
-		<menuitem action="@vcchat.action.create.session" label="Chat..."/>
+		<menuitem action="@chat.action.create.session" label="Chat..."/>
 	</_menubar>
 	<_toolbar>
 		<behCWAD allowPrint="true" popupFlags="true" />
@@ -8,10 +8,13 @@
 	<splitterview orientation="vertical">
 		<splitterpane relative="false" size="47.0">
 			<splitterview orientation="horizontal">
-				<splitterpane relative="true" size="48.81656804733728">
-					<patientHeader />
+				<splitterpane relative="true" size="33.3333333">
+					<patientHeader color="lightyellow" />
 				</splitterpane>
-				<splitterpane relative="true" size="50.887573964497044">
+				<splitterpane relative="true" size="33.3333333">
+					<encounterHeader color="lightgreen" />
+				</splitterpane>
+				<splitterpane relative="true" size="33.3333333">
 					<userHeader color="lightblue" />
 				</splitterpane>
 			</splitterview>
@@ -23,6 +26,12 @@
 				</tabpane>
 				<tabpane label="Chart">
 					<treeview open="true">
+						<treepane label="Anticoagulation Management">
+							<behAnticoag allowPrint="false" caption="Anticoagulation Management"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:5%;1:8%;2:8%;3:5%;4:5%;5:10%;6:10%;7:10%;8:8%;9:7%;10:24%" 
+								showDetailPane="false" />
+						</treepane>
 						<treepane label="Allergies">
 							<behAllergies allowPrint="false" caption="Adverse Reactions"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
