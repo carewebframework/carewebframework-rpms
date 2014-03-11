@@ -9,15 +9,12 @@
  */
 package gov.ihs.cwf.ui.context.encounter;
 
-import java.util.List;
-
 import gov.ihs.cwf.context.EncounterUtil;
+import gov.ihs.cwf.context.ProviderUtil;
 import gov.ihs.cwf.domain.Encounter;
 import gov.ihs.cwf.domain.EncounterProvider;
 import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.domain.Provider;
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.ui.zk.ListUtil;
@@ -41,18 +38,18 @@ public class ProviderSelection extends Borderlayout implements IdSpace {
     
     private Listbox lstEncounterProviders;
     
-    private BrokerSession broker;
-    
     private boolean modified = false;
     
     private EncounterProvider encounterProvider;
     
     private final ProviderRenderer providerRenderer = new ProviderRenderer();
     
+    private final ListModelList<Provider> modelProviders = new ListModelList<Provider>();
+    
     public void onCreate() {
         ZKUtil.wireController(this, this);
-        broker = RPMSUtil.getBrokerSession();
         lstAllProviders.setItemRenderer(providerRenderer);
+        lstAllProviders.setModel(modelProviders);
         lstEncounterProviders.setItemRenderer(providerRenderer);
     }
     
@@ -124,16 +121,7 @@ public class ProviderSelection extends Borderlayout implements IdSpace {
     }
     
     public void onClick$btnProvider() {
-        String text = edtProvider.getText().trim().toUpperCase();
-        
-        if (text.isEmpty()) {
-            return;
-        }
-        
-        lstAllProviders.setModel((ListModel<?>) null);
-        List<String> list = broker.callRPCList("BEHOUSCX NEWPERS", null, text, 1, "@BEHOENCX PROVIDER");
-        ListModelList<String> model = new ListModelList<String>(list);
-        lstAllProviders.setModel(model);
+        ProviderUtil.search(edtProvider.getText(), 40, modelProviders);
     }
     
     public void onClick$btnPrimary() {

@@ -19,7 +19,7 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
 /**
  * Controller for user alerts cover sheet.
  */
-public class MainController extends CoverSheetBase {
+public class MainController extends CoverSheetBase<String> {
     
     private static final long serialVersionUID = 1L;
     

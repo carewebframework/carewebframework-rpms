@@ -25,7 +25,7 @@ import org.zkoss.zul.Menuitem;
 /**
  * Controller for patient allergies cover sheet.
  */
-public class MainController extends CoverSheetBase {
+public class MainController extends CoverSheetBase<String> {
     
     private static final long serialVersionUID = 1L;
     

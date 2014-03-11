@@ -23,7 +23,7 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
  * Controller lab order cover sheet. Displays summary and detail views of lab orders for cover
  * sheet.
  */
-public class MainController extends CoverSheetBase {
+public class MainController extends CoverSheetBase<String> {
     
     private static final long serialVersionUID = 1L;
     

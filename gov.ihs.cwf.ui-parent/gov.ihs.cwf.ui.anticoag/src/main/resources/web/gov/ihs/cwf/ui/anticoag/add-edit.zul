@@ -1,0 +1,85 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window width="450px" title="%s Anticoagulation Goal"
+		apply="${behAnticoagAddEditController}">
+		<grid oddRowSclass="none" hflex="1" sizedByContent="true">
+			<columns>
+				<column align="right" hflex="min" />
+				<column hflex="1"/>
+				<column width="70px"/>
+			</columns>
+			<rows id="rows">
+				<row>
+					<label value="Warfarin indicated" />
+					<radiogroup id="rgIndicated">
+						<radio id="radYes" label="Yes" />
+						<separator orient="vertical" hflex="1"/>
+						<radio id="radNo" label="No" />
+					</radiogroup>
+					<cell rowspan="3">
+						<toolbar orient="vertical" align="end" style="background:none;border:none">
+							<button id="btnSave" width="95%" label="Save" />
+							<button id="btnCancel" width="95%" label="Cancel" forward="onClick=onClose"/>
+						</toolbar>
+					</cell>
+				</row>
+				<row>
+					<label value="INR Goal" />
+					<vlayout>
+						<combobox id="cboGoal" hflex="1" readonly="true" />
+						<div id="pnlGoalOther" visible="true" style="display:inline">
+							<label value="Specify" style="padding: 0 5px 0 5px" />
+							<combobox id="cboMin" width="60px" readonly="true">
+								<comboitem label="0.5" />
+								<comboitem label="1.0" />
+								<comboitem label="1.5" />
+								<comboitem label="2.0" />
+								<comboitem label="2.5" />
+								<comboitem label="3.0" />
+							</combobox>
+							<label value="to" style="padding: 0 5px 0 5px" />
+							<combobox id="cboMax" width="60px" readonly="true">
+								<comboitem label="0.5" />
+								<comboitem label="1.0" />
+								<comboitem label="1.5" />
+								<comboitem label="2.0" />
+								<comboitem label="2.5" />
+								<comboitem label="3.0" />
+								<comboitem label="3.5" />
+								<comboitem label="4.0" />
+							</combobox>
+						</div>
+					</vlayout>
+				</row>
+				<row>
+					<label value="Duration of Therapy" />
+					<combobox id="cboDuration" hflex="1" readonly="true" />
+				</row>
+				<row>
+					<label value="Start Date" />
+					<cell colspan="2">
+						<datebox id="datStart" hflex="1" />
+						<label value="to" style="padding: 0 5px 0 5px" />
+						<textbox id="txtEnd" readonly="true" hflex="1" />
+					</cell>
+				</row>
+				<row>
+					<label value="Provider" />
+					<cell colspan="2">
+						<wonderbar id="wbProvider" hflex="1" 
+							maxSearchResults="40" />
+					</cell>
+				</row>
+				<row>
+					<label value="Comment" />
+					<cell colspan="2" rowspan="4" align="left">
+						<textbox id="txtComment" multiline="true" rows="10" hflex="1" maxlength="240"/>
+					</cell>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>

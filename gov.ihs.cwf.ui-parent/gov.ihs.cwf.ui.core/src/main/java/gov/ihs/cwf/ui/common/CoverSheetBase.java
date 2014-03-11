@@ -14,11 +14,14 @@ import static org.carewebframework.common.StrUtil.fromList;
 import static org.carewebframework.common.StrUtil.piece;
 import static org.carewebframework.common.StrUtil.toList;
 
+import java.util.List;
+
 import gov.ihs.cwf.context.PatientContext;
 import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.mbroker.BrokerSession;
 import gov.ihs.cwf.mbroker.BrokerSession.IAsyncRPCEvent;
 
+import org.carewebframework.api.domain.IDomainObject;
 import org.carewebframework.ui.sharedforms.ListViewForm;
 import org.carewebframework.ui.zk.ReportBox;
 
@@ -33,7 +36,7 @@ import org.zkoss.zul.Listitem;
  * 
  * @param <T> Type of model object.
  */
-public abstract class CoverSheetBase extends ListViewForm<String> implements PatientContext.IPatientContextEvent, IAsyncRPCEvent {
+public abstract class CoverSheetBase<T> extends ListViewForm<T> implements PatientContext.IPatientContextEvent, IAsyncRPCEvent {
     
     private static final long serialVersionUID = 1L;
     
@@ -70,18 +73,31 @@ public abstract class CoverSheetBase extends ListViewForm<String> implements Pat
         
         @Override
         public void onEvent(Event event) throws Exception {
-            toList(event.getData().toString(), model, "\r");
-            String error = getError();
+            List<String> results = toList(event.getData().toString(), null, "\r");
+            String error = getError(results);
             
             if (error != null) {
                 status(error);
                 model.clear();
             } else {
+                for (String result : results) {
+                    T value = parseData(result);
+                    
+                    if (value != null) {
+                        model.add(value);
+                    }
+                }
+                
                 renderData();
             }
         }
         
     };
+    
+    @SuppressWarnings("unchecked")
+    protected T parseData(String data) {
+        return (T) data;
+    }
     
     protected void setup(String title, String detailTitle, String listRPC, String detailRPC, int sortBy, String... headers) {
         this.detailTitle = detailTitle;
@@ -143,13 +159,20 @@ public abstract class CoverSheetBase extends ListViewForm<String> implements Pat
      * @param li
      */
     protected void showDetail(Listitem li) {
-        String s = li == null ? null : (String) li.getValue();
-        String detail = s == null ? null : getDetail(s);
+        @SuppressWarnings("unchecked")
+        T value = li == null ? null : (T) li.getValue();
+        String detail = value == null ? null : getDetail(value);
         detailView.setValue(detail);
         
         if (!getShowDetailPane() && detail != null) {
             ReportBox.modal(detail, detailTitle, getAllowPrint());
         }
+    }
+    
+    protected String getDomainId(T data) {
+        return data instanceof String ? piece((String) data, U) : data instanceof IDomainObject ? Long
+                .toString(((IDomainObject) data).getDomainId()) : "";
+        
     }
     
     /**
@@ -158,14 +181,14 @@ public abstract class CoverSheetBase extends ListViewForm<String> implements Pat
      * @param data
      * @return
      */
-    protected String getDetail(String data) {
-        data = piece(data, U);
-        return detailRPC == null || data.isEmpty() ? null : fromList(getBroker().callRPCList(detailRPC, null,
-            patient.getDomainId(), data));
+    protected String getDetail(T data) {
+        String ien = getDomainId(data);
+        return detailRPC == null || ien == null || ien.isEmpty() ? null : fromList(getBroker().callRPCList(detailRPC, null,
+            patient.getDomainId(), ien));
     }
     
-    protected String getError() {
-        String data = model.isEmpty() ? null : model.get(0);
+    protected String getError(List<String> list) {
+        String data = list.isEmpty() ? null : list.get(0);
         
         if (data != null && data.startsWith(U)) {
             return data.substring(1);

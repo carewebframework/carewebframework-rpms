@@ -7,24 +7,22 @@
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
  */
-package gov.ihs.cwf.domain;
+package gov.ihs.cwf.ui.anticoag;
 
-import org.carewebframework.common.JSONUtil;
+import org.carewebframework.ui.FrameworkController;
+import org.carewebframework.ui.zk.PopupDialog;
+import org.carewebframework.ui.zk.ZKUtil;
 
-public class Provider extends User {
+/**
+ * Controller for anticoagulation management.
+ */
+public class LookupController extends FrameworkController {
     
     private static final long serialVersionUID = 1L;
     
-    static {
-        JSONUtil.registerAlias("Provider", Provider.class);
-    }
+    private static final String DIALOG = ZKUtil.getResourcePath(LookupController.class) + "lookup.zul";
     
-    protected Provider() {
-        super();
+    public static void show() {
+        PopupDialog.popup(DIALOG, null, false, false, true);
     }
-    
-    public Provider(long id) {
-        super(id);
-    }
-    
 }

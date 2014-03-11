@@ -13,6 +13,7 @@
 		<module>gov.ihs.cwf.ui.settings</module>
 		<module>gov.ihs.cwf.ui.alerts</module>
 		<module>gov.ihs.cwf.ui.allergies</module>
+		<module>gov.ihs.cwf.ui.anticoag</module>
 		<module>gov.ihs.cwf.ui.consultorders</module>
 		<module>gov.ihs.cwf.ui.context.encounter</module>
 		<module>gov.ihs.cwf.ui.crises</module>

@@ -24,7 +24,7 @@ import org.zkoss.zul.Toolbar;
 /**
  * Controller for medication list cover sheet.
  */
-public class MainController extends CoverSheetBase {
+public class MainController extends CoverSheetBase<String> {
     
     private static final long serialVersionUID = 1L;
     

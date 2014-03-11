@@ -9,6 +9,8 @@
  */
 package gov.ihs.cwf.context;
 
+import java.util.List;
+
 import gov.ihs.cwf.domain.DomainObjectFactory;
 import gov.ihs.cwf.domain.Encounter;
 import gov.ihs.cwf.domain.EncounterProvider;
@@ -17,8 +19,6 @@ import gov.ihs.cwf.domain.Provider;
 import gov.ihs.cwf.domain.User;
 import gov.ihs.cwf.util.RPMSUtil;
 
-import java.util.List;
-
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.context.UserContext;
@@ -26,8 +26,6 @@ import org.carewebframework.common.StrUtil;
 
 /**
  * Encounter-related utility functions.
- * 
- * 
  */
 public class EncounterUtil {
     
@@ -80,11 +78,6 @@ public class EncounterUtil {
         return true;
     }
     
-    public static Provider fetchProvider(String value) {
-        long id = Long.parseLong(StrUtil.piece(value, StrUtil.U));
-        return DomainObjectFactory.get(Provider.class, id);
-    }
-    
     public static EncounterProvider getEncounterProvider(Patient patient, Encounter encounter) {
         EncounterProvider encounterProvider = encounter.getEncounterProvider();
         Provider currentProvider = encounterProvider.getCurrentProvider();
@@ -96,7 +89,7 @@ public class EncounterUtil {
         // IEN^Name^Primary^EncDT
         for (String prv : data) {
             String[] pcs = StrUtil.split(prv, StrUtil.U, 4);
-            Provider provider = fetchProvider(pcs[0]);
+            Provider provider = ProviderUtil.fetchProvider(pcs[0]);
             encounterProvider.add(provider);
             
             if (primaryProvider == null && StrUtil.toBoolean(pcs[2])) {

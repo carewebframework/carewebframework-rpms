@@ -22,7 +22,7 @@ import gov.ihs.cwf.ui.common.CoverSheetBase;
 /**
  * Controller for crisis alert cover sheet. Displays summary and detail views of crisis alerts.
  */
-public class MainController extends CoverSheetBase {
+public class MainController extends CoverSheetBase<String> {
     
     private static final long serialVersionUID = 1L;
     
@@ -62,7 +62,7 @@ public class MainController extends CoverSheetBase {
     }
     
     @Override
-    protected String getError() {
+    protected String getError(List<String> list) {
         return null;
     }
     

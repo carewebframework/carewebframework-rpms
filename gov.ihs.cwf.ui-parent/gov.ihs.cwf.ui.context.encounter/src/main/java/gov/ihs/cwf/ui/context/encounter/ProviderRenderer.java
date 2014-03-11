@@ -9,7 +9,7 @@
  */
 package gov.ihs.cwf.ui.context.encounter;
 
-import gov.ihs.cwf.context.EncounterUtil;
+import gov.ihs.cwf.context.ProviderUtil;
 import gov.ihs.cwf.domain.EncounterProvider;
 import gov.ihs.cwf.domain.Provider;
 
@@ -25,7 +25,7 @@ public class ProviderRenderer extends AbstractListitemRenderer<Object, Object> {
     
     @Override
     public void renderItem(Listitem item, Object data) {
-        Provider provider = data instanceof Provider ? (Provider) data : EncounterUtil.fetchProvider(StrUtil.piece(
+        Provider provider = data instanceof Provider ? (Provider) data : ProviderUtil.fetchProvider(StrUtil.piece(
             (String) data, StrUtil.U));
         item.setValue(provider);
         createCell(item, provider.getFullName());

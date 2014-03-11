@@ -1,0 +1,22 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window width="300px" title="Delete Anticoagulation Goal" 
+		apply="${behAnticoagDeleteController}">
+		<radiogroup id="rgReason" orient="vertical">
+			<radio id="radDuplicate" label="Duplicate" value="1" />
+			<radio id="radError" label="Entered in Error" value="2" />
+			<hlayout>
+				<radio id="radOther" label="Other" value="3" />
+				<textbox id="txtOther" hflex="1" />
+				<separator />
+			</hlayout>
+		</radiogroup>
+		<toolbar align="center">
+			<button id="btnOK" label="OK" />
+			<button id="btnCancel" label="Cancel" forward="onClick=onClose" />
+		</toolbar>
+	</window>
+</zk>

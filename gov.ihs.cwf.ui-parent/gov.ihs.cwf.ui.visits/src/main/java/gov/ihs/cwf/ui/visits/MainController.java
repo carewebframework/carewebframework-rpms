@@ -22,7 +22,7 @@ import org.carewebframework.api.event.IGenericEvent;
 /**
  * Controller for visit/appointment cover sheet.
  */
-public class MainController extends CoverSheetBase {
+public class MainController extends CoverSheetBase<String> {
     
     private static final long serialVersionUID = 1L;
     
