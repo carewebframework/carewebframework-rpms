@@ -66,9 +66,6 @@
 			<property name="service" ref="behAnticoagService" />
 		</bean>
 
-		<bean id="behAnticoagLookupController" class="gov.ihs.cwf.ui.anticoag.LookupController"
-			scope="prototype" />
-
 	</beans>
 
 </beans>
