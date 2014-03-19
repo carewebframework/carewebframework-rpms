@@ -17,13 +17,16 @@ import gov.ihs.cwf.mbroker.BrokerSession;
 
 import org.apache.commons.lang.StringUtils;
 
-import org.carewebframework.api.AliasRegistry.AliasType;
+import org.carewebframework.api.AliasTypeRegistry;
+import org.carewebframework.api.AliasTypeRegistry.AliasType;
 import org.carewebframework.api.property.IPropertyService;
 import org.carewebframework.common.StrUtil;
 
 public class PropertyService implements IPropertyService, IPropertyDAO {
     
     private final BrokerSession broker;
+    
+    private final AliasType propertyAliasType = AliasTypeRegistry.getType(ALIAS_TYPE_PROPERTY);
     
     public PropertyService(BrokerSession brokerSession) {
         this.broker = brokerSession;
@@ -40,7 +43,7 @@ public class PropertyService implements IPropertyService, IPropertyDAO {
      * @return Alias if exists, original name if not.
      */
     private String toAlias(String propertyName) {
-        String alias = AliasType.PROPERTY.get(propertyName);
+        String alias = propertyAliasType.get(propertyName);
         return alias == null ? propertyName : alias;
     }
     

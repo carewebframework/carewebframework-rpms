@@ -22,7 +22,8 @@ import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.carewebframework.api.AliasRegistry.AliasType;
+import org.carewebframework.api.AliasTypeRegistry;
+import org.carewebframework.api.AliasTypeRegistry.AliasType;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.security.spring.AbstractSecurityService;
 
@@ -35,6 +36,8 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
     
     private static final Log log = LogFactory.getLog(BaseSecurityService.class);
     
+    private final AliasType authorityAliasType = AliasTypeRegistry.getType(ALIAS_TYPE_AUTHORITY);
+    
     /**
      * Cached list of available login domains
      */
@@ -42,9 +45,9 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
     
     public BaseSecurityService() {
         super();
-        AliasType.AUTHORITY.registerAlias("PRIV_CAREWEB_DESIGNER", "PRIV_CIAV COMPOSE");
-        AliasType.AUTHORITY.registerAlias("PRIV_PATIENT_SELECT", "PRIV_PROVIDER");
-        AliasType.AUTHORITY.registerAlias("ROLE_TESTER", "PRIV_XUPROG");
+        authorityAliasType.registerAlias("PRIV_CAREWEB_DESIGNER", "PRIV_CIAV COMPOSE");
+        authorityAliasType.registerAlias("PRIV_PATIENT_SELECT", "PRIV_PROVIDER");
+        authorityAliasType.registerAlias("ROLE_TESTER", "PRIV_XUPROG");
     }
     
     /**
