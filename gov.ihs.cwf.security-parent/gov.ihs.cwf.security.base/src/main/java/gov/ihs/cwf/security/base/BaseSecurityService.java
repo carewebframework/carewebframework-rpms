@@ -22,6 +22,7 @@ import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import org.carewebframework.api.AliasRegistry.AliasType;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.security.spring.AbstractSecurityService;
 
@@ -41,9 +42,9 @@ public abstract class BaseSecurityService extends AbstractSecurityService {
     
     public BaseSecurityService() {
         super();
-        authorityAliases.registerAlias("PRIV_CAREWEB_DESIGNER", "PRIV_CIAV COMPOSE");
-        authorityAliases.registerAlias("PRIV_PATIENT_SELECT", "PRIV_PROVIDER");
-        authorityAliases.registerAlias("ROLE_TESTER", "PRIV_XUPROG");
+        AliasType.AUTHORITY.registerAlias("PRIV_CAREWEB_DESIGNER", "PRIV_CIAV COMPOSE");
+        AliasType.AUTHORITY.registerAlias("PRIV_PATIENT_SELECT", "PRIV_PROVIDER");
+        AliasType.AUTHORITY.registerAlias("ROLE_TESTER", "PRIV_XUPROG");
     }
     
     /**
