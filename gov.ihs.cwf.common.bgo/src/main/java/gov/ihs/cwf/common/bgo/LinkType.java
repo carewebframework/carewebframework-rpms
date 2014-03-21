@@ -9,7 +9,7 @@
  */
 package gov.ihs.cwf.common.bgo;
 
-import gov.ihs.cwf.domain.Concept;
+import org.carewebframework.vista.api.domain.Concept;
 
 public enum LinkType {
     CPT4, CPT4_RANGE, ICD9, ICD9_RANGE, EDU, EXAM, IMM, SKIN;

@@ -13,13 +13,13 @@ import java.util.List;
 
 import gov.ihs.cwf.context.EncounterContext;
 import gov.ihs.cwf.context.EncounterContext.IEncounterContextEvent;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.ui.common.CoverSheetBase;
 
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.domain.IPatient;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.ui.common.CoverSheetBase;
 
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Button;

@@ -16,14 +16,14 @@ import java.util.List;
 import java.util.Map;
 
 import gov.ihs.cwf.context.EncounterContext;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.DomainObjectFactory;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Location;
-import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.mbroker.FMDate;
-import gov.ihs.cwf.util.RPMSUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.DomainObjectFactory;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.Location;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.mbroker.FMDate;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.StringUtils;
@@ -128,7 +128,7 @@ public class Entry extends Panel implements PatientContext.IPatientContextEvent,
     
     public void onCreate() {
         ZKUtil.wireController(this, this);
-        broker = RPMSUtil.getBrokerSession();
+        broker = VistAUtil.getBrokerSession();
         enabled = isEnabled();
         init();
     }
@@ -156,7 +156,7 @@ public class Entry extends Panel implements PatientContext.IPatientContextEvent,
         if (enabled && !fetched && patient != null && encounter != null) {
             template.clear();
             fetched = true;
-            RPMSUtil.getBrokerSession().callRPCList("BEHOVM TEMPLATE", template, patient.getDomainId(),
+            VistAUtil.getBrokerSession().callRPCList("BEHOVM TEMPLATE", template, patient.getDomainId(),
                 encounter.getEncoded(), defaultUnits.ordinal() - 1);
         }
         

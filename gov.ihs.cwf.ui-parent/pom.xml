@@ -9,23 +9,14 @@
 	<artifactId>gov.ihs.cwf.ui-parent</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>gov.ihs.cwf.ui.core</module>
-		<module>gov.ihs.cwf.ui.settings</module>
-		<module>gov.ihs.cwf.ui.alerts</module>
-		<module>gov.ihs.cwf.ui.allergies</module>
 		<module>gov.ihs.cwf.ui.anticoag</module>
 		<module>gov.ihs.cwf.ui.consultorders</module>
 		<module>gov.ihs.cwf.ui.context.encounter</module>
-		<module>gov.ihs.cwf.ui.crises</module>
-		<module>gov.ihs.cwf.ui.laborders</module>
 		<module>gov.ihs.cwf.ui.medlist</module>
-		<module>gov.ihs.cwf.ui.notification</module>
 		<module>gov.ihs.cwf.ui.visits</module>
 		<module>gov.ihs.cwf.ui.behvitals</module>
 		<module>gov.ihs.cwf.ui.problem</module>
 		<module>gov.ihs.cwf.ui.skintest</module>
-		<module>gov.ihs.cwf.ui.esig</module>
-		<module>gov.ihs.cwf.ui.cwad</module>
 		<module>gov.ihs.cwf.ui.chat</module>
 	</modules>
 </project>

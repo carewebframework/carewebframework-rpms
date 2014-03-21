@@ -16,15 +16,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.domain.Provider;
-
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.BooleanUtils;
 
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
+import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 /**
  * A single anticoagulation record.
@@ -93,14 +92,14 @@ public class AntiCoagRecord extends DomainObject {
         String[] pcs = split(data, U, 17);
         setDomainId(Long.parseLong(pcs[0]));
         setIndicated(BooleanUtils.toBoolean(pcs[1]));
-        setVisitDate(BgoUtil.parseDate(pcs[2]));
+        setVisitDate(VistAUtil.parseDate(pcs[2]));
         setGoalRange(pcs[3]);
         setGoalMin(parseDouble(pcs[4]));
         setGoalMax(parseDouble(pcs[5]));
         setDuration(pcs[6]);
-        setStartDate(BgoUtil.parseDate(pcs[7]));
+        setStartDate(VistAUtil.parseDate(pcs[7]));
         setProvider(parseProvider(pcs[9], pcs[16]));
-        setEnteredDate(BgoUtil.parseDate(pcs[11]));
+        setEnteredDate(VistAUtil.parseDate(pcs[11]));
         setVisitIEN(parseLong(pcs[12]));
         setVisitCategory(pcs[13]);
         setVisitLocked("1".equals(pcs[14]));

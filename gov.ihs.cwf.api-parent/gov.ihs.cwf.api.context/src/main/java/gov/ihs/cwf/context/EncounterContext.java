@@ -9,9 +9,6 @@
  */
 package gov.ihs.cwf.context;
 
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Patient;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -21,11 +18,12 @@ import org.carewebframework.api.context.IContextEvent;
 import org.carewebframework.api.context.ISharedContext;
 import org.carewebframework.api.context.ManagedContext;
 import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.Patient;
 
 /**
  * Wrapper for shared encounter context.
- * 
- * 
  */
 public class EncounterContext extends ManagedContext<Encounter> implements IPatientContextEvent {
     

@@ -12,7 +12,6 @@ package gov.ihs.cwf.common.bgo;
 import java.util.List;
 
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
-import gov.ihs.cwf.domain.Concept;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -20,6 +19,8 @@ import org.carewebframework.api.context.UserContext;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
+import org.carewebframework.vista.api.domain.Concept;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Combobox;
@@ -194,7 +195,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
         
         // Type [1] ^ Value [2] ^ Name [3] ^ URL [4] ^ User IEN [5] ^ Value 2 [6] ^ Category [7]
         
-        String s = BgoUtil.concatParams(linkType, code1, name, siteURL, UserContext.getActiveUser().getDomainId(), code2,
+        String s = VistAUtil.concatParams(linkType, code1, name, siteURL, UserContext.getActiveUser().getDomainId(), code2,
             cboCat.getText());
         s = getBroker().callRPC("BGOWEB SET", s);
         
@@ -207,7 +208,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
         cboRef.getItems().clear();
         Comboitem item = cboCat.getSelectedItem();
         String cat = item == null ? "" : item.getLabel();
-        String s = BgoUtil.concatParams(UserContext.getActiveUser().getDomainId(), cat);
+        String s = VistAUtil.concatParams(UserContext.getActiveUser().getDomainId(), cat);
         List<String> refs = getBroker().callRPCList("BGOWEB GETREF", null, s);
         
         if (!BgoUtil.errorCheck(refs)) {
@@ -231,7 +232,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
     private void loadLinks() {
         lstLinks.getItems().clear();
         int linkType = LinkType.fromConcept(concept1).ordinal();
-        String s = BgoUtil.concatParams(linkType, concept1.getDomainId(), null, null, UserContext.getActiveUser()
+        String s = VistAUtil.concatParams(linkType, concept1.getDomainId(), null, null, UserContext.getActiveUser()
                 .getDomainId());
         List<String> links = getBroker().callRPCList("BGOWEB GET", null, s);
         

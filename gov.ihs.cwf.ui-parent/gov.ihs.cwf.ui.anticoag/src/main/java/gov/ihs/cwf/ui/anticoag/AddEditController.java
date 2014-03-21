@@ -17,8 +17,8 @@ import java.util.Map;
 import gov.ihs.cwf.context.EncounterContext;
 import gov.ihs.cwf.context.EncounterUtil;
 import gov.ihs.cwf.context.ProviderUtil;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Provider;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.Provider;
 
 import org.apache.commons.lang.math.NumberUtils;
 

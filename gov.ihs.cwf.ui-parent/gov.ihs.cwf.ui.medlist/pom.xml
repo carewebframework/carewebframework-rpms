@@ -13,8 +13,8 @@
 			<artifactId>org.carewebframework.shell</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.core</artifactId>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

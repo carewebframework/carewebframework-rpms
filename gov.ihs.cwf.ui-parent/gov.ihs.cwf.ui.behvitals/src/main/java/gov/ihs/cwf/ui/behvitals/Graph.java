@@ -15,11 +15,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.mbroker.FMDate;
-import gov.ihs.cwf.util.RPMSUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.mbroker.FMDate;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.WordUtils;
@@ -127,7 +127,7 @@ public class Graph extends Div implements PatientContext.IPatientContextEvent, I
         chart.getYAxis().gridLineWidth = 0;
         chart.options.exporting.buttons_printButton.onclick = "cwf.print(this.container);";
         chart.options.plotOptions.tooltip.xDateFormat = "dd-MMM-yyyy HH:mm";
-        broker = RPMSUtil.getBrokerSession();
+        broker = VistAUtil.getBrokerSession();
         cboUnits.setSelectedIndex(0);
         datRange.setSelectedIndex(0);
         btnEnterVitals.setVisible(Entry.isEnabled());

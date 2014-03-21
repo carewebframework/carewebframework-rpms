@@ -9,12 +9,11 @@
  */
 package gov.ihs.cwf.domain;
 
-import gov.ihs.cwf.mbroker.FMDate;
-
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.vista.mbroker.FMDate;
 
 public class Contraindication extends DomainObject {
     

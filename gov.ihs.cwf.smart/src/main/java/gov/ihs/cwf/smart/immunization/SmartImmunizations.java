@@ -16,13 +16,13 @@ import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.domain.Contraindication;
 import gov.ihs.cwf.domain.Immunization;
 import gov.ihs.cwf.domain.Refusal;
-import gov.ihs.cwf.smart.RPMSAPIBase;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.carewebframework.smart.rdf.RDFDescription;
 import org.carewebframework.smart.rdf.RDFDocument;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.smart.AbstractAPIBase;
 
-public class SmartImmunizations extends RPMSAPIBase {
+public class SmartImmunizations extends AbstractAPIBase {
     
     public SmartImmunizations() {
         super("/records/{record_id}/immunizations", "Immunizations");
@@ -32,7 +32,7 @@ public class SmartImmunizations extends RPMSAPIBase {
     public void handleAPI(RDFDocument doc, Map<String, String> params) {
         String record_id = params.get("record_id");
         String owner = doc.baseURL + "/records/" + record_id;
-        List<String> data = RPMSUtil.getBrokerSession().callRPCList("BGOVIMM GET", null, record_id);
+        List<String> data = VistAUtil.getBrokerSession().callRPCList("BGOVIMM GET", null, record_id);
         
         if (BgoUtil.errorCheck(data)) {
             return;

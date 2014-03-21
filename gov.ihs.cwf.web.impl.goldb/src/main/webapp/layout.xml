@@ -3,7 +3,7 @@
 		<menuitem action="@chat.action.create.session" label="Chat..."/>
 	</_menubar>
 	<_toolbar>
-		<behCWAD allowPrint="true" popupFlags="true" />
+		<vistaCWAD allowPrint="true" popupFlags="true" />
 	</_toolbar>
 	<splitterview orientation="vertical">
 		<splitterpane relative="false" size="47.0">
@@ -22,7 +22,7 @@
 		<splitterpane relative="true" size="88.69565217391305">
 			<tabview orientation="horizontal">
 				<tabpane label="Notifications">
-					<behNotification />
+					<vistaNotification />
 				</tabpane>
 				<tabpane label="Chart">
 					<treeview open="true">
@@ -33,17 +33,17 @@
 								showDetailPane="false" />
 						</treepane>
 						<treepane label="Allergies">
-							<behAllergies allowPrint="false" caption="Adverse Reactions"
+							<vistaAllergies allowPrint="false" caption="Adverse Reactions"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
 						<treepane label="Consult Orders">
-							<behConsultOrders allowPrint="false" caption="Consult Orders"
+							<vistaConsultOrders allowPrint="false" caption="Consult Orders"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
 						<treepane label="Crisis Alerts">
-							<behCrises allowPrint="false" caption="Crisis Alerts"
+							<vistaCrises allowPrint="false" caption="Crisis Alerts"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:100%" showDetailPane="false" />
 						</treepane>
@@ -53,7 +53,7 @@
 								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
 						<treepane label="Lab Orders">
-							<behLabOrders allowPrint="false" caption="Lab Orders"
+							<vistaLabOrders allowPrint="false" caption="Lab Orders"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
@@ -65,7 +65,7 @@
 							<bgoSkinTest allowAsync="false" hideButtons="false" />
 						</treepane>
 						<treepane label="User Alerts">
-							<behAlerts allowPrint="false" caption="Alerts"
+							<vistaAlerts allowPrint="false" caption="Alerts"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:100%" showDetailPane="false" />
 						</treepane>
@@ -75,7 +75,7 @@
 								layout="50:1:false;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
 						<treepane label="Vitals">
-							<BEHVitalsGraph />
+							<behVitalsGraph />
 						</treepane>
 					</treeview>
 				</tabpane>

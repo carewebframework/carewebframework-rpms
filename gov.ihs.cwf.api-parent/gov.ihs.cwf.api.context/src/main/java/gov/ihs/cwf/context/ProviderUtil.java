@@ -12,9 +12,9 @@ package gov.ihs.cwf.context;
 import java.util.ArrayList;
 import java.util.List;
 
-import gov.ihs.cwf.domain.DomainObjectFactory;
-import gov.ihs.cwf.domain.Provider;
-import gov.ihs.cwf.util.RPMSUtil;
+import org.carewebframework.vista.api.domain.DomainObjectFactory;
+import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.carewebframework.common.StrUtil;
 
@@ -41,7 +41,7 @@ public class ProviderUtil {
             return hits;
         }
         
-        List<String> list = RPMSUtil.getBrokerSession().callRPCList("BEHOUSCX NEWPERS", null, text, 1, "@BEHOENCX PROVIDER",
+        List<String> list = VistAUtil.getBrokerSession().callRPCList("BEHOUSCX NEWPERS", null, text, 1, "@BEHOENCX PROVIDER",
             maxHits);
         
         for (String prv : list) {

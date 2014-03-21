@@ -16,16 +16,9 @@ import gov.ihs.cwf.common.bgo.BgoBaseController;
 import gov.ihs.cwf.common.bgo.BgoConstants;
 import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.context.EncounterContext.IEncounterContextEvent;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.domain.Refusal;
 import gov.ihs.cwf.domain.SkinTest;
-import gov.ihs.cwf.domain.User;
-import gov.ihs.cwf.mbroker.BrokerSession.IAsyncRPCEvent;
-import gov.ihs.cwf.mbroker.FMDate;
 import gov.ihs.cwf.ui.skintest.render.SkinTestRenderer;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -44,6 +37,13 @@ import org.carewebframework.ui.zk.ListUtil;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.RowComparator;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.api.domain.User;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.mbroker.BrokerSession.IAsyncRPCEvent;
+import org.carewebframework.vista.mbroker.FMDate;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -164,7 +164,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
                 "Delete Skin Test?")) {
                 BgoUtil.errorCheck(getBroker().callRPC(
                     "BGOSK DEL",
-                    BgoUtil.concatParams(skinTest != null ? skinTest.getDomainId() : null,
+                    VistAUtil.concatParams(skinTest != null ? skinTest.getDomainId() : null,
                         refusal != null ? refusal.getDomainId() : null)));
             }
             
@@ -418,7 +418,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     
     private void abortAsync() {
         if (asyncHandle != 0) {
-            RPMSUtil.getBrokerSession().callRPCAbort(asyncHandle);
+            VistAUtil.getBrokerSession().callRPCAbort(asyncHandle);
             asyncHandle = 0;
         }
     }
@@ -500,7 +500,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     }
     
     public void onClick$btnPrint() {
-        String s = BgoUtil.concatParams(PatientContext.getCurrentPatient().getDomainId(), 2);
+        String s = VistAUtil.concatParams(PatientContext.getCurrentPatient().getDomainId(), 2);
         s = getBroker().callRPC("BGOVIMM PRINT", s);
         PromptDialog.showText(s, "Print Record");
     }

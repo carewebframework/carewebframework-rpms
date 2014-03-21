@@ -9,14 +9,17 @@
  */
 package gov.ihs.cwf.domain;
 
-import gov.ihs.cwf.mbroker.FMDate;
-
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.vista.api.domain.ICD9Concept;
+import org.carewebframework.vista.api.domain.Institution;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.vista.mbroker.FMDate;
 
 public class Problem extends DomainObject {
     

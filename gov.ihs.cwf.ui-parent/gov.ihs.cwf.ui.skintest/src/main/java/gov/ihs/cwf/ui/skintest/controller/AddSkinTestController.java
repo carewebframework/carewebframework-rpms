@@ -13,22 +13,24 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import gov.ihs.cwf.common.bgo.BgoBaseController;
+import gov.ihs.cwf.common.bgo.LookupController;
+import gov.ihs.cwf.common.bgo.LookupParams.Table;
+import gov.ihs.cwf.common.bgo.Params;
+import gov.ihs.cwf.context.EncounterContext;
+import gov.ihs.cwf.ui.context.encounter.EncounterSelection;
+import gov.ihs.cwf.ui.skintest.controller.SkinTestController.EventType;
+import gov.ihs.cwf.ui.skintest.controller.SkinTestController.TestItem;
+import gov.ihs.cwf.ui.skintest.util.Constants;
+
 import org.apache.commons.lang.math.NumberUtils;
+
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.ZKUtil;
-import gov.ihs.cwf.common.bgo.BgoBaseController;
-import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.common.bgo.LookupController;
-import gov.ihs.cwf.common.bgo.Params;
-import gov.ihs.cwf.common.bgo.LookupParams.Table;
-import gov.ihs.cwf.context.EncounterContext;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.ui.skintest.controller.SkinTestController.EventType;
-import gov.ihs.cwf.ui.skintest.controller.SkinTestController.TestItem;
-import gov.ihs.cwf.ui.skintest.util.Constants;
-import gov.ihs.cwf.ui.context.encounter.EncounterSelection;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Combobox;
@@ -78,8 +80,9 @@ public class AddSkinTestController extends BgoBaseController<Object> {
     private TestItem test;
     
     public static TestItem execute(TestItem test) {
-        if (test == null && !EncounterSelection.ensureEncounter())
+        if (test == null && !EncounterSelection.ensureEncounter()) {
             return null;
+        }
         
         Params params = new Params(test);
         Window dlg = PopupDialog.popup(DIALOG, params, true, true, true);
@@ -92,7 +95,7 @@ public class AddSkinTestController extends BgoBaseController<Object> {
         super.doAfterCompose(comp);
         Params params = (Params) arg;
         this.test = (TestItem) params.get(0);
-        radFacility.setLabel(BgoUtil.getSysParam("Caption-Facility", radFacility.getLabel(), null));
+        radFacility.setLabel(VistAUtil.getSysParam("Caption-Facility", radFacility.getLabel(), null));
         loadForm();
     }
     
@@ -158,8 +161,9 @@ public class AddSkinTestController extends BgoBaseController<Object> {
             boolean visible = enable.contains(item.getLabel());
             item.setVisible(visible);
             
-            if (visible && firstVisible == null)
+            if (visible && firstVisible == null) {
                 firstVisible = item;
+            }
         }
         
         cboResults.setSelectedItem(firstVisible);
@@ -186,8 +190,9 @@ public class AddSkinTestController extends BgoBaseController<Object> {
     }
     
     public void onClick$btnSave() {
-        if (!validateAll())
+        if (!validateAll()) {
             return;
+        }
         
         close(false);
     }

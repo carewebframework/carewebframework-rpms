@@ -10,7 +10,7 @@
 package gov.ihs.cwf.ui.context.location;
 
 import gov.ihs.cwf.context.LocationContext;
-import gov.ihs.cwf.domain.Location;
+import org.carewebframework.vista.api.domain.Location;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

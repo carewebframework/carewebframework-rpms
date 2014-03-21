@@ -9,12 +9,12 @@
  */
 package gov.ihs.cwf.domain;
 
-import gov.ihs.cwf.mbroker.FMDate;
-
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.api.domain.IInstitution;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.vista.api.domain.Institution;
+import org.carewebframework.vista.mbroker.FMDate;
 
 public class ProblemNote extends DomainObject {
     

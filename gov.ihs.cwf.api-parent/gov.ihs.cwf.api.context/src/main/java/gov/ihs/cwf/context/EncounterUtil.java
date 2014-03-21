@@ -11,18 +11,18 @@ package gov.ihs.cwf.context;
 
 import java.util.List;
 
-import gov.ihs.cwf.domain.DomainObjectFactory;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.EncounterProvider;
-import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.domain.Provider;
-import gov.ihs.cwf.domain.User;
-import gov.ihs.cwf.util.RPMSUtil;
-
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.DomainObjectFactory;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.EncounterProvider;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.vista.api.domain.User;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 /**
  * Encounter-related utility functions.
@@ -66,7 +66,7 @@ public class EncounterUtil {
             return false;
         }
         
-        String s = RPMSUtil.getBrokerSession().callRPC("BEHOENCX FETCH", patient.getDomainId(), encounter.getEncoded(),
+        String s = VistAUtil.getBrokerSession().callRPC("BEHOENCX FETCH", patient.getDomainId(), encounter.getEncoded(),
             encounter.getEncounterProvider().getCurrentProvider().getDomainId(), true);
         long id = NumberUtils.toLong(StrUtil.piece(s, StrUtil.U, 6));
         
@@ -83,7 +83,7 @@ public class EncounterUtil {
         Provider currentProvider = encounterProvider.getCurrentProvider();
         User user = (User) UserContext.getActiveUser();
         encounterProvider.clear();
-        List<String> data = RPMSUtil.getBrokerSession().callRPCList("BEHOENCX GETPRV", null, patient.getDomainId(),
+        List<String> data = VistAUtil.getBrokerSession().callRPCList("BEHOENCX GETPRV", null, patient.getDomainId(),
             encounter.getEncoded());
         Provider primaryProvider = null;
         // IEN^Name^Primary^EncDT

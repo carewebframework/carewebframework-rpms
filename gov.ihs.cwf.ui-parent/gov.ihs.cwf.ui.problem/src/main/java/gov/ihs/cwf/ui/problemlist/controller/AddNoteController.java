@@ -9,12 +9,13 @@
  */
 package gov.ihs.cwf.ui.problemlist.controller;
 
+import gov.ihs.cwf.common.bgo.BgoBaseController;
+import gov.ihs.cwf.ui.problemlist.util.Constants;
+
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
-import gov.ihs.cwf.common.bgo.BgoBaseController;
-import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.ui.problemlist.util.Constants;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Textbox;
@@ -40,7 +41,7 @@ public class AddNoteController extends BgoBaseController<String> {
     }
     
     public void onClick$btnOK() {
-        String text = BgoUtil.trimNarrative(txtNote.getValue());
+        String text = VistAUtil.trimNarrative(txtNote.getValue());
         
         if (text.length() < 3) {
             PromptDialog.showError("Note must be at least 3 characters in length.", "Note too Short");

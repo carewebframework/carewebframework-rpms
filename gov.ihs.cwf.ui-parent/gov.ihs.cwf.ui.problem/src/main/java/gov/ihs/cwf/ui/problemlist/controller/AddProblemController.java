@@ -19,13 +19,8 @@ import gov.ihs.cwf.common.bgo.BgoConstants;
 import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.common.bgo.ICDLookupController;
 import gov.ihs.cwf.common.bgo.Params;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.ICD9Concept;
-import gov.ihs.cwf.domain.Institution;
-import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.domain.Problem;
 import gov.ihs.cwf.domain.ProblemNote;
-import gov.ihs.cwf.mbroker.FMDate;
 import gov.ihs.cwf.ui.problemlist.util.Constants;
 
 import org.apache.commons.lang.StringUtils;
@@ -41,6 +36,12 @@ import org.carewebframework.ui.icons.IconUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.ICD9Concept;
+import org.carewebframework.vista.api.domain.Institution;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.mbroker.FMDate;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -206,7 +207,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
     }
     
     private boolean deleteNote(ProblemNote pn) {
-        String s = BgoUtil.concatParams(problem.getDomainId(), pn.getFacility().getDomainId(), pn.getDomainId());
+        String s = VistAUtil.concatParams(problem.getDomainId(), pn.getFacility().getDomainId(), pn.getDomainId());
         s = getBroker().callRPC("BGOPRBN DEL", s);
         return !BgoUtil.errorCheck(s);
     }
@@ -218,8 +219,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
      * @return True if successful.
      */
     private boolean addNote(ProblemNote pn) {
-        String s = BgoUtil
-                .concatParams(problem.getDomainId(), null, pn.getFacility().getDomainId(), null, pn.getNarrative());
+        String s = VistAUtil.concatParams(problem.getDomainId(), null, pn.getFacility().getDomainId(), null,
+            pn.getNarrative());
         s = getBroker().callRPC("BGOPRBN SET", s);
         
         if (BgoUtil.errorCheck(s)) {
@@ -271,7 +272,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
             return false;
         }
         
-        String txt = BgoUtil.trimNarrative(txtNarrative.getValue());
+        String txt = VistAUtil.trimNarrative(txtNarrative.getValue());
         if (txt.isEmpty()) {
             PromptDialog.showError(BgoConstants.TX_NO_NARR, BgoConstants.TC_NO_NARR);
             return false;
@@ -313,7 +314,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         Patient patient = PatientContext.getCurrentPatient();
-        String sParam = BgoUtil.concatParams(patient.getDomainId(), txtID.getValue(), problem.getFacility().getDomainId(),
+        String sParam = VistAUtil.concatParams(patient.getDomainId(), txtID.getValue(), problem.getFacility().getDomainId(),
             problem.getDomainId());
         String sRpc = getBroker().callRPC("BGOPROB CKID", sParam);
         
@@ -342,7 +343,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9] ^ Priority [10]
-        sParam = BgoUtil.concatParams(sParam, txtNarrative.getValue(), institution.getDomainId(),
+        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getDomainId(),
             datOnset.getValue() == null ? "@" : datOnset.getValue(), radPersonal.isChecked() ? "P"
                     : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I", patient.getDomainId(), problem
                     .getDomainId(), sNum, priority <= 0 ? "@" : priority);
@@ -355,7 +356,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
         problem.setDomainId(NumberUtils.toLong(sRpc));
         
         if (txtNotes.isVisible() && !StringUtils.isEmpty(txtNotes.getValue())) {
-            sParam = BgoUtil.concatParams(problem.getDomainId(), null, institution.getDomainId(), null, txtNotes.getValue());
+            sParam = VistAUtil.concatParams(problem.getDomainId(), null, institution.getDomainId(), null,
+                txtNotes.getValue());
             sRpc = getBroker().callRPC("BGOPRBN SET", sParam);
             
             if (BgoUtil.errorCheck(sRpc)) {

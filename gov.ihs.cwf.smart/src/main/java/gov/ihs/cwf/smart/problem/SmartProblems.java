@@ -13,15 +13,15 @@ import java.util.List;
 import java.util.Map;
 
 import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.domain.ICD9Concept;
 import gov.ihs.cwf.domain.Problem;
-import gov.ihs.cwf.smart.RPMSAPIBase;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.carewebframework.smart.rdf.RDFDescription;
 import org.carewebframework.smart.rdf.RDFDocument;
+import org.carewebframework.vista.api.domain.ICD9Concept;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.smart.AbstractAPIBase;
 
-public class SmartProblems extends RPMSAPIBase {
+public class SmartProblems extends AbstractAPIBase {
     
     private static final String ICD = "http://purl.bioontology.org/ontology/ICD-9/";
     
@@ -33,7 +33,7 @@ public class SmartProblems extends RPMSAPIBase {
     public void handleAPI(RDFDocument doc, Map<String, String> params) {
         String record_id = params.get("record_id");
         String owner = "/records/" + record_id;
-        List<String> data = RPMSUtil.getBrokerSession().callRPCList("BGOPROB GET", null, record_id);
+        List<String> data = VistAUtil.getBrokerSession().callRPCList("BGOPROB GET", null, record_id);
         
         if (data != null && !data.isEmpty()) {
             BgoUtil.errorCheck(data);

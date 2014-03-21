@@ -12,7 +12,7 @@ package gov.ihs.cwf.ui.chat;
 import java.io.Serializable;
 import java.util.Date;
 
-import gov.ihs.cwf.mbroker.HODate;
+import org.carewebframework.vista.mbroker.HODate;
 
 import org.carewebframework.common.StrUtil;
 

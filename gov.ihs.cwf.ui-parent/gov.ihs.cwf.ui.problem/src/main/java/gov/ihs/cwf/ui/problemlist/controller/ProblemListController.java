@@ -17,13 +17,9 @@ import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.common.bgo.BrowserController;
 import gov.ihs.cwf.common.bgo.WebSearchController;
 import gov.ihs.cwf.context.EncounterContext.IEncounterContextEvent;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.Patient;
 import gov.ihs.cwf.domain.Problem;
-import gov.ihs.cwf.mbroker.BrokerSession.IAsyncRPCEvent;
 import gov.ihs.cwf.ui.problemlist.render.ProblemRenderer;
 import gov.ihs.cwf.ui.problemlist.util.ProblemFilter;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.Log;
@@ -41,6 +37,10 @@ import org.carewebframework.shell.plugins.PluginContainer;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.RowComparator;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.mbroker.BrokerSession.IAsyncRPCEvent;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -250,7 +250,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     
     private ProblemFilter getDefaultFilter() {
         if (defaultFilter == null) {
-            int i = NumberUtils.toInt((BgoUtil.getSysParam("BGO PL DEFAULT FILTER", "0", null)));
+            int i = NumberUtils.toInt((VistAUtil.getSysParam("BGO PL DEFAULT FILTER", "0", null)));
             defaultFilter = i < 0 || i >= ProblemFilter.values().length ? ProblemFilter.NONE : ProblemFilter.values()[i];
         }
         
@@ -263,7 +263,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         }
         
         if (filter != null) {
-            BgoUtil.setSysParam("BGO PL DEFAULT FILTER", Integer.toString(filter.ordinal()));
+            VistAUtil.setSysParam("BGO PL DEFAULT FILTER", Integer.toString(filter.ordinal()));
         }
     }
     
@@ -349,7 +349,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     
     private void abortAsync() {
         if (asyncHandle != 0) {
-            RPMSUtil.getBrokerSession().callRPCAbort(asyncHandle);
+            VistAUtil.getBrokerSession().callRPCAbort(asyncHandle);
             asyncHandle = 0;
         }
     }

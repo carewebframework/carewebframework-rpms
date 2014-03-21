@@ -10,8 +10,8 @@
 package gov.ihs.cwf.ui.context.encounter;
 
 import gov.ihs.cwf.context.ProviderUtil;
-import gov.ihs.cwf.domain.EncounterProvider;
-import gov.ihs.cwf.domain.Provider;
+import org.carewebframework.vista.api.domain.EncounterProvider;
+import org.carewebframework.vista.api.domain.Provider;
 
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.zk.AbstractListitemRenderer;

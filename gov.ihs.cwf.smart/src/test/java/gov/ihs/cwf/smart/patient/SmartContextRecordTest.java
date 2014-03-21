@@ -9,8 +9,8 @@
  */
 package gov.ihs.cwf.smart.patient;
 
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.Patient;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Patient;
 
 import org.carewebframework.smart.SmartContextBase;
 

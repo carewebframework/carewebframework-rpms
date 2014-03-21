@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import gov.ihs.cwf.mbroker.BrokerSession;
+import org.carewebframework.vista.mbroker.BrokerSession;
 
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;

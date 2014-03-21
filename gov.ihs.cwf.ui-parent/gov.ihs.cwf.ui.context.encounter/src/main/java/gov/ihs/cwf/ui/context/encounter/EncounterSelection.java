@@ -18,15 +18,15 @@ import java.util.Set;
 import gov.ihs.cwf.context.EncounterContext;
 import gov.ihs.cwf.context.EncounterUtil;
 import gov.ihs.cwf.context.LocationContext;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.DomainObjectFactory;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Location;
-import gov.ihs.cwf.domain.Patient;
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.property.Property;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.DomainObjectFactory;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.Location;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.api.property.Property;
 import gov.ihs.cwf.ui.context.location.LocationSelection;
-import gov.ihs.cwf.util.RPMSUtil;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -215,7 +215,7 @@ public class EncounterSelection extends Panel implements PatientContext.IPatient
         }
         
         if (hasFlag(flags, EncounterFlag.PROVIDER)
-                && !RPMSUtil.getBrokerSession().callRPCBool("BEHOUSCX HASKEYS", "PROVIDER",
+                && !VistAUtil.getBrokerSession().callRPCBool("BEHOUSCX HASKEYS", "PROVIDER",
                     encounter.getEncounterProvider().getCurrentProvider().getDomainId())) {
             return Constants.TX_NO_KEY;
         }
@@ -246,7 +246,7 @@ public class EncounterSelection extends Panel implements PatientContext.IPatient
         lstOutpatient.setItemRenderer(encounterRenderer);
         rngDateRange.getItemAtIndex(0).setLabel("Default Date Range");
         rngDateRange.setSelectedIndex(0);
-        broker = RPMSUtil.getBrokerSession();
+        broker = VistAUtil.getBrokerSession();
         setProviderSelectionDialog(tabInpatient, incInpatient);
         setProviderSelectionDialog(tabOutpatient, incOutpatient);
         setProviderSelectionDialog(tabNew, incNew);

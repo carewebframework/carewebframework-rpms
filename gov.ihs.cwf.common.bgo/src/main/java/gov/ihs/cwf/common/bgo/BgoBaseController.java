@@ -11,8 +11,8 @@ package gov.ihs.cwf.common.bgo;
 
 import java.util.Iterator;
 
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.util.RPMSUtil;
+import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.carewebframework.ui.FrameworkController;
 
@@ -59,7 +59,7 @@ public class BgoBaseController<T> extends FrameworkController {
     
     public BrokerSession getBroker() {
         if (broker == null) {
-            broker = RPMSUtil.getBrokerSession();
+            broker = VistAUtil.getBrokerSession();
         }
         
         return broker;

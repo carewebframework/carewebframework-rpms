@@ -15,7 +15,7 @@ import static org.carewebframework.common.StrUtil.split;
 
 import java.util.List;
 
-import gov.ihs.cwf.ui.common.CoverSheetBase;
+import org.carewebframework.vista.ui.common.CoverSheetBase;
 
 import org.zkoss.zul.Radio;
 import org.zkoss.zul.Radiogroup;

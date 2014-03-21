@@ -19,9 +19,9 @@ import org.carewebframework.api.context.ISharedContext;
 import org.carewebframework.api.context.ManagedContext;
 import org.carewebframework.common.StrUtil;
 
-import gov.ihs.cwf.domain.DomainObjectFactory;
-import gov.ihs.cwf.domain.Location;
-import gov.ihs.cwf.property.Property;
+import org.carewebframework.vista.api.domain.DomainObjectFactory;
+import org.carewebframework.vista.api.domain.Location;
+import org.carewebframework.vista.api.property.Property;
 
 /**
  * Wrapper for shared user location context.

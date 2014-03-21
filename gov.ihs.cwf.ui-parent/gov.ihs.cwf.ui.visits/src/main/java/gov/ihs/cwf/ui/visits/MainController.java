@@ -14,10 +14,9 @@ import static org.carewebframework.common.StrUtil.split;
 
 import java.util.List;
 
-import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.ui.common.CoverSheetBase;
-
 import org.carewebframework.api.event.IGenericEvent;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.ui.common.CoverSheetBase;
 
 /**
  * Controller for visit/appointment cover sheet.
@@ -66,7 +65,7 @@ public class MainController extends CoverSheetBase<String> {
         
         if (!pcs[0].isEmpty()) {
             columns.add(pcs[1]);
-            columns.add(BgoUtil.normalizeDate(pcs[2]));
+            columns.add(VistAUtil.normalizeDate(pcs[2]));
             columns.add(pcs[3]);
         }
     }

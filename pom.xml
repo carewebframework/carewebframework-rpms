@@ -37,9 +37,9 @@
 	</licenses>
 	<properties>
 		<scm.parent>carewebframework-rpms</scm.parent>
+		<org.carewebframework.vista.version>1.0.0-SNAPSHOT</org.carewebframework.vista.version>
 	</properties>
 	<modules>
-		<module>gov.ihs.cwf.mbroker</module>
 		<module>gov.ihs.cwf.api-parent</module>
 		<module>gov.ihs.cwf.security-parent</module>
 		<module>gov.ihs.cwf.common.bgo</module>
@@ -61,26 +61,26 @@
 				<version>${org.carewebframework.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>gov.ihs.cwf</groupId>
-				<artifactId>gov.ihs.cwf.api.core</artifactId>
-				<version>${project.version}</version>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.vista.api.core</artifactId>
+				<version>${org.carewebframework.vista.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>gov.ihs.cwf</groupId>
-				<artifactId>gov.ihs.cwf.api.core</artifactId>
-				<version>${project.version}</version>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.vista.api.core</artifactId>
+				<version>${org.carewebframework.vista.version}</version>
 				<type>test-jar</type>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>gov.ihs.cwf</groupId>
-				<artifactId>gov.ihs.cwf.ui.core</artifactId>
-				<version>${project.version}</version>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.vista.ui.core</artifactId>
+				<version>${org.carewebframework.vista.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>gov.ihs.cwf</groupId>
-				<artifactId>gov.ihs.cwf.mbroker</artifactId>
-				<version>${project.version}</version>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.vista.mbroker</artifactId>
+				<version>${org.carewebframework.vista.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>gov.ihs.cwf</groupId>

@@ -10,9 +10,9 @@
 package gov.ihs.cwf.ui.context.encounter;
 
 import gov.ihs.cwf.context.EncounterContext;
-import gov.ihs.cwf.context.PatientContext;
-import gov.ihs.cwf.domain.Encounter;
-import gov.ihs.cwf.domain.Provider;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.Provider;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;

@@ -10,7 +10,7 @@
 	<packaging>war</packaging>
 	<name>CareWeb-GOLDB</name>
 	<properties>
-		<gov.ihs.cwf.security.artifact>gov.ihs.cwf.security.impl</gov.ihs.cwf.security.artifact>
+		<org.carewebframework.vista.security.artifact>org.carewebframework.vista.security.impl</org.carewebframework.vista.security.artifact>
 	</properties>
 	<build>
 		<plugins>
@@ -70,6 +70,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.ui.chat</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.cal.ui.patientselection.v1</artifactId>
 			<version>${org.carewebframework.version}</version>
 		</dependency>
@@ -90,14 +95,14 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.alerts</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.alerts</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.allergies</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.allergies</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
@@ -105,29 +110,29 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.consultorders</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.consultorders</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.crises</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.crises</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.cwad</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.cwad</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.esig</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.esig</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.laborders</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.laborders</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
@@ -135,9 +140,9 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.notification</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.notification</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
@@ -145,9 +150,9 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.settings</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.settings</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
@@ -161,15 +166,15 @@
 		</dependency>
 		<!-- RPMS Extensions -->
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.api.patientlist</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.api.patientlist</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<!-- Security -->
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>${gov.ihs.cwf.security.artifact}</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>${org.carewebframework.vista.security.artifact}</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>

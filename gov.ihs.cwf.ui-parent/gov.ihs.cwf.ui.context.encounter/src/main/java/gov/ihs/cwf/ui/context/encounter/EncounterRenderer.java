@@ -9,7 +9,7 @@
  */
 package gov.ihs.cwf.ui.context.encounter;
 
-import gov.ihs.cwf.domain.Encounter;
+import org.carewebframework.vista.api.domain.Encounter;
 
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.zk.AbstractListitemRenderer;

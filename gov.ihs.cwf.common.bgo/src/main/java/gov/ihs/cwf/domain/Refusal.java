@@ -9,14 +9,15 @@
  */
 package gov.ihs.cwf.domain;
 
-import gov.ihs.cwf.mbroker.FMDate;
-
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.vista.api.domain.Concept;
+import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.vista.mbroker.FMDate;
 
 public class Refusal extends DomainObject {
     

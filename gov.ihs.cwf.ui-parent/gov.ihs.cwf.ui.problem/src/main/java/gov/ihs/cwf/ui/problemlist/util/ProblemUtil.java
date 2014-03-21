@@ -12,6 +12,7 @@ package gov.ihs.cwf.ui.problemlist.util;
 import gov.ihs.cwf.domain.Problem;
 
 public class ProblemUtil {
+    
     /**
      * Returns the problem status for display.
      * 
@@ -21,12 +22,13 @@ public class ProblemUtil {
     public static String getStatus(Problem problem) {
         String cls = problem.getProblemClass();
         String status = problem.getStatus();
-        return "P".equals(cls) ? "Personal History" : "F".equals(cls) ? "Family History"
-                : "A".equals(status) ? "Active" : "Inactive";
+        return "P".equals(cls) ? "Personal History" : "F".equals(cls) ? "Family History" : "A".equals(status) ? "Active"
+                : "Inactive";
     }
     
     /**
      * Enforces static class.
      */
-    private ProblemUtil() {};
+    private ProblemUtil() {
+    };
 }

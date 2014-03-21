@@ -13,6 +13,8 @@ import java.util.List;
 
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
 
+import org.carewebframework.vista.api.util.VistAUtil;
+
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Radio;
@@ -68,7 +70,7 @@ public class CPTLookupController extends LookupController {
     
     @Override
     protected List<String> executeRPC(String searchText) {
-        String params = BgoUtil.concatParams(lookupParams.fileNum, searchText, lookupParams.from, lookupParams.direction,
+        String params = VistAUtil.concatParams(lookupParams.fileNum, searchText, lookupParams.from, lookupParams.direction,
             lookupParams.maxResults, lookupParams.xref, screen, lookupParams.all, lookupParams.fields);
         return broker.callRPCList(lookupParams.rpc, null, params);
     }

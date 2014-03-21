@@ -11,8 +11,8 @@ package gov.ihs.cwf.ui.anticoag;
 
 import java.util.List;
 
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.mbroker.FMDate;
+import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.mbroker.FMDate;
 
 import org.carewebframework.api.domain.IDomainObject;
 import org.carewebframework.cal.api.context.PatientContext;

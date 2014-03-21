@@ -10,7 +10,7 @@
 	<packaging>war</packaging>
 	<name>TestHarness</name>
 	<properties>
-		<gov.ihs.cwf.security.artifact>gov.ihs.cwf.security.impl</gov.ihs.cwf.security.artifact>
+		<org.carewebframework.vista.security.artifact>org.carewebframework.vista.security.impl</org.carewebframework.vista.security.artifact>
 	</properties>
 	<build>
 		<plugins>
@@ -57,19 +57,19 @@
 		</dependency>
 		<!-- RPMS Plugins -->
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.core</artifactId>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.api.patientlist</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.api.patientlist</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<!-- Security -->
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>${gov.ihs.cwf.security.artifact}</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>${org.carewebframework.vista.security.artifact}</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>

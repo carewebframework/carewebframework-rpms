@@ -9,19 +9,15 @@
  */
 package gov.ihs.cwf.common.bgo;
 
-import java.util.Date;
 import java.util.List;
-
-import gov.ihs.cwf.mbroker.FMDate;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.FrameworkUtil;
 import org.carewebframework.api.event.EventUtil;
-import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.zk.PromptDialog;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 public class BgoUtil {
     
@@ -39,7 +35,7 @@ public class BgoUtil {
         
         if (reason == null) {
             String s = "PROVIDER|BGOZ CAC|BGOZ VIEW ONLY|" + sFunctionKey + StrUtil.U + sDisableParam;
-            s = RPMSUtil.getBrokerSession().callRPC("BGOUTL CHKSEC", s);
+            s = VistAUtil.getBrokerSession().callRPC("BGOUTL CHKSEC", s);
             String[] sKeys = StrUtil.split(StrUtil.piece(s, StrUtil.U), "|", 4);
             String[] sParams = StrUtil.split(StrUtil.piece(s, StrUtil.U, 2), "~", 2);
             boolean isProvider = "1".equals(sKeys[0]);
@@ -82,7 +78,7 @@ public class BgoUtil {
             PromptDialog.showError(reason, BgoConstants.TX_ERR_PERMISSIONS);
         }
         
-        return true;
+        return false;
     }
     
     /**
@@ -138,72 +134,6 @@ public class BgoUtil {
     public static long errorCode(String value) {
         long i = value == null ? 0 : NumberUtils.toLong(StrUtil.piece(value, StrUtil.U));
         return i < 0 ? -i : 0;
-    }
-    
-    public static String normalizeDate(String value) {
-        return normalizeDate(value, false);
-    }
-    
-    public static String normalizeDate(String value, boolean includeTime) {
-        Date date = parseDate(value);
-        return date == null ? "" : DateUtil.formatDate(date, false, !includeTime);
-    }
-    
-    public static Date parseDate(String value) {
-        if (value == null || value.isEmpty()) {
-            return null;
-        }
-        
-        if (NumberUtils.isNumber(value)) {
-            return new FMDate(value);
-        }
-        
-        return DateUtil.parseDate(value);
-    }
-    
-    public static String trimNarrative(String narrative) {
-        return StrUtil.xlate(narrative == null ? "" : narrative, "^\n\r", "   ").trim();
-    }
-    
-    public static String getSysParam(String param, String dflt, String instance) {
-        String s = RPMSUtil.getBrokerSession().callRPC("CIAVMRPC GETPAR", param, "", instance == null ? "1" : instance);
-        return s.isEmpty() ? dflt : s;
-    }
-    
-    public static boolean setSysParam(String param, String value) {
-        String s = StrUtil.piece(RPMSUtil.getBrokerSession().callRPC("CIAVMRPC SETPAR", param, value, "USR"), StrUtil.U, 2);
-        
-        if (!s.isEmpty()) {
-            PromptDialog.showError(s, "Error Saving Parameter");
-            return false;
-        }
-        
-        return true;
-    }
-    
-    /**
-     * Converts a parameter list into a ^-delimited string
-     * 
-     * @param params
-     * @return Concatenated list.
-     */
-    public static String concatParams(Object... params) {
-        StringBuilder sb = new StringBuilder();
-        boolean first = true;
-        
-        for (Object param : params) {
-            if (!first) {
-                sb.append(StrUtil.U);
-            } else {
-                first = false;
-            }
-            
-            if (param != null) {
-                sb.append(param);
-            }
-        }
-        
-        return sb.toString();
     }
     
     public static Params packageParams(Object... params) {

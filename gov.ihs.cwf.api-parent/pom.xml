@@ -9,9 +9,6 @@
 	<artifactId>gov.ihs.cwf.api-parent</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>gov.ihs.cwf.api.core</module>
 		<module>gov.ihs.cwf.api.context</module>
-		<module>gov.ihs.cwf.api.patientlist</module>
-		<module>gov.ihs.cwf.api.esig</module>
 	</modules>
 </project>

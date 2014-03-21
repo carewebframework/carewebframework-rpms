@@ -12,7 +12,9 @@ package gov.ihs.cwf.common.bgo;
 import java.util.List;
 
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
-import gov.ihs.cwf.context.PatientContext;
+
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Radio;
@@ -56,7 +58,7 @@ public class ICDLookupController extends LookupController {
             searchText = "*";
         }
         
-        String params = BgoUtil.concatParams(searchText, radLexicon.isChecked() ? "1" : "0", "", //m_sLookupDate Visit date
+        String params = VistAUtil.concatParams(searchText, radLexicon.isChecked() ? "1" : "0", "", //m_sLookupDate Visit date
             PatientContext.getCurrentPatient().getGender(), "", //IIf(m_bEcodeMode, 2, IIf(m_bAllowEcode, 1, ""))
             "" // CInt(m_bDisplayShortText) ' VCodes
         );

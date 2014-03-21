@@ -10,12 +10,18 @@
 package gov.ihs.cwf.domain;
 
 import gov.ihs.cwf.common.bgo.PCC;
-import gov.ihs.cwf.mbroker.FMDate;
 
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.vista.api.domain.Concept;
+import org.carewebframework.vista.api.domain.DomainObjectFactory;
+import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.vista.api.domain.EncounterRelated;
+import org.carewebframework.vista.api.domain.Location;
+import org.carewebframework.vista.api.domain.User;
+import org.carewebframework.vista.mbroker.FMDate;
 
 public class SkinTest extends EncounterRelated {
     

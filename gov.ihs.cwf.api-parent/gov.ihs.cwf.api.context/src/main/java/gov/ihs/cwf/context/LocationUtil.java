@@ -9,7 +9,7 @@
  */
 package gov.ihs.cwf.context;
 
-import gov.ihs.cwf.domain.Location;
+import org.carewebframework.vista.api.domain.Location;
 
 import java.util.List;
 

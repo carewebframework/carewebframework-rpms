@@ -8,6 +8,10 @@
 	<artifactId>gov.ihs.cwf.smart.api</artifactId>
 	<dependencies>
 		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.api.core</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.api.context</artifactId>
 		</dependency>
@@ -17,8 +21,8 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.smart.api</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<artifactId>org.carewebframework.vista.smart.api</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 	</dependencies>
 </project>

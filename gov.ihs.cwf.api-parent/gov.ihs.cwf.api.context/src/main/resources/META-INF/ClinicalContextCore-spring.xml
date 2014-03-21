@@ -8,31 +8,14 @@
 		http://www.carewebframework.org/schema/spring
 		http://www.carewebframework.org/schema/spring/spring-extensions.xsd">
 
-	<beans profile="root">
-
-		<bean id="patientFactory" class="gov.ihs.cwf.domain.DomainObjectFactory">
-			<constructor-arg value="gov.ihs.cwf.domain.Patient" />
-		</bean>
-
-		<bean id="patientSearchEngine" class="gov.ihs.cwf.domain.PatientSearchEngine" />
-
-	</beans>
-
 	<beans profile="desktop">
 
 		<!-- Shared clinical contexts. -->
-
-		<bean id="patientContext" parent="managedContext"
-			class="gov.ihs.cwf.context.PatientContext" cwf:override="always">
-		</bean>
-
+		<!--
 		<bean id="encounterContext" parent="managedContext"
 			class="gov.ihs.cwf.context.EncounterContext">
 		</bean>
-
-		<bean id="locationContext" parent="managedContext"
-			class="gov.ihs.cwf.context.LocationContext" depends-on="userContext">
-		</bean>
+		-->
 
 	</beans>
 </beans>

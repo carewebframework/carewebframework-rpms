@@ -13,14 +13,14 @@ import java.util.List;
 
 import gov.ihs.cwf.common.bgo.LookupParams.ColumnControl;
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
-import gov.ihs.cwf.mbroker.BrokerSession;
-import gov.ihs.cwf.util.RPMSUtil;
 
 import org.apache.commons.lang.WordUtils;
 
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.mbroker.BrokerSession;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Events;
@@ -58,7 +58,7 @@ public class LookupController extends BgoBaseController<String> {
     
     protected String mode;
     
-    protected final BrokerSession broker = RPMSUtil.getBrokerSession();
+    protected final BrokerSession broker = VistAUtil.getBrokerSession();
     
     public static String execute(Table refTable) {
         return execute(refTable, null);
@@ -158,7 +158,7 @@ public class LookupController extends BgoBaseController<String> {
     }
     
     protected List<String> executeRPC(String searchText) {
-        String params = BgoUtil.concatParams(lookupParams.fileNum, searchText, lookupParams.from, lookupParams.direction,
+        String params = VistAUtil.concatParams(lookupParams.fileNum, searchText, lookupParams.from, lookupParams.direction,
             lookupParams.maxResults, lookupParams.xref, screen, lookupParams.all, lookupParams.fields);
         return broker.callRPCList(lookupParams.rpc, null, params);
     }

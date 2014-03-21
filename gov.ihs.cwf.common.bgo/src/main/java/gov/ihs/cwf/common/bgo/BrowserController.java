@@ -13,13 +13,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import gov.ihs.cwf.domain.Concept;
-
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.zk.ListUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.domain.Concept;
+import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -166,7 +166,7 @@ public class BrowserController extends BgoBaseController<Object> {
         
         // IEN to delete [1] ^ Reference to delete [2] ^ Link Type [3]
         String[] pcs = (String[]) item.getValue();
-        String s = BgoUtil.concatParams(pcs[2], pcs[3], LinkType.fromConcept(concept));
+        String s = VistAUtil.concatParams(pcs[2], pcs[3], LinkType.fromConcept(concept));
         s = getBroker().callRPC("BGOWEB DEL", s);
         
         if (BgoUtil.errorCheck(s)) {
@@ -256,7 +256,7 @@ public class BrowserController extends BgoBaseController<Object> {
             return;
         }
         
-        String param = BgoUtil.concatParams(linkType, concept.getDomainId());
+        String param = VistAUtil.concatParams(linkType, concept.getDomainId());
         List<String> links = getBroker().callRPCList("BGOWEB GET", null, param);
         
         for (String link : links) {
