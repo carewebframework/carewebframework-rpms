@@ -41,7 +41,6 @@
 	</properties>
 	<modules>
 		<module>gov.ihs.cwf.api-parent</module>
-		<module>gov.ihs.cwf.security-parent</module>
 		<module>gov.ihs.cwf.common.bgo</module>
 		<module>gov.ihs.cwf.ui-parent</module>
 		<module>gov.ihs.cwf.smart</module>
