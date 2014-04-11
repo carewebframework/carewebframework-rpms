@@ -15,12 +15,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import org.carewebframework.vista.api.context.PatientContext;
-import org.carewebframework.vista.api.domain.Patient;
-import org.carewebframework.vista.mbroker.BrokerSession;
-import org.carewebframework.vista.mbroker.FMDate;
-import org.carewebframework.vista.api.util.VistAUtil;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.WordUtils;
 import org.apache.commons.lang.time.DateUtils;
@@ -36,8 +30,14 @@ import org.carewebframework.ui.highcharts.Chart;
 import org.carewebframework.ui.highcharts.DashStyle;
 import org.carewebframework.ui.highcharts.DataPoint;
 import org.carewebframework.ui.highcharts.Series;
+import org.carewebframework.ui.highcharts.ZoomType;
 import org.carewebframework.ui.zk.DateRangePicker;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.vista.api.domain.Patient;
+import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.mbroker.FMDate;
 
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Checkbox;
@@ -525,7 +525,7 @@ public class Graph extends Div implements PatientContext.IPatientContextEvent, I
     }
     
     public void onCheck$chkZoom() {
-        chart.options.chart.zoomType = chkZoom.isChecked() ? "xy" : null;
+        chart.options.chart.zoomType = chkZoom.isChecked() ? ZoomType.xy : null;
         chartData();
     }
     
