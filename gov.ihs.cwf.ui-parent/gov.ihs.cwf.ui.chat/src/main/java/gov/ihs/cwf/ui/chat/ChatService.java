@@ -14,8 +14,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.carewebframework.vista.mbroker.BrokerSession;
-
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.IEventManager;
@@ -26,6 +24,7 @@ import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.action.ActionRegistry;
 import org.carewebframework.ui.zk.MessageWindow;
 import org.carewebframework.ui.zk.MessageWindow.MessageInfo;
+import org.carewebframework.vista.mbroker.BrokerSession;
 
 /**
  * Chat service.
@@ -72,8 +71,8 @@ public class ChatService implements IGenericEvent<String> {
     public void init() {
         user = UserContext.getActiveUser();
         doSubscribe(true);
-        ActionRegistry.addLocalAction("@vcchat.action.create.session", "zscript:" + ChatService.class.getName()
-                + ".getInstance().createSession();");
+        ActionRegistry.register(false, "vcchat.create.session", "@vcchat.action.create.session", "zscript:"
+                + ChatService.class.getName() + ".getInstance().createSession();");
     }
     
     /**
