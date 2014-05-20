@@ -125,9 +125,9 @@
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.behvitals</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.vitals</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>

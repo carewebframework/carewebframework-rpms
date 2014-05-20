@@ -75,7 +75,7 @@
 								layout="50:1:false;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
 						<treepane label="Vitals">
-							<behVitalsGraph />
+							<vistaVitalsDisplay />
 						</treepane>
 					</treeview>
 				</tabpane>
