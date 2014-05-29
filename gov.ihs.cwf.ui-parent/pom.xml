@@ -13,7 +13,6 @@
 		<module>gov.ihs.cwf.ui.context.encounter</module>
 		<module>gov.ihs.cwf.ui.medlist</module>
 		<module>gov.ihs.cwf.ui.visits</module>
-		<module>gov.ihs.cwf.ui.behvitals</module>
 		<module>gov.ihs.cwf.ui.problem</module>
 		<module>gov.ihs.cwf.ui.skintest</module>
 		<module>gov.ihs.cwf.ui.chat</module>
