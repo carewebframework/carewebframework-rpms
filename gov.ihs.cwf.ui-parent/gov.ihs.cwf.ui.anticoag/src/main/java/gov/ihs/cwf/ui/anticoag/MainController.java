@@ -1,8 +1,8 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
- * 
+ *
  * This Source Code Form is also subject to the terms of the Health-Related Additional
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
@@ -30,43 +30,43 @@ import org.zkoss.zul.Toolbar;
  * Controller for anticoagulation management.
  */
 public class MainController extends CoverSheetBase<AntiCoagRecord> implements IEncounterContextEvent {
-    
+
     private static final long serialVersionUID = 1L;
-    
+
     private Toolbar toolbar;
-    
+
     private Button btnEdit;
-    
+
     private Button btnAdd;
-    
+
     private Button btnDelete;
-    
+
     private boolean visitHasEntry;
-    
-    private long visitIEN;
-    
+
+    private String visitIEN;
+
     private String pccEvent;
-    
+
     private Encounter encounter;
-    
+
     private final IGenericEvent<String> pccListener = new IGenericEvent<String>() {
-        
+
         @Override
         public void eventCallback(String eventName, String eventData) {
             String[] pcs = eventData.split("\\^");
-            AntiCoagRecord record = findRecord(Long.parseLong(pcs[0]));
-            
+            AntiCoagRecord record = findRecord(pcs[0]);
+
             switch (Integer.parseInt(pcs[2])) {
                 case 0: // add
                     if (record == null) {
                         refresh();
                     }
                     break;
-                
+
                 case 1: // edit
                     refresh();
                     break;
-                
+
                 case 2: // delete
                     if (record != null) {
                         model.remove(record);
@@ -74,9 +74,9 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
                     break;
             }
         }
-        
+
     };
-    
+
     @Override
     protected void init() {
         setup("Anticoagulation Data", "", "BGOVCOAG GET", null, 1, "Indicated", "Visit Date", "INR Goal", "Min", "Max",
@@ -85,31 +85,31 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
         setIcon(ZKUtil.getResourcePath(MainController.class) + "main-icon.png");
         super.init();
     }
-    
+
     @Override
     public void refresh() {
         visitHasEntry = false;
         super.refresh();
         updateControls();
     }
-    
+
     @Override
     public void committed() {
         if (pccEvent != null) {
             getEventManager().unsubscribe(pccEvent, pccListener);
         }
-        
+
         encounter = EncounterContext.getCurrentEncounter();
-        visitIEN = encounter == null ? -1 : encounter.getDomainId();
+        visitIEN = encounter == null ? null : encounter.getDomainId();
         super.committed();
         IPatient patient = PatientContext.getActivePatient();
         pccEvent = patient == null ? null : "PCC." + patient.getDomainId() + ".ACG";
-        
+
         if (pccEvent != null) {
             getEventManager().subscribe(pccEvent, pccListener);
         }
     }
-    
+
     @Override
     protected void render(AntiCoagRecord record, List<Object> columns) {
         columns.add(record.getIndicated() ? "Yes" : "No"); // Indicated
@@ -125,18 +125,18 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
         columns.add(record.getComment()); // Comment
         visitHasEntry |= record.getVisitIEN() != null && visitIEN == record.getVisitIEN();
     }
-    
+
     @Override
     protected void renderItem(Listitem item, AntiCoagRecord record) {
         super.renderItem(item, record);
         item.addForward(Events.ON_DOUBLE_CLICK, btnEdit, Events.ON_CLICK);
     }
-    
+
     @Override
     protected AntiCoagRecord parseData(String data) {
         return new AntiCoagRecord(data);
     }
-    
+
     private void updateControls() {
         btnAdd.setDisabled(encounter == null || encounter.isLocked());
         AntiCoagRecord record = getSelectedValue();
@@ -144,47 +144,47 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
         btnEdit.setDisabled(isLocked);
         btnDelete.setDisabled(isLocked);
     }
-    
+
     public void onClick$btnAdd() {
         AddEditController.show(null);
     }
-    
+
     public void onClick$btnEdit() {
         if (!btnEdit.isDisabled()) {
             AntiCoagRecord oldRecord = getSelectedValue();
             AntiCoagRecord newRecord = AddEditController.show(oldRecord);
-            
+
             if (newRecord != null) {
                 model.remove(oldRecord);
                 model.add(newRecord);
             }
         }
     }
-    
+
     public void onClick$btnDelete() {
         Listitem item = getSelectedItem();
-        
+
         if (DeleteController.show(getSelectedValue())) {
             item.setSelected(false);
             item.setVisible(false);
             updateControls();
         }
     }
-    
-    private AntiCoagRecord findRecord(long ien) {
+
+    private AntiCoagRecord findRecord(String ien) {
         for (AntiCoagRecord record : model) {
-            if (record.getDomainId() == ien) {
+            if (record.getDomainId().equals(ien)) {
                 return record;
             }
         }
-        
+
         return null;
     }
-    
+
     @Override
     public void itemSelected(Listitem item) {
         super.itemSelected(item);
         updateControls();
     }
-    
+
 }
