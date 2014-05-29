@@ -4,7 +4,7 @@
     <!-- Appenders -->
     <appender class="org.apache.log4j.DailyRollingFileAppender" name="exc">
         <param value="'.'yyyy-MM-dd" name="DatePattern"/>
-        <param value="${org.carewebframework.dir.logging}/log/CareWebTestHarness-exception.log" name="File"/>
+        <param value="${org.carewebframework.dir.logging}/CareWebTestHarness-exception.log" name="File"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param value="%d{yyyy-MM-dd HH:mm:ss.SSS} %p %t %c - %m%n" name="ConversionPattern"/>
         </layout>
