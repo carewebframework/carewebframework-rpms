@@ -1,6 +1,6 @@
 <layout title="CareWeb - GOLDB">
 	<_menubar>
-		<menuitem action="@chat.action.create.session" label="Chat..."/>
+		<menuitem action="chat.create.session" label="Chat..."/>
 	</_menubar>
 	<_toolbar>
 		<vistaCWAD allowPrint="true" popupFlags="true" />
