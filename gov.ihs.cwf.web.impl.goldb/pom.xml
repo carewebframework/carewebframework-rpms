@@ -126,6 +126,11 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.documents</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.vitals</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>

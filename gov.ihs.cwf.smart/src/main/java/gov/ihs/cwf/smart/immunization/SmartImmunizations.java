@@ -1,8 +1,8 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
- * 
+ *
  * This Source Code Form is also subject to the terms of the Health-Related Additional
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
@@ -20,9 +20,9 @@ import gov.ihs.cwf.domain.Refusal;
 import org.carewebframework.smart.rdf.RDFDescription;
 import org.carewebframework.smart.rdf.RDFDocument;
 import org.carewebframework.vista.api.util.VistAUtil;
-import org.carewebframework.vista.smart.AbstractAPIBase;
+import org.carewebframework.vista.smart.SmartRDFAPI;
 
-public class SmartImmunizations extends AbstractAPIBase {
+public class SmartImmunizations extends SmartRDFAPI {
     
     public SmartImmunizations() {
         super("/records/{record_id}/immunizations", "Immunizations");
@@ -64,7 +64,7 @@ public class SmartImmunizations extends AbstractAPIBase {
                 <administrationStatus rdf:nodeID="node16rk1fgdvx351121"/>
                 <refusalReason rdf:nodeID="node16rk1fgdvx351119"/>
             </rdf:Description>
-        */
+         */
         String about = owner + "/immunizations/" + imm.getDomainId();
         RDFDescription dx = doc.addDescription(about, "#Immunization");
         RDFDescription pn;

@@ -47,6 +47,9 @@
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:100%" showDetailPane="false" />
 						</treepane>
+						<treepane label="Documents">
+							<vistaDocuments />
+						</treepane>
 						<treepane label="Medication List">
 							<behMedList allowPrint="false" caption="Medications"
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
