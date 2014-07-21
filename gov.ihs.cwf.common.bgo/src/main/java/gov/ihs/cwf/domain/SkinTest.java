@@ -13,46 +13,47 @@ import gov.ihs.cwf.common.bgo.PCC;
 
 import org.apache.commons.lang.math.NumberUtils;
 
+import org.carewebframework.api.domain.DomainFactoryRegistry;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.vista.api.domain.Concept;
-import org.carewebframework.vista.api.domain.DomainObjectFactory;
-import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.fhir.model.resource.Encounter;
+import org.carewebframework.fhir.model.resource.Location;
+import org.carewebframework.fhir.model.resource.Practitioner;
+import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.vista.api.domain.EncounterRelated;
-import org.carewebframework.vista.api.domain.Location;
-import org.carewebframework.vista.api.domain.User;
+import org.carewebframework.vista.api.domain.EncounterUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class SkinTest extends EncounterRelated {
-
+    
     private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("SkinTest", SkinTest.class);
     }
-
+    
     private FMDate eventDate;
-
+    
     private FMDate readDate;
-
-    private User reader;
-
-    private User provider;
-
+    
+    private Practitioner reader;
+    
+    private Practitioner provider;
+    
     private Location location;
-
+    
     private String result;
-
+    
     private String reading;
-
-    private Concept test;
-
+    
+    private Coding test;
+    
     private String age;
-
+    
     public SkinTest() {
         super();
     }
-
+    
     /**
      * Temporary constructor to create a problem from serialized form (will move to json).
      *
@@ -69,111 +70,113 @@ public class SkinTest extends EncounterRelated {
         String[] pcs = StrUtil.split(value, StrUtil.U, 17);
         setDomainId(pcs[2]);
         String loc = pcs[3];
-
+        
         if (loc.isEmpty()) {
             location = PCC.parseLocation(pcs[14]);
         } else {
-            location = new Location(loc, null, null);
+            location = new Location();
+            location.setNameSimple(loc);
         }
-
+        
         result = pcs[4]; // SetProperCase?
-
+        
         if (result.isEmpty()) {
             result = "Pending";
         } else {
             readDate = PCC.parseDate(pcs[6]);
         }
-
-        test = new Concept("SKIN TEST");
-        test.setCode(pcs[7]);
+        
+        test = new Coding();
+        test.setSystemSimple("SKIN TEST");
+        test.setCodeSimple(pcs[7]);
         test.setDomainId(pcs[8]);
-        test.setShortDescription(pcs[7]);
+        test.setDisplaySimple(pcs[7]);
         age = pcs[9];
-        provider = PCC.parseUser(pcs[10]);
-        reader = PCC.parseUser(pcs[11]);
+        provider = PCC.parsePractitioner(pcs[10]);
+        reader = PCC.parsePractitioner(pcs[11]);
         long visitId = NumberUtils.toLong(pcs[12]);
-        setEncounter(visitId > 0 ? DomainObjectFactory.get(Encounter.class, visitId) : null);
+        setEncounter(visitId > 0 ? DomainFactoryRegistry.fetchObject(Encounter.class, pcs[12]) : null);
         eventDate = PCC.parseDate(pcs[16].isEmpty() ? pcs[1] : pcs[16]);
-
-        if (getEncounter() != null && "E".equals(getEncounter().getServiceCategory()) && "0".equals(reading)) {
+        
+        if (getEncounter() != null && "E".equals(EncounterUtil.getServiceCategory(getEncounter())) && "0".equals(reading)) {
             reading = "";
         }
     }
-
+    
     public FMDate getEventDate() {
         return eventDate;
     }
-
+    
     protected void setEntryDate(FMDate eventDate) {
         this.eventDate = eventDate;
     }
-
+    
     public FMDate getReadDate() {
         return readDate;
     }
-
+    
     public void setReadDate(FMDate readDate) {
         this.readDate = readDate;
     }
-
-    public User getReader() {
+    
+    public Practitioner getReader() {
         return reader;
     }
-
-    public void setReader(User reader) {
+    
+    public void setReader(Practitioner reader) {
         this.reader = reader;
     }
-
-    public User getProvider() {
+    
+    public Practitioner getProvider() {
         return provider;
     }
-
-    public void setProvider(User provider) {
+    
+    public void setProvider(Practitioner provider) {
         this.provider = provider;
     }
-
+    
     public Location getLocation() {
         return location;
     }
-
+    
     public void setLocation(Location location) {
         this.location = location;
     }
-
+    
     public String getResult() {
         return result;
     }
-
+    
     public void setResult(String result) {
         this.result = result;
     }
-
+    
     public String getReading() {
         return reading;
     }
-
+    
     public void setReading(String reading) {
         this.reading = reading;
     }
-
-    public Concept getTest() {
+    
+    public Coding getTest() {
         return test;
     }
-
-    public void setTest(Concept test) {
+    
+    public void setTest(Coding test) {
         this.test = test;
     }
-
+    
     public String getAge() {
         return age;
     }
-
+    
     public void setAge(String age) {
         this.age = age;
     }
-
+    
     public void setEventDate(FMDate eventDate) {
         this.eventDate = eventDate;
     }
-
+    
 }

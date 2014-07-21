@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -14,11 +14,11 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.ui.zk.ListUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
-import org.carewebframework.vista.api.domain.Concept;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
@@ -61,11 +61,11 @@ public class BrowserController extends BgoBaseController<Object> {
     
     private Caption caption;
     
-    private Concept concept;
+    private Coding concept;
     
     private boolean useIframe;
     
-    public static void execute(String searchText, String searchSite, Concept concept, boolean allowAddressSearch) {
+    public static void execute(String searchText, String searchSite, Coding concept, boolean allowAddressSearch) {
         Params args = BgoUtil.packageParams(searchText, searchSite, concept, allowAddressSearch);
         PopupDialog.popup(DIALOG, args, true, true, true);
     }
@@ -75,7 +75,7 @@ public class BrowserController extends BgoBaseController<Object> {
         super.doAfterCompose(comp);
         String searchText = (String) arg.get(0);
         String searchSite = (String) arg.get(1);
-        concept = (Concept) arg.get(2);
+        concept = (Coding) arg.get(2);
         boolean allowAddressSearch = (Boolean) arg.get(3);
         loadSites();
         searchText = searchText == null ? "" : searchText.trim();
@@ -86,7 +86,7 @@ public class BrowserController extends BgoBaseController<Object> {
         }
         
         if (concept != null) {
-            caption.setLabel("Reference Links for " + concept.getCode() + " - " + concept.getShortDescription());
+            caption.setLabel("Reference Links for " + concept.getCodeSimple() + " - " + concept.getDisplaySimple());
         }
         
         pnlHistory.setVisible(allowAddressSearch);
@@ -144,7 +144,7 @@ public class BrowserController extends BgoBaseController<Object> {
         End If
         End If
         LoadLinks
-        */
+         */
     }
     
     public void onClick$btnRemove() {

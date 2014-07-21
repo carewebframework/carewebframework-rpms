@@ -13,48 +13,48 @@ import gov.ihs.cwf.common.bgo.PCC;
 
 import org.apache.commons.lang.math.NumberUtils;
 
+import org.carewebframework.api.domain.DomainFactoryRegistry;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.vista.api.domain.Concept;
-import org.carewebframework.vista.api.domain.DomainObjectFactory;
-import org.carewebframework.vista.api.domain.Encounter;
+import org.carewebframework.fhir.model.resource.Encounter;
+import org.carewebframework.fhir.model.resource.Location;
+import org.carewebframework.fhir.model.resource.Practitioner;
+import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.vista.api.domain.EncounterRelated;
-import org.carewebframework.vista.api.domain.Location;
-import org.carewebframework.vista.api.domain.User;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Immunization extends EncounterRelated {
-
+    
     private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("Immunization", Immunization.class);
     }
-
+    
     private FMDate eventDate;
-
-    private User provider;
-
+    
+    private Practitioner provider;
+    
     private Location location;
-
+    
     private String lot;
-
+    
     private String reaction;
-
+    
     private String site;
-
+    
     private String volume;
-
-    private Concept immunization;
-
+    
+    private Coding immunization;
+    
     private String age;
-
+    
     private String cvx;
-
+    
     public Immunization() {
         super();
     }
-
+    
     /**
      * Temporary constructor to create an immunization from serialized form (will move to json).
      *
@@ -70,112 +70,114 @@ public class Immunization extends EncounterRelated {
     public Immunization(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 23);
         setDomainId(pcs[3]);
-        immunization = new Concept("IMMUNIZATION");
-        immunization.setCode(pcs[1]);
+        immunization = new Coding();
+        immunization.setSystemSimple("IMMUNIZATION");
+        immunization.setCodeSimple(pcs[1]);
         immunization.setDomainId(pcs[6]);
-        immunization.setShortDescription(pcs[1]);
-
+        immunization.setDisplaySimple(pcs[1]);
+        
         String loc = pcs[4];
-
+        
         if (loc.isEmpty()) {
             location = PCC.parseLocation(pcs[18]);
         } else {
-            location = new Location(loc, null, null);
+            location = new Location();
+            location.setNameSimple(loc);
         }
-
+        
         lot = pcs[7];
         reaction = pcs[8];
         site = pcs[13];
         volume = pcs[14];
         age = pcs[10];
-        provider = PCC.parseUser(pcs[12]);
+        provider = PCC.parsePractitioner(pcs[12]);
         long visitId = NumberUtils.toLong(pcs[15]);
-        setEncounter(visitId > 0 ? DomainObjectFactory.get(Encounter.class, visitId) : null);
+        setEncounter(visitId > 0 ? DomainFactoryRegistry.fetchObject(Encounter.class, pcs[15]) : null);
         eventDate = PCC.parseDate(pcs[20].isEmpty() ? pcs[2] : pcs[20]);
     }
-
+    
     public FMDate getEventDate() {
         return eventDate;
     }
-
+    
     protected void setEntryDate(FMDate eventDate) {
         this.eventDate = eventDate;
     }
-
-    public User getProvider() {
+    
+    public Practitioner getProvider() {
         return provider;
     }
-
-    public void setProvider(User provider) {
+    
+    public void setProvider(Practitioner provider) {
         this.provider = provider;
     }
-
+    
     public Location getLocation() {
         return location;
     }
-
+    
     public void setLocation(Location location) {
         this.location = location;
     }
-
-    public Concept getImmunization() {
+    
+    public Coding getImmunization() {
         return immunization;
     }
-
-    public void setImmunization(Concept immunization) {
+    
+    public void setImmunization(Coding immunization) {
         this.immunization = immunization;
     }
-
+    
     public String getAge() {
         return age;
     }
-
+    
     public void setAge(String age) {
         this.age = age;
     }
-
+    
     public void setEventDate(FMDate eventDate) {
         this.eventDate = eventDate;
     }
-
+    
     public String getLot() {
         return lot;
     }
-
+    
     public void setLot(String lot) {
         this.lot = lot;
     }
-
+    
     public String getReaction() {
         return reaction;
     }
-
+    
     public void setReaction(String reaction) {
         this.reaction = reaction;
     }
-
+    
     public String getSite() {
         return site;
     }
-
+    
     public void setSite(String site) {
         this.site = site;
     }
-
+    
     public String getVolume() {
         return volume;
     }
-
+    
     public void setVolume(String volume) {
         this.volume = volume;
     }
-
+    
     public String getCvx() {
         return cvx;
     }
-
+    
     public void setCvx(String cvx) {
         this.cvx = cvx;
     }
-
+    
 }

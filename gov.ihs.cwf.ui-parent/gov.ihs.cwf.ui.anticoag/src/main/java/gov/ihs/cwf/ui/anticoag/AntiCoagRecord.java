@@ -22,50 +22,51 @@ import org.apache.commons.lang.BooleanUtils;
 import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
-import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.fhir.model.resource.Practitioner;
+import org.carewebframework.fhir.model.type.HumanName;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 /**
  * A single anticoagulation record.
  */
 public class AntiCoagRecord extends DomainObject {
-
+    
     private static final long serialVersionUID = 1L;
-
+    
     protected final static List<String> goalPresets = new ArrayList<String>();
-
+    
     protected final static List<String> durationPresets = new ArrayList<String>();
-
+    
     protected static Boolean initialized = Boolean.FALSE;
-
+    
     private String goalRange;
-
+    
     private Double goalMin;
-
+    
     private Double goalMax;
-
+    
     private String duration;
-
+    
     private Date startDate;
-
+    
     private Date endDate;
-
+    
     private Date visitDate;
-
+    
     private Date enteredDate;
-
+    
     private String visitCategory;
-
+    
     private String visitIEN;
-
+    
     private Boolean visitLocked;
-
-    private Provider provider;
-
+    
+    private Practitioner provider;
+    
     private String comment;
-
+    
     private Boolean indicated;
-
+    
     protected static void init(Service service) throws Exception {
         synchronized (initialized) {
             if (!initialized) {
@@ -75,17 +76,17 @@ public class AntiCoagRecord extends DomainObject {
             }
         }
     }
-
+    
     public AntiCoagRecord() {
-
+        
     }
-
+    
     /**
      * @param data <code>
      *    V IEN [1] ^ Indication [2] ^ Visit Date [3] ^ Goal [4] ^ Min [5] ^ Max [6] ^
-     *    Duration [7] ^ Start Date [8] ^ Facility Name [9] ^ Provider IEN [10] ^ Location IEN [11] ^
+     *    Duration [7] ^ Start Date [8] ^ Facility Name [9] ^ Practitioner IEN [10] ^ Location IEN [11] ^
      *    Entered Date [12]^ Visit IEN [13] ^ Visit Category [14] ^ Visit Locked [15] ^ Comment[16] ^
-     *    Provider Name [17]
+     *    Practitioner Name [17]
      * </code>
      */
     public AntiCoagRecord(String data) {
@@ -105,7 +106,7 @@ public class AntiCoagRecord extends DomainObject {
         setVisitLocked("1".equals(pcs[14]));
         setComment(pcs[15]);
     }
-
+    
     public AntiCoagRecord(AntiCoagRecord source) {
         try {
             BeanUtils.copyProperties(this, source);
@@ -113,7 +114,7 @@ public class AntiCoagRecord extends DomainObject {
             throw new RuntimeException(e);
         }
     }
-
+    
     private Double parseDouble(String value) {
         try {
             return value == null ? null : Double.parseDouble(value);
@@ -121,140 +122,141 @@ public class AntiCoagRecord extends DomainObject {
             return null;
         }
     }
-
-    private Provider parseProvider(String ien, String name) {
+    
+    private Practitioner parseProvider(String ien, String name) {
         if (ien.isEmpty()) {
             return null;
         }
-
-        Provider provider = new Provider(ien);
-        provider.setFullName(name);
+        
+        Practitioner provider = new Practitioner();
+        provider.setDomainId(ien);
+        provider.setName(new HumanName(name));
         return provider;
     }
-
+    
     public String getGoalRange() {
         return goalRange;
     }
-
+    
     public void setGoalRange(String goalRange) {
         this.goalRange = goalRange;
-
+        
         if (goalRange != null && goalRange.contains("-")) {
             String[] pcs = goalRange.split("\\-");
             goalMin = Double.parseDouble(pcs[0].trim());
             goalMax = Double.parseDouble(pcs[1].trim());
         }
     }
-
+    
     public Double getGoalMin() {
         return goalMin;
     }
-
+    
     public void setGoalMin(Double goalMin) {
         this.goalMin = goalMin;
     }
-
+    
     public Double getGoalMax() {
         return goalMax;
     }
-
+    
     public void setGoalMax(Double goalMax) {
         this.goalMax = goalMax;
     }
-
+    
     public String getDuration() {
         return duration;
     }
-
+    
     public void setDuration(String duration) {
         this.duration = duration;
         updateEndDate();
     }
-
+    
     public Date getStartDate() {
         return startDate;
     }
-
+    
     public void setStartDate(Date startDate) {
         this.startDate = startDate;
         updateEndDate();
     }
-
+    
     public Date getEndDate() {
         return endDate;
     }
-
+    
     public void updateEndDate() {
         endDate = null;
-
+        
         if (startDate != null && duration != null) {
             int elapsed = (int) DateUtil.parseElapsed(duration, TimeUnit.DAYS);
             endDate = elapsed == 0 ? null : DateUtil.addDays(startDate, elapsed, false);
         }
     }
-
-    public Provider getProvider() {
+    
+    public Practitioner getProvider() {
         return provider;
     }
-
-    public void setProvider(Provider provider) {
+    
+    public void setProvider(Practitioner provider) {
         this.provider = provider;
     }
-
+    
     public String getComment() {
         return comment;
     }
-
+    
     public void setComment(String comment) {
         this.comment = comment == null ? null : comment.replace("^", " ");
     }
-
+    
     public Boolean getIndicated() {
         return indicated;
     }
-
+    
     public void setIndicated(Boolean indicated) {
         this.indicated = indicated;
     }
-
+    
     public Date getVisitDate() {
         return visitDate;
     }
-
+    
     public void setVisitDate(Date visitDate) {
         this.visitDate = visitDate;
     }
-
+    
     public Date getEnteredDate() {
         return enteredDate;
     }
-
+    
     public void setEnteredDate(Date enteredDate) {
         this.enteredDate = enteredDate;
     }
-
+    
     public String getVisitCategory() {
         return visitCategory;
     }
-
+    
     public void setVisitCategory(String visitCategory) {
         this.visitCategory = visitCategory;
     }
-
+    
     public String getVisitIEN() {
         return visitIEN;
     }
-
+    
     public void setVisitIEN(String visitIEN) {
         this.visitIEN = visitIEN;
     }
-
+    
     public Boolean getVisitLocked() {
         return visitLocked;
     }
-
+    
     public void setVisitLocked(Boolean visitLocked) {
         this.visitLocked = visitLocked;
     }
-
+    
 }

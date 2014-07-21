@@ -13,52 +13,53 @@ import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.vista.api.domain.ICD9Concept;
-import org.carewebframework.vista.api.domain.Institution;
-import org.carewebframework.vista.api.domain.Patient;
-import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.fhir.model.resource.Organization;
+import org.carewebframework.fhir.model.resource.Patient;
+import org.carewebframework.fhir.model.resource.Practitioner;
+import org.carewebframework.fhir.model.type.Coding;
+import org.carewebframework.fhir.model.type.HumanName;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Problem extends DomainObject {
-
+    
     private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("Problem", Problem.class);
     }
-
+    
     private String status;
-
+    
     private String priority;
-
+    
     private FMDate modifyDate;
-
+    
     private FMDate entryDate;
-
+    
     private FMDate onsetDate;
-
+    
     private String numberCode;
-
+    
     private Patient patient;
-
-    private Provider provider;
-
-    private Institution facility;
-
-    private ICD9Concept icd9Code;
-
+    
+    private Practitioner provider;
+    
+    private Organization facility;
+    
+    private Coding icd9Code;
+    
     private String problemClass;
-
+    
     private String providerNarrative;
-
+    
     private String notes;
-
+    
     public Problem(Patient patient) {
         super();
         this.patient = patient;
-        this.facility = patient.getInstitution();
+        this.facility = (Organization) patient.getManagingOrganization().getReferenceTarget();
     }
-
+    
     /**
      * Temporary constructor to create a problem from serialized form (will move to json).
      *
@@ -71,11 +72,13 @@ public class Problem extends DomainObject {
     public Problem(String value) {
         String pcs[] = StrUtil.split(value, StrUtil.U, 16);
         numberCode = pcs[0];
-        patient = new Patient(pcs[1]);
-        icd9Code = new ICD9Concept();
-        icd9Code.setCode(pcs[2]);
+        patient = new Patient();
+        patient.setDomainId(pcs[1]);
+        icd9Code = new Coding();
+        icd9Code.setSystemSimple("ICD9");
+        icd9Code.setCodeSimple(pcs[2]);
         icd9Code.setDomainId(pcs[11]);
-        icd9Code.setShortDescription(pcs[12]);
+        icd9Code.setDisplaySimple(pcs[12]);
         modifyDate = parseDate(pcs[3]);
         problemClass = pcs[4];
         providerNarrative = pcs[5];
@@ -84,121 +87,122 @@ public class Problem extends DomainObject {
         onsetDate = parseDate(pcs[8]);
         setDomainId(pcs[9]);
         notes = pcs[10];
-
+        
         if (!pcs[13].isEmpty()) {
-            provider = new Provider();
-            provider.setFullName(pcs[13]);
+            provider = new Practitioner();
+            provider.setName(new HumanName(pcs[13]));
         }
-
+        
         if (!pcs[14].isEmpty()) {
-            facility = new Institution(pcs[14]);
+            facility = new Organization();
+            facility.setDomainId(pcs[14]);
         }
-
+        
         priority = pcs[15];
     }
-
+    
     private FMDate parseDate(String value) {
         if (value == null || value.isEmpty()) {
             return null;
         }
-
+        
         return new FMDate(DateUtil.parseDate(value));
     }
-
+    
     public String getStatus() {
         return status;
     }
-
+    
     protected void setStatus(String status) {
         this.status = status;
     }
-
+    
     public FMDate getModifyDate() {
         return modifyDate;
     }
-
+    
     protected void setModifyDate(FMDate modifyDate) {
         this.modifyDate = modifyDate;
     }
-
+    
     public FMDate getEntryDate() {
         return entryDate;
     }
-
+    
     protected void setEntryDate(FMDate entryDate) {
         this.entryDate = entryDate;
     }
-
+    
     public FMDate getOnsetDate() {
         return onsetDate;
     }
-
+    
     protected void setOnsetDate(FMDate onsetDate) {
         this.onsetDate = onsetDate;
     }
-
+    
     public String getNumberCode() {
         return numberCode;
     }
-
+    
     protected void setNumberCode(String numberCode) {
         this.numberCode = numberCode;
     }
-
+    
     public Patient getPatient() {
         return patient;
     }
-
+    
     protected void setPatient(Patient patient) {
         this.patient = patient;
     }
-
-    public ICD9Concept getIcd9Code() {
+    
+    public Coding getIcd9Code() {
         return icd9Code;
     }
-
-    protected void setIcd9Code(ICD9Concept icd9Code) {
+    
+    protected void setIcd9Code(Coding icd9Code) {
         this.icd9Code = icd9Code;
     }
-
+    
     public String getProblemClass() {
         return problemClass;
     }
-
+    
     protected void setProblemClass(String problemClass) {
         this.problemClass = problemClass;
     }
-
+    
     public String getProviderNarrative() {
         return providerNarrative;
     }
-
+    
     protected void setProviderNarrative(String providerNarrative) {
         this.providerNarrative = providerNarrative;
     }
-
+    
     public String getPriority() {
         return priority;
     }
-
+    
     protected void setPriority(String priority) {
         this.priority = priority;
     }
-
+    
     public String getNotes() {
         return notes;
     }
-
+    
     protected void setNotes(String notes) {
         this.notes = notes;
     }
-
-    public Institution getFacility() {
+    
+    public Organization getFacility() {
         return facility;
     }
-
-    public void setFacility(Institution facility) {
+    
+    public void setFacility(Organization facility) {
         this.facility = facility;
     }
-
+    
 }

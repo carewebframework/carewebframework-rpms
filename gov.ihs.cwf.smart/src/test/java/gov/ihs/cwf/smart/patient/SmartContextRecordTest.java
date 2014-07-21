@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -9,9 +9,8 @@
  */
 package gov.ihs.cwf.smart.patient;
 
-import org.carewebframework.vista.api.context.PatientContext;
-import org.carewebframework.vista.api.domain.Patient;
-
+import org.carewebframework.cal.api.context.PatientContext;
+import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.smart.SmartContextBase;
 
 public class SmartContextRecordTest extends SmartContextBase {
@@ -22,10 +21,10 @@ public class SmartContextRecordTest extends SmartContextBase {
     
     @Override
     protected void updateContext(ContextMap context) {
-        Patient patient = PatientContext.getCurrentPatient();
+        Patient patient = PatientContext.getActivePatient();
         
         if (patient != null) {
-            context.put("full_name", patient.getFullName());
+            context.put("full_name", patient.getName());
             context.put("id", patient.getDomainId());
         }
     }

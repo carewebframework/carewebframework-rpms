@@ -10,36 +10,35 @@
 package gov.ihs.cwf.domain;
 
 import org.carewebframework.api.domain.DomainObject;
-import org.carewebframework.api.domain.IInstitution;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.vista.api.domain.Institution;
+import org.carewebframework.fhir.model.resource.Organization;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class ProblemNote extends DomainObject {
-
+    
     private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("ProblemNote", ProblemNote.class);
     }
-
-    private IInstitution facility;
-
+    
+    private Organization facility;
+    
     private String number;
-
+    
     private String narrative;
-
+    
     private String status;
-
+    
     private FMDate dateAdded;
-
+    
     private String author;
-
+    
     public ProblemNote() {
-
+        
     }
-
+    
     /**
      * Temporary constructor to create a problem note from serialized form (will move to json).
      *
@@ -52,7 +51,8 @@ public class ProblemNote extends DomainObject {
      */
     public ProblemNote(String value) {
         String pcs[] = StrUtil.split(value, StrUtil.U, 7);
-        this.facility = new Institution(pcs[0]);
+        this.facility = new Organization();
+        facility.setDomainId(pcs[0]);
         setDomainId(pcs[1]);
         this.number = pcs[2];
         this.narrative = pcs[3];
@@ -60,53 +60,53 @@ public class ProblemNote extends DomainObject {
         this.dateAdded = new FMDate(pcs[5]);
         this.author = pcs[6];
     }
-
-    public IInstitution getFacility() {
+    
+    public Organization getFacility() {
         return facility;
     }
-
-    public void setFacility(IInstitution facility) {
+    
+    public void setFacility(Organization facility) {
         this.facility = facility;
     }
-
+    
     public String getNumber() {
         return number;
     }
-
+    
     public void setNumber(String number) {
         this.number = number;
     }
-
+    
     public String getNarrative() {
         return narrative;
     }
-
+    
     public void setNarrative(String narrative) {
         this.narrative = narrative;
     }
-
+    
     public String getStatus() {
         return status;
     }
-
+    
     public void setStatus(String status) {
         this.status = status;
     }
-
+    
     public FMDate getDateAdded() {
         return dateAdded;
     }
-
+    
     public void setDateAdded(FMDate dateAdded) {
         this.dateAdded = dateAdded;
     }
-
+    
     public String getAuthor() {
         return author;
     }
-
+    
     public void setAuthor(String author) {
         this.author = author;
     }
-
+    
 }

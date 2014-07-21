@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -17,7 +17,6 @@ import gov.ihs.cwf.common.bgo.BgoBaseController;
 import gov.ihs.cwf.common.bgo.LookupController;
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
 import gov.ihs.cwf.common.bgo.Params;
-import gov.ihs.cwf.context.EncounterContext;
 import gov.ihs.cwf.ui.context.encounter.EncounterSelection;
 import gov.ihs.cwf.ui.skintest.controller.SkinTestController.EventType;
 import gov.ihs.cwf.ui.skintest.controller.SkinTestController.TestItem;
@@ -25,11 +24,12 @@ import gov.ihs.cwf.ui.skintest.util.Constants;
 
 import org.apache.commons.lang.math.NumberUtils;
 
+import org.carewebframework.cal.api.context.EncounterContext;
 import org.carewebframework.common.DateUtil;
+import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.ZKUtil;
-import org.carewebframework.vista.api.domain.Encounter;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
@@ -121,9 +121,9 @@ public class AddSkinTestController extends BgoBaseController<Object> {
                 return;
             }
             setEventType(EventType.CURRENT);
-            Encounter visit = EncounterContext.getCurrentEncounter();
-            datEvent.setValue(DateUtil.stripTime(visit == null || visit.getDateTime() == null ? new Date() : visit
-                    .getDateTime()));
+            Encounter visit = EncounterContext.getActiveEncounter();
+            Date date = visit == null ? null : visit.getPeriod().getStartSimple().toDate();
+            datEvent.setValue(DateUtil.stripTime(date == null ? new Date() : date));
         }
     }
     
@@ -135,14 +135,14 @@ public class AddSkinTestController extends BgoBaseController<Object> {
                 fraCurrent.setVisible(false);
                 enableResultItems("", "POSITIVE", "NEGATIVE", "DOUBTFUL", "NO TAKE");
                 break;
-            
+                
             case CURRENT:
                 fraHistorical.setVisible(false);
                 fraCurrent.setVisible(true);
                 radCurrent.setChecked(true);
                 enableResultItems("PENDING", "POSITIVE", "NEGATIVE", "DOUBTFUL", "NO TAKE");
                 break;
-            
+                
             case REFUSAL:
                 radRefusal.setChecked(true);
                 fraHistorical.setVisible(false);

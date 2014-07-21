@@ -40,7 +40,6 @@
 		<org.carewebframework.vista.version>1.0.0-SNAPSHOT</org.carewebframework.vista.version>
 	</properties>
 	<modules>
-		<module>gov.ihs.cwf.api-parent</module>
 		<module>gov.ihs.cwf.common.bgo</module>
 		<module>gov.ihs.cwf.ui-parent</module>
 		<module>gov.ihs.cwf.smart</module>

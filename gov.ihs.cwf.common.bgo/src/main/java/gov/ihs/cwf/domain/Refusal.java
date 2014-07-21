@@ -13,37 +13,38 @@ import org.carewebframework.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.vista.api.domain.Concept;
-import org.carewebframework.vista.api.domain.Provider;
+import org.carewebframework.fhir.model.resource.Practitioner;
+import org.carewebframework.fhir.model.type.Coding;
+import org.carewebframework.fhir.model.type.HumanName;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Refusal extends DomainObject {
-
+    
     private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("Refusal", Refusal.class);
     }
-
+    
     private FMDate date;
-
-    private Concept type;
-
-    private Concept item;
-
-    private Provider provider;
-
+    
+    private Coding type;
+    
+    private Coding item;
+    
+    private Practitioner provider;
+    
     private String reason;
-
+    
     private String comment;
-
+    
     private boolean locked;
-
+    
     public Refusal() {
         super();
     }
-
+    
     /**
      * Temporary constructor to create a problem from serialized form (will move to json).
      *
@@ -62,93 +63,94 @@ public class Refusal extends DomainObject {
         reason = pcs[10];
         comment = pcs[11];
     }
-
-    private Concept parseConcept(String sysId, String ien, String code) {
+    
+    private Coding parseConcept(String sysId, String ien, String code) {
         if (!VistAUtil.validateIEN(ien)) {
             return null;
         }
-
-        Concept concept = new Concept(sysId);
+        
+        Coding concept = new Coding();
+        concept.setSystemSimple(sysId);
         concept.setDomainId(ien);
-        concept.setCode(code);
-        concept.setShortDescription(code);
+        concept.setCodeSimple(code);
+        concept.setDisplaySimple(code);
         return concept;
-
+        
     }
-
+    
     private FMDate parseDate(String value) {
         if (value == null || value.isEmpty()) {
             return null;
         }
-
+        
         return new FMDate(DateUtil.parseDate(value));
     }
-
-    private Provider parseProvider(String ien, String name) {
+    
+    private Practitioner parseProvider(String ien, String name) {
         if (!VistAUtil.validateIEN(ien)) {
             return null;
         }
-
-        Provider provider = new Provider();
+        
+        Practitioner provider = new Practitioner();
         provider.setDomainId(ien);
-        provider.setFullName(name);
+        provider.setName(new HumanName(name));
         return provider;
     }
-
+    
     public FMDate getDate() {
         return date;
     }
-
+    
     public void setDate(FMDate date) {
         this.date = date;
     }
-
-    public Concept getType() {
+    
+    public Coding getType() {
         return type;
     }
-
-    public void setType(Concept type) {
+    
+    public void setType(Coding type) {
         this.type = type;
     }
-
-    public Concept getItem() {
+    
+    public Coding getItem() {
         return item;
     }
-
-    public void setItem(Concept item) {
+    
+    public void setItem(Coding item) {
         this.item = item;
     }
-
-    public Provider getProvider() {
+    
+    public Practitioner getProvider() {
         return provider;
     }
-
-    public void setProvider(Provider provider) {
+    
+    public void setProvider(Practitioner provider) {
         this.provider = provider;
     }
-
+    
     public String getReason() {
         return reason;
     }
-
+    
     public void setReason(String reason) {
         this.reason = reason;
     }
-
+    
     public String getComment() {
         return comment;
     }
-
+    
     public void setComment(String comment) {
         this.comment = comment;
     }
-
+    
     public boolean isLocked() {
         return locked;
     }
-
+    
     public void setLocked(boolean locked) {
         this.locked = locked;
     }
-
+    
 }

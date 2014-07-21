@@ -10,7 +10,6 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>gov.ihs.cwf.ui.anticoag</module>
-		<module>gov.ihs.cwf.ui.context.encounter</module>
 		<module>gov.ihs.cwf.ui.medlist</module>
 		<module>gov.ihs.cwf.ui.visits</module>
 		<module>gov.ihs.cwf.ui.problem</module>

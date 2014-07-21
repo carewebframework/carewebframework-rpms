@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -14,19 +14,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import gov.ihs.cwf.context.EncounterContext;
-import gov.ihs.cwf.context.EncounterUtil;
-import gov.ihs.cwf.context.ProviderUtil;
-import org.carewebframework.vista.api.domain.Encounter;
-import org.carewebframework.vista.api.domain.Provider;
-
 import org.apache.commons.lang.math.NumberUtils;
 
-import org.carewebframework.api.context.UserContext;
-import org.carewebframework.api.domain.IUser;
+import org.carewebframework.cal.api.context.EncounterContext;
+import org.carewebframework.cal.api.context.UserContext;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.NumUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.fhir.model.resource.Encounter;
+import org.carewebframework.fhir.model.resource.Practitioner;
+import org.carewebframework.fhir.model.resource.User;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.wonderbar.IWonderbarServerSearchProvider;
 import org.carewebframework.ui.wonderbar.Wonderbar;
@@ -34,6 +31,8 @@ import org.carewebframework.ui.zk.ListUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
+import org.carewebframework.vista.api.domain.EncounterUtil;
+import org.carewebframework.vista.api.domain.ProviderUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -79,7 +78,7 @@ public class AddEditController extends FrameworkController {
     
     private Textbox txtEnd;
     
-    private Wonderbar<Provider> wbProvider;
+    private Wonderbar<Practitioner> wbProvider;
     
     private Textbox txtComment;
     
@@ -91,15 +90,15 @@ public class AddEditController extends FrameworkController {
     
     private AntiCoagRecord record;
     
-    private final IWonderbarServerSearchProvider<Provider> providerSearch = new IWonderbarServerSearchProvider<Provider>() {
+    private final IWonderbarServerSearchProvider<Practitioner> providerSearch = new IWonderbarServerSearchProvider<Practitioner>() {
         
         @Override
-        public List<Provider> getDefaultItems() {
+        public List<Practitioner> getDefaultItems() {
             return Collections.singletonList(record.getProvider());
         }
         
         @Override
-        public boolean getSearchResults(String search, int maxItems, List<Provider> hits) {
+        public boolean getSearchResults(String search, int maxItems, List<Practitioner> hits) {
             ProviderUtil.search(search, maxItems + 1, hits);
             boolean tooMany = hits.size() > maxItems;
             
@@ -145,9 +144,10 @@ public class AddEditController extends FrameworkController {
             record = new AntiCoagRecord();
             record.setIndicated(true);
             record.setStartDate(DateUtil.today());
-            IUser user = UserContext.getActiveUser();
-            Provider provider = new Provider(user.getDomainId());
-            provider.setFullName(user.getFullName());
+            User user = UserContext.getActiveUser();
+            Practitioner provider = new Practitioner();
+            provider.setDomainId(user.getDomainId());
+            provider.setName(user.getName());
             record.setProvider(provider);
         } else {
             record = new AntiCoagRecord(record);
@@ -162,7 +162,7 @@ public class AddEditController extends FrameworkController {
         txtComment.setValue(record.getComment());
         wbProvider.setSearchProvider(providerSearch);
         //wbProvider.setItemRenderer(providerRenderer);
-        wbProvider.setSelectedItem(record.getProvider().getFullName(), record.getProvider());
+        wbProvider.setSelectedItem(record.getProvider().getName().toString(), record.getProvider());
         updateMinMax();
         updateControls();
         updateEndDate();
@@ -242,7 +242,7 @@ public class AddEditController extends FrameworkController {
         record.setDuration(ignore ? null : cboDuration.getText());
         record.setStartDate(ignore ? null : datStart.getValue());
         record.setComment(txtComment.getText());
-        record.setProvider((Provider) wbProvider.getSelectedData());
+        record.setProvider((Practitioner) wbProvider.getSelectedData());
     }
     
     public void onCheck$rgIndicated() {
@@ -280,12 +280,12 @@ public class AddEditController extends FrameworkController {
     public void onClick$btnSave() {
         if (validateInputs()) {
             if (record.getVisitIEN() == null) {
-                Encounter encounter = EncounterContext.getCurrentEncounter();
+                Encounter encounter = EncounterContext.getActiveEncounter();
                 EncounterUtil.forceCreate(encounter);
-                record.setVisitCategory(encounter.getServiceCategory().toString());
-                record.setVisitDate(encounter.getDateTime());
+                record.setVisitCategory(EncounterUtil.getServiceCategory(encounter));
+                record.setVisitDate(encounter.getPeriod().getStart().getValue().toDate());
                 record.setVisitIEN(encounter.getDomainId());
-                record.setVisitLocked(encounter.isLocked());
+                record.setVisitLocked(EncounterUtil.isLocked(encounter));
             }
             
             try {

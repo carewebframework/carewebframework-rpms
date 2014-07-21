@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -30,15 +30,15 @@ import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.api.security.SecurityUtil;
+import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.shell.plugins.IPluginEvent;
 import org.carewebframework.shell.plugins.PluginContainer;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.RowComparator;
 import org.carewebframework.ui.zk.ZKUtil;
-import org.carewebframework.vista.api.context.PatientContext;
-import org.carewebframework.vista.api.domain.Patient;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.BrokerSession.IAsyncRPCEvent;
 
@@ -146,7 +146,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
                 eventManager.unsubscribe(probEvent, genericEventHandler);
             }
             
-            Patient patient = PatientContext.getCurrentPatient();
+            Patient patient = PatientContext.getActivePatient();
             probEvent = patient == null ? null : "PCC." + patient.getDomainId() + ".PRB";
             
             if (probEvent != null) {
@@ -268,7 +268,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     }
     
     private void updateControls() {
-        boolean b = PatientContext.getCurrentPatient() == null || !BgoUtil.checkSecurity(true);
+        boolean b = PatientContext.getActivePatient() == null || !BgoUtil.checkSecurity(true);
         btnAdd.setDisabled(b);
         btnEdit.setDisabled(b || lbProblems.getSelectedCount() == 0);
         btnDelete.setDisabled(btnEdit.isDisabled());
@@ -285,7 +285,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     private void loadProblems(boolean noAsync) {
         lbProblems.getItems().clear();
         abortAsync();
-        Patient patient = PatientContext.getCurrentPatient();
+        Patient patient = PatientContext.getActivePatient();
         
         if (patient == null) {
             return;
@@ -423,11 +423,11 @@ public class ProblemListController extends BgoBaseController<Object> implements 
                         case EDIT:
                             status = editProblem(i);
                             break;
-                        
+                            
                         case DELETE:
                             status = deleteProblem(i);
                             break;
-                        
+                            
                         case POV:
                             //status = addPOV(...)
                             break;

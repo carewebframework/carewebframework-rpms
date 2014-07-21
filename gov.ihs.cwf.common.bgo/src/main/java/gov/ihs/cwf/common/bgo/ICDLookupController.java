@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -13,7 +13,7 @@ import java.util.List;
 
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
 
-import org.carewebframework.vista.api.context.PatientContext;
+import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;
@@ -59,9 +59,9 @@ public class ICDLookupController extends LookupController {
         }
         
         String params = VistAUtil.concatParams(searchText, radLexicon.isChecked() ? "1" : "0", "", //m_sLookupDate Visit date
-            PatientContext.getCurrentPatient().getGender(), "", //IIf(m_bEcodeMode, 2, IIf(m_bAllowEcode, 1, ""))
-            "" // CInt(m_bDisplayShortText) ' VCodes
-        );
+                PatientContext.getActivePatient().getGender(), "", //IIf(m_bEcodeMode, 2, IIf(m_bAllowEcode, 1, ""))
+                "" // CInt(m_bDisplayShortText) ' VCodes
+                );
         return broker.callRPCList(lookupParams.rpc, null, params);
     }
 }
