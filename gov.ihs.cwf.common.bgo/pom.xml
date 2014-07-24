@@ -23,10 +23,6 @@
 			<artifactId>org.carewebframework.vista.mbroker</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.api.context</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>

@@ -15,7 +15,6 @@ import java.util.List;
 import gov.ihs.cwf.common.bgo.BgoBaseController;
 import gov.ihs.cwf.common.bgo.BgoConstants;
 import gov.ihs.cwf.common.bgo.BgoUtil;
-import gov.ihs.cwf.context.EncounterContext.IEncounterContextEvent;
 import gov.ihs.cwf.domain.Refusal;
 import gov.ihs.cwf.domain.SkinTest;
 import gov.ihs.cwf.ui.skintest.render.SkinTestRenderer;
@@ -27,6 +26,7 @@ import org.carewebframework.api.event.EventManager;
 import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
+import org.carewebframework.cal.api.context.EncounterContext.IEncounterContextEvent;
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
 import org.carewebframework.cal.api.context.UserContext;
@@ -144,7 +144,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         public EventType getEventType() {
             return refusal != null ? EventType.REFUSAL : getEncounter() == null
                     || "E".equals(EncounterUtil.getServiceCategory(getEncounter())) ? EventType.HISTORICAL
-                    : EventType.CURRENT;
+                            : EventType.CURRENT;
         }
         
         public void delete() {
@@ -157,17 +157,17 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
                 if (!user.getDomainId().equals(pcs[0])) {
                     PromptDialog.showError("To delete the skin test, you must either be the person that entered it or be "
                             + "designated as the primary provider for the visit.\n" + BgoConstants.TC_PRI_PRV + pcs[1]
-                            + "\nAdministered By: " + provider.getName(), "Cannot Delete");
+                                    + "\nAdministered By: " + provider.getName(), "Cannot Delete");
                     return;
                 }
             }
             
             if (PromptDialog.confirm("Are you sure that you wish to delete the skin test:\n" + getTestName(),
-                "Delete Skin Test?")) {
+                    "Delete Skin Test?")) {
                 BgoUtil.errorCheck(getBroker().callRPC(
                     "BGOSK DEL",
                     VistAUtil.concatParams(skinTest != null ? skinTest.getDomainId() : null,
-                        refusal != null ? refusal.getDomainId() : null)));
+                            refusal != null ? refusal.getDomainId() : null)));
             }
             
         }
@@ -457,15 +457,15 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
             case ADD:
                 addTest();
                 break;
-            
+                
             case EDIT:
                 editTest();
                 break;
-            
+                
             case DELETE:
                 deleteTest();
                 break;
-        
+                
         }
     }
     

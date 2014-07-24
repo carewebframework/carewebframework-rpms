@@ -16,7 +16,6 @@ import gov.ihs.cwf.common.bgo.BgoBaseController;
 import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.common.bgo.BrowserController;
 import gov.ihs.cwf.common.bgo.WebSearchController;
-import gov.ihs.cwf.context.EncounterContext.IEncounterContextEvent;
 import gov.ihs.cwf.domain.Problem;
 import gov.ihs.cwf.ui.problemlist.render.ProblemRenderer;
 import gov.ihs.cwf.ui.problemlist.util.ProblemFilter;
@@ -30,6 +29,7 @@ import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.api.security.SecurityUtil;
+import org.carewebframework.cal.api.context.EncounterContext.IEncounterContextEvent;
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
@@ -423,11 +423,11 @@ public class ProblemListController extends BgoBaseController<Object> implements 
                         case EDIT:
                             status = editProblem(i);
                             break;
-                            
+                        
                         case DELETE:
                             status = deleteProblem(i);
                             break;
-                            
+                        
                         case POV:
                             //status = addPOV(...)
                             break;

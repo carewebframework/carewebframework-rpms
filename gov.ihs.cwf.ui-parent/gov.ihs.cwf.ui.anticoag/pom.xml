@@ -15,7 +15,6 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.wonderbar</artifactId>
-			<version>${org.carewebframework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
@@ -24,10 +23,6 @@
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.common.bgo</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.api.context</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

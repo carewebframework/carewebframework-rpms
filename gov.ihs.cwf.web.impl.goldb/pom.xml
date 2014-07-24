@@ -106,13 +106,34 @@
 		<!-- RPMS Plugins -->
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.context.encounter</artifactId>
+			<artifactId>gov.ihs.cwf.ui.medlist</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.ui.problem</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.ui.skintest</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>gov.ihs.cwf</groupId>
+			<artifactId>gov.ihs.cwf.ui.visits</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
 			<artifactId>gov.ihs.cwf.ui.anticoag</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<!-- VistA Plugins -->
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.context.encounter</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
@@ -160,36 +181,15 @@
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.medlist</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.notification</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.problem</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.settings</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.skintest</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.visits</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<!-- RPMS Extensions -->
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.api.patientlist</artifactId>

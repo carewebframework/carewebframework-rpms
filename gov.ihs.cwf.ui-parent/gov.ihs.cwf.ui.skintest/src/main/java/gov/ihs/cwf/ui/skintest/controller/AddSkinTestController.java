@@ -17,7 +17,6 @@ import gov.ihs.cwf.common.bgo.BgoBaseController;
 import gov.ihs.cwf.common.bgo.LookupController;
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
 import gov.ihs.cwf.common.bgo.Params;
-import gov.ihs.cwf.ui.context.encounter.EncounterSelection;
 import gov.ihs.cwf.ui.skintest.controller.SkinTestController.EventType;
 import gov.ihs.cwf.ui.skintest.controller.SkinTestController.TestItem;
 import gov.ihs.cwf.ui.skintest.util.Constants;
@@ -31,6 +30,7 @@ import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
+import org.carewebframework.vista.ui.context.encounter.EncounterSelection;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Combobox;
@@ -135,14 +135,14 @@ public class AddSkinTestController extends BgoBaseController<Object> {
                 fraCurrent.setVisible(false);
                 enableResultItems("", "POSITIVE", "NEGATIVE", "DOUBTFUL", "NO TAKE");
                 break;
-                
+            
             case CURRENT:
                 fraHistorical.setVisible(false);
                 fraCurrent.setVisible(true);
                 radCurrent.setChecked(true);
                 enableResultItems("PENDING", "POSITIVE", "NEGATIVE", "DOUBTFUL", "NO TAKE");
                 break;
-                
+            
             case REFUSAL:
                 radRefusal.setChecked(true);
                 fraHistorical.setVisible(false);

@@ -85,11 +85,6 @@
 				<artifactId>gov.ihs.cwf.common.bgo</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>gov.ihs.cwf</groupId>
-				<artifactId>gov.ihs.cwf.api.context</artifactId>
-				<version>${project.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 </project>

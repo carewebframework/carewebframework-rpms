@@ -14,13 +14,9 @@
 			<artifactId>org.carewebframework.shell</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.api.context</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>gov.ihs.cwf</groupId>
-			<artifactId>gov.ihs.cwf.ui.context.encounter</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.context.encounter</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>gov.ihs.cwf</groupId>
