@@ -17,10 +17,10 @@ import gov.ihs.cwf.domain.Contraindication;
 import gov.ihs.cwf.domain.Immunization;
 import gov.ihs.cwf.domain.Refusal;
 
+import org.carewebframework.cal.api.smart.SmartRDFAPI;
 import org.carewebframework.smart.rdf.RDFDescription;
 import org.carewebframework.smart.rdf.RDFDocument;
 import org.carewebframework.vista.api.util.VistAUtil;
-import org.carewebframework.vista.smart.SmartRDFAPI;
 
 public class SmartImmunizations extends SmartRDFAPI {
     
@@ -71,7 +71,7 @@ public class SmartImmunizations extends SmartRDFAPI {
         
         if (imm.getCvx() != null) {
             pn = doc.addCodedValue("http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#", imm.getCvx(), imm
-                .getImmunization().getDisplaySimple(), "ImmunizationProduct");
+                    .getImmunization().getDisplaySimple(), "ImmunizationProduct");
         } else {
             pn = doc.addCodedValue("http://smartplatforms.org/terms/codes/Immunization#", ""
                     + imm.getImmunization().getDomainId(), imm.getImmunization().getDisplaySimple(), "ImmunizationProduct");
