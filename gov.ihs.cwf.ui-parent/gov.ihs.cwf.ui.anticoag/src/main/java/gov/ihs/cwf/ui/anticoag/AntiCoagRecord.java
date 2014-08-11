@@ -19,7 +19,7 @@ import java.util.List;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.BooleanUtils;
 
-import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
 import org.carewebframework.fhir.model.resource.Practitioner;
@@ -91,7 +91,7 @@ public class AntiCoagRecord extends DomainObject {
      */
     public AntiCoagRecord(String data) {
         String[] pcs = split(data, U, 17);
-        setDomainId(pcs[0]);
+        setLogicalId(pcs[0]);
         setIndicated(BooleanUtils.toBoolean(pcs[1]));
         setVisitDate(VistAUtil.parseDate(pcs[2]));
         setGoalRange(pcs[3]);
@@ -129,7 +129,7 @@ public class AntiCoagRecord extends DomainObject {
         }
         
         Practitioner provider = new Practitioner();
-        provider.setDomainId(ien);
+        provider.setLogicalId(ien);
         provider.setName(new HumanName(name));
         return provider;
     }

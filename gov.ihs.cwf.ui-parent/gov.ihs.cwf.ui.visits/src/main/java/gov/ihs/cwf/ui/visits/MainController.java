@@ -45,7 +45,7 @@ public class MainController extends CoverSheetBase<String> {
     
     @Override
     protected void requestData() {
-        String evt = "PCC." + patient.getDomainId() + ".VST";
+        String evt = "PCC." + patient.getLogicalId() + ".VST";
         
         if (eventName == null || !evt.equals(eventName)) {
             if (eventName != null) {

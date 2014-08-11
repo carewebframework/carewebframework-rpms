@@ -14,13 +14,13 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.api.spring.SpringUtil;
 import org.carewebframework.cal.api.context.UserContext;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.User;
 import org.carewebframework.ui.action.ActionRegistry;
 import org.carewebframework.ui.zk.MessageWindow;
 import org.carewebframework.ui.zk.MessageWindow.MessageInfo;
@@ -41,7 +41,7 @@ public class ChatService implements IGenericEvent<String> {
     
     private boolean listening;
     
-    private User user;
+    private IUser user;
     
     private static final AtomicInteger lastId = new AtomicInteger();
     
@@ -163,8 +163,8 @@ public class ChatService implements IGenericEvent<String> {
         if ("INVITE".equals(action)) {
             String[] pcs = StrUtil.split(eventData, StrUtil.U);
             MessageInfo mi = new MessageInfo(StrUtil.formatMessage("@vcchat.invitation.message", pcs[1]),
-                StrUtil.formatMessage("@vcchat.invitation.caption"), null, 999999, null,
-                "cwf.fireLocalEvent('VCCHAT.SERVICE.ACCEPT', '" + pcs[0] + "'); return true;");
+                    StrUtil.formatMessage("@vcchat.invitation.caption"), null, 999999, null,
+                    "cwf.fireLocalEvent('VCCHAT.SERVICE.ACCEPT', '" + pcs[0] + "'); return true;");
             eventManager.fireLocalEvent(MessageWindow.EVENT_SHOW, mi);
             ;
         } else if ("ACCEPT".equals(action)) {
@@ -222,7 +222,7 @@ public class ChatService implements IGenericEvent<String> {
     public void sendMessage(String eventName, String text) {
         if (text != null && !text.isEmpty()) {
             eventManager.fireRemoteEvent(eventName,
-                user.getName() + " @ " + DateUtil.formatDate(brokerSession.getHostTime()) + "\r\n" + text);
+                user.getFullName() + " @ " + DateUtil.formatDate(brokerSession.getHostTime()) + "\r\n" + text);
         }
     }
     
@@ -248,7 +248,7 @@ public class ChatService implements IGenericEvent<String> {
             sb.append(invitee.getSession());
         }
         
-        eventManager.fireRemoteEvent("VCCHAT.SERVICE.INVITE", sessionId + StrUtil.U + user.getName(), sb.toString());
+        eventManager.fireRemoteEvent("VCCHAT.SERVICE.INVITE", sessionId + StrUtil.U + user.getFullName(), sb.toString());
     }
     
 }

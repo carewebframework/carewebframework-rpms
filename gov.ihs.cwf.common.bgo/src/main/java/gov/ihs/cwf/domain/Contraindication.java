@@ -9,30 +9,28 @@
  */
 package gov.ihs.cwf.domain;
 
-import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Contraindication extends DomainObject {
-
-    private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("Contraindication", Contraindication.class);
     }
-
+    
     private String immunization;
-
+    
     private FMDate date;
-
+    
     private String reason;
-
+    
     public Contraindication() {
         super();
     }
-
+    
     /**
      * Temporary constructor to create a contraindication from serialized form (will move to json).
      *
@@ -41,42 +39,42 @@ public class Contraindication extends DomainObject {
      */
     public Contraindication(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 5);
-        setDomainId(pcs[1]);
+        setLogicalId(pcs[1]);
         immunization = pcs[2];
         reason = pcs[3];
         date = parseDate(pcs[4]);
     }
-
+    
     private FMDate parseDate(String value) {
         if (value == null || value.isEmpty()) {
             return null;
         }
-
+        
         return new FMDate(DateUtil.parseDate(value));
     }
-
+    
     public FMDate getDate() {
         return date;
     }
-
+    
     public void setDate(FMDate date) {
         this.date = date;
     }
-
+    
     public String getImmunization() {
         return immunization;
     }
-
+    
     public void setImmunization(String immunization) {
         this.immunization = immunization;
     }
-
+    
     public String getReason() {
         return reason;
     }
-
+    
     public void setReason(String reason) {
         this.reason = reason;
     }
-
+    
 }

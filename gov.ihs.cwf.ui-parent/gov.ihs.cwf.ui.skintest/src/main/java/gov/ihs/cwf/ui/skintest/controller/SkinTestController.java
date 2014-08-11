@@ -22,6 +22,7 @@ import gov.ihs.cwf.ui.skintest.render.SkinTestRenderer;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.EventManager;
 import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
@@ -34,7 +35,6 @@ import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.resource.User;
 import org.carewebframework.shell.plugins.IPluginEvent;
 import org.carewebframework.shell.plugins.PluginContainer;
 import org.carewebframework.ui.zk.ListUtil;
@@ -110,7 +110,8 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         }
         
         public String getTestName() {
-            return skinTest != null ? skinTest.getTest().getDisplaySimple() : refusal.getItem().getDisplaySimple();
+            return skinTest != null ? skinTest.getTest().getProxiedObject().getDisplaySimple() : refusal.getItem()
+                    .getProxiedObject().getDisplaySimple();
         }
         
         public String getLocationName() {
@@ -144,30 +145,30 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         public EventType getEventType() {
             return refusal != null ? EventType.REFUSAL : getEncounter() == null
                     || "E".equals(EncounterUtil.getServiceCategory(getEncounter())) ? EventType.HISTORICAL
-                            : EventType.CURRENT;
+                    : EventType.CURRENT;
         }
         
         public void delete() {
             Practitioner provider = getProvider();
             
             if (skinTest != null && provider != null && !user.equals(provider)) {
-                String s = getBroker().callRPC("BGOVPRV PRIPRV", skinTest.getEncounter().getDomainId());
+                String s = getBroker().callRPC("BGOVPRV PRIPRV", skinTest.getEncounter().getLogicalId());
                 String[] pcs = StrUtil.split(s, StrUtil.U, 2);
                 
-                if (!user.getDomainId().equals(pcs[0])) {
+                if (!user.getLogicalId().equals(pcs[0])) {
                     PromptDialog.showError("To delete the skin test, you must either be the person that entered it or be "
                             + "designated as the primary provider for the visit.\n" + BgoConstants.TC_PRI_PRV + pcs[1]
-                                    + "\nAdministered By: " + provider.getName(), "Cannot Delete");
+                            + "\nAdministered By: " + provider.getName(), "Cannot Delete");
                     return;
                 }
             }
             
             if (PromptDialog.confirm("Are you sure that you wish to delete the skin test:\n" + getTestName(),
-                    "Delete Skin Test?")) {
+                "Delete Skin Test?")) {
                 BgoUtil.errorCheck(getBroker().callRPC(
                     "BGOSK DEL",
-                    VistAUtil.concatParams(skinTest != null ? skinTest.getDomainId() : null,
-                            refusal != null ? refusal.getDomainId() : null)));
+                    VistAUtil.concatParams(skinTest != null ? skinTest.getLogicalId() : null,
+                        refusal != null ? refusal.getLogicalId() : null)));
             }
             
         }
@@ -207,7 +208,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     
     private Object selectedItem;
     
-    private final User user = UserContext.getActiveUser();
+    private final IUser user = UserContext.getActiveUser();
     
     private final IAsyncRPCEvent asyncRPCEventHandler = new IAsyncRPCEvent() {
         
@@ -242,8 +243,8 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
             }
             
             Patient patient = PatientContext.getActivePatient();
-            pccEvent = patient == null ? null : "PCC." + patient.getDomainId() + ".SK";
-            refusalEvent = patient == null ? null : "REFUSAL." + patient.getDomainId() + ".SKIN TEST";
+            pccEvent = patient == null ? null : "PCC." + patient.getLogicalId() + ".SK";
+            refusalEvent = patient == null ? null : "REFUSAL." + patient.getLogicalId() + ".SKIN TEST";
             
             if (pccEvent != null) {
                 eventManager.subscribe(pccEvent, genericEventHandler);
@@ -362,9 +363,9 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         EventUtil.status("Loading Skin Test Data");
         
         if (allowAsync && !noAsync) {
-            asyncHandle = getBroker().callRPCAsync("BGOVSK GET", asyncRPCEventHandler, patient.getDomainId());
+            asyncHandle = getBroker().callRPCAsync("BGOVSK GET", asyncRPCEventHandler, patient.getLogicalId());
         } else {
-            loadSkinTests(getBroker().callRPCList("BGOVSK GET", null, patient.getDomainId()));
+            loadSkinTests(getBroker().callRPCList("BGOVSK GET", null, patient.getLogicalId()));
         }
         
         EventUtil.status();
@@ -457,15 +458,15 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
             case ADD:
                 addTest();
                 break;
-                
+            
             case EDIT:
                 editTest();
                 break;
-                
+            
             case DELETE:
                 deleteTest();
                 break;
-                
+        
         }
     }
     
@@ -502,7 +503,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     }
     
     public void onClick$btnPrint() {
-        String s = VistAUtil.concatParams(PatientContext.getActivePatient().getDomainId(), 2);
+        String s = VistAUtil.concatParams(PatientContext.getActivePatient().getLogicalId(), 2);
         s = getBroker().callRPC("BGOVIMM PRINT", s);
         PromptDialog.showText(s, "Print Record");
     }

@@ -65,16 +65,17 @@ public class SmartImmunizations extends SmartRDFAPI {
                 <refusalReason rdf:nodeID="node16rk1fgdvx351119"/>
             </rdf:Description>
          */
-        String about = owner + "/immunizations/" + imm.getDomainId();
+        String about = owner + "/immunizations/" + imm.getLogicalId();
         RDFDescription dx = doc.addDescription(about, "#Immunization");
         RDFDescription pn;
         
         if (imm.getCvx() != null) {
             pn = doc.addCodedValue("http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#", imm.getCvx(), imm
-                    .getImmunization().getDisplaySimple(), "ImmunizationProduct");
+                .getImmunization().getProxiedObject().getDisplaySimple(), "ImmunizationProduct");
         } else {
             pn = doc.addCodedValue("http://smartplatforms.org/terms/codes/Immunization#", ""
-                    + imm.getImmunization().getDomainId(), imm.getImmunization().getDisplaySimple(), "ImmunizationProduct");
+                    + imm.getImmunization().getLogicalId(), imm.getImmunization().getProxiedObject().getDisplaySimple(),
+                "ImmunizationProduct");
         }
         //RDFDescription pc = doc.addCodedValue();
         RDFDescription as = doc.addCodedValue("http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#",
@@ -88,10 +89,10 @@ public class SmartImmunizations extends SmartRDFAPI {
     }
     
     private void handleRefusal(RDFDocument doc, Refusal ref, String owner) {
-        String about = owner + "/immunizations/" + ref.getDomainId();
+        String about = owner + "/immunizations/" + ref.getLogicalId();
         RDFDescription dx = doc.addDescription(about, "#Immunization");
         RDFDescription pn = doc.addCodedValue("http://smartplatforms.org/terms/codes/Immunization#", ""
-                + ref.getItem().getDomainId(), ref.getItem().getCodeSimple(), "ImmunizationProduct");
+                + ref.getItem().getLogicalId(), ref.getItem().getProxiedObject().getCodeSimple(), "ImmunizationProduct");
         RDFDescription as = doc.addCodedValue("http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#",
             "notAdministered", "Not Administered", "ImmunizationAdministrationStatus");
         RDFDescription rr = doc.addCodedValue("http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#",
@@ -105,7 +106,7 @@ public class SmartImmunizations extends SmartRDFAPI {
     }
     
     private void handleContraindication(RDFDocument doc, Contraindication contra, String owner) {
-        String about = owner + "/immunizations/" + contra.getDomainId();
+        String about = owner + "/immunizations/" + contra.getLogicalId();
         RDFDescription dx = doc.addDescription(about, "#Immunization");
         RDFDescription pn = doc.addCodedValue("http://smartplatforms.org/terms/codes/Immunization", "unknown",
             contra.getImmunization(), "ImmunizationProduct");

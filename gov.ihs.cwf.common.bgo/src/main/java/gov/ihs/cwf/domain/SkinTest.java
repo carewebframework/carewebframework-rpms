@@ -19,14 +19,11 @@ import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.fhir.model.resource.Location;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.vista.api.domain.EncounterRelated;
 import org.carewebframework.vista.api.domain.EncounterUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class SkinTest extends EncounterRelated {
-    
-    private static final long serialVersionUID = 1L;
     
     static {
         JSONUtil.registerAlias("SkinTest", SkinTest.class);
@@ -46,7 +43,7 @@ public class SkinTest extends EncounterRelated {
     
     private String reading;
     
-    private Coding test;
+    private CodingProxy test;
     
     private String age;
     
@@ -68,7 +65,7 @@ public class SkinTest extends EncounterRelated {
      */
     public SkinTest(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 17);
-        setDomainId(pcs[2]);
+        setLogicalId(pcs[2]);
         String loc = pcs[3];
         
         if (loc.isEmpty()) {
@@ -86,11 +83,7 @@ public class SkinTest extends EncounterRelated {
             readDate = PCC.parseDate(pcs[6]);
         }
         
-        test = new Coding();
-        test.setSystemSimple("SKIN TEST");
-        test.setCodeSimple(pcs[7]);
-        test.setDomainId(pcs[8]);
-        test.setDisplaySimple(pcs[7]);
+        test = new CodingProxy(pcs[8], "SKIN TEST", pcs[7], pcs[7]);
         age = pcs[9];
         provider = PCC.parsePractitioner(pcs[10]);
         reader = PCC.parsePractitioner(pcs[11]);
@@ -159,11 +152,11 @@ public class SkinTest extends EncounterRelated {
         this.reading = reading;
     }
     
-    public Coding getTest() {
+    public CodingProxy getTest() {
         return test;
     }
     
-    public void setTest(Coding test) {
+    public void setTest(CodingProxy test) {
         this.test = test;
     }
     

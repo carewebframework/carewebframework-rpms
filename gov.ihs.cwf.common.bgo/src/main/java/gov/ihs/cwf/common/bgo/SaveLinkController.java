@@ -12,6 +12,7 @@ package gov.ihs.cwf.common.bgo;
 import java.util.List;
 
 import gov.ihs.cwf.common.bgo.LookupParams.Table;
+import gov.ihs.cwf.domain.CodingProxy;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -59,9 +60,9 @@ public class SaveLinkController extends BgoBaseController<Object> {
     
     private Listbox lstLinks;
     
-    private Coding concept1;
+    private CodingProxy concept1;
     
-    private Coding concept2;
+    private CodingProxy concept2;
     
     private String siteName;
     
@@ -80,10 +81,10 @@ public class SaveLinkController extends BgoBaseController<Object> {
     @Override
     public void doAfterCompose(Component comp) throws Exception {
         super.doAfterCompose(comp);
-        concept1 = (Coding) arg.get(0);
+        concept1 = (CodingProxy) arg.get(0);
         siteName = (String) arg.get(1);
         siteURL = (String) arg.get(2);
-        txtLow.setText(concept1.getDisplaySimple());
+        txtLow.setText(concept1.getProxiedObject().getDisplaySimple());
     }
     
     public void onSelect$cboType() {
@@ -106,33 +107,33 @@ public class SaveLinkController extends BgoBaseController<Object> {
                 lblHigh.setValue("High ICD Code");
                 refTable = Table.rtICD;
                 break;
-            
+                
             case ICD9:
                 refTable = Table.rtICD;
                 break;
-            
+                
             case CPT4_RANGE:
                 lblLow.setValue("Low CPT Code");
                 lblHigh.setValue("High CPT Code");
                 refTable = Table.rtCPT;
                 break;
-            
+                
             case CPT4:
                 refTable = Table.rtCPT;
                 break;
-            
+                
             case EDU:
                 refTable = Table.rtEduTopic;
                 break;
-            
+                
             case EXAM:
                 refTable = Table.rtExam;
                 break;
-            
+                
             case IMM:
                 refTable = Table.rtImmunization;
                 break;
-            
+                
             case SKIN:
                 refTable = Table.rtSkinTest;
                 break;
@@ -157,7 +158,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
         String s = ""; //Piece(m_colURL.Item(lstLinks.List(lstLinks.ListIndex)), "{", 2)
         
         if (!PromptDialog.confirm(BgoConstants.TX_CNFM_LINK_DEL + item.getLabel()
-                + "?\nDoing so will also delete all other references for the current website.", "Confirm Delete")) {
+            + "?\nDoing so will also delete all other references for the current website.", "Confirm Delete")) {
             return;
         }
         
@@ -179,13 +180,13 @@ public class SaveLinkController extends BgoBaseController<Object> {
         
         if (StringUtils.isEmpty(name) || StringUtils.isEmpty(siteURL)) {
             PromptDialog.showError("You must enter a reference name and have a valid web address to save a reference link.",
-                "Missing Data");
+                    "Missing Data");
             return;
         }
         
-        String code1 = concept1 == null ? "" : concept1.getCodeSimple();
-        String code2 = concept2 == null ? "" : concept2.getCodeSimple();
-        int linkType = LinkType.fromConcept(concept1).ordinal();
+        String code1 = concept1 == null ? "" : concept1.getProxiedObject().getCodeSimple();
+        String code2 = concept2 == null ? "" : concept2.getProxiedObject().getCodeSimple();
+        int linkType = LinkType.fromConcept(concept1.getProxiedObject()).ordinal();
         
         if (code1.compareTo(code2) > 0) {
             String s = code1;
@@ -195,7 +196,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
         
         // Type [1] ^ Value [2] ^ Name [3] ^ URL [4] ^ User IEN [5] ^ Value 2 [6] ^ Category [7]
         
-        String s = VistAUtil.concatParams(linkType, code1, name, siteURL, UserContext.getActiveUser().getDomainId(), code2,
+        String s = VistAUtil.concatParams(linkType, code1, name, siteURL, UserContext.getActiveUser().getLogicalId(), code2,
             cboCat.getText());
         s = getBroker().callRPC("BGOWEB SET", s);
         
@@ -208,7 +209,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
         cboRef.getItems().clear();
         Comboitem item = cboCat.getSelectedItem();
         String cat = item == null ? "" : item.getLabel();
-        String s = VistAUtil.concatParams(UserContext.getActiveUser().getDomainId(), cat);
+        String s = VistAUtil.concatParams(UserContext.getActiveUser().getLogicalId(), cat);
         List<String> refs = getBroker().callRPCList("BGOWEB GETREF", null, s);
         
         if (!BgoUtil.errorCheck(refs)) {
@@ -220,7 +221,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
     
     private void loadCat() {
         cboCat.getItems().clear();
-        List<String> cats = getBroker().callRPCList("BGOWEB GETCATS", null, UserContext.getActiveUser().getDomainId());
+        List<String> cats = getBroker().callRPCList("BGOWEB GETCATS", null, UserContext.getActiveUser().getLogicalId());
         
         if (!BgoUtil.errorCheck(cats)) {
             for (String cat : cats) {
@@ -231,9 +232,9 @@ public class SaveLinkController extends BgoBaseController<Object> {
     
     private void loadLinks() {
         lstLinks.getItems().clear();
-        int linkType = LinkType.fromConcept(concept1).ordinal();
-        String s = VistAUtil.concatParams(linkType, concept1.getDomainId(), null, null, UserContext.getActiveUser()
-                .getDomainId());
+        int linkType = LinkType.fromConcept(concept1.getProxiedObject()).ordinal();
+        String s = VistAUtil.concatParams(linkType, concept1.getLogicalId(), null, null, UserContext.getActiveUser()
+            .getLogicalId());
         List<String> links = getBroker().callRPCList("BGOWEB GET", null, s);
         
         if (!BgoUtil.errorCheck(links)) {
@@ -247,17 +248,17 @@ public class SaveLinkController extends BgoBaseController<Object> {
     private void doSearch(boolean lowValue) {
         String result = null;
         Textbox txt = lowValue ? txtLow : txtHigh;
-        Coding concept = lowValue ? concept1 : concept2;
+        CodingProxy concept = lowValue ? concept1 : concept2;
         
         switch (refTable) {
             case rtICD:
                 result = ICDLookupController.execute(txt.getText(), false);
                 break;
-            
+                
             case rtCPT:
                 result = CPTLookupController.execute(txt.getText(), false);
                 break;
-            
+                
             default:
                 result = LookupController.execute(refTable, txt.getText(), false);
                 break;
@@ -267,13 +268,13 @@ public class SaveLinkController extends BgoBaseController<Object> {
             String[] pcs = StrUtil.split(result, StrUtil.U, 3);
             
             if (concept == null) {
-                concept = new Coding(concept1);
+                concept = new CodingProxy(concept1);
                 concept2 = concept;
             }
             
-            concept.setDomainId(pcs[0]);
-            concept.setCodeSimple(pcs[1]);
-            concept.setDisplaySimple(pcs[2]);
+            concept.setLogicalId(pcs[0]);
+            concept.getProxiedObject().setCodeSimple(pcs[1]);
+            concept.getProxiedObject().setDisplaySimple(pcs[2]);
             txt.setText(pcs[1] + " - " + pcs[2]);
         }
     }

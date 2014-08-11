@@ -9,20 +9,17 @@
  */
 package gov.ihs.cwf.domain;
 
-import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Organization;
 import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.fhir.model.type.HumanName;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Problem extends DomainObject {
-    
-    private static final long serialVersionUID = 1L;
     
     static {
         JSONUtil.registerAlias("Problem", Problem.class);
@@ -46,7 +43,7 @@ public class Problem extends DomainObject {
     
     private Organization facility;
     
-    private Coding icd9Code;
+    private CodingProxy icd9Code;
     
     private String problemClass;
     
@@ -73,19 +70,15 @@ public class Problem extends DomainObject {
         String pcs[] = StrUtil.split(value, StrUtil.U, 16);
         numberCode = pcs[0];
         patient = new Patient();
-        patient.setDomainId(pcs[1]);
-        icd9Code = new Coding();
-        icd9Code.setSystemSimple("ICD9");
-        icd9Code.setCodeSimple(pcs[2]);
-        icd9Code.setDomainId(pcs[11]);
-        icd9Code.setDisplaySimple(pcs[12]);
+        patient.setLogicalId(pcs[1]);
+        icd9Code = new CodingProxy(pcs[11], "ICD9", pcs[2], pcs[12]);
         modifyDate = parseDate(pcs[3]);
         problemClass = pcs[4];
         providerNarrative = pcs[5];
         entryDate = parseDate(pcs[6]);
         status = pcs[7];
         onsetDate = parseDate(pcs[8]);
-        setDomainId(pcs[9]);
+        setLogicalId(pcs[9]);
         notes = pcs[10];
         
         if (!pcs[13].isEmpty()) {
@@ -95,7 +88,7 @@ public class Problem extends DomainObject {
         
         if (!pcs[14].isEmpty()) {
             facility = new Organization();
-            facility.setDomainId(pcs[14]);
+            facility.setLogicalId(pcs[14]);
         }
         
         priority = pcs[15];
@@ -157,11 +150,11 @@ public class Problem extends DomainObject {
         this.patient = patient;
     }
     
-    public Coding getIcd9Code() {
+    public CodingProxy getIcd9Code() {
         return icd9Code;
     }
     
-    protected void setIcd9Code(Coding icd9Code) {
+    protected void setIcd9Code(CodingProxy icd9Code) {
         this.icd9Code = icd9Code;
     }
     

@@ -147,7 +147,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
             }
             
             Patient patient = PatientContext.getActivePatient();
-            probEvent = patient == null ? null : "PCC." + patient.getDomainId() + ".PRB";
+            probEvent = patient == null ? null : "PCC." + patient.getLogicalId() + ".PRB";
             
             if (probEvent != null) {
                 eventManager.subscribe(probEvent, genericEventHandler);
@@ -294,9 +294,9 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         EventUtil.status("Loading Problem List Data");
         
         if (allowAsync && !noAsync) {
-            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getDomainId(), true);
+            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getLogicalId(), true);
         } else {
-            loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getDomainId()));
+            loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getLogicalId()));
         }
         
         EventUtil.status();
@@ -336,7 +336,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         if (PromptDialog.confirm(
             "Are you sure that you wish to delete the problem titled:" + StrUtil.CRLF2 + problem.getNumberCode() + " - "
                     + problem.getProviderNarrative(), "Delete Problem?")) {
-            return getBroker().callRPC("BGOPROB DEL", problem.getDomainId());
+            return getBroker().callRPC("BGOPROB DEL", problem.getLogicalId());
         }
         
         return null;
@@ -423,11 +423,11 @@ public class ProblemListController extends BgoBaseController<Object> implements 
                         case EDIT:
                             status = editProblem(i);
                             break;
-                        
+                            
                         case DELETE:
                             status = deleteProblem(i);
                             break;
-                        
+                            
                         case POV:
                             //status = addPOV(...)
                             break;
@@ -498,7 +498,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
             WebSearchController.execute("");
         } else {
             Problem problem = (Problem) item.getValue();
-            BrowserController.execute(problem.getProviderNarrative(), null, problem.getIcd9Code(), true);
+            BrowserController.execute(problem.getProviderNarrative(), null, problem.getIcd9Code().getProxiedObject(), true);
         }
     }
     

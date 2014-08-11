@@ -9,19 +9,16 @@
  */
 package gov.ihs.cwf.domain;
 
-import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.fhir.model.type.HumanName;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Refusal extends DomainObject {
-    
-    private static final long serialVersionUID = 1L;
     
     static {
         JSONUtil.registerAlias("Refusal", Refusal.class);
@@ -29,9 +26,9 @@ public class Refusal extends DomainObject {
     
     private FMDate date;
     
-    private Coding type;
+    private CodingProxy type;
     
-    private Coding item;
+    private CodingProxy item;
     
     private Practitioner provider;
     
@@ -54,7 +51,7 @@ public class Refusal extends DomainObject {
      */
     public Refusal(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 12);
-        setDomainId(pcs[1]);
+        setLogicalId(pcs[1]);
         type = parseConcept("REFUSAL TYPE", pcs[2], pcs[3]);
         item = parseConcept("REFUSAL ITEM", pcs[4], pcs[5]);
         provider = parseProvider(pcs[6], pcs[7]);
@@ -64,18 +61,12 @@ public class Refusal extends DomainObject {
         comment = pcs[11];
     }
     
-    private Coding parseConcept(String sysId, String ien, String code) {
+    private CodingProxy parseConcept(String sysId, String ien, String code) {
         if (!VistAUtil.validateIEN(ien)) {
             return null;
         }
         
-        Coding concept = new Coding();
-        concept.setSystemSimple(sysId);
-        concept.setDomainId(ien);
-        concept.setCodeSimple(code);
-        concept.setDisplaySimple(code);
-        return concept;
-        
+        return new CodingProxy(ien, sysId, code, code);
     }
     
     private FMDate parseDate(String value) {
@@ -92,7 +83,7 @@ public class Refusal extends DomainObject {
         }
         
         Practitioner provider = new Practitioner();
-        provider.setDomainId(ien);
+        provider.setLogicalId(ien);
         provider.setName(new HumanName(name));
         return provider;
     }
@@ -105,19 +96,19 @@ public class Refusal extends DomainObject {
         this.date = date;
     }
     
-    public Coding getType() {
+    public CodingProxy getType() {
         return type;
     }
     
-    public void setType(Coding type) {
+    public void setType(CodingProxy type) {
         this.type = type;
     }
     
-    public Coding getItem() {
+    public CodingProxy getItem() {
         return item;
     }
     
-    public void setItem(Coding item) {
+    public void setItem(CodingProxy item) {
         this.item = item;
     }
     

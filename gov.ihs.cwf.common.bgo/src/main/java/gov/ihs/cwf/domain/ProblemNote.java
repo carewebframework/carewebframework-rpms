@@ -9,15 +9,13 @@
  */
 package gov.ihs.cwf.domain;
 
-import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Organization;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class ProblemNote extends DomainObject {
-    
-    private static final long serialVersionUID = 1L;
     
     static {
         JSONUtil.registerAlias("ProblemNote", ProblemNote.class);
@@ -52,8 +50,8 @@ public class ProblemNote extends DomainObject {
     public ProblemNote(String value) {
         String pcs[] = StrUtil.split(value, StrUtil.U, 7);
         this.facility = new Organization();
-        facility.setDomainId(pcs[0]);
-        setDomainId(pcs[1]);
+        facility.setLogicalId(pcs[0]);
+        setLogicalId(pcs[1]);
         this.number = pcs[2];
         this.narrative = pcs[3];
         this.status = pcs[4];

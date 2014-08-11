@@ -9,26 +9,24 @@
  */
 package gov.ihs.cwf.domain;
 
-import org.carewebframework.api.domain.DomainObject;
+import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 
 public class Forecast extends DomainObject {
-
-    private static final long serialVersionUID = 1L;
-
+    
     static {
         JSONUtil.registerAlias("Forecast", Forecast.class);
     }
-
+    
     private String immunization;
-
+    
     private String status;
-
+    
     public Forecast() {
         super();
     }
-
+    
     /**
      * Temporary constructor to create an immunization forecast from serialized form (will move to
      * json).
@@ -38,25 +36,25 @@ public class Forecast extends DomainObject {
      */
     public Forecast(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 3);
-        setDomainId(Integer.toString(hashCode()));
+        setLogicalId(Integer.toString(hashCode()));
         immunization = pcs[1];
         status = pcs[2];
     }
-
+    
     public String getImmunization() {
         return immunization;
     }
-
+    
     public void setImmunization(String immunization) {
         this.immunization = immunization;
     }
-
+    
     public String getStatus() {
         return status;
     }
-
+    
     public void setStatus(String status) {
         this.status = status;
     }
-
+    
 }

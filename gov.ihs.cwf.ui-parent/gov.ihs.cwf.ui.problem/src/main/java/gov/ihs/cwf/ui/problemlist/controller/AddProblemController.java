@@ -19,6 +19,7 @@ import gov.ihs.cwf.common.bgo.BgoConstants;
 import gov.ihs.cwf.common.bgo.BgoUtil;
 import gov.ihs.cwf.common.bgo.ICDLookupController;
 import gov.ihs.cwf.common.bgo.Params;
+import gov.ihs.cwf.domain.CodingProxy;
 import gov.ihs.cwf.domain.Problem;
 import gov.ihs.cwf.domain.ProblemNote;
 import gov.ihs.cwf.ui.problemlist.util.Constants;
@@ -28,12 +29,11 @@ import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.context.UserContext;
+import org.carewebframework.cal.api.domain.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Organization;
 import org.carewebframework.fhir.model.resource.Patient;
-import org.carewebframework.fhir.model.resource.User;
-import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.icons.IconUtil;
 import org.carewebframework.ui.zk.PopupDialog;
@@ -96,7 +96,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
     
     private Problem problem;
     
-    private Coding icd;
+    private CodingProxy icd;
     
     private final List<ProblemNote> changedNotes = new ArrayList<ProblemNote>();
     
@@ -123,22 +123,22 @@ public class AddProblemController extends BgoBaseController<Problem> {
      * Loads form data from the current problem.
      */
     private void loadForm() {
-        Coding icd9 = problem.getIcd9Code();
+        CodingProxy icd9 = problem.getIcd9Code();
         
         if (icd9 != null) {
-            txtICD.setText(icd9.getCodeSimple());
+            txtICD.setText(icd9.getProxiedObject().getCodeSimple());
         }
         
         String narr = problem.getProviderNarrative();
         
         if (narr == null) {
-            narr = icd9 == null ? "" : icd9.getDisplaySimple();
+            narr = icd9 == null ? "" : icd9.getProxiedObject().getDisplaySimple();
         }
         
         String probId = problem.getNumberCode();
         
         if (probId == null || probId.isEmpty()) {
-            probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getActivePatient().getDomainId());
+            probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getActivePatient().getLogicalId());
         }
         
         String pcs[] = probId.split("\\-", 2);
@@ -171,7 +171,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         lstNotes.getItems().clear();
-        List<String> notes = getBroker().callRPCList("BGOPRBN GET", null, problem.getDomainId());
+        List<String> notes = getBroker().callRPCList("BGOPRBN GET", null, problem.getLogicalId());
         
         if (BgoUtil.errorCheck(notes)) {
             return;
@@ -206,7 +206,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
     }
     
     private boolean deleteNote(ProblemNote pn) {
-        String s = VistAUtil.concatParams(problem.getDomainId(), pn.getFacility().getDomainId(), pn.getDomainId());
+        String s = VistAUtil.concatParams(problem.getLogicalId(), pn.getFacility().getLogicalId(), pn.getLogicalId());
         s = getBroker().callRPC("BGOPRBN DEL", s);
         return !BgoUtil.errorCheck(s);
     }
@@ -218,7 +218,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
      * @return True if successful.
      */
     private boolean addNote(ProblemNote pn) {
-        String s = VistAUtil.concatParams(problem.getDomainId(), null, pn.getFacility().getDomainId(), null,
+        String s = VistAUtil.concatParams(problem.getLogicalId(), null, pn.getFacility().getLogicalId(), null,
             pn.getNarrative());
         s = getBroker().callRPC("BGOPRBN SET", s);
         
@@ -231,9 +231,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         String[] pcs = StrUtil.split(s, StrUtil.U, 9);
         
-        pn.setDomainId(pcs[1]);
+        pn.setLogicalId(pcs[1]);
         Organization org = new Organization();
-        org.setDomainId(pcs[2]);
+        org.setLogicalId(pcs[2]);
         pn.setFacility(org);
         pn.setNumber(pcs[3]);
         pn.setNarrative(pcs[4]);
@@ -298,7 +298,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         if (PromptDialog
                 .confirm("Are you sure that you wish to delete this note:\n" + pn.getNumber() + " - " + pn.getNarrative(),
-                    "Delete Note?")) {
+                        "Delete Note?")) {
             item.detach();
             
             if (VistAUtil.validateIEN(pn)) {
@@ -315,23 +315,24 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         Patient patient = PatientContext.getActivePatient();
-        String sParam = VistAUtil.concatParams(patient.getDomainId(), txtID.getValue(), problem.getFacility().getDomainId(),
-            problem.getDomainId());
+        String sParam = VistAUtil.concatParams(patient.getLogicalId(), txtID.getValue(), problem.getFacility()
+                .getLogicalId(), problem.getLogicalId());
         String sRpc = getBroker().callRPC("BGOPROB CKID", sParam);
         
         if (BgoUtil.errorCheck(sRpc, "Invalid ID")) {
             return;
         }
         
-        Organization institution = (Organization) UserContext.getActiveUser().getOrganization().getReferenceTarget();
+        Organization institution = (Organization) UserContext.getActiveUser().getNativeUser().getOrganization()
+                .getReferenceTarget();
         String sNum = "1".equals(sRpc) ? "" : txtID.getValue(); // Pass only if changed
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9]
         String txtIcd = txtICD.getValue().trim();
         String txtIcd1 = StrUtil.piece(txtIcd, " - ");
         
-        if (icd != null && !"0".equals(icd.getCodeSimple())) {
-            sParam = icd.getCodeSimple();
+        if (icd != null && !"0".equals(icd.getProxiedObject().getCodeSimple())) {
+            sParam = icd.getProxiedObject().getCodeSimple();
         } else if (StringUtils.isEmpty(txtIcd)) {
             sParam = ".9999";
         } else if (!StringUtils.isEmpty(txtIcd1)) {
@@ -344,20 +345,20 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9] ^ Priority [10]
-        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getDomainId(),
+        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getLogicalId(),
             datOnset.getValue() == null ? "@" : datOnset.getValue(), radPersonal.isChecked() ? "P"
-                    : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I", patient.getDomainId(), problem
-                    .getDomainId(), sNum, priority <= 0 ? "@" : priority);
+                    : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I", patient.getLogicalId(), problem
+                            .getLogicalId(), sNum, priority <= 0 ? "@" : priority);
         sRpc = getBroker().callRPC("BGOPROB SET", sParam);
         
         if (BgoUtil.errorCheck(sRpc)) {
             return;
         }
         
-        problem.setDomainId(sRpc);
+        problem.setLogicalId(sRpc);
         
         if (txtNotes.isVisible() && !StringUtils.isEmpty(txtNotes.getValue())) {
-            sParam = VistAUtil.concatParams(problem.getDomainId(), null, institution.getDomainId(), null,
+            sParam = VistAUtil.concatParams(problem.getLogicalId(), null, institution.getLogicalId(), null,
                 txtNotes.getValue());
             sRpc = getBroker().callRPC("BGOPRBN SET", sParam);
             
@@ -382,11 +383,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         if (result != null) {
             String pcs[] = StrUtil.split(result, StrUtil.U, 3);
-            icd = new Coding();
-            icd.setSystemSimple("ICD9");
-            icd.setDomainId(pcs[0]);
-            icd.setCodeSimple(pcs[1]);
-            icd.setDisplaySimple(pcs[2]);
+            icd = new CodingProxy(pcs[0], "ICD9", pcs[1], pcs[2]);
             txtICD.setValue(pcs[2]);
         }
     }
@@ -399,9 +396,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         ProblemNote pn = new ProblemNote();
-        User user = UserContext.getActiveUser();
-        pn.setAuthor(user.getName().toString());
-        pn.setFacility((Organization) UserContext.getActiveUser().getOrganization().getReferenceTarget());
+        UserProxy user = UserContext.getActiveUser();
+        pn.setAuthor(user.getFullName());
+        pn.setFacility((Organization) user.getNativeUser().getOrganization().getReferenceTarget());
         pn.setNumber("*");
         pn.setNarrative(note);
         pn.setDateAdded(new FMDate(DateUtil.stripTime(new Date())));

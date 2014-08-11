@@ -19,13 +19,10 @@ import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.fhir.model.resource.Location;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.vista.api.domain.EncounterRelated;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Immunization extends EncounterRelated {
-    
-    private static final long serialVersionUID = 1L;
     
     static {
         JSONUtil.registerAlias("Immunization", Immunization.class);
@@ -45,7 +42,7 @@ public class Immunization extends EncounterRelated {
     
     private String volume;
     
-    private Coding immunization;
+    private CodingProxy immunization;
     
     private String age;
     
@@ -69,12 +66,8 @@ public class Immunization extends EncounterRelated {
      */
     public Immunization(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 23);
-        setDomainId(pcs[3]);
-        immunization = new Coding();
-        immunization.setSystemSimple("IMMUNIZATION");
-        immunization.setCodeSimple(pcs[1]);
-        immunization.setDomainId(pcs[6]);
-        immunization.setDisplaySimple(pcs[1]);
+        setLogicalId(pcs[3]);
+        immunization = new CodingProxy(pcs[6], "IMMUNIZATION", pcs[1], pcs[1]);
         
         String loc = pcs[4];
         
@@ -120,11 +113,11 @@ public class Immunization extends EncounterRelated {
         this.location = location;
     }
     
-    public Coding getImmunization() {
+    public CodingProxy getImmunization() {
         return immunization;
     }
     
-    public void setImmunization(Coding immunization) {
+    public void setImmunization(CodingProxy immunization) {
         this.immunization = immunization;
     }
     

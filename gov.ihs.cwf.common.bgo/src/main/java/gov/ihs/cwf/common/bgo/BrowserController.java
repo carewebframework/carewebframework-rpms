@@ -13,6 +13,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import gov.ihs.cwf.domain.CodingProxy;
+
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.type.Coding;
 import org.carewebframework.ui.zk.ListUtil;
@@ -61,7 +63,7 @@ public class BrowserController extends BgoBaseController<Object> {
     
     private Caption caption;
     
-    private Coding concept;
+    private CodingProxy concept;
     
     private boolean useIframe;
     
@@ -75,7 +77,7 @@ public class BrowserController extends BgoBaseController<Object> {
         super.doAfterCompose(comp);
         String searchText = (String) arg.get(0);
         String searchSite = (String) arg.get(1);
-        concept = (Coding) arg.get(2);
+        concept = (CodingProxy) arg.get(2);
         boolean allowAddressSearch = (Boolean) arg.get(3);
         loadSites();
         searchText = searchText == null ? "" : searchText.trim();
@@ -86,7 +88,8 @@ public class BrowserController extends BgoBaseController<Object> {
         }
         
         if (concept != null) {
-            caption.setLabel("Reference Links for " + concept.getCodeSimple() + " - " + concept.getDisplaySimple());
+            caption.setLabel("Reference Links for " + concept.getProxiedObject().getCodeSimple() + " - "
+                    + concept.getProxiedObject().getDisplaySimple());
         }
         
         pnlHistory.setVisible(allowAddressSearch);
@@ -126,7 +129,7 @@ public class BrowserController extends BgoBaseController<Object> {
         Comboitem item = cboSite.getSelectedItem();
         String[] pcs = item == null ? null : (String[]) item.getValue();
         
-        if (pcs != null && SaveLinkController.execute(concept, pcs[0], pcs[2])) {
+        if (pcs != null && SaveLinkController.execute(concept.getProxiedObject(), pcs[0], pcs[2])) {
             loadLinks();
         }
         /*
@@ -166,7 +169,7 @@ public class BrowserController extends BgoBaseController<Object> {
         
         // IEN to delete [1] ^ Reference to delete [2] ^ Link Type [3]
         String[] pcs = (String[]) item.getValue();
-        String s = VistAUtil.concatParams(pcs[2], pcs[3], LinkType.fromConcept(concept));
+        String s = VistAUtil.concatParams(pcs[2], pcs[3], LinkType.fromConcept(concept.getProxiedObject()));
         s = getBroker().callRPC("BGOWEB DEL", s);
         
         if (BgoUtil.errorCheck(s)) {
@@ -250,13 +253,13 @@ public class BrowserController extends BgoBaseController<Object> {
     private void loadLinks() {
         lstLinks.getItems().clear();
         lstLinks.setVisible(false);
-        LinkType linkType = LinkType.fromConcept(concept);
+        LinkType linkType = LinkType.fromConcept(concept.getProxiedObject());
         
         if (linkType == null) {
             return;
         }
         
-        String param = VistAUtil.concatParams(linkType, concept.getDomainId());
+        String param = VistAUtil.concatParams(linkType, concept.getLogicalId());
         List<String> links = getBroker().callRPCList("BGOWEB GET", null, param);
         
         for (String link : links) {

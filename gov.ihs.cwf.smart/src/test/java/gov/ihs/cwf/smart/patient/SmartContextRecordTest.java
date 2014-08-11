@@ -25,7 +25,7 @@ public class SmartContextRecordTest extends SmartContextBase {
         
         if (patient != null) {
             context.put("full_name", patient.getName());
-            context.put("id", patient.getDomainId());
+            context.put("id", patient.getLogicalId());
         }
     }
     

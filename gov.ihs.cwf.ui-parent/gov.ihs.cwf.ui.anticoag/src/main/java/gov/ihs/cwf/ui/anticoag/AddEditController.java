@@ -18,12 +18,12 @@ import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.cal.api.context.EncounterContext;
 import org.carewebframework.cal.api.context.UserContext;
+import org.carewebframework.cal.api.domain.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.NumUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.resource.User;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.wonderbar.IWonderbarServerSearchProvider;
 import org.carewebframework.ui.wonderbar.Wonderbar;
@@ -144,10 +144,10 @@ public class AddEditController extends FrameworkController {
             record = new AntiCoagRecord();
             record.setIndicated(true);
             record.setStartDate(DateUtil.today());
-            User user = UserContext.getActiveUser();
+            UserProxy user = UserContext.getActiveUser();
             Practitioner provider = new Practitioner();
-            provider.setDomainId(user.getDomainId());
-            provider.setName(user.getName());
+            provider.setLogicalId(user.getLogicalId());
+            provider.setName(user.getNativeUser().getName());
             record.setProvider(provider);
         } else {
             record = new AntiCoagRecord(record);
@@ -284,7 +284,7 @@ public class AddEditController extends FrameworkController {
                 EncounterUtil.forceCreate(encounter);
                 record.setVisitCategory(EncounterUtil.getServiceCategory(encounter));
                 record.setVisitDate(encounter.getPeriod().getStart().getValue().toDate());
-                record.setVisitIEN(encounter.getDomainId());
+                record.setVisitIEN(encounter.getLogicalId());
                 record.setVisitLocked(EncounterUtil.isLocked(encounter));
             }
             

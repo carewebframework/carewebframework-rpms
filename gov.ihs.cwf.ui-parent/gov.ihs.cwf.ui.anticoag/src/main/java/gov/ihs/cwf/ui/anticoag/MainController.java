@@ -100,10 +100,10 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
         }
         
         encounter = EncounterContext.getActiveEncounter();
-        visitIEN = encounter == null ? null : encounter.getDomainId();
+        visitIEN = encounter == null ? null : encounter.getLogicalId();
         super.committed();
         Patient patient = PatientContext.getActivePatient();
-        pccEvent = patient == null ? null : "PCC." + patient.getDomainId() + ".ACG";
+        pccEvent = patient == null ? null : "PCC." + patient.getLogicalId() + ".ACG";
         
         if (pccEvent != null) {
             getEventManager().subscribe(pccEvent, pccListener);
@@ -173,7 +173,7 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
     
     private AntiCoagRecord findRecord(String ien) {
         for (AntiCoagRecord record : model) {
-            if (record.getDomainId().equals(ien)) {
+            if (record.getLogicalId().equals(ien)) {
                 return record;
             }
         }
