@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.carewebframework</groupId>
+		<artifactId>org.carewebframework.rpms-parent</artifactId>
+		<version>1.1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>org.carewebframework.rpms.testharness</artifactId>
+	<packaging>war</packaging>
+	<name>TestHarness</name>
+	<properties>
+		<org.carewebframework.vista.security.artifact>org.carewebframework.vista.security.impl</org.carewebframework.vista.security.artifact>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.carewebframework</groupId>
+				<artifactId>org.carewebframework.mvn.plugin.themegenerator</artifactId>
+				<configuration>
+					<themes>
+						<theme>
+							<themeName>green</themeName>
+							<baseColor>003300</baseColor>
+						</theme>
+						<theme>
+							<themeName>lilac</themeName>
+							<baseColor>3e48ac</baseColor>
+						</theme>
+					</themes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<!-- Insert any plugins to be tested here. -->
+
+		<!-- CareWeb Framework Components -->
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.testharness</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.cal.ui.patientselection.v1</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.cal.ui.patientheader</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.ui.userheader</artifactId>
+			<version>${org.carewebframework.version}</version>
+		</dependency>
+		<!-- RPMS Plugins -->
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.ui.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.vista.api.patientlist</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
+		</dependency>
+		<!-- Security -->
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>${org.carewebframework.vista.security.artifact}</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+		</dependency>
+	</dependencies>
+</project>
