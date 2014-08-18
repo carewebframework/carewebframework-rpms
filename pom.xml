@@ -43,7 +43,7 @@
 		<module>org.carewebframework.rpms.api-parent</module>
 		<module>org.carewebframework.rpms.ui-parent</module>
 		<module>org.carewebframework.rpms.testharness</module>
-		<module>org.carewebframework.rpms.web.impl.goldb</module>
+		<module>org.carewebframework.rpms.web.goldb</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
