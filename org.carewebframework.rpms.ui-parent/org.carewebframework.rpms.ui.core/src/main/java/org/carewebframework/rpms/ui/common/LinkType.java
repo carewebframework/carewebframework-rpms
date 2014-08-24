@@ -9,12 +9,12 @@
  */
 package org.carewebframework.rpms.ui.common;
 
-import org.carewebframework.fhir.model.type.Coding;
+import org.carewebframework.fhir.model.type.CodingType;
 
 public enum LinkType {
     CPT4, CPT4_RANGE, ICD9, ICD9_RANGE, EDU, EXAM, IMM, SKIN;
     
-    public static LinkType fromConcept(Coding concept) {
+    public static LinkType fromConcept(CodingType concept) {
         try {
             return LinkType.valueOf(concept.getSystemSimple());
         } catch (Exception e) {

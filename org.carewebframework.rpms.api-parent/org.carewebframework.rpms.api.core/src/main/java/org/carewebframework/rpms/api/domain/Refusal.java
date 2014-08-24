@@ -14,7 +14,7 @@ import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanName;
+import org.carewebframework.fhir.model.type.HumanNameType;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
@@ -84,7 +84,7 @@ public class Refusal extends DomainObject {
         
         Practitioner provider = new Practitioner();
         provider.setLogicalId(ien);
-        provider.setName(new HumanName(name));
+        provider.setName(new HumanNameType(name));
         return provider;
     }
     

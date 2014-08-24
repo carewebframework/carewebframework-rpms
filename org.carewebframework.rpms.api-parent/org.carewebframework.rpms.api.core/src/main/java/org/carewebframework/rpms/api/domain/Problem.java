@@ -16,7 +16,7 @@ import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Organization;
 import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanName;
+import org.carewebframework.fhir.model.type.HumanNameType;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Problem extends DomainObject {
@@ -83,7 +83,7 @@ public class Problem extends DomainObject {
         
         if (!pcs[13].isEmpty()) {
             provider = new Practitioner();
-            provider.setName(new HumanName(pcs[13]));
+            provider.setName(new HumanNameType(pcs[13]));
         }
         
         if (!pcs[14].isEmpty()) {

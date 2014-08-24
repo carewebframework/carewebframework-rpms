@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.type.Coding;
+import org.carewebframework.fhir.model.type.CodingType;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.rpms.api.domain.CodingProxy;
@@ -68,7 +68,7 @@ public class BrowserController extends BgoBaseController<Object> {
     
     private boolean useIframe;
     
-    public static void execute(String searchText, String searchSite, Coding concept, boolean allowAddressSearch) {
+    public static void execute(String searchText, String searchSite, CodingType concept, boolean allowAddressSearch) {
         Params args = BgoUtil.packageParams(searchText, searchSite, concept, allowAddressSearch);
         PopupDialog.popup(DIALOG, args, true, true, true);
     }

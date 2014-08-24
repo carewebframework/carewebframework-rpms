@@ -21,7 +21,7 @@ import org.carewebframework.cal.api.context.UserContext;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.fhir.model.resource.Patient;
-import org.carewebframework.fhir.model.type.Identifier;
+import org.carewebframework.fhir.model.type.IdentifierType;
 import org.carewebframework.rpms.api.common.BgoException;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.domain.PCCUtil;
@@ -92,7 +92,7 @@ public class PCC {
         // Provider IEN [15]
         String s = VistAUtil.concatParams(null, encounter.getLogicalId(), "`" + icdIEN, patient.getLogicalId(), narrative,
             null, null, null, null, null, null, null, null, onset, EncounterUtil.getCurrentProvider(encounter)
-            .getLogicalId());
+                    .getLogicalId());
         s = VistAUtil.getBrokerSession().callRPC("BGOVPOV SET", s);
         
         if (BgoUtil.errorCode(s) == 0) {
@@ -199,8 +199,8 @@ public class PCC {
     }
     
     public static int compareProblemIDs(String id1, String id2) {
-        Identifier ed1 = PCCUtil.parseProblemID(id1);
-        Identifier ed2 = PCCUtil.parseProblemID(id2);
+        IdentifierType ed1 = PCCUtil.parseProblemID(id1);
+        IdentifierType ed2 = PCCUtil.parseProblemID(id2);
         int i = ed1.getLabelSimple().compareToIgnoreCase(ed2.getLabelSimple());
         
         if (i == 0) {

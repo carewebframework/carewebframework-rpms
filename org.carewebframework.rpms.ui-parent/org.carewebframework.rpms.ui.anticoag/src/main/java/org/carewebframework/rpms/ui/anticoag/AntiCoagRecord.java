@@ -23,7 +23,7 @@ import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanName;
+import org.carewebframework.fhir.model.type.HumanNameType;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 /**
@@ -130,7 +130,7 @@ public class AntiCoagRecord extends DomainObject {
         
         Practitioner provider = new Practitioner();
         provider.setLogicalId(ien);
-        provider.setName(new HumanName(name));
+        provider.setName(new HumanNameType(name));
         return provider;
     }
     

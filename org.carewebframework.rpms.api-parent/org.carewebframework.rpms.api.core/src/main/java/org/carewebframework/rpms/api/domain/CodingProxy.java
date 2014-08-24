@@ -10,16 +10,16 @@
 package org.carewebframework.rpms.api.domain;
 
 import org.carewebframework.cal.api.domain.DomainObjectProxy;
-import org.carewebframework.fhir.model.type.Coding;
+import org.carewebframework.fhir.model.type.CodingType;
 
 /**
  * Proxy for FHIR Coding data type.
  */
-public class CodingProxy extends DomainObjectProxy<Coding> {
+public class CodingProxy extends DomainObjectProxy<CodingType> {
     
     public CodingProxy(String logicalId, String system, String code, String display) {
-        super(logicalId, new Coding());
-        Coding coding = getProxiedObject();
+        super(logicalId, new CodingType());
+        CodingType coding = getProxiedObject();
         coding.setSystemSimple(system);
         coding.setCodeSimple(code);
         coding.setDisplaySimple(display);

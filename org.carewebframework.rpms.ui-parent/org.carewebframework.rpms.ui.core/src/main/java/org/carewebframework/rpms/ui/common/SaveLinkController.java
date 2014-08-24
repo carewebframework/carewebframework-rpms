@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils;
 
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.type.Coding;
+import org.carewebframework.fhir.model.type.CodingType;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.rpms.api.domain.CodingProxy;
@@ -71,7 +71,7 @@ public class SaveLinkController extends BgoBaseController<Object> {
     
     private Table refTable;
     
-    public static boolean execute(Coding concept, String siteName, String siteURL) {
+    public static boolean execute(CodingType concept, String siteName, String siteURL) {
         Params args = BgoUtil.packageParams(concept, siteName, siteURL);
         Window window = PopupDialog.popup(DIALOG, args, true, true, true);
         @SuppressWarnings("unchecked")

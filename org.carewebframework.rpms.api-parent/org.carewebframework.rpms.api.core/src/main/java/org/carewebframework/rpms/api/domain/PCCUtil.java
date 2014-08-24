@@ -15,8 +15,8 @@ import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.model.resource.Location;
 import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanName;
-import org.carewebframework.fhir.model.type.Identifier;
+import org.carewebframework.fhir.model.type.HumanNameType;
+import org.carewebframework.fhir.model.type.IdentifierType;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class PCCUtil {
@@ -27,7 +27,7 @@ public class PCCUtil {
      * @param value One of: [prefix]-[id] or [id]
      * @return An entity identifier.
      */
-    public static Identifier parseProblemID(String value) {
+    public static IdentifierType parseProblemID(String value) {
         String s = StrUtil.piece(value, "-", 2);
         String id = "";
         String prefix = "";
@@ -38,7 +38,7 @@ public class PCCUtil {
             id = s;
             prefix = StrUtil.piece(value, "-");
         }
-        Identifier ident = new Identifier();
+        IdentifierType ident = new IdentifierType();
         ident.setValueSimple(id);
         ident.setLabelSimple(prefix);
         return ident;
@@ -54,7 +54,7 @@ public class PCCUtil {
     
     public static FMDate parseDate(String value) {
         return value == null || value.isEmpty() ? null : StringUtils.isNumeric(value.replace(".", "")) ? new FMDate(value)
-        : new FMDate(DateUtil.parseDate(value));
+                : new FMDate(DateUtil.parseDate(value));
     }
     
     public static Practitioner parsePractitioner(String value) {
@@ -65,7 +65,7 @@ public class PCCUtil {
         String[] pcs = StrUtil.split(value, "~", 2);
         Practitioner practitioner = new Practitioner();
         practitioner.setLogicalId(pcs[0]);
-        practitioner.setName(new HumanName(pcs[1]));
+        practitioner.setName(new HumanNameType(pcs[1]));
         return practitioner;
     }
     
