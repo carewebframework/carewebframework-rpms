@@ -69,8 +69,8 @@ public class Service {
     }
     
     /**
-     * @param record
-     * @throws Exception
+     * @param record The anticoagulation record.
+     * @throws Exception Unspecified exception.
      */
     public void update(AntiCoagRecord record) throws Exception {
         String result = broker.callRPC("BGOVCOAG SET", toDAO(record));
@@ -80,7 +80,7 @@ public class Service {
     }
     
     /**
-     * @param record
+     * @param record The anticoagulation record.
      * @return <code>
      * V anticoag IEN (if edit) [1] ^ Indication [2] ^ Patient IEN [3] ^ Visit IEN [4] ^
      * Provider IEN [5] ^ Goal [6] ^ Min [7] ^ Max [8] ^ Duration [9] Start date [10] ^

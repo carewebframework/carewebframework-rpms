@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -180,7 +180,7 @@ public class SessionController extends FrameworkController implements IGenericEv
     /**
      * Enables the send button when text is present in the message text box.
      * 
-     * @param event
+     * @param event The onChanging event.
      */
     public void onChanging$txtMessage(InputEvent event) {
         updateControls(event.getValue().trim().isEmpty());
@@ -266,7 +266,7 @@ public class SessionController extends FrameworkController implements IGenericEv
     /**
      * Allows IOC container to inject chat service.
      * 
-     * @param chatService
+     * @param chatService The chat service.
      */
     public void setChatService(ChatService chatService) {
         this.chatService = chatService;

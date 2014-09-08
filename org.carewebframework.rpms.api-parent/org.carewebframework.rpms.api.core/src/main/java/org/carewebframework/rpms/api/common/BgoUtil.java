@@ -84,7 +84,7 @@ public class BgoUtil {
      * If value represents an error code, throws a BgoException.
      * 
      * @param value Value to check.
-     * @throws BgoException
+     * @throws BgoException Unspecified exception.
      */
     public static void errorCheck(List<String> value) {
         if (value != null && !value.isEmpty()) {
@@ -96,7 +96,7 @@ public class BgoUtil {
      * If value represents an error code, throws a BgoException.
      * 
      * @param value Value to check.
-     * @throws BgoException
+     * @throws BgoException Unspecified exception.
      */
     public static void errorCheck(String value) {
         long errorCode;

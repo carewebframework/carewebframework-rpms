@@ -57,8 +57,8 @@ public class ChatService implements IGenericEvent<String> {
     /**
      * Creates the chat service, supplying the broker and event manager instances.
      * 
-     * @param brokerSession
-     * @param eventManager
+     * @param brokerSession The broker session.
+     * @param eventManager The event manager.
      */
     public ChatService(BrokerSession brokerSession, IEventManager eventManager) {
         this.brokerSession = brokerSession;
@@ -175,7 +175,7 @@ public class ChatService implements IGenericEvent<String> {
     /**
      * Returns true if the service is actively listening for events.
      * 
-     * @return
+     * @return True if the service is actively listening.
      */
     public boolean isListening() {
         return listening;
@@ -185,7 +185,7 @@ public class ChatService implements IGenericEvent<String> {
      * Sets the listening state of the service. When set to false, the service stops listening to
      * all chat-related events.
      * 
-     * @param listening
+     * @param listening The listening state.
      */
     public void setListening(boolean listening) {
         this.listening = listening;

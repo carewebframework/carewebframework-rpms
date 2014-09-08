@@ -131,7 +131,7 @@ public class AddEditController extends FrameworkController {
     /**
      * Deferring this allows combo boxes to fully initialize.
      * 
-     * @param event
+     * @param event The onInitDialog event.
      */
     public void onInitDialog(Event event) {
         initDialog();

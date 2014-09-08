@@ -215,9 +215,9 @@ public class PCC {
     /**
      * Load CPT modifiers for the specified code and reference date.
      *
-     * @param cbo
-     * @param cptCode
-     * @param refDate
+     * @param cbo The combo box.
+     * @param cptCode The CPT4 code.
+     * @param refDate The reference date.
      */
     public static void loadModifiers(Combobox cbo, String cptCode, String refDate) {
         cbo.getItems().clear();

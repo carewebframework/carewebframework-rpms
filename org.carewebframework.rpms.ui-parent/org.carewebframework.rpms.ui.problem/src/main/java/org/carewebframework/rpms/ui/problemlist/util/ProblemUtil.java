@@ -16,7 +16,7 @@ public class ProblemUtil {
     /**
      * Returns the problem status for display.
      * 
-     * @param problem
+     * @param problem The problem.
      * @return Displayable problem status.
      */
     public static String getStatus(Problem problem) {

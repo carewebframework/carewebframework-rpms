@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -15,8 +15,7 @@ import org.zkoss.zul.Listitem;
 /**
  * Abstract base class for renderers.
  * 
- * 
- * @param <T>
+ * @param <T> The class of object to be rendered.
  */
 public abstract class BgoBaseRenderer<T> implements org.zkoss.zul.ListitemRenderer<T> {
     
@@ -31,9 +30,9 @@ public abstract class BgoBaseRenderer<T> implements org.zkoss.zul.ListitemRender
     /**
      * Add a cell to the list item.
      * 
-     * @param item
-     * @param object
-     * @return
+     * @param item The list item.
+     * @param object The object to add.
+     * @return The added cell.
      */
     protected Listcell addCell(Listitem item, Object object) {
         Listcell cell = new Listcell(object == null ? "" : object.toString());
