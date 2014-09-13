@@ -25,8 +25,6 @@
 					style="font-size:1.25em;font-weight:bold" />
 			</span>
 			<span style="float:right">
-				<toolbarbutton id="btnInfo"
-					image="${rc:getIconPath('information.png')}" />
 				<combobox id="cboFilter" readonly="true">
 					<comboitem label="All Problems" value="NONE" />
 					<comboitem label="Active Only" value="ACTIVE" />

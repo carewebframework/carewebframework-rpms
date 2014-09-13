@@ -29,9 +29,7 @@ import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.domain.Problem;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
-import org.carewebframework.rpms.ui.common.BrowserController;
 import org.carewebframework.rpms.ui.common.PCC;
-import org.carewebframework.rpms.ui.common.WebSearchController;
 import org.carewebframework.rpms.ui.problemlist.render.ProblemRenderer;
 import org.carewebframework.rpms.ui.problemlist.util.ProblemFilter;
 import org.carewebframework.shell.plugins.IPluginEvent;
@@ -489,17 +487,6 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     
     public void onClick$btnPOV() {
         doCommand(Command.POV);
-    }
-    
-    public void onClick$btnInfo() {
-        Listitem item = lbProblems.getSelectedItem();
-        
-        if (item == null) {
-            WebSearchController.execute("");
-        } else {
-            Problem problem = (Problem) item.getValue();
-            BrowserController.execute(problem.getProviderNarrative(), null, problem.getIcd9Code().getProxiedObject(), true);
-        }
     }
     
     public void onClick$mnuSetFilter() {
