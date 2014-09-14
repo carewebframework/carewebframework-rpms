@@ -11,6 +11,10 @@ package org.carewebframework.rpms.ui.common;
 
 import java.util.List;
 
+import ca.uhn.fhir.model.dstu.composite.IdentifierDt;
+import ca.uhn.fhir.model.dstu.resource.Encounter;
+import ca.uhn.fhir.model.dstu.resource.Patient;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
@@ -19,9 +23,6 @@ import org.carewebframework.cal.api.context.EncounterContext;
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.context.UserContext;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Encounter;
-import org.carewebframework.fhir.model.resource.Patient;
-import org.carewebframework.fhir.model.type.IdentifierType;
 import org.carewebframework.rpms.api.common.BgoException;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.domain.PCCUtil;
@@ -60,8 +61,8 @@ public class PCC {
         // Diagnosis [6] ^ Modifier #1 [7] ^ Provider IEN [8] ^ Principal [9] ^ V File IEN [10] ^
         // Narrative [11] ^ Modifier #2 [12] ^ Location IEN [13] ^ Outside Location [14] ^
         // Historical [15] ^ ICD Procedure Flag [16] ^ No Dups [17]
-        String sParam = VistAUtil.concatParams(encounter.getLogicalId(), cptIEN, patient.getLogicalId(), null, qty, null,
-            mod1, user.getLogicalId(), principal, null, narrative, mod2);
+        String sParam = VistAUtil.concatParams(encounter.getId().getIdPart(), cptIEN, patient.getId().getIdPart(), null,
+            qty, null, mod1, user.getLogicalId(), principal, null, narrative, mod2);
         return VistAUtil.getBrokerSession().callRPC("BGOVCPT SET", sParam);
     }
     
@@ -74,8 +75,8 @@ public class PCC {
     public static String addProvider(String provIEN, boolean primary, boolean forcePrimary) {
         Encounter encounter = EncounterContext.getActiveEncounter();
         Patient patient = PatientContext.getActivePatient();
-        String sParam = VistAUtil.concatParams(encounter.getLogicalId(), patient.getLogicalId(), provIEN, primary ? "P"
-                : "S", forcePrimary ? "1" : "");
+        String sParam = VistAUtil.concatParams(encounter.getId().getIdPart(), patient.getId().getIdPart(), provIEN,
+            primary ? "P" : "S", forcePrimary ? "1" : "");
         return VistAUtil.getBrokerSession().callRPC("BGOVPRV SETVPRV", sParam);
     }
     
@@ -90,9 +91,9 @@ public class PCC {
         // Stage [6] ^ Modifier [7] ^ Cause Dx [8] ^ First/Revisit [9] ^ Injury E-Code [10] ^
         // Injury Place [11] ^ Primary/Secondary [12] ^ Injury Date [13] ^ Onset Date [14] ^
         // Provider IEN [15]
-        String s = VistAUtil.concatParams(null, encounter.getLogicalId(), "`" + icdIEN, patient.getLogicalId(), narrative,
-            null, null, null, null, null, null, null, null, onset, EncounterUtil.getCurrentProvider(encounter)
-                    .getLogicalId());
+        String s = VistAUtil.concatParams(null, encounter.getId().getIdPart(), "`" + icdIEN, patient.getId().getIdPart(),
+            narrative, null, null, null, null, null, null, null, null, onset, EncounterUtil.getCurrentProvider(encounter)
+                    .getId().getIdPart());
         s = VistAUtil.getBrokerSession().callRPC("BGOVPOV SET", s);
         
         if (BgoUtil.errorCode(s) == 0) {
@@ -134,7 +135,7 @@ public class PCC {
         Patient patient = PatientContext.getActivePatient();
         IUser user = UserContext.getActiveUser();
         BrokerSession broker = VistAUtil.getBrokerSession();
-        String s = VistAUtil.concatParams(patient.getLogicalId(), visitIEN);
+        String s = VistAUtil.concatParams(patient.getId().getIdPart(), visitIEN);
         List<String> v = broker.callRPCList("BGOVPED GET", null, s);
         
         if (errorCheck(v)) {
@@ -184,7 +185,7 @@ public class PCC {
     
     public static String addProblem(String sICDIEN, String narrative, String onset) {
         BrokerSession broker = VistAUtil.getBrokerSession();
-        String institution = UserContext.getActiveUser().getNativeUser().getOrganization().getLogicalId();
+        String institution = UserContext.getActiveUser().getNativeUser().getProvider().getElementSpecificId();
         Patient patient = PatientContext.getActivePatient();
         
         if (onset == null) {
@@ -193,19 +194,19 @@ public class PCC {
         
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9]
-        String s = VistAUtil.concatParams(sICDIEN, narrative, institution, onset, null, "A", patient.getLogicalId(), null,
-            null);
+        String s = VistAUtil.concatParams(sICDIEN, narrative, institution, onset, null, "A", patient.getId().getIdPart(),
+            null, null);
         return broker.callRPC("BGOPROB SET", s);
     }
     
     public static int compareProblemIDs(String id1, String id2) {
-        IdentifierType ed1 = PCCUtil.parseProblemID(id1);
-        IdentifierType ed2 = PCCUtil.parseProblemID(id2);
-        int i = ed1.getLabelSimple().compareToIgnoreCase(ed2.getLabelSimple());
+        IdentifierDt ed1 = PCCUtil.parseProblemID(id1);
+        IdentifierDt ed2 = PCCUtil.parseProblemID(id2);
+        int i = ed1.getLabel().getValue().compareToIgnoreCase(ed2.getLabel().getValue());
         
         if (i == 0) {
-            int v1 = NumberUtils.toInt(ed1.getValueSimple());
-            int v2 = NumberUtils.toInt(ed2.getValueSimple());
+            int v1 = NumberUtils.toInt(ed1.getValue().getValue());
+            int v2 = NumberUtils.toInt(ed2.getValue().getValue());
             i = v1 == v2 ? 0 : v1 > v2 ? 1 : -1;
         }
         

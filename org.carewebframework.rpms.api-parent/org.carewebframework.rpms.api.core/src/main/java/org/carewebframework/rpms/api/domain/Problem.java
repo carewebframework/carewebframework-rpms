@@ -9,14 +9,15 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.resource.Organization;
+import ca.uhn.fhir.model.dstu.resource.Patient;
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Organization;
-import org.carewebframework.fhir.model.resource.Patient;
-import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanNameType;
+import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Problem extends DomainObject {
@@ -54,7 +55,7 @@ public class Problem extends DomainObject {
     public Problem(Patient patient) {
         super();
         this.patient = patient;
-        this.facility = (Organization) patient.getManagingOrganization().getReferenceTarget();
+        this.facility = (Organization) patient.getManagingOrganization().getResource();
     }
     
     /**
@@ -70,7 +71,7 @@ public class Problem extends DomainObject {
         String pcs[] = StrUtil.split(value, StrUtil.U, 16);
         numberCode = pcs[0];
         patient = new Patient();
-        patient.setLogicalId(pcs[1]);
+        patient.setId(pcs[1]);
         icd9Code = new CodingProxy(pcs[11], "ICD9", pcs[2], pcs[12]);
         modifyDate = parseDate(pcs[3]);
         problemClass = pcs[4];
@@ -78,17 +79,17 @@ public class Problem extends DomainObject {
         entryDate = parseDate(pcs[6]);
         status = pcs[7];
         onsetDate = parseDate(pcs[8]);
-        setLogicalId(pcs[9]);
+        setId(pcs[9]);
         notes = pcs[10];
         
         if (!pcs[13].isEmpty()) {
             provider = new Practitioner();
-            provider.setName(new HumanNameType(pcs[13]));
+            provider.setName(FhirUtil.parseName(pcs[13]));
         }
         
         if (!pcs[14].isEmpty()) {
             facility = new Organization();
-            facility.setLogicalId(pcs[14]);
+            facility.setId(pcs[14]);
         }
         
         priority = pcs[15];

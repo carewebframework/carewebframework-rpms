@@ -39,7 +39,7 @@ public class Contraindication extends DomainObject {
      */
     public Contraindication(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 5);
-        setLogicalId(pcs[1]);
+        setId(pcs[1]);
         immunization = pcs[2];
         reason = pcs[3];
         date = parseDate(pcs[4]);

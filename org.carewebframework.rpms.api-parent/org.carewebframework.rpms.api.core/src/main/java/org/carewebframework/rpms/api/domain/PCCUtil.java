@@ -9,14 +9,15 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.composite.IdentifierDt;
+import ca.uhn.fhir.model.dstu.resource.Location;
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.apache.commons.lang.StringUtils;
 
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Location;
-import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanNameType;
-import org.carewebframework.fhir.model.type.IdentifierType;
+import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class PCCUtil {
@@ -27,7 +28,7 @@ public class PCCUtil {
      * @param value One of: [prefix]-[id] or [id]
      * @return An entity identifier.
      */
-    public static IdentifierType parseProblemID(String value) {
+    public static IdentifierDt parseProblemID(String value) {
         String s = StrUtil.piece(value, "-", 2);
         String id = "";
         String prefix = "";
@@ -38,9 +39,9 @@ public class PCCUtil {
             id = s;
             prefix = StrUtil.piece(value, "-");
         }
-        IdentifierType ident = new IdentifierType();
-        ident.setValueSimple(id);
-        ident.setLabelSimple(prefix);
+        IdentifierDt ident = new IdentifierDt();
+        ident.setValue(id);
+        ident.setLabel(prefix);
         return ident;
     }
     
@@ -64,8 +65,8 @@ public class PCCUtil {
         
         String[] pcs = StrUtil.split(value, "~", 2);
         Practitioner practitioner = new Practitioner();
-        practitioner.setLogicalId(pcs[0]);
-        practitioner.setName(new HumanNameType(pcs[1]));
+        practitioner.setId(pcs[0]);
+        practitioner.setName(FhirUtil.parseName(pcs[1]));
         return practitioner;
     }
     

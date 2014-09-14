@@ -11,12 +11,13 @@ package org.carewebframework.rpms.ui.anticoag;
 
 import java.util.List;
 
+import ca.uhn.fhir.model.dstu.resource.Encounter;
+import ca.uhn.fhir.model.dstu.resource.Patient;
+
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.cal.api.context.EncounterContext;
 import org.carewebframework.cal.api.context.EncounterContext.IEncounterContextEvent;
 import org.carewebframework.cal.api.context.PatientContext;
-import org.carewebframework.fhir.model.resource.Encounter;
-import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.domain.EncounterUtil;
 import org.carewebframework.vista.ui.common.CoverSheetBase;
@@ -100,10 +101,10 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
         }
         
         encounter = EncounterContext.getActiveEncounter();
-        visitIEN = encounter == null ? null : encounter.getLogicalId();
+        visitIEN = encounter == null ? null : encounter.getId().getIdPart();
         super.committed();
         Patient patient = PatientContext.getActivePatient();
-        pccEvent = patient == null ? null : "PCC." + patient.getLogicalId() + ".ACG";
+        pccEvent = patient == null ? null : "PCC." + patient.getId().getIdPart() + ".ACG";
         
         if (pccEvent != null) {
             getEventManager().subscribe(pccEvent, pccListener);
@@ -173,7 +174,7 @@ public class MainController extends CoverSheetBase<AntiCoagRecord> implements IE
     
     private AntiCoagRecord findRecord(String ien) {
         for (AntiCoagRecord record : model) {
-            if (record.getLogicalId().equals(ien)) {
+            if (record.getId().getIdPart().equals(ien)) {
                 return record;
             }
         }

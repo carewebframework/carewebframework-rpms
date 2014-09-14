@@ -13,7 +13,7 @@ import java.util.List;
 
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.core.IReferenceable;
+import org.carewebframework.fhir.common.IReferenceable;
 import org.carewebframework.vista.mbroker.BrokerSession;
 import org.carewebframework.vista.mbroker.FMDate;
 
@@ -64,7 +64,7 @@ public class Service {
     }
     
     public void delete(AntiCoagRecord record, String reasonCode, String reasonText) throws Exception {
-        errorCheck(broker.callRPC("BGOVCOAG DEL", record.getLogicalId() + "^" + reasonCode
+        errorCheck(broker.callRPC("BGOVCOAG DEL", record.getId().getIdPart() + "^" + reasonCode
                 + (reasonText == null ? "" : "^" + reasonText)));
     }
     
@@ -75,7 +75,7 @@ public class Service {
     public void update(AntiCoagRecord record) throws Exception {
         String result = broker.callRPC("BGOVCOAG SET", toDAO(record));
         errorCheck(result);
-        record.setLogicalId(result);
+        record.setId(result);
         
     }
     
@@ -110,7 +110,7 @@ public class Service {
     }
     
     private void appendData(StringBuilder sb, Object data) {
-        sb.append(data == null ? "" : data instanceof IReferenceable ? ((IReferenceable) data).getLogicalId() : data)
+        sb.append(data == null ? "" : data instanceof IReferenceable ? ((IReferenceable) data).getId().getIdPart() : data)
                 .append('^');
     }
     

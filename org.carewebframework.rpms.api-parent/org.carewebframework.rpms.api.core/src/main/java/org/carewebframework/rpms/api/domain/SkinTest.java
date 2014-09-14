@@ -9,14 +9,15 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.resource.Encounter;
+import ca.uhn.fhir.model.dstu.resource.Location;
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.domain.DomainFactoryRegistry;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Encounter;
-import org.carewebframework.fhir.model.resource.Location;
-import org.carewebframework.fhir.model.resource.Practitioner;
 import org.carewebframework.vista.api.domain.EncounterRelated;
 import org.carewebframework.vista.api.domain.EncounterUtil;
 import org.carewebframework.vista.mbroker.FMDate;
@@ -63,14 +64,14 @@ public class SkinTest extends EncounterRelated {
      */
     public SkinTest(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 17);
-        setLogicalId(pcs[2]);
+        setId(pcs[2]);
         String loc = pcs[3];
         
         if (loc.isEmpty()) {
             location = PCCUtil.parseLocation(pcs[14]);
         } else {
             location = new Location();
-            location.setNameSimple(loc);
+            location.setName(loc);
         }
         
         result = pcs[4]; // SetProperCase?

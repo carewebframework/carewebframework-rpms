@@ -9,10 +9,11 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.resource.Organization;
+
 import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Organization;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class ProblemNote extends DomainObject {
@@ -50,8 +51,8 @@ public class ProblemNote extends DomainObject {
     public ProblemNote(String value) {
         String pcs[] = StrUtil.split(value, StrUtil.U, 7);
         this.facility = new Organization();
-        facility.setLogicalId(pcs[0]);
-        setLogicalId(pcs[1]);
+        facility.setId(pcs[0]);
+        setId(pcs[1]);
         this.number = pcs[2];
         this.narrative = pcs[3];
         this.status = pcs[4];

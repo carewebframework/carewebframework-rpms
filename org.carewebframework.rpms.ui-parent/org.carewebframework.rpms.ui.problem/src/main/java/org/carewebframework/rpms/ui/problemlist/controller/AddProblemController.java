@@ -14,6 +14,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import ca.uhn.fhir.model.dstu.resource.Organization;
+import ca.uhn.fhir.model.dstu.resource.Patient;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
@@ -22,8 +25,6 @@ import org.carewebframework.cal.api.context.UserContext;
 import org.carewebframework.cal.api.domain.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Organization;
-import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.rpms.api.domain.CodingProxy;
 import org.carewebframework.rpms.api.domain.Problem;
@@ -125,19 +126,19 @@ public class AddProblemController extends BgoBaseController<Problem> {
         CodingProxy icd9 = problem.getIcd9Code();
         
         if (icd9 != null) {
-            txtICD.setText(icd9.getProxiedObject().getCodeSimple());
+            txtICD.setText(icd9.getProxiedObject().getCode().getValue());
         }
         
         String narr = problem.getProviderNarrative();
         
         if (narr == null) {
-            narr = icd9 == null ? "" : icd9.getProxiedObject().getDisplaySimple();
+            narr = icd9 == null ? "" : icd9.getProxiedObject().getDisplay().getValue();
         }
         
         String probId = problem.getNumberCode();
         
         if (probId == null || probId.isEmpty()) {
-            probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getActivePatient().getLogicalId());
+            probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getActivePatient().getId().getIdPart());
         }
         
         String pcs[] = probId.split("\\-", 2);
@@ -170,7 +171,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         lstNotes.getItems().clear();
-        List<String> notes = getBroker().callRPCList("BGOPRBN GET", null, problem.getLogicalId());
+        List<String> notes = getBroker().callRPCList("BGOPRBN GET", null, problem.getId().getIdPart());
         
         if (PCC.errorCheck(notes)) {
             return;
@@ -205,7 +206,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
     }
     
     private boolean deleteNote(ProblemNote pn) {
-        String s = VistAUtil.concatParams(problem.getLogicalId(), pn.getFacility().getLogicalId(), pn.getLogicalId());
+        String s = VistAUtil.concatParams(problem.getId().getIdPart(), pn.getFacility().getId().getIdPart(), pn.getId()
+                .getIdPart());
         s = getBroker().callRPC("BGOPRBN DEL", s);
         return !PCC.errorCheck(s);
     }
@@ -217,7 +219,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
      * @return True if successful.
      */
     private boolean addNote(ProblemNote pn) {
-        String s = VistAUtil.concatParams(problem.getLogicalId(), null, pn.getFacility().getLogicalId(), null,
+        String s = VistAUtil.concatParams(problem.getId().getIdPart(), null, pn.getFacility().getId().getIdPart(), null,
             pn.getNarrative());
         s = getBroker().callRPC("BGOPRBN SET", s);
         
@@ -230,9 +232,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         String[] pcs = StrUtil.split(s, StrUtil.U, 9);
         
-        pn.setLogicalId(pcs[1]);
+        pn.setId(pcs[1]);
         Organization org = new Organization();
-        org.setLogicalId(pcs[2]);
+        org.setId(pcs[2]);
         pn.setFacility(org);
         pn.setNumber(pcs[3]);
         pn.setNarrative(pcs[4]);
@@ -297,7 +299,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         if (PromptDialog
                 .confirm("Are you sure that you wish to delete this note:\n" + pn.getNumber() + " - " + pn.getNarrative(),
-                        "Delete Note?")) {
+                    "Delete Note?")) {
             item.detach();
             
             if (VistAUtil.validateIEN(pn)) {
@@ -314,24 +316,23 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         Patient patient = PatientContext.getActivePatient();
-        String sParam = VistAUtil.concatParams(patient.getLogicalId(), txtID.getValue(), problem.getFacility()
-                .getLogicalId(), problem.getLogicalId());
+        String sParam = VistAUtil.concatParams(patient.getId().getIdPart(), txtID.getValue(), problem.getFacility().getId()
+                .getIdPart(), problem.getId().getIdPart());
         String sRpc = getBroker().callRPC("BGOPROB CKID", sParam);
         
         if (PCC.errorCheck(sRpc)) {
             return;
         }
         
-        Organization institution = (Organization) UserContext.getActiveUser().getNativeUser().getOrganization()
-                .getReferenceTarget();
+        Organization institution = (Organization) patient.getManagingOrganization().getResource();
         String sNum = "1".equals(sRpc) ? "" : txtID.getValue(); // Pass only if changed
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9]
         String txtIcd = txtICD.getValue().trim();
         String txtIcd1 = StrUtil.piece(txtIcd, " - ");
         
-        if (icd != null && !"0".equals(icd.getProxiedObject().getCodeSimple())) {
-            sParam = icd.getProxiedObject().getCodeSimple();
+        if (icd != null && !"0".equals(icd.getProxiedObject().getCode().getValue())) {
+            sParam = icd.getProxiedObject().getCode().getValue();
         } else if (StringUtils.isEmpty(txtIcd)) {
             sParam = ".9999";
         } else if (!StringUtils.isEmpty(txtIcd1)) {
@@ -344,20 +345,20 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9] ^ Priority [10]
-        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getLogicalId(),
-            datOnset.getValue() == null ? "@" : datOnset.getValue(), radPersonal.isChecked() ? "P"
-                    : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I", patient.getLogicalId(), problem
-                            .getLogicalId(), sNum, priority <= 0 ? "@" : priority);
+        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getId().getIdPart(), datOnset
+                .getValue() == null ? "@" : datOnset.getValue(), radPersonal.isChecked() ? "P" : radFamily.isChecked() ? "F"
+                : "", radActive.isChecked() ? "A" : "I", patient.getId().getIdPart(), problem.getId().getIdPart(), sNum,
+            priority <= 0 ? "@" : priority);
         sRpc = getBroker().callRPC("BGOPROB SET", sParam);
         
         if (PCC.errorCheck(sRpc)) {
             return;
         }
         
-        problem.setLogicalId(sRpc);
+        problem.setId(sRpc);
         
         if (txtNotes.isVisible() && !StringUtils.isEmpty(txtNotes.getValue())) {
-            sParam = VistAUtil.concatParams(problem.getLogicalId(), null, institution.getLogicalId(), null,
+            sParam = VistAUtil.concatParams(problem.getId().getIdPart(), null, institution.getId().getIdPart(), null,
                 txtNotes.getValue());
             sRpc = getBroker().callRPC("BGOPRBN SET", sParam);
             
@@ -397,7 +398,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         ProblemNote pn = new ProblemNote();
         UserProxy user = UserContext.getActiveUser();
         pn.setAuthor(user.getFullName());
-        pn.setFacility((Organization) user.getNativeUser().getOrganization().getReferenceTarget());
+        pn.setFacility((Organization) PatientContext.getActivePatient().getManagingOrganization().getResource());
         pn.setNumber("*");
         pn.setNarrative(note);
         pn.setDateAdded(new FMDate(DateUtil.stripTime(new Date())));

@@ -9,12 +9,13 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanNameType;
+import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
 
@@ -51,7 +52,7 @@ public class Refusal extends DomainObject {
      */
     public Refusal(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 12);
-        setLogicalId(pcs[1]);
+        setId(pcs[1]);
         type = parseConcept("REFUSAL TYPE", pcs[2], pcs[3]);
         item = parseConcept("REFUSAL ITEM", pcs[4], pcs[5]);
         provider = parseProvider(pcs[6], pcs[7]);
@@ -83,8 +84,8 @@ public class Refusal extends DomainObject {
         }
         
         Practitioner provider = new Practitioner();
-        provider.setLogicalId(ien);
-        provider.setName(new HumanNameType(name));
+        provider.setId(ien);
+        provider.setName(FhirUtil.parseName(name));
         return provider;
     }
     

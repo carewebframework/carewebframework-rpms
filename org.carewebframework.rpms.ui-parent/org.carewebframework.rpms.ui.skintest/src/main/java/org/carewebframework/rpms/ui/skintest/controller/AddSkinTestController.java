@@ -13,11 +13,12 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import ca.uhn.fhir.model.dstu.resource.Encounter;
+
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.cal.api.context.EncounterContext;
 import org.carewebframework.common.DateUtil;
-import org.carewebframework.fhir.model.resource.Encounter;
 import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
 import org.carewebframework.rpms.ui.common.LookupController;
@@ -121,7 +122,7 @@ public class AddSkinTestController extends BgoBaseController<Object> {
             }
             setEventType(EventType.CURRENT);
             Encounter visit = EncounterContext.getActiveEncounter();
-            Date date = visit == null ? null : visit.getPeriod().getStartSimple().toDate();
+            Date date = visit == null ? null : visit.getPeriod().getStart().getValue();
             datEvent.setValue(DateUtil.stripTime(date == null ? new Date() : date));
         }
     }
@@ -134,14 +135,14 @@ public class AddSkinTestController extends BgoBaseController<Object> {
                 fraCurrent.setVisible(false);
                 enableResultItems("", "POSITIVE", "NEGATIVE", "DOUBTFUL", "NO TAKE");
                 break;
-                
+            
             case CURRENT:
                 fraHistorical.setVisible(false);
                 fraCurrent.setVisible(true);
                 radCurrent.setChecked(true);
                 enableResultItems("PENDING", "POSITIVE", "NEGATIVE", "DOUBTFUL", "NO TAKE");
                 break;
-                
+            
             case REFUSAL:
                 radRefusal.setChecked(true);
                 fraHistorical.setVisible(false);

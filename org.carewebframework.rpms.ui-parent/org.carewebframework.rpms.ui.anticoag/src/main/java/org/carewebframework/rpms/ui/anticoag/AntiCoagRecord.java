@@ -16,14 +16,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.BooleanUtils;
 
 import org.carewebframework.cal.api.domain.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
-import org.carewebframework.fhir.model.resource.Practitioner;
-import org.carewebframework.fhir.model.type.HumanNameType;
+import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 /**
@@ -91,7 +92,7 @@ public class AntiCoagRecord extends DomainObject {
      */
     public AntiCoagRecord(String data) {
         String[] pcs = split(data, U, 17);
-        setLogicalId(pcs[0]);
+        setId(pcs[0]);
         setIndicated(BooleanUtils.toBoolean(pcs[1]));
         setVisitDate(VistAUtil.parseDate(pcs[2]));
         setGoalRange(pcs[3]);
@@ -129,8 +130,8 @@ public class AntiCoagRecord extends DomainObject {
         }
         
         Practitioner provider = new Practitioner();
-        provider.setLogicalId(ien);
-        provider.setName(new HumanNameType(name));
+        provider.setId(ien);
+        provider.setName(FhirUtil.parseName(name));
         return provider;
     }
     

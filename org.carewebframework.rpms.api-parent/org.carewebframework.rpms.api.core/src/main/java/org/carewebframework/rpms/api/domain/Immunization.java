@@ -9,14 +9,15 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.resource.Encounter;
+import ca.uhn.fhir.model.dstu.resource.Location;
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.domain.DomainFactoryRegistry;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Encounter;
-import org.carewebframework.fhir.model.resource.Location;
-import org.carewebframework.fhir.model.resource.Practitioner;
 import org.carewebframework.vista.api.domain.EncounterRelated;
 import org.carewebframework.vista.mbroker.FMDate;
 
@@ -64,7 +65,7 @@ public class Immunization extends EncounterRelated {
      */
     public Immunization(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 23);
-        setLogicalId(pcs[3]);
+        setId(pcs[3]);
         immunization = new CodingProxy(pcs[6], "IMMUNIZATION", pcs[1], pcs[1]);
         
         String loc = pcs[4];
@@ -73,7 +74,7 @@ public class Immunization extends EncounterRelated {
             location = PCCUtil.parseLocation(pcs[18]);
         } else {
             location = new Location();
-            location.setNameSimple(loc);
+            location.setName(loc);
         }
         
         lot = pcs[7];

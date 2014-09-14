@@ -12,6 +12,8 @@ package org.carewebframework.rpms.ui.problemlist.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import ca.uhn.fhir.model.dstu.resource.Patient;
+
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -25,7 +27,6 @@ import org.carewebframework.cal.api.context.EncounterContext.IEncounterContextEv
 import org.carewebframework.cal.api.context.PatientContext;
 import org.carewebframework.cal.api.context.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.domain.Problem;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
@@ -145,7 +146,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
             }
             
             Patient patient = PatientContext.getActivePatient();
-            probEvent = patient == null ? null : "PCC." + patient.getLogicalId() + ".PRB";
+            probEvent = patient == null ? null : "PCC." + patient.getId().getIdPart() + ".PRB";
             
             if (probEvent != null) {
                 eventManager.subscribe(probEvent, genericEventHandler);
@@ -292,9 +293,9 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         EventUtil.status("Loading Problem List Data");
         
         if (allowAsync && !noAsync) {
-            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getLogicalId(), true);
+            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getId().getIdPart(), true);
         } else {
-            loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getLogicalId()));
+            loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getId().getIdPart()));
         }
         
         EventUtil.status();
@@ -334,7 +335,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         if (PromptDialog.confirm(
             "Are you sure that you wish to delete the problem titled:" + StrUtil.CRLF2 + problem.getNumberCode() + " - "
                     + problem.getProviderNarrative(), "Delete Problem?")) {
-            return getBroker().callRPC("BGOPROB DEL", problem.getLogicalId());
+            return getBroker().callRPC("BGOPROB DEL", problem.getId().getIdPart());
         }
         
         return null;

@@ -9,8 +9,9 @@
  */
 package org.carewebframework.rpms.api.smart.patient;
 
+import ca.uhn.fhir.model.dstu.resource.Patient;
+
 import org.carewebframework.cal.api.context.PatientContext;
-import org.carewebframework.fhir.model.resource.Patient;
 import org.carewebframework.smart.SmartContextBase;
 
 public class SmartContextRecordTest extends SmartContextBase {
@@ -25,7 +26,7 @@ public class SmartContextRecordTest extends SmartContextBase {
         
         if (patient != null) {
             context.put("full_name", patient.getName());
-            context.put("id", patient.getLogicalId());
+            context.put("id", patient.getId().getIdPart());
         }
     }
     

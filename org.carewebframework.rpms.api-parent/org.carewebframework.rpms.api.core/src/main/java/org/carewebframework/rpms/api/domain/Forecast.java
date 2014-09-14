@@ -36,7 +36,7 @@ public class Forecast extends DomainObject {
      */
     public Forecast(String value) {
         String[] pcs = StrUtil.split(value, StrUtil.U, 3);
-        setLogicalId(Integer.toString(hashCode()));
+        setId(Integer.toString(hashCode()));
         immunization = pcs[1];
         status = pcs[2];
     }

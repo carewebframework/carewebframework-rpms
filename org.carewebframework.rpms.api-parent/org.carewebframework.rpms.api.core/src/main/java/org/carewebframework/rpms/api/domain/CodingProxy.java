@@ -9,20 +9,21 @@
  */
 package org.carewebframework.rpms.api.domain;
 
+import ca.uhn.fhir.model.dstu.composite.CodingDt;
+
 import org.carewebframework.cal.api.domain.DomainObjectProxy;
-import org.carewebframework.fhir.model.type.CodingType;
 
 /**
  * Proxy for FHIR Coding data type.
  */
-public class CodingProxy extends DomainObjectProxy<CodingType> {
+public class CodingProxy extends DomainObjectProxy<CodingDt> {
     
     public CodingProxy(String logicalId, String system, String code, String display) {
-        super(logicalId, new CodingType());
-        CodingType coding = getProxiedObject();
-        coding.setSystemSimple(system);
-        coding.setCodeSimple(code);
-        coding.setDisplaySimple(display);
+        super(logicalId, new CodingDt());
+        CodingDt coding = getProxiedObject();
+        coding.setSystem(system);
+        coding.setCode(code);
+        coding.setDisplay(display);
     }
     
     public CodingProxy(CodingProxy src) {

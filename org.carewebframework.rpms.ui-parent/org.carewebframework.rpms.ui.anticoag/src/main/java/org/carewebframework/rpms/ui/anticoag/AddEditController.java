@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import ca.uhn.fhir.model.dstu.resource.Encounter;
+import ca.uhn.fhir.model.dstu.resource.Practitioner;
+
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.cal.api.context.EncounterContext;
@@ -22,8 +25,6 @@ import org.carewebframework.cal.api.domain.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.NumUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.model.resource.Encounter;
-import org.carewebframework.fhir.model.resource.Practitioner;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.wonderbar.IWonderbarServerSearchProvider;
 import org.carewebframework.ui.wonderbar.Wonderbar;
@@ -146,7 +147,7 @@ public class AddEditController extends FrameworkController {
             record.setStartDate(DateUtil.today());
             UserProxy user = UserContext.getActiveUser();
             Practitioner provider = new Practitioner();
-            provider.setLogicalId(user.getLogicalId());
+            provider.setId(user.getLogicalId());
             provider.setName(user.getNativeUser().getName());
             record.setProvider(provider);
         } else {
@@ -283,8 +284,8 @@ public class AddEditController extends FrameworkController {
                 Encounter encounter = EncounterContext.getActiveEncounter();
                 EncounterUtil.forceCreate(encounter);
                 record.setVisitCategory(EncounterUtil.getServiceCategory(encounter));
-                record.setVisitDate(encounter.getPeriod().getStart().getValue().toDate());
-                record.setVisitIEN(encounter.getLogicalId());
+                record.setVisitDate(encounter.getPeriod().getStart().getValue());
+                record.setVisitIEN(encounter.getId().getIdPart());
                 record.setVisitLocked(EncounterUtil.isLocked(encounter));
             }
             
