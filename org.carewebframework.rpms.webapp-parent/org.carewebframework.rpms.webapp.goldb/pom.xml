@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
 	<parent>
 		<groupId>org.carewebframework</groupId>
 		<artifactId>org.carewebframework.rpms.webapp-parent</artifactId>
-		<version>1.1.0-SNAPSHOT</version>
+		<version>1.1.0</version>
 	</parent>
 	
 	<artifactId>org.carewebframework.rpms.webapp.goldb</artifactId>
@@ -66,47 +65,47 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.icons.famfamfam</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.currentdatetime</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.infopanel</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.popupsupport</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.statuspanel</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.userheader</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.chat</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.cal.ui.patientselection.v1</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.cal.ui.patientheader</artifactId>
-			<version>${org.carewebframework.version}</version>
+			<version>3.1.0</version>
 		</dependency>
 		<!-- RPMS Plugins -->
 		<dependency>
@@ -138,68 +137,68 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.alerts</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.allergies</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.documents</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.vitals</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.consultorders</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.crises</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.cwad</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.esig</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.laborders</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.notification</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.settings</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.api.patientlist</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<!-- Security -->
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>${org.carewebframework.vista.security.artifact}</artifactId>
-			<version>${org.carewebframework.vista.version}</version>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
