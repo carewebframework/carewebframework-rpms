@@ -12,7 +12,7 @@
 	<name>TestHarness</name>
 	
 	<properties>
-		<org.carewebframework.vista.security.artifact>org.carewebframework.vista.security.impl</org.carewebframework.vista.security.artifact>
+		<org.carewebframework.security.profile>org.carewebframework.vista.security.testharness</org.carewebframework.security.profile>
 	</properties>
 	
 	<build>
@@ -47,17 +47,17 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.cal.ui.patientselection.v1</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${org.carewebframework.cal.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.cal.ui.patientheader</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${org.carewebframework.cal.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.ui.userheader</artifactId>
-			<version>4.0.0-SNAPSHOT</version>
+			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<!-- RPMS Plugins -->
 		<dependency>
@@ -67,13 +67,13 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.api.patientlist</artifactId>
-			<version>1.1.0-SNAPSHOT</version>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<!-- Security -->
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>${org.carewebframework.vista.security.artifact}</artifactId>
-			<version>1.1.0-SNAPSHOT</version>
+			<artifactId>${org.carewebframework.security.profile}</artifactId>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
