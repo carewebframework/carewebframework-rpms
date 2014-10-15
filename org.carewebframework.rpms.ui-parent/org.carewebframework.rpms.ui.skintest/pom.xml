@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.carewebframework</groupId>
 		<artifactId>org.carewebframework.rpms.ui-parent</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 	</parent>
 	<artifactId>org.carewebframework.rpms.ui.skintest</artifactId>
 	<name>Skin Test Record</name>
@@ -15,12 +15,12 @@
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.vista.ui.context.encounter</artifactId>
-			<version>1.0.0</version>
+			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.rpms.ui.core</artifactId>
-			<version>${project.parent.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

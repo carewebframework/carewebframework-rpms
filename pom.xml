@@ -3,21 +3,21 @@
 	
 	<parent>
 		<groupId>org.carewebframework</groupId>
-		<artifactId>org.carewebframework-parent</artifactId>
-		<version>3.1.0</version>
+		<artifactId>org.carewebframework.vista-parent</artifactId>
+		<version>1.0.1</version>
 	</parent>
 	
 	<groupId>org.carewebframework</groupId>
 	<artifactId>org.carewebframework.rpms-parent</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<packaging>pom</packaging>
 	
 	<scm>
 		<connection>${scm.scm}:${scm.base}</connection>
 		<developerConnection>${scm.scm}:${scm.base}</developerConnection>
 		<url>${scm.base}</url>
-	  <tag>1.1.0-RELEASE</tag>
-  </scm>
+	  <tag>1.1.1</tag>
+  	</scm>
 	
 	<licenses>
 		<license>
@@ -42,7 +42,6 @@
 	
 	<properties>
 		<scm.parent>carewebframework-rpms</scm.parent>
-		<org.carewebframework.vista.version>1.0.0-SNAPSHOT</org.carewebframework.vista.version>
 	</properties>
 	
 	<modules>
@@ -56,34 +55,34 @@
 			<dependency>
 				<groupId>org.carewebframework</groupId>
 				<artifactId>org.carewebframework.cal.api.core</artifactId>
-				<version>${org.carewebframework.version}</version>
+				<version>${org.carewebframework.cal.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.carewebframework</groupId>
 				<artifactId>org.carewebframework.cal.api.patientlist</artifactId>
-				<version>${org.carewebframework.version}</version>
+				<version>${org.carewebframework.cal.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.carewebframework</groupId>
 				<artifactId>org.carewebframework.vista.api.core</artifactId>
-				<version>1.0.0</version>
+				<version>${org.carewebframework.vista.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.carewebframework</groupId>
 				<artifactId>org.carewebframework.vista.api.core</artifactId>
-				<version>1.0.0</version>
+				<version>${org.carewebframework.vista.version}</version>
 				<type>test-jar</type>
 				<scope>test</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.carewebframework</groupId>
 				<artifactId>org.carewebframework.vista.ui.core</artifactId>
-				<version>1.0.0</version>
+				<version>${org.carewebframework.vista.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.carewebframework</groupId>
 				<artifactId>org.carewebframework.vista.mbroker</artifactId>
-				<version>1.0.0</version>
+				<version>${org.carewebframework.vista.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

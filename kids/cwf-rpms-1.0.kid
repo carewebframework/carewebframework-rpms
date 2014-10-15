@@ -1,13 +1,13 @@
-KIDS Distribution saved on Sep 17, 2014@15:48:03
+KIDS Distribution saved on Oct 15, 2014@17:22:18
 CAREWEB DISTRIBUTION (RPMS) 1.0
 **KIDS**:CAREWEB DISTRIBUTION (RPMS) 1.0^CIA RPC BROKER 1.2^CIA WEBMAN 2.1^CAREWEB FRAMEWORK 1.0^CAREWEB CONTEXT 1.0^CAREWEB RPMS ENHANCEMENTS 1.0^
 
 **INSTALL NAME**
 CAREWEB DISTRIBUTION (RPMS) 1.0
 "BLD",8495,0)
-CAREWEB DISTRIBUTION (RPMS) 1.0^^1^3140917^n
+CAREWEB DISTRIBUTION (RPMS) 1.0^^1^3141015^n
 "BLD",8495,6.3)
-61
+63
 "BLD",8495,10,0)
 ^9.63^35^5
 "BLD",8495,10,30,0)
@@ -195,7 +195,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWFUTL",1,0)
 RGCWFUTL ;RI/CBMI/DKM CareWeb Management Utilites;18-Mar-2014 18:39;DKM
 "RTN","RGCWFUTL",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 61
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 63
 "RTN","RGCWFUTL",3,0)
  ; Initiate shutdown sequence for applications
 "RTN","RGCWFUTL",4,0)
@@ -331,7 +331,7 @@ SHOWSESS() ;
 **INSTALL NAME**
 CIA RPC BROKER 1.2
 "BLD",8484,0)
-CIA RPC BROKER 1.2^^0^3140917^n
+CIA RPC BROKER 1.2^^0^3141015^n
 "BLD",8484,1,0)
 ^9.61A^1^1^3101115^^^^
 "BLD",8484,1,1,0)
@@ -369,7 +369,7 @@ y^y^f^^^^n
 "BLD",8484,4,"B",19941.24,19941.24)
 
 "BLD",8484,6.3)
-124
+128
 "BLD",8484,"INI")
 PRE^CIANBINI
 "BLD",8484,"INIT")
@@ -1639,7 +1639,7 @@ D XPZ2^XPDIQ
 "RTN","CIANBACT",1,0)
 CIANBACT ;MSC/IND/DKM - MSC RPC Broker Actions;15-Aug-2014 12:15;DKM
 "RTN","CIANBACT",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBACT",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBACT",4,0)
@@ -2005,7 +2005,7 @@ AUTHMETH(UCI) ;
 "RTN","CIANBASY",1,0)
 CIANBASY ;MSC/IND/DKM - Asynchronous RPC calls ;15-Aug-2014 12:15;DKM
 "RTN","CIANBASY",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBASY",3,0)
  ;;Copyright 2000-2012, Medsphere Systems Corporation
 "RTN","CIANBASY",4,0)
@@ -2137,7 +2137,7 @@ STOPALL N ZTSK
 "RTN","CIANBEVT",1,0)
 CIANBEVT ;MSC/IND/DKM - Event Support ;15-Aug-2014 12:15;DKM
 "RTN","CIANBEVT",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBEVT",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBEVT",4,0)
@@ -2681,7 +2681,7 @@ RELATES(EVA,EVB) ;EP
 "RTN","CIANBINI",1,0)
 CIANBINI ;MSC/IND/DKM - MSC RPC Broker Installation ;15-Aug-2014 12:15;DKM
 "RTN","CIANBINI",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBINI",3,0)
  ;;Copyright 2000-2012, Medsphere Systems Corporation
 "RTN","CIANBINI",4,0)
@@ -2903,7 +2903,7 @@ OBJINST ; EP
 "RTN","CIANBLIS",1,0)
 CIANBLIS ;MSC/IND/DKM - MSC RPC Broker ;15-Aug-2014 12:15;DKM
 "RTN","CIANBLIS",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBLIS",3,0)
  ;;Copyright 2000-2011, Medsphere Systems Corporation
 "RTN","CIANBLIS",4,0)
@@ -3511,7 +3511,7 @@ CHPRN(X) D SETNM^%ZOSV($E(X,1,15))
 "RTN","CIANBLOG",1,0)
 CIANBLOG ;MSC/IND/DKM - MSC RPC Broker Activity Log Support ;15-Aug-2014 12:15;DKM
 "RTN","CIANBLOG",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Jan 3, 2008;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Jan 3, 2008;Build 128
 "RTN","CIANBLOG",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBLOG",4,0)
@@ -3699,7 +3699,7 @@ ISACTIVE() ;
 "RTN","CIANBRPC",1,0)
 CIANBRPC ;MSC/IND/DKM - MSC RPC Broker Privileged RPCs;15-Aug-2014 12:15;DKM
 "RTN","CIANBRPC",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBRPC",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBRPC",4,0)
@@ -4249,7 +4249,7 @@ TMPGBL(X) ;
 "RTN","CIANBUTL",1,0)
 CIANBUTL ;MSC/IND/DKM - MSC RPC Broker Utilities ;15-Aug-2014 12:15;DKM
 "RTN","CIANBUTL",2,0)
- ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 124
+ ;;1.2;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 128
 "RTN","CIANBUTL",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBUTL",4,0)
@@ -5369,7 +5369,7 @@ This file logs session activities such as RPC calls and remote events.
 **INSTALL NAME**
 CIA WEBMAN 2.1
 "BLD",8502,0)
-CIA WEBMAN 2.1^^0^3140917^n
+CIA WEBMAN 2.1^^0^3141015^n
 "BLD",8502,1,0)
 ^^1^1^3050323.081257
 "BLD",8502,1,1,0)
@@ -5401,7 +5401,7 @@ y^y^f^^^^n
 "BLD",8502,4,"B",19941.13,19941.13)
 
 "BLD",8502,6.3)
-37
+41
 "BLD",8502,"ABPKG")
 n
 "BLD",8502,"INI")
@@ -5747,7 +5747,7 @@ D XPZ2^XPDIQ
 "RTN","CIANWCG",1,0)
 CIANWCG ;CIA/IND/DKM/PLS - CGI utilities;15-Aug-2014 12:17;DKM
 "RTN","CIANWCG",2,0)
- ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 37
+ ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 41
 "RTN","CIANWCG",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWCG",4,0)
@@ -5913,7 +5913,7 @@ LIST(CIAENV,CIALST) ;
 "RTN","CIANWCG4",1,0)
 CIANWCG4 ;CIA/IND/DKM - Miscellaneous CGI functions ;15-Aug-2014 12:17;DKM
 "RTN","CIANWCG4",2,0)
- ;;2.1;WEBMAN;;23-Aug-96 08:35;Build 37
+ ;;2.1;WEBMAN;;23-Aug-96 08:35;Build 41
 "RTN","CIANWCG4",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWCG4",4,0)
@@ -6023,7 +6023,7 @@ HFY(CIAX) Q $$SUBST^CIAU($$CHAR^CIANWSV1(CIAX),"]]","]")
 "RTN","CIANWINI",1,0)
 CIANWINI ;CIA/IND/DKM - WebMan Inits;15-Aug-2014 12:17;DKM
 "RTN","CIANWINI",2,0)
- ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 37
+ ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 41
 "RTN","CIANWINI",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWINI",4,0)
@@ -6141,7 +6141,7 @@ DEVICE ;; Setups for HTML device
 "RTN","CIANWLOG",1,0)
 CIANWLOG ;CIA/IND/DKM/PLS - Log user state information;15-Aug-2014 12:17;DKM
 "RTN","CIANWLOG",2,0)
- ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 37
+ ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 41
 "RTN","CIANWLOG",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWLOG",4,0)
@@ -6295,7 +6295,7 @@ BME(CIAVAR) ;
 "RTN","CIANWMAI",1,0)
 CIANWMAI ;CIA/IND/DKM/PLS - MailMan access utilities;15-Aug-2014 12:17;DKM
 "RTN","CIANWMAI",2,0)
- ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 37
+ ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 41
 "RTN","CIANWMAI",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWMAI",4,0)
@@ -6415,7 +6415,7 @@ SUBJECT(CIAMSG) ;
 "RTN","CIANWMAP",1,0)
 CIANWMAP ;CIA/IND/DKM/PLS - Server-based clickable map support;15-Aug-2014 12:17;DKM
 "RTN","CIANWMAP",2,0)
- ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 37
+ ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 41
 "RTN","CIANWMAP",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWMAP",4,0)
@@ -6513,7 +6513,7 @@ DIST(CIAX,CIAY) ;
 "RTN","CIANWMNU",1,0)
 CIANWMNU ;CIA/IND/DKM/PLS - Menu management utilities;15-Aug-2014 12:17;DKM
 "RTN","CIANWMNU",2,0)
- ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 37
+ ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 41
 "RTN","CIANWMNU",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWMNU",4,0)
@@ -6649,7 +6649,7 @@ USERPREF N CIAOPT,CIAZ
 "RTN","CIANWSV",1,0)
 CIANWSV ;CIA/IND/DKM/PLS - WWW Server Software;15-Aug-2014 12:17;DKM
 "RTN","CIANWSV",2,0)
- ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 37
+ ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 41
 "RTN","CIANWSV",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWSV",4,0)
@@ -7225,7 +7225,7 @@ FATAL S CIAQUIT=1
 "RTN","CIANWSV1",1,0)
 CIANWSV1 ;MSC/IND/DKM/PLS - Continuation of CIANWSV;15-Aug-2014 12:17;DKM
 "RTN","CIANWSV1",2,0)
- ;;2.1;WEBMAN;;05-Mar-1998 17:50 [DKM];Build 37
+ ;;2.1;WEBMAN;;05-Mar-1998 17:50 [DKM];Build 41
 "RTN","CIANWSV1",3,0)
  ;;Copyright 2000-2006, Medsphere Systems Corporation
 "RTN","CIANWSV1",4,0)
@@ -7587,7 +7587,7 @@ AUTHEN() N CIAUU
 "RTN","CIANWSV2",1,0)
 CIANWSV2 ;CIA/IND/DKM/PLS - Continuation of CIANWSV;15-Aug-2014 12:17;DKM
 "RTN","CIANWSV2",2,0)
- ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 37
+ ;;2.1;WEBMAN;;10-Dec-97 10:12;Build 41
 "RTN","CIANWSV2",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWSV2",4,0)
@@ -7667,7 +7667,7 @@ SHTDWN2 S $P(^CIANW(19941.1,CIAREALM,.9),U)=1
 "RTN","CIANWTC1",1,0)
 CIANWTC1 ;CIA/IND/DKM/PLS - DSM TCP I/O;15-Aug-2014 12:17;DKM
 "RTN","CIANWTC1",2,0)
- ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 37
+ ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 41
 "RTN","CIANWTC1",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWTC1",4,0)
@@ -7703,7 +7703,7 @@ ADDR() Q $&ZLIB.%TRNLNM("UCX$INET_HOSTADDR")
 "RTN","CIANWTC2",1,0)
 CIANWTC2 ;CIA/IND/DKM/PLS - MSM TCP I/O;15-Aug-2014 12:17;DKM
 "RTN","CIANWTC2",2,0)
- ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 37
+ ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 41
 "RTN","CIANWTC2",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWTC2",4,0)
@@ -7743,7 +7743,7 @@ ADDR() Q ""
 "RTN","CIANWTC3",1,0)
 CIANWTC3 ;CIA/IND/DKM/PLS - Open M TCP I/O;15-Aug-2014 12:17;DKM
 "RTN","CIANWTC3",2,0)
- ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 37
+ ;;2.1;WEBMAN;;06-Mar-1998 12:58 [DKM];Build 41
 "RTN","CIANWTC3",3,0)
  ;;Copyright 2000-2003, Clinical Informatics Associates, Inc.
 "RTN","CIANWTC3",4,0)
@@ -8447,7 +8447,7 @@ WEBMAN FILE REGISTRY^19941.13
 **INSTALL NAME**
 CAREWEB FRAMEWORK 1.0
 "BLD",8485,0)
-CAREWEB FRAMEWORK 1.0^CAREWEB FRAMEWORK^0^3140917^n
+CAREWEB FRAMEWORK 1.0^CAREWEB FRAMEWORK^0^3141015^n
 "BLD",8485,4,0)
 ^9.64PA^19941.1^3
 "BLD",8485,4,999.1,0)
@@ -8475,7 +8475,7 @@ I $$SCRN^RGCWKDTP(Y,5)
 "BLD",8485,4,"B",19941.21,19941.21)
 
 "BLD",8485,6.3)
-102
+106
 "BLD",8485,"ABPKG")
 n
 "BLD",8485,"INI")
@@ -9593,7 +9593,7 @@ RI/CBMI
 "PKG",220,22,0)
 ^9.49I^1^1
 "PKG",220,22,1,0)
-1.0^3140917^3140319^1
+1.0^3141015^3140319^1
 "PKG",220,"DEV")
 DKM/RI/CBMI
 "PKG",220,"VERSION")
@@ -9677,7 +9677,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWFPAR",1,0)
 RGCWFPAR ;RI/CBMI/DKM - Parameter management ;18-Mar-2014 17:24;DKM
 "RTN","RGCWFPAR",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 102
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 106
 "RTN","RGCWFPAR",3,0)
  ; Load a parameter template
 "RTN","RGCWFPAR",4,0)
@@ -9877,7 +9877,7 @@ SETPAR(DATA,PARAM,VAL,ENT,INST) ;
 "RTN","RGCWFRPC",1,0)
 RGCWFRPC ;RI/CBMI/DKM - Miscellaneous RPC calls ;15-Mar-2014 11:56;DKM
 "RTN","RGCWFRPC",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 102
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 106
 "RTN","RGCWFRPC",3,0)
  ; RPC: Get/set DISV entry for selected file/IEN
 "RTN","RGCWFRPC",4,0)
@@ -9995,7 +9995,7 @@ TMPGBL(X) ;EP
 "RTN","RGCWFUSR",1,0)
 RGCWFUSR ;RI/CBMI/DKM - User utility methods;17-Mar-2014 17:03;DKM
 "RTN","RGCWFUSR",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 102
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 106
 "RTN","RGCWFUSR",3,0)
  ; Returns true if user has key
 "RTN","RGCWFUSR",4,0)
@@ -10221,7 +10221,7 @@ HASFMCD(DATA,CODE) ;
 "RTN","RGCWFUTL",1,0)
 RGCWFUTL ;RI/CBMI/DKM CareWeb Management Utilites;18-Mar-2014 18:39;DKM
 "RTN","RGCWFUTL",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 102
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 106
 "RTN","RGCWFUTL",3,0)
  ; Initiate shutdown sequence for applications
 "RTN","RGCWFUTL",4,0)
@@ -10357,7 +10357,7 @@ SHOWSESS() ;
 "RTN","RGCWKDIN",1,0)
 RGCKDIN ;RI/CBMI/DKM - CareWeb KIDS installation support ;15-Aug-2014 12:40;DKM
 "RTN","RGCWKDIN",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 102
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 106
 "RTN","RGCWKDIN",3,0)
  ; Environment check
 "RTN","RGCWKDIN",4,0)
@@ -10683,7 +10683,7 @@ MES(MSG,QUIT) ;
 "RTN","RGCWSEFR",1,0)
 RGCWSEFR ;RI/CBMI/DKM - XML FHIR Support ;13-Sep-2014 18:10;DKM
 "RTN","RGCWSEFR",2,0)
- ;;1.0;RGCW;;14-March-2014;Build 102
+ ;;1.0;RGCW;;14-March-2014;Build 106
 "RTN","RGCWSEFR",3,0)
  ;=================================================================
 "RTN","RGCWSEFR",4,0)
@@ -11095,7 +11095,7 @@ ITER(CTX,ROOT) ;
 "RTN","RGCWSEJN",1,0)
 RGCWSEJN ;RI/CBMI/DKM - JSON Serialization Support ;13-Sep-2014 16:04;DKM
 "RTN","RGCWSEJN",2,0)
- ;;1.0;RGCW;;14-March-2014;Build 102
+ ;;1.0;RGCW;;14-March-2014;Build 106
 "RTN","RGCWSEJN",3,0)
  ;=================================================================
 "RTN","RGCWSEJN",4,0)
@@ -11267,7 +11267,7 @@ ADD(X) D ADD^RGCWSER(X)
 "RTN","RGCWSER",1,0)
 RGCWSER ;RI/CBMI/DKM - Core Serialization Support ;12-Sep-2014 17:16;DKM
 "RTN","RGCWSER",2,0)
- ;;1.0;RGCW;;14-March-2014;Build 102
+ ;;1.0;RGCW;;14-March-2014;Build 106
 "RTN","RGCWSER",3,0)
  ;=================================================================
 "RTN","RGCWSER",4,0)
@@ -12073,7 +12073,7 @@ DAT() N X,Y,TZ,H,M
 "RTN","RGCWSERD",1,0)
 RGCWSERD ;RI/CBMI/DKM - Serialization Date Support ;08-Aug-2014 12:27;DKM
 "RTN","RGCWSERD",2,0)
- ;;1.0;RGCW;;14-March-2014;Build 102
+ ;;1.0;RGCW;;14-March-2014;Build 106
 "RTN","RGCWSERD",3,0)
  ;=================================================================
 "RTN","RGCWSERD",4,0)
@@ -13291,7 +13291,7 @@ CIA EVENT TYPE^19941.21
 **INSTALL NAME**
 CAREWEB CONTEXT 1.0
 "BLD",8487,0)
-CAREWEB CONTEXT 1.0^^0^3140917^n
+CAREWEB CONTEXT 1.0^^0^3141015^n
 "BLD",8487,4,0)
 ^9.64PA^19941.21^4
 "BLD",8487,4,999.1,0)
@@ -13325,7 +13325,7 @@ I $$SCRN^RGCWKDTP(Y,5)
 "BLD",8487,4,"B",19941.21,19941.21)
 
 "BLD",8487,6.3)
-101
+105
 "BLD",8487,"INI")
 PRE^RGCWKDIN
 "BLD",8487,"INIT")
@@ -13701,7 +13701,7 @@ D FETCH^RGCWSER(.DATA,"FHIR/Organization_Reference",DUZ(2),PN)
 "DATA",999.1,16,10,9,0)
 photo^^C^90
 "DATA",999.1,16,10,9,10)
-N X,Y D PHOTOS^MAGGTIG(.X,IEN) F Y=0:0 S Y=$O(X(Y)) Q:'Y  S X=$P(X(Y),U,3) I $E(X,1,4)="http" D ADDTAG(PN),PUT("contentType","image/"_$P(X,".",$L(X,"."))),PUT("url",X),ENDTAG(PN)
+Q:'$L($T(^MAGGTIG))  N X,Y D PHOTOS^MAGGTIG(.X,IEN) F Y=0:0 S Y=$O(X(Y)) Q:'Y  S X=$P(X(Y),U,3) I $E(X,1,4)="http" D ADDTAG(PN),PUT("contentType","image/"_$P(X,".",$L(X,"."))),PUT("url",X),ENDTAG(PN)
 "DATA",999.1,16,10,10,0)
 telecom:phone:home^.131^C^100
 "DATA",999.1,16,10,10,10)
@@ -13819,7 +13819,7 @@ D TELECOM
 "DATA",999.1,21,0)
 FHIR/DocumentReference^8925^^FR
 "DATA",999.1,21,10,0)
-^999.11^14^12
+^999.11^14^11
 "DATA",999.1,21,10,1,0)
 description^1701^F^10
 "DATA",999.1,21,10,3,0)
@@ -13836,8 +13836,6 @@ D ADDTAG(PN),PUT("reference","Patient/"_VL("I")),PUT("display",VL("E")),ENDTAG(P
 author^1202^C^70
 "DATA",999.1,21,10,7,10)
 D ADDTAG(PN),PUT("reference","Practitioner/"_VL("I")),PUT("display",VL("E")),ENDTAG(PN)
-"DATA",999.1,21,10,8,0)
-indexed^1301^D^80
 "DATA",999.1,21,10,9,0)
 mimeType^^F^90
 "DATA",999.1,21,10,9,10)
@@ -14755,7 +14753,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWENC1",1,0)
 RGCWENC1 ;RI/CBMI/DKM - Visit Creation Support ;14-Mar-2014 17:10;DKM
 "RTN","RGCWENC1",2,0)
- ;;1.0;CAREWEB FRAMEWORK;**005004;20-Aug-2007 08:41;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;**005004;20-Aug-2007 08:41;Build 105
 "RTN","RGCWENC1",3,0)
  ; Visit creation API
 "RTN","RGCWENC1",4,0)
@@ -15053,7 +15051,7 @@ ADDVIST(IN,OUT) ;
 "RTN","RGCWENCX",1,0)
 RGCWENCX ;RI/CBMI/DKM - Encounter Context Support ;17-Jun-2014 20:27;DKM
 "RTN","RGCWENCX",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWENCX",3,0)
  ; RPC: Fetch visit data given visit file IEN
 "RTN","RGCWENCX",4,0)
@@ -15797,7 +15795,7 @@ SSVCCAT(DATA,IEN) ;
 "RTN","RGCWFTIU",1,0)
 RGCWFTIU ;RI/CBMI/DKM - TIU FHIR Support ;28-Jul-2014 17:23;DKM
 "RTN","RGCWFTIU",2,0)
- ;;1.0;RGCW;;14-March-2014;Build 101
+ ;;1.0;RGCW;;14-March-2014;Build 105
 "RTN","RGCWFTIU",3,0)
  ;=================================================================
 "RTN","RGCWFTIU",4,0)
@@ -15865,7 +15863,7 @@ PERSON(TAG,ENT,FLD) ;
 "RTN","RGCWKDIN",1,0)
 RGCKDIN ;RI/CBMI/DKM - CareWeb KIDS installation support ;15-Aug-2014 12:40;DKM
 "RTN","RGCWKDIN",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWKDIN",3,0)
  ; Environment check
 "RTN","RGCWKDIN",4,0)
@@ -16191,7 +16189,7 @@ MES(MSG,QUIT) ;
 "RTN","RGCWPTCX",1,0)
 RGCWPTCX ;RI/CBMI/DKM - Patient Context Object ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTCX",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTCX",3,0)
  ; Save/retrieve last patient selected for current institution
 "RTN","RGCWPTCX",4,0)
@@ -16541,7 +16539,7 @@ FMTSSN(SSN) ;EP - P7
 "RTN","RGCWPTP1",1,0)
 RGCWPTP1 ;RI/CBMI/DKM - Patient List Management ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTP1",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTP1",3,0)
  ; Return list of patients with clinic appt w/in range
 "RTN","RGCWPTP1",4,0)
@@ -16787,7 +16785,7 @@ HOSPLOC(DATA,FROM,DIR,MAX,TYPE,START,END) ;EP
 "RTN","RGCWPTP2",1,0)
 RGCWPTP2 ;RI/CBMI/DKM - Patient List Management ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTP2",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTP2",3,0)
  ; Retrieve a given list for a given user
 "RTN","RGCWPTP2",4,0)
@@ -16925,7 +16923,7 @@ GETNAME(IEN) ;
 "RTN","RGCWPTP3",1,0)
 RGCWPTP3 ;RI/CBMI/MGH - Patient List Management ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTP3",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTP3",3,0)
  ; Call logic to manage team lists
 "RTN","RGCWPTP3",4,0)
@@ -17179,7 +17177,7 @@ UPPER(X) ; Convert lower case X to UPPER CASE
 "RTN","RGCWPTPC",1,0)
 RGCWPTPC ;RI/CBMI/DKM - RPC calls for provider information ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTPC",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTPC",3,0)
 USESD() Q $G(DUZ("AG"))'="I"
 "RTN","RGCWPTPC",4,0)
@@ -17317,7 +17315,7 @@ TEAM(PRV) ;EP
 "RTN","RGCWPTPL",1,0)
 RGCWPTPL ;RI/CBMI/DKM - Patient List Management ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTPL",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTPL",3,0)
  ; Lookup by full or partial SSN
 "RTN","RGCWPTPL",4,0)
@@ -17589,7 +17587,7 @@ PARAMITM() Q "RGCWPTPL DEFAULT ITEM"
 "RTN","RGCWPTPS",1,0)
 RGCWPTPS ;RI/CBMI/DKM - Patient search ;30-Jul-2014 11:46;DKM
 "RTN","RGCWPTPS",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 101
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 105
 "RTN","RGCWPTPS",3,0)
 SEARCH(DATA,MAX,LNAME,FNAME,MRN,SSN,IEN,SEX,DOB) ;EP
 "RTN","RGCWPTPS",4,0)
@@ -18431,7 +18429,7 @@ CIA EVENT TYPE^19941.21
 **INSTALL NAME**
 CAREWEB RPMS ENHANCEMENTS 1.0
 "BLD",8497,0)
-CAREWEB RPMS ENHANCEMENTS 1.0^^0^3140917^n
+CAREWEB RPMS ENHANCEMENTS 1.0^^0^3141015^n
 "BLD",8497,4,0)
 ^9.64PA^19941.21^3
 "BLD",8497,4,999.1,0)
@@ -18459,7 +18457,7 @@ I $$SCRN^RGCWKDTP(Y,5)
 "BLD",8497,4,"B",19941.21,19941.21)
 
 "BLD",8497,6.3)
-51
+53
 "BLD",8497,"INI")
 PRE^RGCWKDIN
 "BLD",8497,"INIT")
@@ -18717,7 +18715,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWKDIN",1,0)
 RGCKDIN ;RI/CBMI/DKM - CareWeb KIDS installation support ;15-Aug-2014 12:40;DKM
 "RTN","RGCWKDIN",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 51
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 53
 "RTN","RGCWKDIN",3,0)
  ; Environment check
 "RTN","RGCWKDIN",4,0)

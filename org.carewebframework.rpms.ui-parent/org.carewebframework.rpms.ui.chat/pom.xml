@@ -3,14 +3,14 @@
 	<parent>
 		<groupId>org.carewebframework</groupId>
 		<artifactId>org.carewebframework.rpms.ui-parent</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 	</parent>
 	<artifactId>org.carewebframework.rpms.ui.chat</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.rpms.ui.core</artifactId>
-			<version>${project.parent.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
