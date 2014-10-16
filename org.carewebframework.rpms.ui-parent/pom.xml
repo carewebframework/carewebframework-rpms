@@ -9,6 +9,7 @@
 	
 	<artifactId>org.carewebframework.rpms.ui-parent</artifactId>
 	<packaging>pom</packaging>
+	<name>RPMS UI Aggregator POM</name>
 	
 	<modules>
 		<module>org.carewebframework.rpms.ui.core</module>

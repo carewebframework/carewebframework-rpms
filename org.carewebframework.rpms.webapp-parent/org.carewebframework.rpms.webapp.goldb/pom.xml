@@ -9,7 +9,7 @@
 	
 	<artifactId>org.carewebframework.rpms.webapp.goldb</artifactId>
 	<packaging>war</packaging>
-	<name>CareWeb-GOLDB</name>
+	<name>RPMS Web Application (GOLDB)</name>
 	
 	<properties>
 		<org.carewebframework.security.profile>org.carewebframework.vista.security.prod</org.carewebframework.security.profile>

@@ -9,7 +9,7 @@
 	
 	<artifactId>org.carewebframework.rpms.webapp-parent</artifactId>
 	<packaging>pom</packaging>
-	<description>Web Application Aggregator</description>
+	<name>RPMS Web Application Aggregator</name>
 	
 	<modules>
 		<module>org.carewebframework.rpms.webapp.goldb</module>
