@@ -78,7 +78,7 @@
 					style="border:none">
 					<listhead>
 						<listheader width="20px" sclass="bgo-problem-icon-cell">
-							<toolbarbutton id="btnAddNote" image="${rc:getIconPath('add.png')}" tooltiptext="Add a new note."/>
+							<toolbarbutton id="btnAddNote" image="${rc:getIconPath('silk:16x16:add.png')}" tooltiptext="Add a new note."/>
 						</listheader>
 						<listheader label="Note #" align="center" width="45px" />
 						<listheader label="Narrative" hflex="1" />
