@@ -11,7 +11,7 @@ package org.carewebframework.rpms.api.smart.patient;
 
 import ca.uhn.fhir.model.dstu.resource.Patient;
 
-import org.carewebframework.cal.api.context.PatientContext;
+import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.smart.SmartContextBase;
 
 public class SmartContextRecordTest extends SmartContextBase {

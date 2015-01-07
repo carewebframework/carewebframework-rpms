@@ -9,7 +9,7 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import org.carewebframework.cal.api.domain.DomainObject;
+import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 

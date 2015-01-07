@@ -16,9 +16,9 @@ import ca.uhn.fhir.model.dstu.resource.Practitioner;
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.domain.DomainFactoryRegistry;
+import org.carewebframework.cal.api.encounter.EncounterRelated;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.vista.api.domain.EncounterRelated;
 import org.carewebframework.vista.mbroker.FMDate;
 
 public class Immunization extends EncounterRelated {

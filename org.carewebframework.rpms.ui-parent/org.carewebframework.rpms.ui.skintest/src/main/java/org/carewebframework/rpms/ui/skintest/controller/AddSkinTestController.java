@@ -17,7 +17,7 @@ import ca.uhn.fhir.model.dstu.resource.Encounter;
 
 import org.apache.commons.lang.math.NumberUtils;
 
-import org.carewebframework.cal.api.context.EncounterContext;
+import org.carewebframework.cal.api.encounter.EncounterContext;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
@@ -30,7 +30,7 @@ import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
-import org.carewebframework.vista.ui.context.encounter.EncounterSelection;
+import org.carewebframework.vista.ui.context.encounter.EncounterUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Combobox;
@@ -80,7 +80,7 @@ public class AddSkinTestController extends BgoBaseController<Object> {
     private TestItem test;
     
     public static TestItem execute(TestItem test) {
-        if (test == null && !EncounterSelection.ensureEncounter()) {
+        if (test == null && !EncounterUtil.ensureEncounter()) {
             return null;
         }
         

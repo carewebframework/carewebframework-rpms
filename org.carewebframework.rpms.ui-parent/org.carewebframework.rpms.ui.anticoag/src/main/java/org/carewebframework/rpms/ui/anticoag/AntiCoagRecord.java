@@ -21,7 +21,7 @@ import ca.uhn.fhir.model.dstu.resource.Practitioner;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.BooleanUtils;
 
-import org.carewebframework.cal.api.domain.DomainObject;
+import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
 import org.carewebframework.fhir.common.FhirUtil;

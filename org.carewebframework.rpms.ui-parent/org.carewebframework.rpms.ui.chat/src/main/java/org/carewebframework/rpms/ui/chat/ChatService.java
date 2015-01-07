@@ -18,7 +18,7 @@ import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.api.spring.SpringUtil;
-import org.carewebframework.cal.api.context.UserContext;
+import org.carewebframework.cal.api.user.UserContext;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.ui.action.ActionRegistry;

@@ -12,7 +12,7 @@ package org.carewebframework.rpms.ui.common;
 import java.util.List;
 
 import org.carewebframework.rpms.ui.common.LookupParams.Table;
-import org.carewebframework.cal.api.context.PatientContext;
+import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.vista.api.util.VistAUtil;
 
 import org.zkoss.zk.ui.Component;

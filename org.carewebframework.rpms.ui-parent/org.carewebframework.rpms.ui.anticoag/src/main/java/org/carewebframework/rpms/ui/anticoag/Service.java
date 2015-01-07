@@ -11,7 +11,7 @@ package org.carewebframework.rpms.ui.anticoag;
 
 import java.util.List;
 
-import org.carewebframework.cal.api.context.PatientContext;
+import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.common.IReferenceable;
 import org.carewebframework.vista.mbroker.BrokerSession;

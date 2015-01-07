@@ -15,11 +15,11 @@ import ca.uhn.fhir.model.dstu.resource.Encounter;
 import ca.uhn.fhir.model.dstu.resource.Patient;
 
 import org.carewebframework.api.event.IGenericEvent;
-import org.carewebframework.cal.api.context.EncounterContext;
-import org.carewebframework.cal.api.context.EncounterContext.IEncounterContextEvent;
-import org.carewebframework.cal.api.context.PatientContext;
+import org.carewebframework.cal.api.encounter.EncounterContext;
+import org.carewebframework.cal.api.encounter.EncounterContext.IEncounterContextEvent;
+import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.ui.zk.ZKUtil;
-import org.carewebframework.vista.api.domain.EncounterUtil;
+import org.carewebframework.vista.api.encounter.EncounterUtil;
 import org.carewebframework.vista.ui.common.CoverSheetBase;
 
 import org.zkoss.zk.ui.event.Events;

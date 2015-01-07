@@ -11,7 +11,7 @@ package org.carewebframework.rpms.api.domain;
 
 import ca.uhn.fhir.model.dstu.composite.CodingDt;
 
-import org.carewebframework.cal.api.domain.DomainObjectProxy;
+import org.carewebframework.cal.api.DomainObjectProxy;
 
 /**
  * Proxy for FHIR Coding data type.

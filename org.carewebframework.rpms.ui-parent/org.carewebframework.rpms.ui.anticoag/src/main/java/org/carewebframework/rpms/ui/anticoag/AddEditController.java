@@ -19,9 +19,11 @@ import ca.uhn.fhir.model.dstu.resource.Practitioner;
 
 import org.apache.commons.lang.math.NumberUtils;
 
-import org.carewebframework.cal.api.context.EncounterContext;
-import org.carewebframework.cal.api.context.UserContext;
-import org.carewebframework.cal.api.domain.UserProxy;
+import org.carewebframework.cal.api.encounter.EncounterContext;
+import org.carewebframework.cal.api.practitioner.PractitionerSearch;
+import org.carewebframework.cal.api.practitioner.PractitionerSearchCriteria;
+import org.carewebframework.cal.api.user.UserContext;
+import org.carewebframework.cal.api.user.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.NumUtil;
 import org.carewebframework.common.StrUtil;
@@ -32,8 +34,7 @@ import org.carewebframework.ui.zk.ListUtil;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
-import org.carewebframework.vista.api.domain.EncounterUtil;
-import org.carewebframework.vista.api.domain.ProviderUtil;
+import org.carewebframework.vista.api.encounter.EncounterUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -91,6 +92,8 @@ public class AddEditController extends FrameworkController {
     
     private AntiCoagRecord record;
     
+    private PractitionerSearch practitionerSearch;
+    
     private final IWonderbarServerSearchProvider<Practitioner> providerSearch = new IWonderbarServerSearchProvider<Practitioner>() {
         
         @Override
@@ -100,7 +103,10 @@ public class AddEditController extends FrameworkController {
         
         @Override
         public boolean getSearchResults(String search, int maxItems, List<Practitioner> hits) {
-            ProviderUtil.search(search, maxItems + 1, hits);
+            hits.clear();
+            PractitionerSearchCriteria criteria = new PractitionerSearchCriteria(search);
+            criteria.setMaximum(maxItems + 1);
+            hits.addAll(practitionerSearch.search(criteria));
             boolean tooMany = hits.size() > maxItems;
             
             if (tooMany) {
@@ -303,6 +309,10 @@ public class AddEditController extends FrameworkController {
     
     public void setService(Service service) {
         this.service = service;
+    }
+    
+    public void setPractitionerSearch(PractitionerSearch practitionerSearch) {
+        this.practitionerSearch = practitionerSearch;
     }
     
 }

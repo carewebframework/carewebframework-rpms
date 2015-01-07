@@ -19,15 +19,15 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
 import org.carewebframework.api.domain.IUser;
-import org.carewebframework.cal.api.context.EncounterContext;
-import org.carewebframework.cal.api.context.PatientContext;
-import org.carewebframework.cal.api.context.UserContext;
+import org.carewebframework.cal.api.encounter.EncounterContext;
+import org.carewebframework.cal.api.encounter.EncounterParticipantContext;
+import org.carewebframework.cal.api.patient.PatientContext;
+import org.carewebframework.cal.api.user.UserContext;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoException;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.domain.PCCUtil;
 import org.carewebframework.ui.zk.PromptDialog;
-import org.carewebframework.vista.api.domain.EncounterUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.BrokerSession;
 
@@ -92,8 +92,8 @@ public class PCC {
         // Injury Place [11] ^ Primary/Secondary [12] ^ Injury Date [13] ^ Onset Date [14] ^
         // Provider IEN [15]
         String s = VistAUtil.concatParams(null, encounter.getId().getIdPart(), "`" + icdIEN, patient.getId().getIdPart(),
-            narrative, null, null, null, null, null, null, null, null, onset, EncounterUtil.getCurrentProvider(encounter)
-                    .getId().getIdPart());
+            narrative, null, null, null, null, null, null, null, null, onset, EncounterParticipantContext
+                    .getActivePractitioner().getIndividual().getResource().getId().getIdPart());
         s = VistAUtil.getBrokerSession().callRPC("BGOVPOV SET", s);
         
         if (BgoUtil.errorCode(s) == 0) {

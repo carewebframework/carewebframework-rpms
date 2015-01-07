@@ -59,6 +59,7 @@
 		<bean id="behAnticoagAddEditController" class="org.carewebframework.rpms.ui.anticoag.AddEditController"
 			scope="prototype">
 			<property name="service" ref="behAnticoagService" />
+			<property name="practitionerSearch" ref="practitionerSearchEngine" />
 		</bean>
 
 		<bean id="behAnticoagDeleteController" class="org.carewebframework.rpms.ui.anticoag.DeleteController"
