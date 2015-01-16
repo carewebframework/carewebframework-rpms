@@ -57,6 +57,11 @@
 								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
 								layout="50:0:true;0:33%;1:33%;2:33%" showDetailPane="false" />
 						</treepane>
+						<treepane label="Patient Education">
+							<bgoPatientEd allowPrint="false" caption="Patient Education"
+								captionStyle="HIDDEN" deferUpdate="true" horizontal="true"
+								layout="50:0:true;0:16%;1:14%;2:14%;3:14%;4:14%;5:14%;6:14%" showDetailPane="false" />
+						</treepane>
 						<treepane label="Problem List">
 							<bgoProblemList allowAddPov="true" allowAsync="false"
 								hideButtons="false" useLexicon="true" />

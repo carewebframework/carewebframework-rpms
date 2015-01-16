@@ -16,6 +16,7 @@
 		<module>org.carewebframework.rpms.ui.anticoag</module>
 		<module>org.carewebframework.rpms.ui.medlist</module>
 		<module>org.carewebframework.rpms.ui.visits</module>
+		<module>org.carewebframework.rpms.ui.patiented</module>
 		<module>org.carewebframework.rpms.ui.problem</module>
 		<module>org.carewebframework.rpms.ui.skintest</module>
 		<module>org.carewebframework.rpms.ui.chat</module>
