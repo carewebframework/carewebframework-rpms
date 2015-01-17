@@ -109,11 +109,6 @@
 		</dependency>
 		<!-- RPMS Plugins -->
 		<dependency>
-			<groupId>PharmEd_Component</groupId>
-			<artifactId>PharmEd</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>org.carewebframework</groupId>
 			<artifactId>org.carewebframework.rpms.ui.medlist</artifactId>
 			<version>${project.version}</version>
