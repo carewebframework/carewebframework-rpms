@@ -74,7 +74,7 @@ public class MainController extends CoverSheetBase<String> {
     protected void render(String dao, List<Object> columns) {
         String pcs[] = split(dao, U, 18);
         columns.add(pcs[0]); // Topic name
-        columns.add(VistAUtil.normalizeDate(pcs[1])); // Visit date
+        columns.add(VistAUtil.normalizeDate(pcs[25])); // Entry date
         columns.add(pcs[2]); // Level
         columns.add(pcs[3]); // Provider name
         columns.add(pcs[4]); // Group / individual

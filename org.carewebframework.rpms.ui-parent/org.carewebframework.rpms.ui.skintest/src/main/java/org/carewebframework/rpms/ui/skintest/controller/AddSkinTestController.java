@@ -30,7 +30,7 @@ import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
-import org.carewebframework.vista.ui.context.encounter.EncounterUtil;
+import org.carewebframework.vista.ui.encounter.EncounterUtil;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Combobox;
