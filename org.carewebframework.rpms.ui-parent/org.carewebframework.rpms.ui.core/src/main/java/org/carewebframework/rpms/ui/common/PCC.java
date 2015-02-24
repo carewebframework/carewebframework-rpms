@@ -42,7 +42,7 @@ public class PCC {
     
     public static boolean errorCheck(String data) {
         try {
-            errorCheck(data);
+            BgoUtil.errorCheck(data);
             return false;
         } catch (BgoException e) {
             PromptDialog.showError(e.getMessage());
