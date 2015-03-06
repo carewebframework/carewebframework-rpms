@@ -21,7 +21,7 @@ public class CodingProxy extends DomainObjectProxy<CodingDt> {
     public CodingProxy(String logicalId, String system, String code, String display) {
         super(logicalId, new CodingDt());
         CodingDt coding = getProxiedObject();
-        coding.setSystem(system);
+        //coding.setSystem(system);
         coding.setCode(code);
         coding.setDisplay(display);
     }

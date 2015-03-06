@@ -293,7 +293,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         EventUtil.status("Loading Problem List Data");
         
         if (allowAsync && !noAsync) {
-            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getId().getIdPart(), true);
+            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getId().getIdPart());
         } else {
             loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getId().getIdPart()));
         }
