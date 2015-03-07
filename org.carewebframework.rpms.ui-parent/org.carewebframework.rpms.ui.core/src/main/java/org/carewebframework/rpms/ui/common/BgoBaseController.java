@@ -15,6 +15,10 @@ import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.BrokerSession;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCAbortEvent;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCCompleteEvent;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCErrorEvent;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCEventDispatcher;
 
 import org.zkoss.zk.ui.Component;
 
@@ -22,13 +26,18 @@ public class BgoBaseController<T> extends FrameworkController {
     
     private static final long serialVersionUID = 1L;
     
-    private Component root;
-    
     private BrokerSession broker;
     
     protected T result;
     
     private boolean canceled;
+    
+    private AsyncRPCEventDispatcher asyncDispatcher;
+    
+    @Override
+    public void doAfterCompose(Component comp) throws Exception {
+        super.doAfterCompose(comp);
+    }
     
     public Component getRoot() {
         return root;
@@ -46,15 +55,42 @@ public class BgoBaseController<T> extends FrameworkController {
         return canceled;
     }
     
-    @Override
-    public void doAfterCompose(Component comp) throws Exception {
-        super.doAfterCompose(comp);
-        root = comp;
-    }
-    
     public void close(boolean canceled) {
         this.canceled = canceled;
         root.detach();
+    }
+    
+    /**
+     * Called in main event thread when async RPC has completed. Override to handle the event.
+     * 
+     * @param event The async completion event.
+     */
+    public void onAsyncRPCComplete(AsyncRPCCompleteEvent event) {
+    }
+    
+    /**
+     * Called in main event thread when async RPC has encountered an error. Override to handle the
+     * event.
+     * 
+     * @param event The async error event.
+     */
+    public void onAsyncRPCError(AsyncRPCErrorEvent event) {
+    }
+    
+    /**
+     * Called in main event thread when async RPC has been aborted. Override to handle the event.
+     * 
+     * @param event The async abort event.
+     */
+    public void onAsyncRPCAbort(AsyncRPCAbortEvent event) {
+    }
+    
+    public AsyncRPCEventDispatcher getAsyncDispatcher() {
+        if (asyncDispatcher == null) {
+            asyncDispatcher = new AsyncRPCEventDispatcher(getBroker(), root);
+        }
+        
+        return asyncDispatcher;
     }
     
     public BrokerSession getBroker() {

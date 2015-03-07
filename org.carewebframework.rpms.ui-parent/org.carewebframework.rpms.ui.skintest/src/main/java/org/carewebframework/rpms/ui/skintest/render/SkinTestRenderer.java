@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -9,8 +9,7 @@
  */
 package org.carewebframework.rpms.ui.skintest.render;
 
-import org.carewebframework.rpms.ui.skintest.controller.SkinTestController.TestItem;
-
+import org.carewebframework.rpms.ui.skintest.model.TestItem;
 import org.carewebframework.ui.zk.AbstractListitemRenderer;
 
 import org.zkoss.zul.Listitem;
@@ -26,7 +25,7 @@ public class SkinTestRenderer extends AbstractListitemRenderer<TestItem, Object>
         createCell(item, data.getResult());
         createCell(item, data.getReading());
         createCell(item, data.getReadDate());
-        createCell(item, data.getProvider());
+        createCell(item, data.getProviderName());
         createCell(item, data.getReader());
     }
     

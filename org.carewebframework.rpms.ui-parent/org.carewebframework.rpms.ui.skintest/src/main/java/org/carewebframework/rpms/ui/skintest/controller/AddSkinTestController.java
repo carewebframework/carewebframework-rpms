@@ -24,7 +24,7 @@ import org.carewebframework.rpms.ui.common.BgoBaseController;
 import org.carewebframework.rpms.ui.common.LookupController;
 import org.carewebframework.rpms.ui.common.LookupParams.Table;
 import org.carewebframework.rpms.ui.skintest.controller.SkinTestController.EventType;
-import org.carewebframework.rpms.ui.skintest.controller.SkinTestController.TestItem;
+import org.carewebframework.rpms.ui.skintest.model.TestItem;
 import org.carewebframework.rpms.ui.skintest.util.Constants;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.zk.PopupDialog;

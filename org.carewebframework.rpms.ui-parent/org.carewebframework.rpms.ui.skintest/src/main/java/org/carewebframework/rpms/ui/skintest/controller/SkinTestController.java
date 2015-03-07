@@ -12,14 +12,11 @@ package org.carewebframework.rpms.ui.skintest.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu.resource.Encounter;
 import ca.uhn.fhir.model.dstu.resource.Patient;
-import ca.uhn.fhir.model.dstu.resource.Practitioner;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.EventManager;
 import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
@@ -27,14 +24,11 @@ import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.cal.api.encounter.EncounterContext.IEncounterContextEvent;
 import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.cal.api.patient.PatientContext.IPatientContextEvent;
-import org.carewebframework.cal.api.user.UserContext;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoUtil;
-import org.carewebframework.rpms.api.domain.Refusal;
-import org.carewebframework.rpms.api.domain.SkinTest;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
-import org.carewebframework.rpms.ui.common.BgoConstants;
 import org.carewebframework.rpms.ui.common.PCC;
+import org.carewebframework.rpms.ui.skintest.model.TestItem;
 import org.carewebframework.rpms.ui.skintest.render.SkinTestRenderer;
 import org.carewebframework.shell.plugins.IPluginEvent;
 import org.carewebframework.shell.plugins.PluginContainer;
@@ -42,10 +36,9 @@ import org.carewebframework.ui.zk.ListUtil;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.RowComparator;
 import org.carewebframework.ui.zk.ZKUtil;
-import org.carewebframework.vista.api.encounter.EncounterUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
-import org.carewebframework.vista.mbroker.BrokerSession.IAsyncRPCEvent;
-import org.carewebframework.vista.mbroker.FMDate;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCCompleteEvent;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCErrorEvent;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -76,105 +69,6 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         CURRENT, HISTORICAL, REFUSAL
     }
     
-    public class TestItem {
-        
-        protected SkinTest skinTest;
-        
-        protected Refusal refusal;
-        
-        protected TestItem(String value) {
-            if (value.startsWith("S")) {
-                skinTest = new SkinTest(value);
-            } else {
-                refusal = new Refusal(value);
-            }
-        }
-        
-        public boolean isLocked() {
-            if (refusal != null) {
-                return refusal.isLocked();
-            }
-            
-            return skinTest.getEncounter() == null ? true : EncounterUtil.isLocked(skinTest.getEncounter());
-        }
-        
-        public boolean isPending() {
-            return skinTest == null ? false : "pending".equalsIgnoreCase(skinTest.getResult());
-        }
-        
-        public Encounter getEncounter() {
-            return skinTest != null ? skinTest.getEncounter() : null;
-        }
-        
-        public FMDate getDate() {
-            return skinTest != null ? skinTest.getEventDate() : refusal.getDate();
-        }
-        
-        public String getTestName() {
-            return skinTest != null ? skinTest.getTest().getProxiedObject().getDisplay().getValue() : refusal.getItem()
-                    .getProxiedObject().getDisplay().getValue();
-        }
-        
-        public String getLocationName() {
-            return skinTest != null ? skinTest.getLocation().getName().getValue() : null;
-        }
-        
-        public String getAge() {
-            return skinTest != null ? skinTest.getAge() : null;
-        }
-        
-        public String getResult() {
-            return skinTest != null ? skinTest.getResult() : refusal.getReason();
-        }
-        
-        public String getReading() {
-            return skinTest != null ? skinTest.getReading() : null;
-        }
-        
-        public FMDate getReadDate() {
-            return skinTest != null ? skinTest.getReadDate() : null;
-        }
-        
-        public Practitioner getProvider() {
-            return skinTest != null ? skinTest.getProvider() : refusal.getProvider();
-        }
-        
-        public Practitioner getReader() {
-            return skinTest != null ? skinTest.getReader() : null;
-        }
-        
-        public EventType getEventType() {
-            return refusal != null ? EventType.REFUSAL : getEncounter() == null
-                    || "E".equals(EncounterUtil.getServiceCategory(getEncounter())) ? EventType.HISTORICAL
-                    : EventType.CURRENT;
-        }
-        
-        public void delete() {
-            Practitioner provider = getProvider();
-            
-            if (skinTest != null && provider != null && !user.equals(provider)) {
-                String s = getBroker().callRPC("BGOVPRV PRIPRV", skinTest.getEncounter().getId().getIdPart());
-                String[] pcs = StrUtil.split(s, StrUtil.U, 2);
-                
-                if (!user.getLogicalId().equals(pcs[0])) {
-                    PromptDialog.showError("To delete the skin test, you must either be the person that entered it or be "
-                            + "designated as the primary provider for the visit.\n" + BgoConstants.TC_PRI_PRV + pcs[1]
-                            + "\nAdministered By: " + provider.getName(), "Cannot Delete");
-                    return;
-                }
-            }
-            
-            if (PromptDialog.confirm("Are you sure that you wish to delete the skin test:\n" + getTestName(),
-                "Delete Skin Test?")) {
-                PCC.errorCheck(getBroker().callRPC(
-                    "BGOSK DEL",
-                    VistAUtil.concatParams(skinTest != null ? skinTest.getId().getIdPart() : null, refusal != null ? refusal
-                            .getId().getIdPart() : null)));
-            }
-            
-        }
-    }
-    
     private Button btnAdd;
     
     private Button btnEdit;
@@ -195,8 +89,6 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     
     private String refusalEvent;
     
-    private int asyncHandle;
-    
     private boolean allowAsync;
     
     private boolean hideButtons;
@@ -208,24 +100,6 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     private final List<TestItem> skinTestList = new ArrayList<TestItem>();
     
     private Object selectedItem;
-    
-    private final IUser user = UserContext.getActiveUser();
-    
-    private final IAsyncRPCEvent asyncRPCEventHandler = new IAsyncRPCEvent() {
-        
-        @Override
-        public void onRPCComplete(int handle, String data) {
-            if (handle == asyncHandle) {
-                asyncHandle = 0;
-                loadSkinTests(StrUtil.toList(data, "\r"));
-            }
-        }
-        
-        @Override
-        public void onRPCError(int handle, int code, String text) {
-            
-        }
-    };
     
     private final IPatientContextEvent patientContextEventHandler = new IPatientContextEvent() {
         
@@ -354,7 +228,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     
     private void loadSkinTests(boolean noAsync) {
         lbTests.getItems().clear();
-        abortAsync();
+        getAsyncDispatcher().abort();
         Patient patient = PatientContext.getActivePatient();
         
         if (patient == null) {
@@ -364,7 +238,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         EventUtil.status("Loading Skin Test Data");
         
         if (allowAsync && !noAsync) {
-            asyncHandle = getBroker().callRPCAsync("BGOVSK GET", asyncRPCEventHandler, patient.getId().getIdPart());
+            getAsyncDispatcher().callRPCAsync("BGOVSK GET", patient.getId().getIdPart());
         } else {
             loadSkinTests(getBroker().callRPCList("BGOVSK GET", null, patient.getId().getIdPart()));
         }
@@ -420,13 +294,6 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         return;
     }
     
-    private void abortAsync() {
-        if (asyncHandle != 0) {
-            VistAUtil.getBrokerSession().callRPCAbort(asyncHandle);
-            asyncHandle = 0;
-        }
-    }
-    
     @Override
     public void refresh() {
         if (!noRefresh) {
@@ -434,6 +301,16 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
             loadSkinTests(true);
             restoreGridState();
         }
+    }
+    
+    @Override
+    public void onAsyncRPCComplete(AsyncRPCCompleteEvent event) {
+        loadSkinTests(StrUtil.toList(event.getData(), "\r"));
+    }
+    
+    @Override
+    public void onAsyncRPCError(AsyncRPCErrorEvent event) {
+        // TODO: do something with this
     }
     
     private void refreshList() {

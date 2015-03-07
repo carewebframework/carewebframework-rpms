@@ -39,7 +39,8 @@ import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.RowComparator;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
-import org.carewebframework.vista.mbroker.BrokerSession.IAsyncRPCEvent;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCCompleteEvent;
+import org.carewebframework.vista.ui.mbroker.AsyncRPCErrorEvent;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
@@ -92,8 +93,6 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     
     private String probEvent;
     
-    private int asyncHandle;
-    
     private boolean allowAsync;
     
     private boolean allowAddPov = true;
@@ -113,22 +112,6 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     private final List<Problem> problemList = new ArrayList<Problem>();
     
     private final List<Problem> selectedProblems = new ArrayList<Problem>();
-    
-    private final IAsyncRPCEvent asyncRPCEventHandler = new IAsyncRPCEvent() {
-        
-        @Override
-        public void onRPCComplete(int handle, String data) {
-            if (handle == asyncHandle) {
-                asyncHandle = 0;
-                loadProblems(StrUtil.toList(data, "\r"));
-            }
-        }
-        
-        @Override
-        public void onRPCError(int handle, int code, String text) {
-            
-        }
-    };
     
     private final IPatientContextEvent patientContextEventHandler = new IPatientContextEvent() {
         
@@ -283,7 +266,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     
     private void loadProblems(boolean noAsync) {
         lbProblems.getItems().clear();
-        abortAsync();
+        getAsyncDispatcher().abort();
         Patient patient = PatientContext.getActivePatient();
         
         if (patient == null) {
@@ -293,7 +276,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         EventUtil.status("Loading Problem List Data");
         
         if (allowAsync && !noAsync) {
-            asyncHandle = getBroker().callRPCAsync("BGOPROB GET", asyncRPCEventHandler, patient.getId().getIdPart());
+            getAsyncDispatcher().callRPCAsync("BGOPROB GET", patient.getId().getIdPart());
         } else {
             loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getId().getIdPart()));
         }
@@ -346,11 +329,14 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         return null;
     }
     
-    private void abortAsync() {
-        if (asyncHandle != 0) {
-            VistAUtil.getBrokerSession().callRPCAbort(asyncHandle);
-            asyncHandle = 0;
-        }
+    @Override
+    public void onAsyncRPCComplete(AsyncRPCCompleteEvent event) {
+        loadProblems(StrUtil.toList(event.getData(), "\r"));
+    }
+    
+    @Override
+    public void onAsyncRPCError(AsyncRPCErrorEvent event) {
+        // TODO: do something with this
     }
     
     @Override
