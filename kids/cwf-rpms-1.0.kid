@@ -1,13 +1,13 @@
-KIDS Distribution saved on Mar 07, 2015@10:39:30
+KIDS Distribution saved on Mar 15, 2015@23:15
 CAREWEB DISTRIBUTION (RPMS) 1.0
 **KIDS**:CAREWEB DISTRIBUTION (RPMS) 1.0^RG UTILITIES 3.0^CIA RPC BROKER 1.3^SERIALIZATION FRAMEWORK 1.0^CAREWEB FRAMEWORK 1.0^CAREWEB CONTEXT 1.0^CAREWEB RPMS ENHANCEMENTS 1.0^
 
 **INSTALL NAME**
 CAREWEB DISTRIBUTION (RPMS) 1.0
 "BLD",8495,0)
-CAREWEB DISTRIBUTION (RPMS) 1.0^^1^3150307^n
+CAREWEB DISTRIBUTION (RPMS) 1.0^^1^3150315^n
 "BLD",8495,6.3)
-86
+126
 "BLD",8495,10,0)
 ^9.63^35^6
 "BLD",8495,10,15,0)
@@ -199,7 +199,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWFUTL",1,0)
 RGCWFUTL ;RI/CBMI/DKM CareWeb Management Utilites;02-Feb-2015 10:15;DKM
 "RTN","RGCWFUTL",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 86
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 126
 "RTN","RGCWFUTL",3,0)
  ; Initiate shutdown sequence for applications
 "RTN","RGCWFUTL",4,0)
@@ -335,7 +335,7 @@ SHOWSESS() ;
 **INSTALL NAME**
 RG UTILITIES 3.0
 "BLD",8503,0)
-RG UTILITIES 3.0^RUN TIME LIBRARY^0^3150307^n
+RG UTILITIES 3.0^RUN TIME LIBRARY^0^3150315^n
 "BLD",8503,1,0)
 ^^3^3^3150202^^^
 "BLD",8503,1,1,0)
@@ -347,7 +347,7 @@ They perform generic functions.
 "BLD",8503,4,0)
 ^9.64PA^^
 "BLD",8503,6.3)
-176
+261
 "BLD",8503,"ABNS",0)
 ^9.66A^1^1
 "BLD",8503,"ABNS",1,0)
@@ -389,7 +389,7 @@ POST^RGUTINIT
 "BLD",8503,"KRN",9.8,"NM",0)
 ^9.68A^88^54
 "BLD",8503,"KRN",9.8,"NM",18,0)
-RGUT^^0^B41131960
+RGUT^^0^B42037134
 "BLD",8503,"KRN",9.8,"NM",27,0)
 RGUTSTX^^0^B17505727
 "BLD",8503,"KRN",9.8,"NM",28,0)
@@ -415,11 +415,11 @@ RGUTIN^^1^
 "BLD",8503,"KRN",9.8,"NM",46,0)
 RGUTIN0^^0^B1324180
 "BLD",8503,"KRN",9.8,"NM",47,0)
-RGUTIN16^^0^B4251434
+RGUTIN16^^0^B4411769
 "BLD",8503,"KRN",9.8,"NM",48,0)
-RGUTIN18^^0^B4464090
+RGUTIN18^^0^B4789827
 "BLD",8503,"KRN",9.8,"NM",49,0)
-RGUTIN8^^0^B4105987
+RGUTIN8^^0^B4269472
 "BLD",8503,"KRN",9.8,"NM",50,0)
 RGUTLK2^^0^B49012377
 "BLD",8503,"KRN",9.8,"NM",51,0)
@@ -427,13 +427,13 @@ RGUTLKP^^0^B26828890
 "BLD",8503,"KRN",9.8,"NM",52,0)
 RGUTMTL^^0^B13569820
 "BLD",8503,"KRN",9.8,"NM",53,0)
-RGUTOS^^0^B7607307
+RGUTOS^^0^B8020241
 "BLD",8503,"KRN",9.8,"NM",54,0)
-RGUTOS1^^0^B10134674
+RGUTOS1^^0^B10382570
 "BLD",8503,"KRN",9.8,"NM",56,0)
 RGUTRPC^^0^B16275171
 "BLD",8503,"KRN",9.8,"NM",57,0)
-RGUTTSK^^0^B998318
+RGUTTSK^^0^B998610
 "BLD",8503,"KRN",9.8,"NM",58,0)
 RGUTUSR^^0^B3790974
 "BLD",8503,"KRN",9.8,"NM",59,0)
@@ -457,9 +457,9 @@ RGUTBCDA^^0^B8230455
 "BLD",8503,"KRN",9.8,"NM",68,0)
 RGUTIN8U^^1^
 "BLD",8503,"KRN",9.8,"NM",69,0)
-RGUTIN68^^0^B4411941
+RGUTIN68^^0^B4748681
 "BLD",8503,"KRN",9.8,"NM",70,0)
-RGUTIN58^^0^B5514558
+RGUTIN58^^0^B5722564
 "BLD",8503,"KRN",9.8,"NM",71,0)
 RGUT1^^0^B805876
 "BLD",8503,"KRN",9.8,"NM",72,0)
@@ -495,7 +495,7 @@ RGMSCUSR^^1^
 "BLD",8503,"KRN",9.8,"NM",87,0)
 RGUTDATF^^0^B6379104
 "BLD",8503,"KRN",9.8,"NM",88,0)
-RGUTIN19^^0^B4063150
+RGUTIN19^^0^B4406499
 "BLD",8503,"KRN",9.8,"NM","B","RGCVTDT",75)
 
 "BLD",8503,"KRN",9.8,"NM","B","RGCVTUU",76)
@@ -845,9 +845,9 @@ RUN TIME LIBRARY^RGUT^RUN TIME LIBRARY
 "PKG",172,22,0)
 ^9.49I^1^1
 "PKG",172,22,1,0)
-3.0^3150307^3150202^1
+3.0^3150315^3150202^1
 "PKG",172,22,1,1,0)
-^^3^3^3150307
+^^3^3^3150315
 "PKG",172,22,1,1,1,0)
 This is the set of routines common to all modules occupying the RG namespace.  
 "PKG",172,22,1,1,2,0)
@@ -953,11 +953,11 @@ D XPZ2^XPDIQ
 "RTN","RGMSCUSR")
 1^86
 "RTN","RGUT")
-0^18^B41131960
+0^18^B42037134
 "RTN","RGUT",1,0)
-RGUT ;RI/CBMI/DKM - General purpose utilities;05-Mar-2015 18:49;DKM
+RGUT ;RI/CBMI/DKM - General purpose utilities;09-Mar-2015 10:10;DKM
 "RTN","RGUT",2,0)
- ;;3.0;RG UTILITIES;**1**;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;**1**;Mar 20, 2007;Build 261
 "RTN","RGUT",3,0)
  ;;
 "RTN","RGUT",4,0)
@@ -1075,347 +1075,353 @@ FMTNUM(RGNUM) ;EP
 "RTN","RGUT",60,0)
  Q $G(RGZ2)_$G(RGZ1)_$S(RGZ3:RGZ3,1:"")
 "RTN","RGUT",61,0)
- ; Convert X to base Y padded to length L
+ ; Return true if the result is numeric
 "RTN","RGUT",62,0)
-BASE(X,Y,L) ;EP
+ISNUM(X) Q:X=+X 1
 "RTN","RGUT",63,0)
- Q:(Y<2)!(Y>62) ""
+ Q $L(X)&(X'=".")&(X?0.N0.1"."0.N)
 "RTN","RGUT",64,0)
- N RGZ,RGZ1
+ ; Convert X to base Y padded to length L
 "RTN","RGUT",65,0)
- S RGZ1="",X=$S(X<0:-X,1:X)
+BASE(X,Y,L) ;EP
 "RTN","RGUT",66,0)
- F  S RGZ=X#Y,X=X\Y,RGZ1=$C($S(RGZ<10:RGZ+48,RGZ<36:RGZ+55,1:RGZ+61))_RGZ1 Q:'X
+ Q:(Y<2)!(Y>62) ""
 "RTN","RGUT",67,0)
- Q $S('$G(L):RGZ1,1:$$REPEAT^XLFSTR(0,L-$L(RGZ1))_$E(RGZ1,1,L))
+ N RGZ,RGZ1
 "RTN","RGUT",68,0)
- ; Convert a string to its SOUNDEX equivalent
+ S RGZ1="",X=$S(X<0:-X,1:X)
 "RTN","RGUT",69,0)
-SOUNDEX(RGVALUE) ;EP
+ F  S RGZ=X#Y,X=X\Y,RGZ1=$C($S(RGZ<10:RGZ+48,RGZ<36:RGZ+55,1:RGZ+61))_RGZ1 Q:'X
 "RTN","RGUT",70,0)
- N RGCODE,RGSOUND,RGPREV,RGCHAR,RGPOS,RGTRANS
+ Q $S('$G(L):RGZ1,1:$$REPEAT^XLFSTR(0,L-$L(RGZ1))_$E(RGZ1,1,L))
 "RTN","RGUT",71,0)
- S RGCODE="01230129022455012623019202"
+ ; Convert a string to its SOUNDEX equivalent
 "RTN","RGUT",72,0)
- S RGSOUND=$C($A(RGVALUE)-(RGVALUE?1L.E*32))
+SOUNDEX(RGVALUE) ;EP
 "RTN","RGUT",73,0)
- S RGPREV=$E(RGCODE,$A(RGVALUE)-64)
+ N RGCODE,RGSOUND,RGPREV,RGCHAR,RGPOS,RGTRANS
 "RTN","RGUT",74,0)
- F RGPOS=2:1 S RGCHAR=$E(RGVALUE,RGPOS) Q:","[RGCHAR  D  Q:$L(RGSOUND)=4
+ S RGCODE="01230129022455012623019202"
 "RTN","RGUT",75,0)
- .Q:RGCHAR'?1A
+ S RGSOUND=$C($A(RGVALUE)-(RGVALUE?1L.E*32))
 "RTN","RGUT",76,0)
- .S RGTRANS=$E(RGCODE,$A(RGCHAR)-$S(RGCHAR?1U:64,1:96))
+ S RGPREV=$E(RGCODE,$A(RGVALUE)-64)
 "RTN","RGUT",77,0)
- .Q:RGTRANS=RGPREV!(RGTRANS=9)
+ F RGPOS=2:1 S RGCHAR=$E(RGVALUE,RGPOS) Q:","[RGCHAR  D  Q:$L(RGSOUND)=4
 "RTN","RGUT",78,0)
- .S RGPREV=RGTRANS
+ .Q:RGCHAR'?1A
 "RTN","RGUT",79,0)
- .S:RGTRANS'=0 RGSOUND=RGSOUND_RGTRANS
+ .S RGTRANS=$E(RGCODE,$A(RGCHAR)-$S(RGCHAR?1U:64,1:96))
 "RTN","RGUT",80,0)
- Q $E(RGSOUND_"000",1,4)
+ .Q:RGTRANS=RGPREV!(RGTRANS=9)
 "RTN","RGUT",81,0)
- ; Display formatted title
+ .S RGPREV=RGTRANS
 "RTN","RGUT",82,0)
-TITLE(RGTTL,RGVER,RGFN) ;EP
+ .S:RGTRANS'=0 RGSOUND=RGSOUND_RGTRANS
 "RTN","RGUT",83,0)
- I '$D(IOM) N IOM,IOF S IOM=80,IOF="#"
+ Q $E(RGSOUND_"000",1,4)
 "RTN","RGUT",84,0)
- S RGVER=$G(RGVER,"1.0")
+ ; Display formatted title
 "RTN","RGUT",85,0)
- S:RGVER RGVER="Version "_RGVER
+TITLE(RGTTL,RGVER,RGFN) ;EP
 "RTN","RGUT",86,0)
- U $G(IO,$I)
+ I '$D(IOM) N IOM,IOF S IOM=80,IOF="#"
 "RTN","RGUT",87,0)
- W @IOF,$S(IO=IO(0):$C(27,91,55,109),1:""),*13,$$ENTRY^RGUTDT(+$H_","),?(IOM-$L(RGTTL)\2),RGTTL,?(IOM-$L(RGVER)),RGVER,!,$S(IO=IO(0):$C(27,91,109),1:$$UND),!
+ S RGVER=$G(RGVER,"1.0")
 "RTN","RGUT",88,0)
- W:$D(RGFN) ?(IOM-$L(RGFN)\2),RGFN,!
+ S:RGVER RGVER="Version "_RGVER
 "RTN","RGUT",89,0)
- Q
+ U $G(IO,$I)
 "RTN","RGUT",90,0)
- ; Display required header for menus
+ W @IOF,$S(IO=IO(0):$C(27,91,55,109),1:""),*13,$$ENTRY^RGUTDT(+$H_","),?(IOM-$L(RGTTL)\2),RGTTL,?(IOM-$L(RGVER)),RGVER,!,$S(IO=IO(0):$C(27,91,109),1:$$UND),!
 "RTN","RGUT",91,0)
-MNUHDR(PKG,VER) ;EP
+ W:$D(RGFN) ?(IOM-$L(RGFN)\2),RGFN,!
 "RTN","RGUT",92,0)
- Q:$D(ZTQUEUED)
+ Q
 "RTN","RGUT",93,0)
- Q:$E($G(IOST),1,2)'="C-"
+ ; Display required header for menus
 "RTN","RGUT",94,0)
- N X,%ZIS,IORVON,IORVOFF,MNU
+MNUHDR(PKG,VER) ;EP
 "RTN","RGUT",95,0)
- S MNU=$P($G(XQY0),U,2),MNU(0)=$P($G(XQY0),U),VER=$G(VER)
+ Q:$D(ZTQUEUED)
 "RTN","RGUT",96,0)
- S X=$$GETPKG($S($L($G(PKG)):PKG,1:MNU(0)))
+ Q:$E($G(IOST),1,2)'="C-"
 "RTN","RGUT",97,0)
- I $L(X) D
+ N X,%ZIS,IORVON,IORVOFF,MNU
 "RTN","RGUT",98,0)
- .S PKG=$P(X,U,2),X=$P(X,U,3)
+ S MNU=$P($G(XQY0),U,2),MNU(0)=$P($G(XQY0),U),VER=$G(VER)
 "RTN","RGUT",99,0)
- .I $L(X),'$L(VER) S VER=$$VERSION^XPDUTL(X)
+ S X=$$GETPKG($S($L($G(PKG)):PKG,1:MNU(0)))
 "RTN","RGUT",100,0)
- S:VER VER="Version "_VER
+ I $L(X) D
 "RTN","RGUT",101,0)
- S X="IORVON;IORVOFF"
+ .S PKG=$P(X,U,2),X=$P(X,U,3)
 "RTN","RGUT",102,0)
- D ENDR^%ZISS
+ .I $L(X),'$L(VER) S VER=$$VERSION^XPDUTL(X)
 "RTN","RGUT",103,0)
- U IO
+ S:VER VER="Version "_VER
 "RTN","RGUT",104,0)
- W @IOF,IORVON,$$GET1^DIQ(4,DUZ(2),.01),?(IOM-$L(PKG)\2),PKG,?(IOM-$L(VER)),VER,!,IORVOFF,!?(IOM-$L(MNU)\2),MNU,!
+ S X="IORVON;IORVOFF"
 "RTN","RGUT",105,0)
- Q
+ D ENDR^%ZISS
 "RTN","RGUT",106,0)
- ; Execute menu action, preserving menu headers
+ U IO
 "RTN","RGUT",107,0)
-MNUEXEC(EXEC,PAUSE) ;EP
+ W @IOF,IORVON,$$GET1^DIQ(4,DUZ(2),.01),?(IOM-$L(PKG)\2),PKG,?(IOM-$L(VER)),VER,!,IORVOFF,!?(IOM-$L(MNU)\2),MNU,!
 "RTN","RGUT",108,0)
- D MNUHDR()
+ Q
 "RTN","RGUT",109,0)
- X EXEC
+ ; Execute menu action, preserving menu headers
 "RTN","RGUT",110,0)
- R:$G(PAUSE)&'$D(ZTQUEUED) !,"Press ENTER or RETURN to continue...",PAUSE:$G(DTIME,300),!
+MNUEXEC(EXEC,PAUSE) ;EP
 "RTN","RGUT",111,0)
- Q
+ D MNUHDR()
 "RTN","RGUT",112,0)
- ; Action for editing parameters from menu
+ X EXEC
 "RTN","RGUT",113,0)
-MNUPARAM(PARAM) ;EP
+ R:$G(PAUSE)&'$D(ZTQUEUED) !,"Press ENTER or RETURN to continue...",PAUSE:$G(DTIME,300),!
 "RTN","RGUT",114,0)
- D MNUEXEC("D EDITPAR^XPAREDIT($G(PARAM,$P(XQY0,U)))")
+ Q
 "RTN","RGUT",115,0)
- Q
+ ; Action for editing parameters from menu
 "RTN","RGUT",116,0)
- ; Action for editing parameter template from menu
+MNUPARAM(PARAM) ;EP
 "RTN","RGUT",117,0)
-MNUTEMPL(TMPL) ;EP
+ D MNUEXEC("D EDITPAR^XPAREDIT($G(PARAM,$P(XQY0,U)))")
 "RTN","RGUT",118,0)
- D MNUEXEC("D TEDH^XPAREDIT($G(TMPL,$P(XQY0,U)),""BA"")")
+ Q
 "RTN","RGUT",119,0)
- Q
+ ; Action for editing parameter template from menu
 "RTN","RGUT",120,0)
- ; Return package reference from namespace
+MNUTEMPL(TMPL) ;EP
 "RTN","RGUT",121,0)
- ; Returns ien^pkg name^pkg namespace
+ D MNUEXEC("D TEDH^XPAREDIT($G(TMPL,$P(XQY0,U)),""BA"")")
 "RTN","RGUT",122,0)
-GETPKG(NAME) ;EP
+ Q
 "RTN","RGUT",123,0)
- N PKG,IEN
+ ; Return package reference from namespace
 "RTN","RGUT",124,0)
- S PKG=NAME
+ ; Returns ien^pkg name^pkg namespace
 "RTN","RGUT",125,0)
- F  S PKG=$O(^DIC(9.4,"C",PKG),-1) Q:$E(NAME,1,$L(PKG))=PKG
+GETPKG(NAME) ;EP
 "RTN","RGUT",126,0)
- S IEN=$S($L(PKG):+$O(^DIC(9.4,"C",PKG,0)),1:0)
+ N PKG,IEN
 "RTN","RGUT",127,0)
- Q $S(IEN:IEN_U_$P(^DIC(9.4,IEN,0),U)_U_PKG,1:"")
+ S PKG=NAME
 "RTN","RGUT",128,0)
- ; Create a unique 8.3 filename
+ F  S PKG=$O(^DIC(9.4,"C",PKG),-1) Q:$E(NAME,1,$L(PKG))=PKG
 "RTN","RGUT",129,0)
-UFN(Y) ;EP
+ S IEN=$S($L(PKG):+$O(^DIC(9.4,"C",PKG,0)),1:0)
 "RTN","RGUT",130,0)
- N X
+ Q $S(IEN:IEN_U_$P(^DIC(9.4,IEN,0),U)_U_PKG,1:"")
 "RTN","RGUT",131,0)
- S Y=$E($G(Y),1,3),X=$$BASE($R(100)_$J_$TR($H,","),36,$S($L(Y):8,1:11))_Y
+ ; Create a unique 8.3 filename
 "RTN","RGUT",132,0)
- Q $E(X,1,8)_"."_$E(X,9,11)
+UFN(Y) ;EP
 "RTN","RGUT",133,0)
- ; Return formatted SSN
+ N X
 "RTN","RGUT",134,0)
-SSN(X) ;EP
+ S Y=$E($G(Y),1,3),X=$$BASE($R(100)_$J_$TR($H,","),36,$S($L(Y):8,1:11))_Y
 "RTN","RGUT",135,0)
- Q $S(X="":X,1:$E(X,1,3)_"-"_$E(X,4,5)_"-"_$E(X,6,12))
+ Q $E(X,1,8)_"."_$E(X,9,11)
 "RTN","RGUT",136,0)
- ; Performs security check on patient access
+ ; Return formatted SSN
 "RTN","RGUT",137,0)
-DGSEC(Y) ;EP
+SSN(X) ;EP
 "RTN","RGUT",138,0)
- N DIC
+ Q $S(X="":X,1:$E(X,1,3)_"-"_$E(X,4,5)_"-"_$E(X,6,12))
 "RTN","RGUT",139,0)
- S DIC(0)="E"
+ ; Performs security check on patient access
 "RTN","RGUT",140,0)
- D ^DGSEC
+DGSEC(Y) ;EP
 "RTN","RGUT",141,0)
- Q $S(Y<1:0,1:Y)
+ N DIC
 "RTN","RGUT",142,0)
- ; Displays spinning icon to indicate progress
+ S DIC(0)="E"
 "RTN","RGUT",143,0)
-WORKING(RGST,RGP,RGS) ;EP
+ D ^DGSEC
 "RTN","RGUT",144,0)
- Q:'$D(IO(0))!$D(ZTQUEUED) 0
+ Q $S(Y<1:0,1:Y)
 "RTN","RGUT",145,0)
- N RGZ
+ ; Displays spinning icon to indicate progress
 "RTN","RGUT",146,0)
- S RGZ(0)=$I,RGS=$G(RGS,"|/-\"),RGST=+$G(RGST)
+WORKING(RGST,RGP,RGS) ;EP
 "RTN","RGUT",147,0)
- S RGST=$S(RGST<0:0,1:RGST#$L(RGS)+1)
+ Q:'$D(IO(0))!$D(ZTQUEUED) 0
 "RTN","RGUT",148,0)
- U IO(0)
+ N RGZ
 "RTN","RGUT",149,0)
- W:'$G(RGP) *8,*$S(RGST:$A(RGS,RGST),1:32)
+ S RGZ(0)=$I,RGS=$G(RGS,"|/-\"),RGST=+$G(RGST)
 "RTN","RGUT",150,0)
- R *RGZ:0
+ S RGST=$S(RGST<0:0,1:RGST#$L(RGS)+1)
 "RTN","RGUT",151,0)
- U RGZ(0)
+ U IO(0)
 "RTN","RGUT",152,0)
- Q RGZ=94
+ W:'$G(RGP) *8,*$S(RGST:$A(RGS,RGST),1:32)
 "RTN","RGUT",153,0)
- ; Ask for Y/N response
+ R *RGZ:0
 "RTN","RGUT",154,0)
-ASK(RGP,RGD,RGZ) ;EP
+ U RGZ(0)
 "RTN","RGUT",155,0)
- S RGD=$G(RGD,"N")
+ Q RGZ=94
 "RTN","RGUT",156,0)
- S RGZ=$$GETCH(RGP_"? ","YN",,,,RGD)
+ ; Ask for Y/N response
 "RTN","RGUT",157,0)
- S:RGZ="" RGZ=$E(RGD)
+ASK(RGP,RGD,RGZ) ;EP
 "RTN","RGUT",158,0)
- W !
+ S RGD=$G(RGD,"N")
 "RTN","RGUT",159,0)
- Q $S(RGZ[U:"",1:RGZ="Y")
+ S RGZ=$$GETCH(RGP_"? ","YN",,,,RGD)
 "RTN","RGUT",160,0)
- ; Pause for user response
+ S:RGZ="" RGZ=$E(RGD)
 "RTN","RGUT",161,0)
-PAUSE(RGP,RGX,RGY) ;EP
-"RTN","RGUT",162,0)
- Q $$GETCH($G(RGP,"Press RETURN or ENTER to continue..."),U,.RGX,.RGY)
-"RTN","RGUT",163,0)
- ; Single character read
-"RTN","RGUT",164,0)
-GETCH(RGP,RGV,RGX,RGY,RGT,RGD) ;EP
-"RTN","RGUT",165,0)
- N RGZ,RGC
-"RTN","RGUT",166,0)
- W:$D(RGX)!$D(RGY) $$XY($G(RGX,$X),$G(RGY,$Y))
-"RTN","RGUT",167,0)
- W $G(RGP),$E($G(RGD)_" "),*8
-"RTN","RGUT",168,0)
- S RGT=$G(RGT,$G(DTIME,999999)),RGD=$G(RGD,U),RGC=""
-"RTN","RGUT",169,0)
- S:$D(RGV) RGV=$$UP^XLFSTR(RGV)_U
-"RTN","RGUT",170,0)
- F  D  Q:'$L(RGZ)
-"RTN","RGUT",171,0)
- .R RGZ#1:RGT
-"RTN","RGUT",172,0)
- .E  S RGC=RGD Q
-"RTN","RGUT",173,0)
- .W *8
-"RTN","RGUT",174,0)
- .Q:'$L(RGZ)
-"RTN","RGUT",175,0)
- .S RGZ=$$UP^XLFSTR(RGZ)
-"RTN","RGUT",176,0)
- .I $D(RGV) D
-"RTN","RGUT",177,0)
- ..I RGV[RGZ S RGC=RGZ
-"RTN","RGUT",178,0)
- ..E  W *7,*32,*8 S RGC=""
-"RTN","RGUT",179,0)
- .E  S RGC=RGZ
-"RTN","RGUT",180,0)
  W !
+"RTN","RGUT",162,0)
+ Q $S(RGZ[U:"",1:RGZ="Y")
+"RTN","RGUT",163,0)
+ ; Pause for user response
+"RTN","RGUT",164,0)
+PAUSE(RGP,RGX,RGY) ;EP
+"RTN","RGUT",165,0)
+ Q $$GETCH($G(RGP,"Press RETURN or ENTER to continue..."),U,.RGX,.RGY)
+"RTN","RGUT",166,0)
+ ; Single character read
+"RTN","RGUT",167,0)
+GETCH(RGP,RGV,RGX,RGY,RGT,RGD) ;EP
+"RTN","RGUT",168,0)
+ N RGZ,RGC
+"RTN","RGUT",169,0)
+ W:$D(RGX)!$D(RGY) $$XY($G(RGX,$X),$G(RGY,$Y))
+"RTN","RGUT",170,0)
+ W $G(RGP),$E($G(RGD)_" "),*8
+"RTN","RGUT",171,0)
+ S RGT=$G(RGT,$G(DTIME,999999)),RGD=$G(RGD,U),RGC=""
+"RTN","RGUT",172,0)
+ S:$D(RGV) RGV=$$UP^XLFSTR(RGV)_U
+"RTN","RGUT",173,0)
+ F  D  Q:'$L(RGZ)
+"RTN","RGUT",174,0)
+ .R RGZ#1:RGT
+"RTN","RGUT",175,0)
+ .E  S RGC=RGD Q
+"RTN","RGUT",176,0)
+ .W *8
+"RTN","RGUT",177,0)
+ .Q:'$L(RGZ)
+"RTN","RGUT",178,0)
+ .S RGZ=$$UP^XLFSTR(RGZ)
+"RTN","RGUT",179,0)
+ .I $D(RGV) D
+"RTN","RGUT",180,0)
+ ..I RGV[RGZ S RGC=RGZ
 "RTN","RGUT",181,0)
- Q RGC
+ ..E  W *7,*32,*8 S RGC=""
 "RTN","RGUT",182,0)
- ; Position cursor
+ .E  S RGC=RGZ
 "RTN","RGUT",183,0)
-XY(DX,DY) ;EP
+ W !
 "RTN","RGUT",184,0)
- D:$G(IOXY)="" HOME^%ZIS
+ Q RGC
 "RTN","RGUT",185,0)
- S DX=$S(+$G(DX)>0:+DX,1:0),DY=$S(+$G(DY)>0:+DY,1:0),$X=0
+ ; Position cursor
 "RTN","RGUT",186,0)
- X IOXY
+XY(DX,DY) ;EP
 "RTN","RGUT",187,0)
- S $X=DX,$Y=DY
+ D:$G(IOXY)="" HOME^%ZIS
 "RTN","RGUT",188,0)
- Q ""
+ S DX=$S(+$G(DX)>0:+DX,1:0),DY=$S(+$G(DY)>0:+DY,1:0),$X=0
 "RTN","RGUT",189,0)
- ; Parameterized calls to date routines
+ X IOXY
 "RTN","RGUT",190,0)
-DT(RGD,RGX) ;EP
+ S $X=DX,$Y=DY
 "RTN","RGUT",191,0)
- N %D,%P,%C,%H,%I,%X,%Y,RGZ
+ Q ""
 "RTN","RGUT",192,0)
- D DT^DILF($G(RGX),RGD,.RGZ)
+ ; Parameterized calls to date routines
 "RTN","RGUT",193,0)
- W:$D(RGZ(0)) RGZ(0),!
+DT(RGD,RGX) ;EP
 "RTN","RGUT",194,0)
- Q $G(RGZ,-1)
+ N %D,%P,%C,%H,%I,%X,%Y,RGZ
 "RTN","RGUT",195,0)
-DTC(X1,X2) ;EP
+ D DT^DILF($G(RGX),RGD,.RGZ)
 "RTN","RGUT",196,0)
- N X3
+ W:$D(RGZ(0)) RGZ(0),!
 "RTN","RGUT",197,0)
- S X2=$$DTF(X1)+X2,X1=X1\1,X3=X2\1,X2=X2-X3
+ Q $G(RGZ,-1)
 "RTN","RGUT",198,0)
- S:X2<0 X3=X3-1,X2=X2+1
+DTC(X1,X2) ;EP
 "RTN","RGUT",199,0)
- Q $$FMADD^XLFDT(X1,X3)+$J($$DTT(X2),0,6)
+ N X3
 "RTN","RGUT",200,0)
-DTD(X1,X2) ;EP
+ S X2=$$DTF(X1)+X2,X1=X1\1,X3=X2\1,X2=X2-X3
 "RTN","RGUT",201,0)
- Q $$FMDIFF^XLFDT(X1\1,X2\1)+($$DTF(X1)-$$DTF(X2))
+ S:X2<0 X3=X3-1,X2=X2+1
 "RTN","RGUT",202,0)
-DTF(X) S X=X#1*100
+ Q $$FMADD^XLFDT(X1,X3)+$J($$DTT(X2),0,6)
 "RTN","RGUT",203,0)
- Q X\1*3600+(X*100#100\1*60)+(X*10000#100)/86400
+DTD(X1,X2) ;EP
 "RTN","RGUT",204,0)
-DTT(X) S X=X*86400
+ Q $$FMDIFF^XLFDT(X1\1,X2\1)+($$DTF(X1)-$$DTF(X2))
 "RTN","RGUT",205,0)
- Q X\3600*100+(X#3600/3600*60)/10000
+DTF(X) S X=X#1*100
 "RTN","RGUT",206,0)
- ; Save buffer to routine
+ Q X\1*3600+(X*100#100\1*60)+(X*10000#100)/86400
 "RTN","RGUT",207,0)
- ; RTN = Routine name
+DTT(X) S X=X*86400
 "RTN","RGUT",208,0)
- ; BUF = Buffer containing routine contents (terminal subscript must be 0).
+ Q X\3600*100+(X#3600/3600*60)/10000
 "RTN","RGUT",209,0)
- ; KILL = If true, delete buffer after completion
+ ; Save buffer to routine
 "RTN","RGUT",210,0)
-RTNSAVE(RTN,BUF,KILL) ;
+ ; RTN = Routine name
 "RTN","RGUT",211,0)
- N XCM,XCN,DIE,X
+ ; BUF = Buffer containing routine contents (terminal subscript must be 0).
 "RTN","RGUT",212,0)
- S XCN=0,DIE=BUF,X=RTN
+ ; KILL = If true, delete buffer after completion
 "RTN","RGUT",213,0)
- S:$E(DIE,$L(DIE))=")" $E(DIE,$L(DIE))=","
+RTNSAVE(RTN,BUF,KILL) ;
 "RTN","RGUT",214,0)
- X ^%ZOSF("SAVE")
+ N XCM,XCN,DIE,X
 "RTN","RGUT",215,0)
- K:$G(KILL) @BUF
+ S XCN=0,DIE=BUF,X=RTN
 "RTN","RGUT",216,0)
- Q
+ S:$E(DIE,$L(DIE))=")" $E(DIE,$L(DIE))=","
 "RTN","RGUT",217,0)
- ; Copy one routine to another
+ X ^%ZOSF("SAVE")
 "RTN","RGUT",218,0)
-RTNCOPY(SRC,DST) ;
+ K:$G(KILL) @BUF
 "RTN","RGUT",219,0)
- N BUF,X,Y
-"RTN","RGUT",220,0)
- Q:'$L($T(+0^@SRC))
-"RTN","RGUT",221,0)
- S BUF=$$TMPGBL^RGUTRPC("RTN")
-"RTN","RGUT",222,0)
- F X=1:1 S Y=$T(+X^@SRC) Q:'$L(Y)  S @BUF@(X,0)=Y
-"RTN","RGUT",223,0)
- D RTNSAVE(DST,BUF,1)
-"RTN","RGUT",224,0)
  Q
+"RTN","RGUT",220,0)
+ ; Copy one routine to another
+"RTN","RGUT",221,0)
+RTNCOPY(SRC,DST) ;
+"RTN","RGUT",222,0)
+ N BUF,X,Y
+"RTN","RGUT",223,0)
+ Q:'$L($T(+0^@SRC))
+"RTN","RGUT",224,0)
+ S BUF=$$TMPGBL^RGUTRPC("RTN")
 "RTN","RGUT",225,0)
- ; Delete a routine
+ F X=1:1 S Y=$T(+X^@SRC) Q:'$L(Y)  S @BUF@(X,0)=Y
 "RTN","RGUT",226,0)
-RTNDEL(RTN) ;
+ D RTNSAVE(DST,BUF,1)
 "RTN","RGUT",227,0)
- D RTNSAVE(RTN,$$TMPGBL^RGUTRPC("RTN"),1)
+ Q
 "RTN","RGUT",228,0)
+ ; Delete a routine
+"RTN","RGUT",229,0)
+RTNDEL(RTN) ;
+"RTN","RGUT",230,0)
+ D RTNSAVE(RTN,$$TMPGBL^RGUTRPC("RTN"),1)
+"RTN","RGUT",231,0)
  Q
 "RTN","RGUT1")
 0^71^B805876
 "RTN","RGUT1",1,0)
 RGUT1 ;RG/IND/PLS - General Purpose Utilites - Con't ;03-Mar-2015 14:24;DKM
 "RTN","RGUT1",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUT1",3,0)
  ;;
 "RTN","RGUT1",4,0)
@@ -1485,7 +1491,7 @@ ASKDATE(PMT,DFL,MIN,OPT) ;
 "RTN","RGUTALR",1,0)
 RGUTALR ;RI/CBMI/DKM - Send alert to user(s) via kernel or mail;03-Mar-2015 14:24;DKM
 "RTN","RGUTALR",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTALR",3,0)
  ;;
 "RTN","RGUTALR",4,0)
@@ -1545,7 +1551,7 @@ MAIL(RGMSG,XMY,XMSUB,XMDUZ) ;
 "RTN","RGUTBC28",1,0)
 RGUTBC28 ;RI/CBMI/DKM/PLS - Convert 128 barcode to HPCL-compatible form ;03-Mar-2015 14:24;DKM
 "RTN","RGUTBC28",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTBC28",3,0)
  ;;
 "RTN","RGUTBC28",4,0)
@@ -1881,7 +1887,7 @@ BC(TXT,ORN,HGT,HOR,VER,WID) ;
 "RTN","RGUTBC39",1,0)
 RGUTBC39 ;RG/IND/PLS - Converts barcode 39 to HPCL-compatible format ;03-Mar-2015 14:24;DKM
 "RTN","RGUTBC39",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTBC39",3,0)
  ;;
 "RTN","RGUTBC39",4,0)
@@ -2075,7 +2081,7 @@ CHK(X) ;CALCULATE CHECK DIGIT AND RETURN STRING TO PRINT
 "RTN","RGUTBCDA",1,0)
 RGUTBCDA ;RG/IND/PLS - Converts barcode CODABAR to HPCL-compatible format ;03-Mar-2015 14:24;DKM
 "RTN","RGUTBCDA",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTBCDA",3,0)
  ;;
 "RTN","RGUTBCDA",4,0)
@@ -2229,7 +2235,7 @@ CHK(X) ;CALCULATE CHECK DIGIT AND RETURN STRING TO PRINT
 "RTN","RGUTBIG",1,0)
 RGUTBIG ;RG/IND/PLS - Print a banner in large letters;03-Mar-2015 14:24;DKM
 "RTN","RGUTBIG",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTBIG",3,0)
  ;;
 "RTN","RGUTBIG",4,0)
@@ -2397,7 +2403,7 @@ TBL ;; Table of character "raster images"
 "RTN","RGUTDAT",1,0)
 RGUTDAT ;RI/CBMI/DKM - Date range input;03-Mar-2015 14:24;DKM
 "RTN","RGUTDAT",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTDAT",3,0)
  ;;
 "RTN","RGUTDAT",4,0)
@@ -2549,7 +2555,7 @@ PAUSE(%RGZ) ;
 "RTN","RGUTDATF",1,0)
 RGUTDATF ;RI/CBMI/DKM - Date Formatter;03-Mar-2015 14:24;DKM
 "RTN","RGUTDATF",2,0)
- ;;3.0;RG UTILITIES;;Feb 20, 2015;Build 176
+ ;;3.0;RG UTILITIES;;Feb 20, 2015;Build 261
 "RTN","RGUTDATF",3,0)
  ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 1
 "RTN","RGUTDATF",4,0)
@@ -2737,7 +2743,7 @@ FMTX() N TZ
 "RTN","RGUTDDR",1,0)
 RGUTDDR ;RI/CBMI/DKM - FileMan RPC Extensions ;03-Mar-2015 14:24;DKM
 "RTN","RGUTDDR",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTDDR",3,0)
  ;;
 "RTN","RGUTDDR",4,0)
@@ -3253,7 +3259,7 @@ XREFFLD(FNUM,XREF) ;EP
 "RTN","RGUTDIC",1,0)
 RGUTDIC ;RI/CBMI/DKM - Encapsulated FileMan API;03-Mar-2015 14:24;DKM
 "RTN","RGUTDIC",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTDIC",3,0)
  ;;
 "RTN","RGUTDIC",4,0)
@@ -3585,7 +3591,7 @@ DA N %RGZ,%RGZ1,%RGZ2
 "RTN","RGUTDT",1,0)
 RGUTDT ;RI/CBMI/DKM - FM date to formatted date;03-Mar-2015 14:24;DKM
 "RTN","RGUTDT",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTDT",3,0)
  ;;
 "RTN","RGUTDT",4,0)
@@ -3663,7 +3669,7 @@ ENTRY(RGDAT,RGFMT) ; EP
 "RTN","RGUTEDT",1,0)
 RGUTEDT ;RI/CBMI/DKM - Screen-oriented line editor;05-Mar-2015 18:11;DKM
 "RTN","RGUTEDT",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTEDT",3,0)
  ;;
 "RTN","RGUTEDT",4,0)
@@ -3997,7 +4003,7 @@ RESET W $S(RGOPT["R":RGRVON,1:RGRVOFF)
 "RTN","RGUTHFS",1,0)
 RGUTHFS ;RI/CBMI/DKM - Host IO Support ;03-Mar-2015 14:24;DKM
 "RTN","RGUTHFS",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTHFS",3,0)
  ;;
 "RTN","RGUTHFS",4,0)
@@ -4111,7 +4117,7 @@ STRIP N I,J,K,X
 "RTN","RGUTIMP",1,0)
 RGUTIMP ;RI/CBMI/DKM - Import text into FileMan file;03-Mar-2015 14:24;DKM
 "RTN","RGUTIMP",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIMP",3,0)
  ;;
 "RTN","RGUTIMP",4,0)
@@ -4273,9 +4279,9 @@ ERR(RGMSG,RGX) ;
 "RTN","RGUTIN0")
 0^46^B1324180
 "RTN","RGUTIN0",1,0)
-RGUTIN0 ;RI/CBMI/DKM - Platform-dependent operations;05-Mar-2015 15:03;DKM
+RGUTIN0 ;RI/CBMI/DKM - Platform-dependent operations;11-Mar-2015 09:33;DKM
 "RTN","RGUTIN0",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN0",3,0)
  ;;
 "RTN","RGUTIN0",4,0)
@@ -4331,11 +4337,11 @@ OPENX(X1,X2) ;EP
 "RTN","RGUTIN0",29,0)
  Q X1
 "RTN","RGUTIN16")
-0^47^B4251434
+0^47^B4411769
 "RTN","RGUTIN16",1,0)
-RGUTIN16 ;RI/CBMI/DKM - Inits for VMS;05-Mar-2015 15:03;DKM
+RGUTIN16 ;RI/CBMI/DKM - Inits for VMS;11-Mar-2015 09:33;DKM
 "RTN","RGUTIN16",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN16",3,0)
  ;;
 "RTN","RGUTIN16",4,0)
@@ -4417,93 +4423,99 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTIN16",42,0)
  Q
 "RTN","RGUTIN16",43,0)
- ; Return directory of files
+ ; Make a directory
 "RTN","RGUTIN16",44,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) Q:$Q 0
 "RTN","RGUTIN16",45,0)
- N Z,Z1
-"RTN","RGUTIN16",46,0)
- S $ZT="DIRX^RGUTOS",X3=$G(X3,"^UTILITY(""DIR"",$J)")
-"RTN","RGUTIN16",47,0)
- K @X3
-"RTN","RGUTIN16",48,0)
- S:'$G(X2) X2=9999999999
-"RTN","RGUTIN16",49,0)
- F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  S @X3@($P(Z1,"]",2))=""
-"RTN","RGUTIN16",50,0)
-DIRX Q
-"RTN","RGUTIN16",51,0)
- ; Return default working directory
-"RTN","RGUTIN16",52,0)
-DEFDIR(X) ;EP
-"RTN","RGUTIN16",53,0)
- Q $G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
-"RTN","RGUTIN16",54,0)
- ; Return path delimiters
-"RTN","RGUTIN16",55,0)
-DIRDLM() ;EP
-"RTN","RGUTIN16",56,0)
- Q "[.]"
-"RTN","RGUTIN16",57,0)
- ; Parse current error
-"RTN","RGUTIN16",58,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTIN16",59,0)
- S X1=$P($P($ZE,", ",2),"-",3),X2=$P($P($ZE,", "),":"),X3=$P($ZE,", ",$S(X1="ZTRAP":4,1:3))
-"RTN","RGUTIN16",60,0)
  Q
+"RTN","RGUTIN16",46,0)
+ ; Return directory of files
+"RTN","RGUTIN16",47,0)
+DIR(X1,X2,X3) ;EP
+"RTN","RGUTIN16",48,0)
+ N Z,Z1
+"RTN","RGUTIN16",49,0)
+ S $ZT="DIRX^RGUTOS",X3=$G(X3,"^UTILITY(""DIR"",$J)")
+"RTN","RGUTIN16",50,0)
+ K @X3
+"RTN","RGUTIN16",51,0)
+ S:'$G(X2) X2=9999999999
+"RTN","RGUTIN16",52,0)
+ F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  S @X3@($P(Z1,"]",2))=""
+"RTN","RGUTIN16",53,0)
+DIRX Q
+"RTN","RGUTIN16",54,0)
+ ; Return default working directory
+"RTN","RGUTIN16",55,0)
+DEFDIR(X) ;EP
+"RTN","RGUTIN16",56,0)
+ Q $G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+"RTN","RGUTIN16",57,0)
+ ; Return path delimiters
+"RTN","RGUTIN16",58,0)
+DIRDLM() ;EP
+"RTN","RGUTIN16",59,0)
+ Q "[.]"
+"RTN","RGUTIN16",60,0)
+ ; Parse current error
 "RTN","RGUTIN16",61,0)
- ; Raise an exception
+ERR(X1,X2,X3) ;EP
 "RTN","RGUTIN16",62,0)
-RAISE(X) ;EP
+ S X1=$P($P($ZE,", ",2),"-",3),X2=$P($P($ZE,", "),":"),X3=$P($ZE,", ",$S(X1="ZTRAP":4,1:3))
 "RTN","RGUTIN16",63,0)
- ZT $G(X)
+ Q
 "RTN","RGUTIN16",64,0)
- ; Set error trap
+ ; Raise an exception
 "RTN","RGUTIN16",65,0)
-TRAP(X) ;EP
+RAISE(X) ;EP
 "RTN","RGUTIN16",66,0)
- Q "$ZT="""_$G(X)_""""
+ ZT $G(X)
 "RTN","RGUTIN16",67,0)
- ; Return size of a file
+ ; Set error trap
 "RTN","RGUTIN16",68,0)
-SIZE(X) ;EP
+TRAP(X) ;EP
 "RTN","RGUTIN16",69,0)
- Q $ZC(%GETFILE,X,"BLS")*$ZC(%GETFILE,X,"EOF")
+ Q "$ZT="""_$G(X)_""""
 "RTN","RGUTIN16",70,0)
- ; Return free disk space
+ ; Return size of a file
 "RTN","RGUTIN16",71,0)
-FREE(X) ;EP
+SIZE(X) ;EP
 "RTN","RGUTIN16",72,0)
- Q $ZC(%GETDVI,X,"FREEBLOCKS")/2048
+ Q $ZC(%GETFILE,X,"BLS")*$ZC(%GETFILE,X,"EOF")
 "RTN","RGUTIN16",73,0)
- ; Return host ip address
+ ; Return free disk space
 "RTN","RGUTIN16",74,0)
-HOSTIP() ;EP
+FREE(X) ;EP
 "RTN","RGUTIN16",75,0)
- Q ""
+ Q $ZC(%GETDVI,X,"FREEBLOCKS")/2048
 "RTN","RGUTIN16",76,0)
- ; Return host name
+ ; Return host ip address
 "RTN","RGUTIN16",77,0)
-HOSTNAME() ;EP
+HOSTIP() ;EP
 "RTN","RGUTIN16",78,0)
  Q ""
 "RTN","RGUTIN16",79,0)
- ; Return client ip address
+ ; Return host name
 "RTN","RGUTIN16",80,0)
-CLIENTIP() ;EP
+HOSTNAME() ;EP
 "RTN","RGUTIN16",81,0)
- N IP,$ET
+ Q ""
 "RTN","RGUTIN16",82,0)
- S $ET="S $EC=""""",IP=$&%UCXGETPEER
+ ; Return client ip address
 "RTN","RGUTIN16",83,0)
+CLIENTIP() ;EP
+"RTN","RGUTIN16",84,0)
+ N IP,$ET
+"RTN","RGUTIN16",85,0)
+ S $ET="S $EC=""""",IP=$&%UCXGETPEER
+"RTN","RGUTIN16",86,0)
  Q $A(IP,1)_"."_$A(IP,2)_"."_$A(IP,3)_"."_$A(IP,4)
 "RTN","RGUTIN18")
-0^48^B4464090
+0^48^B4789827
 "RTN","RGUTIN18",1,0)
-RGUTIN18 ;RI/CBMI/DKM - Inits for Cache (Windows);05-Mar-2015 15:03;DKM
+RGUTIN18 ;RI/CBMI/DKM - Inits for Cache (Windows);11-Mar-2015 09:33;DKM
 "RTN","RGUTIN18",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN18",3,0)
  ;;
 "RTN","RGUTIN18",4,0)
@@ -4587,111 +4599,119 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTIN18",43,0)
  Q
 "RTN","RGUTIN18",44,0)
- ; Return directory of files
+ ; Make a directory
 "RTN","RGUTIN18",45,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) S X='$$ZF(-1,"mkdir "_X)
 "RTN","RGUTIN18",46,0)
- N Z,Z1,FDLM
+ Q:$Q X
 "RTN","RGUTIN18",47,0)
- S FDLM=$E($$DIRDLM,1)
+ Q
 "RTN","RGUTIN18",48,0)
- S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+ ; Return directory of files
 "RTN","RGUTIN18",49,0)
- K @X3
+DIR(X1,X2,X3) ;EP
 "RTN","RGUTIN18",50,0)
- S:'$G(X2) X2=9999999999
+ N Z,Z1,FDLM
 "RTN","RGUTIN18",51,0)
- F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  D
-"RTN","RGUTIN18",52,0)
- .S Z1=$P(Z1,FDLM,$L(Z1,FDLM))
-"RTN","RGUTIN18",53,0)
- .S:$TR(Z1,".")'="" @X3@(Z1)=""
-"RTN","RGUTIN18",54,0)
- Q
-"RTN","RGUTIN18",55,0)
- ; Return path delimiters
-"RTN","RGUTIN18",56,0)
-DIRDLM() ;EP
-"RTN","RGUTIN18",57,0)
- Q "\\\"
-"RTN","RGUTIN18",58,0)
- ; Return default working directory
-"RTN","RGUTIN18",59,0)
-DEFDIR(X) ;EP
-"RTN","RGUTIN18",60,0)
- N FDLM
-"RTN","RGUTIN18",61,0)
  S FDLM=$E($$DIRDLM,1)
-"RTN","RGUTIN18",62,0)
- S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
-"RTN","RGUTIN18",63,0)
- S:$E(X,$L(X))'=FDLM X=X_FDLM
-"RTN","RGUTIN18",64,0)
- Q X
-"RTN","RGUTIN18",65,0)
- ; Parse current error
-"RTN","RGUTIN18",66,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTIN18",67,0)
- S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
-"RTN","RGUTIN18",68,0)
- S:X2["*" X2=""
-"RTN","RGUTIN18",69,0)
- S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
-"RTN","RGUTIN18",70,0)
+"RTN","RGUTIN18",52,0)
+ S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+"RTN","RGUTIN18",53,0)
+ K @X3
+"RTN","RGUTIN18",54,0)
+ S:'$G(X2) X2=9999999999
+"RTN","RGUTIN18",55,0)
+ F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  D
+"RTN","RGUTIN18",56,0)
+ .S Z1=$P(Z1,FDLM,$L(Z1,FDLM))
+"RTN","RGUTIN18",57,0)
+ .S:$TR(Z1,".")'="" @X3@(Z1)=""
+"RTN","RGUTIN18",58,0)
  Q
+"RTN","RGUTIN18",59,0)
+ ; Return path delimiters
+"RTN","RGUTIN18",60,0)
+DIRDLM() ;EP
+"RTN","RGUTIN18",61,0)
+ Q "\\\"
+"RTN","RGUTIN18",62,0)
+ ; Return default working directory
+"RTN","RGUTIN18",63,0)
+DEFDIR(X) ;EP
+"RTN","RGUTIN18",64,0)
+ N FDLM
+"RTN","RGUTIN18",65,0)
+ S FDLM=$E($$DIRDLM,1)
+"RTN","RGUTIN18",66,0)
+ S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+"RTN","RGUTIN18",67,0)
+ S:$E(X,$L(X))'=FDLM X=X_FDLM
+"RTN","RGUTIN18",68,0)
+ Q X
+"RTN","RGUTIN18",69,0)
+ ; Parse current error
+"RTN","RGUTIN18",70,0)
+ERR(X1,X2,X3) ;EP
 "RTN","RGUTIN18",71,0)
- ; Raise an exception
+ S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
 "RTN","RGUTIN18",72,0)
-RAISE(X) ;EP
+ S:X2["*" X2=""
 "RTN","RGUTIN18",73,0)
- ZT $G(X)
+ S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
 "RTN","RGUTIN18",74,0)
- ; Set error trap
+ Q
 "RTN","RGUTIN18",75,0)
-TRAP(X) ;EP
+ ; Raise an exception
 "RTN","RGUTIN18",76,0)
- Q "$ZT="""_$G(X)_""""
+RAISE(X) ;EP
 "RTN","RGUTIN18",77,0)
- ; Return size of file
+ ZT $G(X)
 "RTN","RGUTIN18",78,0)
-SIZE(X) ;EP
+ ; Set error trap
 "RTN","RGUTIN18",79,0)
- Q 0
+TRAP(X) ;EP
 "RTN","RGUTIN18",80,0)
- ; Return free disk space
+ Q "$ZT="""_$G(X)_""""
 "RTN","RGUTIN18",81,0)
-FREE(X) ;EP
+ ; Return size of file
 "RTN","RGUTIN18",82,0)
- Q 0
+SIZE(X) ;EP
 "RTN","RGUTIN18",83,0)
- ; Return host ip address
+ Q 0
 "RTN","RGUTIN18",84,0)
-HOSTIP() ;EP
+ ; Return free disk space
 "RTN","RGUTIN18",85,0)
- Q $P($P($ZU(131,1),","),":",2)
+FREE(X) ;EP
 "RTN","RGUTIN18",86,0)
- ; Return host name
+ Q 0
 "RTN","RGUTIN18",87,0)
-HOSTNAME() ;EP
+ ; Return host ip address
 "RTN","RGUTIN18",88,0)
- Q $P($P($ZU(131,1),","),":")
+HOSTIP() ;EP
 "RTN","RGUTIN18",89,0)
- ; Return client ip address
+ Q $P($P($ZU(131,1),","),":",2)
 "RTN","RGUTIN18",90,0)
-CLIENTIP() ;EP
+ ; Return host name
 "RTN","RGUTIN18",91,0)
- N IP,$ET
+HOSTNAME() ;EP
 "RTN","RGUTIN18",92,0)
- S $ET="S $EC=""""",IP=$ZU(111,0)
+ Q $P($P($ZU(131,1),","),":")
 "RTN","RGUTIN18",93,0)
+ ; Return client ip address
+"RTN","RGUTIN18",94,0)
+CLIENTIP() ;EP
+"RTN","RGUTIN18",95,0)
+ N IP,$ET
+"RTN","RGUTIN18",96,0)
+ S $ET="S $EC=""""",IP=$ZU(111,0)
+"RTN","RGUTIN18",97,0)
  Q $A(IP,1)_"."_$A(IP,2)_"."_$A(IP,3)_"."_$A(IP,4)
 "RTN","RGUTIN19")
-0^88^B4063150
+0^88^B4406499
 "RTN","RGUTIN19",1,0)
-RGUTIN19 ;RI/CBMI/DKM - Inits for GT.M (Unix);06-Mar-2015 08:46;DKM
+RGUTIN19 ;RI/CBMI/DKM - Inits for GT.M (Unix);11-Mar-2015 10:09;DKM
 "RTN","RGUTIN19",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN19",3,0)
  ;;
 "RTN","RGUTIN19",4,0)
@@ -4777,109 +4797,117 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTIN19",44,0)
  Q
 "RTN","RGUTIN19",45,0)
- ; Generate directory listing
+ ; Make a directory
 "RTN","RGUTIN19",46,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) ZSYSTEM "mkdir -p "_X
 "RTN","RGUTIN19",47,0)
- N Z,Z1,FDLM
+ Q:$Q '$ZSYSTEM
 "RTN","RGUTIN19",48,0)
- S FDLM=$E($$DIRDLM,1)
+ Q
 "RTN","RGUTIN19",49,0)
- S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+ ; Generate directory listing
 "RTN","RGUTIN19",50,0)
- K @X3
+DIR(X1,X2,X3) ;EP
 "RTN","RGUTIN19",51,0)
- S:'$G(X2) X2=99999999
+ N Z,Z1,FDLM
 "RTN","RGUTIN19",52,0)
- F Z=1:1:X2 S Z1=$ZSEARCH(X1) Q:Z1=""  D
-"RTN","RGUTIN19",53,0)
- .S Z1=$ZPARSE(Z1,"NAME")_$ZPARSE(Z1,"TYPE")
-"RTN","RGUTIN19",54,0)
- .S:$TR(Z1,".")'="" @X3@(Z1)=""
-"RTN","RGUTIN19",55,0)
- Q
-"RTN","RGUTIN19",56,0)
- ; Return path delimiters
-"RTN","RGUTIN19",57,0)
-DIRDLM() ;EP
-"RTN","RGUTIN19",58,0)
- Q "///"
-"RTN","RGUTIN19",59,0)
- ; Return default working directory
-"RTN","RGUTIN19",60,0)
-DEFDIR(X) ;EP
-"RTN","RGUTIN19",61,0)
- N FDLM
-"RTN","RGUTIN19",62,0)
  S FDLM=$E($$DIRDLM,1)
+"RTN","RGUTIN19",53,0)
+ S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+"RTN","RGUTIN19",54,0)
+ K @X3
+"RTN","RGUTIN19",55,0)
+ S:'$G(X2) X2=99999999
+"RTN","RGUTIN19",56,0)
+ F Z=1:1:X2 S Z1=$ZSEARCH(X1) Q:Z1=""  D
+"RTN","RGUTIN19",57,0)
+ .S Z1=$ZPARSE(Z1,"NAME")_$ZPARSE(Z1,"TYPE")
+"RTN","RGUTIN19",58,0)
+ .S:$TR(Z1,".")'="" @X3@(Z1)=""
+"RTN","RGUTIN19",59,0)
+ Q
+"RTN","RGUTIN19",60,0)
+ ; Return path delimiters
+"RTN","RGUTIN19",61,0)
+DIRDLM() ;EP
+"RTN","RGUTIN19",62,0)
+ Q "///"
 "RTN","RGUTIN19",63,0)
- S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+ ; Return default working directory
 "RTN","RGUTIN19",64,0)
- S:$E(X,$L(X))'=FDLM X=X_FDLM
+DEFDIR(X) ;EP
 "RTN","RGUTIN19",65,0)
- Q X
+ N FDLM
 "RTN","RGUTIN19",66,0)
- ; Parse current error
+ S FDLM=$E($$DIRDLM,1)
 "RTN","RGUTIN19",67,0)
-ERR(X1,X2,X3) ;EP
+ S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
 "RTN","RGUTIN19",68,0)
- S X1=$ZSTATUS,X2=$P(X1,",",2),X3=$P(X1,",",4),X1=$P($P(X1,",",3),"-",3)
+ S:$E(X,$L(X))'=FDLM X=X_FDLM
 "RTN","RGUTIN19",69,0)
- Q
+ Q X
 "RTN","RGUTIN19",70,0)
- ; Raise an exception
+ ; Parse current error
 "RTN","RGUTIN19",71,0)
-RAISE(X) ;EP
+ERR(X1,X2,X3) ;EP
 "RTN","RGUTIN19",72,0)
- ZM 150342768:$G(X)
+ S X1=$ZSTATUS,X2=$P(X1,",",2),X3=$P(X1,",",4),X1=$P($P(X1,",",3),"-",3)
 "RTN","RGUTIN19",73,0)
- ; Set error trap
-"RTN","RGUTIN19",74,0)
-TRAP(X) ;EP
-"RTN","RGUTIN19",75,0)
- S $ZYERROR="ZTRAP^RGUTOS"
-"RTN","RGUTIN19",76,0)
- Q "$ZT="""_$S($D(X):"G "_X,1:"")_""""
-"RTN","RGUTIN19",77,0)
-ZTRAP S $ZE=$ZSTATUS
-"RTN","RGUTIN19",78,0)
  Q
+"RTN","RGUTIN19",74,0)
+ ; Raise an exception
+"RTN","RGUTIN19",75,0)
+RAISE(X) ;EP
+"RTN","RGUTIN19",76,0)
+ ZM 150342768:$G(X)
+"RTN","RGUTIN19",77,0)
+ ; Set error trap
+"RTN","RGUTIN19",78,0)
+TRAP(X) ;EP
 "RTN","RGUTIN19",79,0)
- ; Return size of a file
+ S $ZYERROR="ZTRAP^RGUTOS"
 "RTN","RGUTIN19",80,0)
-SIZE(X) ;EP
+ Q "$ZT="""_$S($D(X):"G "_X,1:"")_""""
 "RTN","RGUTIN19",81,0)
- Q 0
+ZTRAP S $ZE=$ZSTATUS
 "RTN","RGUTIN19",82,0)
- ; Return free disk space
+ Q
 "RTN","RGUTIN19",83,0)
-FREE(X) ;EP
+ ; Return size of a file
 "RTN","RGUTIN19",84,0)
- Q 0
+SIZE(X) ;EP
 "RTN","RGUTIN19",85,0)
- ; Return host ip address
+ Q 0
 "RTN","RGUTIN19",86,0)
-HOSTIP() ;EP
+ ; Return free disk space
 "RTN","RGUTIN19",87,0)
- Q ""
+FREE(X) ;EP
 "RTN","RGUTIN19",88,0)
- ; Return host name
+ Q 0
 "RTN","RGUTIN19",89,0)
-HOSTNAME() ;EP
+ ; Return host ip address
 "RTN","RGUTIN19",90,0)
- Q ""
+HOSTIP() ;EP
 "RTN","RGUTIN19",91,0)
- ; Return client ip address
+ Q ""
 "RTN","RGUTIN19",92,0)
-CLIENTIP() ;EP
+ ; Return host name
 "RTN","RGUTIN19",93,0)
+HOSTNAME() ;EP
+"RTN","RGUTIN19",94,0)
+ Q ""
+"RTN","RGUTIN19",95,0)
+ ; Return client ip address
+"RTN","RGUTIN19",96,0)
+CLIENTIP() ;EP
+"RTN","RGUTIN19",97,0)
  Q ""
 "RTN","RGUTIN58")
-0^70^B5514558
+0^70^B5722564
 "RTN","RGUTIN58",1,0)
-RGUTIN58 ;RI/CBMI/DKM/PLS - Inits for MSM-UNIX;05-Mar-2015 15:03;DKM
+RGUTIN58 ;RI/CBMI/DKM/PLS - Inits for MSM-UNIX;11-Mar-2015 09:33;DKM
 "RTN","RGUTIN58",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN58",3,0)
  ;;
 "RTN","RGUTIN58",4,0)
@@ -4965,135 +4993,141 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTIN58",44,0)
  Q
 "RTN","RGUTIN58",45,0)
- ; Generate a directory listing
+ ; Make a directory
 "RTN","RGUTIN58",46,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) Q:$Q 0
 "RTN","RGUTIN58",47,0)
- N TFN,X,Z
+ Q
 "RTN","RGUTIN58",48,0)
- N $ET
+ ; Generate a directory listing
 "RTN","RGUTIN58",49,0)
- S $ET="",@$$TRAP("DIRERR^RGUTOS")
+DIR(X1,X2,X3) ;EP
 "RTN","RGUTIN58",50,0)
- S X1=$G(X1),X2=+$G(X2),X3=$G(X3,"^UTILITY(""DIR"",$J)")
+ N TFN,X,Z
 "RTN","RGUTIN58",51,0)
- S TFN=$$DEFDIR_"RGUTAUTO."_$J
+ N $ET
 "RTN","RGUTIN58",52,0)
- K @X3
+ S $ET="",@$$TRAP("DIRERR^RGUTOS")
 "RTN","RGUTIN58",53,0)
- ;
+ S X1=$G(X1),X2=+$G(X2),X3=$G(X3,"^UTILITY(""DIR"",$J)")
 "RTN","RGUTIN58",54,0)
- D DELETE(TFN)
+ S TFN=$$DEFDIR_"RGUTAUTO."_$J
 "RTN","RGUTIN58",55,0)
- D JW("ls -d "_X1_" >> "_TFN)
+ K @X3
 "RTN","RGUTIN58",56,0)
- D OPEN(.TFN,"R")
+ ;
 "RTN","RGUTIN58",57,0)
- F Z=1:1 Q:(X2&(Z>X2))  Q:$$READ(.X,TFN)  D
-"RTN","RGUTIN58",58,0)
- .S X=$TR($P(X,"/",$L(X,"/")),$C(10),"")
-"RTN","RGUTIN58",59,0)
- .I X]"" S @X3@(X)=""
-"RTN","RGUTIN58",60,0)
-DIRERR D CLOSE(.TFN)
-"RTN","RGUTIN58",61,0)
  D DELETE(TFN)
+"RTN","RGUTIN58",58,0)
+ D JW("ls -d "_X1_" >> "_TFN)
+"RTN","RGUTIN58",59,0)
+ D OPEN(.TFN,"R")
+"RTN","RGUTIN58",60,0)
+ F Z=1:1 Q:(X2&(Z>X2))  Q:$$READ(.X,TFN)  D
+"RTN","RGUTIN58",61,0)
+ .S X=$TR($P(X,"/",$L(X,"/")),$C(10),"")
 "RTN","RGUTIN58",62,0)
- Q
+ .I X]"" S @X3@(X)=""
 "RTN","RGUTIN58",63,0)
- ; Return default working directory
+DIRERR D CLOSE(.TFN)
 "RTN","RGUTIN58",64,0)
-DEFDIR(X) ;EP
+ D DELETE(TFN)
 "RTN","RGUTIN58",65,0)
- S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
-"RTN","RGUTIN58",66,0)
- S:$E(X,$L(X))'="/" X=X_"/"
-"RTN","RGUTIN58",67,0)
- Q X
-"RTN","RGUTIN58",68,0)
- ; Return path delimiters
-"RTN","RGUTIN58",69,0)
-DIRDLM() ;EP
-"RTN","RGUTIN58",70,0)
- Q "///"
-"RTN","RGUTIN58",71,0)
- ; Return free disk space
-"RTN","RGUTIN58",72,0)
-FREE(X) ;EP
-"RTN","RGUTIN58",73,0)
- S X=$ZOS(9,$E(X))
-"RTN","RGUTIN58",74,0)
- Q X*$P(X,"^",2)*$P(X,"^",3)/1048576
-"RTN","RGUTIN58",75,0)
- ; Parse current error
-"RTN","RGUTIN58",76,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTIN58",77,0)
- S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
-"RTN","RGUTIN58",78,0)
- S:X2["*" X2=""
-"RTN","RGUTIN58",79,0)
- S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
-"RTN","RGUTIN58",80,0)
  Q
+"RTN","RGUTIN58",66,0)
+ ; Return default working directory
+"RTN","RGUTIN58",67,0)
+DEFDIR(X) ;EP
+"RTN","RGUTIN58",68,0)
+ S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+"RTN","RGUTIN58",69,0)
+ S:$E(X,$L(X))'="/" X=X_"/"
+"RTN","RGUTIN58",70,0)
+ Q X
+"RTN","RGUTIN58",71,0)
+ ; Return path delimiters
+"RTN","RGUTIN58",72,0)
+DIRDLM() ;EP
+"RTN","RGUTIN58",73,0)
+ Q "///"
+"RTN","RGUTIN58",74,0)
+ ; Return free disk space
+"RTN","RGUTIN58",75,0)
+FREE(X) ;EP
+"RTN","RGUTIN58",76,0)
+ S X=$ZOS(9,$E(X))
+"RTN","RGUTIN58",77,0)
+ Q X*$P(X,"^",2)*$P(X,"^",3)/1048576
+"RTN","RGUTIN58",78,0)
+ ; Parse current error
+"RTN","RGUTIN58",79,0)
+ERR(X1,X2,X3) ;EP
+"RTN","RGUTIN58",80,0)
+ S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
 "RTN","RGUTIN58",81,0)
- ; Raise an exception
+ S:X2["*" X2=""
 "RTN","RGUTIN58",82,0)
-RAISE(X) ;EP
+ S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
 "RTN","RGUTIN58",83,0)
- ZT $G(X)
+ Q
 "RTN","RGUTIN58",84,0)
- ; Set error trap
+ ; Raise an exception
 "RTN","RGUTIN58",85,0)
-TRAP(X) ;EP
+RAISE(X) ;EP
 "RTN","RGUTIN58",86,0)
- Q "$ZT="""_$G(X)_""""
+ ZT $G(X)
 "RTN","RGUTIN58",87,0)
- ; Return size of a file
+ ; Set error trap
 "RTN","RGUTIN58",88,0)
-SIZE(X) ;EP
+TRAP(X) ;EP
 "RTN","RGUTIN58",89,0)
- N I,Y,Z
+ Q "$ZT="""_$G(X)_""""
 "RTN","RGUTIN58",90,0)
- S Z=$ZOS(12,X,0),Z=$P(Z,"^",2,999),Y=0
+ ; Return size of a file
 "RTN","RGUTIN58",91,0)
- I Z'="" F I=30:-1:27 S Y=Y*256+$A(Z,I)
+SIZE(X) ;EP
 "RTN","RGUTIN58",92,0)
- Q Y
+ N I,Y,Z
 "RTN","RGUTIN58",93,0)
- ; Return host ip address
+ S Z=$ZOS(12,X,0),Z=$P(Z,"^",2,999),Y=0
 "RTN","RGUTIN58",94,0)
-HOSTIP() ;EP
+ I Z'="" F I=30:-1:27 S Y=Y*256+$A(Z,I)
 "RTN","RGUTIN58",95,0)
- Q ""
+ Q Y
 "RTN","RGUTIN58",96,0)
- ; Return host name
+ ; Return host ip address
 "RTN","RGUTIN58",97,0)
-HOSTNAME() ;EP
+HOSTIP() ;EP
 "RTN","RGUTIN58",98,0)
  Q ""
 "RTN","RGUTIN58",99,0)
- ; Return client ip address
+ ; Return host name
 "RTN","RGUTIN58",100,0)
-CLIENTIP() ;EP
+HOSTNAME() ;EP
 "RTN","RGUTIN58",101,0)
  Q ""
 "RTN","RGUTIN58",102,0)
- ; Issue host command and wait
+ ; Return client ip address
 "RTN","RGUTIN58",103,0)
-JW(ZOSHC) ;msm extrinsic
+CLIENTIP() ;EP
 "RTN","RGUTIN58",104,0)
- N ZOSHX
+ Q ""
 "RTN","RGUTIN58",105,0)
- S ZOSHX=$$JOBWAIT^%HOSTCMD(ZOSHC)
+ ; Issue host command and wait
 "RTN","RGUTIN58",106,0)
+JW(ZOSHC) ;msm extrinsic
+"RTN","RGUTIN58",107,0)
+ N ZOSHX
+"RTN","RGUTIN58",108,0)
+ S ZOSHX=$$JOBWAIT^%HOSTCMD(ZOSHC)
+"RTN","RGUTIN58",109,0)
  Q
 "RTN","RGUTIN68")
-0^69^B4411941
+0^69^B4748681
 "RTN","RGUTIN68",1,0)
-RGUTIN68 ;RI/CBMI/DKM - Inits for Cache (Unix);05-Mar-2015 15:03;DKM
+RGUTIN68 ;RI/CBMI/DKM - Inits for Cache (Unix);11-Mar-2015 09:33;DKM
 "RTN","RGUTIN68",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN68",3,0)
  ;;
 "RTN","RGUTIN68",4,0)
@@ -5177,111 +5211,119 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTIN68",43,0)
  Q
 "RTN","RGUTIN68",44,0)
- ; Generate directory listing
+ ; Make a directory
 "RTN","RGUTIN68",45,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) S X='$ZF(-1,"mkdir -p "_X)
 "RTN","RGUTIN68",46,0)
- N Z,Z1,FDLM
+ Q:$Q X
 "RTN","RGUTIN68",47,0)
- S FDLM=$E($$DIRDLM,1)
+ Q
 "RTN","RGUTIN68",48,0)
- S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+ ; Generate directory listing
 "RTN","RGUTIN68",49,0)
- K @X3
+DIR(X1,X2,X3) ;EP
 "RTN","RGUTIN68",50,0)
- S:'$G(X2) X2=9999999999
+ N Z,Z1,FDLM
 "RTN","RGUTIN68",51,0)
- F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  D
-"RTN","RGUTIN68",52,0)
- .S Z1=$P(Z1,FDLM,$L(Z1,FDLM))
-"RTN","RGUTIN68",53,0)
- .S:$TR(Z1,".")'="" @X3@(Z1)=""
-"RTN","RGUTIN68",54,0)
- Q
-"RTN","RGUTIN68",55,0)
- ; Return path delimiters
-"RTN","RGUTIN68",56,0)
-DIRDLM() ;EP
-"RTN","RGUTIN68",57,0)
- Q "///"
-"RTN","RGUTIN68",58,0)
- ; Return default working directory
-"RTN","RGUTIN68",59,0)
-DEFDIR(X) ;EP
-"RTN","RGUTIN68",60,0)
- N FDLM
-"RTN","RGUTIN68",61,0)
  S FDLM=$E($$DIRDLM,1)
-"RTN","RGUTIN68",62,0)
- S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
-"RTN","RGUTIN68",63,0)
- S:$E(X,$L(X))'=FDLM X=X_FDLM
-"RTN","RGUTIN68",64,0)
- Q X
-"RTN","RGUTIN68",65,0)
- ; Parse current error
-"RTN","RGUTIN68",66,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTIN68",67,0)
- S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
-"RTN","RGUTIN68",68,0)
- S:X2["*" X2=""
-"RTN","RGUTIN68",69,0)
- S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
-"RTN","RGUTIN68",70,0)
+"RTN","RGUTIN68",52,0)
+ S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+"RTN","RGUTIN68",53,0)
+ K @X3
+"RTN","RGUTIN68",54,0)
+ S:'$G(X2) X2=9999999999
+"RTN","RGUTIN68",55,0)
+ F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  D
+"RTN","RGUTIN68",56,0)
+ .S Z1=$P(Z1,FDLM,$L(Z1,FDLM))
+"RTN","RGUTIN68",57,0)
+ .S:$TR(Z1,".")'="" @X3@(Z1)=""
+"RTN","RGUTIN68",58,0)
  Q
+"RTN","RGUTIN68",59,0)
+ ; Return path delimiters
+"RTN","RGUTIN68",60,0)
+DIRDLM() ;EP
+"RTN","RGUTIN68",61,0)
+ Q "///"
+"RTN","RGUTIN68",62,0)
+ ; Return default working directory
+"RTN","RGUTIN68",63,0)
+DEFDIR(X) ;EP
+"RTN","RGUTIN68",64,0)
+ N FDLM
+"RTN","RGUTIN68",65,0)
+ S FDLM=$E($$DIRDLM,1)
+"RTN","RGUTIN68",66,0)
+ S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+"RTN","RGUTIN68",67,0)
+ S:$E(X,$L(X))'=FDLM X=X_FDLM
+"RTN","RGUTIN68",68,0)
+ Q X
+"RTN","RGUTIN68",69,0)
+ ; Parse current error
+"RTN","RGUTIN68",70,0)
+ERR(X1,X2,X3) ;EP
 "RTN","RGUTIN68",71,0)
- ; Raise an exception
+ S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
 "RTN","RGUTIN68",72,0)
-RAISE(X) ;EP
+ S:X2["*" X2=""
 "RTN","RGUTIN68",73,0)
- ZT $G(X)
+ S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
 "RTN","RGUTIN68",74,0)
- ; Set error trap
+ Q
 "RTN","RGUTIN68",75,0)
-TRAP(X) ;EP
+ ; Raise an exception
 "RTN","RGUTIN68",76,0)
- Q "$ZT="""_$G(X)_""""
+RAISE(X) ;EP
 "RTN","RGUTIN68",77,0)
- ; Return size of a file
+ ZT $G(X)
 "RTN","RGUTIN68",78,0)
-SIZE(X) ;EP
+ ; Set error trap
 "RTN","RGUTIN68",79,0)
- Q 0
+TRAP(X) ;EP
 "RTN","RGUTIN68",80,0)
- ; Return free disk space
+ Q "$ZT="""_$G(X)_""""
 "RTN","RGUTIN68",81,0)
-FREE(X) ;EP
+ ; Return size of a file
 "RTN","RGUTIN68",82,0)
- Q 0
+SIZE(X) ;EP
 "RTN","RGUTIN68",83,0)
- ; Return host ip address
+ Q 0
 "RTN","RGUTIN68",84,0)
-HOSTIP() ;EP
+ ; Return free disk space
 "RTN","RGUTIN68",85,0)
- Q $P($P($ZU(131,1),","),":",2)
+FREE(X) ;EP
 "RTN","RGUTIN68",86,0)
- ; Return host name
+ Q 0
 "RTN","RGUTIN68",87,0)
-HOSTNAME() ;EP
+ ; Return host ip address
 "RTN","RGUTIN68",88,0)
- Q $P($P($ZU(131,1),","),":")
+HOSTIP() ;EP
 "RTN","RGUTIN68",89,0)
- ; Return client ip address
+ Q $P($P($ZU(131,1),","),":",2)
 "RTN","RGUTIN68",90,0)
-CLIENTIP() ;EP
+ ; Return host name
 "RTN","RGUTIN68",91,0)
- N IP,$ET
+HOSTNAME() ;EP
 "RTN","RGUTIN68",92,0)
- S $ET="S $EC=""""",IP=$ZU(111,0)
+ Q $P($P($ZU(131,1),","),":")
 "RTN","RGUTIN68",93,0)
+ ; Return client ip address
+"RTN","RGUTIN68",94,0)
+CLIENTIP() ;EP
+"RTN","RGUTIN68",95,0)
+ N IP,$ET
+"RTN","RGUTIN68",96,0)
+ S $ET="S $EC=""""",IP=$ZU(111,0)
+"RTN","RGUTIN68",97,0)
  Q $A(IP,1)_"."_$A(IP,2)_"."_$A(IP,3)_"."_$A(IP,4)
 "RTN","RGUTIN8")
-0^49^B4105987
+0^49^B4269472
 "RTN","RGUTIN8",1,0)
-RGUTIN8 ;RI/CBMI/DKM - Inits for MSM;05-Mar-2015 15:03;DKM
+RGUTIN8 ;RI/CBMI/DKM - Inits for MSM;11-Mar-2015 09:33;DKM
 "RTN","RGUTIN8",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTIN8",3,0)
  ;;
 "RTN","RGUTIN8",4,0)
@@ -5369,96 +5411,102 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTIN8",45,0)
  Q
 "RTN","RGUTIN8",46,0)
- ; Generate a directory listing
+ ; Make a directory
 "RTN","RGUTIN8",47,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) Q:$Q 0
 "RTN","RGUTIN8",48,0)
- N Z
+ Q
 "RTN","RGUTIN8",49,0)
- S X1=$ZOS(12,X1,0),X2=+$G(X2),X3=$G(X3,"^UTILITY(""DIR"",$J)")
+ ; Generate a directory listing
 "RTN","RGUTIN8",50,0)
- K @X3
+DIR(X1,X2,X3) ;EP
 "RTN","RGUTIN8",51,0)
- F Z=1:1 Q:(X2&(Z>X2))!($P(X1,"^")="")  S @X3@($P(X1,"^"))="",X1=$ZOS(13,X1)
+ N Z
 "RTN","RGUTIN8",52,0)
- Q
+ S X1=$ZOS(12,X1,0),X2=+$G(X2),X3=$G(X3,"^UTILITY(""DIR"",$J)")
 "RTN","RGUTIN8",53,0)
- ; Return default working directory
+ K @X3
 "RTN","RGUTIN8",54,0)
-DEFDIR(X) ;EP
+ F Z=1:1 Q:(X2&(Z>X2))!($P(X1,"^")="")  S @X3@($P(X1,"^"))="",X1=$ZOS(13,X1)
 "RTN","RGUTIN8",55,0)
- S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
-"RTN","RGUTIN8",56,0)
- S:$E(X,$L(X))'="\" X=X_"\"
-"RTN","RGUTIN8",57,0)
- Q X
-"RTN","RGUTIN8",58,0)
- ; Return path delimiters
-"RTN","RGUTIN8",59,0)
-DIRDLM() ;EP
-"RTN","RGUTIN8",60,0)
- Q "\\\"
-"RTN","RGUTIN8",61,0)
- ; Return free disk space
-"RTN","RGUTIN8",62,0)
-FREE(X) ;EP
-"RTN","RGUTIN8",63,0)
- S X=$ZOS(9,$E(X))
-"RTN","RGUTIN8",64,0)
- Q X*$P(X,"^",2)*$P(X,"^",3)/1048576
-"RTN","RGUTIN8",65,0)
- ; Parse current error
-"RTN","RGUTIN8",66,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTIN8",67,0)
- S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
-"RTN","RGUTIN8",68,0)
- S:X2["*" X2=""
-"RTN","RGUTIN8",69,0)
- S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
-"RTN","RGUTIN8",70,0)
  Q
+"RTN","RGUTIN8",56,0)
+ ; Return default working directory
+"RTN","RGUTIN8",57,0)
+DEFDIR(X) ;EP
+"RTN","RGUTIN8",58,0)
+ S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+"RTN","RGUTIN8",59,0)
+ S:$E(X,$L(X))'="\" X=X_"\"
+"RTN","RGUTIN8",60,0)
+ Q X
+"RTN","RGUTIN8",61,0)
+ ; Return path delimiters
+"RTN","RGUTIN8",62,0)
+DIRDLM() ;EP
+"RTN","RGUTIN8",63,0)
+ Q "\\\"
+"RTN","RGUTIN8",64,0)
+ ; Return free disk space
+"RTN","RGUTIN8",65,0)
+FREE(X) ;EP
+"RTN","RGUTIN8",66,0)
+ S X=$ZOS(9,$E(X))
+"RTN","RGUTIN8",67,0)
+ Q X*$P(X,"^",2)*$P(X,"^",3)/1048576
+"RTN","RGUTIN8",68,0)
+ ; Parse current error
+"RTN","RGUTIN8",69,0)
+ERR(X1,X2,X3) ;EP
+"RTN","RGUTIN8",70,0)
+ S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
 "RTN","RGUTIN8",71,0)
- ; Raise an exception
+ S:X2["*" X2=""
 "RTN","RGUTIN8",72,0)
-RAISE(X) ;EP
+ S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
 "RTN","RGUTIN8",73,0)
- ZT $G(X)
+ Q
 "RTN","RGUTIN8",74,0)
- ; Set error trap
+ ; Raise an exception
 "RTN","RGUTIN8",75,0)
-TRAP(X) ;EP
+RAISE(X) ;EP
 "RTN","RGUTIN8",76,0)
- Q "$ZT="""_$G(X)_""""
+ ZT $G(X)
 "RTN","RGUTIN8",77,0)
- ; Return size of a file
+ ; Set error trap
 "RTN","RGUTIN8",78,0)
-SIZE(X) ;EP
+TRAP(X) ;EP
 "RTN","RGUTIN8",79,0)
- N I,Y,Z
+ Q "$ZT="""_$G(X)_""""
 "RTN","RGUTIN8",80,0)
- S Z=$ZOS(12,X,0),Z=$P(Z,"^",2,999),Y=0
+ ; Return size of a file
 "RTN","RGUTIN8",81,0)
- I Z'="" F I=30:-1:27 S Y=Y*256+$A(Z,I)
+SIZE(X) ;EP
 "RTN","RGUTIN8",82,0)
- Q Y
+ N I,Y,Z
 "RTN","RGUTIN8",83,0)
- ; Return host ip address
+ S Z=$ZOS(12,X,0),Z=$P(Z,"^",2,999),Y=0
 "RTN","RGUTIN8",84,0)
-HOSTIP() ;EP
+ I Z'="" F I=30:-1:27 S Y=Y*256+$A(Z,I)
 "RTN","RGUTIN8",85,0)
- Q ""
+ Q Y
 "RTN","RGUTIN8",86,0)
- ; Return host name
+ ; Return host ip address
 "RTN","RGUTIN8",87,0)
-HOSTNAME() ;EP
+HOSTIP() ;EP
 "RTN","RGUTIN8",88,0)
  Q ""
 "RTN","RGUTIN8",89,0)
- ; Return client ip address
+ ; Return host name
 "RTN","RGUTIN8",90,0)
-CLIENTIP() ;EP
+HOSTNAME() ;EP
 "RTN","RGUTIN8",91,0)
+ Q ""
+"RTN","RGUTIN8",92,0)
+ ; Return client ip address
+"RTN","RGUTIN8",93,0)
+CLIENTIP() ;EP
+"RTN","RGUTIN8",94,0)
  Q ""
 "RTN","RGUTIN8U")
 1^68
@@ -5467,7 +5515,7 @@ CLIENTIP() ;EP
 "RTN","RGUTINIT",1,0)
 RGUTINIT ;RI/CBMI/DKM - Platform specific inits;05-Mar-2015 18:39;DKM
 "RTN","RGUTINIT",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTINIT",3,0)
  ;;
 "RTN","RGUTINIT",4,0)
@@ -5581,7 +5629,7 @@ DEVICE ; Device setup
 "RTN","RGUTLK2",1,0)
 RGUTLK2 ;RI/CBMI/DKM - Continuation of RGUTLKP;03-Mar-2015 14:24;DKM
 "RTN","RGUTLK2",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTLK2",3,0)
  ;;
 "RTN","RGUTLK2",4,0)
@@ -5985,7 +6033,7 @@ XY(X,Y) ;I %RGRS W:'X *13 S $X=X,$Y=Y Q ""
 "RTN","RGUTLKP",1,0)
 RGUTLKP ;RI/CBMI/DKM - File lookup utility;03-Mar-2015 14:24;DKM
 "RTN","RGUTLKP",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTLKP",3,0)
  ;;
 "RTN","RGUTLKP",4,0)
@@ -6283,7 +6331,7 @@ ERROR W:'%RGHTML $$XY(0,%RGY+1),*7,%RGEOL,$$EC^%ZOSV
 "RTN","RGUTMTL",1,0)
 RGUTMTL ;RI/CBMI/DKM - Multi-term lookup support ;03-Mar-2015 14:24;DKM
 "RTN","RGUTMTL",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTMTL",3,0)
  ;;
 "RTN","RGUTMTL",4,0)
@@ -6503,7 +6551,7 @@ STEM(RGLAST,RGSTEM,RGF) ;
 "RTN","RGUTNTEG",1,0)
 RGUTNTEG ;ISC/XTSUMBLD KERNEL - Package checksum checker ;03-Mar-2015 14:24;DKM
 "RTN","RGUTNTEG",2,0)
- ;;3.0;RG UTILITIES;;Mar 20,2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20,2007;Build 261
 "RTN","RGUTNTEG",3,0)
  ;;7.3;3070531.172703
 "RTN","RGUTNTEG",4,0)
@@ -6593,11 +6641,11 @@ RGUTIN58 ;;1357669
 "RTN","RGUTNTEG",46,0)
 RGUT1 ;;508281
 "RTN","RGUTOS")
-0^53^B7607307
+0^53^B8020241
 "RTN","RGUTOS",1,0)
-RGUTOS ;RI/CBMI/DKM - Platform-dependent operations;05-Mar-2015 15:03;DKM
+RGUTOS ;RI/CBMI/DKM - Platform-dependent operations;11-Mar-2015 09:33;DKM
 "RTN","RGUTOS",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTOS",3,0)
  ;;
 "RTN","RGUTOS",4,0)
@@ -6735,111 +6783,119 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTOS",70,0)
  Q
 "RTN","RGUTOS",71,0)
- ; Generate directory listing
+ ; Make a directory
 "RTN","RGUTOS",72,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) S X='$ZF(-1,"mkdir -p "_X)
 "RTN","RGUTOS",73,0)
- N Z,Z1,FDLM
+ Q:$Q X
 "RTN","RGUTOS",74,0)
- S FDLM=$E($$DIRDLM,1)
+ Q
 "RTN","RGUTOS",75,0)
- S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+ ; Generate directory listing
 "RTN","RGUTOS",76,0)
- K @X3
+DIR(X1,X2,X3) ;EP
 "RTN","RGUTOS",77,0)
- S:'$G(X2) X2=9999999999
+ N Z,Z1,FDLM
 "RTN","RGUTOS",78,0)
- F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  D
-"RTN","RGUTOS",79,0)
- .S Z1=$P(Z1,FDLM,$L(Z1,FDLM))
-"RTN","RGUTOS",80,0)
- .S:$TR(Z1,".")'="" @X3@(Z1)=""
-"RTN","RGUTOS",81,0)
- Q
-"RTN","RGUTOS",82,0)
- ; Return path delimiters
-"RTN","RGUTOS",83,0)
-DIRDLM() ;EP
-"RTN","RGUTOS",84,0)
- Q "///"
-"RTN","RGUTOS",85,0)
- ; Return default working directory
-"RTN","RGUTOS",86,0)
-DEFDIR(X) ;EP
-"RTN","RGUTOS",87,0)
- N FDLM
-"RTN","RGUTOS",88,0)
  S FDLM=$E($$DIRDLM,1)
-"RTN","RGUTOS",89,0)
- S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
-"RTN","RGUTOS",90,0)
- S:$E(X,$L(X))'=FDLM X=X_FDLM
-"RTN","RGUTOS",91,0)
- Q X
-"RTN","RGUTOS",92,0)
- ; Parse current error
-"RTN","RGUTOS",93,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTOS",94,0)
- S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
-"RTN","RGUTOS",95,0)
- S:X2["*" X2=""
-"RTN","RGUTOS",96,0)
- S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
-"RTN","RGUTOS",97,0)
+"RTN","RGUTOS",79,0)
+ S X3=$G(X3,$NA(^UTILITY("DIR",$J)))
+"RTN","RGUTOS",80,0)
+ K @X3
+"RTN","RGUTOS",81,0)
+ S:'$G(X2) X2=9999999999
+"RTN","RGUTOS",82,0)
+ F Z=1:1:X2 S Z1=$ZSEARCH(X1),X1="" Q:Z1=""  D
+"RTN","RGUTOS",83,0)
+ .S Z1=$P(Z1,FDLM,$L(Z1,FDLM))
+"RTN","RGUTOS",84,0)
+ .S:$TR(Z1,".")'="" @X3@(Z1)=""
+"RTN","RGUTOS",85,0)
  Q
+"RTN","RGUTOS",86,0)
+ ; Return path delimiters
+"RTN","RGUTOS",87,0)
+DIRDLM() ;EP
+"RTN","RGUTOS",88,0)
+ Q "///"
+"RTN","RGUTOS",89,0)
+ ; Return default working directory
+"RTN","RGUTOS",90,0)
+DEFDIR(X) ;EP
+"RTN","RGUTOS",91,0)
+ N FDLM
+"RTN","RGUTOS",92,0)
+ S FDLM=$E($$DIRDLM,1)
+"RTN","RGUTOS",93,0)
+ S X=$G(X,$P($G(^XTV(8989.3,1,"DEV")),U))
+"RTN","RGUTOS",94,0)
+ S:$E(X,$L(X))'=FDLM X=X_FDLM
+"RTN","RGUTOS",95,0)
+ Q X
+"RTN","RGUTOS",96,0)
+ ; Parse current error
+"RTN","RGUTOS",97,0)
+ERR(X1,X2,X3) ;EP
 "RTN","RGUTOS",98,0)
- ; Raise an exception
+ S X1=$E($P($ZE,">"),2,99),X2=$P($P($ZE,">",2),":"),X3=X1
 "RTN","RGUTOS",99,0)
-RAISE(X) ;EP
+ S:X2["*" X2=""
 "RTN","RGUTOS",100,0)
- ZT $G(X)
+ S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
 "RTN","RGUTOS",101,0)
- ; Set error trap
+ Q
 "RTN","RGUTOS",102,0)
-TRAP(X) ;EP
+ ; Raise an exception
 "RTN","RGUTOS",103,0)
- Q "$ZT="""_$G(X)_""""
+RAISE(X) ;EP
 "RTN","RGUTOS",104,0)
- ; Return size of a file
+ ZT $G(X)
 "RTN","RGUTOS",105,0)
-SIZE(X) ;EP
+ ; Set error trap
 "RTN","RGUTOS",106,0)
- Q 0
+TRAP(X) ;EP
 "RTN","RGUTOS",107,0)
- ; Return free disk space
+ Q "$ZT="""_$G(X)_""""
 "RTN","RGUTOS",108,0)
-FREE(X) ;EP
+ ; Return size of a file
 "RTN","RGUTOS",109,0)
- Q 0
+SIZE(X) ;EP
 "RTN","RGUTOS",110,0)
- ; Return host ip address
+ Q 0
 "RTN","RGUTOS",111,0)
-HOSTIP() ;EP
+ ; Return free disk space
 "RTN","RGUTOS",112,0)
- Q $P($P($ZU(131,1),","),":",2)
+FREE(X) ;EP
 "RTN","RGUTOS",113,0)
- ; Return host name
+ Q 0
 "RTN","RGUTOS",114,0)
-HOSTNAME() ;EP
+ ; Return host ip address
 "RTN","RGUTOS",115,0)
- Q $P($P($ZU(131,1),","),":")
+HOSTIP() ;EP
 "RTN","RGUTOS",116,0)
- ; Return client ip address
+ Q $P($P($ZU(131,1),","),":",2)
 "RTN","RGUTOS",117,0)
-CLIENTIP() ;EP
+ ; Return host name
 "RTN","RGUTOS",118,0)
- N IP,$ET
+HOSTNAME() ;EP
 "RTN","RGUTOS",119,0)
- S $ET="S $EC=""""",IP=$ZU(111,0)
+ Q $P($P($ZU(131,1),","),":")
 "RTN","RGUTOS",120,0)
+ ; Return client ip address
+"RTN","RGUTOS",121,0)
+CLIENTIP() ;EP
+"RTN","RGUTOS",122,0)
+ N IP,$ET
+"RTN","RGUTOS",123,0)
+ S $ET="S $EC=""""",IP=$ZU(111,0)
+"RTN","RGUTOS",124,0)
  Q $A(IP,1)_"."_$A(IP,2)_"."_$A(IP,3)_"."_$A(IP,4)
 "RTN","RGUTOS1")
-0^54^B10134674
+0^54^B10382570
 "RTN","RGUTOS1",1,0)
-RGUTOS ;RI/CBMI/DKM - Platform-dependent operations;03-Mar-2015 14:24;DKM
+RGUTOS ;RI/CBMI/DKM - Platform-dependent operations;11-Mar-2015 09:33;DKM
 "RTN","RGUTOS1",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTOS1",3,0)
  ;;
 "RTN","RGUTOS1",4,0)
@@ -6987,91 +7043,97 @@ RENAME(X1,X2) ;EP
 "RTN","RGUTOS1",75,0)
  Q
 "RTN","RGUTOS1",76,0)
- ; List files
+ ; Make a directory
 "RTN","RGUTOS1",77,0)
-DIR(X1,X2,X3) ;EP
+MKDIR(X) Q:$Q 0
 "RTN","RGUTOS1",78,0)
- N Z
-"RTN","RGUTOS1",79,0)
- D PARSE(.X1,.Z)
-"RTN","RGUTOS1",80,0)
- S Z(X1)="",X3=$G(X3,"^UTILITY(""DIR"",$J)")
-"RTN","RGUTOS1",81,0)
- K @X3
-"RTN","RGUTOS1",82,0)
- I $$LIST^%ZISH(Z,"Z",X3)
-"RTN","RGUTOS1",83,0)
  Q
+"RTN","RGUTOS1",79,0)
+ ; List files
+"RTN","RGUTOS1",80,0)
+DIR(X1,X2,X3) ;EP
+"RTN","RGUTOS1",81,0)
+ N Z
+"RTN","RGUTOS1",82,0)
+ D PARSE(.X1,.Z)
+"RTN","RGUTOS1",83,0)
+ S Z(X1)="",X3=$G(X3,"^UTILITY(""DIR"",$J)")
 "RTN","RGUTOS1",84,0)
- ; Force error if at EOF
+ K @X3
 "RTN","RGUTOS1",85,0)
-EOF I $$STATUS^%ZISH ZT "EOF"
+ I $$LIST^%ZISH(Z,"Z",X3)
 "RTN","RGUTOS1",86,0)
  Q
 "RTN","RGUTOS1",87,0)
- ; Returns true if current error is EOF
+ ; Force error if at EOF
 "RTN","RGUTOS1",88,0)
-EOFERR() ;EP
+EOF I $$STATUS^%ZISH ZT "EOF"
 "RTN","RGUTOS1",89,0)
- Q $$EC^%ZOSV["EOF"
+ Q
 "RTN","RGUTOS1",90,0)
- ; URL format filename-->HFS format
+ ; Returns true if current error is EOF
 "RTN","RGUTOS1",91,0)
-CVTFN(RGFIL,RGROOT) ;EP
+EOFERR() ;EP
 "RTN","RGUTOS1",92,0)
- N RGZ,RGZ1,RGD
+ Q $$EC^%ZOSV["EOF"
 "RTN","RGUTOS1",93,0)
- S RGD=$$DIRDLM,RGROOT=$G(RGROOT)
+ ; URL format filename-->HFS format
 "RTN","RGUTOS1",94,0)
- S:$E(RGROOT,$L(RGROOT))=$E(RGD,3) RGROOT=$E(RGROOT,1,$L(RGROOT)-1)
+CVTFN(RGFIL,RGROOT) ;EP
 "RTN","RGUTOS1",95,0)
- S RGZ=$L(RGFIL,"/"),RGZ1=$P(RGFIL,"/",1,RGZ-1),RGFIL=$P(RGFIL,"/",RGZ)
+ N RGZ,RGZ1,RGD
 "RTN","RGUTOS1",96,0)
- S:$L(RGZ1) RGROOT=RGROOT_$E(RGD,$S($L(RGROOT):2,1:1))_$TR(RGZ1,"/.-",$E(RGD,2))
+ S RGD=$$DIRDLM,RGROOT=$G(RGROOT)
 "RTN","RGUTOS1",97,0)
- Q RGROOT_$S($L(RGROOT):$E(RGD,3),1:"")_RGFIL
+ S:$E(RGROOT,$L(RGROOT))=$E(RGD,3) RGROOT=$E(RGROOT,1,$L(RGROOT)-1)
 "RTN","RGUTOS1",98,0)
- ; Return directory delimiters
+ S RGZ=$L(RGFIL,"/"),RGZ1=$P(RGFIL,"/",1,RGZ-1),RGFIL=$P(RGFIL,"/",RGZ)
 "RTN","RGUTOS1",99,0)
-DIRDLM() ;EP
+ S:$L(RGZ1) RGROOT=RGROOT_$E(RGD,$S($L(RGROOT):2,1:1))_$TR(RGZ1,"/.-",$E(RGD,2))
 "RTN","RGUTOS1",100,0)
- N X
+ Q RGROOT_$S($L(RGROOT):$E(RGD,3),1:"")_RGFIL
 "RTN","RGUTOS1",101,0)
- S X=$$PWD^%ZISH
+ ; Return directory delimiters
 "RTN","RGUTOS1",102,0)
- Q $S(X["[":"[.]",X["\":"\\\",1:"///")
+DIRDLM() ;EP
 "RTN","RGUTOS1",103,0)
- ; Parse error data
-"RTN","RGUTOS1",104,0)
-ERR(X1,X2,X3) ;EP
-"RTN","RGUTOS1",105,0)
  N X
+"RTN","RGUTOS1",104,0)
+ S X=$$PWD^%ZISH
+"RTN","RGUTOS1",105,0)
+ Q $S(X["[":"[.]",X["\":"\\\",1:"///")
 "RTN","RGUTOS1",106,0)
- S X=$$EC^%ZOSV,X1=$$VERSION^%ZOSV(1)
+ ; Parse error data
 "RTN","RGUTOS1",107,0)
- G ERRMSM:X1["MSM",ERRDSM:X1["DSM"
+ERR(X1,X2,X3) ;EP
 "RTN","RGUTOS1",108,0)
- S (X1,X2,X3)=""
+ N X
 "RTN","RGUTOS1",109,0)
- Q
+ S X=$$EC^%ZOSV,X1=$$VERSION^%ZOSV(1)
 "RTN","RGUTOS1",110,0)
-ERRMSM S X1=$E($P(X,">"),2,99),X2=$P($P(X,">",2),":"),X3=X1
+ G ERRMSM:X1["MSM",ERRDSM:X1["DSM"
 "RTN","RGUTOS1",111,0)
- S:X2["*" X2=""
+ S (X1,X2,X3)=""
 "RTN","RGUTOS1",112,0)
- S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
-"RTN","RGUTOS1",113,0)
  Q
+"RTN","RGUTOS1",113,0)
+ERRMSM S X1=$E($P(X,">"),2,99),X2=$P($P(X,">",2),":"),X3=X1
 "RTN","RGUTOS1",114,0)
-ERRDSM S X1=$P($P(X,", ",2),"-",3),X2=$P($P(X,", "),":"),X3=$$TRIM^RGUT($P(X,", ",$S(X1="ZTRAP":4,1:3)))
+ S:X2["*" X2=""
 "RTN","RGUTOS1",115,0)
+ S:$E(X1)="Z" X3=$E(X1,2,99),X1="ZTRAP"
+"RTN","RGUTOS1",116,0)
+ Q
+"RTN","RGUTOS1",117,0)
+ERRDSM S X1=$P($P(X,", ",2),"-",3),X2=$P($P(X,", "),":"),X3=$$TRIM^RGUT($P(X,", ",$S(X1="ZTRAP":4,1:3)))
+"RTN","RGUTOS1",118,0)
  Q
 "RTN","RGUTREG")
 0^64^B709436
 "RTN","RGUTREG",1,0)
 RGUTREG ;RI/CBMI/DKM - Various registration actions ;03-Mar-2015 14:24;DKM
 "RTN","RGUTREG",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTREG",3,0)
  ;;
 "RTN","RGUTREG",4,0)
@@ -7109,7 +7171,7 @@ REGPROT(P,C,ERR) ;
 "RTN","RGUTRPC",1,0)
 RGUTRPC ;RI/CBMI/DKM - RPC Encapsulations for RGUT routines ;03-Mar-2015 14:24;DKM
 "RTN","RGUTRPC",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTRPC",3,0)
  ;;
 "RTN","RGUTRPC",4,0)
@@ -7395,7 +7457,7 @@ GETRPC(X) ;EP
 "RTN","RGUTRPRT",1,0)
 RGUTRPRT ;RI/CBMI/DKM - Routine Pretty Print Program ;03-Mar-2015 14:24;DKM
 "RTN","RGUTRPRT",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTRPRT",3,0)
  ;;
 "RTN","RGUTRPRT",4,0)
@@ -7477,7 +7539,7 @@ RJ(X) W ?(IOM-$L(X)),X
 "RTN","RGUTSTX",1,0)
 RGUTSTX ;RI/CBMI/DKM - M syntax analyzer;03-Mar-2015 14:24;DKM
 "RTN","RGUTSTX",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTSTX",3,0)
  ;;
 "RTN","RGUTSTX",4,0)
@@ -7763,7 +7825,7 @@ ERRORS ;;*Error messages*
 "RTN","RGUTSTX0",1,0)
 RGUTSTX0 ;RI/CBMI/DKM - Continuation of RGUTSTX;03-Mar-2015 14:24;DKM
 "RTN","RGUTSTX0",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTSTX0",3,0)
  ;;
 "RTN","RGUTSTX0",4,0)
@@ -8093,7 +8155,7 @@ NEXT(RGC,RGI) ;
 "RTN","RGUTSTX1",1,0)
 RGUTSTX1 ;RI/CBMI/DKM - Continuation of RGUTSTX;03-Mar-2015 14:24;DKM
 "RTN","RGUTSTX1",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTSTX1",3,0)
  ;;
 "RTN","RGUTSTX1",4,0)
@@ -8427,11 +8489,11 @@ NEXT(RGC,RGI) ;
 "RTN","RGUTSTX1",168,0)
  Q $$NEXT^RGUTSTX0(RGC,.RGI)
 "RTN","RGUTTSK")
-0^57^B998318
+0^57^B998610
 "RTN","RGUTTSK",1,0)
-RGUTTSK ;RI/CBMI/DKM - Encapsulates TaskMan API ;03-Mar-2015 14:24;DKM
+RGUTTSK ;RI/CBMI/DKM - Encapsulates TaskMan API ;14-Mar-2015 22:16;DKM
 "RTN","RGUTTSK",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTTSK",3,0)
  ;;
 "RTN","RGUTTSK",4,0)
@@ -8447,25 +8509,27 @@ QUEUE(ZTRTN,ZTDESC,ZTDTH,ZTSAVE,ZTIO,ZTUCI,ZTPRI) ;
 "RTN","RGUTTSK",9,0)
  Q:ZTDTH<0 0
 "RTN","RGUTTSK",10,0)
- S:$G(ZTUCI)'="" ZTUCI=$TR(ZTUCI,":",","),ZTCPU=$P(ZTUCI,",",2),ZTUCI=$P(ZTUCI,",")
+ S ZTUCI=$G(ZTUCI,^%ZOSF("PROD"))
 "RTN","RGUTTSK",11,0)
- S ZTSAVE=$G(ZTSAVE),ZTIO=$G(ZTIO),U="^"
+ S ZTUCI=$TR(ZTUCI,":",","),ZTCPU=$P(ZTUCI,",",2),ZTUCI=$P(ZTUCI,",")
 "RTN","RGUTTSK",12,0)
- F %RGZ=1:1:$L(ZTSAVE,U) D
+ S ZTSAVE=$G(ZTSAVE),ZTIO=$G(ZTIO),U="^"
 "RTN","RGUTTSK",13,0)
- .S %RGZ1=$P(ZTSAVE,U,%RGZ),%RGZ2=$P(%RGZ1,"=",2,999),%RGZ1=$P(%RGZ1,"=")
+ F %RGZ=1:1:$L(ZTSAVE,U) D
 "RTN","RGUTTSK",14,0)
- .S:%RGZ1'="" ZTSAVE(%RGZ1)=%RGZ2
+ .S %RGZ1=$P(ZTSAVE,U,%RGZ),%RGZ2=$P(%RGZ1,"=",2,999),%RGZ1=$P(%RGZ1,"=")
 "RTN","RGUTTSK",15,0)
- D ^%ZTLOAD
+ .S:%RGZ1'="" ZTSAVE(%RGZ1)=%RGZ2
 "RTN","RGUTTSK",16,0)
+ D ^%ZTLOAD
+"RTN","RGUTTSK",17,0)
  Q +$G(ZTSK)
 "RTN","RGUTUSR")
 0^58^B3790974
 "RTN","RGUTUSR",1,0)
 RGUTUSR ;RI/CBMI/DKM - Parse recipient list;03-Mar-2015 14:24;DKM
 "RTN","RGUTUSR",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTUSR",3,0)
  ;;
 "RTN","RGUTUSR",4,0)
@@ -8579,7 +8643,7 @@ MGRP2(RGMGRP) ;
 "RTN","RGUTUU",1,0)
 RGUTUU ;RI/CBMI/DKM - UUEncode and UUDecode functions.;03-Mar-2015 14:24;DKM
 "RTN","RGUTUU",2,0)
- ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 176
+ ;;3.0;RG UTILITIES;;Mar 20, 2007;Build 261
 "RTN","RGUTUU",3,0)
  ;;
 "RTN","RGUTUU",4,0)
@@ -8641,7 +8705,7 @@ INIT() Q "=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
 **INSTALL NAME**
 CIA RPC BROKER 1.3
 "BLD",8484,0)
-CIA RPC BROKER 1.3^^0^3150307^n
+CIA RPC BROKER 1.3^^0^3150315^n
 "BLD",8484,1,0)
 ^9.61A^1^1^3101115^^^^
 "BLD",8484,1,1,0)
@@ -8679,7 +8743,7 @@ y^y^f^^^^n
 "BLD",8484,4,"B",19941.24,19941.24)
 
 "BLD",8484,6.3)
-222
+302
 "BLD",8484,"INI")
 PRE^CIANBINI
 "BLD",8484,"INIT")
@@ -9949,7 +10013,7 @@ D XPZ2^XPDIQ
 "RTN","CIANBACT",1,0)
 CIANBACT ;MSC/IND/DKM - MSC RPC Broker Actions;29-Jan-2015 12:27;DKM
 "RTN","CIANBACT",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBACT",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBACT",4,0)
@@ -10279,7 +10343,7 @@ AUTHMETH(UCI) ;
 "RTN","CIANBASY",1,0)
 CIANBASY ;MSC/IND/DKM - Asynchronous RPC calls ;26-Jan-2015 14:18;DKM
 "RTN","CIANBASY",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBASY",3,0)
  ;;Copyright 2000-2012, Medsphere Systems Corporation
 "RTN","CIANBASY",4,0)
@@ -10409,7 +10473,7 @@ STOPALL N ZTSK
 "RTN","CIANBEVT",1,0)
 CIANBEVT ;MSC/IND/DKM - Event Support ;26-Jan-2015 14:18;DKM
 "RTN","CIANBEVT",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBEVT",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBEVT",4,0)
@@ -10953,7 +11017,7 @@ RELATES(EVA,EVB) ;EP
 "RTN","CIANBINI",1,0)
 CIANBINI ;MSC/IND/DKM - MSC RPC Broker Installation ;26-Jan-2015 14:18;DKM
 "RTN","CIANBINI",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBINI",3,0)
  ;;Copyright 2000-2012, Medsphere Systems Corporation
 "RTN","CIANBINI",4,0)
@@ -11175,7 +11239,7 @@ OBJINST ; EP
 "RTN","CIANBLIS",1,0)
 CIANBLIS ;MSC/IND/DKM - MSC RPC Broker ;29-Jan-2015 12:27;DKM
 "RTN","CIANBLIS",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBLIS",3,0)
  ;;Copyright 2000-2011, Medsphere Systems Corporation
 "RTN","CIANBLIS",4,0)
@@ -11871,7 +11935,7 @@ CHPRN(X) D SETNM^%ZOSV($E(X,1,15))
 "RTN","CIANBLOG",1,0)
 CIANBLOG ;MSC/IND/DKM - MSC RPC Broker Activity Log Support ;26-Jan-2015 14:18;DKM
 "RTN","CIANBLOG",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Jan 3, 2008;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Jan 3, 2008;Build 302
 "RTN","CIANBLOG",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBLOG",4,0)
@@ -12059,7 +12123,7 @@ ISACTIVE() ;
 "RTN","CIANBRPC",1,0)
 CIANBRPC ;MSC/IND/DKM - MSC RPC Broker Privileged RPCs;29-Jan-2015 08:41;DKM
 "RTN","CIANBRPC",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBRPC",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBRPC",4,0)
@@ -12609,7 +12673,7 @@ TMPGBL(X) ;
 "RTN","CIANBUTL",1,0)
 CIANBUTL ;MSC/IND/DKM - MSC RPC Broker Utilities ;26-Jan-2015 14:18;DKM
 "RTN","CIANBUTL",2,0)
- ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 222
+ ;;1.3;CIA NETWORK COMPONENTS;;Sep 18, 2007;Build 302
 "RTN","CIANBUTL",3,0)
  ;;Copyright 2000-2008, Medsphere Systems Corporation
 "RTN","CIANBUTL",4,0)
@@ -13729,7 +13793,7 @@ This file logs session activities such as RPC calls and remote events.
 **INSTALL NAME**
 SERIALIZATION FRAMEWORK 1.0
 "BLD",8505,0)
-SERIALIZATION FRAMEWORK 1.0^^0^3150307^n
+SERIALIZATION FRAMEWORK 1.0^SERIALIZATION FRAMEWORK^0^3150315^n
 "BLD",8505,1,0)
 ^^2^2^3150301.07231
 "BLD",8505,1,1,0)
@@ -13745,7 +13809,9 @@ y^y^f^^n^^y^r^n
 "BLD",8505,4,"B",998.1,998.1)
 
 "BLD",8505,6.3)
-46
+155
+"BLD",8505,"ABPKG")
+n
 "BLD",8505,"KRN",0)
 ^9.67PA^779.2^20
 "BLD",8505,"KRN",.4,0)
@@ -13769,32 +13835,36 @@ y^y^f^^n^^y^r^n
 "BLD",8505,"KRN",9.8,0)
 9.8
 "BLD",8505,"KRN",9.8,"NM",0)
-^9.68A^11^10
+^9.68A^12^11
 "BLD",8505,"KRN",9.8,"NM",1,0)
-RGSEFHIR^^0^B35280999
+RGSEFHIR^^0^B57156013
 "BLD",8505,"KRN",9.8,"NM",2,0)
-RGSEJSON^^0^B4655386
+RGSEJSON^^0^B5869093
 "BLD",8505,"KRN",9.8,"NM",3,0)
-RGSER^^0^B63950269
+RGSER^^0^B69705076
 "BLD",8505,"KRN",9.8,"NM",4,0)
 RGSERENC^^0^B491499
 "BLD",8505,"KRN",9.8,"NM",6,0)
 RGSERLAB^^0^B13451175
 "BLD",8505,"KRN",9.8,"NM",7,0)
-RGSEROBS^^0^B2472966
+RGSEROBS^^0^B4197213
 "BLD",8505,"KRN",9.8,"NM",8,0)
 RGSERPAT^^0^B269044
 "BLD",8505,"KRN",9.8,"NM",9,0)
 RGSERVIT^^0^B11359280
 "BLD",8505,"KRN",9.8,"NM",10,0)
-RGSEXML^^0^B9680213
+RGSEXML^^0^B12291502
 "BLD",8505,"KRN",9.8,"NM",11,0)
-RGSERGET^^0^B119521048
+RGSERGET^^0^B133238487
+"BLD",8505,"KRN",9.8,"NM",12,0)
+RGSERDD^^0^B1284479
 "BLD",8505,"KRN",9.8,"NM","B","RGSEFHIR",1)
 
 "BLD",8505,"KRN",9.8,"NM","B","RGSEJSON",2)
 
 "BLD",8505,"KRN",9.8,"NM","B","RGSER",3)
+
+"BLD",8505,"KRN",9.8,"NM","B","RGSERDD",12)
 
 "BLD",8505,"KRN",9.8,"NM","B","RGSERENC",4)
 
@@ -13889,7 +13959,7 @@ RG UTILITIES 3.0^2
 "BLD",8505,"REQB","B","RG UTILITIES 3.0",1)
 
 "DATA",998.1,1,0)
-CWF^json^RGSEJSON
+CWF^application/json,text/json^RGSEJSON^1.0
 "DATA",998.1,1,10,0)
 ^998.11^1^1
 "DATA",998.1,1,10,1,0)
@@ -13911,23 +13981,27 @@ description^20^W^60
 "DATA",998.1,1,10,1,40,0)
 ^998.13I^1^1
 "DATA",998.1,1,10,1,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
 "DATA",998.1,2,0)
-DSTU1^text/xml^RGSEFHIR
+DSTU1^application/xml+fhir,application/xml,text/xml^RGSEFHIR^0.0.82-3059
 "DATA",998.1,2,10,0)
-^998.11^44^44
+^998.11^46^46
 "DATA",998.1,2,10,1,0)
 Binary
 "DATA",998.1,2,10,1,10)
-D COMPID^RGSER
+D COMPID^RGSERGET
 "DATA",998.1,2,10,2,0)
 Binary_8925^1^8925
 "DATA",998.1,2,10,2,30,0)
-^998.12I^1^1
+^998.12I^2^2
 "DATA",998.1,2,10,2,30,1,0)
-content:text/plain^^C^10
+@content^^C^10
 "DATA",998.1,2,10,2,30,1,10)
 N TXT,ERR D TGET^TIUSRVR1(.TXT,IEN) S ERR='$D(@TXT) D ADDARY^RGSER(TXT,"BL"):'ERR,SETERR^RGSER(404,"Not found"):ERR K @TXT
+"DATA",998.1,2,10,2,30,2,0)
+attr:contentType^^N^1
+"DATA",998.1,2,10,2,30,2,10)
+text/plain
 "DATA",998.1,2,10,3,0)
 Condition^^9000011
 "DATA",998.1,2,10,3,30,0)
@@ -13937,7 +14011,7 @@ subject^.02^C^10
 "DATA",998.1,2,10,3,30,1,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,2,10,3,30,2,0)
-code:start^^C^20
+code!start^^C^20
 "DATA",998.1,2,10,3,30,2,10)
 D ADDTAG(PN)
 "DATA",998.1,2,10,3,30,3,0)
@@ -13945,13 +14019,15 @@ coding^.01^O^20.1
 "DATA",998.1,2,10,3,30,3,10)
 */ICD9
 "DATA",998.1,2,10,3,30,4,0)
-code:end^.05^C^20.2
+code!end^.05^C^20.2
 "DATA",998.1,2,10,3,30,4,10)
 D PUT("text",VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,3,30,5,0)
-category^^C^30
+category^^N^30
 "DATA",998.1,2,10,3,30,6,0)
-status^^C^40
+status^^S^40
+"DATA",998.1,2,10,3,30,6,10)
+confirmed
 "DATA",998.1,2,10,3,30,7,0)
 onsetDate^.13^D^50
 "DATA",998.1,2,10,3,30,8,0)
@@ -13959,39 +14035,39 @@ abatementDate^1.07^D^60
 "DATA",998.1,2,10,3,40,0)
 ^998.13I^4^4
 "DATA",998.1,2,10,3,40,1,0)
-subject^.02^N^10
+subject^.02^R^10
 "DATA",998.1,2,10,3,40,1,20)
 S X=$$COHORT(PN,$NA(^AUPNPROB("AC")))
 "DATA",998.1,2,10,3,40,2,0)
 onset^.13^D^20
 "DATA",998.1,2,10,3,40,3,0)
-subject:Patient^.02^N^10
+subject:Patient^.02^R^10
 "DATA",998.1,2,10,3,40,3,20)
 S X=$$COHORT(PN,$NA(^AUPNPROB("AC")))
 "DATA",998.1,2,10,3,40,4,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,2,10,4,0)
 DocumentReference^^8925
 "DATA",998.1,2,10,4,30,0)
-^998.12I^11^10
+^998.12I^24^22
 "DATA",998.1,2,10,4,30,1,0)
-description^1701^F^10
+description^1701^F^140
 "DATA",998.1,2,10,4,30,2,0)
-type^.01^C^30
+type^.01^C^40
 "DATA",998.1,2,10,4,30,2,10)
 D ADDTAG(PN),CODING("#8925.1",VL("I"),VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,4,30,3,0)
-subject^.02^C^60
+subject^.02^C^30
 "DATA",998.1,2,10,4,30,3,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,2,10,4,30,4,0)
-author^1202^C^70
+author^1202^C^60
 "DATA",998.1,2,10,4,30,4,10)
 D REF(PN,"Practitioner",.VL)
 "DATA",998.1,2,10,4,30,5,0)
-mimeType^^F^90
+mimeType^^S^170
 "DATA",998.1,2,10,4,30,5,10)
-D PUT(PN,"text/plain")
+text/plain
 "DATA",998.1,2,10,4,30,6,0)
 created^1201^D^100
 "DATA",998.1,2,10,4,30,7,0)
@@ -13999,15 +14075,41 @@ context^.07,.08^C^110
 "DATA",998.1,2,10,4,30,7,10)
 D ADDTAG(PN),PERIOD,ENDTAG(PN)
 "DATA",998.1,2,10,4,30,9,0)
-location^@ien^C^130
+location^@ien^C^210
 "DATA",998.1,2,10,4,30,9,10)
 D PUT(PN,$$HOST^RGSER("*/Binary/8925:"_VL("I")))
 "DATA",998.1,2,10,4,30,10,0)
-masterIdentifier^@ien^C^140
+masterIdentifier^@ien^C^10
 "DATA",998.1,2,10,4,30,10,10)
 D ADDTAG(PN),PUT("value",$$SYSUUID^RGSER_"/Document/"_VL("I")),ENDTAG(PN)
 "DATA",998.1,2,10,4,30,11,0)
-status^.05^C^40
+status^.05~.02^C^120
+"DATA",998.1,2,10,4,30,11,10)
+N X S X=VL("I") D PUT(PN,$S("rd"[X:"entered in error",1:"current"))
+"DATA",998.1,2,10,4,30,13,0)
+identifier^^N^20
+"DATA",998.1,2,10,4,30,14,0)
+class^^N^50
+"DATA",998.1,2,10,4,30,15,0)
+custodian^^N^70
+"DATA",998.1,2,10,4,30,16,0)
+policyManager^^N^80
+"DATA",998.1,2,10,4,30,17,0)
+authenticator^^N^90
+"DATA",998.1,2,10,4,30,18,0)
+indexed^1201^D^110
+"DATA",998.1,2,10,4,30,19,0)
+docStatus^^N^130
+"DATA",998.1,2,10,4,30,20,0)
+confidentiality^^N^150
+"DATA",998.1,2,10,4,30,21,0)
+primaryLanguage^^N^160
+"DATA",998.1,2,10,4,30,22,0)
+format^^N^180
+"DATA",998.1,2,10,4,30,23,0)
+size^^N^190
+"DATA",998.1,2,10,4,30,24,0)
+hash^^N^200
 "DATA",998.1,2,10,4,40,0)
 ^998.13I^6^6
 "DATA",998.1,2,10,4,40,1,0)
@@ -14021,7 +14123,7 @@ type^.01^T^30
 "DATA",998.1,2,10,4,40,4,0)
 author^1202^R^40
 "DATA",998.1,2,10,4,40,5,0)
-_id^@ien^N^50
+_id^@ien^T^50
 "DATA",998.1,2,10,4,40,6,0)
 indexed^1301^D^60
 "DATA",998.1,2,10,5,0)
@@ -14029,13 +14131,13 @@ Encounter^^9000010
 "DATA",998.1,2,10,5,30,0)
 ^998.12I^9^8
 "DATA",998.1,2,10,5,30,1,0)
-status^^C^10
+status^^S^10
 "DATA",998.1,2,10,5,30,1,10)
-D PUT(PN,"finished")
+finished
 "DATA",998.1,2,10,5,30,2,0)
 class^.07^C^20
 "DATA",998.1,2,10,5,30,2,10)
-N X S X=VL("I") D PUT(PN,$S(X="H":"inpatient",X="A":"ambulatory",X="T":"virtual",1:""))
+N X S X=VL("I") D PUT(PN,$S(X="H":"inpatient",X="A":"ambulatory",1:"virtual"))
 "DATA",998.1,2,10,5,30,3,0)
 subject^.05^C^30
 "DATA",998.1,2,10,5,30,3,10)
@@ -14045,9 +14147,9 @@ period^.01,.18^C^40
 "DATA",998.1,2,10,5,30,4,10)
 D PERIOD
 "DATA",998.1,2,10,5,30,6,0)
-location^.22^C^60
+location^.01,.18,.22^C^60
 "DATA",998.1,2,10,5,30,6,10)
-D:VL("I") ADDTAG(PN),REF(PN,"Location",.VL),ENDTAG(PN)
+D:VL(3) ADDTAG(PN),REF2(PN,"Location",VL(3,"I"),VL(3,"E")),PERIOD,ENDTAG(PN)
 "DATA",998.1,2,10,5,30,7,0)
 visitid^15001^C^70
 "DATA",998.1,2,10,5,30,7,10)
@@ -14075,7 +14177,7 @@ subject:Patient^.05^R^10
 "DATA",998.1,2,10,5,40,4,20)
 S X=$$COHORT(PN,$NA(^AUPNVSIT("C")))
 "DATA",998.1,2,10,5,40,5,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,2,10,6,0)
 Encounter_Participant^1^9000010.06
 "DATA",998.1,2,10,6,30,0)
@@ -14117,19 +14219,19 @@ managingOrganization^3^C^30
 "DATA",998.1,2,10,8,30,3,10)
 D REF(PN,"Organization",.VL)
 "DATA",998.1,2,10,8,30,4,0)
-telecom:phone:work^99^C^40
+telecom!phone:work^99^C^40
 "DATA",998.1,2,10,8,30,4,10)
 D TELECOM
 "DATA",998.1,2,10,8,40,0)
 ^998.13I^1^1
 "DATA",998.1,2,10,8,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
 "DATA",998.1,2,10,9,0)
 Observation
 "DATA",998.1,2,10,9,20)
 D RETRIEVE^RGSEROBS
 "DATA",998.1,2,10,9,30,0)
-^998.12I^19^19
+^998.12I^19^18
 "DATA",998.1,2,10,9,30,1,0)
 issued^issued^D^60
 "DATA",998.1,2,10,9,30,2,0)
@@ -14141,13 +14243,9 @@ subject^patient^C^120
 "DATA",998.1,2,10,9,30,4,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,2,10,9,30,5,0)
-referenceRange^low^C^150
+referenceRange^low,high^C^150
 "DATA",998.1,2,10,9,30,5,10)
-D ADDTAG(PN) D:$D(VL("I")) ADDTAG("low"),PUT("value",VL("I")),ENDTAG("low")
-"DATA",998.1,2,10,9,30,6,0)
-referenceRange^high^C^150.1
-"DATA",998.1,2,10,9,30,6,10)
-D:$D(VL("I")) ADDTAG("high"),PUT("value",VL("I")),ENDTAG("high") D ENDTAG(PN)
+D REFRANGE^RGSEROBS
 "DATA",998.1,2,10,9,30,7,0)
 comments^comments^F^40
 "DATA",998.1,2,10,9,30,8,0)
@@ -14163,19 +14261,19 @@ D ADDTAG(PN),ADDTAG("coding"),PUT("system",VL("E"))
 "DATA",998.1,2,10,9,30,11,0)
 valueQuantity^value,units^C^20
 "DATA",998.1,2,10,9,30,11,10)
-I $D(VL("I")),$$ISQUANT^RGSEROBS(VL("I")) D ADDTAG(PN),PUT("value",VL("I")) D:$D(VL(2,"I")) PUT("units",VL(2,"I")) D ENDTAG(PN)
+I $D(VL("I")),$$ISNUM^RGUT(VL("I")) D ADDTAG(PN),PUT("value",VL("I")) D:$D(VL(2,"I")) PUT("units",VL(2,"I")) D ENDTAG(PN)
 "DATA",998.1,2,10,9,30,12,0)
 interpretation^interpretation^C^30
 "DATA",998.1,2,10,9,30,12,10)
 D:$D(VL("E")) ADDTAG(PN),PUT("text",VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,9,30,13,0)
-bodySite^^C^90
+bodySite^^N^90
 "DATA",998.1,2,10,9,30,14,0)
-method^^C^100
+method^^N^100
 "DATA",998.1,2,10,9,30,15,0)
-specimen^^C^130
+specimen^^N^130
 "DATA",998.1,2,10,9,30,16,0)
-performer^^C^140
+performer^^N^140
 "DATA",998.1,2,10,9,30,17,0)
 name^name^C^10.1
 "DATA",998.1,2,10,9,30,17,10)
@@ -14183,9 +14281,9 @@ D PUT("code",VL("I")),PUT("display",VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,9,30,18,0)
 valueString^value^C^20.1
 "DATA",998.1,2,10,9,30,18,10)
-I $D(VL("I")),'$$ISQUANT^RGSEROBS(VL("I")) D ADDTAG(PN),PUT("value",VL("I")),ENDTAG(PN)
+I VL,'$$ISNUM^RGUT(VL("I")) D PUT(PN,VL("I"))
 "DATA",998.1,2,10,9,30,19,0)
-@id^id^C^1
+@id^id^N^1
 "DATA",998.1,2,10,9,40,0)
 ^998.13I^3^3
 "DATA",998.1,2,10,9,40,1,0)
@@ -14195,7 +14293,7 @@ S X=$$OBS^RGSEROBS(PARAMS("subject:Patient",1,1))
 "DATA",998.1,2,10,9,40,2,0)
 name^name^T^10
 "DATA",998.1,2,10,9,40,3,0)
-_id^@id^S^10
+_id^@id^T^10
 "DATA",998.1,2,10,10,0)
 Organization^^4
 "DATA",998.1,2,10,10,30,0)
@@ -14203,9 +14301,9 @@ Organization^^4
 "DATA",998.1,2,10,10,30,1,0)
 name^.01^F^20
 "DATA",998.1,2,10,10,30,2,0)
-active^^C^10
+active^^S^10
 "DATA",998.1,2,10,10,30,2,10)
-D PUT(PN,"true")
+true
 "DATA",998.1,2,10,10,30,3,0)
 address^@ien^O^40
 "DATA",998.1,2,10,10,30,3,10)
@@ -14215,9 +14313,9 @@ Organization_Address^1^4
 "DATA",998.1,2,10,11,30,0)
 ^998.12I^6^6
 "DATA",998.1,2,10,11,30,1,0)
-use^^C^10
+use^^S^10
 "DATA",998.1,2,10,11,30,1,10)
-D PUT(PN,"official")
+official
 "DATA",998.1,2,10,11,30,2,0)
 line^1.01^F^20
 "DATA",998.1,2,10,11,30,3,0)
@@ -14241,7 +14339,7 @@ display^.01^F^20
 "DATA",998.1,2,10,13,0)
 Patient^^2
 "DATA",998.1,2,10,13,30,0)
-^998.12I^14^14
+^998.12I^15^15
 "DATA",998.1,2,10,13,30,1,0)
 name^.01^C^10
 "DATA",998.1,2,10,13,30,1,10)
@@ -14249,7 +14347,7 @@ D NAME(VL("I"))
 "DATA",998.1,2,10,13,30,2,0)
 gender^.02^C^20
 "DATA",998.1,2,10,13,30,2,10)
-D:VL ADDTAG(PN),ADDTAG("coding"),PUT("system","http://hl7.org/fhir/v3/AdministrativeGender"),PUT("code",VL("I")),PUT("display",VL("E")),ENDTAG(PN)
+D:VL CODING("http://hl7.org/fhir/v3/AdministrativeGender",VL("I"),VL("E"))
 "DATA",998.1,2,10,13,30,3,0)
 birthDate^.03^D^30
 "DATA",998.1,2,10,13,30,4,0)
@@ -14267,15 +14365,15 @@ photo^^C^80
 "DATA",998.1,2,10,13,30,7,10)
 Q:'$L($T(^MAGGTIG))  N X,Y D PHOTOS^MAGGTIG(.X,IEN) F Y=0:0 S Y=$O(X(Y)) Q:'Y  S X=$P(X(Y),U,3) I $E(X,1,4)="http" D ADDTAG(PN),PUT("contentType","image/"_$P(X,".",$L(X,"."))),PUT("url",X),ENDTAG(PN)
 "DATA",998.1,2,10,13,30,8,0)
-telecom:phone:home^.131^C^100
+telecom!phone:home^.131^C^100
 "DATA",998.1,2,10,13,30,8,10)
 D TELECOM
 "DATA",998.1,2,10,13,30,9,0)
-telecom:phone:mobile^.134^C^110
+telecom!phone:mobile^.134^C^110
 "DATA",998.1,2,10,13,30,9,10)
 D TELECOM
 "DATA",998.1,2,10,13,30,10,0)
-telecom:phone:work^.132^C^120
+telecom!phone:work^.132^C^120
 "DATA",998.1,2,10,13,30,10,10)
 D TELECOM
 "DATA",998.1,2,10,13,30,11,0)
@@ -14283,21 +14381,25 @@ address^@ien^O^130
 "DATA",998.1,2,10,13,30,11,10)
 */Patient_Address_Home
 "DATA",998.1,2,10,13,30,12,0)
-telecom:fax:home^.136^C^140
+telecom!fax:home^.136^C^140
 "DATA",998.1,2,10,13,30,12,10)
 D TELECOM
 "DATA",998.1,2,10,13,30,13,0)
-extension url="http\://hl7.org/fhir/Profile/us-core#race"^2^M^1
+extension!race^2^M^21
 "DATA",998.1,2,10,13,30,13,10)
 */Patient_Race
 "DATA",998.1,2,10,13,30,14,0)
 SSN^.09^C^60
 "DATA",998.1,2,10,13,30,14,10)
 D IDENT("http://hl7.org/fhir/sid/us-ssn",VL("E"),PN)
+"DATA",998.1,2,10,13,30,15,0)
+text^^T^1
+"DATA",998.1,2,10,13,30,15,10)
+TEXT
 "DATA",998.1,2,10,13,40,0)
 ^998.13I^6^6
 "DATA",998.1,2,10,13,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
 "DATA",998.1,2,10,13,40,2,0)
 family^.01^S^20
 "DATA",998.1,2,10,13,40,2,10)
@@ -14316,6 +14418,24 @@ birthdate^.03^D^15
 identifier^.09^T^5
 "DATA",998.1,2,10,13,40,6,10)
 S MATCH=PVAL=$$HRN^RGSERPAT(IEN),PVAL=$TR(PVAL,"-") S:MATCH TP=""
+"DATA",998.1,2,10,13,50,0)
+^998.15^1^1
+"DATA",998.1,2,10,13,50,1,0)
+TEXT
+"DATA",998.1,2,10,13,50,1,1,0)
+^998.151^6^6^3150309^
+"DATA",998.1,2,10,13,50,1,1,1,0)
+<text>
+"DATA",998.1,2,10,13,50,1,1,2,0)
+<status value="generated"/>
+"DATA",998.1,2,10,13,50,1,1,3,0)
+<div xmlns="http://www.w3.org/1999/xhtml">
+"DATA",998.1,2,10,13,50,1,1,4,0)
+NAME: |.01|
+"DATA",998.1,2,10,13,50,1,1,5,0)
+</div>
+"DATA",998.1,2,10,13,50,1,1,6,0)
+</text> 
 "DATA",998.1,2,10,14,0)
 Patient/#/Condition
 "DATA",998.1,2,10,14,10)
@@ -14337,21 +14457,21 @@ Patient_Address_Home^1^2
 "DATA",998.1,2,10,18,30,0)
 ^998.12I^9^9
 "DATA",998.1,2,10,18,30,1,0)
-use^^C^10
+use^^S^10
 "DATA",998.1,2,10,18,30,1,10)
-D PUT(PN,"home")
+home
 "DATA",998.1,2,10,18,30,2,0)
-line^.111^F^20
+line!1^.111^F^20
 "DATA",998.1,2,10,18,30,3,0)
-line^.112^F^20.1
+line!2^.112^F^20.1
 "DATA",998.1,2,10,18,30,4,0)
-line^.113^F^20.2
+line!3^.113^F^20.2
 "DATA",998.1,2,10,18,30,5,0)
 city^.114^F^50
 "DATA",998.1,2,10,18,30,6,0)
 state^.115^F^60
 "DATA",998.1,2,10,18,30,7,0)
-state^.1171^F^60.1
+state!province^.1171^F^60.1
 "DATA",998.1,2,10,18,30,8,0)
 zip^.116^F^80
 "DATA",998.1,2,10,18,30,9,0)
@@ -14359,11 +14479,15 @@ country^.1173^F^90
 "DATA",998.1,2,10,19,0)
 Patient_Race^1^2.02
 "DATA",998.1,2,10,19,30,0)
-^998.12I^1^1
+^998.12I^2^2
 "DATA",998.1,2,10,19,30,1,0)
 valueCodeableConcept^.01^C^10
 "DATA",998.1,2,10,19,30,1,10)
 D:VL ADDTAG(PN),PUT("text",VL("E")),ENDTAG(PN)
+"DATA",998.1,2,10,19,30,2,0)
+attr:url^^N^1
+"DATA",998.1,2,10,19,30,2,10)
+http://hl7.org/fhir/Profile/us-core#race
 "DATA",998.1,2,10,20,0)
 Practitioner^^200
 "DATA",998.1,2,10,20,30,0)
@@ -14373,15 +14497,15 @@ name^.01^C^10
 "DATA",998.1,2,10,20,30,1,10)
 D NAME(VL("I"))
 "DATA",998.1,2,10,20,30,2,0)
-telecom:phone:home^.132^C^20
+telecom!phone:home^.132^C^20
 "DATA",998.1,2,10,20,30,2,10)
 D TELECOM
 "DATA",998.1,2,10,20,30,3,0)
-telecom:phone:work^.131^C^30
+telecom!phone:work^.131^C^30
 "DATA",998.1,2,10,20,30,3,10)
 D TELECOM
 "DATA",998.1,2,10,20,30,4,0)
-telecom:fax:work^.136^C^40
+telecom!fax:work^.136^C^40
 "DATA",998.1,2,10,20,30,4,10)
 D TELECOM
 "DATA",998.1,2,10,20,30,5,0)
@@ -14413,7 +14537,7 @@ given^.01^S^30
 "DATA",998.1,2,10,20,40,2,10)
 D OPRNAME(VL("E"),2) K PVAL
 "DATA",998.1,2,10,20,40,3,0)
-_id^@ien^N^40
+_id^@ien^T^40
 "DATA",998.1,2,10,21,0)
 User^^200
 "DATA",998.1,2,10,21,30,0)
@@ -14425,25 +14549,43 @@ D NAME(VL("I"))
 "DATA",998.1,2,10,21,30,2,0)
 birthDate^5^D^20
 "DATA",998.1,2,10,21,30,3,0)
-extension url="http\://www.carewebframework.org/fhir/extension/user/organization"^^C^30
+extension!organization^^T^30
 "DATA",998.1,2,10,21,30,3,10)
-D ADDTAG(PN),ADDTAG("valueResource"),PUT("reference","Organization/"_DUZ(2)),ENDTAG(PN)
+ORGANIZATION
 "DATA",998.1,2,10,21,30,4,0)
-telecom:phone:work^.132^C^40
+telecom!phone:work^.132^C^40
 "DATA",998.1,2,10,21,30,4,10)
 D TELECOM
 "DATA",998.1,2,10,21,30,5,0)
-telecom:phone:home^.131^C^50
+telecom!phone:home^.131^C^50
 "DATA",998.1,2,10,21,30,5,10)
 D TELECOM
 "DATA",998.1,2,10,21,30,6,0)
-telecom:fax:work^.136^C^60
+telecom!fax:work^.136^C^60
 "DATA",998.1,2,10,21,30,6,10)
 D TELECOM
 "DATA",998.1,2,10,21,40,0)
 ^998.13I^1^1
 "DATA",998.1,2,10,21,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
+"DATA",998.1,2,10,21,50,0)
+^998.15^1^1
+"DATA",998.1,2,10,21,50,1,0)
+ORGANIZATION
+"DATA",998.1,2,10,21,50,1,1,0)
+^^6^6^3150311.205633
+"DATA",998.1,2,10,21,50,1,1,1,0)
+<extension url="http://www.carewebframework.org/fhir/extension/user/organization">
+"DATA",998.1,2,10,21,50,1,1,2,0)
+<valueResource>
+"DATA",998.1,2,10,21,50,1,1,3,0)
+<reference value="Organization/|@DUZ(2)|"/>
+"DATA",998.1,2,10,21,50,1,1,4,0)
+<display value="|@$P(^DIC(4,DUZ(2),0),U)|"/>
+"DATA",998.1,2,10,21,50,1,1,5,0)
+</valueResource>
+"DATA",998.1,2,10,21,50,1,1,6,0)
+</extension>
 "DATA",998.1,2,10,22,0)
 ValueSet^^998.11
 "DATA",998.1,2,10,22,20)
@@ -14463,15 +14605,15 @@ D PUT(PN,$P(VL("E"),"_",2,99))
 "DATA",998.1,2,10,22,30,4,0)
 description^99^F^30
 "DATA",998.1,2,10,22,30,5,0)
-status^^C^40
+status^^S^40
 "DATA",998.1,2,10,22,30,5,10)
-D PUT(PN,"active")
+active
 "DATA",998.1,2,10,22,40,0)
 ^998.13I^3^3
 "DATA",998.1,2,10,22,40,1,0)
-_id^@ien^N^1
+_id^@ien^T^1
 "DATA",998.1,2,10,22,40,2,0)
-name^.01^T^10
+name^.01^S^10
 "DATA",998.1,2,10,22,40,2,10)
 S MATCH=VL("E")=("ValueSet_"_PVAL) K PVAL
 "DATA",998.1,2,10,22,40,3,0)
@@ -14511,23 +14653,23 @@ Medication^^50
 "DATA",998.1,2,10,25,30,1,0)
 name^.01^F^10
 "DATA",998.1,2,10,25,30,2,0)
-code:start^^C^20
+code!start^^C^20
 "DATA",998.1,2,10,25,30,2,10)
 D ADDTAG(PN)
 "DATA",998.1,2,10,25,30,3,0)
-code:end^^C^20.9
+code!end^^C^20.9
 "DATA",998.1,2,10,25,30,3,10)
 D ENDTAG(PN)
 "DATA",998.1,2,10,25,30,4,0)
-coding:NDC^31^C^20.1
+coding!ndc^31^C^20.1
 "DATA",998.1,2,10,25,30,4,10)
-D:VL CODING("ndc",VL("E"))
+D:VL CODING("http://www.fda.gov/ndc",VL("E"))
 "DATA",998.1,2,10,25,30,5,0)
-product:start^^C^30
+product!start^^C^30
 "DATA",998.1,2,10,25,30,5,10)
 D ADDTAG(PN)
 "DATA",998.1,2,10,25,30,6,0)
-product:end^^C^30.9
+product!end^^C^30.9
 "DATA",998.1,2,10,25,30,6,10)
 D ENDTAG(PN)
 "DATA",998.1,2,10,25,30,7,0)
@@ -14541,7 +14683,7 @@ code^31^T^10
 "DATA",998.1,2,10,25,40,2,0)
 name^.01^S^20
 "DATA",998.1,2,10,25,40,3,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,2,10,26,0)
 MedicationPrescription^^52
 "DATA",998.1,2,10,26,30,0)
@@ -14561,11 +14703,11 @@ D REF(PN,"Medication",.VL)
 "DATA",998.1,2,10,26,30,4,0)
 dateWritten^1^D^20
 "DATA",998.1,2,10,26,30,5,0)
-dosageInstruction:start^^C^90
+dosageInstruction!start^^C^90
 "DATA",998.1,2,10,26,30,5,10)
 D ADDTAG(PN)
 "DATA",998.1,2,10,26,30,6,0)
-dosageInstruction:end^^C^90.9
+dosageInstruction!end^^C^90.9
 "DATA",998.1,2,10,26,30,6,10)
 D ENDTAG(PN)
 "DATA",998.1,2,10,26,30,7,0)
@@ -14583,7 +14725,7 @@ patient^2^R^10
 "DATA",998.1,2,10,26,40,1,20)
 S X=$$COHORT(PN,$NA(^PS(55,"*","P","A")),1)
 "DATA",998.1,2,10,26,40,2,0)
-_id^@ien^N^20
+_id^@ien^T^20
 "DATA",998.1,2,10,27,0)
 MedicationPrescription_Sig^1^52.04
 "DATA",998.1,2,10,27,30,0)
@@ -14607,7 +14749,7 @@ AdverseReaction^^120.8
 "DATA",998.1,2,10,30,30,0)
 ^998.12I^9^7
 "DATA",998.1,2,10,30,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,2,10,30,30,2,0)
 date^4^D^20
 "DATA",998.1,2,10,30,30,3,0)
@@ -14615,9 +14757,9 @@ subject^.01^C^30
 "DATA",998.1,2,10,30,30,3,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,2,10,30,30,4,0)
-didNotOccurFlag^^C^40
+didNotOccurFlag^^S^40
 "DATA",998.1,2,10,30,30,4,10)
-D PUT(PN,"false")
+false
 "DATA",998.1,2,10,30,30,5,0)
 recorder^5^C^50
 "DATA",998.1,2,10,30,30,5,10)
@@ -14633,15 +14775,15 @@ S:'VL VL("E")=VL(2,"E") S VL("I")=$$VP2ID(VL("I")) D ADDTAG(PN),REF("substance",
 "DATA",998.1,2,10,30,40,0)
 ^998.13I^3^3
 "DATA",998.1,2,10,30,40,1,0)
-subject^.01^N^10
+subject^.01^R^10
 "DATA",998.1,2,10,30,40,1,20)
 S X=$$COHORT(PN,$NA(^GMR(120.8,"B")))
 "DATA",998.1,2,10,30,40,2,0)
-subject:Patient^.01^N^10
+subject:Patient^.01^R^10
 "DATA",998.1,2,10,30,40,2,20)
 S X=$$COHORT(PN,$NA(^GMR(120.8,"B")))
 "DATA",998.1,2,10,30,40,3,0)
-_id^@ien^N^20
+_id^@ien^T^20
 "DATA",998.1,2,10,31,0)
 AdverseReaction_Symptom^1^120.81
 "DATA",998.1,2,10,31,30,0)
@@ -14651,7 +14793,7 @@ code^.01^C^10
 "DATA",998.1,2,10,31,30,1,10)
 D ADDTAG(PN),CODING^RGSEFHIR("#120.83",VL("I"),VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,31,30,2,0)
-severity^^C^20
+severity^^N^20
 "DATA",998.1,2,10,32,0)
 AdverseReaction_Ingredient^1^120.802
 "DATA",998.1,2,10,32,30,0)
@@ -14659,11 +14801,11 @@ AdverseReaction_Ingredient^1^120.802
 "DATA",998.1,2,10,32,30,1,0)
 date^^D^10
 "DATA",998.1,2,10,32,30,2,0)
-type^^C^20
+type^^S^20
 "DATA",998.1,2,10,32,30,2,10)
-D PUT(PN,"drugadmin")
+drugadmin
 "DATA",998.1,2,10,32,30,3,0)
-causalityExpectation^^C^30
+causalityExpectation^^N^30
 "DATA",998.1,2,10,32,30,4,0)
 substance^.01^C^40
 "DATA",998.1,2,10,32,30,4,10)
@@ -14675,11 +14817,11 @@ AdverseReaction_Class^1^120.803
 "DATA",998.1,2,10,33,30,1,0)
 date^^D^10
 "DATA",998.1,2,10,33,30,2,0)
-type^^C^20
+type^^S^20
 "DATA",998.1,2,10,33,30,2,10)
-D PUT(PN,"drugadmin")
+drugadmin
 "DATA",998.1,2,10,33,30,3,0)
-causalityExpectation^^C^30
+causalityExpectation^^N^30
 "DATA",998.1,2,10,33,30,4,0)
 substance^.01^C^40
 "DATA",998.1,2,10,33,30,4,10)
@@ -14687,7 +14829,7 @@ D REF(PN,"Substance",.VL,"50.605:")
 "DATA",998.1,2,10,34,0)
 Substance
 "DATA",998.1,2,10,34,10)
-D COMPID^RGSER
+D COMPID^RGSERGET
 "DATA",998.1,2,10,35,0)
 Patient/#/AdverseReaction
 "DATA",998.1,2,10,35,10)
@@ -14703,9 +14845,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,36,30,2,0)
 description^^W^20
 "DATA",998.1,2,10,36,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,2,10,36,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,2,10,37,0)
 Substance_50.416^1^50.416
 "DATA",998.1,2,10,37,30,0)
@@ -14717,9 +14859,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,37,30,2,0)
 description^^W^20
 "DATA",998.1,2,10,37,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,2,10,37,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,2,10,38,0)
 Substance_50.6^1^50.6
 "DATA",998.1,2,10,38,30,0)
@@ -14731,9 +14873,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,38,30,2,0)
 description^^W^20
 "DATA",998.1,2,10,38,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,2,10,38,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,2,10,39,0)
 Substance_50.605^1^50.605
 "DATA",998.1,2,10,39,30,0)
@@ -14745,9 +14887,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,39,30,2,0)
 description^^W^20
 "DATA",998.1,2,10,39,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,2,10,39,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,2,10,40,0)
 Substance_120.82^1^120.82
 "DATA",998.1,2,10,40,30,0)
@@ -14759,15 +14901,15 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,2,10,40,30,2,0)
 description^^W^20
 "DATA",998.1,2,10,40,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,2,10,40,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,2,10,41,0)
 Immunization^^9000010.11
 "DATA",998.1,2,10,41,30,0)
 ^998.12I^18^18
 "DATA",998.1,2,10,41,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,2,10,41,30,2,0)
 date^1201,.03~.01^C^20
 "DATA",998.1,2,10,41,30,2,10)
@@ -14793,51 +14935,49 @@ requester^1202^C^80
 "DATA",998.1,2,10,41,30,8,10)
 D:VL REF(PN,"Practitioner",.VL)
 "DATA",998.1,2,10,41,30,9,0)
-manufacturer^^C^90
+manufacturer^^N^90
 "DATA",998.1,2,10,41,30,10,0)
 location^.03~.22^C^100
 "DATA",998.1,2,10,41,30,10,10)
 D REF(PN,"Location",.VL)
 "DATA",998.1,2,10,41,30,11,0)
-lotNumber^^C^110
+lotNumber^^N^110
 "DATA",998.1,2,10,41,30,12,0)
 expirationDate^^D^120
 "DATA",998.1,2,10,41,30,13,0)
-site^^C^130
+site^^N^130
 "DATA",998.1,2,10,41,30,14,0)
-route^^C^140
+route^^N^140
 "DATA",998.1,2,10,41,30,15,0)
-doseQuantity^^C^150
+doseQuantity^^N^150
 "DATA",998.1,2,10,41,30,16,0)
-explanation^^C^160
+explanation^^N^160
 "DATA",998.1,2,10,41,30,17,0)
-reaction^^C^170
+reaction^^N^170
 "DATA",998.1,2,10,41,30,18,0)
-vaccinationProtocol^^C^180
+vaccinationProtocol^^N^180
 "DATA",998.1,2,10,41,40,0)
 ^998.13I^3^3
 "DATA",998.1,2,10,41,40,1,0)
-subject^.02^N^10
+subject^.02^R^10
 "DATA",998.1,2,10,41,40,1,20)
 S X=$$COHORT(PN,$NA(^AUPNVIMM("C")))
 "DATA",998.1,2,10,41,40,2,0)
-subject:Patient^.02^N^10
+subject:Patient^.02^R^10
 "DATA",998.1,2,10,41,40,2,20)
 S X=$$COHORT(PN,$NA(^AUPNVIMM("C")))
 "DATA",998.1,2,10,41,40,3,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,2,10,42,0)
 Patient/#/Immunization
 "DATA",998.1,2,10,42,10)
 D COMPRT($NA(^AUPNVIMM("C")))
 "DATA",998.1,2,10,43,0)
 Alert^^26.13
-"DATA",998.1,2,10,43,20)
-
 "DATA",998.1,2,10,43,30,0)
 ^998.12I^6^6
 "DATA",998.1,2,10,43,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,2,10,43,30,2,0)
 category^.02^C^20
 "DATA",998.1,2,10,43,30,2,10)
@@ -14851,7 +14991,7 @@ subject^.01^C^40
 "DATA",998.1,2,10,43,30,4,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,2,10,43,30,5,0)
-author^^C^50
+author^^N^50
 "DATA",998.1,2,10,43,30,6,0)
 note^1^W^60
 "DATA",998.1,2,10,43,30,6,10)
@@ -14859,23 +14999,127 @@ note^1^W^60
 "DATA",998.1,2,10,43,40,0)
 ^998.13I^3^3
 "DATA",998.1,2,10,43,40,1,0)
-_id^@ien^N^10
-"DATA",998.1,2,10,43,40,1,20)
-
+_id^@ien^T^10
 "DATA",998.1,2,10,43,40,2,0)
-subject^.01^N^20
+subject^.01^R^20
 "DATA",998.1,2,10,43,40,2,20)
 S X=$NA(^DGPF(26.13,"B",PARAMS(PN,1,1)))
 "DATA",998.1,2,10,43,40,3,0)
-subject:Patient^.01^N^20
+subject:Patient^.01^R^20
 "DATA",998.1,2,10,43,40,3,20)
 S X=$NA(^DGPF(26.13,"B",PARAMS(PN,1,1)))
 "DATA",998.1,2,10,44,0)
 Patient/#/Alert
 "DATA",998.1,2,10,44,10)
 D COMPRT($NA(^DGPF(26.13,"B")))
+"DATA",998.1,2,10,45,0)
+metadata
+"DATA",998.1,2,10,45,10)
+D TEMPLATE^RGSERGET("CONFORMANCE")
+"DATA",998.1,2,10,45,50,0)
+^998.15^3^3
+"DATA",998.1,2,10,45,50,1,0)
+CONFORMANCE
+"DATA",998.1,2,10,45,50,1,1,0)
+^^20^20^3150313.125941
+"DATA",998.1,2,10,45,50,1,1,1,0)
+<Conformance>
+"DATA",998.1,2,10,45,50,1,1,2,0)
+  <text>
+"DATA",998.1,2,10,45,50,1,1,3,0)
+    <status value="generated"/>
+"DATA",998.1,2,10,45,50,1,1,4,0)
+  </text>
+"DATA",998.1,2,10,45,50,1,1,5,0)
+  <publisher value="Not provided"/>
+"DATA",998.1,2,10,45,50,1,1,6,0)
+  <date value="|@$$FMTDATE^RGSER|"/>
+"DATA",998.1,2,10,45,50,1,1,7,0)
+  <software>
+"DATA",998.1,2,10,45,50,1,1,8,0)
+    <name value="VistA Serialization Framework"/>
+"DATA",998.1,2,10,45,50,1,1,9,0)
+    <version value="|@$$VERSION^XPDUTL("RGSE")|"/>
+"DATA",998.1,2,10,45,50,1,1,10,0)
+  </software>
+"DATA",998.1,2,10,45,50,1,1,11,0)
+  <implementation>
+"DATA",998.1,2,10,45,50,1,1,12,0)
+    <description value="VistA (|@DATA("SERNM")|)"/>
+"DATA",998.1,2,10,45,50,1,1,13,0)
+  </implementation>
+"DATA",998.1,2,10,45,50,1,1,14,0)
+  <fhirVersion value="|@DATA("VER")|"/>
+"DATA",998.1,2,10,45,50,1,1,15,0)
+  <acceptUnknown value="false"/>
+"DATA",998.1,2,10,45,50,1,1,16,0)
+  <format value="application/xml+fhir"/> 
+"DATA",998.1,2,10,45,50,1,1,17,0)
+  <rest>
+"DATA",998.1,2,10,45,50,1,1,18,0)
+    <mode value="server"/>
+"DATA",998.1,2,10,45,50,1,1,19,0)
+|#$$RESCONF^RGSEFHIR|  </rest>
+"DATA",998.1,2,10,45,50,1,1,20,0)
+</Conformance> 
+"DATA",998.1,2,10,45,50,2,0)
+CONFORMANCE_RESOURCE
+"DATA",998.1,2,10,45,50,2,1,0)
+^^6^6^3150315.095043
+"DATA",998.1,2,10,45,50,2,1,1,0)
+    <resource>
+"DATA",998.1,2,10,45,50,2,1,2,0)
+      <type value="|@RESNAME|"/>
+"DATA",998.1,2,10,45,50,2,1,3,0)
+      <operation>
+"DATA",998.1,2,10,45,50,2,1,4,0)
+       <code value="read"/>
+"DATA",998.1,2,10,45,50,2,1,5,0)
+      </operation>
+"DATA",998.1,2,10,45,50,2,1,6,0)
+|#$$SRPCONF^RGSEFHIR|    </resource>
+"DATA",998.1,2,10,45,50,3,0)
+CONFORMANCE_PARAMETER
+"DATA",998.1,2,10,45,50,3,1,0)
+^^4^4^3150315.101115
+"DATA",998.1,2,10,45,50,3,1,1,0)
+        <searchParam>
+"DATA",998.1,2,10,45,50,3,1,2,0)
+          <name value="|@SRPNAME|"/>
+"DATA",998.1,2,10,45,50,3,1,3,0)
+          <type value="|@SRPTYPE|"/>
+"DATA",998.1,2,10,45,50,3,1,4,0)
+        </searchParam>
+"DATA",998.1,2,10,46,0)
+Order^^100
+"DATA",998.1,2,10,46,30,0)
+^998.12I^9^9
+"DATA",998.1,2,10,46,30,1,0)
+identifier^^N^10
+"DATA",998.1,2,10,46,30,2,0)
+date^4^D^20
+"DATA",998.1,2,10,46,30,3,0)
+subject^.02^C^30
+"DATA",998.1,2,10,46,30,3,10)
+D:VL("I")["DPT" REF2(PN,"Patient",+VL("I"),VL("E"))
+"DATA",998.1,2,10,46,30,4,0)
+source^1^C^40
+"DATA",998.1,2,10,46,30,4,10)
+D REF(PN,"Practitioner",.VL)
+"DATA",998.1,2,10,46,30,5,0)
+target^^N^50
+"DATA",998.1,2,10,46,30,6,0)
+reason^^N^60
+"DATA",998.1,2,10,46,30,7,0)
+authority^^N^70
+"DATA",998.1,2,10,46,30,8,0)
+when^^N^80
+"DATA",998.1,2,10,46,30,9,0)
+detail:reference^@ien^C^90
+"DATA",998.1,2,10,46,30,9,10)
+D PUT(PN,"DiagnosticOrder/"_VL("I"))
 "DATA",998.1,2,20,0)
-^998.14^5^5^3150306^^^^
+^998.14^5^5^3150313^^^^
 "DATA",998.1,2,20,1,0)
 Access-Control-Allow-Credentials: true
 "DATA",998.1,2,20,2,0)
@@ -14887,23 +15131,27 @@ Access-Control-Allow-Origin: *
 "DATA",998.1,2,20,5,0)
 Cache-Control: max-age=0
 "DATA",998.1,3,0)
-DSTU2^text/xml^RGSEFHIR
+DSTU2^application/xml+fhir,application/xml,text/xml^RGSEFHIR^0.4.0
 "DATA",998.1,3,10,0)
-^998.11^47^47
+^998.11^49^49
 "DATA",998.1,3,10,1,0)
 Binary
 "DATA",998.1,3,10,1,10)
-D COMPID^RGSER
+D COMPID^RGSERGET
 "DATA",998.1,3,10,2,0)
 Binary_8925^1^8925
 "DATA",998.1,3,10,2,30,0)
-^998.12I^2^2
+^998.12I^3^3
 "DATA",998.1,3,10,2,30,1,0)
-content:text/plain^^C^10
+@content^^C^10
 "DATA",998.1,3,10,2,30,1,10)
 N TXT,ERR D TGET^TIUSRVR1(.TXT,IEN) S ERR='$D(@TXT) D ADDARY^RGSER(TXT,"BL"):'ERR,SETERR^RGSER(404,"Not found"):ERR K @TXT
 "DATA",998.1,3,10,2,30,2,0)
-id^@id^R^1
+id^@ienx^R^1
+"DATA",998.1,3,10,2,30,3,0)
+attr:contentType^^N^1
+"DATA",998.1,3,10,2,30,3,10)
+text/plain
 "DATA",998.1,3,10,3,0)
 Condition^^9000011
 "DATA",998.1,3,10,3,30,0)
@@ -14913,7 +15161,7 @@ subject^.02^C^10
 "DATA",998.1,3,10,3,30,1,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,3,10,3,30,2,0)
-code:start^^C^20
+code!start^^C^20
 "DATA",998.1,3,10,3,30,2,10)
 D ADDTAG(PN)
 "DATA",998.1,3,10,3,30,3,0)
@@ -14921,13 +15169,15 @@ coding^.01^O^20.1
 "DATA",998.1,3,10,3,30,3,10)
 */ICD9
 "DATA",998.1,3,10,3,30,4,0)
-code:end^.05^C^20.2
+code!end^.05^C^20.2
 "DATA",998.1,3,10,3,30,4,10)
 D PUT("text",VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,3,30,5,0)
-category^^C^30
+category^^N^30
 "DATA",998.1,3,10,3,30,6,0)
-status^^C^40
+status^^S^40
+"DATA",998.1,3,10,3,30,6,10)
+confirmed
 "DATA",998.1,3,10,3,30,7,0)
 onsetDate^.13^D^50
 "DATA",998.1,3,10,3,30,8,0)
@@ -14937,39 +15187,39 @@ id^@id^R^1
 "DATA",998.1,3,10,3,40,0)
 ^998.13I^4^4
 "DATA",998.1,3,10,3,40,1,0)
-subject^.02^N^10
+subject^.02^R^10
 "DATA",998.1,3,10,3,40,1,20)
 S X=$$COHORT(PN,$NA(^AUPNPROB("AC")))
 "DATA",998.1,3,10,3,40,2,0)
 onset^.13^D^20
 "DATA",998.1,3,10,3,40,3,0)
-subject:Patient^.02^N^10
+subject:Patient^.02^R^10
 "DATA",998.1,3,10,3,40,3,20)
 S X=$$COHORT(PN,$NA(^AUPNPROB("AC")))
 "DATA",998.1,3,10,3,40,4,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,3,10,4,0)
 DocumentReference^^8925
 "DATA",998.1,3,10,4,30,0)
-^998.12I^12^11
+^998.12I^24^23
 "DATA",998.1,3,10,4,30,1,0)
-description^1701^F^10
+description^1701^F^140
 "DATA",998.1,3,10,4,30,2,0)
-type^.01^C^30
+type^.01^C^40
 "DATA",998.1,3,10,4,30,2,10)
 D ADDTAG(PN),CODING("#8925.1",VL("I"),VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,4,30,3,0)
-subject^.02^C^60
+subject^.02^C^30
 "DATA",998.1,3,10,4,30,3,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,3,10,4,30,4,0)
-author^1202^C^70
+author^1202^C^60
 "DATA",998.1,3,10,4,30,4,10)
 D REF(PN,"Practitioner",.VL)
 "DATA",998.1,3,10,4,30,5,0)
-mimeType^^F^90
+mimeType^^S^170
 "DATA",998.1,3,10,4,30,5,10)
-D PUT(PN,"text/plain")
+text/plain
 "DATA",998.1,3,10,4,30,6,0)
 created^1201^D^100
 "DATA",998.1,3,10,4,30,7,0)
@@ -14977,17 +15227,43 @@ context^.07,.08^C^110
 "DATA",998.1,3,10,4,30,7,10)
 D ADDTAG(PN),PERIOD,ENDTAG(PN)
 "DATA",998.1,3,10,4,30,9,0)
-location^@ien^C^130
+location^@ien^C^210
 "DATA",998.1,3,10,4,30,9,10)
 D PUT(PN,$$HOST^RGSER("*/Binary/8925:"_VL("I")))
 "DATA",998.1,3,10,4,30,10,0)
-masterIdentifier^@ien^C^140
+masterIdentifier^@ien^C^10
 "DATA",998.1,3,10,4,30,10,10)
 D ADDTAG(PN),PUT("value",$$SYSUUID^RGSER_"/Document/"_VL("I")),ENDTAG(PN)
 "DATA",998.1,3,10,4,30,11,0)
-status^.05^C^40
+status^.05~.02^C^120
+"DATA",998.1,3,10,4,30,11,10)
+N X S X=VL("I") D PUT(PN,$S("rd"[X:"entered in error",1:"current"))
 "DATA",998.1,3,10,4,30,12,0)
 id^@id^R^1
+"DATA",998.1,3,10,4,30,13,0)
+identifier^^N^20
+"DATA",998.1,3,10,4,30,14,0)
+class^^N^50
+"DATA",998.1,3,10,4,30,15,0)
+custodian^^N^70
+"DATA",998.1,3,10,4,30,16,0)
+policyManager^^N^80
+"DATA",998.1,3,10,4,30,17,0)
+authenticator^^N^90
+"DATA",998.1,3,10,4,30,18,0)
+indexed^1201^D^110
+"DATA",998.1,3,10,4,30,19,0)
+docStatus^^N^130
+"DATA",998.1,3,10,4,30,20,0)
+confidentiality^^N^150
+"DATA",998.1,3,10,4,30,21,0)
+primaryLanguage^^N^160
+"DATA",998.1,3,10,4,30,22,0)
+format^^N^180
+"DATA",998.1,3,10,4,30,23,0)
+size^^N^190
+"DATA",998.1,3,10,4,30,24,0)
+hash^^N^200
 "DATA",998.1,3,10,4,40,0)
 ^998.13I^6^6
 "DATA",998.1,3,10,4,40,1,0)
@@ -15001,7 +15277,7 @@ type^.01^T^30
 "DATA",998.1,3,10,4,40,4,0)
 author^1202^R^40
 "DATA",998.1,3,10,4,40,5,0)
-_id^@ien^N^50
+_id^@ien^T^50
 "DATA",998.1,3,10,4,40,6,0)
 indexed^1301^D^60
 "DATA",998.1,3,10,5,0)
@@ -15009,13 +15285,13 @@ Encounter^^9000010
 "DATA",998.1,3,10,5,30,0)
 ^998.12I^10^9
 "DATA",998.1,3,10,5,30,1,0)
-status^^C^10
+status^^S^10
 "DATA",998.1,3,10,5,30,1,10)
-D PUT(PN,"finished")
+finished
 "DATA",998.1,3,10,5,30,2,0)
 class^.07^C^20
 "DATA",998.1,3,10,5,30,2,10)
-N X S X=VL("I") D PUT(PN,$S(X="H":"inpatient",X="A":"ambulatory",X="T":"virtual",1:""))
+N X S X=VL("I") D PUT(PN,$S(X="H":"inpatient",X="A":"ambulatory",1:"virtual"))
 "DATA",998.1,3,10,5,30,3,0)
 subject^.05^C^30
 "DATA",998.1,3,10,5,30,3,10)
@@ -15025,9 +15301,9 @@ period^.01,.18^C^40
 "DATA",998.1,3,10,5,30,4,10)
 D PERIOD
 "DATA",998.1,3,10,5,30,6,0)
-location^.22^C^60
+location^.01,.18,.22^C^60
 "DATA",998.1,3,10,5,30,6,10)
-D:VL("I") ADDTAG(PN),REF(PN,"Location",.VL),ENDTAG(PN)
+D:VL(3) ADDTAG(PN),REF2(PN,"Location",VL(3,"I"),VL(3,"E")),PERIOD,ENDTAG(PN)
 "DATA",998.1,3,10,5,30,7,0)
 visitid^15001^C^70
 "DATA",998.1,3,10,5,30,7,10)
@@ -15057,7 +15333,7 @@ subject:Patient^.05^R^10
 "DATA",998.1,3,10,5,40,4,20)
 S X=$$COHORT(PN,$NA(^AUPNVSIT("C")))
 "DATA",998.1,3,10,5,40,5,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,3,10,6,0)
 Encounter_Participant^1^9000010.06
 "DATA",998.1,3,10,6,30,0)
@@ -15099,7 +15375,7 @@ managingOrganization^3^C^30
 "DATA",998.1,3,10,8,30,3,10)
 D REF(PN,"Organization",.VL)
 "DATA",998.1,3,10,8,30,4,0)
-telecom:phone:work^99^C^40
+telecom!phone:work^99^C^40
 "DATA",998.1,3,10,8,30,4,10)
 D TELECOM
 "DATA",998.1,3,10,8,30,5,0)
@@ -15107,13 +15383,13 @@ id^@id^R^1
 "DATA",998.1,3,10,8,40,0)
 ^998.13I^1^1
 "DATA",998.1,3,10,8,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
 "DATA",998.1,3,10,9,0)
 Observation
 "DATA",998.1,3,10,9,20)
 D RETRIEVE^RGSEROBS
 "DATA",998.1,3,10,9,30,0)
-^998.12I^19^19
+^998.12I^19^18
 "DATA",998.1,3,10,9,30,1,0)
 issued^issued^D^60
 "DATA",998.1,3,10,9,30,2,0)
@@ -15125,13 +15401,9 @@ subject^patient^C^120
 "DATA",998.1,3,10,9,30,4,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,3,10,9,30,5,0)
-referenceRange^low^C^150
+referenceRange^low,high^C^150
 "DATA",998.1,3,10,9,30,5,10)
-D ADDTAG(PN) D:$D(VL("I")) ADDTAG("low"),PUT("value",VL("I")),ENDTAG("low")
-"DATA",998.1,3,10,9,30,6,0)
-referenceRange^high^C^150.1
-"DATA",998.1,3,10,9,30,6,10)
-D:$D(VL("I")) ADDTAG("high"),PUT("value",VL("I")),ENDTAG("high") D ENDTAG(PN)
+D REFRANGE^RGSEROBS
 "DATA",998.1,3,10,9,30,7,0)
 comments^comments^F^40
 "DATA",998.1,3,10,9,30,8,0)
@@ -15147,19 +15419,19 @@ D ADDTAG(PN),ADDTAG("coding"),PUT("system",VL("E"))
 "DATA",998.1,3,10,9,30,11,0)
 valueQuantity^value,units^C^20
 "DATA",998.1,3,10,9,30,11,10)
-I $D(VL("I")),$$ISQUANT^RGSEROBS(VL("I")) D ADDTAG(PN),PUT("value",VL("I")) D:$D(VL(2,"I")) PUT("units",VL(2,"I")) D ENDTAG(PN)
+I $D(VL("I")),$$ISNUM^RGUT(VL("I")) D ADDTAG(PN),PUT("value",VL("I")) D:$D(VL(2,"I")) PUT("units",VL(2,"I")) D ENDTAG(PN)
 "DATA",998.1,3,10,9,30,12,0)
 interpretation^interpretation^C^30
 "DATA",998.1,3,10,9,30,12,10)
 D:$D(VL("E")) ADDTAG(PN),PUT("text",VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,9,30,13,0)
-bodySite^^C^90
+bodySite^^N^90
 "DATA",998.1,3,10,9,30,14,0)
-method^^C^100
+method^^N^100
 "DATA",998.1,3,10,9,30,15,0)
-specimen^^C^130
+specimen^^N^130
 "DATA",998.1,3,10,9,30,16,0)
-performer^^C^140
+performer^^N^140
 "DATA",998.1,3,10,9,30,17,0)
 name^name^C^10.1
 "DATA",998.1,3,10,9,30,17,10)
@@ -15167,7 +15439,7 @@ D PUT("code",VL("I")),PUT("display",VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,9,30,18,0)
 valueString^value^C^20.1
 "DATA",998.1,3,10,9,30,18,10)
-I $D(VL("I")),'$$ISQUANT^RGSEROBS(VL("I")) D ADDTAG(PN),PUT("value",VL("I")),ENDTAG(PN)
+I VL,'$$ISNUM^RGUT(VL("I")) D PUT(PN,VL("I"))
 "DATA",998.1,3,10,9,30,19,0)
 id^id^R^1
 "DATA",998.1,3,10,9,40,0)
@@ -15179,7 +15451,7 @@ S X=$$OBS^RGSEROBS(PARAMS("subject:Patient",1,1))
 "DATA",998.1,3,10,9,40,2,0)
 name^name^T^10
 "DATA",998.1,3,10,9,40,3,0)
-_id^@id^S^10
+_id^@id^T^10
 "DATA",998.1,3,10,10,0)
 Organization^^4
 "DATA",998.1,3,10,10,30,0)
@@ -15187,9 +15459,9 @@ Organization^^4
 "DATA",998.1,3,10,10,30,1,0)
 name^.01^F^20
 "DATA",998.1,3,10,10,30,2,0)
-active^^C^10
+active^^S^10
 "DATA",998.1,3,10,10,30,2,10)
-D PUT(PN,"true")
+true
 "DATA",998.1,3,10,10,30,3,0)
 address^@ien^O^40
 "DATA",998.1,3,10,10,30,3,10)
@@ -15201,9 +15473,9 @@ Organization_Address^1^4
 "DATA",998.1,3,10,11,30,0)
 ^998.12I^6^6
 "DATA",998.1,3,10,11,30,1,0)
-use^^C^10
+use^^S^10
 "DATA",998.1,3,10,11,30,1,10)
-D PUT(PN,"official")
+official
 "DATA",998.1,3,10,11,30,2,0)
 line^1.01^F^20
 "DATA",998.1,3,10,11,30,3,0)
@@ -15227,7 +15499,7 @@ display^.01^F^20
 "DATA",998.1,3,10,13,0)
 Patient^^2
 "DATA",998.1,3,10,13,30,0)
-^998.12I^15^15
+^998.12I^16^16
 "DATA",998.1,3,10,13,30,1,0)
 name^.01^C^10
 "DATA",998.1,3,10,13,30,1,10)
@@ -15235,7 +15507,7 @@ D NAME(VL("I"))
 "DATA",998.1,3,10,13,30,2,0)
 gender^.02^C^20
 "DATA",998.1,3,10,13,30,2,10)
-D:VL ADDTAG(PN),ADDTAG("coding"),PUT("system","http://hl7.org/fhir/v3/AdministrativeGender"),PUT("code",VL("I")),PUT("display",VL("E")),ENDTAG(PN)
+D:VL CODING("http://hl7.org/fhir/v3/AdministrativeGender",VL("I"),VL("E"))
 "DATA",998.1,3,10,13,30,3,0)
 birthDate^.03^D^30
 "DATA",998.1,3,10,13,30,4,0)
@@ -15253,15 +15525,15 @@ photo^^C^80
 "DATA",998.1,3,10,13,30,7,10)
 Q:'$L($T(^MAGGTIG))  N X,Y D PHOTOS^MAGGTIG(.X,IEN) F Y=0:0 S Y=$O(X(Y)) Q:'Y  S X=$P(X(Y),U,3) I $E(X,1,4)="http" D ADDTAG(PN),PUT("contentType","image/"_$P(X,".",$L(X,"."))),PUT("url",X),ENDTAG(PN)
 "DATA",998.1,3,10,13,30,8,0)
-telecom:phone:home^.131^C^100
+telecom!phone:home^.131^C^100
 "DATA",998.1,3,10,13,30,8,10)
 D TELECOM
 "DATA",998.1,3,10,13,30,9,0)
-telecom:phone:mobile^.134^C^110
+telecom!phone:mobile^.134^C^110
 "DATA",998.1,3,10,13,30,9,10)
 D TELECOM
 "DATA",998.1,3,10,13,30,10,0)
-telecom:phone:work^.132^C^120
+telecom!phone:work^.132^C^120
 "DATA",998.1,3,10,13,30,10,10)
 D TELECOM
 "DATA",998.1,3,10,13,30,11,0)
@@ -15269,11 +15541,11 @@ address^@ien^O^130
 "DATA",998.1,3,10,13,30,11,10)
 */Patient_Address_Home
 "DATA",998.1,3,10,13,30,12,0)
-telecom:fax:home^.136^C^140
+telecom!fax:home^.136^C^140
 "DATA",998.1,3,10,13,30,12,10)
 D TELECOM
 "DATA",998.1,3,10,13,30,13,0)
-extension url="http\://hl7.org/fhir/Profile/us-core#race"^2^M^1
+extension^2^M^21
 "DATA",998.1,3,10,13,30,13,10)
 */Patient_Race
 "DATA",998.1,3,10,13,30,14,0)
@@ -15282,10 +15554,14 @@ SSN^.09^C^60
 D IDENT("http://hl7.org/fhir/sid/us-ssn",VL("E"),PN)
 "DATA",998.1,3,10,13,30,15,0)
 id^@id^R^1
+"DATA",998.1,3,10,13,30,16,0)
+text^^T^1.1
+"DATA",998.1,3,10,13,30,16,10)
+TEXT
 "DATA",998.1,3,10,13,40,0)
 ^998.13I^6^6
 "DATA",998.1,3,10,13,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
 "DATA",998.1,3,10,13,40,2,0)
 family^.01^S^20
 "DATA",998.1,3,10,13,40,2,10)
@@ -15304,6 +15580,24 @@ birthdate^.03^D^15
 identifier^.09^T^5
 "DATA",998.1,3,10,13,40,6,10)
 S MATCH=PVAL=$$HRN^RGSERPAT(IEN),PVAL=$TR(PVAL,"-") S:MATCH TP=""
+"DATA",998.1,3,10,13,50,0)
+^998.15^1^1
+"DATA",998.1,3,10,13,50,1,0)
+TEXT
+"DATA",998.1,3,10,13,50,1,1,0)
+^998.151^6^6^3150309^
+"DATA",998.1,3,10,13,50,1,1,1,0)
+<text>
+"DATA",998.1,3,10,13,50,1,1,2,0)
+<status value="generated"/>
+"DATA",998.1,3,10,13,50,1,1,3,0)
+<div xmlns="http://www.w3.org/1999/xhtml">
+"DATA",998.1,3,10,13,50,1,1,4,0)
+NAME: |.01|
+"DATA",998.1,3,10,13,50,1,1,5,0)
+</div>
+"DATA",998.1,3,10,13,50,1,1,6,0)
+</text>
 "DATA",998.1,3,10,14,0)
 Patient/#/Condition
 "DATA",998.1,3,10,14,10)
@@ -15325,21 +15619,21 @@ Patient_Address_Home^1^2
 "DATA",998.1,3,10,18,30,0)
 ^998.12I^9^9
 "DATA",998.1,3,10,18,30,1,0)
-use^^C^10
+use^^S^10
 "DATA",998.1,3,10,18,30,1,10)
-D PUT(PN,"home")
+home
 "DATA",998.1,3,10,18,30,2,0)
-line^.111^F^20
+line!1^.111^F^20
 "DATA",998.1,3,10,18,30,3,0)
-line^.112^F^20.1
+line!2^.112^F^20.1
 "DATA",998.1,3,10,18,30,4,0)
-line^.113^F^20.2
+line!3^.113^F^20.2
 "DATA",998.1,3,10,18,30,5,0)
 city^.114^F^50
 "DATA",998.1,3,10,18,30,6,0)
 state^.115^F^60
 "DATA",998.1,3,10,18,30,7,0)
-state^.1171^F^60.1
+state!province^.1171^F^60.1
 "DATA",998.1,3,10,18,30,8,0)
 postCode^.116^F^80
 "DATA",998.1,3,10,18,30,9,0)
@@ -15347,11 +15641,15 @@ country^.1173^F^90
 "DATA",998.1,3,10,19,0)
 Patient_Race^1^2.02
 "DATA",998.1,3,10,19,30,0)
-^998.12I^1^1
+^998.12I^2^2
 "DATA",998.1,3,10,19,30,1,0)
 valueCodeableConcept^.01^C^10
 "DATA",998.1,3,10,19,30,1,10)
 D:VL ADDTAG(PN),PUT("text",VL("E")),ENDTAG(PN)
+"DATA",998.1,3,10,19,30,2,0)
+attr:url^^N^1
+"DATA",998.1,3,10,19,30,2,10)
+http://hl7.org/fhir/Profile/us-core#race
 "DATA",998.1,3,10,20,0)
 Practitioner^^200
 "DATA",998.1,3,10,20,30,0)
@@ -15361,15 +15659,15 @@ name^.01^C^10
 "DATA",998.1,3,10,20,30,1,10)
 D NAME(VL("I"))
 "DATA",998.1,3,10,20,30,2,0)
-telecom:phone:home^.132^C^20
+telecom!phone:home^.132^C^20
 "DATA",998.1,3,10,20,30,2,10)
 D TELECOM
 "DATA",998.1,3,10,20,30,3,0)
-telecom:phone:work^.131^C^30
+telecom!phone:work^.131^C^30
 "DATA",998.1,3,10,20,30,3,10)
 D TELECOM
 "DATA",998.1,3,10,20,30,4,0)
-telecom:fax:work^.136^C^40
+telecom!fax:work^.136^C^40
 "DATA",998.1,3,10,20,30,4,10)
 D TELECOM
 "DATA",998.1,3,10,20,30,5,0)
@@ -15403,39 +15701,59 @@ given^.01^S^30
 "DATA",998.1,3,10,20,40,2,10)
 D OPRNAME(VL("E"),2) K PVAL
 "DATA",998.1,3,10,20,40,3,0)
-_id^@ien^N^40
+_id^@ien^T^40
 "DATA",998.1,3,10,21,0)
-User^^200
+Person^^200
 "DATA",998.1,3,10,21,30,0)
-^998.12I^7^7
+^998.12I^14^14
 "DATA",998.1,3,10,21,30,1,0)
-name^.01^C^10
+name^.01^C^20
 "DATA",998.1,3,10,21,30,1,10)
 D NAME(VL("I"))
 "DATA",998.1,3,10,21,30,2,0)
-birthDate^5^D^20
+birthDate^5^D^50
 "DATA",998.1,3,10,21,30,3,0)
-extension url="http\://www.carewebframework.org/fhir/extension/user/organization"^^C^30
+managingOrganization^^C^80
 "DATA",998.1,3,10,21,30,3,10)
-D ADDTAG(PN),ADDTAG("valueResource"),PUT("reference","Organization/"_DUZ(2)),ENDTAG(PN)
+D REF2(PN,"Organization",DUZ(2),$P(^DIC(4,DUZ(2),0),U))
 "DATA",998.1,3,10,21,30,4,0)
-telecom:phone:work^.132^C^40
+telecom!phone:work^.132^C^30
 "DATA",998.1,3,10,21,30,4,10)
 D TELECOM
 "DATA",998.1,3,10,21,30,5,0)
-telecom:phone:home^.131^C^50
+telecom!phone:home^.131^C^30.1
 "DATA",998.1,3,10,21,30,5,10)
 D TELECOM
 "DATA",998.1,3,10,21,30,6,0)
-telecom:fax:work^.136^C^60
+telecom!fax:work^.136^C^30.2
 "DATA",998.1,3,10,21,30,6,10)
 D TELECOM
 "DATA",998.1,3,10,21,30,7,0)
 id^@id^R^1
+"DATA",998.1,3,10,21,30,8,0)
+nickname^13^C^10.1
+"DATA",998.1,3,10,21,30,8,10)
+D:VL NAME(","_VL("I"),PN)
+"DATA",998.1,3,10,21,30,9,0)
+address^@ien^O^60
+"DATA",998.1,3,10,21,30,9,10)
+*/Person_Address
+"DATA",998.1,3,10,21,30,10,0)
+active^7^C^90
+"DATA",998.1,3,10,21,30,10,10)
+D PUTBL^RGSEXML(PN,'VL("I"))
+"DATA",998.1,3,10,21,30,11,0)
+identifier^^N^10
+"DATA",998.1,3,10,21,30,12,0)
+gender^^N^40
+"DATA",998.1,3,10,21,30,13,0)
+photo^^N^70
+"DATA",998.1,3,10,21,30,14,0)
+link^^N^90
 "DATA",998.1,3,10,21,40,0)
 ^998.13I^1^1
 "DATA",998.1,3,10,21,40,1,0)
-_id^@ien^N^10
+_id^@ien^T^10
 "DATA",998.1,3,10,22,0)
 ValueSet^^998.11
 "DATA",998.1,3,10,22,20)
@@ -15455,17 +15773,17 @@ D PUT(PN,$P(VL("E"),"_",2,99))
 "DATA",998.1,3,10,22,30,4,0)
 description^99^F^30
 "DATA",998.1,3,10,22,30,5,0)
-status^^C^40
+status^^S^40
 "DATA",998.1,3,10,22,30,5,10)
-D PUT(PN,"active")
+active
 "DATA",998.1,3,10,22,30,6,0)
 id^@ienx^R^1
 "DATA",998.1,3,10,22,40,0)
 ^998.13I^3^3
 "DATA",998.1,3,10,22,40,1,0)
-_id^@ien^N^1
+_id^@ien^T^1
 "DATA",998.1,3,10,22,40,2,0)
-name^.01^T^10
+name^.01^S^10
 "DATA",998.1,3,10,22,40,2,10)
 S MATCH=VL("E")=("ValueSet_"_PVAL) K PVAL
 "DATA",998.1,3,10,22,40,3,0)
@@ -15505,23 +15823,23 @@ Medication^^50
 "DATA",998.1,3,10,25,30,1,0)
 name^.01^F^10
 "DATA",998.1,3,10,25,30,2,0)
-code:start^^C^20
+code!start^^C^20
 "DATA",998.1,3,10,25,30,2,10)
 D ADDTAG(PN)
 "DATA",998.1,3,10,25,30,3,0)
-code:end^^C^20.9
+code!end^^C^20.9
 "DATA",998.1,3,10,25,30,3,10)
 D ENDTAG(PN)
 "DATA",998.1,3,10,25,30,4,0)
-coding:NDC^31^C^20.1
+coding!ndc^31^C^20.1
 "DATA",998.1,3,10,25,30,4,10)
-D:VL CODING("ndc",VL("E"))
+D:VL CODING("http://www.fda.gov/ndc",VL("E"))
 "DATA",998.1,3,10,25,30,5,0)
-product:start^^C^30
+product!start^^C^30
 "DATA",998.1,3,10,25,30,5,10)
 D ADDTAG(PN)
 "DATA",998.1,3,10,25,30,6,0)
-product:end^^C^30.9
+product!end^^C^30.9
 "DATA",998.1,3,10,25,30,6,10)
 D ENDTAG(PN)
 "DATA",998.1,3,10,25,30,7,0)
@@ -15537,7 +15855,7 @@ code^31^T^10
 "DATA",998.1,3,10,25,40,2,0)
 name^.01^S^20
 "DATA",998.1,3,10,25,40,3,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,3,10,26,0)
 MedicationPrescription^^52
 "DATA",998.1,3,10,26,30,0)
@@ -15557,11 +15875,11 @@ D REF(PN,"Medication",.VL)
 "DATA",998.1,3,10,26,30,4,0)
 dateWritten^1^D^20
 "DATA",998.1,3,10,26,30,5,0)
-dosageInstruction:start^^C^90
+dosageInstruction!start^^C^90
 "DATA",998.1,3,10,26,30,5,10)
 D ADDTAG(PN)
 "DATA",998.1,3,10,26,30,6,0)
-dosageInstruction:end^^C^90.9
+dosageInstruction!end^^C^90.9
 "DATA",998.1,3,10,26,30,6,10)
 D ENDTAG(PN)
 "DATA",998.1,3,10,26,30,7,0)
@@ -15581,7 +15899,7 @@ patient^2^R^10
 "DATA",998.1,3,10,26,40,1,20)
 S X=$$COHORT(PN,$NA(^PS(55,"*","P","A")),1)
 "DATA",998.1,3,10,26,40,2,0)
-_id^@ien^N^20
+_id^@ien^T^20
 "DATA",998.1,3,10,27,0)
 MedicationPrescription_Sig^1^52.04
 "DATA",998.1,3,10,27,30,0)
@@ -15605,7 +15923,7 @@ AdverseReaction^^120.8
 "DATA",998.1,3,10,30,30,0)
 ^998.12I^10^8
 "DATA",998.1,3,10,30,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,3,10,30,30,2,0)
 date^4^D^20
 "DATA",998.1,3,10,30,30,3,0)
@@ -15613,9 +15931,9 @@ subject^.01^C^30
 "DATA",998.1,3,10,30,30,3,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,3,10,30,30,4,0)
-didNotOccurFlag^^C^40
+didNotOccurFlag^^S^40
 "DATA",998.1,3,10,30,30,4,10)
-D PUT(PN,"false")
+false
 "DATA",998.1,3,10,30,30,5,0)
 recorder^5^C^50
 "DATA",998.1,3,10,30,30,5,10)
@@ -15633,15 +15951,15 @@ id^@id^R^1
 "DATA",998.1,3,10,30,40,0)
 ^998.13I^3^3
 "DATA",998.1,3,10,30,40,1,0)
-subject^.01^N^10
+subject^.01^R^10
 "DATA",998.1,3,10,30,40,1,20)
 S X=$$COHORT(PN,$NA(^GMR(120.8,"B")))
 "DATA",998.1,3,10,30,40,2,0)
-subject:Patient^.01^N^10
+subject:Patient^.01^R^10
 "DATA",998.1,3,10,30,40,2,20)
 S X=$$COHORT(PN,$NA(^GMR(120.8,"B")))
 "DATA",998.1,3,10,30,40,3,0)
-_id^@ien^N^20
+_id^@ien^T^20
 "DATA",998.1,3,10,31,0)
 AdverseReaction_Symptom^1^120.81
 "DATA",998.1,3,10,31,30,0)
@@ -15651,7 +15969,7 @@ code^.01^C^10
 "DATA",998.1,3,10,31,30,1,10)
 D ADDTAG(PN),CODING^RGSEFHIR("#120.83",VL("I"),VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,31,30,2,0)
-severity^^C^20
+severity^^N^20
 "DATA",998.1,3,10,32,0)
 AdverseReaction_Ingredient^1^120.802
 "DATA",998.1,3,10,32,30,0)
@@ -15659,11 +15977,11 @@ AdverseReaction_Ingredient^1^120.802
 "DATA",998.1,3,10,32,30,1,0)
 date^^D^10
 "DATA",998.1,3,10,32,30,2,0)
-type^^C^20
+type^^S^20
 "DATA",998.1,3,10,32,30,2,10)
-D PUT(PN,"drugadmin")
+drugadmin
 "DATA",998.1,3,10,32,30,3,0)
-causalityExpectation^^C^30
+causalityExpectation^^N^30
 "DATA",998.1,3,10,32,30,4,0)
 substance^.01^C^40
 "DATA",998.1,3,10,32,30,4,10)
@@ -15675,11 +15993,11 @@ AdverseReaction_Class^1^120.803
 "DATA",998.1,3,10,33,30,1,0)
 date^^D^10
 "DATA",998.1,3,10,33,30,2,0)
-type^^C^20
+type^^S^20
 "DATA",998.1,3,10,33,30,2,10)
-D PUT(PN,"drugadmin")
+drugadmin
 "DATA",998.1,3,10,33,30,3,0)
-causalityExpectation^^C^30
+causalityExpectation^^N^30
 "DATA",998.1,3,10,33,30,4,0)
 substance^.01^C^40
 "DATA",998.1,3,10,33,30,4,10)
@@ -15687,7 +16005,7 @@ D REF(PN,"Substance",.VL,"50.605:")
 "DATA",998.1,3,10,34,0)
 Substance
 "DATA",998.1,3,10,34,10)
-D COMPID^RGSER
+D COMPID^RGSERGET
 "DATA",998.1,3,10,34,30,0)
 ^998.12I^1^1
 "DATA",998.1,3,10,34,30,1,0)
@@ -15707,9 +16025,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,36,30,2,0)
 description^^W^20
 "DATA",998.1,3,10,36,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,3,10,36,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,3,10,37,0)
 Substance_50.416^1^50.416
 "DATA",998.1,3,10,37,30,0)
@@ -15721,9 +16039,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,37,30,2,0)
 description^^W^20
 "DATA",998.1,3,10,37,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,3,10,37,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,3,10,38,0)
 Substance_50.6^1^50.6
 "DATA",998.1,3,10,38,30,0)
@@ -15735,9 +16053,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,38,30,2,0)
 description^^W^20
 "DATA",998.1,3,10,38,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,3,10,38,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,3,10,39,0)
 Substance_50.605^1^50.605
 "DATA",998.1,3,10,39,30,0)
@@ -15749,9 +16067,9 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,39,30,2,0)
 description^^W^20
 "DATA",998.1,3,10,39,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,3,10,39,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,3,10,40,0)
 Substance_120.82^1^120.82
 "DATA",998.1,3,10,40,30,0)
@@ -15763,15 +16081,15 @@ D ADDTAG(PN),CODING($$SYSTEM^RGSER("#"_FILE),IEN,VL("E")),ENDTAG(PN)
 "DATA",998.1,3,10,40,30,2,0)
 description^^W^20
 "DATA",998.1,3,10,40,30,3,0)
-instance^^C^30
+instance^^N^30
 "DATA",998.1,3,10,40,30,4,0)
-ingredient^^C^40
+ingredient^^N^40
 "DATA",998.1,3,10,41,0)
 Immunization^^9000010.11
 "DATA",998.1,3,10,41,30,0)
 ^998.12I^19^19
 "DATA",998.1,3,10,41,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,3,10,41,30,2,0)
 date^1201,.03~.01^C^20
 "DATA",998.1,3,10,41,30,2,10)
@@ -15797,53 +16115,51 @@ requester^1202^C^80
 "DATA",998.1,3,10,41,30,8,10)
 D:VL REF(PN,"Practitioner",.VL)
 "DATA",998.1,3,10,41,30,9,0)
-manufacturer^^C^90
+manufacturer^^N^90
 "DATA",998.1,3,10,41,30,10,0)
 location^.03~.22^C^100
 "DATA",998.1,3,10,41,30,10,10)
 D REF(PN,"Location",.VL)
 "DATA",998.1,3,10,41,30,11,0)
-lotNumber^^C^110
+lotNumber^^N^110
 "DATA",998.1,3,10,41,30,12,0)
 expirationDate^^D^120
 "DATA",998.1,3,10,41,30,13,0)
-site^^C^130
+site^^N^130
 "DATA",998.1,3,10,41,30,14,0)
-route^^C^140
+route^^N^140
 "DATA",998.1,3,10,41,30,15,0)
-doseQuantity^^C^150
+doseQuantity^^N^150
 "DATA",998.1,3,10,41,30,16,0)
-explanation^^C^160
+explanation^^N^160
 "DATA",998.1,3,10,41,30,17,0)
-reaction^^C^170
+reaction^^N^170
 "DATA",998.1,3,10,41,30,18,0)
-vaccinationProtocol^^C^180
+vaccinationProtocol^^N^180
 "DATA",998.1,3,10,41,30,19,0)
 id^@id^R^1
 "DATA",998.1,3,10,41,40,0)
 ^998.13I^3^3
 "DATA",998.1,3,10,41,40,1,0)
-subject^.02^N^10
+subject^.02^R^10
 "DATA",998.1,3,10,41,40,1,20)
 S X=$$COHORT(PN,$NA(^AUPNVIMM("C")))
 "DATA",998.1,3,10,41,40,2,0)
-subject:Patient^.02^N^10
+subject:Patient^.02^R^10
 "DATA",998.1,3,10,41,40,2,20)
 S X=$$COHORT(PN,$NA(^AUPNVIMM("C")))
 "DATA",998.1,3,10,41,40,3,0)
-_id^@ien^N^30
+_id^@ien^T^30
 "DATA",998.1,3,10,42,0)
 Patient/#/Immunization
 "DATA",998.1,3,10,42,10)
 D COMPRT($NA(^AUPNVIMM("C")))
 "DATA",998.1,3,10,43,0)
 Flag^^26.13
-"DATA",998.1,3,10,43,20)
-
 "DATA",998.1,3,10,43,30,0)
 ^998.12I^7^7
 "DATA",998.1,3,10,43,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,3,10,43,30,2,0)
 category^.02^C^20
 "DATA",998.1,3,10,43,30,2,10)
@@ -15857,7 +16173,7 @@ subject^.01^C^40
 "DATA",998.1,3,10,43,30,4,10)
 D REF(PN,"Patient",.VL)
 "DATA",998.1,3,10,43,30,5,0)
-author^^C^50
+author^^N^50
 "DATA",998.1,3,10,43,30,6,0)
 note^1^W^60
 "DATA",998.1,3,10,43,30,6,10)
@@ -15867,15 +16183,13 @@ id^@id^R^1
 "DATA",998.1,3,10,43,40,0)
 ^998.13I^3^3
 "DATA",998.1,3,10,43,40,1,0)
-_id^@ien^N^10
-"DATA",998.1,3,10,43,40,1,20)
-
+_id^@ien^T^10
 "DATA",998.1,3,10,43,40,2,0)
-subject^.01^N^20
+subject^.01^R^20
 "DATA",998.1,3,10,43,40,2,20)
 S X=$NA(^DGPF(26.13,"B",PARAMS(PN,1,1)))
 "DATA",998.1,3,10,43,40,3,0)
-subject:Patient^.01^N^20
+subject:Patient^.01^R^20
 "DATA",998.1,3,10,43,40,3,20)
 S X=$NA(^DGPF(26.13,"B",PARAMS(PN,1,1)))
 "DATA",998.1,3,10,44,0)
@@ -15889,13 +16203,11 @@ S:ID'=+ID IENS=$O(^XTV(8992.1,"B",ID,0))_","
 "DATA",998.1,3,10,45,30,0)
 ^998.12I^15^15
 "DATA",998.1,3,10,45,30,1,0)
-identifier^^C^10
+identifier^^N^10
 "DATA",998.1,3,10,45,30,2,0)
-category^^C^20
+category^^N^20
 "DATA",998.1,3,10,45,30,3,0)
-status^^C^70
-"DATA",998.1,3,10,45,30,3,10)
-
+status^^N^70
 "DATA",998.1,3,10,45,30,4,0)
 subject^.04^C^120
 "DATA",998.1,3,10,45,30,4,10)
@@ -15906,24 +16218,22 @@ sender^.05^C^30
 D REF(PN,"Practitioner",.VL)
 "DATA",998.1,3,10,45,30,6,0)
 payload:contentString^1.01^F^50
-"DATA",998.1,3,10,45,30,6,10)
-
 "DATA",998.1,3,10,45,30,7,0)
-@id^.01^C^1
+@id^.01^N^1
 "DATA",998.1,3,10,45,30,8,0)
 recipient^20^M^40
 "DATA",998.1,3,10,45,30,8,10)
 */Communication_Recipient
 "DATA",998.1,3,10,45,30,9,0)
-medium^^C^60
+medium^^N^60
 "DATA",998.1,3,10,45,30,10,0)
-encounter^^C^80
+encounter^^N^80
 "DATA",998.1,3,10,45,30,11,0)
 sent^^D^90
 "DATA",998.1,3,10,45,30,12,0)
 received^^D^100
 "DATA",998.1,3,10,45,30,13,0)
-reason^^C^110
+reason^^N^110
 "DATA",998.1,3,10,45,30,14,0)
 payload:contentString^4^W^50.1
 "DATA",998.1,3,10,45,30,14,10)
@@ -15933,15 +16243,15 @@ id^@id^R^1
 "DATA",998.1,3,10,45,40,0)
 ^998.13I^4^4
 "DATA",998.1,3,10,45,40,1,0)
-_id^.01^S^10
+_id^.01^T^10
 "DATA",998.1,3,10,45,40,1,20)
 S X=$NA(^XTV(8992.1,"B",PARAMS(PN,1,1)))
 "DATA",998.1,3,10,45,40,2,0)
-subject^.04^N^20
+subject^.04^R^20
 "DATA",998.1,3,10,45,40,2,20)
 S X=$NA(^XTV(8992.1,"C",PARAMS(PN,1,1)))
 "DATA",998.1,3,10,45,40,3,0)
-subject:Patient^.04^N^20
+subject:Patient^.04^R^20
 "DATA",998.1,3,10,45,40,3,20)
 S X=$NA(^XTV(8992.1,"C",PARAMS(PN,1,1)))
 "DATA",998.1,3,10,45,40,4,0)
@@ -15960,8 +16270,106 @@ Communication_Recipient^1^8992.11
 contentReference^.01^C^10
 "DATA",998.1,3,10,47,30,1,10)
 D REF(PN,"Practitioner",.VL)
+"DATA",998.1,3,10,48,0)
+metadata
+"DATA",998.1,3,10,48,10)
+D TEMPLATE^RGSERGET("CONFORMANCE")
+"DATA",998.1,3,10,48,50,0)
+^998.15^3^3
+"DATA",998.1,3,10,48,50,1,0)
+CONFORMANCE
+"DATA",998.1,3,10,48,50,1,1,0)
+^^20^20^3150313.13001
+"DATA",998.1,3,10,48,50,1,1,1,0)
+<Conformance>
+"DATA",998.1,3,10,48,50,1,1,2,0)
+  <text>
+"DATA",998.1,3,10,48,50,1,1,3,0)
+    <status value="generated"/>
+"DATA",998.1,3,10,48,50,1,1,4,0)
+  </text>
+"DATA",998.1,3,10,48,50,1,1,5,0)
+  <publisher value="Not provided"/>
+"DATA",998.1,3,10,48,50,1,1,6,0)
+  <date value="|@$$FMTDATE^RGSER|"/>
+"DATA",998.1,3,10,48,50,1,1,7,0)
+  <software>
+"DATA",998.1,3,10,48,50,1,1,8,0)
+    <name value="VistA Serialization Framework"/>
+"DATA",998.1,3,10,48,50,1,1,9,0)
+    <version value="|@$$VERSION^XPDUTL("RGSE")|"/>
+"DATA",998.1,3,10,48,50,1,1,10,0)
+  </software>
+"DATA",998.1,3,10,48,50,1,1,11,0)
+  <implementation>
+"DATA",998.1,3,10,48,50,1,1,12,0)
+    <description value="VistA (|@DATA("SERNM")|)"/>
+"DATA",998.1,3,10,48,50,1,1,13,0)
+  </implementation>
+"DATA",998.1,3,10,48,50,1,1,14,0)
+  <fhirVersion value="|@DATA("VER")|"/>
+"DATA",998.1,3,10,48,50,1,1,15,0)
+  <acceptUnknown value="false"/>
+"DATA",998.1,3,10,48,50,1,1,16,0)
+  <format value="application/xml+fhir"/> 
+"DATA",998.1,3,10,48,50,1,1,17,0)
+  <rest>
+"DATA",998.1,3,10,48,50,1,1,18,0)
+    <mode value="server"/>
+"DATA",998.1,3,10,48,50,1,1,19,0)
+|#$$RESCONF^RGSEFHIR|  </rest>
+"DATA",998.1,3,10,48,50,1,1,20,0)
+</Conformance> 
+"DATA",998.1,3,10,48,50,2,0)
+CONFORMANCE_RESOURCE
+"DATA",998.1,3,10,48,50,2,1,0)
+^^6^6^3150315.095021
+"DATA",998.1,3,10,48,50,2,1,1,0)
+    <resource>
+"DATA",998.1,3,10,48,50,2,1,2,0)
+      <type value="|@RESNAME|"/>
+"DATA",998.1,3,10,48,50,2,1,3,0)
+      <operation>
+"DATA",998.1,3,10,48,50,2,1,4,0)
+       <code value="read"/>
+"DATA",998.1,3,10,48,50,2,1,5,0)
+      </operation>
+"DATA",998.1,3,10,48,50,2,1,6,0)
+|#$$SRPCONF^RGSEFHIR|    </resource> 
+"DATA",998.1,3,10,48,50,3,0)
+CONFORMANCE_PARAMETER
+"DATA",998.1,3,10,48,50,3,1,0)
+^^4^4^3150315.101141
+"DATA",998.1,3,10,48,50,3,1,1,0)
+        <searchParam>
+"DATA",998.1,3,10,48,50,3,1,2,0)
+          <name value="|@SRPNAME|"/>
+"DATA",998.1,3,10,48,50,3,1,3,0)
+          <type value="|@SRPTYPE|"/>
+"DATA",998.1,3,10,48,50,3,1,4,0)
+        </searchParam>
+"DATA",998.1,3,10,49,0)
+Person_Address^1^200
+"DATA",998.1,3,10,49,30,0)
+^998.12I^8^7
+"DATA",998.1,3,10,49,30,1,0)
+use^^S^10
+"DATA",998.1,3,10,49,30,1,10)
+home
+"DATA",998.1,3,10,49,30,2,0)
+line!1^.111^F^20
+"DATA",998.1,3,10,49,30,3,0)
+line!2^.112^F^20.1
+"DATA",998.1,3,10,49,30,4,0)
+line!3^.113^F^20.2
+"DATA",998.1,3,10,49,30,5,0)
+city^.114^F^50
+"DATA",998.1,3,10,49,30,6,0)
+state^.115^F^60
+"DATA",998.1,3,10,49,30,8,0)
+postCode^.116^F^80
 "DATA",998.1,3,20,0)
-^998.14^5^5^3150306^^^^
+^998.14^5^5^3150315^^^^
 "DATA",998.1,3,20,1,0)
 Access-Control-Allow-Credentials: true
 "DATA",998.1,3,20,2,0)
@@ -15986,6 +16394,8 @@ y^y^f^^n^^y^r^n
 
 "FIA",998.1,0,"RLRO")
 
+"FIA",998.1,0,"VR")
+1.0^SERIALIZATION FRAMEWORK
 "FIA",998.1,998.1)
 0
 "FIA",998.1,998.11)
@@ -15995,6 +16405,10 @@ y^y^f^^n^^y^r^n
 "FIA",998.1,998.13)
 0
 "FIA",998.1,998.14)
+0
+"FIA",998.1,998.15)
+0
+"FIA",998.1,998.151)
 0
 "KRN",8994,2719,-1)
 0^1
@@ -16010,6 +16424,26 @@ RGSER REST^REST^RGSER^4^^^^0
 8994;16;1;;;;;;;RPCDEL^XPDIA1
 "ORD",16,8994,0)
 REMOTE PROCEDURE
+"PKG",224,-1)
+1^1
+"PKG",224,0)
+SERIALIZATION FRAMEWORK^RGSE^Serialization framework
+"PKG",224,20,0)
+^9.402P^^
+"PKG",224,22,0)
+^9.49I^1^1
+"PKG",224,22,1,0)
+1.0^3150315
+"PKG",224,22,1,1,0)
+^^2^2^3150315
+"PKG",224,22,1,1,1,0)
+Framework for serializing and deserializing data for transport to and from
+"PKG",224,22,1,1,2,0)
+external systems.
+"PKG",224,"DEV")
+DKM/RI/CBMI
+"PKG",224,"VERSION")
+1.0
 "QUES","XPF1",0)
 Y
 "QUES","XPF1","??")
@@ -16081,13 +16515,13 @@ NO
 "QUES","XPZ2","M")
 D XPZ2^XPDIQ
 "RTN")
-10
+11
 "RTN","RGSEFHIR")
-0^1^B35280999
+0^1^B57156013
 "RTN","RGSEFHIR",1,0)
-RGSEFHIR ;RI/CBMI/DKM - XML FHIR Support ;06-Mar-2015 10:46;DKM
+RGSEFHIR ;RI/CBMI/DKM - XML FHIR Support ;15-Mar-2015 14:08;DKM
 "RTN","RGSEFHIR",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 155
 "RTN","RGSEFHIR",3,0)
  ;=================================================================
 "RTN","RGSEFHIR",4,0)
@@ -16099,399 +16533,511 @@ PREINIT D PREINIT^RGSEXML
 "RTN","RGSEFHIR",7,0)
  S DATA("FHIR.VERSION")=$P(PATH,"/")
 "RTN","RGSEFHIR",8,0)
- Q
+ S:$$ISBROWSR^RGSER DATA("CTYPE")="text/xml"
 "RTN","RGSEFHIR",9,0)
- ; Serializer.PSTINIT - Postinitialization
+ Q
 "RTN","RGSEFHIR",10,0)
-PSTINIT D PSTINIT^RGSEXML
+ ; Serializer.PSTINIT - Postinitialization
 "RTN","RGSEFHIR",11,0)
- Q
+PSTINIT D PSTINIT^RGSEXML
 "RTN","RGSEFHIR",12,0)
- ; Serializer.PRELIST - List preprocessing
+ Q
 "RTN","RGSEFHIR",13,0)
-PRELIST I TOP,'$$INBUNDLE D NEWBNDL("Search results for resource type "_PATH)
+ ; Serializer.PRELIST - List preprocessing
 "RTN","RGSEFHIR",14,0)
- Q
+PRELIST I TOP,'$$INBUNDLE D NEWBNDL("Search results for resource type "_PATH)
 "RTN","RGSEFHIR",15,0)
- ; Serializer.PSTLIST - List postprocessing
+ Q
 "RTN","RGSEFHIR",16,0)
-PSTLIST I TOP,$$INBUNDLE,'$$ISERR^RGSER D ENDBNDL
+ ; Serializer.PSTLIST - List postprocessing
 "RTN","RGSEFHIR",17,0)
- Q
+PSTLIST I TOP,$$INBUNDLE,'$$ISERR^RGSER D ENDBNDL
 "RTN","RGSEFHIR",18,0)
- ; Serializer.COMPOSE - Compose an entry
+ Q
 "RTN","RGSEFHIR",19,0)
-COMPOSE N ENTRY,TAG,ATR,CT
+ ; Serializer.COMPOSE - Compose an entry
 "RTN","RGSEFHIR",20,0)
- S TAG=$S($L(PNAME):PNAME,1:$P(PATH,"/",$L(PATH,"/")))
+COMPOSE N ENTRY,TAG,ATR
 "RTN","RGSEFHIR",21,0)
- I $E(TAG,1,6)="Binary" D
+ S TAG=$P($S($L(PNAME):PNAME,1:$P(PATH,"/",$L(PATH,"/"))),"_")
 "RTN","RGSEFHIR",22,0)
- .S TAG="Binary",CT=$O(PROP("B","content:"))
-"RTN","RGSEFHIR",23,0)
- .S:$P(CT,":")="content" ATR(2,"contentType")=$P(CT,":",2)
-"RTN","RGSEFHIR",24,0)
  S ENTRY='$L($G(PNAME))&$$INBUNDLE&'$$HASFLAG^RGSER("S")
-"RTN","RGSEFHIR",25,0)
+"RTN","RGSEFHIR",23,0)
  D:ENTRY NEWENTRY(TAG,ID)
-"RTN","RGSEFHIR",26,0)
+"RTN","RGSEFHIR",24,0)
  S:'$L(PNAME) ATR(0,"xmlns")="http://hl7.org/fhir"
-"RTN","RGSEFHIR",27,0)
+"RTN","RGSEFHIR",25,0)
  S:$$HASFLAG^RGSER("I") ATR(1,"id")=ID
-"RTN","RGSEFHIR",28,0)
+"RTN","RGSEFHIR",26,0)
+ D PROP2ATR
+"RTN","RGSEFHIR",27,0)
  S:$E(TAG)="@" TAG=""
-"RTN","RGSEFHIR",29,0)
+"RTN","RGSEFHIR",28,0)
  D ADDTAG(TAG,.ATR):$L(TAG),PROCPROP^RGSERGET,ENDTAG(TAG):$L(TAG)
-"RTN","RGSEFHIR",30,0)
+"RTN","RGSEFHIR",29,0)
  D:ENTRY ENDENTRY
+"RTN","RGSEFHIR",30,0)
+ Q
 "RTN","RGSEFHIR",31,0)
- Q
+ ; Process any attribute properties
 "RTN","RGSEFHIR",32,0)
- ; Serializer.FMTDATE - Serialize a date
+PROP2ATR N NM,LP,X,Y
 "RTN","RGSEFHIR",33,0)
-FMTDATE(DT) ;
+ S NM="attr:"
 "RTN","RGSEFHIR",34,0)
- S:'$G(DT) DT=$$NOW^XLFDT()
+ F  S NM=$O(PROP("B",NM)) Q:$P(NM,":")'="attr"  D
 "RTN","RGSEFHIR",35,0)
- Q $$FMTDATE^RGUTDATF(DT,"YYYY-MM-dd"_$S(DT#1:"'T'HH:mm:ss",1:""))
+ .F LP=0:0 S LP=$O(PROP("B",NM,LP)) Q:'LP  D
 "RTN","RGSEFHIR",36,0)
- ; Serializer.PROPF - Free text property
+ ..S X=PROP(LP,0),Y=$G(PROP(LP,10))
 "RTN","RGSEFHIR",37,0)
-PROPF G PROPF^RGSEXML
+ ..Q:$P(X,U,3)'="N"!'$L(Y)
 "RTN","RGSEFHIR",38,0)
- ; Serializer.PROPB - Boolean property
+ ..S X=$P(X,U),ATR(99,$P(X,":",2))=Y
 "RTN","RGSEFHIR",39,0)
-PROPB G PROPB^RGSEXML
+ Q
 "RTN","RGSEFHIR",40,0)
- ; Serializer.PROPD - Date property
+ ; Serializer.FMTDATE - Serialize a date
 "RTN","RGSEFHIR",41,0)
-PROPD G PROPD^RGSEXML
+FMTDATE(DT) ;
 "RTN","RGSEFHIR",42,0)
- ; Serializer.PROPR - Raw value property
+ Q $$FMTDATE^RGSEXML(.DT)
 "RTN","RGSEFHIR",43,0)
-PROPR G PROPR^RGSEXML
+ ; Serializer.ESCMAP - Location of escape map
 "RTN","RGSEFHIR",44,0)
- ; Serializer.PROPW - Word processing property
+ESCMAP() Q $$ESCMAP^RGSEXML
 "RTN","RGSEFHIR",45,0)
-PROPW G PROPW^RGSEXML
+ ; Serializer.PROPF - Free text property
 "RTN","RGSEFHIR",46,0)
- ; Serializer.PROPC - Custom property
+PROPF G PROPF^RGSEXML
 "RTN","RGSEFHIR",47,0)
-PROPC X CTL
+ ; Serializer.PROPB - Boolean property
 "RTN","RGSEFHIR",48,0)
- Q
+PROPB G PROPB^RGSEXML
 "RTN","RGSEFHIR",49,0)
- ; Serializer.PROPO - Object property
+ ; Serializer.PROPD - Date property
 "RTN","RGSEFHIR",50,0)
-PROPO G PROPO^RGSEXML
+PROPD G PROPD^RGSEXML
 "RTN","RGSEFHIR",51,0)
- ; Serializer.PROPI - Inline property
+ ; Serializer.PROPR - Raw value property
 "RTN","RGSEFHIR",52,0)
-PROPI G PROPI^RGSEXML
+PROPR G PROPR^RGSEXML
 "RTN","RGSEFHIR",53,0)
- ; Create a new bundle.
+ ; Serializer.PROPW - Word processing property
 "RTN","RGSEFHIR",54,0)
-NEWBNDL(TITLE,ID,LINK) ;
+PROPW G PROPW^RGSEXML
 "RTN","RGSEFHIR",55,0)
- N ATR
+ ; Serializer.PROPC - Custom property
 "RTN","RGSEFHIR",56,0)
- S:'$D(ID) ID="urn:uuid:"_$$UUID^RGSER
+PROPC X CTL
 "RTN","RGSEFHIR",57,0)
- I DATA("FHIR.VERSION")="DSTU1" D
+ Q
 "RTN","RGSEFHIR",58,0)
- .S ATR("xmlns")="http://www.w3.org/2005/Atom"
+ ; Serializer.PROPO - Object property
 "RTN","RGSEFHIR",59,0)
- .D ADDTAG("feed",.ATR)
+PROPO G PROPO^RGSEXML
 "RTN","RGSEFHIR",60,0)
- .D ADDTAG("title",$G(TITLE,"Query Results"),1)
+ ; Serializer.PROPI - Inline property
 "RTN","RGSEFHIR",61,0)
- .D ADDTAG("id",ID,1)
+PROPI G PROPI^RGSEXML
 "RTN","RGSEFHIR",62,0)
- .S:$D(LINK)#2 ATR(1,"rel")="self",ATR(2,"href")=LINK
+ ; Serializer.PROPS - Static property
 "RTN","RGSEFHIR",63,0)
- .D:$D(ATR) ADDTAG("link",.ATR,1)
+PROPS G PROPS^RGSEXML
 "RTN","RGSEFHIR",64,0)
- .S ATR(1,"rel")="fhir-base",ATR(2,"href")=$$HOST^RGSER
+ ; Create a new bundle.
 "RTN","RGSEFHIR",65,0)
- .D ADDTAG("link",.ATR,1)
+NEWBNDL(TITLE,ID,LINK) ;
 "RTN","RGSEFHIR",66,0)
- .D ADDTAG("updated",$$FMTDATE,1)
-"RTN","RGSEFHIR",67,0)
- .D ADDTAG("author"),ADDTAG("name",$P($G(^DIC(4,+$G(DUZ(2)),0),"Unknown"),U),1),ENDTAG("author")
-"RTN","RGSEFHIR",68,0)
- .S ATR=0,ATR("xmlns")="http://a9.com/-/spec/opensearch/1.1/"
-"RTN","RGSEFHIR",69,0)
- .D ADDTAG("totalResults",.ATR,1)
-"RTN","RGSEFHIR",70,0)
- .S DATA("FHIR.BUNDLE")=DATA("LAST")-1
-"RTN","RGSEFHIR",71,0)
- E  D
-"RTN","RGSEFHIR",72,0)
- .S ATR("xmlns")="http://hl7.org/fhir"
-"RTN","RGSEFHIR",73,0)
- .D ADDTAG("Bundle",.ATR)
-"RTN","RGSEFHIR",74,0)
- .D PUT("id",ID)
-"RTN","RGSEFHIR",75,0)
- .D ADDTAG("meta"),PUT("versionId",1),PUT("lastUpdated",$$FMTDATE),ENDTAG("meta")
-"RTN","RGSEFHIR",76,0)
- .D PUT("type","searchset")
-"RTN","RGSEFHIR",77,0)
- .D PUT("base",$$HOST^RGSER)
-"RTN","RGSEFHIR",78,0)
- .D PUT("total",0)
-"RTN","RGSEFHIR",79,0)
- .S DATA("FHIR.BUNDLE")=DATA("LAST")
-"RTN","RGSEFHIR",80,0)
- .D:$D(LINK)#2 ADDTAG("link"),PUT("relation","self"),PUT("url",LINK),ENDTAG("link")
-"RTN","RGSEFHIR",81,0)
- S DATA("FHIR.COUNT")=0
-"RTN","RGSEFHIR",82,0)
- Q
-"RTN","RGSEFHIR",83,0)
- ; Close current bundle.
-"RTN","RGSEFHIR",84,0)
-ENDBNDL N POS
-"RTN","RGSEFHIR",85,0)
- S POS=$$INBUNDLE
-"RTN","RGSEFHIR",86,0)
- Q:'POS
-"RTN","RGSEFHIR",87,0)
- I DATA("FHIR.VERSION")="DSTU1" D
-"RTN","RGSEFHIR",88,0)
- .D ENDTAG("feed")
-"RTN","RGSEFHIR",89,0)
- .D REPLACE^RGSER(POS,DATA("FHIR.COUNT"))
-"RTN","RGSEFHIR",90,0)
- E  D
-"RTN","RGSEFHIR",91,0)
- .D ENDTAG("Bundle")
-"RTN","RGSEFHIR",92,0)
- .D REPLACE^RGSER(POS,"<total value="""_DATA("FHIR.COUNT")_"""/>")
-"RTN","RGSEFHIR",93,0)
- K DATA("FHIR.BUNDLE"),DATA("FHIR.COUNT")
-"RTN","RGSEFHIR",94,0)
- Q
-"RTN","RGSEFHIR",95,0)
- ; Returns true if in a bundle.
-"RTN","RGSEFHIR",96,0)
-INBUNDLE() Q $G(DATA("FHIR.BUNDLE"))
-"RTN","RGSEFHIR",97,0)
- ; Creates a new bundle entry.
-"RTN","RGSEFHIR",98,0)
-NEWENTRY(RTYP,IEN) ;
-"RTN","RGSEFHIR",99,0)
  N ATR
-"RTN","RGSEFHIR",100,0)
- S:IEN'["/" IEN=RTYP_"/"_IEN
-"RTN","RGSEFHIR",101,0)
- D ADDTAG("entry")
-"RTN","RGSEFHIR",102,0)
+"RTN","RGSEFHIR",67,0)
+ S:'$$ISBROWSR^RGSER DATA("CTYPE")="application/atom+xml"
+"RTN","RGSEFHIR",68,0)
  I DATA("FHIR.VERSION")="DSTU1" D
-"RTN","RGSEFHIR",103,0)
- .D ADDTAG("id",IEN,1)
-"RTN","RGSEFHIR",104,0)
+"RTN","RGSEFHIR",69,0)
+ .S:'$D(ID) ID="urn:uuid:"_$$UUID^RGSER
+"RTN","RGSEFHIR",70,0)
+ .S ATR("xmlns")="http://www.w3.org/2005/Atom"
+"RTN","RGSEFHIR",71,0)
+ .D ADDTAG("feed",.ATR)
+"RTN","RGSEFHIR",72,0)
+ .D ADDTAG("title",$G(TITLE,"Query Results"),1)
+"RTN","RGSEFHIR",73,0)
+ .D ADDTAG("id",ID,1)
+"RTN","RGSEFHIR",74,0)
+ .S:$D(LINK)#2 ATR(1,"rel")="self",ATR(2,"href")=LINK
+"RTN","RGSEFHIR",75,0)
+ .D:$D(ATR) ADDTAG("link",.ATR,1)
+"RTN","RGSEFHIR",76,0)
+ .S ATR(1,"rel")="fhir-base",ATR(2,"href")=$$HOST^RGSER
+"RTN","RGSEFHIR",77,0)
+ .D ADDTAG("link",.ATR,1)
+"RTN","RGSEFHIR",78,0)
  .D ADDTAG("updated",$$FMTDATE,1)
-"RTN","RGSEFHIR",105,0)
- .S ATR("type")="text/xml"
-"RTN","RGSEFHIR",106,0)
- .D ADDTAG("content",.ATR)
-"RTN","RGSEFHIR",107,0)
+"RTN","RGSEFHIR",79,0)
+ .D ADDTAG("author"),ADDTAG("name",$P($G(^DIC(4,+$G(DUZ(2)),0),"Unknown"),U),1),ENDTAG("author")
+"RTN","RGSEFHIR",80,0)
+ .S ATR=0,ATR("xmlns")="http://a9.com/-/spec/opensearch/1.1/"
+"RTN","RGSEFHIR",81,0)
+ .D ADDTAG("totalResults",.ATR,1)
+"RTN","RGSEFHIR",82,0)
+ .S DATA("FHIR.BUNDLE")=DATA("LAST")-1
+"RTN","RGSEFHIR",83,0)
  E  D
+"RTN","RGSEFHIR",84,0)
+ .S:'$D(ID) ID=$$UUID^RGSER
+"RTN","RGSEFHIR",85,0)
+ .S ATR("xmlns")="http://hl7.org/fhir"
+"RTN","RGSEFHIR",86,0)
+ .D ADDTAG("Bundle",.ATR)
+"RTN","RGSEFHIR",87,0)
+ .D PUT("id",ID)
+"RTN","RGSEFHIR",88,0)
+ .D ADDTAG("meta"),PUT("versionId",1),PUT("lastUpdated",$$FMTDATE),ENDTAG("meta")
+"RTN","RGSEFHIR",89,0)
+ .D PUT("type","searchset")
+"RTN","RGSEFHIR",90,0)
+ .D PUT("base",$$HOST^RGSER)
+"RTN","RGSEFHIR",91,0)
+ .D PUT("total",0)
+"RTN","RGSEFHIR",92,0)
+ .S DATA("FHIR.BUNDLE")=DATA("LAST")
+"RTN","RGSEFHIR",93,0)
+ .D:$D(LINK)#2 ADDTAG("link"),PUT("relation","self"),PUT("url",LINK),ENDTAG("link")
+"RTN","RGSEFHIR",94,0)
+ S DATA("FHIR.COUNT")=0
+"RTN","RGSEFHIR",95,0)
+ Q
+"RTN","RGSEFHIR",96,0)
+ ; Close current bundle.
+"RTN","RGSEFHIR",97,0)
+ENDBNDL N POS
+"RTN","RGSEFHIR",98,0)
+ S POS=$$INBUNDLE
+"RTN","RGSEFHIR",99,0)
+ Q:'POS
+"RTN","RGSEFHIR",100,0)
+ I DATA("FHIR.VERSION")="DSTU1" D
+"RTN","RGSEFHIR",101,0)
+ .D ENDTAG("feed")
+"RTN","RGSEFHIR",102,0)
+ .D REPLACE^RGSER(POS,DATA("FHIR.COUNT"))
+"RTN","RGSEFHIR",103,0)
+ E  D
+"RTN","RGSEFHIR",104,0)
+ .D ENDTAG("Bundle")
+"RTN","RGSEFHIR",105,0)
+ .D REPLACE^RGSER(POS,"<total value="""_DATA("FHIR.COUNT")_"""/>")
+"RTN","RGSEFHIR",106,0)
+ K DATA("FHIR.BUNDLE"),DATA("FHIR.COUNT")
+"RTN","RGSEFHIR",107,0)
+ Q
 "RTN","RGSEFHIR",108,0)
- .D PUT("status","match")
+ ; Returns true if in a bundle.
 "RTN","RGSEFHIR",109,0)
- .D ADDTAG("resource")
+INBUNDLE() Q $G(DATA("FHIR.BUNDLE"))
 "RTN","RGSEFHIR",110,0)
- S DATA("FHIR.COUNT")=DATA("FHIR.COUNT")+1
+ ; Creates a new bundle entry.
 "RTN","RGSEFHIR",111,0)
- Q
+NEWENTRY(RTYP,IEN) ;
 "RTN","RGSEFHIR",112,0)
- ; Closes current bundle entry.
+ N ATR
 "RTN","RGSEFHIR",113,0)
-ENDENTRY() ;
+ S:IEN'["/" IEN=RTYP_"/"_IEN
 "RTN","RGSEFHIR",114,0)
- D ENDTAG("entry")
+ D ADDTAG("entry")
 "RTN","RGSEFHIR",115,0)
- Q
+ I DATA("FHIR.VERSION")="DSTU1" D
 "RTN","RGSEFHIR",116,0)
- ; Put a name/value pair to output buffer
+ .D ADDTAG("id",IEN,1)
 "RTN","RGSEFHIR",117,0)
-PUT(NM,VL) ;
+ .D ADDTAG("updated",$$FMTDATE,1)
 "RTN","RGSEFHIR",118,0)
- D PUT^RGSEXML(.NM,.VL) Q
+ .S ATR("type")="text/xml"
 "RTN","RGSEFHIR",119,0)
- ; Put a date value to output buffer
+ .D ADDTAG("content",.ATR)
 "RTN","RGSEFHIR",120,0)
-PUTDT(NM,DT) ;
+ E  D
 "RTN","RGSEFHIR",121,0)
- D PUTDT^RGSEXML(.NM,.DT) Q
+ .;D PUT("status","match")
 "RTN","RGSEFHIR",122,0)
- ;Add opening tag (with optional attributes)
+ .D ADDTAG("resource")
 "RTN","RGSEFHIR",123,0)
- ; TAG = tag name
+ S DATA("FHIR.COUNT")=DATA("FHIR.COUNT")+1
 "RTN","RGSEFHIR",124,0)
- ; ATR = optional array of attributes and/or content
+ Q
 "RTN","RGSEFHIR",125,0)
- ; CLS = if true, tag is self-closing
+ ; Closes current bundle entry.
 "RTN","RGSEFHIR",126,0)
-ADDTAG(TAG,ATR,CLS) ;
+ENDENTRY() ;
 "RTN","RGSEFHIR",127,0)
- D ADDTAG^RGSEXML(.TAG,.ATR,.CLS) Q
+ D ENDTAG("entry")
 "RTN","RGSEFHIR",128,0)
- ; Write closing tag
+ Q
 "RTN","RGSEFHIR",129,0)
- ;  TAG = If specified, write closing tags up to and including
+ ; Put a name/value pair to output buffer
 "RTN","RGSEFHIR",130,0)
- ;    this one.  Otherwise, just write last pending closing tag.
+PUT(NM,VL) ;
 "RTN","RGSEFHIR",131,0)
- ;  Returns true if there are more pending tag closures.
+ D PUT^RGSEXML(.NM,.VL) Q
 "RTN","RGSEFHIR",132,0)
-ENDTAG(TAG) ;
+ ; Put a date value to output buffer
 "RTN","RGSEFHIR",133,0)
- D ENDTAG^RGSEXML(.TAG) Q
+PUTDT(NM,DT) ;
 "RTN","RGSEFHIR",134,0)
- ; Reformats a variable pointer for use as a resource id.
+ D PUTDT^RGSEXML(.NM,.DT) Q
 "RTN","RGSEFHIR",135,0)
-VP2ID(VP) ;
+ ; Write the text section
 "RTN","RGSEFHIR",136,0)
- Q:'$L(VP) ""
+ ; TXT = Scalar value (will be escaped) or
 "RTN","RGSEFHIR",137,0)
- N X
+ ;       array (will not be escaped)
 "RTN","RGSEFHIR",138,0)
- S X=$P(VP,";",2)
+TEXT(TXT) ;
 "RTN","RGSEFHIR",139,0)
- S:X'["(" X=X_"("
+ N ATR,LP
 "RTN","RGSEFHIR",140,0)
- S X=+$P($G(@(U_X_"0)")),U,2)
+ S ATR("xmlns")="http://www.w3.org/1999/xhtml"
 "RTN","RGSEFHIR",141,0)
- Q $S(X:X_":"_+VP,1:"")
+ D ADDTAG("text"),PUT("status","generated"),ADDTAG("div",.ATR)
 "RTN","RGSEFHIR",142,0)
-IDENT(SYSTEM,VALUE,LABEL,USE) ;
+ I $D(TXT)=1 D
 "RTN","RGSEFHIR",143,0)
- Q:'$L(VALUE)
+ .D ADD^RGSER($$ESCAPE^RGSER(TXT))
 "RTN","RGSEFHIR",144,0)
- D ADDTAG("identifier")
+ E  D
 "RTN","RGSEFHIR",145,0)
- D PUT("use",$G(USE,"usual"))
+ .S LP=""
 "RTN","RGSEFHIR",146,0)
- D PUT("label",.LABEL)
+ .F  S LP=$O(TXT(LP)) Q:'$L(LP)  D ADD^RGSER(TXT(LP))
 "RTN","RGSEFHIR",147,0)
- D PUT("system",$$SYSTEM^RGSER(.SYSTEM))
+ D ENDTAG("text")
 "RTN","RGSEFHIR",148,0)
- D PUT("value",VALUE)
+ Q
 "RTN","RGSEFHIR",149,0)
- D ENDTAG("identifier")
+ ;Add opening tag (with optional attributes)
 "RTN","RGSEFHIR",150,0)
- Q
+ ; TAG = tag name
 "RTN","RGSEFHIR",151,0)
- ; Reference
+ ; ATR = optional array of attributes and/or content
 "RTN","RGSEFHIR",152,0)
-REF(TAG,RES,VL,PFX) ;
+ ; CLS = if true, tag is self-closing
 "RTN","RGSEFHIR",153,0)
- I $L(VL("I"))!$L(VL("E")) D
+ADDTAG(TAG,ATR,CLS) ;
 "RTN","RGSEFHIR",154,0)
- .D ADDTAG(TAG)
+ D ADDTAG^RGSEXML(.TAG,.ATR,.CLS) Q
 "RTN","RGSEFHIR",155,0)
- .D:$L(VL("I")) PUT("reference",RES_"/"_$G(PFX)_VL("I"))
+ ; Write closing tag
 "RTN","RGSEFHIR",156,0)
- .D:$L(VL("E")) PUT("display",VL("E"))
+ ;  TAG = If specified, write closing tags up to and including
 "RTN","RGSEFHIR",157,0)
- .D ENDTAG(TAG)
+ ;    this one.  Otherwise, just write last pending closing tag.
 "RTN","RGSEFHIR",158,0)
- Q
+ ;  Returns true if there are more pending tag closures.
 "RTN","RGSEFHIR",159,0)
-CODING(SYSTEM,CODE,DISPLAY) ;
+ENDTAG(TAG) ;
 "RTN","RGSEFHIR",160,0)
- D ADDTAG("coding")
+ D ENDTAG^RGSEXML(.TAG) Q
 "RTN","RGSEFHIR",161,0)
- D PUT("system",$$SYSTEM^RGSER(.SYSTEM))
+ ; Reformats a variable pointer for use as a resource id.
 "RTN","RGSEFHIR",162,0)
- D PUT("code",.CODE)
+VP2ID(VP) ;
 "RTN","RGSEFHIR",163,0)
- D PUT("display",.DISPLAY)
+ Q:'$L(VP) ""
 "RTN","RGSEFHIR",164,0)
- D ENDTAG("coding")
-"RTN","RGSEFHIR",165,0)
- Q
-"RTN","RGSEFHIR",166,0)
-TELECOM D:$L(VL("E")) ADDTAG(PN),PUT("system",PN(1)),PUT("use",PN(2)),PUT("value",VL("E")),ENDTAG(PN)
-"RTN","RGSEFHIR",167,0)
- Q
-"RTN","RGSEFHIR",168,0)
- ; Process a period datatype
-"RTN","RGSEFHIR",169,0)
-PERIOD I $G(VL("I"))!$G(VL(2,"I")) D
-"RTN","RGSEFHIR",170,0)
- .D ADDTAG("period")
-"RTN","RGSEFHIR",171,0)
- .D:$G(VL("I")) PUTDT("start",VL("I"))
-"RTN","RGSEFHIR",172,0)
- .D:$G(VL(2,"I")) PUTDT("end",VL(2,"I"))
-"RTN","RGSEFHIR",173,0)
- .D ENDTAG("period")
-"RTN","RGSEFHIR",174,0)
- Q
-"RTN","RGSEFHIR",175,0)
-NAME(NAME,USE) ;
-"RTN","RGSEFHIR",176,0)
  N X
-"RTN","RGSEFHIR",177,0)
- D ADDTAG("name")
-"RTN","RGSEFHIR",178,0)
+"RTN","RGSEFHIR",165,0)
+ S X=$P(VP,";",2)
+"RTN","RGSEFHIR",166,0)
+ S:X'["(" X=X_"("
+"RTN","RGSEFHIR",167,0)
+ S X=+$P($G(@(U_X_"0)")),U,2)
+"RTN","RGSEFHIR",168,0)
+ Q $S(X:X_":"_+VP,1:"")
+"RTN","RGSEFHIR",169,0)
+IDENT(SYSTEM,VALUE,LABEL,USE) ;
+"RTN","RGSEFHIR",170,0)
+ Q:'$L(VALUE)
+"RTN","RGSEFHIR",171,0)
+ D ADDTAG("identifier")
+"RTN","RGSEFHIR",172,0)
  D PUT("use",$G(USE,"usual"))
-"RTN","RGSEFHIR",179,0)
- S X=$P(NAME,","),NAME=$P(NAME,",",2,99)
-"RTN","RGSEFHIR",180,0)
- D PUT("family",X)
-"RTN","RGSEFHIR",181,0)
- F X=1:1:$L(NAME," ") D PUT("given",$P(NAME," ",X))
-"RTN","RGSEFHIR",182,0)
- D ENDTAG("name")
-"RTN","RGSEFHIR",183,0)
+"RTN","RGSEFHIR",173,0)
+ D PUT("label",.LABEL)
+"RTN","RGSEFHIR",174,0)
+ D PUT("system",$$SYSTEM^RGSER(.SYSTEM))
+"RTN","RGSEFHIR",175,0)
+ D PUT("value",VALUE)
+"RTN","RGSEFHIR",176,0)
+ D ENDTAG("identifier")
+"RTN","RGSEFHIR",177,0)
  Q
+"RTN","RGSEFHIR",178,0)
+ ; Reference
+"RTN","RGSEFHIR",179,0)
+REF(TAG,RES,VL,PFX) ;
+"RTN","RGSEFHIR",180,0)
+ D REF2(TAG,RES,VL("I"),VL("E"),.PFX)
+"RTN","RGSEFHIR",181,0)
+ Q
+"RTN","RGSEFHIR",182,0)
+ ; Reference
+"RTN","RGSEFHIR",183,0)
+REF2(TAG,RES,VLI,VLE,PFX) ;
 "RTN","RGSEFHIR",184,0)
- ; Value set iterator
+ I $L(VLI)!$L(VLE) D
 "RTN","RGSEFHIR",185,0)
-ITERVS(CTX) ;
+ .D ADDTAG(TAG)
 "RTN","RGSEFHIR",186,0)
- I '$Q D ITER(CTX,"ValueSet_") Q
+ .D:$L(VLI) PUT("reference",RES_"/"_$G(PFX)_VLI)
 "RTN","RGSEFHIR",187,0)
- Q $$ITER(CTX)
+ .D:$L(VLE) PUT("display",VLE)
 "RTN","RGSEFHIR",188,0)
- ; Serialization file iterator
+ .D ENDTAG(TAG)
 "RTN","RGSEFHIR",189,0)
-ITER(CTX,ROOT) ;
+ Q
 "RTN","RGSEFHIR",190,0)
- N TMP,LAST,IEN,SER
+CODING(SYSTEM,CODE,DISPLAY) ;
 "RTN","RGSEFHIR",191,0)
- S TMP=$$TMPGBL^RGSER(CTX)
+ D ADDTAG("coding")
 "RTN","RGSEFHIR",192,0)
- I '$Q D  Q
+ D PUT("system",$$SYSTEM^RGSER(.SYSTEM))
 "RTN","RGSEFHIR",193,0)
- .S @TMP@("IEN")=0,^("SER")=DATA("SER"),(^("LAST"),^("ROOT"))=ROOT
+ D PUT("code",.CODE)
 "RTN","RGSEFHIR",194,0)
- S LAST=@TMP@("LAST"),IEN=^("IEN"),SER=^("SER"),ROOT=^("ROOT")
+ D PUT("display",.DISPLAY)
 "RTN","RGSEFHIR",195,0)
- F  D  Q:IEN
+ D ENDTAG("coding")
 "RTN","RGSEFHIR",196,0)
- .I 'IEN D  Q:IEN
+ Q
 "RTN","RGSEFHIR",197,0)
- ..S LAST=$O(^RGSER(998.1,SER,10,"B",LAST))
+TELECOM D:VL ADDTAG(PN),PUT("system",$P(PN(0),":")),PUT("use",$P(PN(0),":",2)),PUT("value",VL("E")),ENDTAG(PN)
 "RTN","RGSEFHIR",198,0)
- ..I $E(LAST,1,$L(ROOT))=ROOT S @TMP@("LAST")=LAST
+ Q
 "RTN","RGSEFHIR",199,0)
- ..E  S IEN=-1
+ ; Process a period datatype
 "RTN","RGSEFHIR",200,0)
- .S IEN=+$O(^RGSER(998.1,SER,10,"B",LAST,IEN)),@TMP@("IEN")=IEN
+PERIOD I $G(VL("I"))!$G(VL(2,"I")) D
 "RTN","RGSEFHIR",201,0)
+ .D ADDTAG("period")
+"RTN","RGSEFHIR",202,0)
+ .D:$G(VL("I")) PUTDT("start",VL("I"))
+"RTN","RGSEFHIR",203,0)
+ .D:$G(VL(2,"I")) PUTDT("end",VL(2,"I"))
+"RTN","RGSEFHIR",204,0)
+ .D ENDTAG("period")
+"RTN","RGSEFHIR",205,0)
+ Q
+"RTN","RGSEFHIR",206,0)
+NAME(NAME,USE) ;
+"RTN","RGSEFHIR",207,0)
+ N X
+"RTN","RGSEFHIR",208,0)
+ D ADDTAG("name")
+"RTN","RGSEFHIR",209,0)
+ D PUT("use",$G(USE,"usual"))
+"RTN","RGSEFHIR",210,0)
+ D PUT("text",$S($E(NAME)=",":$E(NAME,2,99),1:NAME))
+"RTN","RGSEFHIR",211,0)
+ S X=$P(NAME,","),NAME=$P(NAME,",",2,99)
+"RTN","RGSEFHIR",212,0)
+ D PUT("family",X)
+"RTN","RGSEFHIR",213,0)
+ F X=1:1:$L(NAME," ") D PUT("given",$P(NAME," ",X))
+"RTN","RGSEFHIR",214,0)
+ D ENDTAG("name")
+"RTN","RGSEFHIR",215,0)
+ Q
+"RTN","RGSEFHIR",216,0)
+ ; Value set iterator
+"RTN","RGSEFHIR",217,0)
+ITERVS(CTX) ;
+"RTN","RGSEFHIR",218,0)
+ I '$Q D ITER(CTX,"ValueSet_") Q
+"RTN","RGSEFHIR",219,0)
+ Q $$ITER(CTX)
+"RTN","RGSEFHIR",220,0)
+ ; Serialization file iterator
+"RTN","RGSEFHIR",221,0)
+ITER(CTX,ROOT) ;
+"RTN","RGSEFHIR",222,0)
+ N TMP,LAST,IEN,SER
+"RTN","RGSEFHIR",223,0)
+ S TMP=$$TMPGBL^RGSER(CTX)
+"RTN","RGSEFHIR",224,0)
+ I '$Q D  Q
+"RTN","RGSEFHIR",225,0)
+ .S @TMP@("IEN")=0,^("SER")=DATA("SER"),(^("LAST"),^("ROOT"))=ROOT
+"RTN","RGSEFHIR",226,0)
+ S LAST=@TMP@("LAST"),IEN=^("IEN"),SER=^("SER"),ROOT=^("ROOT")
+"RTN","RGSEFHIR",227,0)
+ F  D  Q:IEN
+"RTN","RGSEFHIR",228,0)
+ .I 'IEN D  Q:IEN
+"RTN","RGSEFHIR",229,0)
+ ..S LAST=$O(^RGSER(998.1,SER,10,"B",LAST))
+"RTN","RGSEFHIR",230,0)
+ ..I $E(LAST,1,$L(ROOT))=ROOT S @TMP@("LAST")=LAST
+"RTN","RGSEFHIR",231,0)
+ ..E  S IEN=-1
+"RTN","RGSEFHIR",232,0)
+ .S IEN=+$O(^RGSER(998.1,SER,10,"B",LAST,IEN)),@TMP@("IEN")=IEN
+"RTN","RGSEFHIR",233,0)
  Q $S(IEN=-1:0,1:IEN)
+"RTN","RGSEFHIR",234,0)
+ ; List resources for conformance document.
+"RTN","RGSEFHIR",235,0)
+ ; Referenced within metadata.CONFORMANCE template to dynamically
+"RTN","RGSEFHIR",236,0)
+ ; generate supported resources.
+"RTN","RGSEFHIR",237,0)
+RESCONF() ;
+"RTN","RGSEFHIR",238,0)
+ N RESNAME,RESIEN
+"RTN","RGSEFHIR",239,0)
+ S RESNAME=""
+"RTN","RGSEFHIR",240,0)
+ F  S RESNAME=$O(^RGSER(998.1,DATA("SER"),10,"B",RESNAME)) Q:'$L(RESNAME)  S RESIEN=$O(^(RESNAME,0)) D
+"RTN","RGSEFHIR",241,0)
+ .Q:RESNAME="metadata"!(RESNAME["/")
+"RTN","RGSEFHIR",242,0)
+ .Q:$P(^RGSER(998.1,DATA("SER"),10,RESIEN,0),U,2)
+"RTN","RGSEFHIR",243,0)
+ .D TEMPLATE^RGSERGET("CONFORMANCE_RESOURCE")
+"RTN","RGSEFHIR",244,0)
+ Q:$Q ""
+"RTN","RGSEFHIR",245,0)
+ Q
+"RTN","RGSEFHIR",246,0)
+ ; List search parameter conformance for a resource.
+"RTN","RGSEFHIR",247,0)
+ ; Referenced within metadata.CONFORMANCE_RESOURCE template.
+"RTN","RGSEFHIR",248,0)
+SRPCONF() ;
+"RTN","RGSEFHIR",249,0)
+ N SRPNAME,SRPIEN,SRPTYPE
+"RTN","RGSEFHIR",250,0)
+ S SRPNAME=""
+"RTN","RGSEFHIR",251,0)
+ F  S SRPNAME=$O(^RGSER(998.1,DATA("SER"),10,RESIEN,40,"B",SRPNAME)) Q:'$L(SRPNAME)  S SRPIEN=$O(^(SRPNAME,0)) D
+"RTN","RGSEFHIR",252,0)
+ .Q:$E(SRPNAME)="@"
+"RTN","RGSEFHIR",253,0)
+ .S SRPTYPE=$P(^RGSER(998.1,DATA("SER"),10,RESIEN,40,SRPIEN,0),U,3)
+"RTN","RGSEFHIR",254,0)
+ .S SRPTYPE=$$LOW^XLFSTR($$EXTERNAL^DILFD(998.13,2,,SRPTYPE))
+"RTN","RGSEFHIR",255,0)
+ .D:$L(SRPTYPE) TEMPLATE^RGSERGET("CONFORMANCE_PARAMETER")
+"RTN","RGSEFHIR",256,0)
+ Q:$Q ""
+"RTN","RGSEFHIR",257,0)
+ Q
 "RTN","RGSEJSON")
-0^2^B4655386
+0^2^B5869093
 "RTN","RGSEJSON",1,0)
-RGSEJSON ;RI/CBMI/DKM - JSON Serialization Support ;05-Mar-2015 13:26;DKM
+RGSEJSON ;RI/CBMI/DKM - JSON Serialization Support ;13-Mar-2015 14:27;DKM
 "RTN","RGSEJSON",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 155
 "RTN","RGSEJSON",3,0)
  ;=================================================================
 "RTN","RGSEJSON",4,0)
@@ -16543,145 +17089,175 @@ FMTDATE(DT) ;
 "RTN","RGSEJSON",27,0)
  Q $S($D(DT):DT,1:$$NOW^XLFDT)
 "RTN","RGSEJSON",28,0)
- ; Serializer.PROPF - Free text property
+ ; Serializer.ESCMAP - Location of escape map
 "RTN","RGSEJSON",29,0)
-PROPF D PUTQT(PN,$G(VL("E")))
+ESCMAP() Q "ESCMAPX^RGSEJSON"
 "RTN","RGSEJSON",30,0)
- Q
+ESCMAPX ;;Table of escape mappings
 "RTN","RGSEJSON",31,0)
- ; Serializer.PROPB - Boolean property
+ ;;\;\\
 "RTN","RGSEJSON",32,0)
-PROPB D PUTBL(PN,$G(VL("I")))
+ ;;/;\/
 "RTN","RGSEJSON",33,0)
- Q
+ ;;";\"
 "RTN","RGSEJSON",34,0)
- ; Serializer.PROPD - Date property
+ ;;#8;\b
 "RTN","RGSEJSON",35,0)
-PROPD D PUTDT(PN,$G(VL("I")))
+ ;;#12;\f
 "RTN","RGSEJSON",36,0)
- Q
+ ;;#10;\n
 "RTN","RGSEJSON",37,0)
- ; Serializer.PROPR - Raw value property
+ ;;#13;\r
 "RTN","RGSEJSON",38,0)
-PROPR D PUTQT(PN,$G(VL("I")))
+ ;;#9;\t
 "RTN","RGSEJSON",39,0)
- Q
+ ;;
 "RTN","RGSEJSON",40,0)
- ; Serializer.PROPW - Word processing property
+ ; Serializer.PROPF - Free text property
 "RTN","RGSEJSON",41,0)
-PROPW K VL("E"),VL("I")
+PROPF D PUTQT(PN,$G(VL("E")))
 "RTN","RGSEJSON",42,0)
- D PUTAR(PN,.VL)
+ Q
 "RTN","RGSEJSON",43,0)
- Q
+ ; Serializer.PROPB - Boolean property
 "RTN","RGSEJSON",44,0)
- ; Serializer.PROPC - Custom property
+PROPB D PUTBL(PN,$G(VL("I")))
 "RTN","RGSEJSON",45,0)
-PROPC X CTL
+ Q
 "RTN","RGSEJSON",46,0)
- Q
+ ; Serializer.PROPD - Date property
 "RTN","RGSEJSON",47,0)
- ; Serializer.PROPO - Object property
+PROPD D PUTDT(PN,$G(VL("I")))
 "RTN","RGSEJSON",48,0)
-PROPO D:$G(VL("I")) GET^RGSERGET(.DATA,CTL,$G(VL("I")),PN)
+ Q
 "RTN","RGSEJSON",49,0)
- Q
+ ; Serializer.PROPR - Raw value property
 "RTN","RGSEJSON",50,0)
- ; Serializer.PROPI - Inline property
+PROPR D PUTQT(PN,$G(VL("I")))
 "RTN","RGSEJSON",51,0)
-PROPI Q
-"RTN","RGSEJSON",52,0)
- ; Put a name/value pair to output buffer, enclosing
-"RTN","RGSEJSON",53,0)
- ; value in quotes.
-"RTN","RGSEJSON",54,0)
-PUTQT(NM,VL) ;
-"RTN","RGSEJSON",55,0)
- D PUT(NM,$$QT(VL))
-"RTN","RGSEJSON",56,0)
  Q
+"RTN","RGSEJSON",52,0)
+ ; Serializer.PROPW - Word processing property
+"RTN","RGSEJSON",53,0)
+PROPW K VL("E"),VL("I")
+"RTN","RGSEJSON",54,0)
+ D PUTAR(PN,.VL)
+"RTN","RGSEJSON",55,0)
+ Q
+"RTN","RGSEJSON",56,0)
+ ; Serializer.PROPC - Custom property
 "RTN","RGSEJSON",57,0)
- ; Put a name/value pair to output buffer
+PROPC X CTL
 "RTN","RGSEJSON",58,0)
-PUT(NM,VL) ;
+ Q
 "RTN","RGSEJSON",59,0)
- D ADD(PFX_$$QT(NM)_":"_VL)
+ ; Serializer.PROPO - Object property
 "RTN","RGSEJSON",60,0)
- S PFX=","
+PROPO D:$G(VL("I")) GET^RGSERGET(.DATA,CTL,$G(VL("I")),PN)
 "RTN","RGSEJSON",61,0)
  Q
 "RTN","RGSEJSON",62,0)
- ; Put a date value to output buffer
+ ; Serializer.PROPI - Inline property
 "RTN","RGSEJSON",63,0)
-PUTDT(NM,DT) ;
+PROPI Q
 "RTN","RGSEJSON",64,0)
- D:DT PUTQT(NM,$$FMTDATE^RGSERGET(DT))
+ ; Serializer.PROPS - Static property
 "RTN","RGSEJSON",65,0)
- Q
+PROPS D PUTQT(PN,$G(CTL))
 "RTN","RGSEJSON",66,0)
- ; Put a boolean value to output buffer
+ Q
 "RTN","RGSEJSON",67,0)
-PUTBL(NM,BL) ;
+ ; Put a name/value pair to output buffer, enclosing
 "RTN","RGSEJSON",68,0)
- D PUT(NM,$S(BL:"true",1:"false"))
+ ; value in quotes.
 "RTN","RGSEJSON",69,0)
- Q
+PUTQT(NM,VL) ;
 "RTN","RGSEJSON",70,0)
- ; Put a set value to output buffer
+ D PUT(NM,$$QT(VL))
 "RTN","RGSEJSON",71,0)
-PUTST(NM,VL,ST) ;
+ Q
 "RTN","RGSEJSON",72,0)
- D PUTQT(NM,$$SET^RGUT(VL,ST))
+ ; Put a name/value pair to output buffer
 "RTN","RGSEJSON",73,0)
- Q
+PUT(NM,VL) ;
 "RTN","RGSEJSON",74,0)
- ; Put an array to output buffer
+ D ADD(PFX_$$QT(NM)_":"_VL)
 "RTN","RGSEJSON",75,0)
-PUTAR(NM,AR) ;
+ S PFX=","
 "RTN","RGSEJSON",76,0)
- N DL,LP
+ Q
 "RTN","RGSEJSON",77,0)
- S DL="",LP=$NA(AR)
+ ; Put a date value to output buffer
 "RTN","RGSEJSON",78,0)
- D PUT(NM,"[")
+PUTDT(NM,DT) ;
 "RTN","RGSEJSON",79,0)
- F  S LP=$Q(@LP) Q:'$L(LP)  D
+ D:DT PUTQT(NM,$$FMTDATE^RGSER(DT))
 "RTN","RGSEJSON",80,0)
- .D ADD(DL_$$QT(@LP))
+ Q
 "RTN","RGSEJSON",81,0)
- .S DL=","
+ ; Put a boolean value to output buffer
 "RTN","RGSEJSON",82,0)
- D ADD("]")
+PUTBL(NM,BL) ;
 "RTN","RGSEJSON",83,0)
- Q
+ D PUT(NM,$S(BL:"true",1:"false"))
 "RTN","RGSEJSON",84,0)
- ; Enclose value in quotes (escape contents if necessary)
-"RTN","RGSEJSON",85,0)
-QT(X) N QT,FM,TO,LP
-"RTN","RGSEJSON",86,0)
- S QT=""""
-"RTN","RGSEJSON",87,0)
- S FM="\"_QT_"/"_$C(8,12,10,13,9)
-"RTN","RGSEJSON",88,0)
- S TO="\"_QT_"/bfnrt"
-"RTN","RGSEJSON",89,0)
- F LP=1:1:$L(FM) D ESC(.X,$E(FM,LP),$E(TO,LP))
-"RTN","RGSEJSON",90,0)
- Q QT_X_QT
-"RTN","RGSEJSON",91,0)
-ESC(X,C,R) S:X[C X=$$SUBST^RGUT(X,C,"\"_R)
-"RTN","RGSEJSON",92,0)
  Q
+"RTN","RGSEJSON",85,0)
+ ; Put a set value to output buffer
+"RTN","RGSEJSON",86,0)
+PUTST(NM,VL,ST) ;
+"RTN","RGSEJSON",87,0)
+ D PUTQT(NM,$$SET^RGUT(VL,ST))
+"RTN","RGSEJSON",88,0)
+ Q
+"RTN","RGSEJSON",89,0)
+ ; Put an array to output buffer
+"RTN","RGSEJSON",90,0)
+PUTAR(NM,AR) ;
+"RTN","RGSEJSON",91,0)
+ N DL,LP
+"RTN","RGSEJSON",92,0)
+ S DL="",LP=$NA(AR)
 "RTN","RGSEJSON",93,0)
-ADD(X) D ADD^RGSER(X)
+ D PUT(NM,"[")
 "RTN","RGSEJSON",94,0)
+ F  S LP=$Q(@LP) Q:'$L(LP)  D
+"RTN","RGSEJSON",95,0)
+ .D ADD(DL_$$QT(@LP))
+"RTN","RGSEJSON",96,0)
+ .S DL=","
+"RTN","RGSEJSON",97,0)
+ D ADD("]")
+"RTN","RGSEJSON",98,0)
+ Q
+"RTN","RGSEJSON",99,0)
+ ; Enclose value in quotes (escape contents if necessary)
+"RTN","RGSEJSON",100,0)
+QT(X) N QT,FM,TO,LP
+"RTN","RGSEJSON",101,0)
+ S QT=""""
+"RTN","RGSEJSON",102,0)
+ S FM="\"_QT_"/"_$C(8,12,10,13,9)
+"RTN","RGSEJSON",103,0)
+ S TO="\"_QT_"/bfnrt"
+"RTN","RGSEJSON",104,0)
+ F LP=1:1:$L(FM) D ESC(.X,$E(FM,LP),$E(TO,LP))
+"RTN","RGSEJSON",105,0)
+ Q QT_X_QT
+"RTN","RGSEJSON",106,0)
+ESC(X,C,R) S:X[C X=$$SUBST^RGUT(X,C,"\"_R)
+"RTN","RGSEJSON",107,0)
+ Q
+"RTN","RGSEJSON",108,0)
+ADD(X) D ADD^RGSER(X)
+"RTN","RGSEJSON",109,0)
  Q
 "RTN","RGSER")
-0^3^B63950269
+0^3^B69705076
 "RTN","RGSER",1,0)
-RGSER ;RI/CBMI/DKM - Core Serialization Support ;05-Mar-2015 13:26;DKM
+RGSER ;RI/CBMI/DKM - Core Serialization Support ;15-Mar-2015 13:55;DKM
 "RTN","RGSER",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 155
 "RTN","RGSER",3,0)
  ;=================================================================
 "RTN","RGSER",4,0)
@@ -16747,525 +17323,597 @@ PARSEREQ N LN,CNT,QRY,X
 "RTN","RGSER",34,0)
  .D PARSEQS(QRY,.PARAMS)
 "RTN","RGSER",35,0)
- S X=$L(HOST)
+ I $D(PARAMS("_format",1,1)) D
 "RTN","RGSER",36,0)
- S:$E(PATH,1,X)=HOST PATH=$E(PATH,X+1,9999)
+ .S DATA("HDR","accept")=PARAMS("_format",1,1)
 "RTN","RGSER",37,0)
- S:$E(PATH)="/" PATH=$E(PATH,2,9999)
+ .K PARAMS("_format")
 "RTN","RGSER",38,0)
- S:$E(PATH,$L(PATH))="/" PATH=$E(PATH,1,$L(PATH)-1)
+ S X=$L(HOST)
 "RTN","RGSER",39,0)
- S PATH=$$UNESCAPE(PATH),X=$L(PATH,"/")
+ S:$E(PATH,1,X)=HOST PATH=$E(PATH,X+1,9999)
 "RTN","RGSER",40,0)
- S:X#2 ID=$P(PATH,"/",X),PATH=$P(PATH,"/",1,X-1)
+ S:$E(PATH)="/" PATH=$E(PATH,2,9999)
 "RTN","RGSER",41,0)
- K:$G(ID)="_search" ID
+ S:$E(PATH,$L(PATH))="/" PATH=$E(PATH,1,$L(PATH)-1)
 "RTN","RGSER",42,0)
- Q
+ S PATH=$$UNESCURL(PATH),X=$L(PATH,"/")
 "RTN","RGSER",43,0)
- ; Parse query string into ARY array.
+ S:X#2 ID=$P(PATH,"/",X),PATH=$P(PATH,"/",1,X-1)
 "RTN","RGSER",44,0)
-PARSEQS(VALUE,ARY) ;
+ K:$G(ID)="_search" ID
 "RTN","RGSER",45,0)
- N X,Y,Z,N,V,M
+ Q
 "RTN","RGSER",46,0)
- F X=1:1:$L(VALUE,"&") D
+ ; Parse query string into ARY array.
 "RTN","RGSER",47,0)
- .S Y=$P(VALUE,"&",X),N=$$UNESCAPE($P(Y,"=")),V=$$UNESCAPE($P(Y,"=",2,9999)),M=""
+PARSEQS(VALUE,ARY) ;
 "RTN","RGSER",48,0)
- .I $L(N) D
+ N X,Y,Z,N,V,M
 "RTN","RGSER",49,0)
- ..S Z=$L(N,":")
+ F X=1:1:$L(VALUE,"&") D
 "RTN","RGSER",50,0)
- ..I Z>1 D
+ .S Y=$P(VALUE,"&",X),N=$$UNESCURL($P(Y,"=")),V=$$UNESCURL($P(Y,"=",2,9999)),M=""
 "RTN","RGSER",51,0)
- ...S Y=$P(N,":",Z)
+ .I $L(N) D
 "RTN","RGSER",52,0)
- ...S M=$S(Y="missing":"m",Y="exact":"e",Y="text":"t",1:"")
+ ..S Z=$L(N,":")
 "RTN","RGSER",53,0)
- ...S:$L(M) N=$P(N,":",1,Z-1)
+ ..I Z>1 D
 "RTN","RGSER",54,0)
- ..S Y=1+$O(ARY(N,""),-1)
+ ...S Y=$P(N,":",Z)
 "RTN","RGSER",55,0)
- ..F Z=1:1:$L(V,",") D
+ ...S M=$S(Y="missing":"m",Y="exact":"e",Y="text":"t",1:"")
 "RTN","RGSER",56,0)
- ...S ARY(N,Y,Z)=$P(V,",",Z)
+ ...S:$L(M) N=$P(N,":",1,Z-1)
 "RTN","RGSER",57,0)
- ...S ARY(N,Y,Z,"OPR")=M
+ ..S Y=1+$O(ARY(N,""),-1)
 "RTN","RGSER",58,0)
- Q
+ ..F Z=1:1:$L(V,",") D
 "RTN","RGSER",59,0)
- ; Parse http header into ARY array.
+ ...S ARY(N,Y,Z)=$P(V,",",Z)
 "RTN","RGSER",60,0)
-PARSEHDR(VALUE,ARY) ;
+ ...S ARY(N,Y,Z,"OPR")=M
 "RTN","RGSER",61,0)
- N N,V
-"RTN","RGSER",62,0)
- S N=$$LOW^XLFSTR($P(VALUE,":")),V=$$TRIM^XLFSTR($P(VALUE,":",2,999))
-"RTN","RGSER",63,0)
- S:$L(N) ARY("HDR",N)=V
-"RTN","RGSER",64,0)
  Q
+"RTN","RGSER",62,0)
+ ; Parse http header into ARY array.
+"RTN","RGSER",63,0)
+PARSEHDR(VALUE,ARY) ;
+"RTN","RGSER",64,0)
+ N N,V
 "RTN","RGSER",65,0)
- ; Set 405 error status
+ S N=$$LOW^XLFSTR($P(VALUE,":")),V=$$TRIM^XLFSTR($P(VALUE,":",2,999))
 "RTN","RGSER",66,0)
-BADMETH D SETERR(405,"Method Not Allowed")
+ S:$L(N) ARY("HDR",N)=V
 "RTN","RGSER",67,0)
  Q
 "RTN","RGSER",68,0)
- ; GET method
+ ; Set 405 error status
 "RTN","RGSER",69,0)
-MGET D GET^RGSERGET(.DATA,PATH,.ID,,.PARAMS)
+BADMETH D SETERR(405,"Method Not Allowed")
 "RTN","RGSER",70,0)
  Q
 "RTN","RGSER",71,0)
- ; POST method
+ ; GET method
 "RTN","RGSER",72,0)
-MPOST D BADMETH
+MGET D GET^RGSERGET(.DATA,PATH,.ID,,.PARAMS)
 "RTN","RGSER",73,0)
  Q
 "RTN","RGSER",74,0)
- ; PUT method
+ ; POST method
 "RTN","RGSER",75,0)
-MPUT D BADMETH
+MPOST D BADMETH
 "RTN","RGSER",76,0)
  Q
 "RTN","RGSER",77,0)
- ; DELETE method
+ ; PUT method
 "RTN","RGSER",78,0)
-MDELETE D BADMETH
+MPUT D BADMETH
 "RTN","RGSER",79,0)
  Q
 "RTN","RGSER",80,0)
- ; OPTIONS method
+ ; DELETE method
 "RTN","RGSER",81,0)
-MOPTIONS D BADMETH
+MDELETE D BADMETH
 "RTN","RGSER",82,0)
  Q
 "RTN","RGSER",83,0)
- ; Initialize environment
+ ; OPTIONS method
 "RTN","RGSER",84,0)
-INIT S U="^",DT=$$DT^XLFDT
+MOPTIONS D BADMETH
 "RTN","RGSER",85,0)
- S:'($D(DATA)#2) DATA=$$TMPGBL
+ Q
 "RTN","RGSER",86,0)
- S:'$D(DUZ(2)) DUZ(2)=$P(^XTV(8989.3,1,"XUS"),U,17)
+ ; Initialize environment
 "RTN","RGSER",87,0)
- D RESET
+INIT S U="^",DT=$$DT^XLFDT
 "RTN","RGSER",88,0)
- Q
+ S:'($D(DATA)#2) DATA=$$TMPGBL
 "RTN","RGSER",89,0)
- ; Reset the output buffer
+ S:'$D(DUZ(2)) DUZ(2)=$P(^XTV(8989.3,1,"XUS"),U,17)
 "RTN","RGSER",90,0)
-RESET K @DATA
-"RTN","RGSER",91,0)
- S (DATA("CNT"),DATA("LEN"))=0
-"RTN","RGSER",92,0)
- Q
-"RTN","RGSER",93,0)
- ; Cleanup temp globals on completion
-"RTN","RGSER",94,0)
-CLEANUP N LP,TMP,EXC
-"RTN","RGSER",95,0)
- S TMP=$NA(^TMP("RGSER",$J))
-"RTN","RGSER",96,0)
- I TMP'=$NA(@DATA,2) K @TMP Q
-"RTN","RGSER",97,0)
- S (@TMP,EXC)=$QS(DATA,3)
-"RTN","RGSER",98,0)
- F LP=0:0 S LP=$O(@TMP@(LP)) Q:'LP  K:LP'=EXC @TMP@(LP)
-"RTN","RGSER",99,0)
- Q
-"RTN","RGSER",100,0)
- ; Return unique temp global reference
-"RTN","RGSER",101,0)
- ; If X is specified, returns the temp global at that index.
-"RTN","RGSER",102,0)
- ; Otherwise, returns the next available global reference.
-"RTN","RGSER",103,0)
-TMPGBL(X) ;
-"RTN","RGSER",104,0)
- Q:$G(X) $NA(^TMP("RGSER",$J,X))
-"RTN","RGSER",105,0)
- F  S X=$G(^TMP("RGSER",$J))+1,^($J)=X,X=$NA(^($J,X)) Q:'$D(@X)
-"RTN","RGSER",106,0)
- Q X
-"RTN","RGSER",107,0)
- ; Returns the presence of specified flag(s).
-"RTN","RGSER",108,0)
- ; If ALL is true, presence of all flags are required.
-"RTN","RGSER",109,0)
- ; If false (the default), only one flag must be present.
-"RTN","RGSER",110,0)
-HASFLAG(FLG,ALL) ;
-"RTN","RGSER",111,0)
- N X,T
-"RTN","RGSER",112,0)
- S ALL='$G(ALL),T=1
-"RTN","RGSER",113,0)
- F X=1:1:$L(FLG) S T=FLAGS[$E(FLG,X) Q:T=ALL
-"RTN","RGSER",114,0)
- Q T
-"RTN","RGSER",115,0)
- ; Entry point for WebMan CGI call
-"RTN","RGSER",116,0)
-WEBMAN N DATA,URL,HOST
-"RTN","RGSER",117,0)
- S DATA=$NA(^TMP(CIANS,$J)),CIASIZE=-1
-"RTN","RGSER",118,0)
- S URL=$$ENV^CIANWCG("URL")
-"RTN","RGSER",119,0)
- S HOST=$$CONCAT("http://"_$$ENV^CIANWCG("Host"),$P(URL,"/",1,3))
-"RTN","RGSER",120,0)
- S URL=CIAMETH_" "_$P(URL,"/",4,9999)
-"RTN","RGSER",121,0)
- K @DATA
-"RTN","RGSER",122,0)
- D REST(.DATA,URL,HOST)
-"RTN","RGSER",123,0)
- Q
-"RTN","RGSER",124,0)
- ; Entry point for M Web Server
-"RTN","RGSER",125,0)
-MSERVER(DATA,ARGS) ;
-"RTN","RGSER",126,0)
- N URL
-"RTN","RGSER",127,0)
- S URL=HTTPREQ("method")_" "_HTTPREQ("path"),DATA("raw")=1
-"RTN","RGSER",128,0)
- S:$L(HTTPREQ("query")) URL=URL_"?"_HTTPREQ("query")
-"RTN","RGSER",129,0)
- M DATA("HDR")=HTTPREQ("header")
-"RTN","RGSER",130,0)
- D REST(.DATA,URL,HTTPREQ("header","host"))
-"RTN","RGSER",131,0)
- Q
-"RTN","RGSER",132,0)
- ; Escape reserved characters
-"RTN","RGSER",133,0)
-ESCAPE(X) ;
-"RTN","RGSER",134,0)
- N Y,Z,C
-"RTN","RGSER",135,0)
- F Z=1:1 S Y=$P($T(ESCMAP+Z),";;",2) Q:'$L(Y)  D
-"RTN","RGSER",136,0)
- .S C=$P(Y,";")
-"RTN","RGSER",137,0)
- .S:X[C X=$$SUBST^RGUT(X,C,$P(Y,";",2))
-"RTN","RGSER",138,0)
- Q X
-"RTN","RGSER",139,0)
-ESCMAP ;;Map for characters to escape
-"RTN","RGSER",140,0)
- ;;&;amp
-"RTN","RGSER",141,0)
- ;;";qt
-"RTN","RGSER",142,0)
- ;;<;lt
-"RTN","RGSER",143,0)
- ;;>;gt
-"RTN","RGSER",144,0)
- ;;
-"RTN","RGSER",145,0)
- ; Replace escaped characters in URL
-"RTN","RGSER",146,0)
-UNESCAPE(X) ;
-"RTN","RGSER",147,0)
- I X["%"!(X["+") D
-"RTN","RGSER",148,0)
- .N P,C,H
-"RTN","RGSER",149,0)
- .F P=1:1 S C=$E(X,P) Q:'$L(C)  D
-"RTN","RGSER",150,0)
- ..I C="+" S $E(X,P)=" "
-"RTN","RGSER",151,0)
- ..E  I C="%" S H=$E(X,P+1,P+2),$E(X,P,P+2)=$$UNHEX^XTHCUTL(H)
-"RTN","RGSER",152,0)
- Q X
-"RTN","RGSER",153,0)
- ; Concatenate array elements into a string
-"RTN","RGSER",154,0)
-ARY2STR(ARY,DLM) ;
-"RTN","RGSER",155,0)
- N X,RES
-"RTN","RGSER",156,0)
- S RES="",DLM=$G(DLM)
-"RTN","RGSER",157,0)
- F X=0:0 S X=$O(ARY(X)) Q:'X  S RES=RES_$S($L(RES):DLM,1:"")_ARY(X)
-"RTN","RGSER",158,0)
- Q RES
-"RTN","RGSER",159,0)
- ; Returns true if error condition is set
-"RTN","RGSER",160,0)
-ISERR() Q +$G(DATA("ERROR"))
-"RTN","RGSER",161,0)
- ; Reports an error status
-"RTN","RGSER",162,0)
-SETERR(CODE,TEXT) ;
-"RTN","RGSER",163,0)
- S:$D(TEXT) $P(CODE,U,2)=TEXT
-"RTN","RGSER",164,0)
- S DATA("ERROR")=CODE
-"RTN","RGSER",165,0)
  D RESET
+"RTN","RGSER",91,0)
+ Q
+"RTN","RGSER",92,0)
+ ; Reset the output buffer
+"RTN","RGSER",93,0)
+RESET K @DATA
+"RTN","RGSER",94,0)
+ S (DATA("CNT"),DATA("LEN"))=0
+"RTN","RGSER",95,0)
+ Q
+"RTN","RGSER",96,0)
+ ; Cleanup temp globals on completion
+"RTN","RGSER",97,0)
+CLEANUP N LP,TMP,EXC
+"RTN","RGSER",98,0)
+ S TMP=$NA(^TMP("RGSER",$J))
+"RTN","RGSER",99,0)
+ I TMP'=$NA(@DATA,2) K @TMP Q
+"RTN","RGSER",100,0)
+ S (@TMP,EXC)=$QS(DATA,3)
+"RTN","RGSER",101,0)
+ F LP=0:0 S LP=$O(@TMP@(LP)) Q:'LP  K:LP'=EXC @TMP@(LP)
+"RTN","RGSER",102,0)
+ Q
+"RTN","RGSER",103,0)
+ ; Return unique temp global reference
+"RTN","RGSER",104,0)
+ ; If X is specified, returns the temp global at that index.
+"RTN","RGSER",105,0)
+ ; Otherwise, returns the next available global reference.
+"RTN","RGSER",106,0)
+TMPGBL(X) ;
+"RTN","RGSER",107,0)
+ Q:$G(X) $NA(^TMP("RGSER",$J,X))
+"RTN","RGSER",108,0)
+ F  S X=$G(^TMP("RGSER",$J))+1,^($J)=X,X=$NA(^($J,X)) Q:'$D(@X)
+"RTN","RGSER",109,0)
+ Q X
+"RTN","RGSER",110,0)
+ ; Returns the presence of specified flag(s).
+"RTN","RGSER",111,0)
+ ; If ALL is true, presence of all flags are required.
+"RTN","RGSER",112,0)
+ ; If false (the default), only one flag must be present.
+"RTN","RGSER",113,0)
+HASFLAG(FLG,ALL) ;
+"RTN","RGSER",114,0)
+ N X,T
+"RTN","RGSER",115,0)
+ S ALL='$G(ALL),T=1
+"RTN","RGSER",116,0)
+ F X=1:1:$L(FLG) S T=FLAGS[$E(FLG,X) Q:T=ALL
+"RTN","RGSER",117,0)
+ Q T
+"RTN","RGSER",118,0)
+ ; Entry point for WebMan CGI call
+"RTN","RGSER",119,0)
+WEBMAN N DATA,URL,HOST
+"RTN","RGSER",120,0)
+ S DATA=$NA(^TMP(CIANS,$J)),CIASIZE=-1
+"RTN","RGSER",121,0)
+ S URL=$$ENV^CIANWCG("URL")
+"RTN","RGSER",122,0)
+ S HOST=$$CONCAT("http://"_$$ENV^CIANWCG("Host"),$P(URL,"/",1,3))
+"RTN","RGSER",123,0)
+ S URL=CIAMETH_" "_$P(URL,"/",4,9999)
+"RTN","RGSER",124,0)
+ K @DATA
+"RTN","RGSER",125,0)
+ D REST(.DATA,URL,HOST)
+"RTN","RGSER",126,0)
+ Q
+"RTN","RGSER",127,0)
+ ; Entry point for M Web Server
+"RTN","RGSER",128,0)
+MSERVER(DATA,ARGS) ;
+"RTN","RGSER",129,0)
+ N URL
+"RTN","RGSER",130,0)
+ S URL=HTTPREQ("method")_" "_HTTPREQ("path"),DATA("raw")=1
+"RTN","RGSER",131,0)
+ S:$L(HTTPREQ("query")) URL=URL_"?"_HTTPREQ("query")
+"RTN","RGSER",132,0)
+ M DATA("HDR")=HTTPREQ("header")
+"RTN","RGSER",133,0)
+ D REST(.DATA,URL,HTTPREQ("header","host"))
+"RTN","RGSER",134,0)
+ Q
+"RTN","RGSER",135,0)
+ ; Escape reserved characters
+"RTN","RGSER",136,0)
+ESCAPE(X) ;
+"RTN","RGSER",137,0)
+ N Y,Z,C,R,L
+"RTN","RGSER",138,0)
+ S R=$$ESCMAP^@DATA("INTF"),L=$P(R,U),R=$P(R,U,2)
+"RTN","RGSER",139,0)
+ F Z=1:1 S Y=$P($T(@L+Z^@R),";;",2) Q:'$L(Y)  D
+"RTN","RGSER",140,0)
+ .S C=$P(Y,";")
+"RTN","RGSER",141,0)
+ .S:$E(C)="#" C=$C(+$E(C,2,99))
+"RTN","RGSER",142,0)
+ .S:X[C X=$$SUBST^RGUT(X,C,$P(Y,";",2,9999))
+"RTN","RGSER",143,0)
+ Q X
+"RTN","RGSER",144,0)
+ ; Serialize a date.
+"RTN","RGSER",145,0)
+FMTDATE(DT) ;
+"RTN","RGSER",146,0)
+ Q $$FMTDATE^@(DATA("INTF"))(.DT)
+"RTN","RGSER",147,0)
+ ; Replace escaped characters in URL
+"RTN","RGSER",148,0)
+UNESCURL(X) ;
+"RTN","RGSER",149,0)
+ I X["%"!(X["+") D
+"RTN","RGSER",150,0)
+ .N P,C,H
+"RTN","RGSER",151,0)
+ .F P=1:1 S C=$E(X,P) Q:'$L(C)  D
+"RTN","RGSER",152,0)
+ ..I C="+" S $E(X,P)=" "
+"RTN","RGSER",153,0)
+ ..E  I C="%" S H=$E(X,P+1,P+2),$E(X,P,P+2)=$$UNHEX^XTHCUTL(H)
+"RTN","RGSER",154,0)
+ Q X
+"RTN","RGSER",155,0)
+ ; Concatenate array elements into a string
+"RTN","RGSER",156,0)
+ARY2STR(ARY,DLM) ;
+"RTN","RGSER",157,0)
+ N X,RES
+"RTN","RGSER",158,0)
+ S RES="",DLM=$G(DLM)
+"RTN","RGSER",159,0)
+ F X=0:0 S X=$O(ARY(X)) Q:'X  S RES=RES_$S($L(RES):DLM,1:"")_ARY(X)
+"RTN","RGSER",160,0)
+ Q RES
+"RTN","RGSER",161,0)
+ ; Returns true if error condition is set
+"RTN","RGSER",162,0)
+ISERR() Q +$G(DATA("ERROR"))
+"RTN","RGSER",163,0)
+ ; Reports an error status
+"RTN","RGSER",164,0)
+SETERR(CODE,TEXT) ;
+"RTN","RGSER",165,0)
+ S:$D(TEXT) $P(CODE,U,2)=TEXT
 "RTN","RGSER",166,0)
- Q
+ S DATA("ERROR")=CODE
 "RTN","RGSER",167,0)
- ; Unexpected error
+ D RESET
 "RTN","RGSER",168,0)
-ERROR D SETERR(500,$P($EC,",",2)),ENDREST,CLEANUP,^%ZTER,UNWIND^%ZTER
+ Q
 "RTN","RGSER",169,0)
- Q
+ ; Unexpected error
 "RTN","RGSER",170,0)
- ; Ends a REST response
+ERROR D SETERR(500,$P($EC,",",2)),ENDREST,CLEANUP,^%ZTER,UNWIND^%ZTER
 "RTN","RGSER",171,0)
-ENDREST(STATUS) ;
+ Q
 "RTN","RGSER",172,0)
- N LP,S
+ ; Ends a REST response
 "RTN","RGSER",173,0)
- S:$G(DATA("ERROR")) S=$TR(DATA("ERROR"),U," ")
+ENDREST(STATUS) ;
 "RTN","RGSER",174,0)
- D ADDHDR("HTTP/1.1 "_$G(STATUS,$G(S,"200 OK")))
+ N LP,S
 "RTN","RGSER",175,0)
- D ADDHDR("Date: "_$$DAT())
+ S:$G(DATA("ERROR")) S=$TR(DATA("ERROR"),U," ")
 "RTN","RGSER",176,0)
- D:$D(DATA("CTYPE"))#2 ADDHDR("Content-Type: "_DATA("CTYPE"))
+ D ADDHDR("HTTP/1.1 "_$G(STATUS,$G(S,"200 OK")))
 "RTN","RGSER",177,0)
- D ADDHDR("Content-Length: "_+$G(DATA("LEN")))
+ D ADDHDR("Date: "_$$DAT)
 "RTN","RGSER",178,0)
- I $G(DATA("SER")),'$G(DATA("ERROR")) D
+ D:$D(DATA("CTYPE"))#2 ADDHDR("Content-Type: "_DATA("CTYPE"))
 "RTN","RGSER",179,0)
- .F LP=0:0 S LP=$O(^RGSER(998.1,DATA("SER"),20,LP)) Q:'LP  S S=^(LP,0) D:$L(S) ADDHDR(S)
+ D ADDHDR("Content-Length: "_+$G(DATA("LEN")))
 "RTN","RGSER",180,0)
- D ADDHDR("")
+ I $G(DATA("SER")),'$G(DATA("ERROR")) D
 "RTN","RGSER",181,0)
- K DATA("ERROR")
+ .F LP=0:0 S LP=$O(^RGSER(998.1,DATA("SER"),20,LP)) Q:'LP  S S=^(LP,0) D:$L(S) ADDHDR(S)
 "RTN","RGSER",182,0)
- Q
+ D ADDHDR("")
 "RTN","RGSER",183,0)
- ; Add to output buffer
+ K DATA("ERROR")
 "RTN","RGSER",184,0)
-ADD(X) N Y
+ Q
 "RTN","RGSER",185,0)
- S:'$$ISERR Y=$O(@DATA@(""),-1)+1,@DATA@(Y)=X,DATA("LEN")=DATA("LEN")+$L(X),DATA("LAST")=Y
+ ; Add to output buffer
 "RTN","RGSER",186,0)
- Q
+ADD(X) N Y
 "RTN","RGSER",187,0)
- ; Replace buffer contents at specified index, adjusting content length accordingly.
+ S:'$$ISERR Y=$O(@DATA@(""),-1)+1,@DATA@(Y)=X,DATA("LEN")=DATA("LEN")+$L(X),DATA("LAST")=Y
 "RTN","RGSER",188,0)
-REPLACE(IDX,X) ;
+ Q
 "RTN","RGSER",189,0)
- N Y
+ ; Replace buffer contents at specified index, adjusting content length accordingly.
 "RTN","RGSER",190,0)
- S Y=$L(X)-$L(@DATA@(IDX)),@DATA@(IDX)=X,DATA("LEN")=DATA("LEN")+Y
+REPLACE(IDX,X) ;
 "RTN","RGSER",191,0)
- Q
-"RTN","RGSER",192,0)
- ; Add HTTP header to output buffer
-"RTN","RGSER",193,0)
-ADDHDR(X) ;
-"RTN","RGSER",194,0)
  N Y
+"RTN","RGSER",192,0)
+ S Y=$L(X)-$L(@DATA@(IDX)),@DATA@(IDX)=X,DATA("LEN")=DATA("LEN")+Y
+"RTN","RGSER",193,0)
+ Q
+"RTN","RGSER",194,0)
+ ; Add HTTP header to output buffer
 "RTN","RGSER",195,0)
- S Y=$O(@DATA@(0,""),-1)+1,@DATA@(0,Y)=X_$C(13,10)
+ADDHDR(X) ;
 "RTN","RGSER",196,0)
- Q
+ N Y
 "RTN","RGSER",197,0)
- ; Add array of values to output buffer.
+ S Y=$O(@DATA@(0,""),-1)+1,@DATA@(0,Y)=X_$C(13,10)
 "RTN","RGSER",198,0)
- ; AR may be by reference or indirection
+ Q
 "RTN","RGSER",199,0)
- ; FLG: B = encode as binary, L = add CRLF.
+ ; Add array of values to output buffer.
 "RTN","RGSER",200,0)
-ADDARY(AR,FLG) ;
+ ; AR may be by reference or indirection
 "RTN","RGSER",201,0)
- N LP,RT,VL,B,L
+ ; FLG: B = encode as binary, L = add CRLF.
 "RTN","RGSER",202,0)
- S RT=$S($D(AR)=1:AR,1:$NA(AR)),FLG=$G(FLG),B=FLG["B",L=$S(FLG["L":$C(13,10),1:"")
+ADDARY(AR,FLG) ;
 "RTN","RGSER",203,0)
- D ADDTXT(RT,L):'B,ADDBIN(RT,L):B
+ N LP,RT,VL,B,L
 "RTN","RGSER",204,0)
- Q
+ S RT=$S($D(AR)=1:AR,1:$NA(AR)),FLG=$G(FLG),B=FLG["B",L=$S(FLG["L":$C(13,10),1:"")
 "RTN","RGSER",205,0)
-ADDTXT(RT,L) ;
+ D ADDTXT(RT,L):'B,ADDBIN(RT,L):B
 "RTN","RGSER",206,0)
- N LP
+ Q
 "RTN","RGSER",207,0)
- S LP=""
+ADDTXT(RT,L) ;
 "RTN","RGSER",208,0)
- F  S LP=$O(@RT@(LP)) Q:'$L(LP)  D
+ N LP
 "RTN","RGSER",209,0)
- .D ADD($$ESCAPE(@RT@(LP)_L))
+ S LP=""
 "RTN","RGSER",210,0)
- Q
-"RTN","RGSER",211,0)
-ADDBIN(RT,L) ;
-"RTN","RGSER",212,0)
- N X,Z,VL,LP,I
-"RTN","RGSER",213,0)
- S Z="=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",(VL,LP,X)=""
-"RTN","RGSER",214,0)
  F  S LP=$O(@RT@(LP)) Q:'$L(LP)  D
-"RTN","RGSER",215,0)
- .S X=X_@RT@(LP)_L
-"RTN","RGSER",216,0)
- .F  Q:$L(X)<3  D
-"RTN","RGSER",217,0)
- ..S VL=VL_$$B64ENC($E(X,1,3)),X=$E(X,4,9999)
-"RTN","RGSER",218,0)
- .I $L(VL)>131 D ADD(VL) S VL=""
-"RTN","RGSER",219,0)
- S:$L(X) VL=VL_$$B64ENC(X)
-"RTN","RGSER",220,0)
- D:$L(VL) ADD(VL)
-"RTN","RGSER",221,0)
+"RTN","RGSER",211,0)
+ .D ADD($$ESCAPE(@RT@(LP)_L))
+"RTN","RGSER",212,0)
  Q
+"RTN","RGSER",213,0)
+ADDBIN(RT,L) ;
+"RTN","RGSER",214,0)
+ N X,Z,VL,LP,I
+"RTN","RGSER",215,0)
+ S Z="=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",(VL,LP,X)=""
+"RTN","RGSER",216,0)
+ F  S LP=$O(@RT@(LP)) Q:'$L(LP)  D
+"RTN","RGSER",217,0)
+ .S X=X_@RT@(LP)_L
+"RTN","RGSER",218,0)
+ .F  Q:$L(X)<3  D
+"RTN","RGSER",219,0)
+ ..S VL=VL_$$B64ENC($E(X,1,3)),X=$E(X,4,9999)
+"RTN","RGSER",220,0)
+ .I $L(VL)>131 D ADD(VL) S VL=""
+"RTN","RGSER",221,0)
+ S:$L(X) VL=VL_$$B64ENC(X)
 "RTN","RGSER",222,0)
- ; Encode input as Base 64
+ D:$L(VL) ADD(VL)
 "RTN","RGSER",223,0)
-B64ENC(X) N Z1,Z2,Z3,Z4
+ Q
 "RTN","RGSER",224,0)
- S Z3=0,Z1=""
+ ; Encode input as Base 64
 "RTN","RGSER",225,0)
- F Z4=1:1:3 S Z2=$A(X,Z4),Z3=Z3*256+$S(Z2<0:0,1:Z2)
+B64ENC(X) N Z1,Z2,Z3,Z4
 "RTN","RGSER",226,0)
- F Z4=1:1:4 S Z1=$E(Z,Z3#64+2)_Z1,Z3=Z3\64
+ S Z3=0,Z1=""
 "RTN","RGSER",227,0)
- Q Z1
+ F Z4=1:1:3 S Z2=$A(X,Z4),Z3=Z3*256+$S(Z2<0:0,1:Z2)
 "RTN","RGSER",228,0)
- ; Return table # given name
+ F Z4=1:1:4 S Z1=$E(Z,Z3#64+2)_Z1,Z3=Z3\64
 "RTN","RGSER",229,0)
-TABLE(T) Q $S(T=+T:T,1:+$O(^DIC("B",TABLE,0)))
+ Q Z1
 "RTN","RGSER",230,0)
- ; Format system attribute
+ ; Return table # given name
 "RTN","RGSER",231,0)
-SYSTEM(SYSTEM) ;
+TABLE(T) Q $S(T=+T:T,1:+$O(^DIC("B",TABLE,0)))
 "RTN","RGSER",232,0)
- N PATH
+ ; Format system attribute
 "RTN","RGSER",233,0)
- S:'($D(SYSTEM)#10) SYSTEM="@"
+SYSTEM(SYSTEM) ;
 "RTN","RGSER",234,0)
- S PATH=$P(SYSTEM,"/",2,999),SYSTEM=$P(SYSTEM,"/")
+ N PATH
 "RTN","RGSER",235,0)
- S:$E(SYSTEM)="#" SYSTEM="@"_$TR($P(^DIC($E(SYSTEM,2,9999),0),U)," /","__")
+ S:'($D(SYSTEM)#10) SYSTEM="@"
 "RTN","RGSER",236,0)
- S:$E(SYSTEM)="@" SYSTEM=$$LOCALSYS($E(SYSTEM,2,9999))
+ S PATH=$P(SYSTEM,"/",2,999),SYSTEM=$P(SYSTEM,"/")
 "RTN","RGSER",237,0)
- Q SYSTEM_$S($L(PATH):"/"_PATH,1:"")
+ S:$E(SYSTEM)="#" SYSTEM="@"_$TR($P(^DIC($E(SYSTEM,2,9999),0),U)," /","__")
 "RTN","RGSER",238,0)
- ; Returns the host url
+ S:$E(SYSTEM)="@" SYSTEM=$$LOCALSYS($E(SYSTEM,2,9999))
 "RTN","RGSER",239,0)
-HOST(PATH) ;
+ Q SYSTEM_$S($L(PATH):"/"_PATH,1:"")
 "RTN","RGSER",240,0)
- S PATH=$G(PATH)
+ ; Returns the host url
 "RTN","RGSER",241,0)
- S:$E(PATH)="*" PATH=DATA("SERNM")_$E(PATH,2,9999)
+HOST(PATH) ;
 "RTN","RGSER",242,0)
- Q $$CONCAT($G(DATA("HOST"),"http://broker/"),PATH)
+ S PATH=$G(PATH)
 "RTN","RGSER",243,0)
- ; Prepend local system root to path
+ S:$E(PATH)="*" PATH=DATA("SERNM")_$E(PATH,2,9999)
 "RTN","RGSER",244,0)
-LOCALSYS(PATH) ;
+ Q $$CONCAT($G(DATA("HOST"),"http://broker/"),PATH)
 "RTN","RGSER",245,0)
- Q $$CONCAT("http://"_$$LOW^XLFSTR($$KSP^XUPARAM("WHERE")),.PATH)
+ ; Prepend local system root to path
 "RTN","RGSER",246,0)
- ; Concatenate path to url.
+LOCALSYS(PATH) ;
 "RTN","RGSER",247,0)
-CONCAT(URL,PATH) ;
+ Q $$CONCAT("http://"_$$LOW^XLFSTR($$KSP^XUPARAM("WHERE")),.PATH)
 "RTN","RGSER",248,0)
- Q:'$D(PATH) URL
+ ; Concatenate path to url.
 "RTN","RGSER",249,0)
- F  Q:$E(URL,$L(URL))'="/"  S $E(URL,$L(URL))=""
+CONCAT(URL,PATH) ;
 "RTN","RGSER",250,0)
- F  Q:$E(PATH)'="/"  S $E(PATH)=""
+ Q:'$D(PATH) URL
 "RTN","RGSER",251,0)
- Q URL_"/"_PATH
+ F  Q:$E(URL,$L(URL))'="/"  S $E(URL,$L(URL))=""
 "RTN","RGSER",252,0)
-SYSUUID() ; Return UUID for this system
+ F  Q:$E(PATH)'="/"  S $E(PATH)=""
 "RTN","RGSER",253,0)
- S:'$L($G(^RGSER("SYS"))) ^("SYS")=$$UUID
+ Q URL_"/"_PATH
 "RTN","RGSER",254,0)
- Q ^("SYS")
+SYSUUID() ; Return UUID for this system
 "RTN","RGSER",255,0)
- ; Generates a random UUID using $H as a seed.
+ S:'$L($G(^RGSER("SYS"))) ^("SYS")=$$UUID
 "RTN","RGSER",256,0)
-UUID() N R,I,N,S
+ Q ^("SYS")
 "RTN","RGSER",257,0)
- S (R,N)="",S=+$TR($H,",")
+ ; Generates a random UUID using $H as a seed.
 "RTN","RGSER",258,0)
- F  S N=N_$R(S) Q:$L(N)>64
+UUID() N R,I,N,S
 "RTN","RGSER",259,0)
- F I=1:2:64 S R=R_$E("0123456789abcdef",$E(N,I,I+1)#16+1)
+ S (R,N)="",S=+$TR($H,",")
 "RTN","RGSER",260,0)
- Q $E(R,1,8)_"-"_$E(R,9,12)_"-4"_$E(R,14,16)_"-"_$E("89ab",$E(N,17)#4+1)_$E(R,18,20)_"-"_$E(R,21,32)
+ F  S N=N_$R(S) Q:$L(N)>64
 "RTN","RGSER",261,0)
- ; Date (format per RFC 1123)
+ F I=1:2:64 S R=R_$E("0123456789abcdef",$E(N,I,I+1)#16+1)
 "RTN","RGSER",262,0)
-DAT() N X,Y,TZ,H,M
+ Q $E(R,1,8)_"-"_$E(R,9,12)_"-4"_$E(R,14,16)_"-"_$E("89ab",$E(N,17)#4+1)_$E(R,18,20)_"-"_$E(R,21,32)
 "RTN","RGSER",263,0)
- S X=$$NOW^XLFDT,TZ=$$TZ^XLFDT,H=+$E(TZ,2,3),M=+$E(TZ,4,5),Y=$S(TZ<0:1,1:-1)
+ ; Date (format per RFC 1123)
 "RTN","RGSER",264,0)
- S X=$$FMADD^XLFDT(X,0,H*Y,M*Y,0)
+DAT() N X,Y,TZ,H,M
 "RTN","RGSER",265,0)
- Q $$FMTDATE^RGUTDATF(X,"EEE, dd MMM YYYY HH:mm:ss 'GMT'")
+ S X=$$NOW^XLFDT,TZ=$$TZ^XLFDT,H=+$E(TZ,2,3),M=+$E(TZ,4,5),Y=$S(TZ<0:1,1:-1)
 "RTN","RGSER",266,0)
- ; Returns true if path matches specified pattern
+ S X=$$FMADD^XLFDT(X,0,H*Y,M*Y,0)
 "RTN","RGSER",267,0)
-ISMATCH(PATH,PTRN) ;
+ Q $$FMTDATE^RGUTDATF(X,"EEE, dd MMM YYYY HH:mm:ss 'GMT'")
 "RTN","RGSER",268,0)
- Q $TR(PATH,"-_","XX")?@PTRN
+ ; Returns true if path matches specified pattern
 "RTN","RGSER",269,0)
- ; Returns true if content type matches an accepted type
+ISMATCH(PATH,PTRN) ;
 "RTN","RGSER",270,0)
-ISTYPE(MTYPE,ACCPT) ;
+ Q $TR(PATH,"-_","XX")?@PTRN
 "RTN","RGSER",271,0)
- Q:'$L(ACCPT) 1
+ ; Returns nonzero if content type matches an accepted type
 "RTN","RGSER",272,0)
- Q:ACCPT["*/*" 1
+ISTYPE(MTYPE,ACCPT) ;
 "RTN","RGSER",273,0)
- Q:ACCPT[MTYPE 1
+ N AT,LP,MT,R,X,Q
 "RTN","RGSER",274,0)
- Q:ACCPT[($P(MTYPE,"/")_"/*") 1
+ S ACCPT=$TR(ACCPT," "),MTYPE=$TR(MTYPE," ")
 "RTN","RGSER",275,0)
- Q:ACCPT[("*/"_$P(MTYPE,"/",2)) 1
+ F LP=1:1:$L(ACCPT,",") D
 "RTN","RGSER",276,0)
- Q 0
+ .S X=$P(ACCPT,",",LP),Q=$P(X,";",2),X=$P(X,";")
 "RTN","RGSER",277,0)
- ; Convert to pattern (Used by APTRN xref)
+ .S Q=$S($E(Q,1,2)="q=":+$E(Q,3,99),1:1)
 "RTN","RGSER",278,0)
-TOPTRN(NM) ;
+ .S:$L(X) AT(Q,X)=""
 "RTN","RGSER",279,0)
- N P,C,X,L
+ Q:'$D(AT) 1
 "RTN","RGSER",280,0)
- S (L,P)=""
+ S Q=""
 "RTN","RGSER",281,0)
- F X=1:1:$L(NM) D
+ F  S Q=$O(AT(Q),-1) Q:'Q  D  Q:$D(R)
 "RTN","RGSER",282,0)
- .S C=$E(NM,X)
+ .S AT=""
 "RTN","RGSER",283,0)
- .I C="*" D TOPTRN2("1.AN") Q
+ .F  S AT=$O(AT(Q,AT)) Q:'$L(AT)  D  Q:$D(R)
 "RTN","RGSER",284,0)
- .I C="#" D TOPTRN2("1.N") Q
+ ..I AT="*/*" S R=Q Q
 "RTN","RGSER",285,0)
- .S L=L_C
+ ..F LP=1:1:$L(MTYPE,",") D  Q:$D(R)
 "RTN","RGSER",286,0)
- D:$L(P) TOPTRN2("")
+ ...S MT=$P(MTYPE,",",LP)
 "RTN","RGSER",287,0)
- Q P
+ ...I AT=MT S R=Q Q
 "RTN","RGSER",288,0)
-TOPTRN2(X) ;
+ ...I AT["/*",$P(AT,"/")=$P(MT,"/") S R=Q Q
 "RTN","RGSER",289,0)
- S:$L(L) P=P_"1"""_L_"""",L=""
+ ...I AT["*/",$P(AT,"/",2)=$P(MT,"/",2) S R=Q Q
 "RTN","RGSER",290,0)
- S P=P_X
+ Q $S($D(R):R,1:0)
 "RTN","RGSER",291,0)
+ ; Returns true if request came from a browser
+"RTN","RGSER",292,0)
+ISBROWSR() ;
+"RTN","RGSER",293,0)
+ Q $G(DATA("HDR","user-agent"))["Mozilla"
+"RTN","RGSERDD")
+0^12^B1284479
+"RTN","RGSERDD",1,0)
+RGSERDD ;RI/CBMI/DKM - Data dictionary logic ;10-Mar-2015 21:45;DKM
+"RTN","RGSERDD",2,0)
+ ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 155
+"RTN","RGSERDD",3,0)
+ ;=================================================================
+"RTN","RGSERDD",4,0)
+ ; Convert to pattern (Used by B xref of 998.11:.01)
+"RTN","RGSERDD",5,0)
+TOPTRN(NM) ;
+"RTN","RGSERDD",6,0)
+ N P,C,X,L
+"RTN","RGSERDD",7,0)
+ S (L,P)=""
+"RTN","RGSERDD",8,0)
+ F X=1:1:$L(NM) D
+"RTN","RGSERDD",9,0)
+ .S C=$E(NM,X)
+"RTN","RGSERDD",10,0)
+ .I C="*" D TOPTRN2("1.AN") Q
+"RTN","RGSERDD",11,0)
+ .I C="#" D TOPTRN2("1.N") Q
+"RTN","RGSERDD",12,0)
+ .S L=L_C
+"RTN","RGSERDD",13,0)
+ D:$L(P) TOPTRN2("")
+"RTN","RGSERDD",14,0)
+ Q P
+"RTN","RGSERDD",15,0)
+TOPTRN2(X) ;
+"RTN","RGSERDD",16,0)
+ S:$L(L) P=P_"1"""_L_"""",L=""
+"RTN","RGSERDD",17,0)
+ S P=P_X
+"RTN","RGSERDD",18,0)
+ Q
+"RTN","RGSERDD",19,0)
+ ; Input transform for 998.12:10
+"RTN","RGSERDD",20,0)
+ITXCTRL(X,DA) ;
+"RTN","RGSERDD",21,0)
+ I '$L(X)!($L(X)>250) K X Q
+"RTN","RGSERDD",22,0)
+ N TYPE
+"RTN","RGSERDD",23,0)
+ S TYPE=$P($G(^RGSER(998.1,DA(2),10,DA(1),30,DA,0)),U,3)
+"RTN","RGSERDD",24,0)
+ I '$L(TYPE) K X Q
+"RTN","RGSERDD",25,0)
+ I TYPE="C" D ^DIM Q
+"RTN","RGSERDD",26,0)
+ I TYPE="T" K:'$O(^RGSER(998.1,DA(2),10,DA(1),50,"B",X,0)) X Q
+"RTN","RGSERDD",27,0)
+ I "NSW"[TYPE Q
+"RTN","RGSERDD",28,0)
+ I "IOM"[TYPE D  Q
+"RTN","RGSERDD",29,0)
+ .N DATA
+"RTN","RGSERDD",30,0)
+ .S DATA="DATA",DATA("SER")=DA(2),DATA("SERNM")=$P(^RGSER(998.1,DA(2),0),U)
+"RTN","RGSERDD",31,0)
+ .K:'$L($$GETSER^RGSERGET(X,.DATA)) X
+"RTN","RGSERDD",32,0)
+ K X
+"RTN","RGSERDD",33,0)
  Q
 "RTN","RGSERENC")
 0^4^B491499
 "RTN","RGSERENC",1,0)
 RGSERENC ;RI/CBMI/DKM - Encounter Resource Support ;05-Mar-2015 13:26;DKM
 "RTN","RGSERENC",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 155
 "RTN","RGSERENC",3,0)
  ;=================================================================
 "RTN","RGSERENC",4,0)
@@ -17291,11 +17939,11 @@ RETRIEVE(IEN) ;
 "RTN","RGSERENC",14,0)
  Q
 "RTN","RGSERGET")
-0^11^B119521048
+0^11^B133238487
 "RTN","RGSERGET",1,0)
-RGSERGET ;RI/CBMI/DKM - GET method support ;06-Mar-2015 10:25;DKM
+RGSERGET ;RI/CBMI/DKM - GET method support ;15-Mar-2015 14:18;DKM
 "RTN","RGSERGET",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 155
 "RTN","RGSERGET",3,0)
  ;=================================================================
 "RTN","RGSERGET",4,0)
@@ -17327,7 +17975,7 @@ RGSERGET ;RI/CBMI/DKM - GET method support ;06-Mar-2015 10:25;DKM
 "RTN","RGSERGET",17,0)
 GET(DATA,PATH,SLCT,PNAME,PARAMS,FLAGS) ;
 "RTN","RGSERGET",18,0)
- N RTN,TOP,IEN,IENS,FILE,SER,TP,XSER,XRET,MAX,ID,SER,INTRNL,X
+ N RTN,TOP,IEN,IENS,FILE,SER,TP,XSER,XRDR,MAX,ID,SER,INTRNL,X
 "RTN","RGSERGET",19,0)
  S:$E(PATH)="/" PATH=$E(PATH,2,9999)
 "RTN","RGSERGET",20,0)
@@ -17337,7 +17985,7 @@ GET(DATA,PATH,SLCT,PNAME,PARAMS,FLAGS) ;
 "RTN","RGSERGET",22,0)
  S TOP='DATA("CNT"),FLAGS=$G(FLAGS),PNAME=$G(PNAME),SLCT=$G(SLCT)
 "RTN","RGSERGET",23,0)
- S N0=$G(@SER@(0)),XSER=$G(^(10)),XRET=$G(^(20)),INTRNL=+$P(N0,U,2),FILE=+$P(N0,U,3),IENS="",TP=-1
+ S N0=$G(@SER@(0)),XSER=$G(^(10)),XRDR=$G(^(20)),INTRNL=+$P(N0,U,2),FILE=+$P(N0,U,3),IENS="",TP=-1
 "RTN","RGSERGET",24,0)
  I $D(SLCT)=1,'$L(SLCT) D                                              ; No selector
 "RTN","RGSERGET",25,0)
@@ -17425,17 +18073,17 @@ BYIEN N LP,PROP,PARM,FLD,VALS
 "RTN","RGSERGET",66,0)
  S (ID,IEN)=SLCT
 "RTN","RGSERGET",67,0)
- I FILE!$L(XRET) D  Q:$$ISERR^RGSER  I '$$FILTER D:'$$HASFLAG^RGSER("L") SETERR^RGSER(404,"Not found") Q
+ I FILE!$L(XRDR) D  Q:$$ISERR^RGSER  I '$$FILTER D:'$$HASFLAG^RGSER("L") SETERR^RGSER(404,"Not found") Q
 "RTN","RGSERGET",68,0)
  .S IENS=IEN_","
 "RTN","RGSERGET",69,0)
  .D BLDFLDS(FILE,.PROP,.FLD),BLDFLDS(FILE,.PARM,.FLD)
 "RTN","RGSERGET",70,0)
- .I $L(FLD(0)) D
+ .I $L($G(FLD(0))) D
 "RTN","RGSERGET",71,0)
  ..N ERR
 "RTN","RGSERGET",72,0)
- ..X XRET
+ ..X XRDR
 "RTN","RGSERGET",73,0)
  ..I FILE D
 "RTN","RGSERGET",74,0)
@@ -17521,151 +18169,151 @@ PROCPROP N LP,SQ
 "RTN","RGSERGET",114,0)
  ..D EXTRP(.PROP,LP)
 "RTN","RGSERGET",115,0)
- ..I TP="M" D PROPM Q
+ ..Q:TP="N"
 "RTN","RGSERGET",116,0)
- ..D:$L(TP) @("PROP"_TP)^@DATA("INTF")
+ ..I TP="M" D PROPM Q
 "RTN","RGSERGET",117,0)
- Q
+ ..I TP="T" D PROPT Q
 "RTN","RGSERGET",118,0)
- ; Process a multiple field
+ ..D:$L(TP) @("PROP"_TP)^@DATA("INTF")
 "RTN","RGSERGET",119,0)
-PROPM D GET(.DATA,CTL,","_IEN,PN,,"M")
+ Q
 "RTN","RGSERGET",120,0)
- Q
+ ; Process a multiple field
 "RTN","RGSERGET",121,0)
- ; Extracts property values
+PROPM D GET(.DATA,CTL,","_IEN,PN,,"M")
 "RTN","RGSERGET",122,0)
-EXTRP(SRC,LP) ;
+ Q
 "RTN","RGSERGET",123,0)
- N X,Y,Z,P
+ ; Process a template property
 "RTN","RGSERGET",124,0)
- S X=SRC(LP,0),PN=$P(X,U),FN=$P(X,U,2),TP=$P(X,U,3),CTL=$G(SRC(LP,10)),PN(-1)=$TR(PN,"\")
+PROPT D TEMPLATE(CTL)
 "RTN","RGSERGET",125,0)
- I PN[":" D
+ Q
 "RTN","RGSERGET",126,0)
- .S Y=0,P=""
+ ; Extracts property values
 "RTN","RGSERGET",127,0)
- .F X=1:1:$L(PN,":") D
+EXTRP(SRC,LP) ;
 "RTN","RGSERGET",128,0)
- ..S Z=$P(PN,":",X)
+ N X,Y,Z,P
 "RTN","RGSERGET",129,0)
- ..I $E(Z,$L(Z))="\" S P=$E(Z,1,$L(Z)-1)_":" Q
+ S X=SRC(LP,0),PN=$P(X,U),FN=$P(X,U,2),TP=$P(X,U,3),CTL=$G(SRC(LP,10))
 "RTN","RGSERGET",130,0)
- ..S PN(Y)=P_Z,Y=Y+1,P=""
+ S PN(0)=$P(PN,"!",2,9999),PN=$P(PN,"!")
 "RTN","RGSERGET",131,0)
- .S:$L(P) PN(Y)=P
-"RTN","RGSERGET",132,0)
- .S PN=PN(0)
-"RTN","RGSERGET",133,0)
  F X=1:1:$L(FN,",") D
-"RTN","RGSERGET",134,0)
+"RTN","RGSERGET",132,0)
  .S Y=$P(FN,",",X)
-"RTN","RGSERGET",135,0)
+"RTN","RGSERGET",133,0)
  .I $L(Y) D
-"RTN","RGSERGET",136,0)
+"RTN","RGSERGET",134,0)
  ..S VALS(FILE,IENS,Y)=$L($G(VALS(FILE,IENS,Y,"I")))
-"RTN","RGSERGET",137,0)
+"RTN","RGSERGET",135,0)
  ..M:X=1 VL=VALS(FILE,IENS,Y)
-"RTN","RGSERGET",138,0)
+"RTN","RGSERGET",136,0)
  ..M:X>1 VL(X)=VALS(FILE,IENS,Y)
-"RTN","RGSERGET",139,0)
+"RTN","RGSERGET",137,0)
  Q
-"RTN","RGSERGET",140,0)
+"RTN","RGSERGET",138,0)
  ; Lookup serializer for path and content type
-"RTN","RGSERGET",141,0)
+"RTN","RGSERGET",139,0)
 GETSER(PATH,DATA) ;
-"RTN","RGSERGET",142,0)
- N SER,SERNM,START,LEN,LP,MATCH,MTYPE,PTRN,BADTP,ACCPT,REJECT,D1,D2,N0
-"RTN","RGSERGET",143,0)
+"RTN","RGSERGET",140,0)
+ N SER,SERNM,START,LEN,LP,MATCH,MTYPE,PTRN,WT,MWT,ACCPT,REJECT,D1,D2,N0
+"RTN","RGSERGET",141,0)
  S SERNM=$P(PATH,"/"),START=$P(PATH,"/",2),PATH=$P(PATH,"/",2,999)
-"RTN","RGSERGET",144,0)
- S LEN=$L(START),ACCPT=$G(DATA("HDR","accept")),(MATCH,REJECT)=0,SER=+$G(DATA("SER"))
-"RTN","RGSERGET",145,0)
+"RTN","RGSERGET",142,0)
+ S LEN=$L(START),ACCPT=$G(DATA("HDR","accept")),(MATCH,REJECT)=0,SER=+$G(DATA("SER")),MWT=0
+"RTN","RGSERGET",143,0)
  I SER,SERNM="*" S SERNM=DATA("SERNM")
-"RTN","RGSERGET",146,0)
+"RTN","RGSERGET",144,0)
+ I SER,SERNM'=DATA("SERNM") S SERNM=""
+"RTN","RGSERGET",145,0)
  I $L(SERNM),LEN F D1=0:0 S D1=$S(SER:SER,1:$O(^RGSER(998.1,"B",SERNM,D1))) Q:'D1  D GS1  Q:MATCH!SER
-"RTN","RGSERGET",147,0)
+"RTN","RGSERGET",146,0)
  I MATCH D  Q N0
+"RTN","RGSERGET",147,0)
+ .S:'SER N0=^RGSER(998.1,D1,0),DATA("CTYPE")=$P($P(N0,U,2),","),DATA("INTF")=$P(N0,U,3),DATA("VER")=$P(N0,U,4),DATA("SER")=D1,DATA("SERNM")=SERNM
 "RTN","RGSERGET",148,0)
- .S:'SER N0=^RGSER(998.1,D1,0),DATA("CTYPE")=$P(N0,U,2),DATA("INTF")=$P(N0,U,3),DATA("SER")=D1,DATA("SERNM")=SERNM
-"RTN","RGSERGET",149,0)
  .S N0=$NA(^RGSER(998.1,D1,10,D2))
-"RTN","RGSERGET",150,0)
+"RTN","RGSERGET",149,0)
  D SETERR^RGSER($S('REJECT:"404^Not Found",1:"406^Not acceptable"))
-"RTN","RGSERGET",151,0)
+"RTN","RGSERGET",150,0)
  Q ""
+"RTN","RGSERGET",151,0)
+GS1 S LP=START,MATCH=0,MTYPE=$P(^RGSER(998.1,D1,0),U,2),WT=$$ISTYPE^RGSER(MTYPE,ACCPT)
 "RTN","RGSERGET",152,0)
-GS1 S LP=START,MATCH=0,MTYPE=$P(^RGSER(998.1,D1,0),U,2),BADTP='$$ISTYPE^RGSER(MTYPE,ACCPT)
+ S:'WT REJECT=1
 "RTN","RGSERGET",153,0)
- F  D  Q:MATCH  S LP=$O(^RGSER(998.1,D1,10,"B",LP)) Q:$E(LP,1,LEN)'=START
+ Q:'WT!(WT'>MWT)
 "RTN","RGSERGET",154,0)
- .F D2=0:0 S D2=$O(^RGSER(998.1,D1,10,"B",LP,D2)) Q:'D2  S PTRN=^(D2) D  Q:MATCH
+ S MWT=WT
 "RTN","RGSERGET",155,0)
- ..S MATCH=$S($L(PTRN):$$ISMATCH^RGSER(PATH,PTRN),1:LP=PATH)
+ F  D  Q:MATCH  S LP=$O(^RGSER(998.1,D1,10,"B",LP)) Q:$E(LP,1,LEN)'=START
 "RTN","RGSERGET",156,0)
- ..I MATCH,BADTP S REJECT=1,MATCH=0
+ .F D2=0:0 S D2=$O(^RGSER(998.1,D1,10,"B",LP,D2)) Q:'D2  S PTRN=^(D2) D  Q:MATCH
 "RTN","RGSERGET",157,0)
- Q
+ ..S MATCH=$S($L(PTRN):$$ISMATCH^RGSER(PATH,PTRN),1:LP=PATH)
 "RTN","RGSERGET",158,0)
- ; Build the list of fields to retrieve from
+ Q
 "RTN","RGSERGET",159,0)
- ; property or parameter list.
+ ; Build the list of fields to retrieve from
 "RTN","RGSERGET",160,0)
-BLDFLDS(FILE,SRC,FLD) ;
+ ; property or parameter list.
 "RTN","RGSERGET",161,0)
- N PC,LP,FN,FN1,FN2,FNS
+BLDFLDS(FILE,SRC,FLD) ;
 "RTN","RGSERGET",162,0)
- F LP=0:0 S LP=$O(SRC(LP)) Q:'LP  D
+ N PC,LP,FN,FN1,FN2,FNS
 "RTN","RGSERGET",163,0)
- .S FNS=$P(SRC(LP,0),U,2)
+ F LP=0:0 S LP=$O(SRC(LP)) Q:'LP  D
 "RTN","RGSERGET",164,0)
- .F PC=1:1:$L(FNS,",") D
+ .S FNS=$P(SRC(LP,0),U,2)
 "RTN","RGSERGET",165,0)
- ..S FN=$P(FNS,",",PC),FN1=$P(FN,"~"),FN2=$P(FN,"~",2)
+ .F PC=1:1:$L(FNS,",") D
 "RTN","RGSERGET",166,0)
- ..D:$L(FN2) BLDFLD($$PTRTGT(FILE,FN1),FN1,FN2,.FLD)
+ ..S FN=$P(FNS,",",PC),FN1=$P(FN,"~"),FN2=$P(FN,"~",2)
 "RTN","RGSERGET",167,0)
- ..D:$L(FN1) BLDFLD(FILE,0,FN1,.FLD)
+ ..D:$L(FN2) BLDFLD($$PTRTGT(FILE,FN1),FN1,FN2,.FLD)
 "RTN","RGSERGET",168,0)
- Q
+ ..D:$L(FN1) BLDFLD(FILE,0,FN1,.FLD)
 "RTN","RGSERGET",169,0)
-BLDFLD(FILE,SB,FN,FLD) ;
-"RTN","RGSERGET",170,0)
- Q:$E(FN)["@"
-"RTN","RGSERGET",171,0)
- I FILE,FN'=+FN S FN=$$FLDNUM^DILFD(FILE,FN)
-"RTN","RGSERGET",172,0)
- S FLD(SB)=$G(FLD(SB)),FLD(SB,0)=FILE
-"RTN","RGSERGET",173,0)
- S:'$D(FLD(SB,FN)) FLD(SB)=FLD(SB)_$S($L(FLD(SB)):";",1:"")_FN,FLD(SB,FN)=1
-"RTN","RGSERGET",174,0)
  Q
+"RTN","RGSERGET",170,0)
+BLDFLD(FILE,SB,FN,FLD) ;
+"RTN","RGSERGET",171,0)
+ Q:$E(FN)["@"
+"RTN","RGSERGET",172,0)
+ I FILE,FN'=+FN S FN=$$FLDNUM^DILFD(FILE,FN)
+"RTN","RGSERGET",173,0)
+ S FLD(SB)=$G(FLD(SB)),FLD(SB,0)=FILE
+"RTN","RGSERGET",174,0)
+ S:'$D(FLD(SB,FN)) FLD(SB)=FLD(SB)_$S($L(FLD(SB)):";",1:"")_FN,FLD(SB,FN)=1
 "RTN","RGSERGET",175,0)
- ; Get target file of pointer
+ Q
 "RTN","RGSERGET",176,0)
-PTRTGT(FILE,FLD) ;
+ ; Get target file of pointer
 "RTN","RGSERGET",177,0)
- N X
+PTRTGT(FILE,FLD) ;
 "RTN","RGSERGET",178,0)
- S X=$$GET1^DID(FILE,FLD,,"POINTER")
+ N X
 "RTN","RGSERGET",179,0)
- Q +$S($L(X):$P(@(U_X_"0)"),U,2),1:0)
+ S X=$$GET1^DID(FILE,FLD,,"POINTER")
 "RTN","RGSERGET",180,0)
- ; Search/filter logic.  Returns true if successful match.
+ Q +$S($L(X):$P(@(U_X_"0)"),U,2),1:0)
 "RTN","RGSERGET",181,0)
-FILTER() N LP,SQ,PR,MATCH
+ ; Search/filter logic.  Returns true if successful match.
 "RTN","RGSERGET",182,0)
- S MATCH=1
+FILTER() N LP,SQ,PR,MATCH
 "RTN","RGSERGET",183,0)
- F SQ=0:0 Q:'MATCH  S SQ=$O(PARM("ASEQ",SQ)) Q:'SQ  D
+ S MATCH=1
 "RTN","RGSERGET",184,0)
- .F LP=0:0 Q:'MATCH  S LP=$O(PARM("ASEQ",SQ,LP)) Q:'LP  D
+ F SQ=0:0 Q:'MATCH  S SQ=$O(PARM("ASEQ",SQ)) Q:'SQ  D
 "RTN","RGSERGET",185,0)
- ..N PN,PN1,PN2,FN,TP,VL,CTL
+ .F LP=0:0 Q:'MATCH  S LP=$O(PARM("ASEQ",SQ,LP)) Q:'LP  D
 "RTN","RGSERGET",186,0)
- ..D EXTRP(.PARM,LP)
+ ..N PN,PN1,PN2,FN,TP,VL,CTL
 "RTN","RGSERGET",187,0)
- ..S PN=PN(-1)
+ ..D EXTRP(.PARM,LP)
 "RTN","RGSERGET",188,0)
  ..I PN="@selector" X CTL Q
 "RTN","RGSERGET",189,0)
@@ -17883,177 +18531,229 @@ EXTOPR(ALLOWED,DFLT) ;
 "RTN","RGSERGET",295,0)
  Q
 "RTN","RGSERGET",296,0)
- ; Serializes a date value by calling active serializer interface
-"RTN","RGSERGET",297,0)
-FMTDATE(DT) ;
-"RTN","RGSERGET",298,0)
- S @("DT=$$FMTDATE^"_DATA("INTF")_"(.DT)")
-"RTN","RGSERGET",299,0)
- Q DT
-"RTN","RGSERGET",300,0)
  ; Creates a new instance of an iterator
-"RTN","RGSERGET",301,0)
+"RTN","RGSERGET",297,0)
  ; EP = entry point (tag or tag^routine)
-"RTN","RGSERGET",302,0)
+"RTN","RGSERGET",298,0)
  ; Note: entry point will be invoked immediately via a DO
-"RTN","RGSERGET",303,0)
+"RTN","RGSERGET",299,0)
  ; to permit initialization.
-"RTN","RGSERGET",304,0)
+"RTN","RGSERGET",300,0)
 NEWITER(EP) ;
-"RTN","RGSERGET",305,0)
+"RTN","RGSERGET",301,0)
  S:$E(EP,1,2)="$$" EP=$E(EP,3,99)
-"RTN","RGSERGET",306,0)
+"RTN","RGSERGET",302,0)
  S EP=EP_"("_$QS($$TMPGBL^RGSER,3)_")"
-"RTN","RGSERGET",307,0)
+"RTN","RGSERGET",303,0)
  D @EP
-"RTN","RGSERGET",308,0)
+"RTN","RGSERGET",304,0)
  Q "$$"_EP
-"RTN","RGSERGET",309,0)
+"RTN","RGSERGET",305,0)
  ; Iterator implementation for traversing a cross reference
-"RTN","RGSERGET",310,0)
+"RTN","RGSERGET",306,0)
 XREFITER(CTX,ROOT,START,TST) ;
-"RTN","RGSERGET",311,0)
+"RTN","RGSERGET",307,0)
  S CTX=$$TMPGBL^RGSER(CTX)
-"RTN","RGSERGET",312,0)
+"RTN","RGSERGET",308,0)
  I '$Q D  Q
-"RTN","RGSERGET",313,0)
+"RTN","RGSERGET",309,0)
  .S START=$$UP^XLFSTR(START)
-"RTN","RGSERGET",314,0)
+"RTN","RGSERGET",310,0)
  .S @CTX@("IEN")=0,^("ROOT")=ROOT,(^("START"),^("LAST"))=START,^("TST")=$G(TST,"I 1")
-"RTN","RGSERGET",315,0)
+"RTN","RGSERGET",311,0)
  N LAST,IEN
-"RTN","RGSERGET",316,0)
+"RTN","RGSERGET",312,0)
  S IEN=@CTX@("IEN"),START=^("START"),LAST=^("LAST"),TST=^("TST"),ROOT=^("ROOT")
-"RTN","RGSERGET",317,0)
+"RTN","RGSERGET",313,0)
  F  D  Q:IEN
-"RTN","RGSERGET",318,0)
+"RTN","RGSERGET",314,0)
  .S:$L(LAST) IEN=+$O(@ROOT@(LAST,IEN)),@CTX@("IEN")=IEN
-"RTN","RGSERGET",319,0)
+"RTN","RGSERGET",315,0)
  .Q:IEN
-"RTN","RGSERGET",320,0)
+"RTN","RGSERGET",316,0)
  .S LAST=$O(@ROOT@(LAST)),@CTX@("LAST")=LAST
-"RTN","RGSERGET",321,0)
+"RTN","RGSERGET",317,0)
  .I 0
-"RTN","RGSERGET",322,0)
+"RTN","RGSERGET",318,0)
  .X:$L(LAST) TST
-"RTN","RGSERGET",323,0)
+"RTN","RGSERGET",319,0)
  .S:'$T IEN=-1
-"RTN","RGSERGET",324,0)
+"RTN","RGSERGET",320,0)
  Q $S(IEN>0:IEN,1:0)
-"RTN","RGSERGET",325,0)
+"RTN","RGSERGET",321,0)
  ; Iterator implementation for traversing a name cross references
-"RTN","RGSERGET",326,0)
+"RTN","RGSERGET",322,0)
 NAMEITER(CTX,ROOT) ;
-"RTN","RGSERGET",327,0)
+"RTN","RGSERGET",323,0)
  I '$Q D XREFITER(CTX,ROOT,PARAMS("family",1,1),"I $E($P(LAST,"",""),1,$L(START))=START") Q
-"RTN","RGSERGET",328,0)
+"RTN","RGSERGET",324,0)
  Q $$XREFITER(CTX)
-"RTN","RGSERGET",329,0)
+"RTN","RGSERGET",325,0)
  ; Return a cohort based on a xref
-"RTN","RGSERGET",330,0)
+"RTN","RGSERGET",326,0)
  ; PARAM = Name of search parameter
-"RTN","RGSERGET",331,0)
+"RTN","RGSERGET",327,0)
  ; GBL = Root of xref
-"RTN","RGSERGET",332,0)
+"RTN","RGSERGET",328,0)
  ; OFF = Offset to subscript containing IEN (defaults to 0)
-"RTN","RGSERGET",333,0)
+"RTN","RGSERGET",329,0)
 COHORT(PARAM,GBL,OFF) ;
-"RTN","RGSERGET",334,0)
+"RTN","RGSERGET",330,0)
  N LP,TMP
-"RTN","RGSERGET",335,0)
+"RTN","RGSERGET",331,0)
  S OFF=+$G(OFF),LP=$O(PARAMS(PARAM,1,0)),TMP=$$TMPGBL^RGSER
-"RTN","RGSERGET",336,0)
+"RTN","RGSERGET",332,0)
  I 'OFF,LP,'$O(PARAMS(PARAM,1,LP)) Q $$GBLROOT(PARAMS(PARAM,1,LP),GBL)
-"RTN","RGSERGET",337,0)
+"RTN","RGSERGET",333,0)
  F LP=0:0 S LP=$O(PARAMS(PARAM,1,LP)) Q:'LP  D COHORT2(PARAMS(PARAM,1,LP),GBL,OFF,TMP)
-"RTN","RGSERGET",338,0)
+"RTN","RGSERGET",334,0)
  Q TMP
-"RTN","RGSERGET",339,0)
+"RTN","RGSERGET",335,0)
  ; Return a cohort based on a xref
-"RTN","RGSERGET",340,0)
+"RTN","RGSERGET",336,0)
  ; IDX = Value of indexed entry
-"RTN","RGSERGET",341,0)
+"RTN","RGSERGET",337,0)
  ; GBL = Root of xref
-"RTN","RGSERGET",342,0)
+"RTN","RGSERGET",338,0)
  ; OFF = Offset to subscript containing IEN (defaults to 0)
-"RTN","RGSERGET",343,0)
+"RTN","RGSERGET",339,0)
 COHORT2(IDX,GBL,OFF,TMP) ;
-"RTN","RGSERGET",344,0)
+"RTN","RGSERGET",340,0)
  S TMP=$$COHORT3($$GBLROOT(IDX,GBL),.OFF,.TMP)
-"RTN","RGSERGET",345,0)
+"RTN","RGSERGET",341,0)
  Q:$Q TMP
-"RTN","RGSERGET",346,0)
+"RTN","RGSERGET",342,0)
  Q
-"RTN","RGSERGET",347,0)
+"RTN","RGSERGET",343,0)
  ; Return a cohort from a global root
-"RTN","RGSERGET",348,0)
+"RTN","RGSERGET",344,0)
  ; GBL = Root of global
-"RTN","RGSERGET",349,0)
+"RTN","RGSERGET",345,0)
  ; OFF = Offset to subscript containing IEN (defaults to 0)
-"RTN","RGSERGET",350,0)
+"RTN","RGSERGET",346,0)
  ; Internal entry point
-"RTN","RGSERGET",351,0)
+"RTN","RGSERGET",347,0)
 COHORT3(GBL,OFF,TMP) ;
-"RTN","RGSERGET",352,0)
+"RTN","RGSERGET",348,0)
  N X,L,S,I,QL
-"RTN","RGSERGET",353,0)
+"RTN","RGSERGET",349,0)
  S:'$D(TMP) TMP=$$TMPGBL^RGSER
-"RTN","RGSERGET",354,0)
+"RTN","RGSERGET",350,0)
  S OFF=+$G(OFF),QL=$QL(GBL)+OFF+1
-"RTN","RGSERGET",355,0)
+"RTN","RGSERGET",351,0)
  I 'OFF M @TMP=@GBL Q
-"RTN","RGSERGET",356,0)
+"RTN","RGSERGET",352,0)
  S X=GBL,L=$QL(X),S=""
-"RTN","RGSERGET",357,0)
+"RTN","RGSERGET",353,0)
  F  S X=$Q(@X) Q:'$L(X)  Q:$NA(@X,L)'=GBL  D
-"RTN","RGSERGET",358,0)
+"RTN","RGSERGET",354,0)
  .S I=$QS(X,QL)
-"RTN","RGSERGET",359,0)
+"RTN","RGSERGET",355,0)
  .I $L(I),I'=S S S=I,@TMP@(S)=""
-"RTN","RGSERGET",360,0)
+"RTN","RGSERGET",356,0)
  Q:$Q TMP
-"RTN","RGSERGET",361,0)
+"RTN","RGSERGET",357,0)
  Q
-"RTN","RGSERGET",362,0)
+"RTN","RGSERGET",358,0)
  ; Returns global root for indexed entries.
-"RTN","RGSERGET",363,0)
+"RTN","RGSERGET",359,0)
  ; IDX = Index of entries
-"RTN","RGSERGET",364,0)
+"RTN","RGSERGET",360,0)
  ; GBL = Global root.  If contains "*", index value is placed there.
-"RTN","RGSERGET",365,0)
+"RTN","RGSERGET",361,0)
  ;       Otherwise, index value is placed at end.
-"RTN","RGSERGET",366,0)
+"RTN","RGSERGET",362,0)
 GBLROOT(IDX,GBL) ;
-"RTN","RGSERGET",367,0)
+"RTN","RGSERGET",363,0)
  Q:GBL'["*" $NA(@GBL@(IDX))
-"RTN","RGSERGET",368,0)
+"RTN","RGSERGET",364,0)
  S GBL=$P(GBL,"*")_IDX_$P(GBL,"*",2,9999)
-"RTN","RGSERGET",369,0)
+"RTN","RGSERGET",365,0)
  Q $NA(@GBL)
-"RTN","RGSERGET",370,0)
+"RTN","RGSERGET",366,0)
  ; Process a compartment request
-"RTN","RGSERGET",371,0)
+"RTN","RGSERGET",367,0)
 COMPRT(GBL,EXC) ;
-"RTN","RGSERGET",372,0)
+"RTN","RGSERGET",368,0)
  D:$L(SLCT) PARSEQS^RGSER("_id="_SLCT,.PARAMS)
-"RTN","RGSERGET",373,0)
+"RTN","RGSERGET",369,0)
  S:'$G(EXC) GBL=$NA(@GBL@($P(PATH,"/",3)))
-"RTN","RGSERGET",374,0)
+"RTN","RGSERGET",370,0)
  D GET(.DATA,$P(PATH,"/")_"/"_$P(PATH,"/",4),GBL,.PNAME,.PARAMS)
-"RTN","RGSERGET",375,0)
+"RTN","RGSERGET",371,0)
  Q
-"RTN","RGSERGET",376,0)
+"RTN","RGSERGET",372,0)
  ; Process a compound id (#:#) selector
-"RTN","RGSERGET",377,0)
+"RTN","RGSERGET",373,0)
 COMPID D GET(.DATA,PATH_"_"_$P(SLCT,":"),$P(SLCT,":",2),.PNAME,.PARAMS,"S")
+"RTN","RGSERGET",374,0)
+ Q
+"RTN","RGSERGET",375,0)
+ ; Process a template
+"RTN","RGSERGET",376,0)
+ ;   NAME = Template name
+"RTN","RGSERGET",377,0)
+ ;   RESN = The resource name or ien (defaults to current resource)
 "RTN","RGSERGET",378,0)
+ ; Template may contain replaceable fields using |xxx| format, where xxx may be:
+"RTN","RGSERGET",379,0)
+ ;   A field reference in the format: name or name,[I or E]
+"RTN","RGSERGET",380,0)
+ ;     where I indicates the internal value and E the external.
+"RTN","RGSERGET",381,0)
+ ;   An expression in the format: @expression or #expression
+"RTN","RGSERGET",382,0)
+ ;     where @ causes the result to be escaped, # does not.
+"RTN","RGSERGET",383,0)
+TEMPLATE(NAME,RESN) ;
+"RTN","RGSERGET",384,0)
+ N TMPL,SERX,LP,LN,LN1,LN2,X,Y
+"RTN","RGSERGET",385,0)
+ I $D(RESN)#2 D  Q:'$D(SERX)
+"RTN","RGSERGET",386,0)
+ .S:RESN'=+RESN RESN=$O(^RGSER(998.1,DATA("SER"),10,"B",RESN,0))
+"RTN","RGSERGET",387,0)
+ .S:RESN SERX=$NA(^RGSER(998.1,DATA("SER"),10,RESN))
+"RTN","RGSERGET",388,0)
+ E  S SERX=SER
+"RTN","RGSERGET",389,0)
+ S TMPL=$O(@SERX@(50,"B",NAME,0))
+"RTN","RGSERGET",390,0)
+ Q:'TMPL
+"RTN","RGSERGET",391,0)
+ F LP=0:0 S LP=$O(@SERX@(50,TMPL,1,LP)) Q:'LP  S LN=^(LP,0) D
+"RTN","RGSERGET",392,0)
+ .F  Q:LN'["|"  D
+"RTN","RGSERGET",393,0)
+ ..S LN1=$P(LN,"|"),X=$P(LN,"|",2),LN2=$P(LN,"|",3,9999)
+"RTN","RGSERGET",394,0)
+ ..S Y=$E(X)
+"RTN","RGSERGET",395,0)
+ ..I Y="@"!(Y="#") D
+"RTN","RGSERGET",396,0)
+ ...S @("X="_$E(X,2,9999))
+"RTN","RGSERGET",397,0)
+ ...S:Y="@" X=$$ESCAPE^RGSER(X)
+"RTN","RGSERGET",398,0)
+ ..E  D
+"RTN","RGSERGET",399,0)
+ ...S Y=$P(X,",",2),X=$P(X,",")
+"RTN","RGSERGET",400,0)
+ ...S X=$G(VALS(FILE,IENS,X,$S($L(Y):Y,1:"E")))
+"RTN","RGSERGET",401,0)
+ ...S X=$$ESCAPE^RGSER(X)
+"RTN","RGSERGET",402,0)
+ ..S LN=LN1_X_LN2
+"RTN","RGSERGET",403,0)
+ .D ADD^RGSER(LN)
+"RTN","RGSERGET",404,0)
  Q
 "RTN","RGSERLAB")
 0^6^B13451175
 "RTN","RGSERLAB",1,0)
 RGSERLAB ;RI/CBMI/DKM - Return lab observations. ;05-Mar-2015 13:24;DKM
 "RTN","RGSERLAB",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 155
 "RTN","RGSERLAB",3,0)
  ;=================================================================
 "RTN","RGSERLAB",4,0)
@@ -18265,11 +18965,11 @@ PUT(NAME,INTERNAL,EXTERNAL) ;
 "RTN","RGSERLAB",107,0)
  Q
 "RTN","RGSEROBS")
-0^7^B2472966
+0^7^B4197213
 "RTN","RGSEROBS",1,0)
-RGSEROBS ;RI/CBMI/DKM - Return observations in intermediate format. ;05-Mar-2015 13:24;DKM
+RGSEROBS ;RI/CBMI/DKM - Return observations in intermediate format. ;09-Mar-2015 20:06;DKM
 "RTN","RGSEROBS",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 155
 "RTN","RGSEROBS",3,0)
  ;=================================================================
 "RTN","RGSEROBS",4,0)
@@ -18303,67 +19003,83 @@ RETRIEVE ; Merge into VALS
 "RTN","RGSEROBS",18,0)
 ISMAX() Q $O(@RTN@(""),-1)'<MAX
 "RTN","RGSEROBS",19,0)
- ; Return true if the result is a quantity
-"RTN","RGSEROBS",20,0)
-ISQUANT(X) ;
-"RTN","RGSEROBS",21,0)
- Q $L(X)&(X'=".")&(X?0.N0.1"."0.N)
-"RTN","RGSEROBS",22,0)
  ; Return vuid
-"RTN","RGSEROBS",23,0)
+"RTN","RGSEROBS",20,0)
 VUID(IEN,FILE) ;
-"RTN","RGSEROBS",24,0)
+"RTN","RGSEROBS",21,0)
  Q $$GET1^DIQ(FILE,IEN_",",99.99)
-"RTN","RGSEROBS",25,0)
+"RTN","RGSEROBS",22,0)
  ; Ouput a file entry
-"RTN","RGSEROBS",26,0)
+"RTN","RGSEROBS",23,0)
 FILE(NAME,IEN,FILE,FLD) ;
-"RTN","RGSEROBS",27,0)
+"RTN","RGSEROBS",24,0)
  D:IEN PUT(NAME,IEN,$$GET1^DIQ(FILE,+IEN,$G(FLD,.01)))
-"RTN","RGSEROBS",28,0)
+"RTN","RGSEROBS",25,0)
  Q
-"RTN","RGSEROBS",29,0)
+"RTN","RGSEROBS",26,0)
  ; Output facility
-"RTN","RGSEROBS",30,0)
+"RTN","RGSEROBS",27,0)
 FACILITY(X) ;
-"RTN","RGSEROBS",31,0)
+"RTN","RGSEROBS",28,0)
  N P1,P2
-"RTN","RGSEROBS",32,0)
+"RTN","RGSEROBS",29,0)
  I $G(X) S P1=$$STA^XUAF4(X),P2=$P($$NS^XUAF4(X),U)
-"RTN","RGSEROBS",33,0)
+"RTN","RGSEROBS",30,0)
  E  S X=$$SITE^VASITE,P1=$P(X,U,2),P2=$P(X,U)
-"RTN","RGSEROBS",34,0)
+"RTN","RGSEROBS",31,0)
  D PUT("facility",P1,P2)
-"RTN","RGSEROBS",35,0)
+"RTN","RGSEROBS",32,0)
  Q
-"RTN","RGSEROBS",36,0)
+"RTN","RGSEROBS",33,0)
  ; Get array base
-"RTN","RGSEROBS",37,0)
+"RTN","RGSEROBS",34,0)
 ARY(DATA) ;
-"RTN","RGSEROBS",38,0)
+"RTN","RGSEROBS",35,0)
  N X
-"RTN","RGSEROBS",39,0)
+"RTN","RGSEROBS",36,0)
  S X=$O(@DATA@(""),-1)+1
-"RTN","RGSEROBS",40,0)
+"RTN","RGSEROBS",37,0)
  Q $NA(@DATA@(X))
-"RTN","RGSEROBS",41,0)
+"RTN","RGSEROBS",38,0)
  ; Write to target array
-"RTN","RGSEROBS",42,0)
+"RTN","RGSEROBS",39,0)
 PUT(NAME,INTERNAL,EXTERNAL) ;
-"RTN","RGSEROBS",43,0)
+"RTN","RGSEROBS",40,0)
  I $L($G(INTERNAL)) D
-"RTN","RGSEROBS",44,0)
+"RTN","RGSEROBS",41,0)
  .S @ARY@(NAME,"I")=INTERNAL
-"RTN","RGSEROBS",45,0)
+"RTN","RGSEROBS",42,0)
  .S @ARY@(NAME,"E")=$S($D(EXTERNAL)#2:EXTERNAL,1:INTERNAL)
+"RTN","RGSEROBS",43,0)
+ Q
+"RTN","RGSEROBS",44,0)
+ ; Output reference range
+"RTN","RGSEROBS",45,0)
+REFRANGE N LOW,HIGH
 "RTN","RGSEROBS",46,0)
+ S LOW=$G(VL("I")),HIGH=$G(VL(2,"I"))
+"RTN","RGSEROBS",47,0)
+ I $L(LOW),'$$ISNUM^RGUT(LOW) S LOW=""
+"RTN","RGSEROBS",48,0)
+ I $L(HIGH),'$$ISNUM^RGUT(HIGH) S HIGH=""
+"RTN","RGSEROBS",49,0)
+ I '$L(LOW),'$L(HIGH) Q
+"RTN","RGSEROBS",50,0)
+ D ADDTAG^RGSEXML(PN)
+"RTN","RGSEROBS",51,0)
+ D:$L(LOW) ADDTAG^RGSEXML("low"),PUT^RGSEXML("value",LOW),ENDTAG^RGSEXML("low")
+"RTN","RGSEROBS",52,0)
+ D:$L(HIGH) ADDTAG^RGSEXML("high"),PUT^RGSEXML("value",HIGH),ENDTAG^RGSEXML("high")
+"RTN","RGSEROBS",53,0)
+ D ENDTAG^RGSEXML(PN)
+"RTN","RGSEROBS",54,0)
  Q
 "RTN","RGSERPAT")
 0^8^B269044
 "RTN","RGSERPAT",1,0)
 RGSERPAT ;RI/CBMI/DKM - Patient Resource Support ;05-Mar-2015 13:26;DKM
 "RTN","RGSERPAT",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 155
 "RTN","RGSERPAT",3,0)
  ;=================================================================
 "RTN","RGSERPAT",4,0)
@@ -18387,7 +19103,7 @@ NAMEITER(CTX) ;
 "RTN","RGSERVIT",1,0)
 RGSERVIT ;RI/CBMI/DKM - Return vital observations. ;05-Mar-2015 13:24;DKM
 "RTN","RGSERVIT",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;07-Feb-2015 08:51;Build 155
 "RTN","RGSERVIT",3,0)
  ;=================================================================
 "RTN","RGSERVIT",4,0)
@@ -18587,11 +19303,11 @@ RANGES N VAL
 "RTN","RGSERVIT",101,0)
  Q
 "RTN","RGSEXML")
-0^10^B9680213
+0^10^B12291502
 "RTN","RGSEXML",1,0)
-RGSEXML ;RI/CBMI/DKM - XML Support ;05-Mar-2015 13:26;DKM
+RGSEXML ;RI/CBMI/DKM - XML Support ;15-Mar-2015 11:57;DKM
 "RTN","RGSEXML",2,0)
- ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 46
+ ;;1.0;SERIALIZATION FRAMEWORK;;14-March-2014;Build 155
 "RTN","RGSEXML",3,0)
  ;=================================================================
 "RTN","RGSEXML",4,0)
@@ -18625,214 +19341,250 @@ COMPOSE Q
 "RTN","RGSEXML",18,0)
 FMTDATE(DT) ;
 "RTN","RGSEXML",19,0)
- S:'$D(DT) DT=$$NOW^XLFDT
+ N X
 "RTN","RGSEXML",20,0)
- Q $$FMTDATE^RGUTDATF(DT,"YYYY-MM-dd"_$S(DT#1:"'T'HH:mm:ss",1:""))
+ S:'$G(DT) DT=$$NOW^XLFDT
 "RTN","RGSEXML",21,0)
- ; Serializer.PROPF - Free text property
+ S X=$$FMTDATE^RGUTDATF(DT,"YYYY-MM-dd"_$S(DT#1:"'T'HH:mm:ssXXXX",1:""))
 "RTN","RGSEXML",22,0)
-PROPF D PUT(.PN,$G(VL("E")))
+ S:X["-00" X=$$SUBST^RGUT(X,"-00")
 "RTN","RGSEXML",23,0)
- Q
+ Q X
 "RTN","RGSEXML",24,0)
- ; Serializer.PROPB - Boolean property
+ ; Serializer.ESCMAP - Location of escape map
 "RTN","RGSEXML",25,0)
-PROPB D PUTBL(.PN,$G(VL("I")))
+ESCMAP() Q "ESCMAPX^RGSEXML"
 "RTN","RGSEXML",26,0)
- Q
+ESCMAPX ;;Table of escape mappings
 "RTN","RGSEXML",27,0)
- ; Serializer.PROPD - Date property
+ ;;&;&amp;
 "RTN","RGSEXML",28,0)
-PROPD D PUTDT(.PN,$G(VL("I")))
+ ;;";&quot;
 "RTN","RGSEXML",29,0)
- Q
+ ;;';&apos;
 "RTN","RGSEXML",30,0)
- ; Serializer.PROPR - Raw value property
+ ;;<;&lt;
 "RTN","RGSEXML",31,0)
-PROPR D PUT(.PN,$G(VL("I")))
+ ;;>;&gt;
 "RTN","RGSEXML",32,0)
- Q
+ ;;
 "RTN","RGSEXML",33,0)
- ; Serializer.PROPW - Word processing property
+ ; Serializer.PROPF - Free text property
 "RTN","RGSEXML",34,0)
-PROPW D PUT(.PN,$$ARY2STR^RGSER(.VL,$$UNESCAPE^RGSER(CTL)))
+PROPF D PUT(PN,$G(VL("E")))
 "RTN","RGSEXML",35,0)
  Q
 "RTN","RGSEXML",36,0)
- ; Serializer.PROPC - Custom property
+ ; Serializer.PROPB - Boolean property
 "RTN","RGSEXML",37,0)
-PROPC X CTL
+PROPB D PUTBL(PN,$G(VL("I")))
 "RTN","RGSEXML",38,0)
  Q
 "RTN","RGSEXML",39,0)
- ; Serializer.PROPO - Object property
+ ; Serializer.PROPD - Date property
 "RTN","RGSEXML",40,0)
-PROPO D:$G(VL("I")) GET^RGSERGET(.DATA,CTL,VL("I"),PN)
+PROPD D PUTDT(PN,$G(VL("I")))
 "RTN","RGSEXML",41,0)
  Q
 "RTN","RGSEXML",42,0)
- ; Serializer.PROPI - Inline object property
+ ; Serializer.PROPR - Raw value property
 "RTN","RGSEXML",43,0)
-PROPI D:$G(VL("I")) ADDTAG(PN),GET^RGSERGET(.DATA,CTL,VL("I"),,,"I"),ENDTAG(PN)
+PROPR D PUT(PN,$G(VL("I")))
 "RTN","RGSEXML",44,0)
  Q
 "RTN","RGSEXML",45,0)
- ; Put a name/value pair to output buffer
+ ; Serializer.PROPW - Word processing property
 "RTN","RGSEXML",46,0)
- ; If name is a numbered array, it is assumed to be a sequenced list of
+PROPW D PUT(PN,$$ARY2STR^RGSER(.VL,$$UNESCURL^RGSER(CTL)))
 "RTN","RGSEXML",47,0)
- ; enclosing tags, the last one being the recipient of the value.
+ Q
 "RTN","RGSEXML",48,0)
-PUT(NM,VL) ;
+ ; Serializer.PROPC - Custom property
 "RTN","RGSEXML",49,0)
- Q:'$L($G(VL))
+PROPC X CTL
 "RTN","RGSEXML",50,0)
- N ATR,TAG,LST,LP
+ Q
 "RTN","RGSEXML",51,0)
- S ATR("value")=VL,LST=0
+ ; Serializer.PROPO - Object property
 "RTN","RGSEXML",52,0)
- I $D(NM)>1 D
+PROPO D:$G(VL("I")) GET^RGSERGET(.DATA,CTL,VL("I"),PN)
 "RTN","RGSEXML",53,0)
- .S LST=$O(NM(""),-1),TAG=NM(LST)
+ Q
 "RTN","RGSEXML",54,0)
- .F LP=0:1:LST-1 D ADDTAG(NM(LP))
+ ; Serializer.PROPI - Inline object property
 "RTN","RGSEXML",55,0)
- E  S TAG=NM
+PROPI D:$G(VL("I")) ADDTAG(PN),GET^RGSERGET(.DATA,CTL,VL("I"),,,"I"),ENDTAG(PN)
 "RTN","RGSEXML",56,0)
- D ADDTAG(TAG,.ATR,1)
+ Q
 "RTN","RGSEXML",57,0)
- F LP=0:1:LST-1 D ENDTAG
+ ; Serializer.PROPS - Static property
 "RTN","RGSEXML",58,0)
- Q
+PROPS D PUT(PN,$G(CTL))
 "RTN","RGSEXML",59,0)
- ; Put a date value to output buffer
+ Q
 "RTN","RGSEXML",60,0)
-PUTDT(NM,DT) ;
+ ; Put a name/value pair to output buffer
 "RTN","RGSEXML",61,0)
- D:DT PUT(.NM,$$FMTDATE^RGSERGET(DT))
+ ; If name is ":"-delimited, it is assumed to be a sequenced list of
 "RTN","RGSEXML",62,0)
- Q
+ ; enclosing tags, the last one being the recipient of the value.
 "RTN","RGSEXML",63,0)
- ; Put a boolean value to output buffer
+PUT(NM,VL) ;
 "RTN","RGSEXML",64,0)
-PUTBL(NM,BL) ;
+ I $L($G(VL)) D
 "RTN","RGSEXML",65,0)
- D PUT(.NM,$S(BL:"true",1:"false"))
+ .N ATR
 "RTN","RGSEXML",66,0)
- Q
+ .S ATR("value")=VL
 "RTN","RGSEXML",67,0)
- ; Put a set value to output buffer
+ .D ADDTAG(NM,.ATR,1)
 "RTN","RGSEXML",68,0)
-PUTST(NM,VL,ST) ;
+ Q
 "RTN","RGSEXML",69,0)
- D PUT(.NM,$$SET^RGUT(VL,ST))
+ ; Put a date value to output buffer
 "RTN","RGSEXML",70,0)
- Q
+PUTDT(NM,DT) ;
 "RTN","RGSEXML",71,0)
- ; Put an array to output buffer
+ D:DT PUT(NM,$$FMTDATE^RGSER(DT))
 "RTN","RGSEXML",72,0)
-PUTAR(NM,AR) ;
+ Q
 "RTN","RGSEXML",73,0)
- D ADDTAG(NM),ADDARY^RGSER(.AR),ENDTAG(NM)
+ ; Put a boolean value to output buffer
 "RTN","RGSEXML",74,0)
- Q
+PUTBL(NM,BL) ;
 "RTN","RGSEXML",75,0)
- ;Add opening tag (with optional attributes)
+ D PUT(NM,$S(BL:"true",1:"false"))
 "RTN","RGSEXML",76,0)
- ; TAG = tag name
+ Q
 "RTN","RGSEXML",77,0)
- ; ATR = optional array of attributes and/or content
+ ; Put a set value to output buffer
 "RTN","RGSEXML",78,0)
- ; CLS = if true, tag is self-closing
+PUTST(NM,VL,ST) ;
 "RTN","RGSEXML",79,0)
-ADDTAG(TAG,ATR,CLS) ;
+ D PUT(NM,$$SET^RGUT(VL,ST))
 "RTN","RGSEXML",80,0)
- N X,Y,A,CNT
+ Q
 "RTN","RGSEXML",81,0)
- S CLS=+$G(CLS),CNT=$G(ATR),CLS(0)=$S(CLS&'$L(CNT):"/>",1:">")
+ ; Put an array to output buffer
 "RTN","RGSEXML",82,0)
- I $D(ATR)'>1 D
+PUTAR(NM,AR) ;
 "RTN","RGSEXML",83,0)
- .S X="<"_TAG_CLS(0)
+ D ADDTAG(NM),ADDARY^RGSER(.AR),ENDTAG(NM)
 "RTN","RGSEXML",84,0)
- E  D
+ Q
 "RTN","RGSEXML",85,0)
- .S X="<"_TAG
+ ;Add opening tag (with optional attributes)
 "RTN","RGSEXML",86,0)
- .S ATR=""
+ ; TAG = tag name (separate multiple names with ":")
 "RTN","RGSEXML",87,0)
- .F  S ATR=$O(ATR(ATR)) Q:'$L(ATR)  D
+ ; ATR = optional array of attributes and/or content
 "RTN","RGSEXML",88,0)
- ..S:$D(ATR(ATR))>1 Y=$O(ATR(ATR,"")),X=X_" "_Y_"="_$$QT(ATR(ATR,Y))
+ ; CLS = if true, tag is self-closing
 "RTN","RGSEXML",89,0)
- ..S:$D(ATR(ATR))#10 X=X_" "_ATR_"="_$$QT(ATR(ATR))
+ADDTAG(TAG,ATR,CLS) ;
 "RTN","RGSEXML",90,0)
- .S X=X_CLS(0)
+ N X,Y,A,CNT,TGC
 "RTN","RGSEXML",91,0)
- D ADD^RGSER(X)
+ S CLS=+$G(CLS),CNT=$G(ATR),CLS(0)=$S(CLS&'$L(CNT):"/>",1:">"),TGC=0
 "RTN","RGSEXML",92,0)
- I $L(CNT) D
+ I TAG[":" D
 "RTN","RGSEXML",93,0)
- .D ADD^RGSER($$ESCAPE^RGSER(CNT))
+ .S X=$L(TAG,":")
 "RTN","RGSEXML",94,0)
- .D:CLS ADD^RGSER("</"_$P(TAG," ")_">")
+ .F TGC=1:1:X-1 D ADDTAG($P(TAG,":",TGC))
 "RTN","RGSEXML",95,0)
- S Y=+$G(DATA("T"))
+ .S TAG=$P(TAG,":",X)
 "RTN","RGSEXML",96,0)
- S:Y DATA("T",Y,0)=DATA("T",Y,0)+1
+ I $D(ATR)'>1 D
 "RTN","RGSEXML",97,0)
- S:'CLS Y=Y+1,DATA("T")=Y,DATA("T",Y)=TAG,DATA("T",Y,0)=0
+ .S X="<"_TAG_CLS(0)
 "RTN","RGSEXML",98,0)
- K ATR
+ E  D
 "RTN","RGSEXML",99,0)
- Q
+ .S X="<"_TAG
 "RTN","RGSEXML",100,0)
- ; Write closing tag
+ .S ATR=""
 "RTN","RGSEXML",101,0)
- ;  TAG = If specified, write closing tags up to and including
+ .F  S ATR=$O(ATR(ATR)) Q:'$L(ATR)  D
 "RTN","RGSEXML",102,0)
- ;    this one.  Otherwise, just write last pending closing tag.
+ ..S:$D(ATR(ATR))>1 Y=$O(ATR(ATR,"")),X=X_" "_Y_"="_$$QT(ATR(ATR,Y))
 "RTN","RGSEXML",103,0)
- ;  Returns true if there are more pending tag closures.
+ ..S:$D(ATR(ATR))#10 X=X_" "_ATR_"="_$$QT(ATR(ATR))
 "RTN","RGSEXML",104,0)
-ENDTAG(TAG) N Y,T
+ .S X=X_CLS(0)
 "RTN","RGSEXML",105,0)
- S Y=+$G(DATA("T"))
+ D ADD^RGSER(X)
 "RTN","RGSEXML",106,0)
- F  Q:'Y  D  Q:TAG=T
+ I $L(CNT) D
 "RTN","RGSEXML",107,0)
- .S T=DATA("T",Y)
+ .D ADD^RGSER($$ESCAPE^RGSER(CNT))
 "RTN","RGSEXML",108,0)
- .D ADD^RGSER("</"_$P(T," ")_">")
+ .D:CLS ADD^RGSER("</"_$P(TAG," ")_">")
 "RTN","RGSEXML",109,0)
- .S Y=Y-1,DATA("T")=Y
+ S Y=+$G(DATA("T"))
 "RTN","RGSEXML",110,0)
- .S:'$D(TAG) TAG=T
+ S:Y DATA("T",Y,0)=DATA("T",Y,0)+1
 "RTN","RGSEXML",111,0)
- Q:$Q Y
+ S:'CLS Y=Y+1,DATA("T")=Y,DATA("T",Y)=TAG,DATA("T",Y,0)=0
 "RTN","RGSEXML",112,0)
- Q
+ I CLS F  Q:'TGC  D ENDTAG S TGC=TGC-1
 "RTN","RGSEXML",113,0)
- ; Close all open tags
+ K ATR
 "RTN","RGSEXML",114,0)
-ENDALL F  Q:'$$ENDTAG()
-"RTN","RGSEXML",115,0)
  Q
+"RTN","RGSEXML",115,0)
+ ; Write closing tag
 "RTN","RGSEXML",116,0)
- ; Return # of siblings at specified tag level.
+ ;  TAG = If specified, write closing tags up to and including
 "RTN","RGSEXML",117,0)
- ; LVL: 0 = Current level (default); >0 = Absolute; <0 = Relative to current
+ ;    this one.  Otherwise, just write last pending closing tag.
 "RTN","RGSEXML",118,0)
-SIBS(LVL) ;
+ ;  Returns true if there are more pending tag closures.
 "RTN","RGSEXML",119,0)
- N X
+ENDTAG(TAG) ;
 "RTN","RGSEXML",120,0)
- S X=+$G(DATA("T")),LVL=+$G(LVL),LVL=$S(LVL>X:X,LVL>0:LVL,1:X-LVL)
+ N Y,T
 "RTN","RGSEXML",121,0)
- Q +$G(DATA("T",LVL,0))
+ I $G(TAG)[":" D  Q
 "RTN","RGSEXML",122,0)
- ; Enclose value in quotes (escape contents if necessary)
+ .F Y=$L(TAG,":"):-1:1 Q:'$$ENDTAG($P(TAG,":",Y))
 "RTN","RGSEXML",123,0)
+ S Y=+$G(DATA("T"))
+"RTN","RGSEXML",124,0)
+ F  Q:'Y  D  Q:TAG=T
+"RTN","RGSEXML",125,0)
+ .S T=DATA("T",Y)
+"RTN","RGSEXML",126,0)
+ .D ADD^RGSER("</"_T_">")
+"RTN","RGSEXML",127,0)
+ .S Y=Y-1,DATA("T")=Y
+"RTN","RGSEXML",128,0)
+ .S:'$D(TAG) TAG=T
+"RTN","RGSEXML",129,0)
+ Q:$Q Y
+"RTN","RGSEXML",130,0)
+ Q
+"RTN","RGSEXML",131,0)
+ ; Close all open tags
+"RTN","RGSEXML",132,0)
+ENDALL F  Q:'$$ENDTAG
+"RTN","RGSEXML",133,0)
+ Q
+"RTN","RGSEXML",134,0)
+ ; Return # of siblings at specified tag level.
+"RTN","RGSEXML",135,0)
+ ; LVL: 0 = Current level (default); >0 = Absolute; <0 = Relative to current
+"RTN","RGSEXML",136,0)
+SIBS(LVL) ;
+"RTN","RGSEXML",137,0)
+ N X
+"RTN","RGSEXML",138,0)
+ S X=+$G(DATA("T")),LVL=+$G(LVL),LVL=$S(LVL>X:X,LVL>0:LVL,1:X-LVL)
+"RTN","RGSEXML",139,0)
+ Q +$G(DATA("T",LVL,0))
+"RTN","RGSEXML",140,0)
+ ; Enclose value in quotes (escape contents if necessary)
+"RTN","RGSEXML",141,0)
 QT(X) Q """"_$$ESCAPE^RGSER(X)_""""
 "SEC","^DIC",998.1,998.1,0,"AUDIT")
 @
@@ -18849,11 +19601,11 @@ QT(X) Q """"_$$ESCAPE^RGSER(X)_""""
 "VER")
 8.0^22.0
 "^DD",998.1,998.1,0)
-FIELD^^20^5
+FIELD^^3^6
 "^DD",998.1,998.1,0,"DDA")
 N
 "^DD",998.1,998.1,0,"DT")
-3150228
+3150315
 "^DD",998.1,998.1,0,"ID",1)
 W "   ",$P(^(0),U,2)
 "^DD",998.1,998.1,0,"IX","B",998.1,.01)
@@ -18874,34 +19626,76 @@ S ^RGSER(998.1,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,"B",$E(X,1,30),DA)
 "^DD",998.1,998.1,.01,3)
 Replace Name of the serialization type (1-30 characters).
+"^DD",998.1,998.1,.01,21,0)
+^^3^3^3150310.204501
+"^DD",998.1,998.1,.01,21,1,0)
+This is the portion of the request URL that identifies the serialization format
+"^DD",998.1,998.1,.01,21,2,0)
+of the requested resource.  It is first part of the path portion of the URL.
+"^DD",998.1,998.1,.01,21,3,0)
+The name and associated content type together should be unique within the file.
 "^DD",998.1,998.1,.01,"DT")
 3150211
 "^DD",998.1,998.1,1,0)
-CONTENT TYPE^F^^0;2^K:$L(X)>30!($L(X)<1) X
+CONTENT TYPE^F^^0;2^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.1,1,3)
-Content type generated by this serialization type.
+Content type(s) generated by this serializer.
+"^DD",998.1,998.1,1,21,0)
+^^6^6^3150315.140532
+"^DD",998.1,998.1,1,21,1,0)
+These are the content types (separated by commas) that are used to match 
+"^DD",998.1,998.1,1,21,2,0)
+against the requested content type.  It is used to match the requestor's 
+"^DD",998.1,998.1,1,21,3,0)
+desired content type.  This allows having multiple entries with the same name, 
+"^DD",998.1,998.1,1,21,4,0)
+but different content types.  By default, the first value of this entry is 
+"^DD",998.1,998.1,1,21,5,0)
+returned as the Content-Type in the response header.  However, the serializer 
+"^DD",998.1,998.1,1,21,6,0)
+may opt to override this value with a more specific MIME type. 
 "^DD",998.1,998.1,1,"DT")
-3150211
+3150315
 "^DD",998.1,998.1,2,0)
 SERIALIZER^F^^0;3^K:$L(X)>10!($L(X)<1)!'(X?1.A0.AN) X
 "^DD",998.1,998.1,2,3)
 Name of serialization routine.
 "^DD",998.1,998.1,2,21,0)
-^^1^1^3150301.093248
+^.001^1^1^3150310^
 "^DD",998.1,998.1,2,21,1,0)
 The specified serializer routine must implement the Serializer interface.
 "^DD",998.1,998.1,2,"DT")
 3150211
+"^DD",998.1,998.1,3,0)
+VERSION^F^^0;4^K:$L(X)>20!($L(X)<1) X
+"^DD",998.1,998.1,3,3)
+Version of this serializer (1-20 characters).
+"^DD",998.1,998.1,3,21,0)
+^^1^1^3150312.172833
+"^DD",998.1,998.1,3,21,1,0)
+This represents the version of the format the serializer is generating.
+"^DD",998.1,998.1,3,"DT")
+3150312
 "^DD",998.1,998.1,10,0)
 RESOURCE^998.11^^10;0
+"^DD",998.1,998.1,10,21,0)
+^.001^4^4^3150310^^
+"^DD",998.1,998.1,10,21,1,0)
+This is the portion of the path of the request URL that follows the 
+"^DD",998.1,998.1,10,21,2,0)
+serialization specifier.  It may include the wildcard characters # (for 
+"^DD",998.1,998.1,10,21,3,0)
+matching any sequence of digits) and * (for matching any sequence of 
+"^DD",998.1,998.1,10,21,4,0)
+characters).
 "^DD",998.1,998.1,20,0)
 HEADER FIELDS^998.14^^20;0
 "^DD",998.1,998.1,20,"DT")
 3150228
 "^DD",998.1,998.11,0)
-RESOURCE SUB-FIELD^^2^8
+RESOURCE SUB-FIELD^^50^9
 "^DD",998.1,998.11,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.11,0,"IX","B",998.11,.01)
 
 "^DD",998.1,998.11,0,"IX","C",998.11,.01)
@@ -18917,11 +19711,11 @@ RESOURCE^MF^^0;1^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.11,.01,1,1,0)
 998.11^B^MUMPS
 "^DD",998.1,998.11,.01,1,1,1)
-S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSER(X)
+S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSERDD(X)
 "^DD",998.1,998.11,.01,1,1,2)
 K ^RGSER(998.1,DA(1),10,"B",X,DA)
 "^DD",998.1,998.11,.01,1,1,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,.01,1,2,0)
 998.11^C^MUMPS
 "^DD",998.1,998.11,.01,1,2,1)
@@ -18933,11 +19727,19 @@ K ^RGSER(998.1,DA(1),10,"C",$$UP^XLFSTR(X),DA)
 "^DD",998.1,998.11,.01,3)
 Enter path name for the resource.
 "^DD",998.1,998.11,.01,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,1,0)
 INTERNAL^S^0:NO;1:YES;^0;2^Q
 "^DD",998.1,998.11,1,3)
 Enter YES if this is an internal resource.
+"^DD",998.1,998.11,1,21,0)
+^^3^3^3150310.205212
+"^DD",998.1,998.11,1,21,1,0)
+If set to YES, this resource is internal to the server and may not be 
+"^DD",998.1,998.11,1,21,2,0)
+referenced directly.  Any attempt to request an internal resource will return 
+"^DD",998.1,998.11,1,21,3,0)
+an error.
 "^DD",998.1,998.11,1,"DT")
 3150221
 "^DD",998.1,998.11,2,0)
@@ -18948,6 +19750,12 @@ S Y(0)=Y S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 "^DD",998.1,998.11,2,3)
 Enter a file or subfile number.
+"^DD",998.1,998.11,2,21,0)
+^^2^2^3150310.205524
+"^DD",998.1,998.11,2,21,1,0)
+This is the number of the file or subfile from which the resource will be
+"^DD",998.1,998.11,2,21,2,0)
+extracted.  For resources that are derived, this field may be null.
 "^DD",998.1,998.11,2,"DT")
 3150211
 "^DD",998.1,998.11,10,0)
@@ -18956,30 +19764,114 @@ CUSTOM SERIALIZER^K^^10;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 M code to invoke custom serializer.
 "^DD",998.1,998.11,10,9)
 @
+"^DD",998.1,998.11,10,21,0)
+^^4^4^3150310.205835
+"^DD",998.1,998.11,10,21,1,0)
+For resources that use a custom serializer, this field contains executable M 
+"^DD",998.1,998.11,10,21,2,0)
+code that performs the serialization.  When this field is non-null, the 
+"^DD",998.1,998.11,10,21,3,0)
+default serialization code is not executed unless the custom serializer kills 
+"^DD",998.1,998.11,10,21,4,0)
+the XSER variable before returning control.
 "^DD",998.1,998.11,10,"DT")
 3150211
 "^DD",998.1,998.11,20,0)
-CUSTOM RETRIEVAL^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
+CUSTOM READER^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 "^DD",998.1,998.11,20,3)
 M code to invoke custom retrieval logic.
 "^DD",998.1,998.11,20,9)
 @
+"^DD",998.1,998.11,20,21,0)
+^.001^16^16^3150312^
+"^DD",998.1,998.11,20,21,1,0)
+This field contains custom retrieval logic for resources that require it.  It
+"^DD",998.1,998.11,20,21,2,0)
+should return a single instance of a resource given its unique identifier using
+"^DD",998.1,998.11,20,21,3,0)
+the VALS array in the format:
+"^DD",998.1,998.11,20,21,4,0)
+
+"^DD",998.1,998.11,20,21,5,0)
+       VALS(FILE,IENS,<property>,<int/ext>)=<value>
+"^DD",998.1,998.11,20,21,6,0)
+
+"^DD",998.1,998.11,20,21,7,0)
+where
+"^DD",998.1,998.11,20,21,8,0)
+
+"^DD",998.1,998.11,20,21,9,0)
+       <property> = The property's name.
+"^DD",998.1,998.11,20,21,10,0)
+       <int/ext>  = "I" or "E" for representing internal and external values,
+"^DD",998.1,998.11,20,21,11,0)
+                    respectively.
+"^DD",998.1,998.11,20,21,12,0)
+       <value>    = The property's value.
+"^DD",998.1,998.11,20,21,13,0)
+
+"^DD",998.1,998.11,20,21,14,0)
+Note that even if custom retrieval logic is provided, the default retrieval
+"^DD",998.1,998.11,20,21,15,0)
+logic will also be executed if the value of the FILE variable (from the SOURCE
+"^DD",998.1,998.11,20,21,16,0)
+field) is non-zero.
 "^DD",998.1,998.11,20,"DT")
-3150211
+3150312
 "^DD",998.1,998.11,30,0)
 PROPERTY^998.12I^^30;0
+"^DD",998.1,998.11,30,21,0)
+^.001^1^1^3150310^
+"^DD",998.1,998.11,30,21,1,0)
+This is the list of properties for the given resource.
 "^DD",998.1,998.11,40,0)
 PARAMETER^998.13I^^40;0
+"^DD",998.1,998.11,40,21,0)
+^^5^5^3150310.211659
+"^DD",998.1,998.11,40,21,1,0)
+This is the list of searchable parameters supported for the resource.  These 
+"^DD",998.1,998.11,40,21,2,0)
+serve two purposes.  First, they define the logic for determining a match for 
+"^DD",998.1,998.11,40,21,3,0)
+the given search parameter.  Second, they may define a cohort selector for a 
+"^DD",998.1,998.11,40,21,4,0)
+given search parameter.  Cohort selectors optimize search strategy depending 
+"^DD",998.1,998.11,40,21,5,0)
+on which search parameters are selected.
+"^DD",998.1,998.11,50,0)
+TEMPLATE^998.15^^50;0
+"^DD",998.1,998.11,50,21,0)
+^^8^8^3150312.154427
+"^DD",998.1,998.11,50,21,1,0)
+Templates may be referenced by properties to generate output from the 
+"^DD",998.1,998.11,50,21,2,0)
+serializer. They may contain replaceable parameters enclosed between "|" 
+"^DD",998.1,998.11,50,21,3,0)
+characters.  If a replaceable parameter starts with an "@" or "#" character, 
+"^DD",998.1,998.11,50,21,4,0)
+it is assumed to be an M expression whose value is inserted into the 
+"^DD",998.1,998.11,50,21,5,0)
+generated output.  Otherwise, it is assumed to be a field identifier whose 
+"^DD",998.1,998.11,50,21,6,0)
+value is inserted.  Except for "#"-prefixed expressions, any reserved 
+"^DD",998.1,998.11,50,21,7,0)
+characters in the replacement value will be escaped according to the rules
+"^DD",998.1,998.11,50,21,8,0)
+specified by the serializer.
 "^DD",998.1,998.11,99,0)
 DESCRIPTION^F^^99;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.11,99,3)
 Enter brief description of this resource.
+"^DD",998.1,998.11,99,21,0)
+^^1^1^3150310.21222
+"^DD",998.1,998.11,99,21,1,0)
+Provides a detailed description of the associated resource.
 "^DD",998.1,998.11,99,"DT")
 3150211
 "^DD",998.1,998.12,0)
 PROPERTY SUB-FIELD^^10^5
 "^DD",998.1,998.12,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,0,"ID",3)
 W "   ",$P(^(0),U,4)
 "^DD",998.1,998.12,0,"IX","ASEQ",998.12,3)
@@ -19002,20 +19894,86 @@ S ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)
 "^DD",998.1,998.12,.01,3)
 Property name to be used in serialization.
+"^DD",998.1,998.12,.01,21,0)
+^^8^8^3150311.183527
+"^DD",998.1,998.12,.01,21,1,0)
+This is the name that identifies the property.  It is typically the name that 
+"^DD",998.1,998.12,.01,21,2,0)
+is emitted by the serializer, but this is not a requirement. An arbitrary tag 
+"^DD",998.1,998.12,.01,21,3,0)
+may also be appended to the property name using the "!" character as a 
+"^DD",998.1,998.12,.01,21,4,0)
+delimiter.  This may be used to provide additional information about the 
+"^DD",998.1,998.12,.01,21,5,0)
+entry.  For example, if a property requires multiple entries to implement the 
+"^DD",998.1,998.12,.01,21,6,0)
+logic required to emit it, the tag can provide information to the user as to 
+"^DD",998.1,998.12,.01,21,7,0)
+the role each entry plays.  For any given entry, the serializer may choose to 
+"^DD",998.1,998.12,.01,21,8,0)
+apply additional significance to the tag.
 "^DD",998.1,998.12,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.12,1,3)
 Field name or # corresponding to this property
+"^DD",998.1,998.12,1,21,0)
+^^7^7^3150311.184042
+"^DD",998.1,998.12,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved
+"^DD",998.1,998.12,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.12,1,21,3,0)
+retrieved for the specified fields are available to the serializer.  Where the
+"^DD",998.1,998.12,1,21,4,0)
+SOURCE is a FileMan file or subfile, the field is the field # (or name).  For 
+"^DD",998.1,998.12,1,21,5,0)
+resources using custom retrieval logic, the field is the identifier assigned 
+"^DD",998.1,998.12,1,21,6,0)
+by that logic.  For properties that do not require source data (such as a 
+"^DD",998.1,998.12,1,21,7,0)
+static property), this entry may be left blank.
 "^DD",998.1,998.12,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,2,0)
-TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;^0;3^Q
+TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;T:TEMPLATE;S:STATIC;N:NOP;^0;3^Q
 "^DD",998.1,998.12,2,3)
 Encoding type for this property.
+"^DD",998.1,998.12,2,21,0)
+^^15^15^3150310.21405
+"^DD",998.1,998.12,2,21,1,0)
+Represents the type of property.  Possible values are:
+"^DD",998.1,998.12,2,21,2,0)
+   B = BOOLEAN         - Emits a property value that is true or false.
+"^DD",998.1,998.12,2,21,3,0)
+   C = CUSTOM          - The associated custom code emits the property value.
+"^DD",998.1,998.12,2,21,4,0)
+   D = DATE            - Emits a property value that is a date.
+"^DD",998.1,998.12,2,21,5,0)
+   F = FREE TEXT       - Emits the external value of the property.
+"^DD",998.1,998.12,2,21,6,0)
+   I = INLINE          - Inserts a serialized object inline.
+"^DD",998.1,998.12,2,21,7,0)
+   N = NOP             - Causes the property to be ignored.
+"^DD",998.1,998.12,2,21,8,0)
+   M = MULTIPLE        - The property is a subfile multiple.
+"^DD",998.1,998.12,2,21,9,0)
+   O = OBJECT          - Invokes serialization logic for the specified object.
+"^DD",998.1,998.12,2,21,10,0)
+   R = RAW             - Emits the internal value of the property.
+"^DD",998.1,998.12,2,21,11,0)
+   S = STATIC          - Emits a static value for the property.
+"^DD",998.1,998.12,2,21,12,0)
+   T = TEMPLATE        - Emits the specified template.
+"^DD",998.1,998.12,2,21,13,0)
+   W = WORD PROCESSING - Emits a word processing value.
+"^DD",998.1,998.12,2,21,14,0)
+
+"^DD",998.1,998.12,2,21,15,0)
+For more information, see the description of the CONTROL field.
 "^DD",998.1,998.12,2,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,3,0)
 SEQUENCE^RNJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.12,3,1,0)
@@ -19030,32 +19988,44 @@ K ^RGSER(998.1,DA(2),10,DA(1),30,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.12,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.12,3,21,0)
+^^3^3^3150311.184411
+"^DD",998.1,998.12,3,21,1,0)
+This is a numerical sequence # that determines the order in which the 
+"^DD",998.1,998.12,3,21,2,0)
+serializer processes property entries, and, thus, the order in which 
+"^DD",998.1,998.12,3,21,3,0)
+properties are emitted by the serializer.
 "^DD",998.1,998.12,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,10,0)
-CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
+CONTROL^FX^^10;E1,250^D ITXCTRL^RGSERDD(.X,.DA)
 "^DD",998.1,998.12,10,3)
 Enter control data.
 "^DD",998.1,998.12,10,21,0)
-^^8^8^3150303.134213
+^^10^10^3150311.184552
 "^DD",998.1,998.12,10,21,1,0)
-The format of this field depends on the value of the TYPE field.  For those
+The content of this field depends on the value of the TYPE field.  For those
 "^DD",998.1,998.12,10,21,2,0)
 TYPE values not listed below, this field will be ignored.
 "^DD",998.1,998.12,10,21,3,0)
 
 "^DD",998.1,998.12,10,21,4,0)
-C (Custom)          - Executable M code.
+  C (CUSTOM)          - Executable M code.
 "^DD",998.1,998.12,10,21,5,0)
-I (Inline)          - Path for inline resource.
+  I (INLINE)          - Path for inline resource.
 "^DD",998.1,998.12,10,21,6,0)
-O (Object)          - Alias name of the target object.
+  O (OBJECT)          - Path for the target object.
 "^DD",998.1,998.12,10,21,7,0)
-M (Multiple)        - Alias name of the multiple object.
+  M (MULTIPLE)        - Path for the multiple entry.
 "^DD",998.1,998.12,10,21,8,0)
-W (Word Processing) - Line delimiter to use (escaped characters supported).
+  S (STATIC)          - The static value of the property.
+"^DD",998.1,998.12,10,21,9,0)
+  W (WORD PROCESSING) - Line delimiter to use (escaped characters supported).
+"^DD",998.1,998.12,10,21,10,0)
+
 "^DD",998.1,998.12,10,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,0)
 PARAMETER SUB-FIELD^^10^6
 "^DD",998.1,998.13,0,"DT")
@@ -19082,20 +20052,64 @@ S ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)
 "^DD",998.1,998.13,.01,3)
 Enter name of search parameter.
+"^DD",998.1,998.13,.01,21,0)
+^^1^1^3150311.184801
+"^DD",998.1,998.13,.01,21,1,0)
+This is the identifier of the parameter as it would appear in a query.
 "^DD",998.1,998.13,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.13,1,3)
 Field name or # corresponding to this parameter.
+"^DD",998.1,998.13,1,21,0)
+^^6^6^3150311.185216
+"^DD",998.1,998.13,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved 
+"^DD",998.1,998.13,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.13,1,21,3,0)
+retrieved for the specified fields are available to the serializer when 
+"^DD",998.1,998.13,1,21,4,0)
+formulating a search query.  Where the SOURCE is a FileMan file or subfile, 
+"^DD",998.1,998.13,1,21,5,0)
+the field is the field # (or name).  For resources using custom retrieval 
+"^DD",998.1,998.13,1,21,6,0)
+logic, the field is the identifier assigned by that logic. 
 "^DD",998.1,998.13,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,2,0)
 TYPE^S^N:NUMBER;D:DATE;S:STRING;T:TOKEN;R:REFERENCE;Q:QUANTITY;^0;3^Q
 "^DD",998.1,998.13,2,3)
 Type of the search parameter.
+"^DD",998.1,998.13,2,21,0)
+^^12^12^3150311.190219
+"^DD",998.1,998.13,2,21,1,0)
+The parameter type determines the allowable comparison operators and the logic 
+"^DD",998.1,998.13,2,21,2,0)
+used to implement them.
+"^DD",998.1,998.13,2,21,3,0)
+
+"^DD",998.1,998.13,2,21,4,0)
+The following parameter types are recognized:
+"^DD",998.1,998.13,2,21,5,0)
+
+"^DD",998.1,998.13,2,21,6,0)
+       N        NUMBER     - The parameter is a numeric value.
+"^DD",998.1,998.13,2,21,7,0)
+       D        DATE       - The parameter is a date value.
+"^DD",998.1,998.13,2,21,8,0)
+       S        STRING     - The parameter is a text string.
+"^DD",998.1,998.13,2,21,9,0)
+       T        TOKEN      - The parameter is a special token.
+"^DD",998.1,998.13,2,21,10,0)
+       R        REFERENCE  - The parameter is a resource reference.
+"^DD",998.1,998.13,2,21,11,0)
+       Q        QUANTITY   - The parameter is a quantity.
+"^DD",998.1,998.13,2,21,12,0)
+ 
 "^DD",998.1,998.13,2,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,3,0)
 SEQUENCE^NJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.13,3,1,0)
@@ -19110,8 +20124,16 @@ K ^RGSER(998.1,DA(2),10,DA(1),40,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.13,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.13,3,21,0)
+^^3^3^3150311.190416
+"^DD",998.1,998.13,3,21,1,0)
+The sequence # determines the order the serializer uses in processing 
+"^DD",998.1,998.13,3,21,2,0)
+parameters.  This can be important in determining optimal search strategy 
+"^DD",998.1,998.13,3,21,3,0)
+where multiple parameters are specified.
 "^DD",998.1,998.13,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,10,0)
 CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.13,10,3)
@@ -19140,6 +20162,44 @@ HEADER FIELDS^WLx^^0;1^Q
 Additional fields to be included in the HTTP response header.
 "^DD",998.1,998.14,.01,"DT")
 3150228
+"^DD",998.1,998.15,0)
+TEMPLATE SUB-FIELD^^1^2
+"^DD",998.1,998.15,0,"DT")
+3150309
+"^DD",998.1,998.15,0,"IX","B",998.15,.01)
+
+"^DD",998.1,998.15,0,"NM","TEMPLATE")
+
+"^DD",998.1,998.15,0,"UP")
+998.11
+"^DD",998.1,998.15,.01,0)
+TEMPLATE^MF^^0;1^K:$L(X)>30!($L(X)<1) X
+"^DD",998.1,998.15,.01,1,0)
+^.1
+"^DD",998.1,998.15,.01,1,1,0)
+998.15^B
+"^DD",998.1,998.15,.01,1,1,1)
+S ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)=""
+"^DD",998.1,998.15,.01,1,1,2)
+K ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)
+"^DD",998.1,998.15,.01,3)
+Answer must be 1-30 characters in length.
+"^DD",998.1,998.15,.01,"DT")
+3150309
+"^DD",998.1,998.15,1,0)
+CONTENT^998.151^^1;0
+"^DD",998.1,998.151,0)
+CONTENT SUB-FIELD^^.01^1
+"^DD",998.1,998.151,0,"DT")
+3150309
+"^DD",998.1,998.151,0,"NM","CONTENT")
+
+"^DD",998.1,998.151,0,"UP")
+998.15
+"^DD",998.1,998.151,.01,0)
+CONTENT^WLx^^0;1^Q
+"^DD",998.1,998.151,.01,"DT")
+3150309
 "^DIC",998.1,998.1,0)
 SERIALIZATION CONTROL^998.1
 "^DIC",998.1,998.1,0,"GL")
@@ -19153,7 +20213,7 @@ Supports serialization of domain objects.
 **INSTALL NAME**
 CAREWEB FRAMEWORK 1.0
 "BLD",8485,0)
-CAREWEB FRAMEWORK 1.0^CAREWEB FRAMEWORK^0^3150307^n
+CAREWEB FRAMEWORK 1.0^CAREWEB FRAMEWORK^0^3150315^n
 "BLD",8485,4,0)
 ^9.64PA^998.1^2
 "BLD",8485,4,998.1,0)
@@ -19173,7 +20233,7 @@ I $$SCRN^RGCWKDTP(Y,5)
 "BLD",8485,4,"B",19941.21,19941.21)
 
 "BLD",8485,6.3)
-200
+280
 "BLD",8485,"ABPKG")
 n
 "BLD",8485,"INI")
@@ -19740,6 +20800,10 @@ I $$SCRN^RGCWKDTP(Y,1)
 0
 "FIA",998.1,998.14)
 0
+"FIA",998.1,998.15)
+0
+"FIA",998.1,998.151)
+0
 "FIA",19941.21)
 CIA EVENT TYPE
 "FIA",19941.21,0)
@@ -20145,7 +21209,7 @@ RI/CBMI
 "PKG",220,22,0)
 ^9.49I^1^1
 "PKG",220,22,1,0)
-1.0^3150307^3140319^1
+1.0^3150315^3140319^1
 "PKG",220,"DEV")
 DKM/RI/CBMI
 "PKG",220,"VERSION")
@@ -20229,7 +21293,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWFPAR",1,0)
 RGCWFPAR ;RI/CBMI/DKM - Parameter management ;18-Mar-2014 17:24;DKM
 "RTN","RGCWFPAR",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 200
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 280
 "RTN","RGCWFPAR",3,0)
  ; Load a parameter template
 "RTN","RGCWFPAR",4,0)
@@ -20429,7 +21493,7 @@ SETPAR(DATA,PARAM,VAL,ENT,INST) ;
 "RTN","RGCWFRPC",1,0)
 RGCWFRPC ;RI/CBMI/DKM - Miscellaneous RPC calls ;15-Mar-2014 11:56;DKM
 "RTN","RGCWFRPC",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 200
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 280
 "RTN","RGCWFRPC",3,0)
  ; RPC: Get/set DISV entry for selected file/IEN
 "RTN","RGCWFRPC",4,0)
@@ -20547,7 +21611,7 @@ TMPGBL(X) ;EP
 "RTN","RGCWFUSR",1,0)
 RGCWFUSR ;RI/CBMI/DKM - User utility methods;04-Mar-2015 16:23;DKM
 "RTN","RGCWFUSR",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 200
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 280
 "RTN","RGCWFUSR",3,0)
  ; Returns true if user has key
 "RTN","RGCWFUSR",4,0)
@@ -20781,7 +21845,7 @@ NAMEITER(CTX) ;
 "RTN","RGCWFUTL",1,0)
 RGCWFUTL ;RI/CBMI/DKM CareWeb Management Utilites;02-Feb-2015 10:15;DKM
 "RTN","RGCWFUTL",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 200
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 280
 "RTN","RGCWFUTL",3,0)
  ; Initiate shutdown sequence for applications
 "RTN","RGCWFUTL",4,0)
@@ -20917,7 +21981,7 @@ SHOWSESS() ;
 "RTN","RGCWKDIN",1,0)
 RGCKDIN ;RI/CBMI/DKM - CareWeb KIDS installation support ;07-Mar-2015 10:08;DKM
 "RTN","RGCWKDIN",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 200
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 280
 "RTN","RGCWKDIN",3,0)
  ; Environment check
 "RTN","RGCWKDIN",4,0)
@@ -21327,11 +22391,11 @@ MES(MSG,QUIT) ;
 "VER")
 8.0^22.0
 "^DD",998.1,998.1,0)
-FIELD^^20^5
+FIELD^^3^6
 "^DD",998.1,998.1,0,"DDA")
 N
 "^DD",998.1,998.1,0,"DT")
-3150228
+3150315
 "^DD",998.1,998.1,0,"ID",1)
 W "   ",$P(^(0),U,2)
 "^DD",998.1,998.1,0,"IX","B",998.1,.01)
@@ -21352,34 +22416,76 @@ S ^RGSER(998.1,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,"B",$E(X,1,30),DA)
 "^DD",998.1,998.1,.01,3)
 Replace Name of the serialization type (1-30 characters).
+"^DD",998.1,998.1,.01,21,0)
+^^3^3^3150310.204501
+"^DD",998.1,998.1,.01,21,1,0)
+This is the portion of the request URL that identifies the serialization format
+"^DD",998.1,998.1,.01,21,2,0)
+of the requested resource.  It is first part of the path portion of the URL.
+"^DD",998.1,998.1,.01,21,3,0)
+The name and associated content type together should be unique within the file.
 "^DD",998.1,998.1,.01,"DT")
 3150211
 "^DD",998.1,998.1,1,0)
-CONTENT TYPE^F^^0;2^K:$L(X)>30!($L(X)<1) X
+CONTENT TYPE^F^^0;2^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.1,1,3)
-Content type generated by this serialization type.
+Content type(s) generated by this serializer.
+"^DD",998.1,998.1,1,21,0)
+^^6^6^3150315.140532
+"^DD",998.1,998.1,1,21,1,0)
+These are the content types (separated by commas) that are used to match 
+"^DD",998.1,998.1,1,21,2,0)
+against the requested content type.  It is used to match the requestor's 
+"^DD",998.1,998.1,1,21,3,0)
+desired content type.  This allows having multiple entries with the same name, 
+"^DD",998.1,998.1,1,21,4,0)
+but different content types.  By default, the first value of this entry is 
+"^DD",998.1,998.1,1,21,5,0)
+returned as the Content-Type in the response header.  However, the serializer 
+"^DD",998.1,998.1,1,21,6,0)
+may opt to override this value with a more specific MIME type. 
 "^DD",998.1,998.1,1,"DT")
-3150211
+3150315
 "^DD",998.1,998.1,2,0)
 SERIALIZER^F^^0;3^K:$L(X)>10!($L(X)<1)!'(X?1.A0.AN) X
 "^DD",998.1,998.1,2,3)
 Name of serialization routine.
 "^DD",998.1,998.1,2,21,0)
-^^1^1^3150301.093248
+^.001^1^1^3150310^
 "^DD",998.1,998.1,2,21,1,0)
 The specified serializer routine must implement the Serializer interface.
 "^DD",998.1,998.1,2,"DT")
 3150211
+"^DD",998.1,998.1,3,0)
+VERSION^F^^0;4^K:$L(X)>20!($L(X)<1) X
+"^DD",998.1,998.1,3,3)
+Version of this serializer (1-20 characters).
+"^DD",998.1,998.1,3,21,0)
+^^1^1^3150312.172833
+"^DD",998.1,998.1,3,21,1,0)
+This represents the version of the format the serializer is generating.
+"^DD",998.1,998.1,3,"DT")
+3150312
 "^DD",998.1,998.1,10,0)
 RESOURCE^998.11^^10;0
+"^DD",998.1,998.1,10,21,0)
+^.001^4^4^3150310^^
+"^DD",998.1,998.1,10,21,1,0)
+This is the portion of the path of the request URL that follows the 
+"^DD",998.1,998.1,10,21,2,0)
+serialization specifier.  It may include the wildcard characters # (for 
+"^DD",998.1,998.1,10,21,3,0)
+matching any sequence of digits) and * (for matching any sequence of 
+"^DD",998.1,998.1,10,21,4,0)
+characters).
 "^DD",998.1,998.1,20,0)
 HEADER FIELDS^998.14^^20;0
 "^DD",998.1,998.1,20,"DT")
 3150228
 "^DD",998.1,998.11,0)
-RESOURCE SUB-FIELD^^2^8
+RESOURCE SUB-FIELD^^50^9
 "^DD",998.1,998.11,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.11,0,"IX","B",998.11,.01)
 
 "^DD",998.1,998.11,0,"IX","C",998.11,.01)
@@ -21395,11 +22501,11 @@ RESOURCE^MF^^0;1^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.11,.01,1,1,0)
 998.11^B^MUMPS
 "^DD",998.1,998.11,.01,1,1,1)
-S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSER(X)
+S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSERDD(X)
 "^DD",998.1,998.11,.01,1,1,2)
 K ^RGSER(998.1,DA(1),10,"B",X,DA)
 "^DD",998.1,998.11,.01,1,1,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,.01,1,2,0)
 998.11^C^MUMPS
 "^DD",998.1,998.11,.01,1,2,1)
@@ -21411,11 +22517,19 @@ K ^RGSER(998.1,DA(1),10,"C",$$UP^XLFSTR(X),DA)
 "^DD",998.1,998.11,.01,3)
 Enter path name for the resource.
 "^DD",998.1,998.11,.01,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,1,0)
 INTERNAL^S^0:NO;1:YES;^0;2^Q
 "^DD",998.1,998.11,1,3)
 Enter YES if this is an internal resource.
+"^DD",998.1,998.11,1,21,0)
+^^3^3^3150310.205212
+"^DD",998.1,998.11,1,21,1,0)
+If set to YES, this resource is internal to the server and may not be 
+"^DD",998.1,998.11,1,21,2,0)
+referenced directly.  Any attempt to request an internal resource will return 
+"^DD",998.1,998.11,1,21,3,0)
+an error.
 "^DD",998.1,998.11,1,"DT")
 3150221
 "^DD",998.1,998.11,2,0)
@@ -21426,6 +22540,12 @@ S Y(0)=Y S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 "^DD",998.1,998.11,2,3)
 Enter a file or subfile number.
+"^DD",998.1,998.11,2,21,0)
+^^2^2^3150310.205524
+"^DD",998.1,998.11,2,21,1,0)
+This is the number of the file or subfile from which the resource will be
+"^DD",998.1,998.11,2,21,2,0)
+extracted.  For resources that are derived, this field may be null.
 "^DD",998.1,998.11,2,"DT")
 3150211
 "^DD",998.1,998.11,10,0)
@@ -21434,30 +22554,114 @@ CUSTOM SERIALIZER^K^^10;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 M code to invoke custom serializer.
 "^DD",998.1,998.11,10,9)
 @
+"^DD",998.1,998.11,10,21,0)
+^^4^4^3150310.205835
+"^DD",998.1,998.11,10,21,1,0)
+For resources that use a custom serializer, this field contains executable M 
+"^DD",998.1,998.11,10,21,2,0)
+code that performs the serialization.  When this field is non-null, the 
+"^DD",998.1,998.11,10,21,3,0)
+default serialization code is not executed unless the custom serializer kills 
+"^DD",998.1,998.11,10,21,4,0)
+the XSER variable before returning control.
 "^DD",998.1,998.11,10,"DT")
 3150211
 "^DD",998.1,998.11,20,0)
-CUSTOM RETRIEVAL^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
+CUSTOM READER^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 "^DD",998.1,998.11,20,3)
 M code to invoke custom retrieval logic.
 "^DD",998.1,998.11,20,9)
 @
+"^DD",998.1,998.11,20,21,0)
+^.001^16^16^3150312^
+"^DD",998.1,998.11,20,21,1,0)
+This field contains custom retrieval logic for resources that require it.  It
+"^DD",998.1,998.11,20,21,2,0)
+should return a single instance of a resource given its unique identifier using
+"^DD",998.1,998.11,20,21,3,0)
+the VALS array in the format:
+"^DD",998.1,998.11,20,21,4,0)
+
+"^DD",998.1,998.11,20,21,5,0)
+       VALS(FILE,IENS,<property>,<int/ext>)=<value>
+"^DD",998.1,998.11,20,21,6,0)
+
+"^DD",998.1,998.11,20,21,7,0)
+where
+"^DD",998.1,998.11,20,21,8,0)
+
+"^DD",998.1,998.11,20,21,9,0)
+       <property> = The property's name.
+"^DD",998.1,998.11,20,21,10,0)
+       <int/ext>  = "I" or "E" for representing internal and external values,
+"^DD",998.1,998.11,20,21,11,0)
+                    respectively.
+"^DD",998.1,998.11,20,21,12,0)
+       <value>    = The property's value.
+"^DD",998.1,998.11,20,21,13,0)
+
+"^DD",998.1,998.11,20,21,14,0)
+Note that even if custom retrieval logic is provided, the default retrieval
+"^DD",998.1,998.11,20,21,15,0)
+logic will also be executed if the value of the FILE variable (from the SOURCE
+"^DD",998.1,998.11,20,21,16,0)
+field) is non-zero.
 "^DD",998.1,998.11,20,"DT")
-3150211
+3150312
 "^DD",998.1,998.11,30,0)
 PROPERTY^998.12I^^30;0
+"^DD",998.1,998.11,30,21,0)
+^.001^1^1^3150310^
+"^DD",998.1,998.11,30,21,1,0)
+This is the list of properties for the given resource.
 "^DD",998.1,998.11,40,0)
 PARAMETER^998.13I^^40;0
+"^DD",998.1,998.11,40,21,0)
+^^5^5^3150310.211659
+"^DD",998.1,998.11,40,21,1,0)
+This is the list of searchable parameters supported for the resource.  These 
+"^DD",998.1,998.11,40,21,2,0)
+serve two purposes.  First, they define the logic for determining a match for 
+"^DD",998.1,998.11,40,21,3,0)
+the given search parameter.  Second, they may define a cohort selector for a 
+"^DD",998.1,998.11,40,21,4,0)
+given search parameter.  Cohort selectors optimize search strategy depending 
+"^DD",998.1,998.11,40,21,5,0)
+on which search parameters are selected.
+"^DD",998.1,998.11,50,0)
+TEMPLATE^998.15^^50;0
+"^DD",998.1,998.11,50,21,0)
+^^8^8^3150312.154427
+"^DD",998.1,998.11,50,21,1,0)
+Templates may be referenced by properties to generate output from the 
+"^DD",998.1,998.11,50,21,2,0)
+serializer. They may contain replaceable parameters enclosed between "|" 
+"^DD",998.1,998.11,50,21,3,0)
+characters.  If a replaceable parameter starts with an "@" or "#" character, 
+"^DD",998.1,998.11,50,21,4,0)
+it is assumed to be an M expression whose value is inserted into the 
+"^DD",998.1,998.11,50,21,5,0)
+generated output.  Otherwise, it is assumed to be a field identifier whose 
+"^DD",998.1,998.11,50,21,6,0)
+value is inserted.  Except for "#"-prefixed expressions, any reserved 
+"^DD",998.1,998.11,50,21,7,0)
+characters in the replacement value will be escaped according to the rules
+"^DD",998.1,998.11,50,21,8,0)
+specified by the serializer.
 "^DD",998.1,998.11,99,0)
 DESCRIPTION^F^^99;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.11,99,3)
 Enter brief description of this resource.
+"^DD",998.1,998.11,99,21,0)
+^^1^1^3150310.21222
+"^DD",998.1,998.11,99,21,1,0)
+Provides a detailed description of the associated resource.
 "^DD",998.1,998.11,99,"DT")
 3150211
 "^DD",998.1,998.12,0)
 PROPERTY SUB-FIELD^^10^5
 "^DD",998.1,998.12,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,0,"ID",3)
 W "   ",$P(^(0),U,4)
 "^DD",998.1,998.12,0,"IX","ASEQ",998.12,3)
@@ -21480,20 +22684,86 @@ S ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)
 "^DD",998.1,998.12,.01,3)
 Property name to be used in serialization.
+"^DD",998.1,998.12,.01,21,0)
+^^8^8^3150311.183527
+"^DD",998.1,998.12,.01,21,1,0)
+This is the name that identifies the property.  It is typically the name that 
+"^DD",998.1,998.12,.01,21,2,0)
+is emitted by the serializer, but this is not a requirement. An arbitrary tag 
+"^DD",998.1,998.12,.01,21,3,0)
+may also be appended to the property name using the "!" character as a 
+"^DD",998.1,998.12,.01,21,4,0)
+delimiter.  This may be used to provide additional information about the 
+"^DD",998.1,998.12,.01,21,5,0)
+entry.  For example, if a property requires multiple entries to implement the 
+"^DD",998.1,998.12,.01,21,6,0)
+logic required to emit it, the tag can provide information to the user as to 
+"^DD",998.1,998.12,.01,21,7,0)
+the role each entry plays.  For any given entry, the serializer may choose to 
+"^DD",998.1,998.12,.01,21,8,0)
+apply additional significance to the tag.
 "^DD",998.1,998.12,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.12,1,3)
 Field name or # corresponding to this property
+"^DD",998.1,998.12,1,21,0)
+^^7^7^3150311.184042
+"^DD",998.1,998.12,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved
+"^DD",998.1,998.12,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.12,1,21,3,0)
+retrieved for the specified fields are available to the serializer.  Where the
+"^DD",998.1,998.12,1,21,4,0)
+SOURCE is a FileMan file or subfile, the field is the field # (or name).  For 
+"^DD",998.1,998.12,1,21,5,0)
+resources using custom retrieval logic, the field is the identifier assigned 
+"^DD",998.1,998.12,1,21,6,0)
+by that logic.  For properties that do not require source data (such as a 
+"^DD",998.1,998.12,1,21,7,0)
+static property), this entry may be left blank.
 "^DD",998.1,998.12,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,2,0)
-TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;^0;3^Q
+TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;T:TEMPLATE;S:STATIC;N:NOP;^0;3^Q
 "^DD",998.1,998.12,2,3)
 Encoding type for this property.
+"^DD",998.1,998.12,2,21,0)
+^^15^15^3150310.21405
+"^DD",998.1,998.12,2,21,1,0)
+Represents the type of property.  Possible values are:
+"^DD",998.1,998.12,2,21,2,0)
+   B = BOOLEAN         - Emits a property value that is true or false.
+"^DD",998.1,998.12,2,21,3,0)
+   C = CUSTOM          - The associated custom code emits the property value.
+"^DD",998.1,998.12,2,21,4,0)
+   D = DATE            - Emits a property value that is a date.
+"^DD",998.1,998.12,2,21,5,0)
+   F = FREE TEXT       - Emits the external value of the property.
+"^DD",998.1,998.12,2,21,6,0)
+   I = INLINE          - Inserts a serialized object inline.
+"^DD",998.1,998.12,2,21,7,0)
+   N = NOP             - Causes the property to be ignored.
+"^DD",998.1,998.12,2,21,8,0)
+   M = MULTIPLE        - The property is a subfile multiple.
+"^DD",998.1,998.12,2,21,9,0)
+   O = OBJECT          - Invokes serialization logic for the specified object.
+"^DD",998.1,998.12,2,21,10,0)
+   R = RAW             - Emits the internal value of the property.
+"^DD",998.1,998.12,2,21,11,0)
+   S = STATIC          - Emits a static value for the property.
+"^DD",998.1,998.12,2,21,12,0)
+   T = TEMPLATE        - Emits the specified template.
+"^DD",998.1,998.12,2,21,13,0)
+   W = WORD PROCESSING - Emits a word processing value.
+"^DD",998.1,998.12,2,21,14,0)
+
+"^DD",998.1,998.12,2,21,15,0)
+For more information, see the description of the CONTROL field.
 "^DD",998.1,998.12,2,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,3,0)
 SEQUENCE^RNJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.12,3,1,0)
@@ -21508,32 +22778,44 @@ K ^RGSER(998.1,DA(2),10,DA(1),30,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.12,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.12,3,21,0)
+^^3^3^3150311.184411
+"^DD",998.1,998.12,3,21,1,0)
+This is a numerical sequence # that determines the order in which the 
+"^DD",998.1,998.12,3,21,2,0)
+serializer processes property entries, and, thus, the order in which 
+"^DD",998.1,998.12,3,21,3,0)
+properties are emitted by the serializer.
 "^DD",998.1,998.12,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,10,0)
-CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
+CONTROL^FX^^10;E1,250^D ITXCTRL^RGSERDD(.X,.DA)
 "^DD",998.1,998.12,10,3)
 Enter control data.
 "^DD",998.1,998.12,10,21,0)
-^^8^8^3150303.134213
+^^10^10^3150311.184552
 "^DD",998.1,998.12,10,21,1,0)
-The format of this field depends on the value of the TYPE field.  For those
+The content of this field depends on the value of the TYPE field.  For those
 "^DD",998.1,998.12,10,21,2,0)
 TYPE values not listed below, this field will be ignored.
 "^DD",998.1,998.12,10,21,3,0)
 
 "^DD",998.1,998.12,10,21,4,0)
-C (Custom)          - Executable M code.
+  C (CUSTOM)          - Executable M code.
 "^DD",998.1,998.12,10,21,5,0)
-I (Inline)          - Path for inline resource.
+  I (INLINE)          - Path for inline resource.
 "^DD",998.1,998.12,10,21,6,0)
-O (Object)          - Alias name of the target object.
+  O (OBJECT)          - Path for the target object.
 "^DD",998.1,998.12,10,21,7,0)
-M (Multiple)        - Alias name of the multiple object.
+  M (MULTIPLE)        - Path for the multiple entry.
 "^DD",998.1,998.12,10,21,8,0)
-W (Word Processing) - Line delimiter to use (escaped characters supported).
+  S (STATIC)          - The static value of the property.
+"^DD",998.1,998.12,10,21,9,0)
+  W (WORD PROCESSING) - Line delimiter to use (escaped characters supported).
+"^DD",998.1,998.12,10,21,10,0)
+
 "^DD",998.1,998.12,10,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,0)
 PARAMETER SUB-FIELD^^10^6
 "^DD",998.1,998.13,0,"DT")
@@ -21560,20 +22842,64 @@ S ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)
 "^DD",998.1,998.13,.01,3)
 Enter name of search parameter.
+"^DD",998.1,998.13,.01,21,0)
+^^1^1^3150311.184801
+"^DD",998.1,998.13,.01,21,1,0)
+This is the identifier of the parameter as it would appear in a query.
 "^DD",998.1,998.13,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.13,1,3)
 Field name or # corresponding to this parameter.
+"^DD",998.1,998.13,1,21,0)
+^^6^6^3150311.185216
+"^DD",998.1,998.13,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved 
+"^DD",998.1,998.13,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.13,1,21,3,0)
+retrieved for the specified fields are available to the serializer when 
+"^DD",998.1,998.13,1,21,4,0)
+formulating a search query.  Where the SOURCE is a FileMan file or subfile, 
+"^DD",998.1,998.13,1,21,5,0)
+the field is the field # (or name).  For resources using custom retrieval 
+"^DD",998.1,998.13,1,21,6,0)
+logic, the field is the identifier assigned by that logic. 
 "^DD",998.1,998.13,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,2,0)
 TYPE^S^N:NUMBER;D:DATE;S:STRING;T:TOKEN;R:REFERENCE;Q:QUANTITY;^0;3^Q
 "^DD",998.1,998.13,2,3)
 Type of the search parameter.
+"^DD",998.1,998.13,2,21,0)
+^^12^12^3150311.190219
+"^DD",998.1,998.13,2,21,1,0)
+The parameter type determines the allowable comparison operators and the logic 
+"^DD",998.1,998.13,2,21,2,0)
+used to implement them.
+"^DD",998.1,998.13,2,21,3,0)
+
+"^DD",998.1,998.13,2,21,4,0)
+The following parameter types are recognized:
+"^DD",998.1,998.13,2,21,5,0)
+
+"^DD",998.1,998.13,2,21,6,0)
+       N        NUMBER     - The parameter is a numeric value.
+"^DD",998.1,998.13,2,21,7,0)
+       D        DATE       - The parameter is a date value.
+"^DD",998.1,998.13,2,21,8,0)
+       S        STRING     - The parameter is a text string.
+"^DD",998.1,998.13,2,21,9,0)
+       T        TOKEN      - The parameter is a special token.
+"^DD",998.1,998.13,2,21,10,0)
+       R        REFERENCE  - The parameter is a resource reference.
+"^DD",998.1,998.13,2,21,11,0)
+       Q        QUANTITY   - The parameter is a quantity.
+"^DD",998.1,998.13,2,21,12,0)
+ 
 "^DD",998.1,998.13,2,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,3,0)
 SEQUENCE^NJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.13,3,1,0)
@@ -21588,8 +22914,16 @@ K ^RGSER(998.1,DA(2),10,DA(1),40,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.13,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.13,3,21,0)
+^^3^3^3150311.190416
+"^DD",998.1,998.13,3,21,1,0)
+The sequence # determines the order the serializer uses in processing 
+"^DD",998.1,998.13,3,21,2,0)
+parameters.  This can be important in determining optimal search strategy 
+"^DD",998.1,998.13,3,21,3,0)
+where multiple parameters are specified.
 "^DD",998.1,998.13,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,10,0)
 CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.13,10,3)
@@ -21618,6 +22952,44 @@ HEADER FIELDS^WLx^^0;1^Q
 Additional fields to be included in the HTTP response header.
 "^DD",998.1,998.14,.01,"DT")
 3150228
+"^DD",998.1,998.15,0)
+TEMPLATE SUB-FIELD^^1^2
+"^DD",998.1,998.15,0,"DT")
+3150309
+"^DD",998.1,998.15,0,"IX","B",998.15,.01)
+
+"^DD",998.1,998.15,0,"NM","TEMPLATE")
+
+"^DD",998.1,998.15,0,"UP")
+998.11
+"^DD",998.1,998.15,.01,0)
+TEMPLATE^MF^^0;1^K:$L(X)>30!($L(X)<1) X
+"^DD",998.1,998.15,.01,1,0)
+^.1
+"^DD",998.1,998.15,.01,1,1,0)
+998.15^B
+"^DD",998.1,998.15,.01,1,1,1)
+S ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)=""
+"^DD",998.1,998.15,.01,1,1,2)
+K ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)
+"^DD",998.1,998.15,.01,3)
+Answer must be 1-30 characters in length.
+"^DD",998.1,998.15,.01,"DT")
+3150309
+"^DD",998.1,998.15,1,0)
+CONTENT^998.151^^1;0
+"^DD",998.1,998.151,0)
+CONTENT SUB-FIELD^^.01^1
+"^DD",998.1,998.151,0,"DT")
+3150309
+"^DD",998.1,998.151,0,"NM","CONTENT")
+
+"^DD",998.1,998.151,0,"UP")
+998.15
+"^DD",998.1,998.151,.01,0)
+CONTENT^WLx^^0;1^Q
+"^DD",998.1,998.151,.01,"DT")
+3150309
 "^DD",19941.21,19941.21,0)
 FIELD^^7^14
 "^DD",19941.21,19941.21,0,"DT")
@@ -21867,7 +23239,7 @@ CIA EVENT TYPE^19941.21
 **INSTALL NAME**
 CAREWEB CONTEXT 1.0
 "BLD",8487,0)
-CAREWEB CONTEXT 1.0^^0^3150307^n
+CAREWEB CONTEXT 1.0^^0^3150315^n
 "BLD",8487,4,0)
 ^9.64PA^998.1^4
 "BLD",8487,4,998.1,0)
@@ -21901,7 +23273,7 @@ I $$SCRN^RGCWKDTP(Y,5)
 "BLD",8487,4,"B",19941.21,19941.21)
 
 "BLD",8487,6.3)
-196
+276
 "BLD",8487,"INI")
 PRE^RGCWKDIN
 "BLD",8487,"INIT")
@@ -22313,6 +23685,10 @@ I $$SCRN^RGCWKDTP(Y,1)
 "FIA",998.1,998.13)
 0
 "FIA",998.1,998.14)
+0
+"FIA",998.1,998.15)
+0
+"FIA",998.1,998.151)
 0
 "FIA",999.2)
 CAREWEB PATIENT LIST
@@ -23011,7 +24387,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWENC1",1,0)
 RGCWENC1 ;RI/CBMI/DKM - Visit Creation Support ;14-Mar-2014 17:10;DKM
 "RTN","RGCWENC1",2,0)
- ;;1.0;CAREWEB FRAMEWORK;**005004;20-Aug-2007 08:41;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;**005004;20-Aug-2007 08:41;Build 276
 "RTN","RGCWENC1",3,0)
  ; Visit creation API
 "RTN","RGCWENC1",4,0)
@@ -23309,7 +24685,7 @@ ADDVIST(IN,OUT) ;
 "RTN","RGCWENCX",1,0)
 RGCWENCX ;RI/CBMI/DKM - Encounter Context Support ;22-Feb-2015 22:39;DKM
 "RTN","RGCWENCX",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWENCX",3,0)
  ; RPC: Fetch visit data given visit file IEN
 "RTN","RGCWENCX",4,0)
@@ -24035,7 +25411,7 @@ ENINQ(DATA,VIEN) ;
 "RTN","RGCWFTIU",1,0)
 RGCWFTIU ;RI/CBMI/DKM - TIU FHIR Support ;28-Jul-2014 17:23;DKM
 "RTN","RGCWFTIU",2,0)
- ;;1.0;RGCW;;14-March-2014;Build 196
+ ;;1.0;RGCW;;14-March-2014;Build 276
 "RTN","RGCWFTIU",3,0)
  ;=================================================================
 "RTN","RGCWFTIU",4,0)
@@ -24103,7 +25479,7 @@ PERSON(TAG,ENT,FLD) ;
 "RTN","RGCWKDIN",1,0)
 RGCKDIN ;RI/CBMI/DKM - CareWeb KIDS installation support ;07-Mar-2015 10:08;DKM
 "RTN","RGCWKDIN",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWKDIN",3,0)
  ; Environment check
 "RTN","RGCWKDIN",4,0)
@@ -24429,7 +25805,7 @@ MES(MSG,QUIT) ;
 "RTN","RGCWPTCX",1,0)
 RGCWPTCX ;RI/CBMI/DKM - Patient Context Object ;05-Mar-2015 13:10;DKM
 "RTN","RGCWPTCX",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTCX",3,0)
  ; Save/retrieve last patient selected for current institution
 "RTN","RGCWPTCX",4,0)
@@ -24779,7 +26155,7 @@ FMTSSN(SSN) ;EP - P7
 "RTN","RGCWPTP1",1,0)
 RGCWPTP1 ;RI/CBMI/DKM - Patient List Management ;02-Feb-2015 10:15;DKM
 "RTN","RGCWPTP1",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTP1",3,0)
  ; Return list of patients with clinic appt w/in range
 "RTN","RGCWPTP1",4,0)
@@ -25025,7 +26401,7 @@ HOSPLOC(DATA,FROM,DIR,MAX,TYPE,START,END) ;EP
 "RTN","RGCWPTP2",1,0)
 RGCWPTP2 ;RI/CBMI/DKM - Patient List Management ;02-Feb-2015 10:15;DKM
 "RTN","RGCWPTP2",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTP2",3,0)
  ; Retrieve a given list for a given user
 "RTN","RGCWPTP2",4,0)
@@ -25163,7 +26539,7 @@ GETNAME(IEN) ;
 "RTN","RGCWPTP3",1,0)
 RGCWPTP3 ;RI/CBMI/MGH - Patient List Management ;02-Feb-2015 10:15;DKM
 "RTN","RGCWPTP3",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTP3",3,0)
  ; Call logic to manage team lists
 "RTN","RGCWPTP3",4,0)
@@ -25417,7 +26793,7 @@ UPPER(X) ; Convert lower case X to UPPER CASE
 "RTN","RGCWPTPC",1,0)
 RGCWPTPC ;RI/CBMI/DKM - RPC calls for provider information ;18-Aug-2014 17:20;DKM
 "RTN","RGCWPTPC",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTPC",3,0)
 USESD() Q $G(DUZ("AG"))'="I"
 "RTN","RGCWPTPC",4,0)
@@ -25555,7 +26931,7 @@ TEAM(PRV) ;EP
 "RTN","RGCWPTPL",1,0)
 RGCWPTPL ;RI/CBMI/DKM - Patient List Management ;02-Feb-2015 10:15;DKM
 "RTN","RGCWPTPL",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTPL",3,0)
  ; Lookup by full or partial SSN
 "RTN","RGCWPTPL",4,0)
@@ -25827,7 +27203,7 @@ PARAMITM() Q "RGCWPTPL DEFAULT ITEM"
 "RTN","RGCWPTPS",1,0)
 RGCWPTPS ;RI/CBMI/DKM - Patient search ;30-Jul-2014 11:46;DKM
 "RTN","RGCWPTPS",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 196
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 276
 "RTN","RGCWPTPS",3,0)
 SEARCH(DATA,MAX,LNAME,FNAME,MRN,SSN,IEN,SEX,DOB) ;EP
 "RTN","RGCWPTPS",4,0)
@@ -25993,11 +27369,11 @@ RGCWENCX VISIT TYPES^9^N~Not Found~Used for service categories not otherwise spe
 "VER")
 8.0^22.0
 "^DD",998.1,998.1,0)
-FIELD^^20^5
+FIELD^^3^6
 "^DD",998.1,998.1,0,"DDA")
 N
 "^DD",998.1,998.1,0,"DT")
-3150228
+3150315
 "^DD",998.1,998.1,0,"ID",1)
 W "   ",$P(^(0),U,2)
 "^DD",998.1,998.1,0,"IX","B",998.1,.01)
@@ -26018,34 +27394,76 @@ S ^RGSER(998.1,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,"B",$E(X,1,30),DA)
 "^DD",998.1,998.1,.01,3)
 Replace Name of the serialization type (1-30 characters).
+"^DD",998.1,998.1,.01,21,0)
+^^3^3^3150310.204501
+"^DD",998.1,998.1,.01,21,1,0)
+This is the portion of the request URL that identifies the serialization format
+"^DD",998.1,998.1,.01,21,2,0)
+of the requested resource.  It is first part of the path portion of the URL.
+"^DD",998.1,998.1,.01,21,3,0)
+The name and associated content type together should be unique within the file.
 "^DD",998.1,998.1,.01,"DT")
 3150211
 "^DD",998.1,998.1,1,0)
-CONTENT TYPE^F^^0;2^K:$L(X)>30!($L(X)<1) X
+CONTENT TYPE^F^^0;2^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.1,1,3)
-Content type generated by this serialization type.
+Content type(s) generated by this serializer.
+"^DD",998.1,998.1,1,21,0)
+^^6^6^3150315.140532
+"^DD",998.1,998.1,1,21,1,0)
+These are the content types (separated by commas) that are used to match 
+"^DD",998.1,998.1,1,21,2,0)
+against the requested content type.  It is used to match the requestor's 
+"^DD",998.1,998.1,1,21,3,0)
+desired content type.  This allows having multiple entries with the same name, 
+"^DD",998.1,998.1,1,21,4,0)
+but different content types.  By default, the first value of this entry is 
+"^DD",998.1,998.1,1,21,5,0)
+returned as the Content-Type in the response header.  However, the serializer 
+"^DD",998.1,998.1,1,21,6,0)
+may opt to override this value with a more specific MIME type. 
 "^DD",998.1,998.1,1,"DT")
-3150211
+3150315
 "^DD",998.1,998.1,2,0)
 SERIALIZER^F^^0;3^K:$L(X)>10!($L(X)<1)!'(X?1.A0.AN) X
 "^DD",998.1,998.1,2,3)
 Name of serialization routine.
 "^DD",998.1,998.1,2,21,0)
-^^1^1^3150301.093248
+^.001^1^1^3150310^
 "^DD",998.1,998.1,2,21,1,0)
 The specified serializer routine must implement the Serializer interface.
 "^DD",998.1,998.1,2,"DT")
 3150211
+"^DD",998.1,998.1,3,0)
+VERSION^F^^0;4^K:$L(X)>20!($L(X)<1) X
+"^DD",998.1,998.1,3,3)
+Version of this serializer (1-20 characters).
+"^DD",998.1,998.1,3,21,0)
+^^1^1^3150312.172833
+"^DD",998.1,998.1,3,21,1,0)
+This represents the version of the format the serializer is generating.
+"^DD",998.1,998.1,3,"DT")
+3150312
 "^DD",998.1,998.1,10,0)
 RESOURCE^998.11^^10;0
+"^DD",998.1,998.1,10,21,0)
+^.001^4^4^3150310^^
+"^DD",998.1,998.1,10,21,1,0)
+This is the portion of the path of the request URL that follows the 
+"^DD",998.1,998.1,10,21,2,0)
+serialization specifier.  It may include the wildcard characters # (for 
+"^DD",998.1,998.1,10,21,3,0)
+matching any sequence of digits) and * (for matching any sequence of 
+"^DD",998.1,998.1,10,21,4,0)
+characters).
 "^DD",998.1,998.1,20,0)
 HEADER FIELDS^998.14^^20;0
 "^DD",998.1,998.1,20,"DT")
 3150228
 "^DD",998.1,998.11,0)
-RESOURCE SUB-FIELD^^2^8
+RESOURCE SUB-FIELD^^50^9
 "^DD",998.1,998.11,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.11,0,"IX","B",998.11,.01)
 
 "^DD",998.1,998.11,0,"IX","C",998.11,.01)
@@ -26061,11 +27479,11 @@ RESOURCE^MF^^0;1^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.11,.01,1,1,0)
 998.11^B^MUMPS
 "^DD",998.1,998.11,.01,1,1,1)
-S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSER(X)
+S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSERDD(X)
 "^DD",998.1,998.11,.01,1,1,2)
 K ^RGSER(998.1,DA(1),10,"B",X,DA)
 "^DD",998.1,998.11,.01,1,1,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,.01,1,2,0)
 998.11^C^MUMPS
 "^DD",998.1,998.11,.01,1,2,1)
@@ -26077,11 +27495,19 @@ K ^RGSER(998.1,DA(1),10,"C",$$UP^XLFSTR(X),DA)
 "^DD",998.1,998.11,.01,3)
 Enter path name for the resource.
 "^DD",998.1,998.11,.01,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,1,0)
 INTERNAL^S^0:NO;1:YES;^0;2^Q
 "^DD",998.1,998.11,1,3)
 Enter YES if this is an internal resource.
+"^DD",998.1,998.11,1,21,0)
+^^3^3^3150310.205212
+"^DD",998.1,998.11,1,21,1,0)
+If set to YES, this resource is internal to the server and may not be 
+"^DD",998.1,998.11,1,21,2,0)
+referenced directly.  Any attempt to request an internal resource will return 
+"^DD",998.1,998.11,1,21,3,0)
+an error.
 "^DD",998.1,998.11,1,"DT")
 3150221
 "^DD",998.1,998.11,2,0)
@@ -26092,6 +27518,12 @@ S Y(0)=Y S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 "^DD",998.1,998.11,2,3)
 Enter a file or subfile number.
+"^DD",998.1,998.11,2,21,0)
+^^2^2^3150310.205524
+"^DD",998.1,998.11,2,21,1,0)
+This is the number of the file or subfile from which the resource will be
+"^DD",998.1,998.11,2,21,2,0)
+extracted.  For resources that are derived, this field may be null.
 "^DD",998.1,998.11,2,"DT")
 3150211
 "^DD",998.1,998.11,10,0)
@@ -26100,30 +27532,114 @@ CUSTOM SERIALIZER^K^^10;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 M code to invoke custom serializer.
 "^DD",998.1,998.11,10,9)
 @
+"^DD",998.1,998.11,10,21,0)
+^^4^4^3150310.205835
+"^DD",998.1,998.11,10,21,1,0)
+For resources that use a custom serializer, this field contains executable M 
+"^DD",998.1,998.11,10,21,2,0)
+code that performs the serialization.  When this field is non-null, the 
+"^DD",998.1,998.11,10,21,3,0)
+default serialization code is not executed unless the custom serializer kills 
+"^DD",998.1,998.11,10,21,4,0)
+the XSER variable before returning control.
 "^DD",998.1,998.11,10,"DT")
 3150211
 "^DD",998.1,998.11,20,0)
-CUSTOM RETRIEVAL^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
+CUSTOM READER^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 "^DD",998.1,998.11,20,3)
 M code to invoke custom retrieval logic.
 "^DD",998.1,998.11,20,9)
 @
+"^DD",998.1,998.11,20,21,0)
+^.001^16^16^3150312^
+"^DD",998.1,998.11,20,21,1,0)
+This field contains custom retrieval logic for resources that require it.  It
+"^DD",998.1,998.11,20,21,2,0)
+should return a single instance of a resource given its unique identifier using
+"^DD",998.1,998.11,20,21,3,0)
+the VALS array in the format:
+"^DD",998.1,998.11,20,21,4,0)
+
+"^DD",998.1,998.11,20,21,5,0)
+       VALS(FILE,IENS,<property>,<int/ext>)=<value>
+"^DD",998.1,998.11,20,21,6,0)
+
+"^DD",998.1,998.11,20,21,7,0)
+where
+"^DD",998.1,998.11,20,21,8,0)
+
+"^DD",998.1,998.11,20,21,9,0)
+       <property> = The property's name.
+"^DD",998.1,998.11,20,21,10,0)
+       <int/ext>  = "I" or "E" for representing internal and external values,
+"^DD",998.1,998.11,20,21,11,0)
+                    respectively.
+"^DD",998.1,998.11,20,21,12,0)
+       <value>    = The property's value.
+"^DD",998.1,998.11,20,21,13,0)
+
+"^DD",998.1,998.11,20,21,14,0)
+Note that even if custom retrieval logic is provided, the default retrieval
+"^DD",998.1,998.11,20,21,15,0)
+logic will also be executed if the value of the FILE variable (from the SOURCE
+"^DD",998.1,998.11,20,21,16,0)
+field) is non-zero.
 "^DD",998.1,998.11,20,"DT")
-3150211
+3150312
 "^DD",998.1,998.11,30,0)
 PROPERTY^998.12I^^30;0
+"^DD",998.1,998.11,30,21,0)
+^.001^1^1^3150310^
+"^DD",998.1,998.11,30,21,1,0)
+This is the list of properties for the given resource.
 "^DD",998.1,998.11,40,0)
 PARAMETER^998.13I^^40;0
+"^DD",998.1,998.11,40,21,0)
+^^5^5^3150310.211659
+"^DD",998.1,998.11,40,21,1,0)
+This is the list of searchable parameters supported for the resource.  These 
+"^DD",998.1,998.11,40,21,2,0)
+serve two purposes.  First, they define the logic for determining a match for 
+"^DD",998.1,998.11,40,21,3,0)
+the given search parameter.  Second, they may define a cohort selector for a 
+"^DD",998.1,998.11,40,21,4,0)
+given search parameter.  Cohort selectors optimize search strategy depending 
+"^DD",998.1,998.11,40,21,5,0)
+on which search parameters are selected.
+"^DD",998.1,998.11,50,0)
+TEMPLATE^998.15^^50;0
+"^DD",998.1,998.11,50,21,0)
+^^8^8^3150312.154427
+"^DD",998.1,998.11,50,21,1,0)
+Templates may be referenced by properties to generate output from the 
+"^DD",998.1,998.11,50,21,2,0)
+serializer. They may contain replaceable parameters enclosed between "|" 
+"^DD",998.1,998.11,50,21,3,0)
+characters.  If a replaceable parameter starts with an "@" or "#" character, 
+"^DD",998.1,998.11,50,21,4,0)
+it is assumed to be an M expression whose value is inserted into the 
+"^DD",998.1,998.11,50,21,5,0)
+generated output.  Otherwise, it is assumed to be a field identifier whose 
+"^DD",998.1,998.11,50,21,6,0)
+value is inserted.  Except for "#"-prefixed expressions, any reserved 
+"^DD",998.1,998.11,50,21,7,0)
+characters in the replacement value will be escaped according to the rules
+"^DD",998.1,998.11,50,21,8,0)
+specified by the serializer.
 "^DD",998.1,998.11,99,0)
 DESCRIPTION^F^^99;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.11,99,3)
 Enter brief description of this resource.
+"^DD",998.1,998.11,99,21,0)
+^^1^1^3150310.21222
+"^DD",998.1,998.11,99,21,1,0)
+Provides a detailed description of the associated resource.
 "^DD",998.1,998.11,99,"DT")
 3150211
 "^DD",998.1,998.12,0)
 PROPERTY SUB-FIELD^^10^5
 "^DD",998.1,998.12,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,0,"ID",3)
 W "   ",$P(^(0),U,4)
 "^DD",998.1,998.12,0,"IX","ASEQ",998.12,3)
@@ -26146,20 +27662,86 @@ S ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)
 "^DD",998.1,998.12,.01,3)
 Property name to be used in serialization.
+"^DD",998.1,998.12,.01,21,0)
+^^8^8^3150311.183527
+"^DD",998.1,998.12,.01,21,1,0)
+This is the name that identifies the property.  It is typically the name that 
+"^DD",998.1,998.12,.01,21,2,0)
+is emitted by the serializer, but this is not a requirement. An arbitrary tag 
+"^DD",998.1,998.12,.01,21,3,0)
+may also be appended to the property name using the "!" character as a 
+"^DD",998.1,998.12,.01,21,4,0)
+delimiter.  This may be used to provide additional information about the 
+"^DD",998.1,998.12,.01,21,5,0)
+entry.  For example, if a property requires multiple entries to implement the 
+"^DD",998.1,998.12,.01,21,6,0)
+logic required to emit it, the tag can provide information to the user as to 
+"^DD",998.1,998.12,.01,21,7,0)
+the role each entry plays.  For any given entry, the serializer may choose to 
+"^DD",998.1,998.12,.01,21,8,0)
+apply additional significance to the tag.
 "^DD",998.1,998.12,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.12,1,3)
 Field name or # corresponding to this property
+"^DD",998.1,998.12,1,21,0)
+^^7^7^3150311.184042
+"^DD",998.1,998.12,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved
+"^DD",998.1,998.12,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.12,1,21,3,0)
+retrieved for the specified fields are available to the serializer.  Where the
+"^DD",998.1,998.12,1,21,4,0)
+SOURCE is a FileMan file or subfile, the field is the field # (or name).  For 
+"^DD",998.1,998.12,1,21,5,0)
+resources using custom retrieval logic, the field is the identifier assigned 
+"^DD",998.1,998.12,1,21,6,0)
+by that logic.  For properties that do not require source data (such as a 
+"^DD",998.1,998.12,1,21,7,0)
+static property), this entry may be left blank.
 "^DD",998.1,998.12,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,2,0)
-TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;^0;3^Q
+TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;T:TEMPLATE;S:STATIC;N:NOP;^0;3^Q
 "^DD",998.1,998.12,2,3)
 Encoding type for this property.
+"^DD",998.1,998.12,2,21,0)
+^^15^15^3150310.21405
+"^DD",998.1,998.12,2,21,1,0)
+Represents the type of property.  Possible values are:
+"^DD",998.1,998.12,2,21,2,0)
+   B = BOOLEAN         - Emits a property value that is true or false.
+"^DD",998.1,998.12,2,21,3,0)
+   C = CUSTOM          - The associated custom code emits the property value.
+"^DD",998.1,998.12,2,21,4,0)
+   D = DATE            - Emits a property value that is a date.
+"^DD",998.1,998.12,2,21,5,0)
+   F = FREE TEXT       - Emits the external value of the property.
+"^DD",998.1,998.12,2,21,6,0)
+   I = INLINE          - Inserts a serialized object inline.
+"^DD",998.1,998.12,2,21,7,0)
+   N = NOP             - Causes the property to be ignored.
+"^DD",998.1,998.12,2,21,8,0)
+   M = MULTIPLE        - The property is a subfile multiple.
+"^DD",998.1,998.12,2,21,9,0)
+   O = OBJECT          - Invokes serialization logic for the specified object.
+"^DD",998.1,998.12,2,21,10,0)
+   R = RAW             - Emits the internal value of the property.
+"^DD",998.1,998.12,2,21,11,0)
+   S = STATIC          - Emits a static value for the property.
+"^DD",998.1,998.12,2,21,12,0)
+   T = TEMPLATE        - Emits the specified template.
+"^DD",998.1,998.12,2,21,13,0)
+   W = WORD PROCESSING - Emits a word processing value.
+"^DD",998.1,998.12,2,21,14,0)
+
+"^DD",998.1,998.12,2,21,15,0)
+For more information, see the description of the CONTROL field.
 "^DD",998.1,998.12,2,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,3,0)
 SEQUENCE^RNJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.12,3,1,0)
@@ -26174,32 +27756,44 @@ K ^RGSER(998.1,DA(2),10,DA(1),30,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.12,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.12,3,21,0)
+^^3^3^3150311.184411
+"^DD",998.1,998.12,3,21,1,0)
+This is a numerical sequence # that determines the order in which the 
+"^DD",998.1,998.12,3,21,2,0)
+serializer processes property entries, and, thus, the order in which 
+"^DD",998.1,998.12,3,21,3,0)
+properties are emitted by the serializer.
 "^DD",998.1,998.12,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,10,0)
-CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
+CONTROL^FX^^10;E1,250^D ITXCTRL^RGSERDD(.X,.DA)
 "^DD",998.1,998.12,10,3)
 Enter control data.
 "^DD",998.1,998.12,10,21,0)
-^^8^8^3150303.134213
+^^10^10^3150311.184552
 "^DD",998.1,998.12,10,21,1,0)
-The format of this field depends on the value of the TYPE field.  For those
+The content of this field depends on the value of the TYPE field.  For those
 "^DD",998.1,998.12,10,21,2,0)
 TYPE values not listed below, this field will be ignored.
 "^DD",998.1,998.12,10,21,3,0)
 
 "^DD",998.1,998.12,10,21,4,0)
-C (Custom)          - Executable M code.
+  C (CUSTOM)          - Executable M code.
 "^DD",998.1,998.12,10,21,5,0)
-I (Inline)          - Path for inline resource.
+  I (INLINE)          - Path for inline resource.
 "^DD",998.1,998.12,10,21,6,0)
-O (Object)          - Alias name of the target object.
+  O (OBJECT)          - Path for the target object.
 "^DD",998.1,998.12,10,21,7,0)
-M (Multiple)        - Alias name of the multiple object.
+  M (MULTIPLE)        - Path for the multiple entry.
 "^DD",998.1,998.12,10,21,8,0)
-W (Word Processing) - Line delimiter to use (escaped characters supported).
+  S (STATIC)          - The static value of the property.
+"^DD",998.1,998.12,10,21,9,0)
+  W (WORD PROCESSING) - Line delimiter to use (escaped characters supported).
+"^DD",998.1,998.12,10,21,10,0)
+
 "^DD",998.1,998.12,10,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,0)
 PARAMETER SUB-FIELD^^10^6
 "^DD",998.1,998.13,0,"DT")
@@ -26226,20 +27820,64 @@ S ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)
 "^DD",998.1,998.13,.01,3)
 Enter name of search parameter.
+"^DD",998.1,998.13,.01,21,0)
+^^1^1^3150311.184801
+"^DD",998.1,998.13,.01,21,1,0)
+This is the identifier of the parameter as it would appear in a query.
 "^DD",998.1,998.13,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.13,1,3)
 Field name or # corresponding to this parameter.
+"^DD",998.1,998.13,1,21,0)
+^^6^6^3150311.185216
+"^DD",998.1,998.13,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved 
+"^DD",998.1,998.13,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.13,1,21,3,0)
+retrieved for the specified fields are available to the serializer when 
+"^DD",998.1,998.13,1,21,4,0)
+formulating a search query.  Where the SOURCE is a FileMan file or subfile, 
+"^DD",998.1,998.13,1,21,5,0)
+the field is the field # (or name).  For resources using custom retrieval 
+"^DD",998.1,998.13,1,21,6,0)
+logic, the field is the identifier assigned by that logic. 
 "^DD",998.1,998.13,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,2,0)
 TYPE^S^N:NUMBER;D:DATE;S:STRING;T:TOKEN;R:REFERENCE;Q:QUANTITY;^0;3^Q
 "^DD",998.1,998.13,2,3)
 Type of the search parameter.
+"^DD",998.1,998.13,2,21,0)
+^^12^12^3150311.190219
+"^DD",998.1,998.13,2,21,1,0)
+The parameter type determines the allowable comparison operators and the logic 
+"^DD",998.1,998.13,2,21,2,0)
+used to implement them.
+"^DD",998.1,998.13,2,21,3,0)
+
+"^DD",998.1,998.13,2,21,4,0)
+The following parameter types are recognized:
+"^DD",998.1,998.13,2,21,5,0)
+
+"^DD",998.1,998.13,2,21,6,0)
+       N        NUMBER     - The parameter is a numeric value.
+"^DD",998.1,998.13,2,21,7,0)
+       D        DATE       - The parameter is a date value.
+"^DD",998.1,998.13,2,21,8,0)
+       S        STRING     - The parameter is a text string.
+"^DD",998.1,998.13,2,21,9,0)
+       T        TOKEN      - The parameter is a special token.
+"^DD",998.1,998.13,2,21,10,0)
+       R        REFERENCE  - The parameter is a resource reference.
+"^DD",998.1,998.13,2,21,11,0)
+       Q        QUANTITY   - The parameter is a quantity.
+"^DD",998.1,998.13,2,21,12,0)
+ 
 "^DD",998.1,998.13,2,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,3,0)
 SEQUENCE^NJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.13,3,1,0)
@@ -26254,8 +27892,16 @@ K ^RGSER(998.1,DA(2),10,DA(1),40,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.13,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.13,3,21,0)
+^^3^3^3150311.190416
+"^DD",998.1,998.13,3,21,1,0)
+The sequence # determines the order the serializer uses in processing 
+"^DD",998.1,998.13,3,21,2,0)
+parameters.  This can be important in determining optimal search strategy 
+"^DD",998.1,998.13,3,21,3,0)
+where multiple parameters are specified.
 "^DD",998.1,998.13,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,10,0)
 CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.13,10,3)
@@ -26284,6 +27930,44 @@ HEADER FIELDS^WLx^^0;1^Q
 Additional fields to be included in the HTTP response header.
 "^DD",998.1,998.14,.01,"DT")
 3150228
+"^DD",998.1,998.15,0)
+TEMPLATE SUB-FIELD^^1^2
+"^DD",998.1,998.15,0,"DT")
+3150309
+"^DD",998.1,998.15,0,"IX","B",998.15,.01)
+
+"^DD",998.1,998.15,0,"NM","TEMPLATE")
+
+"^DD",998.1,998.15,0,"UP")
+998.11
+"^DD",998.1,998.15,.01,0)
+TEMPLATE^MF^^0;1^K:$L(X)>30!($L(X)<1) X
+"^DD",998.1,998.15,.01,1,0)
+^.1
+"^DD",998.1,998.15,.01,1,1,0)
+998.15^B
+"^DD",998.1,998.15,.01,1,1,1)
+S ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)=""
+"^DD",998.1,998.15,.01,1,1,2)
+K ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)
+"^DD",998.1,998.15,.01,3)
+Answer must be 1-30 characters in length.
+"^DD",998.1,998.15,.01,"DT")
+3150309
+"^DD",998.1,998.15,1,0)
+CONTENT^998.151^^1;0
+"^DD",998.1,998.151,0)
+CONTENT SUB-FIELD^^.01^1
+"^DD",998.1,998.151,0,"DT")
+3150309
+"^DD",998.1,998.151,0,"NM","CONTENT")
+
+"^DD",998.1,998.151,0,"UP")
+998.15
+"^DD",998.1,998.151,.01,0)
+CONTENT^WLx^^0;1^Q
+"^DD",998.1,998.151,.01,"DT")
+3150309
 "^DD",999.2,999.2,0)
 FIELD^^13^9
 "^DD",999.2,999.2,0,"IX","B",999.2,.01)
@@ -26723,7 +28407,7 @@ CIA EVENT TYPE^19941.21
 **INSTALL NAME**
 CAREWEB RPMS ENHANCEMENTS 1.0
 "BLD",8497,0)
-CAREWEB RPMS ENHANCEMENTS 1.0^^0^3150307^n
+CAREWEB RPMS ENHANCEMENTS 1.0^^0^3150315^n
 "BLD",8497,4,0)
 ^9.64PA^998.1^3
 "BLD",8497,4,998.1,0)
@@ -26751,7 +28435,7 @@ I $$SCRN^RGCWKDTP(Y,5)
 "BLD",8497,4,"B",19941.21,19941.21)
 
 "BLD",8497,6.3)
-76
+116
 "BLD",8497,"INI")
 PRE^RGCWKDIN
 "BLD",8497,"INIT")
@@ -26879,6 +28563,10 @@ I $$SCRN^RGCWKDTP(Y,1)
 "FIA",998.1,998.13)
 0
 "FIA",998.1,998.14)
+0
+"FIA",998.1,998.15)
+0
+"FIA",998.1,998.151)
 0
 "FIA",999.201)
 CAREWEB NOTIFICATION CONTROL
@@ -27013,7 +28701,7 @@ D XPZ2^XPDIQ
 "RTN","RGCWKDIN",1,0)
 RGCKDIN ;RI/CBMI/DKM - CareWeb KIDS installation support ;07-Mar-2015 10:08;DKM
 "RTN","RGCWKDIN",2,0)
- ;;1.0;CAREWEB FRAMEWORK;;;Build 76
+ ;;1.0;CAREWEB FRAMEWORK;;;Build 116
 "RTN","RGCWKDIN",3,0)
  ; Environment check
 "RTN","RGCWKDIN",4,0)
@@ -27385,11 +29073,11 @@ D REGCTX^CIAURPC("CIAV VUECENTRIC","RGCWF CAREWEB FRAMEWORK")
 "VER")
 8.0^22.0
 "^DD",998.1,998.1,0)
-FIELD^^20^5
+FIELD^^3^6
 "^DD",998.1,998.1,0,"DDA")
 N
 "^DD",998.1,998.1,0,"DT")
-3150228
+3150315
 "^DD",998.1,998.1,0,"ID",1)
 W "   ",$P(^(0),U,2)
 "^DD",998.1,998.1,0,"IX","B",998.1,.01)
@@ -27410,34 +29098,76 @@ S ^RGSER(998.1,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,"B",$E(X,1,30),DA)
 "^DD",998.1,998.1,.01,3)
 Replace Name of the serialization type (1-30 characters).
+"^DD",998.1,998.1,.01,21,0)
+^^3^3^3150310.204501
+"^DD",998.1,998.1,.01,21,1,0)
+This is the portion of the request URL that identifies the serialization format
+"^DD",998.1,998.1,.01,21,2,0)
+of the requested resource.  It is first part of the path portion of the URL.
+"^DD",998.1,998.1,.01,21,3,0)
+The name and associated content type together should be unique within the file.
 "^DD",998.1,998.1,.01,"DT")
 3150211
 "^DD",998.1,998.1,1,0)
-CONTENT TYPE^F^^0;2^K:$L(X)>30!($L(X)<1) X
+CONTENT TYPE^F^^0;2^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.1,1,3)
-Content type generated by this serialization type.
+Content type(s) generated by this serializer.
+"^DD",998.1,998.1,1,21,0)
+^^6^6^3150315.140532
+"^DD",998.1,998.1,1,21,1,0)
+These are the content types (separated by commas) that are used to match 
+"^DD",998.1,998.1,1,21,2,0)
+against the requested content type.  It is used to match the requestor's 
+"^DD",998.1,998.1,1,21,3,0)
+desired content type.  This allows having multiple entries with the same name, 
+"^DD",998.1,998.1,1,21,4,0)
+but different content types.  By default, the first value of this entry is 
+"^DD",998.1,998.1,1,21,5,0)
+returned as the Content-Type in the response header.  However, the serializer 
+"^DD",998.1,998.1,1,21,6,0)
+may opt to override this value with a more specific MIME type. 
 "^DD",998.1,998.1,1,"DT")
-3150211
+3150315
 "^DD",998.1,998.1,2,0)
 SERIALIZER^F^^0;3^K:$L(X)>10!($L(X)<1)!'(X?1.A0.AN) X
 "^DD",998.1,998.1,2,3)
 Name of serialization routine.
 "^DD",998.1,998.1,2,21,0)
-^^1^1^3150301.093248
+^.001^1^1^3150310^
 "^DD",998.1,998.1,2,21,1,0)
 The specified serializer routine must implement the Serializer interface.
 "^DD",998.1,998.1,2,"DT")
 3150211
+"^DD",998.1,998.1,3,0)
+VERSION^F^^0;4^K:$L(X)>20!($L(X)<1) X
+"^DD",998.1,998.1,3,3)
+Version of this serializer (1-20 characters).
+"^DD",998.1,998.1,3,21,0)
+^^1^1^3150312.172833
+"^DD",998.1,998.1,3,21,1,0)
+This represents the version of the format the serializer is generating.
+"^DD",998.1,998.1,3,"DT")
+3150312
 "^DD",998.1,998.1,10,0)
 RESOURCE^998.11^^10;0
+"^DD",998.1,998.1,10,21,0)
+^.001^4^4^3150310^^
+"^DD",998.1,998.1,10,21,1,0)
+This is the portion of the path of the request URL that follows the 
+"^DD",998.1,998.1,10,21,2,0)
+serialization specifier.  It may include the wildcard characters # (for 
+"^DD",998.1,998.1,10,21,3,0)
+matching any sequence of digits) and * (for matching any sequence of 
+"^DD",998.1,998.1,10,21,4,0)
+characters).
 "^DD",998.1,998.1,20,0)
 HEADER FIELDS^998.14^^20;0
 "^DD",998.1,998.1,20,"DT")
 3150228
 "^DD",998.1,998.11,0)
-RESOURCE SUB-FIELD^^2^8
+RESOURCE SUB-FIELD^^50^9
 "^DD",998.1,998.11,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.11,0,"IX","B",998.11,.01)
 
 "^DD",998.1,998.11,0,"IX","C",998.11,.01)
@@ -27453,11 +29183,11 @@ RESOURCE^MF^^0;1^K:$L(X)>100!($L(X)<1) X
 "^DD",998.1,998.11,.01,1,1,0)
 998.11^B^MUMPS
 "^DD",998.1,998.11,.01,1,1,1)
-S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSER(X)
+S ^RGSER(998.1,DA(1),10,"B",X,DA)=$$TOPTRN^RGSERDD(X)
 "^DD",998.1,998.11,.01,1,1,2)
 K ^RGSER(998.1,DA(1),10,"B",X,DA)
 "^DD",998.1,998.11,.01,1,1,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,.01,1,2,0)
 998.11^C^MUMPS
 "^DD",998.1,998.11,.01,1,2,1)
@@ -27469,11 +29199,19 @@ K ^RGSER(998.1,DA(1),10,"C",$$UP^XLFSTR(X),DA)
 "^DD",998.1,998.11,.01,3)
 Enter path name for the resource.
 "^DD",998.1,998.11,.01,"DT")
-3150211
+3150308
 "^DD",998.1,998.11,1,0)
 INTERNAL^S^0:NO;1:YES;^0;2^Q
 "^DD",998.1,998.11,1,3)
 Enter YES if this is an internal resource.
+"^DD",998.1,998.11,1,21,0)
+^^3^3^3150310.205212
+"^DD",998.1,998.11,1,21,1,0)
+If set to YES, this resource is internal to the server and may not be 
+"^DD",998.1,998.11,1,21,2,0)
+referenced directly.  Any attempt to request an internal resource will return 
+"^DD",998.1,998.11,1,21,3,0)
+an error.
 "^DD",998.1,998.11,1,"DT")
 3150221
 "^DD",998.1,998.11,2,0)
@@ -27484,6 +29222,12 @@ S Y(0)=Y S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 S Y=Y_" ("_$P($G(^DIC(Y,0),^DD(Y,0)),U)_")"
 "^DD",998.1,998.11,2,3)
 Enter a file or subfile number.
+"^DD",998.1,998.11,2,21,0)
+^^2^2^3150310.205524
+"^DD",998.1,998.11,2,21,1,0)
+This is the number of the file or subfile from which the resource will be
+"^DD",998.1,998.11,2,21,2,0)
+extracted.  For resources that are derived, this field may be null.
 "^DD",998.1,998.11,2,"DT")
 3150211
 "^DD",998.1,998.11,10,0)
@@ -27492,30 +29236,114 @@ CUSTOM SERIALIZER^K^^10;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 M code to invoke custom serializer.
 "^DD",998.1,998.11,10,9)
 @
+"^DD",998.1,998.11,10,21,0)
+^^4^4^3150310.205835
+"^DD",998.1,998.11,10,21,1,0)
+For resources that use a custom serializer, this field contains executable M 
+"^DD",998.1,998.11,10,21,2,0)
+code that performs the serialization.  When this field is non-null, the 
+"^DD",998.1,998.11,10,21,3,0)
+default serialization code is not executed unless the custom serializer kills 
+"^DD",998.1,998.11,10,21,4,0)
+the XSER variable before returning control.
 "^DD",998.1,998.11,10,"DT")
 3150211
 "^DD",998.1,998.11,20,0)
-CUSTOM RETRIEVAL^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
+CUSTOM READER^K^^20;E1,245^K:$L(X)>245 X D:$D(X) ^DIM
 "^DD",998.1,998.11,20,3)
 M code to invoke custom retrieval logic.
 "^DD",998.1,998.11,20,9)
 @
+"^DD",998.1,998.11,20,21,0)
+^.001^16^16^3150312^
+"^DD",998.1,998.11,20,21,1,0)
+This field contains custom retrieval logic for resources that require it.  It
+"^DD",998.1,998.11,20,21,2,0)
+should return a single instance of a resource given its unique identifier using
+"^DD",998.1,998.11,20,21,3,0)
+the VALS array in the format:
+"^DD",998.1,998.11,20,21,4,0)
+
+"^DD",998.1,998.11,20,21,5,0)
+       VALS(FILE,IENS,<property>,<int/ext>)=<value>
+"^DD",998.1,998.11,20,21,6,0)
+
+"^DD",998.1,998.11,20,21,7,0)
+where
+"^DD",998.1,998.11,20,21,8,0)
+
+"^DD",998.1,998.11,20,21,9,0)
+       <property> = The property's name.
+"^DD",998.1,998.11,20,21,10,0)
+       <int/ext>  = "I" or "E" for representing internal and external values,
+"^DD",998.1,998.11,20,21,11,0)
+                    respectively.
+"^DD",998.1,998.11,20,21,12,0)
+       <value>    = The property's value.
+"^DD",998.1,998.11,20,21,13,0)
+
+"^DD",998.1,998.11,20,21,14,0)
+Note that even if custom retrieval logic is provided, the default retrieval
+"^DD",998.1,998.11,20,21,15,0)
+logic will also be executed if the value of the FILE variable (from the SOURCE
+"^DD",998.1,998.11,20,21,16,0)
+field) is non-zero.
 "^DD",998.1,998.11,20,"DT")
-3150211
+3150312
 "^DD",998.1,998.11,30,0)
 PROPERTY^998.12I^^30;0
+"^DD",998.1,998.11,30,21,0)
+^.001^1^1^3150310^
+"^DD",998.1,998.11,30,21,1,0)
+This is the list of properties for the given resource.
 "^DD",998.1,998.11,40,0)
 PARAMETER^998.13I^^40;0
+"^DD",998.1,998.11,40,21,0)
+^^5^5^3150310.211659
+"^DD",998.1,998.11,40,21,1,0)
+This is the list of searchable parameters supported for the resource.  These 
+"^DD",998.1,998.11,40,21,2,0)
+serve two purposes.  First, they define the logic for determining a match for 
+"^DD",998.1,998.11,40,21,3,0)
+the given search parameter.  Second, they may define a cohort selector for a 
+"^DD",998.1,998.11,40,21,4,0)
+given search parameter.  Cohort selectors optimize search strategy depending 
+"^DD",998.1,998.11,40,21,5,0)
+on which search parameters are selected.
+"^DD",998.1,998.11,50,0)
+TEMPLATE^998.15^^50;0
+"^DD",998.1,998.11,50,21,0)
+^^8^8^3150312.154427
+"^DD",998.1,998.11,50,21,1,0)
+Templates may be referenced by properties to generate output from the 
+"^DD",998.1,998.11,50,21,2,0)
+serializer. They may contain replaceable parameters enclosed between "|" 
+"^DD",998.1,998.11,50,21,3,0)
+characters.  If a replaceable parameter starts with an "@" or "#" character, 
+"^DD",998.1,998.11,50,21,4,0)
+it is assumed to be an M expression whose value is inserted into the 
+"^DD",998.1,998.11,50,21,5,0)
+generated output.  Otherwise, it is assumed to be a field identifier whose 
+"^DD",998.1,998.11,50,21,6,0)
+value is inserted.  Except for "#"-prefixed expressions, any reserved 
+"^DD",998.1,998.11,50,21,7,0)
+characters in the replacement value will be escaped according to the rules
+"^DD",998.1,998.11,50,21,8,0)
+specified by the serializer.
 "^DD",998.1,998.11,99,0)
 DESCRIPTION^F^^99;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.11,99,3)
 Enter brief description of this resource.
+"^DD",998.1,998.11,99,21,0)
+^^1^1^3150310.21222
+"^DD",998.1,998.11,99,21,1,0)
+Provides a detailed description of the associated resource.
 "^DD",998.1,998.11,99,"DT")
 3150211
 "^DD",998.1,998.12,0)
 PROPERTY SUB-FIELD^^10^5
 "^DD",998.1,998.12,0,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,0,"ID",3)
 W "   ",$P(^(0),U,4)
 "^DD",998.1,998.12,0,"IX","ASEQ",998.12,3)
@@ -27538,20 +29366,86 @@ S ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),30,"B",$E(X,1,30),DA)
 "^DD",998.1,998.12,.01,3)
 Property name to be used in serialization.
+"^DD",998.1,998.12,.01,21,0)
+^^8^8^3150311.183527
+"^DD",998.1,998.12,.01,21,1,0)
+This is the name that identifies the property.  It is typically the name that 
+"^DD",998.1,998.12,.01,21,2,0)
+is emitted by the serializer, but this is not a requirement. An arbitrary tag 
+"^DD",998.1,998.12,.01,21,3,0)
+may also be appended to the property name using the "!" character as a 
+"^DD",998.1,998.12,.01,21,4,0)
+delimiter.  This may be used to provide additional information about the 
+"^DD",998.1,998.12,.01,21,5,0)
+entry.  For example, if a property requires multiple entries to implement the 
+"^DD",998.1,998.12,.01,21,6,0)
+logic required to emit it, the tag can provide information to the user as to 
+"^DD",998.1,998.12,.01,21,7,0)
+the role each entry plays.  For any given entry, the serializer may choose to 
+"^DD",998.1,998.12,.01,21,8,0)
+apply additional significance to the tag.
 "^DD",998.1,998.12,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.12,1,3)
 Field name or # corresponding to this property
+"^DD",998.1,998.12,1,21,0)
+^^7^7^3150311.184042
+"^DD",998.1,998.12,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved
+"^DD",998.1,998.12,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.12,1,21,3,0)
+retrieved for the specified fields are available to the serializer.  Where the
+"^DD",998.1,998.12,1,21,4,0)
+SOURCE is a FileMan file or subfile, the field is the field # (or name).  For 
+"^DD",998.1,998.12,1,21,5,0)
+resources using custom retrieval logic, the field is the identifier assigned 
+"^DD",998.1,998.12,1,21,6,0)
+by that logic.  For properties that do not require source data (such as a 
+"^DD",998.1,998.12,1,21,7,0)
+static property), this entry may be left blank.
 "^DD",998.1,998.12,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,2,0)
-TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;^0;3^Q
+TYPE^RS^F:FREE TEXT;R:RAW;B:BOOLEAN;D:DATE;M:MULTIPLE;C:CUSTOM;O:OBJECT;W:WORD PROCESSING;I:INLINE;T:TEMPLATE;S:STATIC;N:NOP;^0;3^Q
 "^DD",998.1,998.12,2,3)
 Encoding type for this property.
+"^DD",998.1,998.12,2,21,0)
+^^15^15^3150310.21405
+"^DD",998.1,998.12,2,21,1,0)
+Represents the type of property.  Possible values are:
+"^DD",998.1,998.12,2,21,2,0)
+   B = BOOLEAN         - Emits a property value that is true or false.
+"^DD",998.1,998.12,2,21,3,0)
+   C = CUSTOM          - The associated custom code emits the property value.
+"^DD",998.1,998.12,2,21,4,0)
+   D = DATE            - Emits a property value that is a date.
+"^DD",998.1,998.12,2,21,5,0)
+   F = FREE TEXT       - Emits the external value of the property.
+"^DD",998.1,998.12,2,21,6,0)
+   I = INLINE          - Inserts a serialized object inline.
+"^DD",998.1,998.12,2,21,7,0)
+   N = NOP             - Causes the property to be ignored.
+"^DD",998.1,998.12,2,21,8,0)
+   M = MULTIPLE        - The property is a subfile multiple.
+"^DD",998.1,998.12,2,21,9,0)
+   O = OBJECT          - Invokes serialization logic for the specified object.
+"^DD",998.1,998.12,2,21,10,0)
+   R = RAW             - Emits the internal value of the property.
+"^DD",998.1,998.12,2,21,11,0)
+   S = STATIC          - Emits a static value for the property.
+"^DD",998.1,998.12,2,21,12,0)
+   T = TEMPLATE        - Emits the specified template.
+"^DD",998.1,998.12,2,21,13,0)
+   W = WORD PROCESSING - Emits a word processing value.
+"^DD",998.1,998.12,2,21,14,0)
+
+"^DD",998.1,998.12,2,21,15,0)
+For more information, see the description of the CONTROL field.
 "^DD",998.1,998.12,2,"DT")
-3150211
+3150310
 "^DD",998.1,998.12,3,0)
 SEQUENCE^RNJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.12,3,1,0)
@@ -27566,32 +29460,44 @@ K ^RGSER(998.1,DA(2),10,DA(1),30,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.12,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.12,3,21,0)
+^^3^3^3150311.184411
+"^DD",998.1,998.12,3,21,1,0)
+This is a numerical sequence # that determines the order in which the 
+"^DD",998.1,998.12,3,21,2,0)
+serializer processes property entries, and, thus, the order in which 
+"^DD",998.1,998.12,3,21,3,0)
+properties are emitted by the serializer.
 "^DD",998.1,998.12,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.12,10,0)
-CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
+CONTROL^FX^^10;E1,250^D ITXCTRL^RGSERDD(.X,.DA)
 "^DD",998.1,998.12,10,3)
 Enter control data.
 "^DD",998.1,998.12,10,21,0)
-^^8^8^3150303.134213
+^^10^10^3150311.184552
 "^DD",998.1,998.12,10,21,1,0)
-The format of this field depends on the value of the TYPE field.  For those
+The content of this field depends on the value of the TYPE field.  For those
 "^DD",998.1,998.12,10,21,2,0)
 TYPE values not listed below, this field will be ignored.
 "^DD",998.1,998.12,10,21,3,0)
 
 "^DD",998.1,998.12,10,21,4,0)
-C (Custom)          - Executable M code.
+  C (CUSTOM)          - Executable M code.
 "^DD",998.1,998.12,10,21,5,0)
-I (Inline)          - Path for inline resource.
+  I (INLINE)          - Path for inline resource.
 "^DD",998.1,998.12,10,21,6,0)
-O (Object)          - Alias name of the target object.
+  O (OBJECT)          - Path for the target object.
 "^DD",998.1,998.12,10,21,7,0)
-M (Multiple)        - Alias name of the multiple object.
+  M (MULTIPLE)        - Path for the multiple entry.
 "^DD",998.1,998.12,10,21,8,0)
-W (Word Processing) - Line delimiter to use (escaped characters supported).
+  S (STATIC)          - The static value of the property.
+"^DD",998.1,998.12,10,21,9,0)
+  W (WORD PROCESSING) - Line delimiter to use (escaped characters supported).
+"^DD",998.1,998.12,10,21,10,0)
+
 "^DD",998.1,998.12,10,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,0)
 PARAMETER SUB-FIELD^^10^6
 "^DD",998.1,998.13,0,"DT")
@@ -27618,20 +29524,64 @@ S ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)=""
 K ^RGSER(998.1,DA(2),10,DA(1),40,"B",$E(X,1,30),DA)
 "^DD",998.1,998.13,.01,3)
 Enter name of search parameter.
+"^DD",998.1,998.13,.01,21,0)
+^^1^1^3150311.184801
+"^DD",998.1,998.13,.01,21,1,0)
+This is the identifier of the parameter as it would appear in a query.
 "^DD",998.1,998.13,.01,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,1,0)
 FIELD^F^^0;2^K:$L(X)>40!($L(X)<1) X
 "^DD",998.1,998.13,1,3)
 Field name or # corresponding to this parameter.
+"^DD",998.1,998.13,1,21,0)
+^^6^6^3150311.185216
+"^DD",998.1,998.13,1,21,1,0)
+This is the source identifier that identifies the data field to be retrieved 
+"^DD",998.1,998.13,1,21,2,0)
+from the source.  Multiple fields may be separated with commas.  Values 
+"^DD",998.1,998.13,1,21,3,0)
+retrieved for the specified fields are available to the serializer when 
+"^DD",998.1,998.13,1,21,4,0)
+formulating a search query.  Where the SOURCE is a FileMan file or subfile, 
+"^DD",998.1,998.13,1,21,5,0)
+the field is the field # (or name).  For resources using custom retrieval 
+"^DD",998.1,998.13,1,21,6,0)
+logic, the field is the identifier assigned by that logic. 
 "^DD",998.1,998.13,1,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,2,0)
 TYPE^S^N:NUMBER;D:DATE;S:STRING;T:TOKEN;R:REFERENCE;Q:QUANTITY;^0;3^Q
 "^DD",998.1,998.13,2,3)
 Type of the search parameter.
+"^DD",998.1,998.13,2,21,0)
+^^12^12^3150311.190219
+"^DD",998.1,998.13,2,21,1,0)
+The parameter type determines the allowable comparison operators and the logic 
+"^DD",998.1,998.13,2,21,2,0)
+used to implement them.
+"^DD",998.1,998.13,2,21,3,0)
+
+"^DD",998.1,998.13,2,21,4,0)
+The following parameter types are recognized:
+"^DD",998.1,998.13,2,21,5,0)
+
+"^DD",998.1,998.13,2,21,6,0)
+       N        NUMBER     - The parameter is a numeric value.
+"^DD",998.1,998.13,2,21,7,0)
+       D        DATE       - The parameter is a date value.
+"^DD",998.1,998.13,2,21,8,0)
+       S        STRING     - The parameter is a text string.
+"^DD",998.1,998.13,2,21,9,0)
+       T        TOKEN      - The parameter is a special token.
+"^DD",998.1,998.13,2,21,10,0)
+       R        REFERENCE  - The parameter is a resource reference.
+"^DD",998.1,998.13,2,21,11,0)
+       Q        QUANTITY   - The parameter is a quantity.
+"^DD",998.1,998.13,2,21,12,0)
+ 
 "^DD",998.1,998.13,2,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,3,0)
 SEQUENCE^NJ10,4^^0;4^K:+X'=X!(X>99999)!(X<1)!(X?.E1"."5N.N) X
 "^DD",998.1,998.13,3,1,0)
@@ -27646,8 +29596,16 @@ K ^RGSER(998.1,DA(2),10,DA(1),40,"ASEQ",$E(X,1,30),DA)
 3150211
 "^DD",998.1,998.13,3,3)
 Enter sequence number for process ordering.
+"^DD",998.1,998.13,3,21,0)
+^^3^3^3150311.190416
+"^DD",998.1,998.13,3,21,1,0)
+The sequence # determines the order the serializer uses in processing 
+"^DD",998.1,998.13,3,21,2,0)
+parameters.  This can be important in determining optimal search strategy 
+"^DD",998.1,998.13,3,21,3,0)
+where multiple parameters are specified.
 "^DD",998.1,998.13,3,"DT")
-3150211
+3150311
 "^DD",998.1,998.13,10,0)
 CONTROL^F^^10;E1,250^K:$L(X)>250!($L(X)<1) X
 "^DD",998.1,998.13,10,3)
@@ -27676,6 +29634,44 @@ HEADER FIELDS^WLx^^0;1^Q
 Additional fields to be included in the HTTP response header.
 "^DD",998.1,998.14,.01,"DT")
 3150228
+"^DD",998.1,998.15,0)
+TEMPLATE SUB-FIELD^^1^2
+"^DD",998.1,998.15,0,"DT")
+3150309
+"^DD",998.1,998.15,0,"IX","B",998.15,.01)
+
+"^DD",998.1,998.15,0,"NM","TEMPLATE")
+
+"^DD",998.1,998.15,0,"UP")
+998.11
+"^DD",998.1,998.15,.01,0)
+TEMPLATE^MF^^0;1^K:$L(X)>30!($L(X)<1) X
+"^DD",998.1,998.15,.01,1,0)
+^.1
+"^DD",998.1,998.15,.01,1,1,0)
+998.15^B
+"^DD",998.1,998.15,.01,1,1,1)
+S ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)=""
+"^DD",998.1,998.15,.01,1,1,2)
+K ^RGSER(998.1,DA(2),10,DA(1),50,"B",$E(X,1,30),DA)
+"^DD",998.1,998.15,.01,3)
+Answer must be 1-30 characters in length.
+"^DD",998.1,998.15,.01,"DT")
+3150309
+"^DD",998.1,998.15,1,0)
+CONTENT^998.151^^1;0
+"^DD",998.1,998.151,0)
+CONTENT SUB-FIELD^^.01^1
+"^DD",998.1,998.151,0,"DT")
+3150309
+"^DD",998.1,998.151,0,"NM","CONTENT")
+
+"^DD",998.1,998.151,0,"UP")
+998.15
+"^DD",998.1,998.151,.01,0)
+CONTENT^WLx^^0;1^Q
+"^DD",998.1,998.151,.01,"DT")
+3150309
 "^DD",999.201,999.201,0)
 FIELD^^4^5
 "^DD",999.201,999.201,0,"IX","B",999.201,.01)
