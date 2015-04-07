@@ -203,7 +203,7 @@ public class ChatService implements IGenericEvent<String> {
      */
     public Collection<Participant> getParticipants(Collection<Participant> participants, String eventName) {
         participants.clear();
-        List<String> lst = brokerSession.callRPCList("CIANBEVT GETSUBSC", null, eventName == null ? EVENT_CHAT_SERVICE
+        List<String> lst = brokerSession.callRPCList("RGNETBEV GETSUBSC", null, eventName == null ? EVENT_CHAT_SERVICE
                 : eventName);
         
         for (String data : lst) {
