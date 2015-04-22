@@ -20,9 +20,9 @@ import ca.uhn.fhir.model.dstu.resource.Patient;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
+import org.carewebframework.api.context.UserContext;
+import org.carewebframework.api.domain.IUser;
 import org.carewebframework.cal.api.patient.PatientContext;
-import org.carewebframework.cal.api.user.UserContext;
-import org.carewebframework.cal.api.user.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.Params;
@@ -396,7 +396,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         ProblemNote pn = new ProblemNote();
-        UserProxy user = UserContext.getActiveUser();
+        IUser user = UserContext.getActiveUser();
         pn.setAuthor(user.getFullName());
         pn.setFacility((Organization) PatientContext.getActivePatient().getManagingOrganization().getResource());
         pn.setNumber("*");

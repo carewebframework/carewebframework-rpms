@@ -18,11 +18,11 @@ import ca.uhn.fhir.model.dstu.resource.Patient;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
+import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;
 import org.carewebframework.cal.api.encounter.EncounterContext;
 import org.carewebframework.cal.api.encounter.EncounterParticipantContext;
 import org.carewebframework.cal.api.patient.PatientContext;
-import org.carewebframework.cal.api.user.UserContext;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoException;
 import org.carewebframework.rpms.api.common.BgoUtil;
@@ -185,7 +185,7 @@ public class PCC {
     
     public static String addProblem(String sICDIEN, String narrative, String onset) {
         BrokerSession broker = VistAUtil.getBrokerSession();
-        String institution = UserContext.getActiveUser().getNativeUser().getProvider().getElementSpecificId();
+        String institution = UserContext.getActiveUser().getSecurityDomain().getLogicalId();
         Patient patient = PatientContext.getActivePatient();
         
         if (onset == null) {

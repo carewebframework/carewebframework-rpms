@@ -19,14 +19,15 @@ import ca.uhn.fhir.model.dstu.resource.Practitioner;
 
 import org.apache.commons.lang.math.NumberUtils;
 
+import org.carewebframework.api.context.UserContext;
+import org.carewebframework.api.domain.IUser;
 import org.carewebframework.cal.api.encounter.EncounterContext;
 import org.carewebframework.cal.api.practitioner.PractitionerSearch;
 import org.carewebframework.cal.api.practitioner.PractitionerSearchCriteria;
-import org.carewebframework.cal.api.user.UserContext;
-import org.carewebframework.cal.api.user.UserProxy;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.NumUtil;
 import org.carewebframework.common.StrUtil;
+import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.wonderbar.IWonderbarServerSearchProvider;
 import org.carewebframework.ui.wonderbar.Wonderbar;
@@ -151,10 +152,10 @@ public class AddEditController extends FrameworkController {
             record = new AntiCoagRecord();
             record.setIndicated(true);
             record.setStartDate(DateUtil.today());
-            UserProxy user = UserContext.getActiveUser();
+            IUser user = UserContext.getActiveUser();
             Practitioner provider = new Practitioner();
             provider.setId(user.getLogicalId());
-            provider.setName(user.getNativeUser().getName());
+            provider.setName(FhirUtil.parseName(user.getFullName()));
             record.setProvider(provider);
         } else {
             record = new AntiCoagRecord(record);
