@@ -20,7 +20,7 @@
 			</radiogroup>
 			<hlayout>
 				<label value="Search Value" />
-				<textbox id="txtSearch" width="300px" />
+				<textbox id="txtSearch" width="300px" forward="onOK=btnSearch.onClick"/>
 				<button id="btnSearch" label="Search" />
 				<separator />
 			</hlayout>
