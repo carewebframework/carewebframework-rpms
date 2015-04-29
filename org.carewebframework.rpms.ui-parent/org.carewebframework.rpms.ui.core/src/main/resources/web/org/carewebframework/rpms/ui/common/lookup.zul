@@ -8,8 +8,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
 
-	<window apply="${arg.controller}" title="Search"
-		mode="modal">
+	<window apply="${arg.controller}" title="Search" width="500px">
 		<vlayout>
 			<radiogroup style="padding-left: 25%" if="${arg.CPT || arg.ICD}">
 				<label value="Lookup Option" />
@@ -20,7 +19,7 @@
 			</radiogroup>
 			<hlayout>
 				<label value="Search Value" />
-				<textbox id="txtSearch" width="300px" forward="onOK=btnSearch.onClick"/>
+				<textbox id="txtSearch" hflex="1" forward="onOK=btnSearch.onClick"/>
 				<button id="btnSearch" label="Search" />
 				<separator />
 			</hlayout>
