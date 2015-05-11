@@ -1,7 +1,7 @@
 package org.carewebframework.rpms.ui.skintest.model;
 
-import ca.uhn.fhir.model.dstu.resource.Encounter;
-import ca.uhn.fhir.model.dstu.resource.Practitioner;
+import ca.uhn.fhir.model.dstu2.resource.Encounter;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;
@@ -52,12 +52,12 @@ public class TestItem {
     }
     
     public String getTestName() {
-        return skinTest != null ? skinTest.getTest().getProxiedObject().getDisplay().getValue() : refusal.getItem()
-                .getProxiedObject().getDisplay().getValue();
+        return skinTest != null ? skinTest.getTest().getProxiedObject().getDisplay() : refusal.getItem().getProxiedObject()
+                .getDisplay();
     }
     
     public String getLocationName() {
-        return skinTest != null ? skinTest.getLocation().getName().getValue() : null;
+        return skinTest != null ? skinTest.getLocation().getName() : null;
     }
     
     public String getAge() {

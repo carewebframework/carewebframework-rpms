@@ -11,8 +11,8 @@ package org.carewebframework.rpms.ui.anticoag;
 
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu.resource.Encounter;
-import ca.uhn.fhir.model.dstu.resource.Patient;
+import ca.uhn.fhir.model.dstu2.resource.Encounter;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
 
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.cal.api.encounter.EncounterContext;

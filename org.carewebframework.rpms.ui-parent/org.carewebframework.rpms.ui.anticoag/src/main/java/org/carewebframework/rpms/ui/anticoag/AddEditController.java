@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ca.uhn.fhir.model.dstu.resource.Encounter;
-import ca.uhn.fhir.model.dstu.resource.Practitioner;
+import ca.uhn.fhir.model.dstu2.resource.Encounter;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 import org.apache.commons.lang.math.NumberUtils;
 
@@ -291,7 +291,7 @@ public class AddEditController extends FrameworkController {
                 Encounter encounter = EncounterContext.getActiveEncounter();
                 EncounterUtil.forceCreate(encounter);
                 record.setVisitCategory(EncounterUtil.getServiceCategory(encounter));
-                record.setVisitDate(encounter.getPeriod().getStart().getValue());
+                record.setVisitDate(encounter.getPeriod().getStart());
                 record.setVisitIEN(encounter.getId().getIdPart());
                 record.setVisitLocked(EncounterUtil.isLocked(encounter));
             }

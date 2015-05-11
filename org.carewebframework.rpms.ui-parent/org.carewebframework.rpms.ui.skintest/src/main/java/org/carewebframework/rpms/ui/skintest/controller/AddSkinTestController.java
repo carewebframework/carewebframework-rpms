@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu.resource.Encounter;
+import ca.uhn.fhir.model.dstu2.resource.Encounter;
 
 import org.apache.commons.lang.math.NumberUtils;
 
@@ -122,7 +122,7 @@ public class AddSkinTestController extends BgoBaseController<Object> {
             }
             setEventType(EventType.CURRENT);
             Encounter visit = EncounterContext.getActiveEncounter();
-            Date date = visit == null ? null : visit.getPeriod().getStart().getValue();
+            Date date = visit == null ? null : visit.getPeriod().getStart();
             datEvent.setValue(DateUtil.stripTime(date == null ? new Date() : date));
         }
     }

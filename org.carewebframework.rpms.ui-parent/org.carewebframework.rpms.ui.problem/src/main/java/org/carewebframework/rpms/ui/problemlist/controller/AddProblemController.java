@@ -14,8 +14,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu.resource.Organization;
-import ca.uhn.fhir.model.dstu.resource.Patient;
+import ca.uhn.fhir.model.dstu2.resource.Organization;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
@@ -126,13 +126,13 @@ public class AddProblemController extends BgoBaseController<Problem> {
         CodingProxy icd9 = problem.getIcd9Code();
         
         if (icd9 != null) {
-            txtICD.setText(icd9.getProxiedObject().getCode().getValue());
+            txtICD.setText(icd9.getProxiedObject().getCode());
         }
         
         String narr = problem.getProviderNarrative();
         
         if (narr == null) {
-            narr = icd9 == null ? "" : icd9.getProxiedObject().getDisplay().getValue();
+            narr = icd9 == null ? "" : icd9.getProxiedObject().getDisplay();
         }
         
         String probId = problem.getNumberCode();
@@ -331,8 +331,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
         String txtIcd = txtICD.getValue().trim();
         String txtIcd1 = StrUtil.piece(txtIcd, " - ");
         
-        if (icd != null && !"0".equals(icd.getProxiedObject().getCode().getValue())) {
-            sParam = icd.getProxiedObject().getCode().getValue();
+        if (icd != null && !"0".equals(icd.getProxiedObject().getCode())) {
+            sParam = icd.getProxiedObject().getCode();
         } else if (StringUtils.isEmpty(txtIcd)) {
             sParam = ".9999";
         } else if (!StringUtils.isEmpty(txtIcd1)) {

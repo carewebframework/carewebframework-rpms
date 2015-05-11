@@ -9,9 +9,9 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu.composite.IdentifierDt;
-import ca.uhn.fhir.model.dstu.resource.Location;
-import ca.uhn.fhir.model.dstu.resource.Practitioner;
+import ca.uhn.fhir.model.dstu2.composite.IdentifierDt;
+import ca.uhn.fhir.model.dstu2.resource.Location;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -41,7 +41,7 @@ public class PCCUtil {
         }
         IdentifierDt ident = new IdentifierDt();
         ident.setValue(id);
-        ident.setLabel(prefix);
+        FhirUtil.setIdentifierType(ident, null, prefix);
         return ident;
     }
     

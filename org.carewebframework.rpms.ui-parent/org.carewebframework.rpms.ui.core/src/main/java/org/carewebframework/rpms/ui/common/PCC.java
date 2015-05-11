@@ -11,9 +11,9 @@ package org.carewebframework.rpms.ui.common;
 
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu.composite.IdentifierDt;
-import ca.uhn.fhir.model.dstu.resource.Encounter;
-import ca.uhn.fhir.model.dstu.resource.Patient;
+import ca.uhn.fhir.model.dstu2.composite.IdentifierDt;
+import ca.uhn.fhir.model.dstu2.resource.Encounter;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
@@ -202,11 +202,11 @@ public class PCC {
     public static int compareProblemIDs(String id1, String id2) {
         IdentifierDt ed1 = PCCUtil.parseProblemID(id1);
         IdentifierDt ed2 = PCCUtil.parseProblemID(id2);
-        int i = ed1.getLabel().getValue().compareToIgnoreCase(ed2.getLabel().getValue());
+        int i = ed1.getType().getCodingFirstRep().getCode().compareToIgnoreCase(ed2.getType().getCodingFirstRep().getCode());
         
         if (i == 0) {
-            int v1 = NumberUtils.toInt(ed1.getValue().getValue());
-            int v2 = NumberUtils.toInt(ed2.getValue().getValue());
+            int v1 = NumberUtils.toInt(ed1.getValue());
+            int v2 = NumberUtils.toInt(ed2.getValue());
             i = v1 == v2 ? 0 : v1 > v2 ? 1 : -1;
         }
         

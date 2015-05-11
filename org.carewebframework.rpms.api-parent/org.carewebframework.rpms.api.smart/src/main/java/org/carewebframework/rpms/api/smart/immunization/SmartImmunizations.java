@@ -67,11 +67,11 @@ public class SmartImmunizations extends SmartRDFAPI {
         
         if (imm.getCvx() != null) {
             pn = doc.addCodedValue("http://www2a.cdc.gov/nip/IIS/IISStandards/vaccines.asp?rpt=cvx#", imm.getCvx(), imm
-                    .getImmunization().getProxiedObject().getDisplay().getValue(), "ImmunizationProduct");
+                    .getImmunization().getProxiedObject().getDisplay(), "ImmunizationProduct");
         } else {
             pn = doc.addCodedValue("http://smartplatforms.org/terms/codes/Immunization#", ""
-                    + imm.getImmunization().getId().getIdPart(), imm.getImmunization().getProxiedObject().getDisplay()
-                    .getValue(), "ImmunizationProduct");
+                    + imm.getImmunization().getId().getIdPart(), imm.getImmunization().getProxiedObject().getDisplay(),
+                "ImmunizationProduct");
         }
         //RDFDescription pc = doc.addCodedValue();
         RDFDescription as = doc.addCodedValue("http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#",
@@ -88,8 +88,7 @@ public class SmartImmunizations extends SmartRDFAPI {
         String about = owner + "/immunizations/" + ref.getId().getIdPart();
         RDFDescription dx = doc.addDescription(about, "#Immunization");
         RDFDescription pn = doc.addCodedValue("http://smartplatforms.org/terms/codes/Immunization#", ""
-                + ref.getItem().getId().getIdPart(), ref.getItem().getProxiedObject().getCode().getValue(),
-            "ImmunizationProduct");
+                + ref.getItem().getId().getIdPart(), ref.getItem().getProxiedObject().getCode(), "ImmunizationProduct");
         RDFDescription as = doc.addCodedValue("http://smartplatforms.org/terms/codes/ImmunizationAdministrationStatus#",
             "notAdministered", "Not Administered", "ImmunizationAdministrationStatus");
         RDFDescription rr = doc.addCodedValue("http://smartplatforms.org/terms/codes/ImmunizationRefusalReason#",

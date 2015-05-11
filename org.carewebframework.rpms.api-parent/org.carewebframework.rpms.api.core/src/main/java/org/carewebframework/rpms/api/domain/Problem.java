@@ -9,9 +9,9 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu.resource.Organization;
-import ca.uhn.fhir.model.dstu.resource.Patient;
-import ca.uhn.fhir.model.dstu.resource.Practitioner;
+import ca.uhn.fhir.model.dstu2.resource.Organization;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.DateUtil;

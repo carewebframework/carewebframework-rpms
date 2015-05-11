@@ -9,7 +9,7 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu.resource.Organization;
+import ca.uhn.fhir.model.dstu2.resource.Organization;
 
 import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.JSONUtil;

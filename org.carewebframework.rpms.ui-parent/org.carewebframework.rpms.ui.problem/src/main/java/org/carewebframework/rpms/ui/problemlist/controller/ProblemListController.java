@@ -12,7 +12,7 @@ package org.carewebframework.rpms.ui.problemlist.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu.resource.Patient;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
 
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.Log;

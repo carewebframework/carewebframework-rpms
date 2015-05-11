@@ -9,7 +9,7 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu.composite.CodingDt;
+import ca.uhn.fhir.model.dstu2.composite.CodingDt;
 
 import org.carewebframework.cal.api.DomainObjectProxy;
 
