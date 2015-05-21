@@ -44,7 +44,7 @@ public class BgoBaseController<T> extends FrameworkController {
     }
     
     public Iterator<Object> getParameters() {
-        return ((Params) arg).iterator();
+        return arg instanceof Params ? ((Params) arg).iterator() : new Params().iterator();
     }
     
     public T getResult() {
