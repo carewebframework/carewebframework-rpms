@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -11,12 +11,9 @@ package org.carewebframework.rpms.api.common;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 
 /**
  * Simple means to package parameters for passing to a form controller.
- * 
- * 
  */
 public class Params extends HashMap<Object, Object> implements Iterable<Object> {
     
@@ -33,11 +30,7 @@ public class Params extends HashMap<Object, Object> implements Iterable<Object> 
         
         @Override
         public Object next() {
-            if (!hasNext()) {
-                throw new NoSuchElementException();
-            }
-            
-            return get(index++);
+            return !hasNext() ? null : get(index++);
         }
         
         @Override
