@@ -21,7 +21,6 @@ import org.carewebframework.vista.ui.mbroker.AsyncRPCErrorEvent;
 import org.carewebframework.vista.ui.mbroker.AsyncRPCEventDispatcher;
 
 import org.zkoss.zk.ui.Component;
-import org.zkoss.zk.ui.HtmlBasedComponent;
 import org.zkoss.zk.ui.event.Events;
 
 public class BgoBaseController<T> extends FrameworkController {
@@ -59,11 +58,7 @@ public class BgoBaseController<T> extends FrameworkController {
     
     public void close(boolean canceled) {
         this.canceled = canceled;
-        Events.echoEvent("onDeferredClose", root, null);
-        
-        if (root instanceof HtmlBasedComponent) {
-            ((HtmlBasedComponent) root).setStyle("visibility: hidden");
-        }
+        Events.postEvent("onDeferredClose", root, null);
     }
     
     public void onDeferredClose() {
