@@ -12,9 +12,7 @@ package org.carewebframework.rpms.ui.anticoag;
 import static org.carewebframework.common.StrUtil.U;
 import static org.carewebframework.common.StrUtil.split;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
@@ -31,14 +29,6 @@ import org.carewebframework.vista.api.util.VistAUtil;
  * A single anticoagulation record.
  */
 public class AntiCoagRecord extends DomainObject {
-    
-    private static final long serialVersionUID = 1L;
-    
-    protected final static List<String> goalPresets = new ArrayList<String>();
-    
-    protected final static List<String> durationPresets = new ArrayList<String>();
-    
-    protected static Boolean initialized = Boolean.FALSE;
     
     private String goalRange;
     
@@ -67,16 +57,6 @@ public class AntiCoagRecord extends DomainObject {
     private String comment;
     
     private Boolean indicated;
-    
-    protected static void init(Service service) throws Exception {
-        synchronized (initialized) {
-            if (!initialized) {
-                initialized = Boolean.TRUE;
-                service.getDurations(durationPresets);
-                service.getGoals(goalPresets);
-            }
-        }
-    }
     
     public AntiCoagRecord() {
         

@@ -194,8 +194,8 @@ public class AddEditController extends FrameworkController {
     }
     
     private void loadComboValues() {
-        cboGoal.setModel(new ListModelList<String>(AntiCoagRecord.goalPresets));
-        cboDuration.setModel(new ListModelList<String>(AntiCoagRecord.durationPresets));
+        cboGoal.setModel(new ListModelList<String>(service.getGoalPresets()));
+        cboDuration.setModel(new ListModelList<String>(service.getDurationPresets()));
     }
     
     private void updateControls() {

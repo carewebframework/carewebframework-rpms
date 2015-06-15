@@ -9,6 +9,7 @@
  */
 package org.carewebframework.rpms.ui.anticoag;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.carewebframework.cal.api.patient.PatientContext;
@@ -22,14 +23,19 @@ import org.carewebframework.vista.mbroker.FMDate;
  */
 public class Service {
     
+    private static final List<String> goalPresets = new ArrayList<>();
+    
+    private static final List<String> durationPresets = new ArrayList<>();
+    
+    private static transient boolean initialized;
+    
     private final BrokerSession broker;
     
     public Service(BrokerSession broker) throws Exception {
         this.broker = broker;
-        AntiCoagRecord.init(this);
     }
     
-    private void errorCheck(List<String> result) throws Exception {
+    private void errorCheck(List<String> result) {
         try {
             errorCheck(result == null || result.isEmpty() ? null : result.get(0));
         } catch (RuntimeException e) {
@@ -38,13 +44,13 @@ public class Service {
         }
     }
     
-    private void errorCheck(String msg) throws Exception {
+    private void errorCheck(String msg) {
         if (msg != null && msg.startsWith("-")) {
-            throw new Exception(StrUtil.piece(msg, StrUtil.U, 2));
+            throw new RuntimeException(StrUtil.piece(msg, StrUtil.U, 2));
         }
     }
     
-    private void getChoices(String file, String field, List<String> result) throws Exception {
+    private void getChoices(String file, String field, List<String> result) {
         result.clear();
         broker.callRPCList("BGOUTL3 GETSET", result, file, field, "");
         errorCheck(result);
@@ -54,13 +60,29 @@ public class Service {
         }
     }
     
-    public void getGoals(List<String> result) throws Exception {
-        getChoices("9000010.51", ".04", result);
-        result.remove("N/A");
+    public List<String> getGoalPresets() {
+        if (!initialized) {
+            initPresets();
+        }
+        
+        return goalPresets;
     }
     
-    public void getDurations(List<String> result) throws Exception {
-        getChoices("9000010.51", ".07", result);
+    public List<String> getDurationPresets() {
+        if (!initialized) {
+            initPresets();
+        }
+        
+        return durationPresets;
+    }
+    
+    private synchronized void initPresets() {
+        if (!initialized) {
+            initialized = true;
+            getChoices("9000010.51", ".04", goalPresets);
+            goalPresets.remove("N/A");
+            getChoices("9000010.51", ".07", durationPresets);
+        }
     }
     
     public void delete(AntiCoagRecord record, String reasonCode, String reasonText) throws Exception {
