@@ -35,34 +35,33 @@ public class BgoUtil {
         
         public final String reason;
         
-        private BgoSecurity(String sDisableParam, String sFunctionKey) {
-            String s = "PROVIDER|BGOZ CAC|BGOZ VIEW ONLY|" + (sFunctionKey == null ? "" : sFunctionKey) + StrUtil.U
-                    + sDisableParam;
+        private BgoSecurity(String disableParam, String functionKey) {
+            String s = "PROVIDER|BGOZ CAC|BGOZ VIEW ONLY|" + (functionKey == null ? "" : functionKey) + StrUtil.U
+                    + disableParam;
             s = VistAUtil.getBrokerSession().callRPC("BGOUTL CHKSEC", s);
-            String[] sKeys = StrUtil.split(StrUtil.piece(s, StrUtil.U), "|", 4);
-            String[] sParams = StrUtil.split(StrUtil.piece(s, StrUtil.U, 2), "~", 2);
-            isProvider = "1".equals(sKeys[0]);
-            isCAC = "1".equals(sKeys[1]);
-            isViewOnly = "1".equals(sKeys[2]);
-            isEnabled = "1".equals(sKeys[3]) || sFunctionKey == null;
-            isUsrNoEdit = "1".equals(sParams[0]);
-            String g_sClsNoEdit = sParams[1];
+            String[] keys = StrUtil.split(StrUtil.piece(s, StrUtil.U), "|", 4);
+            String[] params = StrUtil.split(StrUtil.piece(s, StrUtil.U, 2), "~", 2);
+            isProvider = "1".equals(keys[0]);
+            isCAC = "1".equals(keys[1]);
+            isViewOnly = "1".equals(keys[2]);
+            isEnabled = "1".equals(keys[3]) || functionKey == null;
+            isUsrNoEdit = "1".equals(params[0]);
+            String prohibitedClass = params[1];
             
             if (isViewOnly) {
                 reason = "You have the 'BGOZ VIEW ONLY' security key" + REASON_SUFFIX;
             } else if (!isProvider && !isEnabled) {
-                if (sFunctionKey == null) {
+                if (functionKey == null) {
                     reason = "You do not have the 'PROVIDER' key" + REASON_SUFFIX;
-                    ;
                 } else {
-                    reason = "You do not have either the 'PROVIDER' or the '" + sFunctionKey + "' security keys"
+                    reason = "You do not have either the 'PROVIDER' or the '" + functionKey + "' security keys"
                             + REASON_SUFFIX;
                 }
             } else if (isUsrNoEdit) {
-                reason = "You have been assigned the '" + sDisableParam + "' parameter" + REASON_SUFFIX;
-            } else if (!g_sClsNoEdit.isEmpty()) {
-                reason = "You are a member of the user class '" + g_sClsNoEdit + "' which has been assigned the '"
-                        + sDisableParam + "' parameter" + REASON_SUFFIX;
+                reason = "You have been assigned the '" + disableParam + "' parameter" + REASON_SUFFIX;
+            } else if (!prohibitedClass.isEmpty()) {
+                reason = "You are a member of the user class '" + prohibitedClass + "' which has been assigned the '"
+                        + disableParam + "' parameter" + REASON_SUFFIX;
             } else {
                 reason = null;
             }
@@ -85,12 +84,12 @@ public class BgoUtil {
     /**
      * Returns security object describing relevant permissions for user.
      * 
-     * @param sDisableParam Restricts write access by user or by user class.
-     * @param sFunctionKey Security key that restricts write access by specific function.
+     * @param disableParam Restricts write access by user or by user class.
+     * @param functionKey Security key that restricts write access by specific function.
      * @return A security object.
      */
-    public static BgoSecurity initSecurity(String sDisableParam, String sFunctionKey) {
-        return new BgoSecurity(sDisableParam, sFunctionKey);
+    public static BgoSecurity initSecurity(String disableParam, String functionKey) {
+        return new BgoSecurity(disableParam, functionKey);
     }
     
     /**
