@@ -112,11 +112,6 @@ public class PCC {
     }
     
     public static boolean deletePOV(String visitIEN, String povIEN, String icdIEN) {
-        
-        if (!BgoUtil.checkSecurity(false)) {
-            return false;
-        }
-        
         if (!PromptDialog.confirm("Are you sure you want to delete the purpose of visit?", "Remove POV?")) {
             return false;
         }

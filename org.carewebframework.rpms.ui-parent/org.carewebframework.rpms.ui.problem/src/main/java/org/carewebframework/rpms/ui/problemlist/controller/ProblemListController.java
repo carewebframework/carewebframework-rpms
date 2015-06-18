@@ -28,6 +28,7 @@ import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.cal.api.patient.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoUtil;
+import org.carewebframework.rpms.api.common.BgoUtil.BgoSecurity;
 import org.carewebframework.rpms.api.domain.Problem;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
 import org.carewebframework.rpms.ui.common.PCC;
@@ -108,6 +109,8 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     private Listheader colSort;
     
     private boolean m_bNoRefresh;
+    
+    private BgoSecurity bgoSecurity;
     
     private final List<Problem> problemList = new ArrayList<Problem>();
     
@@ -212,7 +215,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     @Override
     public void doAfterCompose(final Component comp) throws Exception {
         super.doAfterCompose(comp);
-        BgoUtil.initSecurity("BGO DISABLE PROB LIST EDITING", "BGOZ PROBLEM LIST EDIT");
+        bgoSecurity = BgoUtil.initSecurity("BGO DISABLE PROB LIST EDITING", "BGOZ PROBLEM LIST EDIT");
         lbProblems.setItemRenderer(problemRenderer);
         RowComparator.autowireColumnComparators(lbProblems.getListhead().getChildren());
         m_bPersHistAndAct = SecurityUtil.isGranted("BGO PL INCLUDE PERS HIST W ACT");
@@ -250,7 +253,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     }
     
     private void updateControls() {
-        boolean b = PatientContext.getActivePatient() == null || !BgoUtil.checkSecurity(true);
+        boolean b = PatientContext.getActivePatient() == null || !bgoSecurity.verifyWriteAccess(true);
         btnAdd.setDisabled(b);
         btnEdit.setDisabled(b || lbProblems.getSelectedCount() == 0);
         btnDelete.setDisabled(btnEdit.isDisabled());
@@ -387,7 +390,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     }
     
     private void doCommand(Command cmd) {
-        if (!BgoUtil.checkSecurity(false)) {
+        if (!bgoSecurity.verifyWriteAccess(false)) {
             return;
         }
         

@@ -26,6 +26,7 @@ import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.cal.api.patient.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoUtil;
+import org.carewebframework.rpms.api.common.BgoUtil.BgoSecurity;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
 import org.carewebframework.rpms.ui.common.PCC;
 import org.carewebframework.rpms.ui.skintest.model.TestItem;
@@ -96,6 +97,8 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     private Listheader colSort;
     
     private boolean noRefresh;
+    
+    private BgoSecurity bgoSecurity;
     
     private final List<TestItem> skinTestList = new ArrayList<TestItem>();
     
@@ -202,7 +205,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     @Override
     public void doAfterCompose(final Component comp) throws Exception {
         super.doAfterCompose(comp);
-        BgoUtil.initSecurity("BGO DISABLE SK EDITING", null);
+        bgoSecurity = BgoUtil.initSecurity("BGO DISABLE SK EDITING", null);
         lbTests.setItemRenderer(skinTestRenderer);
         RowComparator.autowireColumnComparators(lbTests.getListhead().getChildren());
         getAppFramework().registerObject(patientContextEventHandler);
@@ -212,7 +215,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     }
     
     private void updateControls() {
-        boolean b = PatientContext.getActivePatient() == null || !BgoUtil.checkSecurity(true);
+        boolean b = PatientContext.getActivePatient() == null || !bgoSecurity.verifyWriteAccess(true);
         TestItem test = getSelectedTest();
         boolean locked = test == null ? true : test.isLocked();
         boolean pending = test == null ? false : test.isPending();
@@ -328,7 +331,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     }
     
     private void doCommand(Command cmd) {
-        if (!BgoUtil.checkSecurity(false)) {
+        if (!bgoSecurity.verifyWriteAccess(false)) {
             return;
         }
         
