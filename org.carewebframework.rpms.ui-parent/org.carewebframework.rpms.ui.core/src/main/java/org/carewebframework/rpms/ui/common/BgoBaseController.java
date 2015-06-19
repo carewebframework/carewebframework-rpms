@@ -35,15 +35,15 @@ public class BgoBaseController<T> extends FrameworkController {
     
     private AsyncRPCEventDispatcher asyncDispatcher;
     
-    @Override
-    public void doAfterCompose(Component comp) throws Exception {
-        super.doAfterCompose(comp);
-    }
-    
     public Component getRoot() {
         return root;
     }
     
+    /**
+     * Returns an iterator for passed parameters.
+     * 
+     * @return Iterator for passed parameters.
+     */
     public Iterator<Object> getParameters() {
         return arg instanceof Params ? ((Params) arg).iterator() : new Params().iterator();
     }

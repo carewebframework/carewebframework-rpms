@@ -11,11 +11,10 @@ package org.carewebframework.rpms.ui.common;
 
 import java.util.List;
 
-import org.carewebframework.rpms.ui.common.LookupParams.Table;
 import org.carewebframework.cal.api.patient.PatientContext;
+import org.carewebframework.rpms.ui.common.LookupParams.Table;
 import org.carewebframework.vista.api.util.VistAUtil;
 
-import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Radio;
 
 public class ICDLookupController extends LookupController {
@@ -43,12 +42,7 @@ public class ICDLookupController extends LookupController {
     }
     
     public ICDLookupController() {
-        mode = "ICD";
-    }
-    
-    @Override
-    public void doAfterCompose(Component comp) throws Exception {
-        super.doAfterCompose(comp);
+        super("ICD");
     }
     
     @Override
@@ -58,9 +52,9 @@ public class ICDLookupController extends LookupController {
         }
         
         String params = VistAUtil.concatParams(searchText, radLexicon.isChecked() ? "1" : "0", "", //m_sLookupDate Visit date
-                PatientContext.getActivePatient().getGender(), "", //IIf(m_bEcodeMode, 2, IIf(m_bAllowEcode, 1, ""))
-                "" // CInt(m_bDisplayShortText) ' VCodes
-                );
+            PatientContext.getActivePatient().getGender(), "", //IIf(m_bEcodeMode, 2, IIf(m_bAllowEcode, 1, ""))
+            "" // CInt(m_bDisplayShortText) ' VCodes
+        );
         return broker.callRPCList(lookupParams.rpc, null, params);
     }
 }

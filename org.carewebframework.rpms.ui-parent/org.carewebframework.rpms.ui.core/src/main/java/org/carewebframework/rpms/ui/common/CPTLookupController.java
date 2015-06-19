@@ -1,6 +1,6 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
@@ -14,7 +14,6 @@ import java.util.List;
 import org.carewebframework.rpms.ui.common.LookupParams.Table;
 import org.carewebframework.vista.api.util.VistAUtil;
 
-import org.zkoss.zk.ui.Component;
 import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Radio;
 
@@ -59,12 +58,7 @@ public class CPTLookupController extends LookupController {
     }
     
     public CPTLookupController() {
-        mode = "CPT";
-    }
-    
-    @Override
-    public void doAfterCompose(Component comp) throws Exception {
-        super.doAfterCompose(comp);
+        super("mode");
     }
     
     @Override

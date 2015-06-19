@@ -9,6 +9,7 @@
  */
 package org.carewebframework.rpms.ui.common;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.lang.WordUtils;
@@ -57,7 +58,7 @@ public class LookupController extends BgoBaseController<String> {
     
     protected String screen;
     
-    protected String mode;
+    private final String mode;
     
     protected final BrokerSession broker = VistAUtil.getBrokerSession();
     
@@ -74,7 +75,7 @@ public class LookupController extends BgoBaseController<String> {
     }
     
     public static String execute(Table refTable, String searchText, boolean autoReturn, String screen) {
-        return execute(refTable, searchText, autoReturn, screen, new LookupController());
+        return execute(refTable, searchText, autoReturn, screen, new LookupController(null));
     }
     
     protected static String execute(Table refTable, String searchText, boolean autoReturn, String screen,
@@ -90,17 +91,22 @@ public class LookupController extends BgoBaseController<String> {
         return controller.canceled() ? null : controller.result;
     }
     
+    public LookupController(String mode) {
+        this.mode = mode;
+    }
+    
     @Override
     public void doAfterCompose(Component comp) throws Exception {
         super.doAfterCompose(comp);
-        this.lookupParams = new LookupParams((Table) arg.get(0));
+        Iterator<Object> params = getParameters();
+        lookupParams = new LookupParams((Table) params.next());
         ((Window) comp).setTitle("Lookup " + lookupParams.tableName);
-        String searchText = (String) arg.get(1);
-        this.autoReturn = (Boolean) arg.get(2);
-        this.screen = (String) arg.get(3);
+        String searchText = (String) params.next();
+        autoReturn = (Boolean) params.next();
+        screen = (String) params.next();
         
-        if (this.screen == null) {
-            this.screen = this.lookupParams.screen;
+        if (screen == null) {
+            screen = lookupParams.screen;
         }
         
         txtSearch.setText(searchText);
