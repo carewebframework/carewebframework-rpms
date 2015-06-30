@@ -7,7 +7,7 @@
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
  */
-package org.carewebframework.rpms.ui.common;
+package org.carewebframework.rpms.ui.terminology.general.controller;
 
 import java.util.Iterator;
 import java.util.List;
@@ -17,10 +17,14 @@ import org.apache.commons.lang.WordUtils;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.common.Params;
-import org.carewebframework.rpms.ui.common.LookupParams.ColumnControl;
-import org.carewebframework.rpms.ui.common.LookupParams.Table;
+import org.carewebframework.rpms.ui.common.BgoBaseController;
+import org.carewebframework.rpms.ui.common.BgoConstants;
+import org.carewebframework.rpms.ui.common.PCC;
+import org.carewebframework.rpms.ui.terminology.general.controller.LookupParams.ColumnControl;
+import org.carewebframework.rpms.ui.terminology.general.controller.LookupParams.Table;
 import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
+import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.BrokerSession;
 
@@ -40,7 +44,7 @@ public class LookupController extends BgoBaseController<String> {
     
     private static final long serialVersionUID = 1L;
     
-    private static final String DIALOG = BgoConstants.RESOURCE_PREFIX + "lookup.zul";
+    private static final String DIALOG = ZKUtil.getResourcePath(LookupController.class, 1) + "lookup.zul";
     
     protected LookupParams lookupParams;
     
@@ -100,18 +104,18 @@ public class LookupController extends BgoBaseController<String> {
         super.doAfterCompose(comp);
         Iterator<Object> params = getParameters();
         lookupParams = new LookupParams((Table) params.next());
-        ((Window) comp).setTitle("Lookup " + lookupParams.tableName);
+        ((Window) comp).setTitle("Lookup " + lookupParams.getTableName());
         String searchText = (String) params.next();
         autoReturn = (Boolean) params.next();
         screen = (String) params.next();
         
         if (screen == null) {
-            screen = lookupParams.screen;
+            screen = lookupParams.getScreen();
         }
         
         txtSearch.setText(searchText);
         
-        if (lookupParams.rpc == null) {
+        if (lookupParams.getRpc() == null) {
             close(true);
         }
         
@@ -128,11 +132,11 @@ public class LookupController extends BgoBaseController<String> {
         
         Listheader lhr = null;
         
-        for (ColumnControl ctrl : lookupParams.colControl) {
-            lhr = new Listheader(ctrl.label);
+        for (ColumnControl ctrl : lookupParams.getColControl()) {
+            lhr = new Listheader(ctrl.getLabel());
             lhr.setParent(lh);
-            lhr.setVisible(ctrl.visible);
-            lhr.setWidth(ctrl.width + "px");
+            lhr.setVisible(ctrl.isVisible());
+            lhr.setWidth(ctrl.getWidth() + "px");
             lhr.setSort("auto");
         }
         
@@ -148,7 +152,7 @@ public class LookupController extends BgoBaseController<String> {
             searchText = StrUtil.piece(searchText, " - ");
         }
         
-        if (!searchText.isEmpty() || lookupParams.lookupNull) {
+        if (!searchText.isEmpty() || lookupParams.isLookupNull()) {
             List<String> sRpc = executeRPC(searchText);
             
             if (PCC.errorCheck(sRpc)) {
@@ -165,9 +169,10 @@ public class LookupController extends BgoBaseController<String> {
     }
     
     protected List<String> executeRPC(String searchText) {
-        String params = VistAUtil.concatParams(lookupParams.fileNum, searchText, lookupParams.from, lookupParams.direction,
-            lookupParams.maxResults, lookupParams.xref, screen, lookupParams.all, lookupParams.fields);
-        return broker.callRPCList(lookupParams.rpc, null, params);
+        String params = VistAUtil.concatParams(lookupParams.getFileNum(), searchText, lookupParams.getFrom(),
+            lookupParams.getDirection(), lookupParams.getMaxResults(), lookupParams.getXref(), screen,
+            lookupParams.getAll(), lookupParams.getFields());
+        return broker.callRPCList(lookupParams.getRpc(), null, params);
     }
     
     private void loadResults(List<String> v) {
@@ -180,11 +185,11 @@ public class LookupController extends BgoBaseController<String> {
             String pcs[] = s.split("\\^");
             StringBuilder sb = new StringBuilder();
             
-            for (ColumnControl ctrl : lookupParams.colControl) {
-                int p = ctrl.piece - 1; // Piece # for column
+            for (ColumnControl ctrl : lookupParams.getColControl()) {
+                int p = ctrl.getPiece() - 1; // Piece # for column
                 String t = p < 0 ? "" : p < pcs.length ? pcs[p] : "";
                 
-                if (ctrl.capitalize) {
+                if (ctrl.isCapitalize()) {
                     t = WordUtils.capitalizeFully(t);
                 }
                 
@@ -195,7 +200,7 @@ public class LookupController extends BgoBaseController<String> {
             item.setValue(sb.toString());
         }
         
-        int sortCol = lookupParams.sortCol;
+        int sortCol = lookupParams.getSortCol();
         
         if (sortCol >= 0) {
             ((Listheader) lbResults.getListhead().getChildren().get(sortCol)).sort(true, true);
@@ -205,7 +210,7 @@ public class LookupController extends BgoBaseController<String> {
     public void onClick$btnSearch() {
         String text = txtSearch.getText().trim();
         
-        if (text.isEmpty() && !lookupParams.lookupNull) {
+        if (text.isEmpty() && !lookupParams.isLookupNull()) {
             PromptDialog.showWarning(BgoConstants.TX_NO_SEARCH_TEXT, BgoConstants.TC_NO_SEARCH);
             return;
         }

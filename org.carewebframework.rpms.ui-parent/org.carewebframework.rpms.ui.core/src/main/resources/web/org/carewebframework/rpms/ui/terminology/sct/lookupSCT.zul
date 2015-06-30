@@ -1,0 +1,81 @@
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+	<window title="SNOMED CT Lookup" width="500px" height="600px"
+		mold="bootstrap" sclass="panel-primary rpmsSCTLookup" apply="${bstsLookupSCTController}">
+		<caption />
+		<borderlayout>
+			<north>
+				<vlayout>
+					<toolbar>
+						<span style="float:left;padding-top:4px">
+							<label value="Condition Lookup:" />
+							<radiogroup id="rgrpLookupMode">
+								<radio label="Fully specified name"
+									selected="true" />
+								<radio label="Synonym" />
+							</radiogroup>
+						</span>
+						<span style="float:right">
+							<label value="Search Date:" />
+							<datebox id="datSearch" text="T+2" />
+						</span>
+					</toolbar>
+					<toolbar>
+						<label value="Maximum Results:" />
+						<radiogroup id="rgrpMaxResults">
+							<radio label="25" value="${25}"
+								selected="true" />
+							<radio label="50" value="${50}" />
+							<radio label="100" value="${100}" />
+							<radio label="200" value="${200}" />
+							<radio label="All" />
+						</radiogroup>
+					</toolbar>
+					<toolbar>
+						<label value="Search:" />
+						<textbox id="txtSearch" hflex="1" focus="true"
+							forward="onOK=btnSearch.onClick" />
+						<button id="btnSearch" label="Search" />
+					</toolbar>
+				</vlayout>
+			</north>
+			<west id="pnlSubset" splittable="true" title="Subset"
+				collapsible="true">
+				<listbox id="lbSubset" vflex="1" height="500px" />
+			</west>
+			<center>
+				<tree id="treeSearch" vflex="1" hflex="1">
+					<treecols>
+						<treecol label="Condition" hflex="1" />
+						<treecol label="Information" hflex="1" />
+						<treecol label="Mapped ICD" hflex="min" align="center" />
+					</treecols>
+				</tree>
+			</center>
+			<south>
+				<toolbar align="end">
+					<button id="btnSelect" label="Select" zclass="btn"
+						disabled="true"
+						sclass="btn-success btn-sm" />
+					<button id="btnCancel" label="Cancel" zclass="btn"
+						sclass="btn-danger btn-sm" />
+				</toolbar>
+			</south>
+		</borderlayout>
+	
+		<style>
+			.rpmsSCTLookup .z-treerow {
+				white-space: pre-wrap;
+				border-bottom: 1px solid lightgray;
+			}
+			
+			.rpmsSCTLookup .z-treerow > .z-treerow {
+				background-color: #F0F0F0;
+			}
+		</style>
+	</window>
+</zk>

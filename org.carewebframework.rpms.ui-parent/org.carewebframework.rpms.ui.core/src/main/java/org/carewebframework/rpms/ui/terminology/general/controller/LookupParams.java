@@ -1,13 +1,13 @@
 /**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
- * If a copy of the MPL was not distributed with this file, You can obtain one at 
+ * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
+ * If a copy of the MPL was not distributed with this file, You can obtain one at
  * http://mozilla.org/MPL/2.0/.
  * 
  * This Source Code Form is also subject to the terms of the Health-Related Additional
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
  */
-package org.carewebframework.rpms.ui.common;
+package org.carewebframework.rpms.ui.terminology.general.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +41,26 @@ public class LookupParams {
             piece = NumberUtils.toInt(pcs[2]);
             width = pcs[4].isEmpty() ? "60" : pcs[3];
             capitalize = "1".equals(pcs[4]);
+        }
+        
+        public String getLabel() {
+            return label;
+        }
+        
+        public boolean isVisible() {
+            return visible;
+        }
+        
+        public boolean isCapitalize() {
+            return capitalize;
+        }
+        
+        public int getPiece() {
+            return piece;
+        }
+        
+        public String getWidth() {
+            return width;
         }
     }
     
@@ -242,5 +262,61 @@ public class LookupParams {
         for (int i = 0; i < pcs.length; i++) {
             colControl.add(new ColumnControl(pcs[i]));
         }
+    }
+    
+    public Table getTable() {
+        return table;
+    }
+    
+    public String getTableName() {
+        return tableName;
+    }
+    
+    public String getFileNum() {
+        return fileNum;
+    }
+    
+    public String getRpc() {
+        return rpc;
+    }
+    
+    public String getScreen() {
+        return screen;
+    }
+    
+    public String getFields() {
+        return fields;
+    }
+    
+    public String getXref() {
+        return xref;
+    }
+    
+    public String getAll() {
+        return all;
+    }
+    
+    public String getFrom() {
+        return from;
+    }
+    
+    public int getMaxResults() {
+        return maxResults;
+    }
+    
+    public int getSortCol() {
+        return sortCol;
+    }
+    
+    public String getDirection() {
+        return direction;
+    }
+    
+    public boolean isLookupNull() {
+        return lookupNull;
+    }
+    
+    public List<ColumnControl> getColControl() {
+        return colControl;
     }
 }

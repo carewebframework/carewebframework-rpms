@@ -6,14 +6,8 @@
 
 	<beans profile="desktop">
 
-		<bean id="bgoWebSearchController" class="org.carewebframework.rpms.ui.common.WebSearchController"
+		<bean id="bstsLookupSCTController" class="org.carewebframework.rpms.ui.terminology.sct.controller.LookupSCTController"
 			scope="prototype" />
-
-		<bean id="bgoBrowserController" class="org.carewebframework.rpms.ui.common.BrowserController"
-			scope="prototype" />
-
-		<bean id="bgoSaveLinkController" class="org.carewebframework.rpms.ui.common.SaveLinkController"
-			scope="prototype" />
-
+			
 	</beans>
 </beans>

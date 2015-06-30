@@ -7,35 +7,19 @@
  * Disclaimer of Warranty and Limitation of Liability available at
  * http://www.carewebframework.org/licensing/disclaimer.
  */
-package org.carewebframework.rpms.ui.common;
+package org.carewebframework.rpms.ui.terminology.general.controller;
 
 import java.util.List;
 
-import org.carewebframework.rpms.ui.common.LookupParams.Table;
+import org.carewebframework.cal.api.patient.PatientContext;
+import org.carewebframework.rpms.ui.terminology.general.controller.LookupParams.Table;
 import org.carewebframework.vista.api.util.VistAUtil;
 
-import org.zkoss.zul.Checkbox;
 import org.zkoss.zul.Radio;
 
-public class CPTLookupController extends LookupController {
+public class ICDLookupController extends LookupController {
     
     private static final long serialVersionUID = 1L;
-    
-    private Checkbox chkMedical;
-    
-    private Checkbox chkSurgical;
-    
-    private Checkbox chkHCPCS;
-    
-    private Checkbox chkEM;
-    
-    private Checkbox chkRadiology;
-    
-    private Checkbox chkLab;
-    
-    private Checkbox chkAnesthesia;
-    
-    private Checkbox chkHome;
     
     private Radio radCode;
     
@@ -54,18 +38,23 @@ public class CPTLookupController extends LookupController {
     }
     
     public static String execute(String searchText, boolean autoReturn, String screen) {
-        return LookupController.execute(Table.rtCPT, searchText, autoReturn, screen, new CPTLookupController());
+        return LookupController.execute(Table.rtICD, searchText, autoReturn, screen, new ICDLookupController());
     }
     
-    public CPTLookupController() {
-        super("mode");
+    public ICDLookupController() {
+        super("ICD");
     }
     
     @Override
     protected List<String> executeRPC(String searchText) {
-        String params = VistAUtil.concatParams(lookupParams.fileNum, searchText, lookupParams.from, lookupParams.direction,
-            lookupParams.maxResults, lookupParams.xref, screen, lookupParams.all, lookupParams.fields);
-        return broker.callRPCList(lookupParams.rpc, null, params);
+        if (searchText == null || searchText.isEmpty()) {
+            searchText = "*";
+        }
+        
+        String params = VistAUtil.concatParams(searchText, radLexicon.isChecked() ? "1" : "0", "", //m_sLookupDate Visit date
+            PatientContext.getActivePatient().getGender(), "", //IIf(m_bEcodeMode, 2, IIf(m_bAllowEcode, 1, ""))
+            "" // CInt(m_bDisplayShortText) ' VCodes
+        );
+        return broker.callRPCList(lookupParams.getRpc(), null, params);
     }
-    
 }
