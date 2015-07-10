@@ -89,7 +89,7 @@ public class TermUtil {
      * @return Returned list data.
      */
     private static List<String> callBMXRPC(String rpcName, Object... args) {
-        String arg = args == null ? null : VistAUtil.concatParams("|", args);
+        String arg = args == null ? null : VistAUtil.delimitParams("|", args);
         List<String> result = StrUtil.toList(brokerSession.callRPC(rpcName, arg), BMX_DELIMITER);
         int last = result.size() - 1;
         
@@ -104,6 +104,6 @@ public class TermUtil {
      * Enforce static class.
      */
     private TermUtil() {
-        
+    
     }
 }

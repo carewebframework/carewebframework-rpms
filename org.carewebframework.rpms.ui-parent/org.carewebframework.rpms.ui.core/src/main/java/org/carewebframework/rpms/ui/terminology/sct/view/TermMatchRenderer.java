@@ -21,6 +21,7 @@ import org.carewebframework.rpms.api.terminology.TermMatch.Term;
 import org.carewebframework.rpms.api.terminology.TermMatch.TermType;
 import org.carewebframework.ui.zk.AbstractTreeitemRenderer;
 
+import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.TreeNode;
 import org.zkoss.zul.Treeitem;
 import org.zkoss.zul.Treerow;
@@ -36,6 +37,7 @@ public class TermMatchRenderer extends AbstractTreeitemRenderer<TreeNode<Object>
         Treerow treeRow = new Treerow();
         item.appendChild(treeRow);
         item.setOpen(false);
+        item.addForward(Events.ON_DOUBLE_CLICK, item.getTree(), Events.ON_OK);
         
         if (data == null) {
             createCell(treeRow, "No matches found.").setSpan(3);
@@ -50,8 +52,6 @@ public class TermMatchRenderer extends AbstractTreeitemRenderer<TreeNode<Object>
             createCell(treeRow, term.getTermText()).setSpan(2);
             createCell(treeRow, WordUtils.capitalizeFully(term.getTermType().name()));
         }
-        
-        //ZKUtil.updateStyle(treeRow, "background-color", item.getIndex() % 2 == 0 ? null : "#F0F0F0");
     }
     
     private String formatParentTerms(List<ParentTerm> parentTerms) {

@@ -117,6 +117,11 @@ public class LookupSCTController extends FrameworkController {
             selectedTerm = null;
         } else {
             Treeitem item = treeSearch.getSelectedItem();
+            
+            if (item == null) {
+                return;
+            }
+            
             TreeNode<?> treeNode = item == null ? null : (TreeNode<?>) item.getValue();
             Object data = treeNode == null ? null : treeNode.getData();
             
@@ -158,8 +163,8 @@ public class LookupSCTController extends FrameworkController {
         } else {
             for (TermMatch match : matches) {
                 boolean synonyms = rgrpLookupMode.getSelectedIndex() == 1;
-                TreeNode<Object> parentNode = synonyms ? new DefaultTreeNode<Object>(match) : new DefaultTreeNode<Object>(
-                        match, null, false);
+                TreeNode<Object> parentNode = synonyms ? new DefaultTreeNode<Object>(match)
+                        : new DefaultTreeNode<Object>(match, null, false);
                 rootNode.add(parentNode);
                 
                 if (!synonyms) {
@@ -171,6 +176,10 @@ public class LookupSCTController extends FrameworkController {
                 }
             }
         }
+    }
+    
+    public void onOK$treeSearch() {
+        close(false);
     }
     
     public void onClick$btnSelect() {

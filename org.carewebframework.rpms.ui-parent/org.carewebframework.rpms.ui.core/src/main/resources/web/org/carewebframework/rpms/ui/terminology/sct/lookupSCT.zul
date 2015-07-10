@@ -73,9 +73,9 @@
 				border-bottom: 1px solid lightgray;
 			}
 			
-			.rpmsSCTLookup .z-treerow > .z-treerow {
-				background-color: #F0F0F0;
-			}
+			.rpmsSCTLookup .z-treerow:nth-child(even) {
+				background-color: #F0F0F0;	
+			}			
 		</style>
 	</window>
 </zk>
