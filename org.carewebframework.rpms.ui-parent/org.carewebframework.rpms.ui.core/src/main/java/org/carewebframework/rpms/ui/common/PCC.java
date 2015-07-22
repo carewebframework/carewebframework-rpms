@@ -11,10 +11,6 @@ package org.carewebframework.rpms.ui.common;
 
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu2.composite.IdentifierDt;
-import ca.uhn.fhir.model.dstu2.resource.Encounter;
-import ca.uhn.fhir.model.dstu2.resource.Patient;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 
@@ -34,6 +30,11 @@ import org.carewebframework.vista.mbroker.BrokerSession;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.Comboitem;
 
+import ca.uhn.fhir.model.dstu2.composite.IdentifierDt;
+import ca.uhn.fhir.model.dstu2.resource.Encounter;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
+
 public class PCC {
     
     public static boolean errorCheck(List<String> data) {
@@ -50,7 +51,8 @@ public class PCC {
         }
     }
     
-    public static String addProcedure(String cptIEN, String narrative, String qty, String mod1, String mod2, String principal) {
+    public static String addProcedure(String cptIEN, String narrative, String qty, String mod1, String mod2,
+                                      String principal) {
         //if (!checkActiveVisit())
         //    return "-1";
         
@@ -61,8 +63,8 @@ public class PCC {
         // Diagnosis [6] ^ Modifier #1 [7] ^ Provider IEN [8] ^ Principal [9] ^ V File IEN [10] ^
         // Narrative [11] ^ Modifier #2 [12] ^ Location IEN [13] ^ Outside Location [14] ^
         // Historical [15] ^ ICD Procedure Flag [16] ^ No Dups [17]
-        String sParam = VistAUtil.concatParams(encounter.getId().getIdPart(), cptIEN, patient.getId().getIdPart(), null,
-            qty, null, mod1, user.getLogicalId(), principal, null, narrative, mod2);
+        String sParam = VistAUtil.concatParams(encounter.getId().getIdPart(), cptIEN, patient.getId().getIdPart(), null, qty,
+            null, mod1, user.getLogicalId(), principal, null, narrative, mod2);
         return VistAUtil.getBrokerSession().callRPC("BGOVCPT SET", sParam);
     }
     
@@ -87,13 +89,15 @@ public class PCC {
         Patient patient = PatientContext.getActivePatient();
         Encounter encounter = EncounterContext.getActiveEncounter();
         IUser user = UserContext.getActiveUser();
+        Practitioner activePractitioner = (Practitioner) EncounterParticipantContext.getActivePractitioner().getIndividual()
+                .getResource();
+        String practitionerId = activePractitioner == null ? null : activePractitioner.getId().getIdPart();
         // VPOV IEN [1] ^ Visit IEN [2] ^ ICD Code IEN [3] ^ Patient IEN [4] ^ Narrative [5] ^
         // Stage [6] ^ Modifier [7] ^ Cause Dx [8] ^ First/Revisit [9] ^ Injury E-Code [10] ^
         // Injury Place [11] ^ Primary/Secondary [12] ^ Injury Date [13] ^ Onset Date [14] ^
         // Provider IEN [15]
         String s = VistAUtil.concatParams(null, encounter.getId().getIdPart(), "`" + icdIEN, patient.getId().getIdPart(),
-            narrative, null, null, null, null, null, null, null, null, onset, EncounterParticipantContext
-                    .getActivePractitioner().getIndividual().getResource().getId().getIdPart());
+            narrative, null, null, null, null, null, null, null, null, onset, practitionerId);
         s = VistAUtil.getBrokerSession().callRPC("BGOVPOV SET", s);
         
         if (BgoUtil.errorCode(s) == 0) {
@@ -101,8 +105,9 @@ public class PCC {
         }
         
         if (BgoUtil.errorCode(s) == 1098) {
-            if (PromptDialog.confirm(StrUtil.piece(s, StrUtil.U, 2) + StrUtil.CRLF
-                    + "Are you the primary provider for this visit?", "Change Primary Provider?")) {
+            if (PromptDialog.confirm(
+                StrUtil.piece(s, StrUtil.U, 2) + StrUtil.CRLF + "Are you the primary provider for this visit?",
+                "Change Primary Provider?")) {
                 s = addProvider(user.getLogicalId(), true, true);
             } else {
                 s = null;
@@ -167,8 +172,9 @@ public class PCC {
             return;
         }
         
-        if (!PromptDialog.confirm("Do you also want to delete the following related education event"
-                + (v.size() == 1 ? "?" : "s?") + s, "Remove Education Events?")) {
+        if (!PromptDialog.confirm(
+            "Do you also want to delete the following related education event" + (v.size() == 1 ? "?" : "s?") + s,
+            "Remove Education Events?")) {
             return;
         }
         
@@ -222,7 +228,7 @@ public class PCC {
         if (!StringUtils.isEmpty(cptCode)) {
             List<String> lst = VistAUtil.getBrokerSession().callRPCList("BGOVCPT GETMODS", null,
                 cptCode + StrUtil.U + refDate);
-            
+                
             for (String s : lst) {
                 addModifier(cbo, s); // Name ^ CPT Modifier Code ^ Modifier IEN
             }
