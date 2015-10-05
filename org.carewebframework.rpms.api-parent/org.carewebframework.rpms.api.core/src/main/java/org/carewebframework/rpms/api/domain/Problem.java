@@ -9,16 +9,15 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu2.resource.Organization;
-import ca.uhn.fhir.model.dstu2.resource.Patient;
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
-
 import org.carewebframework.cal.api.DomainObject;
-import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.mbroker.FMDate;
+
+import ca.uhn.fhir.model.dstu2.resource.Organization;
+import ca.uhn.fhir.model.dstu2.resource.Patient;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 public class Problem extends DomainObject {
     
@@ -73,12 +72,12 @@ public class Problem extends DomainObject {
         patient = new Patient();
         patient.setId(pcs[1]);
         icd9Code = new CodingProxy(pcs[11], "ICD9", pcs[2], pcs[12]);
-        modifyDate = parseDate(pcs[3]);
+        modifyDate = PCCUtil.parseDate(pcs[3]);
         problemClass = pcs[4];
         providerNarrative = pcs[5];
-        entryDate = parseDate(pcs[6]);
+        entryDate = PCCUtil.parseDate(pcs[6]);
         status = pcs[7];
-        onsetDate = parseDate(pcs[8]);
+        onsetDate = PCCUtil.parseDate(pcs[8]);
         setId(pcs[9]);
         notes = pcs[10];
         
@@ -93,14 +92,6 @@ public class Problem extends DomainObject {
         }
         
         priority = pcs[15];
-    }
-    
-    private FMDate parseDate(String value) {
-        if (value == null || value.isEmpty()) {
-            return null;
-        }
-        
-        return new FMDate(DateUtil.parseDate(value));
     }
     
     public String getStatus() {

@@ -9,9 +9,7 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu2.composite.IdentifierDt;
-import ca.uhn.fhir.model.dstu2.resource.Location;
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
+import java.util.Date;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -19,6 +17,10 @@ import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.mbroker.FMDate;
+
+import ca.uhn.fhir.model.dstu2.composite.IdentifierDt;
+import ca.uhn.fhir.model.dstu2.resource.Location;
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 public class PCCUtil {
     
@@ -54,8 +56,13 @@ public class PCCUtil {
     }
     
     public static FMDate parseDate(String value) {
-        return value == null || value.isEmpty() ? null : StringUtils.isNumeric(value.replace(".", "")) ? new FMDate(value)
-                : new FMDate(DateUtil.parseDate(value));
+        return value == null || value.isEmpty() ? null
+                : StringUtils.isNumeric(value.replace(".", "")) ? new FMDate(value) : parseDate2(value);
+    }
+    
+    private static FMDate parseDate2(String value) {
+        Date date = DateUtil.parseDate(value);
+        return date == null ? null : new FMDate(date);
     }
     
     public static Practitioner parsePractitioner(String value) {

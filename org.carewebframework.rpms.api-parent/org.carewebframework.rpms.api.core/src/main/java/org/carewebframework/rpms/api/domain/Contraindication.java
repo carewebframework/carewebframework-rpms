@@ -10,7 +10,6 @@
 package org.carewebframework.rpms.api.domain;
 
 import org.carewebframework.cal.api.DomainObject;
-import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.vista.mbroker.FMDate;
@@ -42,15 +41,7 @@ public class Contraindication extends DomainObject {
         setId(pcs[1]);
         immunization = pcs[2];
         reason = pcs[3];
-        date = parseDate(pcs[4]);
-    }
-    
-    private FMDate parseDate(String value) {
-        if (value == null || value.isEmpty()) {
-            return null;
-        }
-        
-        return new FMDate(DateUtil.parseDate(value));
+        date = PCCUtil.parseDate(pcs[4]);
     }
     
     public FMDate getDate() {

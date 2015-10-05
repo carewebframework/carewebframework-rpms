@@ -9,15 +9,14 @@
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
-
 import org.carewebframework.cal.api.DomainObject;
-import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
+
+import ca.uhn.fhir.model.dstu2.resource.Practitioner;
 
 public class Refusal extends DomainObject {
     
@@ -56,7 +55,7 @@ public class Refusal extends DomainObject {
         type = parseConcept("REFUSAL TYPE", pcs[2], pcs[3]);
         item = parseConcept("REFUSAL ITEM", pcs[4], pcs[5]);
         provider = parseProvider(pcs[6], pcs[7]);
-        date = parseDate(pcs[8]);
+        date = PCCUtil.parseDate(pcs[8]);
         locked = "1".equals(pcs[9]);
         reason = pcs[10];
         comment = pcs[11];
@@ -68,14 +67,6 @@ public class Refusal extends DomainObject {
         }
         
         return new CodingProxy(ien, sysId, code, code);
-    }
-    
-    private FMDate parseDate(String value) {
-        if (value == null || value.isEmpty()) {
-            return null;
-        }
-        
-        return new FMDate(DateUtil.parseDate(value));
     }
     
     private Practitioner parseProvider(String ien, String name) {
