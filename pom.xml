@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.carewebframework</groupId>
 		<artifactId>org.carewebframework.vista-parent</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>org.carewebframework</groupId>
@@ -43,7 +43,7 @@
 
 	<properties>
 		<scm.parent>carewebframework-rpms</scm.parent>
-		<org.carewebframework.vista.version>1.1.0</org.carewebframework.vista.version>
+		<org.carewebframework.vista.version>1.1.1-SNAPSHOT</org.carewebframework.vista.version>
 	</properties>
 
 	<modules>
@@ -52,23 +52,4 @@
 		<module>org.carewebframework.rpms.webapp-parent</module>
 	</modules>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.carewebframework</groupId>
-				<artifactId>org.carewebframework.vista.api.core</artifactId>
-				<version>${org.carewebframework.vista.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.carewebframework</groupId>
-				<artifactId>org.carewebframework.vista.ui.core</artifactId>
-				<version>${org.carewebframework.vista.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.carewebframework</groupId>
-				<artifactId>org.carewebframework.vista.mbroker</artifactId>
-				<version>${org.carewebframework.vista.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 </project>
