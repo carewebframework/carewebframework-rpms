@@ -9,7 +9,7 @@
 
 	<groupId>org.carewebframework</groupId>
 	<artifactId>org.carewebframework.rpms-parent</artifactId>
-	<version>1.2.1-SNAPSHOT</version>
+	<version>1.2.1</version>
 	<packaging>pom</packaging>
 	<name>RPMS Parent POM</name>
 
@@ -17,7 +17,7 @@
 		<connection>${scm.scm}:${scm.base}</connection>
 		<developerConnection>${scm.scm}:${scm.base}</developerConnection>
 		<url>${scm.base}</url>
-		<tag>HEAD</tag>
+		<tag>1.2.1</tag>
 	</scm>
 
 	<licenses>
