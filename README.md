@@ -15,10 +15,9 @@ Installation:
 
 Running:
 
-1. Using Maven, build and install the separate <b>carewebframework-core</b>, <b>carewebframework-icons</b> and <b>carewebframework-vista</b> projects.
-2. In the <b>carewebframework-rpms</b> project under the <b>ihs.gov.cwf.web.impl.wvehr</b> artifact, edit the <b>cwf.properties</b> file to reflect your broker and user authentication settings.
-3. Using Maven, build the <b>carewebframework-rpms</b> project.  A war file will be created under the <b>target</b> folder of the <b>org.carewebframework.rpms.web.impl.wvehr</b> artifact.
-4. Deploy and run the created war file using Tomcat or other servlet container.
+1. In the <b>carewebframework-rpms</b> project under the <b>org.carewebframework.rpms.webapp.goldb</b> artifact, edit the <b>cwf.properties</b> file to reflect your broker and user authentication settings.
+2. Using Maven, build the <b>carewebframework-rpms</b> project.  A war file will be created under the <b>target</b> folder of the <b>org.carewebframework.rpms.webapp.goldb</b> artifact.
+3. Deploy and run the created war file using Tomcat or other servlet container.
 
 Additional configuration:
 
