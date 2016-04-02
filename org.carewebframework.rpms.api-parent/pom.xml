@@ -13,6 +13,5 @@
 	
 	<modules>
 		<module>org.carewebframework.rpms.api.core</module>
-		<module>org.carewebframework.rpms.api.smart</module>
 	</modules>
 </project>
