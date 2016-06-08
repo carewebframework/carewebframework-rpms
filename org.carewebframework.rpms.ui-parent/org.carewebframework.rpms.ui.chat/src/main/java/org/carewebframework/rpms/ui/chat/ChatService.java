@@ -18,6 +18,8 @@ import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
+import org.carewebframework.api.messaging.Recipient;
+import org.carewebframework.api.messaging.Recipient.RecipientType;
 import org.carewebframework.api.spring.SpringUtil;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
@@ -71,8 +73,8 @@ public class ChatService implements IGenericEvent<String> {
     public void init() {
         user = UserContext.getActiveUser();
         doSubscribe(true);
-        ActionRegistry.register(false, "vcchat.create.session", "@vcchat.action.create.session", "zscript:"
-                + ChatService.class.getName() + ".getInstance().createSession();");
+        ActionRegistry.register(false, "vcchat.create.session", "@vcchat.action.create.session",
+            "zscript:" + ChatService.class.getName() + ".getInstance().createSession();");
     }
     
     /**
@@ -203,8 +205,8 @@ public class ChatService implements IGenericEvent<String> {
      */
     public Collection<Participant> getParticipants(Collection<Participant> participants, String eventName) {
         participants.clear();
-        List<String> lst = brokerSession.callRPCList("RGNETBEV GETSUBSC", null, eventName == null ? EVENT_CHAT_SERVICE
-                : eventName);
+        List<String> lst = brokerSession.callRPCList("RGNETBEV GETSUBSC", null,
+            eventName == null ? EVENT_CHAT_SERVICE : eventName);
         
         for (String data : lst) {
             participants.add(new Participant(data));
@@ -238,17 +240,14 @@ public class ChatService implements IGenericEvent<String> {
             return;
         }
         
-        StringBuilder sb = new StringBuilder();
+        List<Recipient> recipients = new ArrayList<>();
         
         for (Participant invitee : invitees) {
-            if (sb.length() > 0) {
-                sb.append(",");
-            }
-            
-            sb.append(invitee.getSession());
+            recipients.add(new Recipient(RecipientType.SESSION, invitee.getSession()));
         }
         
-        eventManager.fireRemoteEvent("VCCHAT.SERVICE.INVITE", sessionId + StrUtil.U + user.getFullName(), sb.toString());
+        eventManager.fireRemoteEvent("VCCHAT.SERVICE.INVITE", sessionId + StrUtil.U + user.getFullName(),
+            (Recipient[]) recipients.toArray());
     }
     
 }
