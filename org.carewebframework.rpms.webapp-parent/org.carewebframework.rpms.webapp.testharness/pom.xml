@@ -56,7 +56,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.ui.userheader</artifactId>
+			<artifactId>org.carewebframework.plugin.userheader</artifactId>
 			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<!-- RPMS Plugins -->

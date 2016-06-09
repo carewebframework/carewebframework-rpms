@@ -69,12 +69,12 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.ui.currentdatetime</artifactId>
+			<artifactId>org.carewebframework.plugin.currentdatetime</artifactId>
 			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.ui.infopanel</artifactId>
+			<artifactId>org.carewebframework.plugin.infopanel</artifactId>
 			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<dependency>
@@ -84,17 +84,17 @@
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.ui.statuspanel</artifactId>
+			<artifactId>org.carewebframework.plugin.statuspanel</artifactId>
 			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.ui.userheader</artifactId>
+			<artifactId>org.carewebframework.plugin.userheader</artifactId>
 			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.ui.chat</artifactId>
+			<artifactId>org.carewebframework.plugin.chat</artifactId>
 			<version>${org.carewebframework.core.version}</version>
 		</dependency>
 		<dependency>
@@ -110,83 +110,83 @@
 		<!-- RPMS Plugins -->
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.rpms.ui.medlist</artifactId>
+			<artifactId>org.carewebframework.rpms.plugin.medlist</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.rpms.ui.patiented</artifactId>
+			<artifactId>org.carewebframework.rpms.plugin.patiented</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.rpms.ui.problem</artifactId>
+			<artifactId>org.carewebframework.rpms.plugin.problem</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.rpms.ui.skintest</artifactId>
+			<artifactId>org.carewebframework.rpms.plugin.skintest</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.rpms.ui.visits</artifactId>
+			<artifactId>org.carewebframework.rpms.plugin.visits</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.rpms.ui.anticoag</artifactId>
+			<artifactId>org.carewebframework.rpms.plugin.anticoag</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<!-- VistA Plugins -->
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.alerts</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.alerts</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.allergies</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.allergies</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.documents</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.documents</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.vitals</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.vitals</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.consultorders</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.consultorders</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.crises</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.crises</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.cwad</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.cwad</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.esig</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.esig</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.laborders</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.laborders</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.carewebframework</groupId>
-			<artifactId>org.carewebframework.vista.ui.notification</artifactId>
+			<artifactId>org.carewebframework.vista.plugin.notification</artifactId>
 			<version>${org.carewebframework.vista.version}</version>
 		</dependency>
 		<dependency>
