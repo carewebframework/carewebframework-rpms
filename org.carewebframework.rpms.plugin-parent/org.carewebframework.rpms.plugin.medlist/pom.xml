@@ -1,18 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>org.carewebframework</groupId>
-		<artifactId>org.carewebframework.rpms-parent</artifactId>
+		<artifactId>org.carewebframework.rpms.plugin-parent</artifactId>
 		<version>1.2.2-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>org.carewebframework.rpms.ui-parent</artifactId>
-	<packaging>pom</packaging>
-	<name>RPMS UI Aggregator POM</name>
-	
-	<modules>
-		<module>org.carewebframework.rpms.ui.core</module>
-	</modules>
+	<artifactId>org.carewebframework.rpms.plugin.medlist</artifactId>
+	<name>RPMS Medication List Plugin</name>
 	
 </project>

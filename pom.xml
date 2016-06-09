@@ -49,6 +49,7 @@
 	<modules>
 		<module>org.carewebframework.rpms.api-parent</module>
 		<module>org.carewebframework.rpms.ui-parent</module>
+		<module>org.carewebframework.rpms.plugin-parent</module>
 		<module>org.carewebframework.rpms.webapp-parent</module>
 	</modules>
 

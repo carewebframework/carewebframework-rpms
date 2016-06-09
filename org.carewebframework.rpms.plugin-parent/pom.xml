@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.carewebframework</groupId>
+		<artifactId>org.carewebframework.rpms-parent</artifactId>
+		<version>1.2.2-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>org.carewebframework.rpms.plugin-parent</artifactId>
+	<packaging>pom</packaging>
+	<name>RPMS Plugin Aggregator POM</name>
+	
+	<modules>
+		<module>org.carewebframework.rpms.plugin.anticoag</module>
+		<module>org.carewebframework.rpms.plugin.chat</module>
+		<module>org.carewebframework.rpms.plugin.medlist</module>
+		<module>org.carewebframework.rpms.plugin.patiented</module>
+		<module>org.carewebframework.rpms.plugin.problem</module>
+		<module>org.carewebframework.rpms.plugin.skintest</module>
+		<module>org.carewebframework.rpms.plugin.visits</module>
+	</modules>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.carewebframework</groupId>
+			<artifactId>org.carewebframework.rpms.ui.core</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+	
+</project>

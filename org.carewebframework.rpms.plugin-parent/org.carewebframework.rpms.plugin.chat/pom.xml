@@ -3,16 +3,11 @@
 	
 	<parent>
 		<groupId>org.carewebframework</groupId>
-		<artifactId>org.carewebframework.rpms-parent</artifactId>
+		<artifactId>org.carewebframework.rpms.plugin-parent</artifactId>
 		<version>1.2.2-SNAPSHOT</version>
 	</parent>
 	
-	<artifactId>org.carewebframework.rpms.ui-parent</artifactId>
-	<packaging>pom</packaging>
-	<name>RPMS UI Aggregator POM</name>
-	
-	<modules>
-		<module>org.carewebframework.rpms.ui.core</module>
-	</modules>
+	<artifactId>org.carewebframework.rpms.plugin.chat</artifactId>
+	<name>RPMS Chat Service</name>
 	
 </project>

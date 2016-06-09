@@ -1,0 +1,66 @@
+<?taglib uri="http://www.carewebframework.org/tld/core" prefix="rc"?>
+
+<zk xmlns="http://www.zkoss.org/2005/zul"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:w="http://www.zkoss.org/2005/zk/client"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+	<style>
+		.bgoProblem-list .z-listcell { border-right: solid lightgray
+		1px; }
+	</style>
+	<menupopup id="contextMenu">
+		<menuitem id="mnuAdd" label="Add" forward="onClick=btnAdd.onClick" />
+		<menuitem id="mnuEdit" label="Edit" forward="onClick=btnEdit.onClick" />
+		<menuitem id="mnuDelete" label="Delete" forward="onClick=btnDelete.onClick" />
+		<menuitem id="mnuPOV" label="Set as Today's POV" forward="onClick=btnPOV.onClick" />
+		<menuitem id="mnuSetFilter" label="Set Current Filter as Default" />
+	</menupopup>
+	<panel apply="${bgoProblemListController}" context="contextMenu">
+		<toolbar>
+			<span style="float:left">
+				<toolbarbutton
+					image="~./org/carewebframework/rpms/plugin/problemlist/main-icon.png" />
+				<label value="Problem List"
+					style="font-size:1.25em;font-weight:bold" />
+			</span>
+			<span style="float:right">
+				<combobox id="cboFilter" readonly="true">
+					<comboitem label="All Problems" value="NONE" />
+					<comboitem label="Active Only" value="ACTIVE" />
+					<comboitem label="Inactive Only" value="INACTIVE" />
+					<comboitem label="Personal History"
+						value="PERSONAL" />
+					<comboitem label="Family History" value="FAMILY" />
+				</combobox>
+				<button id="btnPOV" label="Set as Today's POV" />
+				<button id="btnAdd" label="Add" />
+				<button id="btnEdit" label="Edit" />
+				<button id="btnDelete" label="Delete" />
+			</span>
+		</toolbar>
+		<panelchildren>
+			<listbox id="lbProblems" sclass="bgoProblem-list"
+				multiple="true" sizedByContent="false" hflex="1">
+				<listhead>
+					<listheader id="numberCode" label="ID" width="75px"
+						forward="onSort=lbProblems.onSort" />
+					<listheader id="providerNarrative"
+						label="Provider Narrative" hflex="1"
+						forward="onSort=lbProblems.onSort" />
+					<listheader id="status" label="Status" width="70px" align="center"
+						forward="onSort=lbProblems.onSort" />
+					<listheader id="modifyDate" label="Modified" align="center"
+						width="100px" forward="onSort=lbProblems.onSort" />
+					<listheader id="priority" label="Priority" align="center"
+						width="60px" forward="onSort=lbProblems.onSort" />
+					<listheader id="notes" label="Notes" hflex="1"
+						forward="onSort=lbProblems.onSort" />
+					<listheader id="onsetDate" label="Onset" align="center"
+						width="100px" forward="onSort=lbProblems.onSort" />
+				</listhead>
+			</listbox>
+		</panelchildren>
+	</panel>
+
+</zk>

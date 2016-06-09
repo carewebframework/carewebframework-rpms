@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cwp="http://www.carewebframework.org/schema/plugin" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		 http://www.springframework.org/schema/beans/spring-beans.xsd
+		 http://www.carewebframework.org/schema/plugin
+		 http://www.carewebframework.org/schema/plugin/plugin-extensions.xsd">
+
+	<beans profile="root">
+
+		<cwp:plugin url="~./org/carewebframework/rpms/plugin/visits/main.zul" id="behVisits"
+			name="Patient Visits">
+			<cwp:serialization>
+				<cwp:property id="allowPrint" name="Allow Printing"
+					type="boolean" description="If true, printing is allowed." />
+				<cwp:property id="caption" name="Title Caption" type="text"
+					description="Text for the title caption." />
+				<cwp:property id="color1" name="Caption Color 1" type="color"
+					description="Starting color for caption gradient." />
+				<cwp:property id="color2" name="Caption Color 2" type="color"
+					description="Ending color for caption gradient." />
+				<cwp:property id="captionStyle" name="Caption Style" type="enum"
+					description="Style of caption.">
+					<cwp:config>
+						<cwp:entry key="class">org.carewebframework.ui.sharedforms.CaptionedForm$CaptionStyle</cwp:entry>
+					</cwp:config>
+				</cwp:property>
+				<cwp:property id="color" name="Background Color" type="color"
+					description="Background color." />
+				<cwp:property id="deferUpdate" name="Deferred Updating"
+					type="boolean" description="If true, updates are deferred if component is hidden." />
+				<cwp:property id="showDetailPane" name="Show Detail Pane"
+					type="boolean"
+					description="If true, detail pane is always visible.  If false,
+				detail is shown as a popup dialog." />
+				<cwp:property id="horizontal" name="Horizontal Orientation" type="boolean"
+					description="If true, master and detail panes are arranged side by side." />
+				<cwp:property id="layout" name="Layout" type="text"
+					editable="false" />
+			</cwp:serialization>
+			<cwp:resource>
+				<cwp:help-resource module="behVisitsHelp" />
+			</cwp:resource>
+		</cwp:plugin>
+
+	</beans>
+
+	<beans profile="desktop">
+
+		<bean name="behVisitsController" parent="coverSheetBase"
+			class="org.carewebframework.rpms.plugin.visits.MainController" scope="prototype" />
+
+	</beans>
+</beans>

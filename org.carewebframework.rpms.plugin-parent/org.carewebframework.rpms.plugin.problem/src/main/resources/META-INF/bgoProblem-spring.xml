@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:cwp="http://www.carewebframework.org/schema/plugin"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		 http://www.springframework.org/schema/beans/spring-beans.xsd
+		 http://www.carewebframework.org/schema/plugin
+		 http://www.carewebframework.org/schema/plugin/plugin-extensions.xsd">
+
+	<beans profile="root">
+
+		<cwp:plugin id="bgoProblemList" name="Problem List"
+			url="~./org/carewebframework/rpms/plugin/problemlist/problemList.zul">
+			<cwp:resource>
+			</cwp:resource>
+			<cwp:serialization>
+				<cwp:property name="Update asynchronously" id="allowAsync"
+					type="boolean" description="If true, data requests are processed asynchronously." />
+				<cwp:property name="Allow adding problem to POV" id="allowAddPov"
+					type="boolean" description="If true, the user may add a problem to the POV list." />
+				<cwp:property name="Hide buttons" id="hideButtons"
+					type="boolean" description="If true, the toolbar buttons are hidden." />
+				<cwp:property name="Use lexicon" id="useLexicon" type="boolean"
+					description="If true, the lexicon is used for lookups." />
+			</cwp:serialization>
+		</cwp:plugin>
+
+	</beans>
+
+	<beans profile="desktop">
+
+		<bean id="bgoProblemListController"
+			class="org.carewebframework.rpms.plugin.problemlist.controller.ProblemListController"
+			scope="prototype" />
+
+		<bean id="bgoAddProblemController"
+			class="org.carewebframework.rpms.plugin.problemlist.controller.AddProblemController"
+			scope="prototype" />
+
+		<bean id="bgoAddNoteController"
+			class="org.carewebframework.rpms.plugin.problemlist.controller.AddNoteController"
+			scope="prototype" />
+
+	</beans>
+</beans>
