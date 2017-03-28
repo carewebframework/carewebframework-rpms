@@ -1,11 +1,27 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.plugin.anticoag;
 
@@ -14,16 +30,14 @@ import static org.carewebframework.common.StrUtil.split;
 
 import java.util.Date;
 
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
-
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.BooleanUtils;
-
-import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.DateUtil.TimeUnit;
-import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
+import org.hl7.fhir.dstu3.model.Practitioner;
+import org.hspconsortium.cwf.api.DomainObject;
+import org.hspconsortium.cwf.fhir.common.FhirUtil;
 
 /**
  * A single anticoagulation record.
@@ -111,7 +125,7 @@ public class AntiCoagRecord extends DomainObject {
         
         Practitioner provider = new Practitioner();
         provider.setId(ien);
-        provider.setName(FhirUtil.parseName(name));
+        provider.addName(FhirUtil.parseName(name));
         return provider;
     }
     

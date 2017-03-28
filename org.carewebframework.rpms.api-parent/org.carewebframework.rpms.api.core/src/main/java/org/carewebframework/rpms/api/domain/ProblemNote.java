@@ -1,43 +1,58 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu2.resource.Organization;
-
-import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.vista.mbroker.FMDate;
+import org.hl7.fhir.dstu3.model.Organization;
+import org.hspconsortium.cwf.api.DomainObject;
 
 public class ProblemNote extends DomainObject {
-    
+
     static {
         JSONUtil.registerAlias("ProblemNote", ProblemNote.class);
     }
-    
+
     private Organization facility;
-    
+
     private String number;
-    
+
     private String narrative;
-    
+
     private String status;
-    
+
     private FMDate dateAdded;
-    
+
     private String author;
-    
+
     public ProblemNote() {
-        
+
     }
-    
+
     /**
      * Temporary constructor to create a problem note from serialized form (will move to json).
      *
@@ -59,53 +74,53 @@ public class ProblemNote extends DomainObject {
         this.dateAdded = new FMDate(pcs[5]);
         this.author = pcs[6];
     }
-    
+
     public Organization getFacility() {
         return facility;
     }
-    
+
     public void setFacility(Organization facility) {
         this.facility = facility;
     }
-    
+
     public String getNumber() {
         return number;
     }
-    
+
     public void setNumber(String number) {
         this.number = number;
     }
-    
+
     public String getNarrative() {
         return narrative;
     }
-    
+
     public void setNarrative(String narrative) {
         this.narrative = narrative;
     }
-    
+
     public String getStatus() {
         return status;
     }
-    
+
     public void setStatus(String status) {
         this.status = status;
     }
-    
+
     public FMDate getDateAdded() {
         return dateAdded;
     }
-    
+
     public void setDateAdded(FMDate dateAdded) {
         this.dateAdded = dateAdded;
     }
-    
+
     public String getAuthor() {
         return author;
     }
-    
+
     public void setAuthor(String author) {
         this.author = author;
     }
-    
+
 }

@@ -1,62 +1,77 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.api.domain;
 
-import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.mbroker.FMDate;
-
-import ca.uhn.fhir.model.dstu2.resource.Organization;
-import ca.uhn.fhir.model.dstu2.resource.Patient;
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
+import org.hl7.fhir.dstu3.model.Organization;
+import org.hl7.fhir.dstu3.model.Patient;
+import org.hl7.fhir.dstu3.model.Practitioner;
+import org.hspconsortium.cwf.api.DomainObject;
+import org.hspconsortium.cwf.fhir.common.FhirUtil;
 
 public class Problem extends DomainObject {
-    
+
     static {
         JSONUtil.registerAlias("Problem", Problem.class);
     }
-    
+
     private String status;
-    
+
     private String priority;
-    
+
     private FMDate modifyDate;
-    
+
     private FMDate entryDate;
-    
+
     private FMDate onsetDate;
-    
+
     private String numberCode;
-    
+
     private Patient patient;
-    
+
     private Practitioner provider;
-    
+
     private Organization facility;
-    
+
     private CodingProxy icd9Code;
-    
+
     private String problemClass;
-    
+
     private String providerNarrative;
-    
+
     private String notes;
-    
+
     public Problem(Patient patient) {
         super();
         this.patient = patient;
         this.facility = (Organization) patient.getManagingOrganization().getResource();
     }
-    
+
     /**
      * Temporary constructor to create a problem from serialized form (will move to json).
      *
@@ -80,114 +95,114 @@ public class Problem extends DomainObject {
         onsetDate = PCCUtil.parseDate(pcs[8]);
         setId(pcs[9]);
         notes = pcs[10];
-        
+
         if (!pcs[13].isEmpty()) {
             provider = new Practitioner();
-            provider.setName(FhirUtil.parseName(pcs[13]));
+            provider.addName(FhirUtil.parseName(pcs[13]));
         }
-        
+
         if (!pcs[14].isEmpty()) {
             facility = new Organization();
             facility.setId(pcs[14]);
         }
-        
+
         priority = pcs[15];
     }
-    
+
     public String getStatus() {
         return status;
     }
-    
+
     protected void setStatus(String status) {
         this.status = status;
     }
-    
+
     public FMDate getModifyDate() {
         return modifyDate;
     }
-    
+
     protected void setModifyDate(FMDate modifyDate) {
         this.modifyDate = modifyDate;
     }
-    
+
     public FMDate getEntryDate() {
         return entryDate;
     }
-    
+
     protected void setEntryDate(FMDate entryDate) {
         this.entryDate = entryDate;
     }
-    
+
     public FMDate getOnsetDate() {
         return onsetDate;
     }
-    
+
     protected void setOnsetDate(FMDate onsetDate) {
         this.onsetDate = onsetDate;
     }
-    
+
     public String getNumberCode() {
         return numberCode;
     }
-    
+
     protected void setNumberCode(String numberCode) {
         this.numberCode = numberCode;
     }
-    
+
     public Patient getPatient() {
         return patient;
     }
-    
+
     protected void setPatient(Patient patient) {
         this.patient = patient;
     }
-    
+
     public CodingProxy getIcd9Code() {
         return icd9Code;
     }
-    
+
     protected void setIcd9Code(CodingProxy icd9Code) {
         this.icd9Code = icd9Code;
     }
-    
+
     public String getProblemClass() {
         return problemClass;
     }
-    
+
     protected void setProblemClass(String problemClass) {
         this.problemClass = problemClass;
     }
-    
+
     public String getProviderNarrative() {
         return providerNarrative;
     }
-    
+
     protected void setProviderNarrative(String providerNarrative) {
         this.providerNarrative = providerNarrative;
     }
-    
+
     public String getPriority() {
         return priority;
     }
-    
+
     protected void setPriority(String priority) {
         this.priority = priority;
     }
-    
+
     public String getNotes() {
         return notes;
     }
-    
+
     protected void setNotes(String notes) {
         this.notes = notes;
     }
-    
+
     public Organization getFacility() {
         return facility;
     }
-    
+
     public void setFacility(Organization facility) {
         this.facility = facility;
     }
-    
+
 }

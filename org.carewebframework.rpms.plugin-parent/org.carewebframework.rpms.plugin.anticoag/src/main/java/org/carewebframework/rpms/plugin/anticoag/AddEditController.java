@@ -1,11 +1,27 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
- * 
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.plugin.anticoag;
 
@@ -14,20 +30,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ca.uhn.fhir.model.dstu2.resource.Encounter;
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
-
 import org.apache.commons.lang.math.NumberUtils;
-
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;
-import org.carewebframework.cal.api.encounter.EncounterContext;
-import org.carewebframework.cal.api.practitioner.PractitionerSearch;
-import org.carewebframework.cal.api.practitioner.PractitionerSearchCriteria;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.NumUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.wonderbar.IWonderbarServerSearchProvider;
 import org.carewebframework.ui.wonderbar.Wonderbar;
@@ -36,7 +44,12 @@ import org.carewebframework.ui.zk.PopupDialog;
 import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.encounter.EncounterUtil;
-
+import org.hl7.fhir.dstu3.model.Encounter;
+import org.hl7.fhir.dstu3.model.Practitioner;
+import org.hspconsortium.cwf.api.encounter.EncounterContext;
+import org.hspconsortium.cwf.api.practitioner.PractitionerSearch;
+import org.hspconsortium.cwf.api.practitioner.PractitionerSearchCriteria;
+import org.hspconsortium.cwf.fhir.common.FhirUtil;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;
@@ -120,7 +133,7 @@ public class AddEditController extends FrameworkController {
     };
     
     public static AntiCoagRecord show(AntiCoagRecord record) {
-        Map<Object, Object> args = new HashMap<Object, Object>();
+        Map<Object, Object> args = new HashMap<>();
         args.put("record", record);
         return (AntiCoagRecord) PopupDialog.popup(DIALOG, args, false, false, true).getAttribute(ATTR_RESULT);
     }
@@ -138,7 +151,7 @@ public class AddEditController extends FrameworkController {
     
     /**
      * Deferring this allows combo boxes to fully initialize.
-     * 
+     *
      * @param event The onInitDialog event.
      */
     public void onInitDialog(Event event) {
@@ -155,7 +168,7 @@ public class AddEditController extends FrameworkController {
             IUser user = UserContext.getActiveUser();
             Practitioner provider = new Practitioner();
             provider.setId(user.getLogicalId());
-            provider.setName(FhirUtil.parseName(user.getFullName()));
+            provider.addName(FhirUtil.parseName(user.getFullName()));
             record.setProvider(provider);
         } else {
             record = new AntiCoagRecord(record);
@@ -194,8 +207,8 @@ public class AddEditController extends FrameworkController {
     }
     
     private void loadComboValues() {
-        cboGoal.setModel(new ListModelList<String>(service.getGoalPresets()));
-        cboDuration.setModel(new ListModelList<String>(service.getDurationPresets()));
+        cboGoal.setModel(new ListModelList<>(service.getGoalPresets()));
+        cboDuration.setModel(new ListModelList<>(service.getDurationPresets()));
     }
     
     private void updateControls() {
@@ -292,7 +305,7 @@ public class AddEditController extends FrameworkController {
                 EncounterUtil.forceCreate(encounter);
                 record.setVisitCategory(EncounterUtil.getServiceCategory(encounter));
                 record.setVisitDate(encounter.getPeriod().getStart());
-                record.setVisitIEN(encounter.getId().getIdPart());
+                record.setVisitIEN(encounter.getIdElement().getIdPart());
                 record.setVisitLocked(EncounterUtil.isLocked(encounter));
             }
             

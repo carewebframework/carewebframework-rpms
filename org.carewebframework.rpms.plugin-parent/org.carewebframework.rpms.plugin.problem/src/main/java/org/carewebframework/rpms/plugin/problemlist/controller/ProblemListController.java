@@ -1,39 +1,49 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
- * 
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.plugin.problemlist.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu2.resource.Patient;
-
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import org.carewebframework.api.event.EventManager;
 import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
 import org.carewebframework.api.security.SecurityUtil;
-import org.carewebframework.cal.api.encounter.EncounterContext.IEncounterContextEvent;
-import org.carewebframework.cal.api.patient.PatientContext;
-import org.carewebframework.cal.api.patient.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.common.BgoUtil.BgoSecurity;
 import org.carewebframework.rpms.api.domain.Problem;
-import org.carewebframework.rpms.ui.common.BgoBaseController;
-import org.carewebframework.rpms.ui.common.PCC;
 import org.carewebframework.rpms.plugin.problemlist.render.ProblemRenderer;
 import org.carewebframework.rpms.plugin.problemlist.util.ProblemFilter;
+import org.carewebframework.rpms.ui.common.BgoBaseController;
+import org.carewebframework.rpms.ui.common.PCC;
 import org.carewebframework.shell.plugins.IPluginEvent;
 import org.carewebframework.shell.plugins.PluginContainer;
 import org.carewebframework.ui.zk.PromptDialog;
@@ -42,7 +52,10 @@ import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.ui.mbroker.AsyncRPCCompleteEvent;
 import org.carewebframework.vista.ui.mbroker.AsyncRPCErrorEvent;
-
+import org.hl7.fhir.dstu3.model.Patient;
+import org.hspconsortium.cwf.api.encounter.EncounterContext.IEncounterContextEvent;
+import org.hspconsortium.cwf.api.patient.PatientContext;
+import org.hspconsortium.cwf.api.patient.PatientContext.IPatientContextEvent;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;
@@ -112,9 +125,9 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     
     private BgoSecurity bgoSecurity;
     
-    private final List<Problem> problemList = new ArrayList<Problem>();
+    private final List<Problem> problemList = new ArrayList<>();
     
-    private final List<Problem> selectedProblems = new ArrayList<Problem>();
+    private final List<Problem> selectedProblems = new ArrayList<>();
     
     private final IPatientContextEvent patientContextEventHandler = new IPatientContextEvent() {
         
@@ -132,7 +145,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
             }
             
             Patient patient = PatientContext.getActivePatient();
-            probEvent = patient == null ? null : "PCC." + patient.getId().getIdPart() + ".PRB";
+            probEvent = patient == null ? null : "PCC." + patient.getIdElement().getIdPart() + ".PRB";
             
             if (probEvent != null) {
                 eventManager.subscribe(probEvent, genericEventHandler);
@@ -279,9 +292,9 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         EventUtil.status("Loading Problem List Data");
         
         if (allowAsync && !noAsync) {
-            getAsyncDispatcher().callRPCAsync("BGOPROB GET", patient.getId().getIdPart());
+            getAsyncDispatcher().callRPCAsync("BGOPROB GET", patient.getIdElement().getIdPart());
         } else {
-            loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getId().getIdPart()));
+            loadProblems(getBroker().callRPCList("BGOPROB GET", null, patient.getIdElement().getIdPart()));
         }
         
         EventUtil.status();
@@ -318,9 +331,9 @@ public class ProblemListController extends BgoBaseController<Object> implements 
     private String deleteProblem(int row) {
         Problem problem = problemFromRow(row);
         
-        if (PromptDialog.confirm(
-            "Are you sure that you wish to delete the problem titled:" + StrUtil.CRLF2 + problem.getNumberCode() + " - "
-                    + problem.getProviderNarrative(), "Delete Problem?")) {
+        if (PromptDialog.confirm("Are you sure that you wish to delete the problem titled:" + StrUtil.CRLF2
+                + problem.getNumberCode() + " - " + problem.getProviderNarrative(),
+            "Delete Problem?")) {
             return getBroker().callRPC("BGOPROB DEL", problem.getId().getIdPart());
         }
         
@@ -355,7 +368,7 @@ public class ProblemListController extends BgoBaseController<Object> implements 
         ProblemFilter filter = getFilter();
         boolean bHasPriority = false;
         lbProblems.setModel((ListModelList<?>) null);
-        ListModelList<Problem> model = new ListModelList<Problem>();
+        ListModelList<Problem> model = new ListModelList<>();
         
         for (Problem problem : problemList) {
             if (filter.include(problem)) {

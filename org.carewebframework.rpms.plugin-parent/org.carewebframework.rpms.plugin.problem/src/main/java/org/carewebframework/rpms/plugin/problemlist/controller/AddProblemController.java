@@ -1,11 +1,27 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.plugin.problemlist.controller;
 
@@ -14,25 +30,20 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu2.resource.Organization;
-import ca.uhn.fhir.model.dstu2.resource.Patient;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
-
 import org.carewebframework.api.context.UserContext;
 import org.carewebframework.api.domain.IUser;
-import org.carewebframework.cal.api.patient.PatientContext;
 import org.carewebframework.common.DateUtil;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.Params;
 import org.carewebframework.rpms.api.domain.CodingProxy;
 import org.carewebframework.rpms.api.domain.Problem;
 import org.carewebframework.rpms.api.domain.ProblemNote;
+import org.carewebframework.rpms.plugin.problemlist.util.Constants;
 import org.carewebframework.rpms.ui.common.BgoBaseController;
 import org.carewebframework.rpms.ui.common.BgoConstants;
 import org.carewebframework.rpms.ui.common.PCC;
-import org.carewebframework.rpms.plugin.problemlist.util.Constants;
 import org.carewebframework.rpms.ui.terminology.general.controller.ICDLookupController;
 import org.carewebframework.ui.FrameworkController;
 import org.carewebframework.ui.icons.IconUtil;
@@ -41,7 +52,9 @@ import org.carewebframework.ui.zk.PromptDialog;
 import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
-
+import org.hl7.fhir.dstu3.model.Organization;
+import org.hl7.fhir.dstu3.model.Patient;
+import org.hspconsortium.cwf.api.patient.PatientContext;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;
@@ -98,7 +111,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
     
     private CodingProxy icd;
     
-    private final List<ProblemNote> changedNotes = new ArrayList<ProblemNote>();
+    private final List<ProblemNote> changedNotes = new ArrayList<>();
     
     public static Problem execute(Problem problem) {
         if (problem == null) {
@@ -138,7 +151,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         String probId = problem.getNumberCode();
         
         if (probId == null || probId.isEmpty()) {
-            probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getActivePatient().getId().getIdPart());
+            probId = getBroker().callRPC("BGOPROB NEXTID", PatientContext.getActivePatient().getIdElement().getIdPart());
         }
         
         String pcs[] = probId.split("\\-", 2);
@@ -206,8 +219,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
     }
     
     private boolean deleteNote(ProblemNote pn) {
-        String s = VistAUtil.concatParams(problem.getId().getIdPart(), pn.getFacility().getId().getIdPart(), pn.getId()
-                .getIdPart());
+        String s = VistAUtil.concatParams(problem.getId().getIdPart(), pn.getFacility().getIdElement().getIdPart(),
+            pn.getId().getIdPart());
         s = getBroker().callRPC("BGOPRBN DEL", s);
         return !PCC.errorCheck(s);
     }
@@ -219,8 +232,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
      * @return True if successful.
      */
     private boolean addNote(ProblemNote pn) {
-        String s = VistAUtil.concatParams(problem.getId().getIdPart(), null, pn.getFacility().getId().getIdPart(), null,
-            pn.getNarrative());
+        String s = VistAUtil.concatParams(problem.getId().getIdPart(), null, pn.getFacility().getIdElement().getIdPart(),
+            null, pn.getNarrative());
         s = getBroker().callRPC("BGOPRBN SET", s);
         
         if (PCC.errorCheck(s)) {
@@ -297,9 +310,9 @@ public class AddProblemController extends BgoBaseController<Problem> {
         Listitem item = ZKUtil.findAncestor(event.getTarget(), Listitem.class);
         ProblemNote pn = (ProblemNote) item.getValue();
         
-        if (PromptDialog
-                .confirm("Are you sure that you wish to delete this note:\n" + pn.getNumber() + " - " + pn.getNarrative(),
-                    "Delete Note?")) {
+        if (PromptDialog.confirm(
+            "Are you sure that you wish to delete this note:\n" + pn.getNumber() + " - " + pn.getNarrative(),
+            "Delete Note?")) {
             item.detach();
             
             if (VistAUtil.validateIEN(pn)) {
@@ -316,8 +329,8 @@ public class AddProblemController extends BgoBaseController<Problem> {
         }
         
         Patient patient = PatientContext.getActivePatient();
-        String sParam = VistAUtil.concatParams(patient.getId().getIdPart(), txtID.getValue(), problem.getFacility().getId()
-                .getIdPart(), problem.getId().getIdPart());
+        String sParam = VistAUtil.concatParams(patient.getIdElement().getIdPart(), txtID.getValue(),
+            problem.getFacility().getIdElement().getIdPart(), problem.getId().getIdPart());
         String sRpc = getBroker().callRPC("BGOPROB CKID", sParam);
         
         if (PCC.errorCheck(sRpc)) {
@@ -345,10 +358,10 @@ public class AddProblemController extends BgoBaseController<Problem> {
         
         // ICD IEN or Code [1] ^ Narrative [2] ^ Location IEN [3] ^ Date of Onset [4] ^ Class [5] ^
         // Status [6] ^ Patient IEN [7] ^ Problem IEN [8] ^ Problem # [9] ^ Priority [10]
-        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getId().getIdPart(), datOnset
-                .getValue() == null ? "@" : datOnset.getValue(), radPersonal.isChecked() ? "P" : radFamily.isChecked() ? "F"
-                : "", radActive.isChecked() ? "A" : "I", patient.getId().getIdPart(), problem.getId().getIdPart(), sNum,
-            priority <= 0 ? "@" : priority);
+        sParam = VistAUtil.concatParams(sParam, txtNarrative.getValue(), institution.getIdElement().getIdPart(),
+            datOnset.getValue() == null ? "@" : datOnset.getValue(),
+            radPersonal.isChecked() ? "P" : radFamily.isChecked() ? "F" : "", radActive.isChecked() ? "A" : "I",
+            patient.getIdElement().getIdPart(), problem.getId().getIdPart(), sNum, priority <= 0 ? "@" : priority);
         sRpc = getBroker().callRPC("BGOPROB SET", sParam);
         
         if (PCC.errorCheck(sRpc)) {
@@ -358,7 +371,7 @@ public class AddProblemController extends BgoBaseController<Problem> {
         problem.setId(sRpc);
         
         if (txtNotes.isVisible() && !StringUtils.isEmpty(txtNotes.getValue())) {
-            sParam = VistAUtil.concatParams(problem.getId().getIdPart(), null, institution.getId().getIdPart(), null,
+            sParam = VistAUtil.concatParams(problem.getId().getIdPart(), null, institution.getIdElement().getIdPart(), null,
                 txtNotes.getValue());
             sRpc = getBroker().callRPC("BGOPRBN SET", sParam);
             

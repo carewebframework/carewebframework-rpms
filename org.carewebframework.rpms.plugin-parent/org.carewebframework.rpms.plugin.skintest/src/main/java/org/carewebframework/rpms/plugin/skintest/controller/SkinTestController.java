@@ -1,36 +1,46 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
- *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
- */
+/*
+* #%L
+* carewebframework
+* %%
+* Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+* %%
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+* This Source Code Form is also subject to the terms of the Health-Related
+* Additional Disclaimer of Warranty and Limitation of Liability available at
+*
+*      http://www.carewebframework.org/licensing/disclaimer.
+*
+* #L%
+*/
 package org.carewebframework.rpms.plugin.skintest.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ca.uhn.fhir.model.dstu2.resource.Patient;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
 import org.carewebframework.api.event.EventManager;
 import org.carewebframework.api.event.EventUtil;
 import org.carewebframework.api.event.IEventManager;
 import org.carewebframework.api.event.IGenericEvent;
-import org.carewebframework.cal.api.encounter.EncounterContext.IEncounterContextEvent;
-import org.carewebframework.cal.api.patient.PatientContext;
-import org.carewebframework.cal.api.patient.PatientContext.IPatientContextEvent;
 import org.carewebframework.common.StrUtil;
 import org.carewebframework.rpms.api.common.BgoUtil;
 import org.carewebframework.rpms.api.common.BgoUtil.BgoSecurity;
-import org.carewebframework.rpms.ui.common.BgoBaseController;
-import org.carewebframework.rpms.ui.common.PCC;
 import org.carewebframework.rpms.plugin.skintest.model.TestItem;
 import org.carewebframework.rpms.plugin.skintest.render.SkinTestRenderer;
+import org.carewebframework.rpms.ui.common.BgoBaseController;
+import org.carewebframework.rpms.ui.common.PCC;
 import org.carewebframework.shell.plugins.IPluginEvent;
 import org.carewebframework.shell.plugins.PluginContainer;
 import org.carewebframework.ui.zk.ListUtil;
@@ -40,7 +50,10 @@ import org.carewebframework.ui.zk.ZKUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.ui.mbroker.AsyncRPCCompleteEvent;
 import org.carewebframework.vista.ui.mbroker.AsyncRPCErrorEvent;
-
+import org.hl7.fhir.dstu3.model.Patient;
+import org.hspconsortium.cwf.api.encounter.EncounterContext.IEncounterContextEvent;
+import org.hspconsortium.cwf.api.patient.PatientContext;
+import org.hspconsortium.cwf.api.patient.PatientContext.IPatientContextEvent;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.event.Event;
 import org.zkoss.zk.ui.event.Events;
@@ -100,7 +113,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     
     private BgoSecurity bgoSecurity;
     
-    private final List<TestItem> skinTestList = new ArrayList<TestItem>();
+    private final List<TestItem> skinTestList = new ArrayList<>();
     
     private Object selectedItem;
     
@@ -121,8 +134,8 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
             }
             
             Patient patient = PatientContext.getActivePatient();
-            pccEvent = patient == null ? null : "PCC." + patient.getId().getIdPart() + ".SK";
-            refusalEvent = patient == null ? null : "REFUSAL." + patient.getId().getIdPart() + ".SKIN TEST";
+            pccEvent = patient == null ? null : "PCC." + patient.getIdElement().getIdPart() + ".SK";
+            refusalEvent = patient == null ? null : "REFUSAL." + patient.getIdElement().getIdPart() + ".SKIN TEST";
             
             if (pccEvent != null) {
                 eventManager.subscribe(pccEvent, genericEventHandler);
@@ -241,9 +254,9 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
         EventUtil.status("Loading Skin Test Data");
         
         if (allowAsync && !noAsync) {
-            getAsyncDispatcher().callRPCAsync("BGOVSK GET", patient.getId().getIdPart());
+            getAsyncDispatcher().callRPCAsync("BGOVSK GET", patient.getIdElement().getIdPart());
         } else {
-            loadSkinTests(getBroker().callRPCList("BGOVSK GET", null, patient.getId().getIdPart()));
+            loadSkinTests(getBroker().callRPCList("BGOVSK GET", null, patient.getIdElement().getIdPart()));
         }
         
         EventUtil.status();
@@ -318,7 +331,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     
     private void refreshList() {
         lbTests.setModel((ListModelList<?>) null);
-        ListModelList<TestItem> model = new ListModelList<TestItem>(skinTestList);
+        ListModelList<TestItem> model = new ListModelList<>(skinTestList);
         
         if (colSort == null) {
             colSort = (Listheader) lbTests.getListhead().getChildren().get(0);
@@ -347,7 +360,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
             case DELETE:
                 deleteTest();
                 break;
-        
+
         }
     }
     
@@ -384,7 +397,7 @@ public class SkinTestController extends BgoBaseController<Object> implements IPl
     }
     
     public void onClick$btnPrint() {
-        String s = VistAUtil.concatParams(PatientContext.getActivePatient().getId().getIdPart(), 2);
+        String s = VistAUtil.concatParams(PatientContext.getActivePatient().getIdElement().getIdPart(), 2);
         s = getBroker().callRPC("BGOVIMM PRINT", s);
         PromptDialog.showText(s, "Print Record");
     }

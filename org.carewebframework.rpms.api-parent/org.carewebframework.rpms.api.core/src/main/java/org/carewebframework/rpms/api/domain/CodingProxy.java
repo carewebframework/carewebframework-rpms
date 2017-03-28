@@ -1,33 +1,48 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
  *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.api.domain;
 
-import ca.uhn.fhir.model.dstu2.composite.CodingDt;
-
-import org.carewebframework.cal.api.DomainObjectProxy;
+import org.hl7.fhir.dstu3.model.Coding;
+import org.hspconsortium.cwf.api.DomainObjectProxy;
 
 /**
  * Proxy for FHIR Coding data type.
  */
-public class CodingProxy extends DomainObjectProxy<CodingDt> {
-    
+public class CodingProxy extends DomainObjectProxy<Coding> {
+
     public CodingProxy(String logicalId, String system, String code, String display) {
-        super(logicalId, new CodingDt());
-        CodingDt coding = getProxiedObject();
+        super(logicalId, new Coding());
+        Coding coding = getProxiedObject();
         //coding.setSystem(system);
         coding.setCode(code);
         coding.setDisplay(display);
     }
-    
+
     public CodingProxy(CodingProxy src) {
         super(src);
     }
-    
+
 }

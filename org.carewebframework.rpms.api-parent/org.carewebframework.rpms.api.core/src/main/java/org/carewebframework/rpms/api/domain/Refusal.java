@@ -1,47 +1,62 @@
-/**
- * This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0.
- * If a copy of the MPL was not distributed with this file, You can obtain one at
- * http://mozilla.org/MPL/2.0/.
+/*
+ * #%L
+ * carewebframework
+ * %%
+ * Copyright (C) 2008 - 2017 Regenstrief Institute, Inc.
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This Source Code Form is also subject to the terms of the Health-Related Additional
- * Disclaimer of Warranty and Limitation of Liability available at
- * http://www.carewebframework.org/licensing/disclaimer.
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * This Source Code Form is also subject to the terms of the Health-Related
+ * Additional Disclaimer of Warranty and Limitation of Liability available at
+ *
+ *      http://www.carewebframework.org/licensing/disclaimer.
+ *
+ * #L%
  */
 package org.carewebframework.rpms.api.domain;
 
-import org.carewebframework.cal.api.DomainObject;
 import org.carewebframework.common.JSONUtil;
 import org.carewebframework.common.StrUtil;
-import org.carewebframework.fhir.common.FhirUtil;
 import org.carewebframework.vista.api.util.VistAUtil;
 import org.carewebframework.vista.mbroker.FMDate;
-
-import ca.uhn.fhir.model.dstu2.resource.Practitioner;
+import org.hl7.fhir.dstu3.model.Practitioner;
+import org.hspconsortium.cwf.api.DomainObject;
+import org.hspconsortium.cwf.fhir.common.FhirUtil;
 
 public class Refusal extends DomainObject {
-    
+
     static {
         JSONUtil.registerAlias("Refusal", Refusal.class);
     }
-    
+
     private FMDate date;
-    
+
     private CodingProxy type;
-    
+
     private CodingProxy item;
-    
+
     private Practitioner provider;
-    
+
     private String reason;
-    
+
     private String comment;
-    
+
     private boolean locked;
-    
+
     public Refusal() {
         super();
     }
-    
+
     /**
      * Temporary constructor to create a problem from serialized form (will move to json).
      *
@@ -60,80 +75,80 @@ public class Refusal extends DomainObject {
         reason = pcs[10];
         comment = pcs[11];
     }
-    
+
     private CodingProxy parseConcept(String sysId, String ien, String code) {
         if (!VistAUtil.validateIEN(ien)) {
             return null;
         }
-        
+
         return new CodingProxy(ien, sysId, code, code);
     }
-    
+
     private Practitioner parseProvider(String ien, String name) {
         if (!VistAUtil.validateIEN(ien)) {
             return null;
         }
-        
+
         Practitioner provider = new Practitioner();
         provider.setId(ien);
-        provider.setName(FhirUtil.parseName(name));
+        provider.addName(FhirUtil.parseName(name));
         return provider;
     }
-    
+
     public FMDate getDate() {
         return date;
     }
-    
+
     public void setDate(FMDate date) {
         this.date = date;
     }
-    
+
     public CodingProxy getType() {
         return type;
     }
-    
+
     public void setType(CodingProxy type) {
         this.type = type;
     }
-    
+
     public CodingProxy getItem() {
         return item;
     }
-    
+
     public void setItem(CodingProxy item) {
         this.item = item;
     }
-    
+
     public Practitioner getProvider() {
         return provider;
     }
-    
+
     public void setProvider(Practitioner provider) {
         this.provider = provider;
     }
-    
+
     public String getReason() {
         return reason;
     }
-    
+
     public void setReason(String reason) {
         this.reason = reason;
     }
-    
+
     public String getComment() {
         return comment;
     }
-    
+
     public void setComment(String comment) {
         this.comment = comment;
     }
-    
+
     public boolean isLocked() {
         return locked;
     }
-    
+
     public void setLocked(boolean locked) {
         this.locked = locked;
     }
-    
+
 }
